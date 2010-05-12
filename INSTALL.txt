@@ -1,0 +1,6 @@
+Addicter currently uses some Dan's Perl libraries that are stored in a separate
+svn repository. In future, there could be a cron job that will synchronize the
+StatMT repository with the DZlib repository daily, DZlib being the master copy.
+Then there will be a folder called (probably) $STATMT/perl/lib, and the users
+will have to include a pointer to that folder in their PERL5LIB environment
+variable.
