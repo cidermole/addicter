@@ -12,6 +12,8 @@ use lib 'C:\Documents and Settings\Dan\Dokumenty\Lingvistika\lib';
 use lib '/home/zeman/lib';
 use dzcgi;
 
+# Path to experiment we are analyzing (can be relative to the location of this script).
+$experiment = 'enur';
 # Print the HTML header (so that any debugging can possibly also output to the browser).
 print("Content-type: text/html; charset=utf8\n\n");
 print("<html>\n");
@@ -27,7 +29,7 @@ dzcgi::cist_parametry(\%config);
 if(!exists($config{letter}))
 {
     # Read the master index (first letters of words).
-    open(INDEX, 'index.txt') or print("<p style='color:red'>Cannot open index.txt!</p>\n");
+    open(INDEX, "$experiment/index.txt") or print("<p style='color:red'>Cannot open index.txt!</p>\n");
     $firstletters = <INDEX>;
     close(INDEX);
     $firstletters =~ s/\r?\n$//;
@@ -42,7 +44,7 @@ if(!exists($config{letter}))
 else
 {
     # Which index file do we need?
-    my $indexname = sprintf("index%04x.txt", ord($config{letter}));
+    my $indexname = sprintf("$experiment/index%04x.txt", ord($config{letter}));
     open(INDEX, $indexname) or print("<p style='color:red'>Cannot open $indexname: $!</p>\n");
     while(<INDEX>)
     {

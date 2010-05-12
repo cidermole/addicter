@@ -14,6 +14,8 @@ use dzcgi;
 use translit;
 use translit::brahmi;
 
+# Path to experiment we are analyzing (can be relative to the location of this script).
+$experiment = 'enur';
 # Print the HTML header (so that any debugging can possibly also output to the browser).
 print("Content-type: text/html; charset=utf8\n\n");
 print("<html>\n");
@@ -31,7 +33,7 @@ print("<h1>$config{word}</h1>\n");
 # Figure out the name of the index file.
 $config{word} =~ m/^(.)/;
 $fl = $1;
-$indexname = sprintf("index%04x.txt", ord($fl));
+$indexname = sprintf("$experiment/index%04x.txt", ord($fl));
 # Read the index.
 open(INDEX, $indexname) or print("<p style='color:red'>Cannot open $indexname: $!</p>\n");
 while(<INDEX>)
@@ -122,7 +124,7 @@ if(exists($index{$config{word}}))
         }
         print("   This is the sentence number $example->{line} in file $example->{file}.</p>\n");
         ###!!! We should read this from the index file.
-        my $path = '';
+        my $path = "$experiment/";
         # my $path = 'C:\Documents and Settings\Dan\Dokumenty\Lingvistika\Projekty\addicter\';
         my %files =
         (
