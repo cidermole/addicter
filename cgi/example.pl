@@ -139,97 +139,7 @@ if(exists($config{experiment}))
                 'RA'  => "${path}test.ali",
                 'HA'  => "${path}test.system.ali"
             );
-            my $srcline = get_nth_line($files{$srcfile}, $sntno);
-            my $tgtline = get_nth_line($files{$tgtfile}, $sntno);
-            my $aliline = get_nth_line($files{$alifile}, $sntno);
-            # Decompose alignments into array of arrays (pairs).
-            my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
-            my @srcwords = split(/\s+/, $srcline);
-            my @tgtwords = split(/\s+/, $tgtline);
-            # Display the source words along with their alignment links.
-            print("<table border style='font-family:Code2000'>\n");
-            print("  <tr>");
-            for(my $i = 0; $i<=$#srcwords; $i++)
-            {
-                if($srcwords[$i] eq $config{word})
-                {
-                    print("<td style='color:red'>$srcwords[$i]</td>");
-                }
-                else
-                {
-                    # Every word except for the current one is a link to its own examples.
-                    print("<td><a href='example.pl?experiment=$experiment&amp;word=$srcwords[$i]'>$srcwords[$i]</a></td>");
-                }
-            }
-            print("</tr>\n");
-            print("  <tr>");
-            for(my $i = 0; $i<=$#srcwords; $i++)
-            {
-                my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[0]==$i} (@alignments)));
-                my $ali_ctpart = join('&nbsp;', map {$tgtwords[$_->[1]] eq $config{word} ? "<span style='color:red'>$tgtwords[$_->[1]]</span>" : $tgtwords[$_->[1]]} (grep {$_->[0]==$i} (@alignments)));
-                print("<td>$ali_ctpart<br/>$ali_word</td>");
-            }
-            print("</tr>\n");
-    #        print("</table>\n");
-            # Display the target words along with their alignment links.
-    #        print("<table>\n");
-            print("  <tr><td></td></tr>\n");
-            print("  <tr>");
-            for(my $i = 0; $i<=$#tgtwords; $i++)
-            {
-                my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[1]==$i} (@alignments)));
-                my $ali_ctpart = join('&nbsp;', map {$srcwords[$_->[0]] eq $config{word} ? "<span style='color:red'>$srcwords[$_->[0]]</span>" : $srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)));
-                print("<td>$ali_word<br/>$ali_ctpart</td>");
-            }
-            print("</tr>\n");
-            print("  <tr>");
-            for(my $i = 0; $i<=$#tgtwords; $i++)
-            {
-                my $translit = translit::prevest(\%prevod, $tgtwords[$i]);
-                if($tgtwords[$i] eq $config{word})
-                {
-                    print("<td style='color:red'>$tgtwords[$i]<br/>$translit</td>");
-                }
-                else
-                {
-                    # Every word except for the current one is a link to its own examples.
-                    print("<td><a href='example.pl?experiment=$experiment&amp;word=$tgtwords[$i]'>$tgtwords[$i]</a><br/>$translit</td>");
-                }
-            }
-            ###!!! If the filter is test+reference, show a third row with system hypothesis.
-            if($config{filter} eq 'r')
-            {
-                my $tgtline = get_nth_line($files{H}, $sntno);
-                my $aliline = get_nth_line($files{HA}, $sntno);
-                # Decompose alignments into array of arrays (pairs).
-                my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
-                my @tgtwords = split(/\s+/, $tgtline);
-                print("  <tr><td></td></tr>\n");
-                print("  <tr>");
-                for(my $i = 0; $i<=$#tgtwords; $i++)
-                {
-                    my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[1]==$i} (@alignments)));
-                    my $ali_ctpart = join('&nbsp;', map {$srcwords[$_->[0]] eq $config{word} ? "<span style='color:red'>$srcwords[$_->[0]]</span>" : $srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)));
-                    print("<td>$ali_word<br/>$ali_ctpart</td>");
-                }
-                print("</tr>\n");
-                print("  <tr>");
-                for(my $i = 0; $i<=$#tgtwords; $i++)
-                {
-                    my $translit = translit::prevest(\%prevod, $tgtwords[$i]);
-                    if($tgtwords[$i] eq $config{word})
-                    {
-                        print("<td style='color:red'>$tgtwords[$i]<br/>$translit</td>");
-                    }
-                    else
-                    {
-                        # Every word except for the current one is a link to its own examples.
-                        print("<td><a href='example.pl?experiment=$experiment&amp;word=$tgtwords[$i]'>$tgtwords[$i]</a><br/>$translit</td>");
-                    }
-                }
-            }
-            print("</tr>\n");
-            print("</table>\n");
+            print(sentence_to_table(\%files, $sntno, $srcfile, $tgtfile, $alifile));
             # Print links to adjacent examples.
             ###!!! Add links to filters: training only, test/reference, test/hypothesis.
             push(@links, "<a href='example.pl?experiment=$experiment&amp;word=$config{word}&amp;filter=tr'>training data only</a>");
@@ -309,4 +219,113 @@ sub get_nth_line
     close(IN);
     $line =~ s/\r?\n$//;
     return $line;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Generates a HTML table with a sentence pair/triple (for test data, triples of
+# source, reference and hypothesis may be available).
+#------------------------------------------------------------------------------
+sub sentence_to_table
+{
+    # This function accesses the global hashes %config and %prevod.
+    my $files = shift;
+    my $sntno = shift;
+    my $srcfile = shift;
+    my $tgtfile = shift;
+    my $alifile = shift;
+    my $html;
+    my $srcline = get_nth_line($files->{$srcfile}, $sntno);
+    my $tgtline = get_nth_line($files->{$tgtfile}, $sntno);
+    my $aliline = get_nth_line($files->{$alifile}, $sntno);
+    # Decompose alignments into array of arrays (pairs).
+    my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
+    my @srcwords = split(/\s+/, $srcline);
+    my @tgtwords = split(/\s+/, $tgtline);
+    # Display the source words along with their alignment links.
+    $html .= "<table border style='font-family:Code2000'>\n";
+    $html .= "  <tr>";
+    for(my $i = 0; $i<=$#srcwords; $i++)
+    {
+        if($srcwords[$i] eq $config{word})
+        {
+            $html .= "<td style='color:red'>$srcwords[$i]</td>";
+        }
+        else
+        {
+            # Every word except for the current one is a link to its own examples.
+            $html .= "<td><a href='example.pl?experiment=$experiment&amp;word=$srcwords[$i]'>$srcwords[$i]</a></td>";
+        }
+    }
+    $html .= "</tr>\n";
+    # Second row contains target words aligned to source words.
+    $html .= "  <tr>";
+    for(my $i = 0; $i<=$#srcwords; $i++)
+    {
+        my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[0]==$i} (@alignments)));
+        my $ali_ctpart = join('&nbsp;', map {$tgtwords[$_->[1]] eq $config{word} ? "<span style='color:red'>$tgtwords[$_->[1]]</span>" : $tgtwords[$_->[1]]} (grep {$_->[0]==$i} (@alignments)));
+        $html .= "<td>$ali_ctpart<br/>$ali_word</td>";
+    }
+    $html .= "</tr>\n";
+    # An empty row separates source and target sections.
+    $html .= "  <tr><td></td></tr>\n";
+    # Display the target words along with their alignment links.
+    $html .= "  <tr>";
+    for(my $i = 0; $i<=$#tgtwords; $i++)
+    {
+        my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[1]==$i} (@alignments)));
+        my $ali_ctpart = join('&nbsp;', map {$srcwords[$_->[0]] eq $config{word} ? "<span style='color:red'>$srcwords[$_->[0]]</span>" : $srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)));
+        $html .= "<td>$ali_word<br/>$ali_ctpart</td>";
+    }
+    $html .= "</tr>\n";
+    $html .= "  <tr>";
+    for(my $i = 0; $i<=$#tgtwords; $i++)
+    {
+        my $translit = translit::prevest(\%prevod, $tgtwords[$i]);
+        if($tgtwords[$i] eq $config{word})
+        {
+            $html .= "<td style='color:red'>$tgtwords[$i]<br/>$translit</td>";
+        }
+        else
+        {
+            # Every word except for the current one is a link to its own examples.
+            $html .= "<td><a href='example.pl?experiment=$experiment&amp;word=$tgtwords[$i]'>$tgtwords[$i]</a><br/>$translit</td>";
+        }
+    }
+    ###!!! If the filter is test+reference, show a third row with system hypothesis.
+    if($config{filter} eq 'r')
+    {
+        my $tgtline = get_nth_line($files->{H}, $sntno);
+        my $aliline = get_nth_line($files->{HA}, $sntno);
+        # Decompose alignments into array of arrays (pairs).
+        my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
+        my @tgtwords = split(/\s+/, $tgtline);
+        $html .= "  <tr><td></td></tr>\n";
+        $html .= "  <tr>";
+        for(my $i = 0; $i<=$#tgtwords; $i++)
+        {
+            my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[1]==$i} (@alignments)));
+            my $ali_ctpart = join('&nbsp;', map {$srcwords[$_->[0]] eq $config{word} ? "<span style='color:red'>$srcwords[$_->[0]]</span>" : $srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)));
+            $html .= "<td>$ali_word<br/>$ali_ctpart</td>";
+        }
+        $html .= "</tr>\n";
+        $html .= "  <tr>";
+        for(my $i = 0; $i<=$#tgtwords; $i++)
+        {
+            my $translit = translit::prevest(\%prevod, $tgtwords[$i]);
+            if($tgtwords[$i] eq $config{word})
+            {
+                $html .= "<td style='color:red'>$tgtwords[$i]<br/>$translit</td>";
+            }
+            else
+            {
+                # Every word except for the current one is a link to its own examples.
+                $html .= "<td><a href='example.pl?experiment=$experiment&amp;word=$tgtwords[$i]'>$tgtwords[$i]</a><br/>$translit</td>";
+            }
+        }
+    }
+    $html .= "</tr>\n";
+    $html .= "</table>\n";
+    return $html;
 }
