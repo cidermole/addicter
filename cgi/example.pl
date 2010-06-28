@@ -169,13 +169,21 @@ if(exists($config{experiment}))
             }
             my @alicps = sort {$alicps{$b} <=> $alicps{$a}} (keys(%alicps));
             print("<h2>Alignment summary</h2>\n");
-            print("<p>The word '$config{word}' got aligned to ", scalar(@alicps), " distinct words/phrases. The most frequent ones follow (with frequencies):</p>\n");
-            print("<ol>\n");
-            for(my $i = 0; $i<=$#alicps && $i<20; $i++)
+            my $n = 0;
+            my $list;
+            for(my $i = 0; $i<=$#alicps; $i++)
             {
                 my $acp = $alicps[$i];
-                print("  <li>$acp ($alicps{$acp})</li>\n");
+                my $c = $alicps{$acp};
+                $n += $c;
+                if($i<20)
+                {
+                    $list .= '  <li>'.word_to_link($experiment, $acp)." ($c)</li>\n";
+                }
             }
+            print("<p>The word '$config{word}' occurred $n times and got aligned to ", scalar(@alicps), " distinct words/phrases. The most frequent ones follow (with frequencies):</p>\n");
+            print("<ol>\n");
+            print($list);
             print("</ol>\n");
         }
     }
@@ -255,7 +263,7 @@ sub sentence_to_table
         else
         {
             # Every word except for the current one is a link to its own examples.
-            $html .= "<td><a href='example.pl?experiment=$experiment&amp;word=$srcwords[$i]'>$srcwords[$i]</a></td>";
+            $html .= '<td>'.word_to_link($experiment, $srcwords[$i]).'</td>';
         }
     }
     $html .= "</tr>\n";
@@ -290,7 +298,7 @@ sub sentence_to_table
         else
         {
             # Every word except for the current one is a link to its own examples.
-            $html .= "<td><a href='example.pl?experiment=$experiment&amp;word=$tgtwords[$i]'>$tgtwords[$i]</a><br/>$translit</td>";
+            $html .= '<td>'.word_to_link($experiment, $tgtwords[$i])."<br/>$translit</td>";
         }
     }
     ###!!! If the filter is test+reference, show a third row with system hypothesis.
@@ -321,11 +329,25 @@ sub sentence_to_table
             else
             {
                 # Every word except for the current one is a link to its own examples.
-                $html .= "<td><a href='example.pl?experiment=$experiment&amp;word=$tgtwords[$i]'>$tgtwords[$i]</a><br/>$translit</td>";
+                $html .= '<td>'.word_to_link($experiment, $tgtwords[$i])."<br/>$translit</td>";
             }
         }
     }
     $html .= "</tr>\n";
     $html .= "</table>\n";
+    return $html;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Converts a word into a hyperlink to the page with an example of the word as
+# occurs in the corpus.
+#------------------------------------------------------------------------------
+sub word_to_link
+{
+    my $experiment = shift;
+    my $word = shift;
+    my $html = "<a href='example.pl?experiment=$experiment&amp;word=$word'>$word</a>";
     return $html;
 }
