@@ -11,7 +11,7 @@ sub alignSntTuple {
 	
 	my $probs = probs::generate($tuple);
 	
-	$tuple->{'alignment'} = beamsearch::decode($tuple, $probs);
+	$tuple->{'alignment'} = beamsearch::decodeAlignment($tuple, $probs);
 }
 
 #####
@@ -173,6 +173,22 @@ sub dumpRef {
 #####
 #
 #####
+sub dumpAlignment {
+	my $ali = shift;
+	
+	for my $i (0..$#$ali) {
+		my $alpt = $ali->[$i];
+		if ($alpt > 0) {
+			print "$i-" . ($alpt - 1) . " ";
+		}
+	}
+	
+	print "\n";
+}
+
+#####
+#
+#####
 sub dumpHyp {
 	my $tuple = shift;
 	
@@ -221,10 +237,11 @@ sub dumpHyp {
 sub dumpSntInfo {
 	my ($coveredRefIdxs, $tuple) = @_;
 	
-	dumpRef($coveredRefIdxs, $tuple->{'ref'}->{'forms'});
-	dumpHyp($tuple);
+	#dumpRef($coveredRefIdxs, $tuple->{'ref'}->{'forms'});
+	#dumpHyp($tuple);
+	dumpAlignment($tuple->{'alignment'});
 	
-	print "========================================================================================================\n";
+	#print "========================================================================================================\n";
 }
 
 #####

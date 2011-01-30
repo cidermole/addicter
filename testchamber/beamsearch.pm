@@ -203,6 +203,10 @@ sub genNextStates {
 	return $result;
 }
 
+sub decodeAlignment {
+	return decode(@_);
+}
+
 #####
 #
 #####

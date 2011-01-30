@@ -2475,7 +2475,7 @@ näita järelejäänute arvu
 piiks vea korral
 piirjoonte näitamine
 see menüü viitab järjehoidjatele .
-käivitab käsu qmake valitud alamprojekti kataloogis . qmake loob või genereerib makefile uuesti .
+käivitab käsu qmake valitud alamprojekti kataloogis .
 mittenähtavat osa saab nähtavale alale lohistada , kui hoida all klahv alt ja lohistada hiirt mööda ekraani .
 nüüd on aeg päringut testida .
 " sõnavara " " lisa õppetundidele . . ."
