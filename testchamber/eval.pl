@@ -12,6 +12,8 @@ use io;
 use stats;
 use opts;
 
+binmode(STDOUT, ":utf8");
+
 opts::processOpts();
 my ($srcfile, $reffile, $hypfile) = @ARGV;
 

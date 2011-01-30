@@ -72,7 +72,7 @@ sub isHypWordUnseen {
 	my $word = shift;
 	my $tuple = shift;
 	
-	return (sntHasWord($tuple->{'ref'}, $word)? undef: 1);
+	return (sntHasWord($tuple->{'ref'}->{'lemmas'}, $word)? undef: 1);
 }
 
 #####
@@ -90,7 +90,7 @@ sub getInfoHash {
 	my $tuple = shift;
 	my $hash = {};
 	
-	for my $word (@{$tuple->{'hyp'}}) {
+	for my $word (@{$tuple->{'hyp'}->{'lemmas'}}) {
 		$hash->{getTag($word, $tuple)}++;
 	}
 	
@@ -104,11 +104,11 @@ sub genEmitPs {
 	my $tuple = shift;
 	my $hash = {};
 	
-	my $refSize = scalar @{$tuple->{'ref'}};
+	my $refSize = scalar @{$tuple->{'ref'}->{'lemmas'}};
 	
 	my $infoHash = $tuple->{'infohash'};
 	
-	for my $hypWord (@{$tuple->{'hyp'}}) {
+	for my $hypWord (@{$tuple->{'hyp'}->{'lemmas'}}) {
 		if (isHypWordUnseen($hypWord, $tuple)) {
 			$hash->{$hypWord}->{0} = 1.0 / $infoHash->{$const::UNK_TAG};
 		}
@@ -119,7 +119,7 @@ sub genEmitPs {
 			
 			for my $class (1..$refSize) {
 				$hash->{$hypWord}->{$class} =
-					($hypWord eq $tuple->{'ref'}->[$class - 1])?
+					($hypWord eq $tuple->{'ref'}->{'lemmas'}->[$class - 1])?
 					(1.0 - $currUnalignProb) /
 					$infoHash->{$hypWord}:
 					0;
@@ -136,7 +136,7 @@ sub genEmitPs {
 sub generate {
 	my $tuple = shift;
 	
-	my $refSize = scalar @{$tuple->{'ref'}};
+	my $refSize = scalar @{$tuple->{'ref'}->{'lemmas'}};
 	
 	my $result = {};
 	

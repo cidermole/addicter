@@ -9,15 +9,9 @@ use probs;
 sub alignSntTuple {
 	my $tuple = shift;
 	
-	my $time = time();
-	
 	my $probs = probs::generate($tuple);
 	
 	$tuple->{'alignment'} = beamsearch::decode($tuple, $probs);
-
-	$time = time() - $time;
-
-	#print "total: $time seconds\n";
 }
 
 #####
@@ -54,42 +48,53 @@ sub submitStatChunk {
 		$stats->{$k1} += $currstats->{$k1};
 	}
 	
-	for my $k2 (qw(missing unknown wrong)) {
-		$stats->{$k2} += $#{$currstats->{$k2}} + 1;
+	for my $k2 (qw(missing untranslated extra wrongform)) {
+		for my $k3 (keys %{$currstats->{$k2}}) {
+			$stats->{$k2}->{$k3} += $#{$currstats->{$k2}->{$k3}} + 1
+		}
 	}
 }
 
 #####
 #
 #####
-sub updateUnalignedWords {
+sub updateWordErrors {
 	my ($currstats, $tuple) = @_;
 	
 	my $coveredRefIdxs = {};
 	
 	for my $i (0..$#{$tuple->{'alignment'}}) {
 		my $alPt = $tuple->{'alignment'}->[$i];
+		my $hypword = $tuple->{'hyp'}->{'forms'}->[$i];
+		my $hyptag = $tuple->{'hyp'}->{'tags'}->[$i];
 		
 		#evaluating unknown/wrong hyp words
 		if ($alPt == 0) {
-			my $hypword = $tuple->{'hyp'}->[$i];
+			my $whereToPut = (probs::sntHasWord($tuple->{'src'}->{'forms'}, $hypword))?
+				'untranslated': 'extra';
 			
-			my $idxToPushTo = (probs::sntHasWord($tuple->{'src'}, $hypword))? 'unknown': 'wrong';
-			
-			push @{$currstats->{$idxToPushTo}}, $hypword;
-			$tuple->{$idxToPushTo}->{$i} = 1;
+			push @{$currstats->{$whereToPut}->{$hyptag}}, $hypword;
+			$tuple->{$whereToPut}->{$i} = 1;
 		}
 		else {
 			#for evaluating missing ref words
 			$coveredRefIdxs->{$alPt} = 1;
+			
+			my $refword = $tuple->{'ref'}->{'forms'}->[$alPt - 1];
+			my $reftag = $tuple->{'ref'}->{'tags'}->[$alPt - 1];
+			
+			if ($refword ne $hypword) {
+				push @{$currstats->{'wrongform'}->{"" . $reftag}},
+					("" . $hypword . "-" . $refword);
+			}
 		}
-		
 	}
 	
 	#evaluating missing ref words
-	for my $j (0..$#{$tuple->{'ref'}}) {
+	for my $j (0..$#{$tuple->{'ref'}->{'forms'}}) {
 		unless ($coveredRefIdxs->{$j + 1}) {
-			push @{$currstats->{'missing'}}, $tuple->{'ref'}->[$j];
+			push @{$currstats->{'missing'}->{$tuple->{'ref'}->{'tags'}->[$j]}},
+				$tuple->{'ref'}->{'forms'}->[$j];
 		}
 	}
 	
@@ -99,7 +104,7 @@ sub updateUnalignedWords {
 #####
 #
 #####
-sub updateDistortion {
+sub updateOrderErrors {
 	my ($currstats, $tuple, $refCovIdxs) = @_;
 	
 	my $refRank = 0;
@@ -171,7 +176,7 @@ sub dumpRef {
 sub dumpHyp {
 	my $tuple = shift;
 	
-	my $hyp = $tuple->{'hyp'};
+	my $hyp = $tuple->{'hyp'}->{'forms'};
 	my $ali = $tuple->{'alignment'};
 	
 	my $hypAlStr   = " alignment:";
@@ -197,7 +202,7 @@ sub dumpHyp {
 		my $wrongnessId = " ";
 		
 		if ($alpt == 0) {
-			$wrongnessId = $tuple->{'wrong'}->{$i}? "X": "?";
+			$wrongnessId = $tuple->{'extra'}->{$i}? "X": "?";
 		}
 		
 		$wrongStr .= "  " . sprintf("%" . $len . "s", $wrongnessId);
@@ -216,7 +221,7 @@ sub dumpHyp {
 sub dumpSntInfo {
 	my ($coveredRefIdxs, $tuple) = @_;
 	
-	dumpRef($coveredRefIdxs, $tuple->{'ref'});
+	dumpRef($coveredRefIdxs, $tuple->{'ref'}->{'forms'});
 	dumpHyp($tuple);
 	
 	print "========================================================================================================\n";
@@ -233,12 +238,12 @@ sub update {
 	
 	my $currstats = {};
 	
-	$currstats->{'totalref'} = scalar @{$tuple->{'ref'}};
-	$currstats->{'totalhyp'} = scalar @{$tuple->{'hyp'}};
+	$currstats->{'totalref'} = scalar @{$tuple->{'ref'}->{'forms'}};
+	$currstats->{'totalhyp'} = scalar @{$tuple->{'hyp'}->{'forms'}};
 	
-	my $coveredRefIdxs = updateUnalignedWords($currstats, $tuple);
+	my $coveredRefIdxs = updateWordErrors($currstats, $tuple);
 	
-	updateDistortion($currstats, $tuple, $coveredRefIdxs);
+	updateOrderErrors($currstats, $tuple, $coveredRefIdxs);
 	
 	if ($opts::dumpEachSnt) {
 		dumpSntInfo($coveredRefIdxs, $tuple);
@@ -250,13 +255,33 @@ sub update {
 #####
 #
 #####
-sub percentage {
-	my ($stats, $totalId, $valueId) = @_;
+sub reportSome {
+	my ($stats, $totalId, $valueId, $headTitle) = @_;
+	
+	if (!$headTitle) {
+		$headTitle = $valueId;
+	}
 	
 	my $total = $stats->{$totalId};
-	my $value = $stats->{$valueId};
+	my $valueHash = $stats->{$valueId};
+	my $value = 0;
 	
-	return sprintf("%7.2f%% (%8d / %8d)", 100*$value/$total, $value, $total);
+	my $result = "";
+	
+	for my $k (sort keys %$valueHash) {
+		my $currVal = $valueHash->{$k};
+		
+		$result .=
+			"\n    " .
+			sprintf("%-11s: %7.2f%% (%8d / %8d)", $k, 100*$currVal/$total, $currVal, $total);
+		
+		$value += $currVal;
+	}
+	
+	if ($value != 0) {
+		printf("%-11s: %7.2f%% (%8d / %8d)%s\n", $headTitle, 100 * $value / $total, $value, $total, $result);
+	}
+	
 }
 
 #####
@@ -277,10 +302,14 @@ sub fpercentage {
 sub display {
 	my $stats = shift;
 	
-	print "Missing: " . percentage($stats, 'totalref', 'missing') . "\n";
-	print "Unknown: " . percentage($stats, 'totalhyp', 'unknown') . "\n";
-	print "Wrong:   " . percentage($stats, 'totalhyp', 'wrong') . "\n";
+	reportSome($stats, 'totalref', 'missing') . "\n";
+	reportSome($stats, 'totalhyp', 'untranslated') . "\n";
+	reportSome($stats, 'totalhyp', 'wrongform') . "\n";
+	reportSome($stats, 'totalhyp', 'extra') . "\n";
+	
 	printf ("Order similarity: %.5f\n", ($stats->{'spearman'} / $stats->{'totalspearman'}));
+	
+	
 }
 
 1;

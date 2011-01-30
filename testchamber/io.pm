@@ -61,9 +61,26 @@ sub getSnt {
 		$raw =~ s/^ //g;
 		$raw =~ s/ $//g;
 		
-		my @words = split(/ /, $raw);
+		my @rawwords = split(/ /, $raw);
+		my $result = { 'forms' => [], 'tags' => [], 'lemmas' => [] };
 		
-		return \@words;
+		for my $w (@rawwords) {
+			my @splitw = split(/\|/, $w);
+			
+			unless (scalar @splitw == 3) {
+				die("Word `$w' is bad");
+			}
+			
+			my $lemma = $splitw[2];
+			if ($lemma eq '<unknown>' or $lemma eq '@card@') {
+				$lemma = $splitw[0];
+			}
+			push @{$result->{'forms'}}, $splitw[0];
+			push @{$result->{'tags'}}, $splitw[1];
+			push @{$result->{'lemmas'}}, $lemma;
+		}
+		
+		return $result;
 	}
 	else {
 		return undef;

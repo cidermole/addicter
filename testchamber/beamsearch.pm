@@ -153,7 +153,7 @@ sub popState {
 sub isFinalState {
 	my ($state, $tuple) = @_;
 	
-	return ($state->{'pos'} == (scalar @{$tuple->{'hyp'}}));
+	return ($state->{'pos'} == (scalar @{$tuple->{'hyp'}->{'lemmas'}}));
 }
 
 #####
@@ -182,11 +182,11 @@ sub genNextStates {
 	my $currAlignment = $currState->{'alignment'};
 	my $currAlPoint = getLastNonZeroPoint($currAlignment);
 	
-	my $nextHypWord = $tuple->{'hyp'}->[$currPos]; #($currPos - 1) + 1
+	my $nextHypWord = $tuple->{'hyp'}->{'lemmas'}->[$currPos]; #($currPos - 1) + 1
 	
 	my $result = [];
 	
-	for my $refIdx (0..(scalar @{$tuple->{'ref'}})) {
+	for my $refIdx (0..(scalar @{$tuple->{'ref'}->{'lemmas'}})) {
 		if ($refIdx == 0 or grep(/^\Q$refIdx\E$/, @$currAlignment) == 0) {
 			my $newProb = $probs->{'emit'}->{$nextHypWord}->{$refIdx} * $probs->{'trans'}->{$currAlPoint}->{$refIdx};
 			
@@ -209,28 +209,18 @@ sub genNextStates {
 sub decode {
 	my ($tuple, $probs) = @_;
 	
-	dlog("hyp: @{$tuple->{'hyp'}}");
-	
 	my $stateQueue = {};
-	dlog("queue size: " . countStates($stateQueue, "pre-push"));
 	pushState(genInitState(), $stateQueue);
-	dlog("queue size: " . countStates($stateQueue, "post-push"));
 	
 	my $finalState = { 'prob' => -10e600 };
 	
 	my $currState;
 	
-	dlog("queue size: " . countStates($stateQueue, "pre-pop"));
 	while ($currState = popState($stateQueue)) {
-		dlog("queue size: " . countStates($stateQueue, "post-pop"));
 		
-		dlog("=================");
-		dstatelog($currState, "popped state");
 		my $nextStates = genNextStates($tuple, $probs, $currState);
 		
 		for my $nextState (@$nextStates) {
-			dstatelog($nextState, "generated state");
-			
 			if (isFinalState($nextState, $tuple)) {
 				if ($nextState->{'prob'} > $finalState->{'prob'}) {
 					$finalState = $nextState;
@@ -240,11 +230,7 @@ sub decode {
 				pushState($nextState, $stateQueue);
 			}
 		}
-		dlog("=================");
-		dlog("queue size: " . countStates($stateQueue, "pre-pop"));
 	}
-	
-	dlog("done popping");
 	
 	return $finalState->{'alignment'};
 }
