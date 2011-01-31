@@ -5,45 +5,22 @@ use const;
 #####
 #
 #####
-sub dlog {
-	#print STDERR $_[0] . "; " . `date`;
-}
-
-#####
-#
-#####
-sub dstatelog {
-	my ($state, $msg) = @_;
-	my $ali = $state->{'alignment'};
-	dlog($msg . " -- prob: " . $state->{'prob'} . ", pos: " . $state->{'pos'} . ", alignment: @$ali"
-		. ", last point: =|" . $ali->[$#$ali] . "|=");
-}
-
-#####
-#
-#####
-sub genInitState {
-	return { 'prob' => 0, 'alignment' => [], 'pos' => 0 };
-}
-
-#####
-#
-#####
-sub getCoverString {
-	my $state = shift;
-	my $al = $state->{'alignment'};
-	my @cleanAl = grep(!/^\Q0\E$/, @$al);
-	my @sortAl = sort { $a <=> $b } @cleanAl;
-	return "@sortAl";
-}
-
-#####
-#
-#####
-sub sameCoverage {
-	my ($state1, $state2) = @_;
+sub findMin {
+	my $posqueue = shift;
 	
-	return (getCoverString($state1) eq getCoverString($state2));
+	my $minIdx = -1;
+	my $minProb = 0;
+	
+	for my $i (0..$#{$posqueue}) {
+		my $thisState = $posqueue->[$i];
+		
+		if ($thisState->{'prob'} < $minProb) {
+			$minIdx = $i;
+			$minProb = $thisState->{'prob'};
+		}
+	}
+	
+	return ($minIdx, $minProb);
 }
 
 #####
@@ -59,10 +36,11 @@ sub pushState {
 	}
 	
 	for my $existingState (@{$queue->{$pos}}) {
-		if (sameCoverage($state, $existingState)) {
+		if ($state->{'hash'} eq $existingState->{'hash'}) {
 			if ($state->{'prob'} > $existingState->{'prob'}) {
-				$existingState->{'prob'} = $state->{'prob'};
-				$existingState->{'alignment'} = $state->{'alignment'};
+				for my $key (keys %$existingState) {
+					$existingState->{$key} = $state->{$key};
+				}
 			}
 
 			return;
@@ -73,44 +51,12 @@ sub pushState {
 		unshift @{$queue->{$pos}}, $state;
 	}
 	else {
-		my $minIdx = -1;
-		my $minProb = 0;
-		
-		for my $i (0..$#{$queue->{$pos}}) {
-			my $thisState = $queue->{$pos}->[$i];
-			
-			if ($thisState->{'prob'} < $minProb) {
-				$minIdx = $i;
-				$minProb = $thisState->{'prob'};
-			}
-		}
+		my ($minIdx, $minProb) = findMin($queue->{$pos});
 		
 		if ($minProb < $state->{'prob'}) {
 			$queue->{$pos}->[$minIdx] = $state;
 		}
 	}
-}
-
-#####
-#
-#####
-sub countStates {
-	my $queue = shift;
-	my $msg = shift;
-	my $result = 0;
-	
-	dlog("---------------");
-	dlog($msg);
-	
-	for my $k (sort { $a <=> $b } keys %$queue) {
-		my $currSize = scalar @{$queue->{$k}};
-		$result += $currSize;
-		dlog("$k: $currSize");
-	}
-	
-	dlog("---------------");
-	
-	return $result;
 }
 
 #####
@@ -142,18 +88,60 @@ sub popState {
 		delete $queue->{$key};
 	}
 	
-	dlog("returning $state\n");
-	
 	return $state;
 }
 
 #####
 #
 #####
-sub isFinalState {
-	my ($state, $tuple) = @_;
+sub decode {
+	my ($initstate, $auxinfo, $genNextStatesFunc, $isFinalStateFunc) = @_;
 	
-	return ($state->{'pos'} == (scalar @{$tuple->{'hyp'}->{'lemmas'}}));
+	my $stateQueue = {};
+	pushState($initstate, $stateQueue);
+	
+	my $finalState = { 'prob' => -10e600 };
+	
+	my $currState;
+	
+	while ($currState = popState($stateQueue)) {
+		
+		my $nextStates = &$genNextStatesFunc($currState, $auxinfo);
+		
+		for my $nextState (@$nextStates) {
+			if (&$isFinalStateFunc($nextState, $auxinfo)) {
+				if ($nextState->{'prob'} > $finalState->{'prob'}) {
+					$finalState = $nextState;
+				}
+			}
+			else {
+				pushState($nextState, $stateQueue);
+			}
+		}
+	}
+	
+	return $finalState;
+}
+
+#####
+#
+#####
+sub decodeAlignment {
+	my ($tuple, $probs) = @_;
+	
+	my $result = decode(genAlInitState(), { 'tuple' => $tuple, 'probs' => $probs },
+		\&genAlNextStates, \&isAlFinalState);
+	
+	return $result->{'alignment'};
+}
+
+#####
+#
+#####
+sub isAlFinalState {
+	my ($state, $auxinfo) = @_;
+	
+	return ($state->{'pos'} == (scalar @{$auxinfo->{'tuple'}->{'hyp'}->{'lemmas'}}));
 }
 
 #####
@@ -175,26 +163,24 @@ sub getLastNonZeroPoint {
 #####
 #
 #####
-sub genNextStates {
-	my ($tuple, $probs, $currState) = @_;
+sub genAlNextStates {
+	my ($currState, $auxinfo) = @_;
 	
 	my $currPos = $currState->{'pos'};
 	my $currAlignment = $currState->{'alignment'};
 	my $currAlPoint = getLastNonZeroPoint($currAlignment);
 	
-	my $nextHypWord = $tuple->{'hyp'}->{'lemmas'}->[$currPos]; #($currPos - 1) + 1
+	my $nextHypWord = $auxinfo->{'tuple'}->{'hyp'}->{'lemmas'}->[$currPos]; #($currPos - 1) + 1
 	
 	my $result = [];
 	
-	for my $refIdx (0..(scalar @{$tuple->{'ref'}->{'lemmas'}})) {
+	for my $refIdx (0..(scalar @{$auxinfo->{'tuple'}->{'ref'}->{'lemmas'}})) {
 		if ($refIdx == 0 or grep(/^\Q$refIdx\E$/, @$currAlignment) == 0) {
-			my $newProb = $probs->{'emit'}->{$nextHypWord}->{$refIdx} * $probs->{'trans'}->{$currAlPoint}->{$refIdx};
+			my $newProb = $auxinfo->{'probs'}->{'emit'}->{$nextHypWord}->{$refIdx} * $auxinfo->{'probs'}->{'trans'}->{$currAlPoint}->{$refIdx};
 			
 			if ($newProb != 0) {
-				my $newstate = {
-					'prob' => $currState->{'prob'} + log($newProb),
-					'pos' => $currPos + 1,
-					'alignment' => [@$currAlignment, $refIdx]};
+				my $newstate = genNewAlState($currState->{'prob'} + log($newProb),
+					[@$currAlignment, $refIdx], $currPos + 1);
 				push @$result, $newstate;
 			}
 		}
@@ -203,40 +189,32 @@ sub genNextStates {
 	return $result;
 }
 
-sub decodeAlignment {
-	return decode(@_);
+#####
+#
+#####
+sub getCoverString {
+	my $state = shift;
+	my $al = $state->{'alignment'};
+	my @cleanAl = grep(!/^\Q0\E$/, @$al);
+	my @sortAl = sort { $a <=> $b } @cleanAl;
+	return "@sortAl";
 }
 
 #####
 #
 #####
-sub decode {
-	my ($tuple, $probs) = @_;
-	
-	my $stateQueue = {};
-	pushState(genInitState(), $stateQueue);
-	
-	my $finalState = { 'prob' => -10e600 };
-	
-	my $currState;
-	
-	while ($currState = popState($stateQueue)) {
-		
-		my $nextStates = genNextStates($tuple, $probs, $currState);
-		
-		for my $nextState (@$nextStates) {
-			if (isFinalState($nextState, $tuple)) {
-				if ($nextState->{'prob'} > $finalState->{'prob'}) {
-					$finalState = $nextState;
-				}
-			}
-			else {
-				pushState($nextState, $stateQueue);
-			}
-		}
-	}
-	
-	return $finalState->{'alignment'};
+sub genNewAlState {
+	my ($prob, $al, $pos) = @_;
+	my $newstate = { 'prob' => $prob, 'alignment' => $al, 'pos' => $pos };
+	$newstate->{'hash'} = getCoverString($newstate);
+	return $newstate;
+}
+
+#####
+#
+#####
+sub genAlInitState {
+	return genNewAlState(0, [], 0);
 }
 
 1;
