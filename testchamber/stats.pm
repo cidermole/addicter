@@ -325,8 +325,6 @@ sub display {
 	reportSome($stats, 'totalhyp', 'extra') . "\n";
 	
 	printf ("Order similarity: %.5f\n", ($stats->{'spearman'} / $stats->{'totalspearman'}));
-	
-	
 }
 
 1;

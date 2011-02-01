@@ -5,6 +5,13 @@ use const;
 #####
 #
 #####
+sub tmplog {
+	print STDERR "DEBUG: @_;\n";
+}
+
+#####
+#
+#####
 sub findMin {
 	my $posqueue = shift;
 	
@@ -127,9 +134,15 @@ sub decode {
 #
 #####
 sub decodeAlignment {
-	my ($tuple, $probs) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $probs) = @_;
 	
-	my $result = decode(genAlInitState(), { 'tuple' => $tuple, 'probs' => $probs },
+	my $auxinfo = {
+		'refsnt' => $refSnt,
+		'hypsnt' => $hypSnt,
+		'alfact' => $alFactor,
+		'probs' => $probs};
+	
+	my $result = decode(genAlInitState(), $auxinfo,
 		\&genAlNextStates, \&isAlFinalState);
 	
 	return $result->{'alignment'};
@@ -141,23 +154,24 @@ sub decodeAlignment {
 sub isAlFinalState {
 	my ($state, $auxinfo) = @_;
 	
-	return ($state->{'pos'} == (scalar @{$auxinfo->{'tuple'}->{'hyp'}->{'lemmas'}}));
+	my $hypsnt = $auxinfo->{'hypsnt'};
+	
+	return ($state->{'pos'} == $#$hypsnt);
 }
 
 #####
 #
 #####
-sub getLastNonZeroPoint {
+sub getLastNonNilPoint {
 	my $alignment = shift;
 	
 	my $i = $#$alignment;
-	my $result = 0;
 	
-	while ($i > 0 and !($result = $alignment->[$i])) {
+	while ($i >= 0 and ($alignment->[$i] == -1)) {
 		$i--;
 	}
 	
-	return $result;
+	return ($i < 0)? -1: $alignment->[$i];
 }
 
 #####
@@ -166,21 +180,25 @@ sub getLastNonZeroPoint {
 sub genAlNextStates {
 	my ($currState, $auxinfo) = @_;
 	
-	my $currPos = $currState->{'pos'};
-	my $currAlignment = $currState->{'alignment'};
-	my $currAlPoint = getLastNonZeroPoint($currAlignment);
+	my $refSnt = $auxinfo->{'refsnt'};
 	
-	my $nextHypWord = $auxinfo->{'tuple'}->{'hyp'}->{'lemmas'}->[$currPos]; #($currPos - 1) + 1
+	my $nextPos = $currState->{'pos'} + 1;
+	my $currAlignment = $currState->{'alignment'};
+	my $currAlPoint = getLastNonNilPoint($currAlignment);
+	
+	my $nextHypWord = io::getWordFactor($auxinfo->{'hypsnt'}->[$nextPos], $auxinfo->{'alfact'});
 	
 	my $result = [];
 	
-	for my $refIdx (0..(scalar @{$auxinfo->{'tuple'}->{'ref'}->{'lemmas'}})) {
-		if ($refIdx == 0 or grep(/^\Q$refIdx\E$/, @$currAlignment) == 0) {
-			my $newProb = $auxinfo->{'probs'}->{'emit'}->{$nextHypWord}->{$refIdx} * $auxinfo->{'probs'}->{'trans'}->{$currAlPoint}->{$refIdx};
+	for my $refIdx (-1..$#$refSnt) {
+		if ($refIdx == -1 or grep(/^\Q$refIdx\E$/, @$currAlignment) == 0) {
+			my $newProb =
+				$auxinfo->{'probs'}->{'emit'}->{$nextHypWord}->{$refIdx} *
+				$auxinfo->{'probs'}->{'trans'}->{$currAlPoint}->{$refIdx};
 			
 			if ($newProb != 0) {
 				my $newstate = genNewAlState($currState->{'prob'} + log($newProb),
-					[@$currAlignment, $refIdx], $currPos + 1);
+					[@$currAlignment, $refIdx], $nextPos);
 				push @$result, $newstate;
 			}
 		}
@@ -214,7 +232,7 @@ sub genNewAlState {
 #
 #####
 sub genAlInitState {
-	return genNewAlState(0, [], 0);
+	return genNewAlState(0, [], -1);
 }
 
 1;

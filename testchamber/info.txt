@@ -1,0 +1,32 @@
+----------
+./align.pl [ -n AL_FACTOR -c ] reference hypothesis
+----------
+-n : which factor should alignment be based on
+-c : do not ignore letter case
+----------
+
+Finds and prints to STDOUT the alignment between the reference and the hypothesis; both files are formatted just like
+Moses's factored model training input: "string|string|string|...", with an arbitrary number and meaning of factors.
+
+The AL_FACTOR argument specifies which of the factors is to be used for alignment; the default value is 0, which means
+the first factor. In case a factor isn't present for a specific token (missing value), the aligner falls back to 0 for
+that token.
+
+Thus, out-of-the-box version aligns translations, based on surface forms (ignoring all other
+factors). To align based on lemmas one has to generate a file with surface forms and lemmas, where sentences would look
+like:
+
+breaking|break the|the waves|wave .|.
+
+or, thanks to the back-off mechanism, equivalently:
+
+breaking|break the waves|wave .
+
+
+----------
+./lexerrs.pl source reference hypothesis alignment
+----------
+
+----------
+./orderrs.pl reference hypothesis alignment
+----------

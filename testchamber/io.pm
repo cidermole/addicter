@@ -4,33 +4,8 @@ use strict;
 #####
 #
 #####
-sub openFiles {
-	my ($srcfile, $reffile, $hypfile) = @_;
-	my $fh = {};
-	
-	$fh->{'src'} = openRead($srcfile);
-	$fh->{'ref'} = openRead($reffile);
-	$fh->{'hyp'} = openRead($hypfile);
-	
-	return $fh;
-}
-
-#####
-#
-#####
 sub noRead {
 	die("Failed to open `" . $_[0] . "' for reading");
-}
-
-#####
-#
-#####
-sub closeFiles {
-	my $fh = shift;
-	
-	close($fh->{'src'});
-	close($fh->{'ref'});
-	close($fh->{'hyp'});
 }
 
 #####
@@ -50,37 +25,79 @@ sub openRead {
 #####
 #
 #####
-sub getSnt {
-	my $fh = shift;
+sub getWordFactor {
+	my ($word, $factor) = @_;
 	
-	my $raw = <$fh>;
+	my $result = $word->[$factor];
 	
-	if ($raw) {
-		$raw =~ s/\n//g;
-		$raw =~ s/[ \t]{2,}/ /g;
-		$raw =~ s/^ //g;
-		$raw =~ s/ $//g;
+	unless ($result) {
+		$result = $word->[0];
+	}
+	
+	return $result;
+}
+
+#####
+#
+#####
+sub parseSentence {
+	my ($string, $caseSensitive) = @_;
+	my @result;
+	
+	if (!$caseSensitive) {
+		$string = lc($string);
+	}
+	
+	my @tokens = split(/ /, $string);
+	
+	for my $token (@tokens) {
+		push @result, [ split(/\|/, $token) ];
+	}
+	
+	return \@result;
+}
+
+#####
+#
+#####
+sub parseAlignment {
+	my $string = shift;
+	my @result;
+	
+	my @tokens = split(/ /, $string);
+	
+	for my $token (@tokens) {
+		my @alPts = split(/-/, $token);
 		
-		my @rawwords = split(/ /, $raw);
-		my $result = { 'forms' => [], 'tags' => [], 'lemmas' => [] };
-		
-		for my $w (@rawwords) {
-			my @splitw = split(/\|/, $w);
-			
-			unless (scalar @splitw == 3) {
-				die("Word `$w' is bad");
-			}
-			
-			my $lemma = $splitw[2];
-			if ($lemma eq '<unknown>' or $lemma eq '@card@') {
-				$lemma = $splitw[0];
-			}
-			push @{$result->{'forms'}}, $splitw[0];
-			push @{$result->{'tags'}}, $splitw[1];
-			push @{$result->{'lemmas'}}, $lemma;
+		unless (scalar @alPts == 2) {
+			die("Alignment points expected to be formatted as `idx-idx'");
 		}
 		
-		return $result;
+		unless ($alPts[0] =~ /^[0-9]+$/ and $alPts[1] =~ /^[0-9]+$/) {
+			die("Alignment point indexes should be non-negative numeric");
+		}
+		
+		push @result, \@alPts;
+	}
+	
+	return \@result;
+}
+
+#####
+#
+#####
+sub readSentence {
+	my $fh = shift;
+	
+	my $string = <$fh>;
+	
+	if ($string) {
+		$string =~ s/\n//g;
+		$string =~ s/[ \t]{2,}/ /g;
+		$string =~ s/^ //g;
+		$string =~ s/ $//g;
+		
+		return $string;
 	}
 	else {
 		return undef;
@@ -91,29 +108,33 @@ sub getSnt {
 #
 #####
 sub readSentences {
-	my $fh = shift;
+	my $fhArr = shift;
+	my @sntArr = ();
 	
-	my $srcsnt = getSnt($fh->{'src'});
-	my $refsnt = getSnt($fh->{'ref'});
-	my $hypsnt = getSnt($fh->{'hyp'});
+	my $allFinished = 1;
+	my $allSucceeded = 1;
 	
-	if ($srcsnt and $refsnt and $hypsnt) {
-		return { 'src' => $srcsnt, 'ref' => $refsnt, 'hyp' => $hypsnt };
+	for my $fh (@$fhArr) {
+		my $snt = readSentence($fh);
+		
+		if (defined($snt)) {
+			$allFinished = undef;
+		}
+		else {
+			$allSucceeded = undef;
+		}
+		
+		push @sntArr, $snt;
 	}
-	elsif (!$srcsnt and !$refsnt and !$hypsnt) {
+	
+	if ($allSucceeded) {
+		return \@sntArr;
+	}
+	elsif ($allFinished) {
 		return undef;
 	}
-	elsif (!$srcsnt) {
-		die ("Source file ended prematurely");
-	}
-	elsif (!$refsnt) {
-		die ("Reference file ended prematurely");
-	}
-	elsif (!$hypsnt) {
-		die ("Hypothesis file ended prematurely");
-	}
 	else {
-		die ("Well that's really strange");
+		die("Unequal number of lines in the input files");
 	}
 }
 

@@ -1,6 +1,7 @@
 package probs;
 use strict;
 use const;
+use io;
 
 #####
 #
@@ -19,7 +20,7 @@ sub genInitPs {
 	my $size = shift;
 	my $hash = {};
 	
-	for my $i (0..$size) {
+	for my $i (-1..($size-1)) {
 		$hash->{$i} = 1.0 / ($size + 1);
 	}
 	
@@ -32,14 +33,21 @@ sub genInitPs {
 sub getTransWeight {
 	my ($prev, $curr) = @_;
 	
-	if ($prev == 0) {
+	#prev cannot be unaligned (-1) while decoding, since
+	#the next non-nil alignment is used, but
+	#just in case:
+	if ($prev == -1) {
 		return 1;
 	}
 	
+	#since we do only 1-to-1 alignment with no
+	#repetitions, current cannot be the same as
+	#previous
 	if ($prev == $curr) {
 		return 0;
 	}
 	
+	#distortion penalty -- the closer, the smaller
 	return 2 ** (-abs($curr - $prev - 1));
 }
 
@@ -50,14 +58,14 @@ sub genTransPs {
 	my $size = shift;
 	my $hash = {};
 	
-	for my $i (0..$size) {
+	for my $i (-1..($size-1)) {
 		my $denom = 0;
 		
-		for my $j (0..$size) {
+		for my $j (-1..($size-1)) {
 			$denom += getTransWeight($i, $j);
 		}
 		
-		for my $j (0..$size) {
+		for my $j (-1..($size-1)) {
 			$hash->{$i}->{$j} = getTransWeight($i, $j) / $denom;
 		}
 	}
@@ -68,62 +76,63 @@ sub genTransPs {
 #####
 #
 #####
-sub isHypWordUnseen {
-	my $word = shift;
-	my $tuple = shift;
+sub hashRefWords {
+	my ($refSnt, $alFactor) = @_;
 	
-	return (sntHasWord($tuple->{'ref'}->{'lemmas'}, $word)? undef: 1);
+	#make a hash/bag of ref word factors
+	my $refhash = {};
+	for my $refw (@$refSnt) {
+		$refhash->{io::getWordFactor($refw, $alFactor)} = 1;
+	}
+	
+	return $refhash;
 }
 
 #####
 #
 #####
-sub getTag {
-	my ($word, $tuple) = @_;
-	return isHypWordUnseen($word, $tuple)?
-		$const::UNK_TAG: $word;
-}
-#####
-#
-#####
-sub getInfoHash {
-	my $tuple = shift;
-	my $hash = {};
+sub countWordClasses {
+	my ($refSnt, $hypSnt, $alFactor) = @_;
 	
-	for my $word (@{$tuple->{'hyp'}->{'lemmas'}}) {
-		$hash->{getTag($word, $tuple)}++;
+	my $refWordHash = hashRefWords($refSnt, $alFactor);
+	
+	#count words -- seen words as themselves, unseen words as "UNK"
+	my $counthash = {};
+	for my $hypw (@$hypSnt) {
+		my $factor = io::getWordFactor($hypw, $alFactor);
+		my $class = ($refWordHash->{$factor})? $factor: $const::UNK_TAG;
+		$counthash->{$class}++;
 	}
 	
-	return $hash;
+	return $counthash;
 }
 
 #####
 #
 #####
 sub genEmitPs {
-	my $tuple = shift;
+	my ($refSnt, $hypSnt, $alFactor) = @_;
 	my $hash = {};
 	
-	my $refSize = scalar @{$tuple->{'ref'}->{'lemmas'}};
+	my $refSize = scalar @$refSnt;
 	
-	my $infoHash = $tuple->{'infohash'};
+	my $wcCount = countWordClasses($refSnt, $hypSnt, $alFactor);
 	
-	for my $hypWord (@{$tuple->{'hyp'}->{'lemmas'}}) {
-		if (isHypWordUnseen($hypWord, $tuple)) {
-			$hash->{$hypWord}->{0} = 1.0 / $infoHash->{$const::UNK_TAG};
+	for my $hypw (@$hypSnt) {
+		my $hypf = io::getWordFactor($hypw, $alFactor);
+		
+		if ($wcCount->{$hypf}) {
+			my $currUnalignProb = ($wcCount->{$hypf} == 1)? 0: $const::SEEN_UNAL_PROB;
+			
+			$hash->{$hypf}->{-1} = $currUnalignProb;
+			
+			for my $class (0..($refSize-1)) {
+				$hash->{$hypf}->{$class} = ($hypf eq io::getWordFactor($refSnt->[$class], $alFactor))?
+					(1.0 - $currUnalignProb) / $wcCount->{$hypf}: 0;
+			}
 		}
 		else {
-			my $currUnalignProb = ($infoHash->{$hypWord} == 1)? 0: $const::SEEN_UNAL_PROB;
-			
-			$hash->{$hypWord}->{0} = $currUnalignProb;
-			
-			for my $class (1..$refSize) {
-				$hash->{$hypWord}->{$class} =
-					($hypWord eq $tuple->{'ref'}->{'lemmas'}->[$class - 1])?
-					(1.0 - $currUnalignProb) /
-					$infoHash->{$hypWord}:
-					0;
-			}
+			$hash->{$hypf}->{-1} = 1.0 / $wcCount->{$const::UNK_TAG};
 		}
 	}
 	
@@ -134,16 +143,15 @@ sub genEmitPs {
 #
 #####
 sub generate {
-	my $tuple = shift;
+	my ($refSnt, $hypSnt, $alFactor) = @_;
 	
-	my $refSize = scalar @{$tuple->{'ref'}->{'lemmas'}};
+	my $refSize = scalar @$refSnt;
 	
 	my $result = {};
 	
-	$tuple->{'infohash'} = getInfoHash($tuple);
 	$result->{'init'} = genInitPs($refSize);
 	$result->{'trans'} = genTransPs($refSize);
-	$result->{'emit'} = genEmitPs($tuple);
+	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor);
 	
 	return $result;
 }
