@@ -15,17 +15,18 @@ BEGIN {
 use io;
 use probs;
 use beamsearch;
+use counter;
 
 binmode(STDOUT, ":utf8");
 
 my ($reffile, $hypfile, $caseSensitive, $alFactor) =
 	processInputArgsAndOpts();
 
-my ($fhRef, $fhHyp) = (io::openRead($reffile), io::openRead($hypfile));
+my ($fhRef, $fhHyp) = io::openMany($reffile, $hypfile);
 my $tuple;
-my $counter = 0;
+my $cnt = counter::init();
 
-while($tuple = io::readSentences([$fhRef, $fhHyp])) {
+while($tuple = io::readSentences($fhRef, $fhHyp)) {
 	my $refSnt = io::parseSentence($tuple->[0], $caseSensitive);
 	my $hypSnt = io::parseSentence($tuple->[1], $caseSensitive);
 	
@@ -33,22 +34,12 @@ while($tuple = io::readSentences([$fhRef, $fhHyp])) {
 	my $alignment = beamsearch::decodeAlignment($refSnt, $hypSnt, $alFactor, $probs);
 	displayAlignment($alignment);
 	
-	$counter++;
-	
-	if ($counter % 10 == 0) {
-		print STDERR ".";
-	}
-	if ($counter % 100 == 0) {
-		print STDERR "$counter\n";
-	}
+	counter::update($cnt);
 }
 
-if ($counter % 100 != 0) {
-	print STDERR "$counter\n";
-}
+counter::finish($cnt);
 
-close($fhRef);
-close($fhHyp);
+io::closeMany($fhRef, $fhHyp);
 
 #####
 #

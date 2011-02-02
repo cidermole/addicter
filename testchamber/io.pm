@@ -25,6 +25,26 @@ sub openRead {
 #####
 #
 #####
+sub openMany {
+	my @fhs = ();
+	for my $file (@_) {
+		push @fhs, openRead($file);
+	}
+	return @fhs;
+}
+
+#####
+#
+#####
+sub closeMany {
+	for my $fh (@_) {
+		close($fh);
+	}
+}
+
+#####
+#
+#####
 sub getWordFactor {
 	my ($word, $factor) = @_;
 	
@@ -108,13 +128,13 @@ sub readSentence {
 #
 #####
 sub readSentences {
-	my $fhArr = shift;
+	my @fhArr = @_;
 	my @sntArr = ();
 	
 	my $allFinished = 1;
 	my $allSucceeded = 1;
 	
-	for my $fh (@$fhArr) {
+	for my $fh (@fhArr) {
 		my $snt = readSentence($fh);
 		
 		if (defined($snt)) {
