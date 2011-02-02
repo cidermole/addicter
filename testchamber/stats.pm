@@ -3,6 +3,8 @@ use strict;
 use beamsearch;
 use probs;
 
+die("Obsolete package");
+
 #####
 #
 #####

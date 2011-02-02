@@ -1,37 +1,85 @@
-#!/usr/bin/perl
+package unscramble;
 use strict;
 use beamsearch;
 
-my @arr = @ARGV;
-
-#my $path = findBestPath(\@arr);
-my $path = findBeamBestPath(\@arr);
-
-my $currScore = $path->{'prob'};
-
-print "cost: $currScore\n";
-
-my $prevProb = 1;
-
-while (defined($path)) {
-	my $currProb = $path->{'prob'};
+#####
+#
+#####
+sub getListOfPermutations {
+	my ($alignment) = @_;
 	
-	#if ($currProb != $prevProb) {
-		print "" . getSig($path->{'arr'}) . ", " . ($path->{'shiftpos'}) . " (" . ($path->{'prob'}) . ")\n";
-		$prevProb = $currProb;
-	#}
+	my $hypIdxArr = alignment2arr($alignment);
 	
-	$path = $path->{'prev'};
+	my $path = beamsearch::decode(genInitState($hypIdxArr),
+		undef, \&genNextStates, \&isEndState);
+	
+	return decryptPath($path);
 }
 
 #####
 #
 #####
-sub findBeamBestPath {
-	my $arr = shift;
+sub decryptPath {
+	my ($path) = @_;
+	my @list = ();
 	
-	return beamsearch::decode(genInitState($arr),
-		undef, \&genNextStates, \&isEndState);
+	my ($startPos, $endPos) = (undef, undef);
+	
+	my $prevProb = 1;
+	while (defined($path)) {
+		my $currProb = $path->{'prob'};
+		
+		if ($prevProb != $currProb) {
+			if (defined($endPos)) {
+				my $pushme;
+				
+				if ($startPos == $endPos) {
+					$pushme = { 'from' => $startPos - 1,
+							'to' => $endPos,
+							'switch' => 1,
+							'refidx1' => $path->{'arr'}->[$startPos - 1],
+							'refidx2' => $path->{'arr'}->[$endPos] };
+				}
+				else {
+					if ($startPos < $endPos) {
+						$startPos--;
+					}
+					else {
+						$endPos--;
+					}
+					
+					$pushme = { 'from' => $startPos,
+							'to' => $endPos,
+							'refidx' => $path->{'arr'}->[$startPos] };
+				}
+				
+				unshift @list, $pushme;
+			}
+			
+			$endPos = $path->{'shiftpos'};
+		}
+		
+		$startPos = $path->{'shiftpos'};
+		
+		$prevProb = $currProb;
+		$path = $path->{'prev'};
+	}
+	
+	return \@list;
+}
+
+#####
+#
+#####
+sub alignment2arr {
+	my ($alignment) = @_;
+	
+	my @result;
+	for my $pair (sort { $a->{'hyp'} <=> $b->{'hyp'} } @$alignment) {
+		push @result, $pair->{'ref'};
+	}
+	
+	return \@result;
 }
 
 #####
@@ -97,7 +145,6 @@ sub genNextState {
 		}
 	}
 	
-	#return newState($prevState->{'steps'} + 1, $prevState, $newArr, $permPos, $prevState->{'cost'} + $stepCost);
 	return genNewState($prevState->{'prob'} - $stepCost, $prevState->{'pos'} + 1, $newArr, $permPos, $prevState);
 }
 
@@ -125,11 +172,13 @@ sub isEndState {
 	my $state = shift;
 	my $arr = $state->{'arr'};
 	
-	for my $i (0..$#$arr) {
-		if ($arr->[$i] != $i + 1) {
+	for my $i (1..$#$arr) {
+		if ($arr->[$i] < $arr->[$i - 1]) {
 			return undef;
 		}
 	}
 	
 	return 1;
 }
+
+1;

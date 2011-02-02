@@ -97,7 +97,7 @@ sub parseAlignment {
 			die("Alignment point indexes should be non-negative numeric");
 		}
 		
-		push @result, \@alPts;
+		push @result, { 'hyp' => $alPts[0], 'ref' => $alPts[1] };
 	}
 	
 	return \@result;
@@ -158,4 +158,19 @@ sub readSentences {
 	}
 }
 
+#####
+#
+#####
+sub hashFactors {
+	my ($snt, $alFactor) = @_;
+	
+	#make a hash/bag of ref word factors
+	my $result = {};
+	for my $w (@$snt) {
+		$result->{getWordFactor($w, $alFactor)} = 1;
+	}
+	
+	return $result;
+}
+	
 1;

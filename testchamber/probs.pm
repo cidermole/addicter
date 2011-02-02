@@ -6,16 +6,6 @@ use io;
 #####
 #
 #####
-sub sntHasWord {
-	my $snt = shift;
-	my $word = shift;
-	
-	return (grep(/^\Q$word\E$/, @$snt) > 0);
-}
-
-#####
-#
-#####
 sub genInitPs {
 	my $size = shift;
 	my $hash = {};
@@ -76,25 +66,10 @@ sub genTransPs {
 #####
 #
 #####
-sub hashRefWords {
-	my ($refSnt, $alFactor) = @_;
-	
-	#make a hash/bag of ref word factors
-	my $refhash = {};
-	for my $refw (@$refSnt) {
-		$refhash->{io::getWordFactor($refw, $alFactor)} = 1;
-	}
-	
-	return $refhash;
-}
-
-#####
-#
-#####
 sub countWordClasses {
 	my ($refSnt, $hypSnt, $alFactor) = @_;
 	
-	my $refWordHash = hashRefWords($refSnt, $alFactor);
+	my $refWordHash = io::hashFactors($refSnt, $alFactor);
 	
 	#count words -- seen words as themselves, unseen words as "UNK"
 	my $counthash = {};
