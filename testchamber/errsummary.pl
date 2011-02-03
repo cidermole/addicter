@@ -19,6 +19,7 @@ my $filename = (scalar @ARGV == 0)? "-": $ARGV[0];
 
 my $fh = io::openRead($filename);
 
+my $totalNumOfSnts = 0;
 my $totalRefLen = 0;
 my $totalHypLen = 0;
 my $totalNumOfAligned = 0;
@@ -35,7 +36,10 @@ while (<$fh>) {
 		my $tagId = $tag->{'id'};
 		my $fields = $tag->{'fields'};
 		
-		if ($tagId eq "reference") {
+		if ($tagId eq "sentence") {
+			$totalNumOfSnts++;
+		}
+		elsif ($tagId eq "reference") {
 			$totalRefLen += $fields->{'length'};
 		}
 		elsif ($tagId eq "hypothesis") {
@@ -49,6 +53,8 @@ while (<$fh>) {
 			if ($rho ne "undef") {
 				$totalRho += ($fields->{'spearmansRho'} + 1) * $currentNumOfAligned / 2;
 			}
+		}
+		elsif ($tagId eq "") {
 		}
 	}
 }
