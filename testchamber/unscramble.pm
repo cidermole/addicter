@@ -31,29 +31,19 @@ sub decryptPath {
 		
 		if ($prevProb != $currProb) {
 			if (defined($endPos)) {
-				my $pushme;
+				my $isASwitch = ($startPos == $endPos);
 				
-				if ($startPos == $endPos) {
-					$pushme = { 'from' => $startPos - 1,
-							'to' => $endPos,
-							'switch' => 1,
-							'refidx1' => $path->{'arr'}->[$startPos - 1],
-							'refidx2' => $path->{'arr'}->[$endPos] };
+				if ($startPos <= $endPos) {
+					$startPos--;
 				}
 				else {
-					if ($startPos < $endPos) {
-						$startPos--;
-					}
-					else {
-						$endPos--;
-					}
-					
-					$pushme = { 'from' => $startPos,
-							'to' => $endPos,
-							'refidx' => $path->{'arr'}->[$startPos] };
+					$endPos--;
 				}
-				
-				unshift @list, $pushme;
+					
+				unshift @list, {
+					'refidx1' => $path->{'arr'}->[$startPos],
+					'refidx2' => $path->{'arr'}->[$endPos],
+					'switch' => $isASwitch };
 			}
 			
 			$endPos = $path->{'shiftpos'};

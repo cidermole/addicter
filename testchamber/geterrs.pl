@@ -110,6 +110,8 @@ sub max {
 sub displayMatchedUnequalTokens {
 	my ($refSnt, $hypSnt, $al) = @_;
 	
+	my $printedSome = undef;
+	
 	for my $pair (@$al) {
 		my $hypToken = $hypSnt->[$pair->{'hyp'}];
 		my $refToken = $refSnt->[$pair->{'ref'}];
@@ -130,8 +132,14 @@ sub displayMatchedUnequalTokens {
 			my $rawRefToken = join("|", @$refToken);
 			my $rawHypToken = join("|", @$hypToken);
 			my $uneqFactorList = join(",", @uneqFactors);
-			print "\t<unequal_aligned_tokens hyp_token=\"$rawHypToken\" ref_token=\"$rawRefToken\" " .
-				"unequal_factor_list=\"$uneqFactorList\"/>\n";
+			
+			if (!$printedSome) {
+				print "\n";
+				$printedSome = 1;
+			}
+			
+			print "\t<unequalAlignedTokens hypToken=\"$rawHypToken\" refToken=\"$rawRefToken\" " .
+				"unequalFactorList=\"$uneqFactorList\"/>\n";
 		}
 	}
 }
@@ -144,14 +152,21 @@ sub displayMissingRefTokens {
 	
 	my $alHash = hashAlignment($al, 'ref');
 	
+	my $printedSome = undef;
+	
 	for my $i (0..$#$refSnt) {
 		if (!$alHash->{$i}) {
 			my $surfForm = $refSnt->[$i]->[0];
 			my $rawToken = join("|", @{$refSnt->[$i]});
 			
-			print "\t<missing_ref_word idx=\"$i\" " .
-				"surface_form=\"$surfForm\" " . 
-				"raw_token=\"$rawToken\"";
+			if (!$printedSome) {
+				print "\n";
+				$printedSome = 1;
+			}
+			
+			print "\t<missingRefWord idx=\"$i\" " .
+				"surfaceForm=\"$surfForm\" " . 
+				"rawToken=\"$rawToken\"";
 			print "/>\n";
 		}
 	}
@@ -166,18 +181,23 @@ sub displayIncorrectHypTokens {
 	my $srcHash = io::hashFactors($srcSnt, 0);
 	my $alHash = hashAlignment($al, 'hyp');
 	
+	my $printedSome = undef;
+	
 	for my $i (0..$#$hypSnt) {
 		if (!$alHash->{$i}) {
 			my $surfForm = $hypSnt->[$i]->[0];
 			my $rawToken = join("|", @{$hypSnt->[$i]});
 			
-			print "\t<incorrect_hyp_word idx=\"$i\" " .
-				"surface_form=\"$surfForm\" " . 
-				"raw_token=\"$rawToken\"";
-			if ($srcHash->{$surfForm}) {
-				print " untranslated=\"yes\"";
+			if (!$printedSome) {
+				print "\n";
+				$printedSome = 1;
 			}
-			print "/>\n";
+			
+			my $tagId = ($srcHash->{$surfForm})? "untranslated": "extra";
+			
+			print "\t<" . $tagId . "HypWord idx=\"$i\" " .
+				"surfaceForm=\"$surfForm\" " . 
+				"rawToken=\"$rawToken\"/>\n";
 		}
 	}
 }
@@ -207,14 +227,27 @@ sub displayOrderErrors {
 	
 	my $hypIdxMap = getHypRefAlMap($al);
 	
+	my $printedSome = undef;
+	
 	for my $permutation (@$permList) {
+		if (!$printedSome) {
+			print "\n";
+			$printedSome = 1;
+		}
+		
 		if ($permutation->{'switch'}) {
-			print "switched positions " . $permutation->{'from'} . " and " . $permutation->{'to'} .
-				", hyp idxs " . $hypIdxMap->[$permutation->{'refidx1'}] . " and " . $hypIdxMap->[$permutation->{'refidx2'}] . ";\n";
+			my $idx1 = $hypIdxMap->[$permutation->{'refidx1'}];
+			my $idx2 = $hypIdxMap->[$permutation->{'refidx2'}];
+			my $tok1 = join("|", @{$hypSnt->[$idx1]});
+			my $tok2 = join("|", @{$hypSnt->[$idx2]});
+			
+			print "\t<orderErrorSwitchWords hypPos1=\"$idx1\" hypPos2=\"$idx2\" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
 		}
 		else {
-			print "shifted hyp idx " . $hypIdxMap->[$permutation->{'refidx'}] . " from " . $permutation->{'from'} .
-				" to " . $permutation->{'to'} . ";\n";
+			#print "\t<orderErrorShiftWord shiftWidth=\"\" direction=\"\" hypPos=\"\" hypToken=\"\"/>\n";
+			
+			print "shifted hyp idx " . $hypIdxMap->[$permutation->{'refidx1'}] .
+				" to pos: " . $hypIdxMap->[$permutation->{'refidx2'}] . ";\n";
 		}
 	}
 }
