@@ -229,6 +229,7 @@ sub displayOrderErrors {
 	
 	my $printedSome = undef;
 	
+	#for my $permutation (sort { $a->{'refidx1'} <=> $b->{'refidx1'} } @$permList) {
 	for my $permutation (@$permList) {
 		if (!$printedSome) {
 			print "\n";
@@ -244,10 +245,14 @@ sub displayOrderErrors {
 			print "\t<orderErrorSwitchWords hypPos1=\"$idx1\" hypPos2=\"$idx2\" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
 		}
 		else {
-			#print "\t<orderErrorShiftWord shiftWidth=\"\" direction=\"\" hypPos=\"\" hypToken=\"\"/>\n";
+			my $hypPos = $hypIdxMap->[$permutation->{'refidx1'}];
+			my $hypTok = join("|", @{$hypSnt->[$hypPos]});
+			my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
+			my $rawShiftWidth = $targetHypPos - $hypPos;
 			
-			print "shifted hyp idx " . $hypIdxMap->[$permutation->{'refidx1'}] .
-				" to pos: " . $hypIdxMap->[$permutation->{'refidx2'}] . ";\n";
+			print "\t<orderErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" shiftWidth=\"" .
+				abs($rawShiftWidth) . "\" direction=\"" .
+				(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
 		}
 	}
 }

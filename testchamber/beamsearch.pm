@@ -12,22 +12,38 @@ sub tmplog {
 #####
 #
 #####
+sub isStateLessProbable {
+	my ($state, $testProb, $testSecProb, $nonstrictComparison) = @_;
+	
+	return (($state->{'prob'} < $testProb) or (
+		($state->{'prob'} == $testProb) and
+		($state->{'secprob'} < $testSecProb)) or (
+			$nonstrictComparison and
+			($state->{'prob'} == $testProb) and
+			($state->{'secprob'} == $testSecProb)));
+}
+
+#####
+#
+#####
 sub findMin {
 	my $posqueue = shift;
 	
 	my $minIdx = -1;
 	my $minProb = 0;
+	my $minSecProb = 0;
 	
 	for my $i (0..$#{$posqueue}) {
 		my $thisState = $posqueue->[$i];
 		
-		if ($thisState->{'prob'} < $minProb) {
+		if (isStateLessProbable($thisState, $minProb, $minSecProb)) {
 			$minIdx = $i;
 			$minProb = $thisState->{'prob'};
+			$minSecProb = $thisState->{'secprob'};
 		}
 	}
 	
-	return ($minIdx, $minProb);
+	return ($minIdx, $minProb, $minSecProb);
 }
 
 #####
@@ -58,9 +74,9 @@ sub pushState {
 		unshift @{$queue->{$pos}}, $state;
 	}
 	else {
-		my ($minIdx, $minProb) = findMin($queue->{$pos});
+		my ($minIdx, $minProb, $minSecProb) = findMin($queue->{$pos});
 		
-		if ($minProb < $state->{'prob'}) {
+		if (!isStateLessProbable($state, $minProb, $minSecProb, 1)) {
 			$queue->{$pos}->[$minIdx] = $state;
 		}
 	}

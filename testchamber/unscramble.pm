@@ -84,14 +84,15 @@ sub getSig {
 #
 #####
 sub genNewState {
-	my ($prob, $pos, $arr, $shiftPos, $prev) = @_;
+	my ($prob, $pos, $arr, $shiftPos, $prev, $secondaryProb) = @_;
 	
 	my $result = {
 		'prob' => $prob,
 		'pos' => $pos,
 		'arr' => $arr,
 		'shiftpos' => $shiftPos,
-		'prev' => $prev};
+		'prev' => $prev,
+		'secprob' => $secondaryProb};
 	
 	$result->{'hash'} = getSig($arr) . ":" .
 		(defined($shiftPos)? $shiftPos: "-");
@@ -105,7 +106,7 @@ sub genNewState {
 sub genInitState {
 	my $arr = shift;
 	
-	return genNewState(0, 0, $arr, undef, undef);
+	return genNewState(0, 0, $arr, undef, undef, 0);
 }
 
 #####
@@ -135,7 +136,14 @@ sub genNextState {
 		}
 	}
 	
-	return genNewState($prevState->{'prob'} - $stepCost, $prevState->{'pos'} + 1, $newArr, $permPos, $prevState);
+	return
+		genNewState(
+			$prevState->{'prob'} - $stepCost,
+			$prevState->{'pos'} + 1,
+			$newArr,
+			$permPos,
+			$prevState,
+			(($stepCost == 0)? $prevState->{'secprob'} - 1: 0));
 }
 
 #####
