@@ -96,6 +96,9 @@ sub xml {
 		return {'id' => $tagId,
 			'fields' => xmlTagFields($fieldStr) };
 	}
+	elsif ($str =~ /^\s*$/) {
+		return undef;
+	}
 	else {
 		die("Failed to parse XML from string `$str'");
 	}

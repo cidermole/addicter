@@ -13,6 +13,7 @@ BEGIN {
 }
 
 use io;
+use parse;
 
 my $filename = (scalar @ARGV == 0)? "-": $ARGV[0];
 
@@ -20,9 +21,36 @@ my $fh = io::openRead($filename);
 
 my $totalRefLen = 0;
 my $totalHypLen = 0;
-my $currentHypLen = undef;
+my $totalNumOfAligned = 0;
+my $currentNumOfAligned = undef;
 my $missingRefWords = {};
 my $incorrectHypWords = {};
+my $orderErrors = {};
+my $totalRho = 0;
 
 while (<$fh>) {
+	my $tag = parse::xml($_);
+	
+	if (defined($tag)) {
+		my $tagId = $tag->{'id'};
+		my $fields = $tag->{'fields'};
+		
+		if ($tagId eq "reference") {
+			$totalRefLen += $fields->{'length'};
+		}
+		elsif ($tagId eq "hypothesis") {
+			$currentNumOfAligned = $fields->{'aligned'};
+			$totalNumOfAligned += $currentNumOfAligned;
+			$totalHypLen += $fields->{'length'};
+		}
+		elsif ($tagId eq "orderSimilarityMetrics") {
+			my $rho = $fields->{'spearmansRho'};
+			
+			if ($rho ne "undef") {
+				$totalRho += ($fields->{'spearmansRho'} + 1) * $currentNumOfAligned / 2;
+			}
+		}
+	}
 }
+
+printf "%.3f\n", $totalRho / $totalNumOfAligned;

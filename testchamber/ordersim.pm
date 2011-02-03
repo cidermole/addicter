@@ -61,7 +61,7 @@ sub getHypRefAlMap {
 sub guessShiftsAndSwitches {
 	my ($ref, $hyp, $al) = @_;
 	
-	displaySimilarityMetrics($al);
+	displaySimilarityMetrics($al, $hyp);
 	
 	my $permList = unscramble::getListOfPermutations($al);
 	
@@ -117,8 +117,11 @@ sub getSpearmanRho {
 	
 	my $size = scalar @$al;
 	
-	if ($size < 2) {
+	if ($size == 0) {
 		return undef;
+	}
+	elsif ($size == 1) {
+		return 1;
 	}
 	else {
 		addRank($al, 'ref');
@@ -138,12 +141,12 @@ sub getSpearmanRho {
 #
 #####
 sub displaySimilarityMetrics {
-	my ($al) = @_;
+	my ($al, $hyp) = @_;
 	
 	my $rho = getSpearmanRho($al);
 	my $fmtRho = sprintf("%.3f", $rho);
 	
-	print "\n\t<orderSimilarityMetrics spearmanRho=\"" . (defined($rho)? $fmtRho: "undef") . "\"/>\n";
+	print "\n\t<orderSimilarityMetrics spearmansRho=\"" . (defined($rho)? $fmtRho: "undef") . "\"/>\n";
 }
 
 1;
