@@ -60,52 +60,6 @@ sub getWordFactor {
 #####
 #
 #####
-sub parseSentence {
-	my ($string, $caseSensitive) = @_;
-	my @result;
-	
-	if (!$caseSensitive) {
-		$string = lc($string);
-	}
-	
-	my @tokens = split(/ /, $string);
-	
-	for my $token (@tokens) {
-		push @result, [ split(/\|/, $token) ];
-	}
-	
-	return \@result;
-}
-
-#####
-#
-#####
-sub parseAlignment {
-	my $string = shift;
-	my @result;
-	
-	my @tokens = split(/ /, $string);
-	
-	for my $token (@tokens) {
-		my @alPts = split(/-/, $token);
-		
-		unless (scalar @alPts == 2) {
-			die("Alignment points expected to be formatted as `idx-idx'");
-		}
-		
-		unless ($alPts[0] =~ /^[0-9]+$/ and $alPts[1] =~ /^[0-9]+$/) {
-			die("Alignment point indexes should be non-negative numeric");
-		}
-		
-		push @result, { 'hyp' => $alPts[0], 'ref' => $alPts[1] };
-	}
-	
-	return \@result;
-}
-
-#####
-#
-#####
 sub readSentence {
 	my $fh = shift;
 	

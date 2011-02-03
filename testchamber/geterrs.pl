@@ -13,8 +13,8 @@ BEGIN {
 }
 
 use io;
+use parse;
 use counter;
-use unscramble;
 use ordersim;
 
 binmode(STDOUT, ":utf8");
@@ -28,10 +28,10 @@ my $tuple;
 my $cnt = counter::init();
 
 while($tuple = io::readSentences($fhSrc, $fhRef, $fhHyp, $fhAli)) {
-	my $srcSnt = io::parseSentence($tuple->[0], $caseSensitive);
-	my $refSnt = io::parseSentence($tuple->[1], $caseSensitive);
-	my $hypSnt = io::parseSentence($tuple->[2], $caseSensitive);
-	my $alignment = io::parseAlignment($tuple->[3]);
+	my $srcSnt = parse::sentence($tuple->[0], $caseSensitive);
+	my $refSnt = parse::sentence($tuple->[1], $caseSensitive);
+	my $hypSnt = parse::sentence($tuple->[2], $caseSensitive);
+	my $alignment = parse::alignment($tuple->[3]);
 	
 	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment, $orderSimMethod);
 	

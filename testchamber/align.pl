@@ -13,6 +13,7 @@ BEGIN {
 }
 
 use io;
+use parse;
 use probs;
 use beamsearch;
 use counter;
@@ -28,8 +29,8 @@ my $tuple;
 my $cnt = counter::init();
 
 while($tuple = io::readSentences($fhRef, $fhHyp)) {
-	my $refSnt = io::parseSentence($tuple->[0], $caseSensitive);
-	my $hypSnt = io::parseSentence($tuple->[1], $caseSensitive);
+	my $refSnt = parse::sentence($tuple->[0], $caseSensitive);
+	my $hypSnt = parse::sentence($tuple->[1], $caseSensitive);
 	
 	my $probs = probs::generate($refSnt, $hypSnt, $alFactor);
 	my $alignment = decodeAlignment($refSnt, $hypSnt, $alFactor, $probs);
