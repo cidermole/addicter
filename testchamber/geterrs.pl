@@ -15,10 +15,12 @@ BEGIN {
 use io;
 use counter;
 use unscramble;
+use ordersim;
 
 binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
 
-my ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive) =
+my ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $orderSimMethod) =
 	processInputArgsAndOpts();
 
 my ($fhSrc, $fhRef, $fhHyp, $fhAli) = io::openMany($srcfile, $reffile, $hypfile, $alifile);
@@ -31,7 +33,7 @@ while($tuple = io::readSentences($fhSrc, $fhRef, $fhHyp, $fhAli)) {
 	my $hypSnt = io::parseSentence($tuple->[2], $caseSensitive);
 	my $alignment = io::parseAlignment($tuple->[3]);
 	
-	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment);
+	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment, $orderSimMethod);
 	
 	counter::update($cnt);
 }
@@ -44,9 +46,16 @@ io::closeMany($fhRef, $fhHyp);
 #
 #####
 sub processInputArgsAndOpts {
-	my $caseSensitive;
+	my ($caseSensitive, $orderSimMethod);
 	
-	GetOptions('c' => \$caseSensitive);
+	GetOptions('c' => \$caseSensitive, 'd=s' => \$orderSimMethod);
+	
+	if ($orderSimMethod) {
+		ordersim::testMethodId($orderSimMethod);
+	}
+	else {
+		$orderSimMethod = ordersim::getDefaultMethod();
+	}
 	
 	my ($srcfile, $reffile, $hypfile, $alifile) = @ARGV;
 
@@ -54,14 +63,14 @@ sub processInputArgsAndOpts {
 		die("Required arguments: source file, reference file, hypothesis file, alignment file");
 	}
 	
-	return ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive);
+	return ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $orderSimMethod);
 }
 
 #####
 #
 #####
 sub displayErrors {
-	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al) = @_;
+	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al, $orderSimMethod) = @_;
 	
 	sntStart($sntIdx);
 	sntInfo($srcSnt, $refSnt, $hypSnt, $al);
@@ -76,7 +85,7 @@ sub displayErrors {
 	displayMatchedUnequalTokens($refSnt, $hypSnt, $al);
 	
 	#word/phrase order
-	displayOrderErrors($refSnt, $hypSnt, $al);
+	ordersim::display($refSnt, $hypSnt, $al, $orderSimMethod);
 	
 	sntFinish();
 }
@@ -129,8 +138,8 @@ sub displayMatchedUnequalTokens {
 		}
 		
 		if (@uneqFactors > 0) {
-			my $rawRefToken = join("|", @$refToken);
-			my $rawHypToken = join("|", @$hypToken);
+			my $rawRefToken = io::tok2str4xml($refToken);
+			my $rawHypToken = io::tok2str4xml($hypToken);
 			my $uneqFactorList = join(",", @uneqFactors);
 			
 			if (!$printedSome) {
@@ -156,8 +165,8 @@ sub displayMissingRefTokens {
 	
 	for my $i (0..$#$refSnt) {
 		if (!$alHash->{$i}) {
-			my $surfForm = $refSnt->[$i]->[0];
-			my $rawToken = join("|", @{$refSnt->[$i]});
+			my $surfForm = io::str4xml($refSnt->[$i]->[0]);
+			my $rawToken = io::tok2str4xml($refSnt->[$i]);
 			
 			if (!$printedSome) {
 				print "\n";
@@ -185,8 +194,8 @@ sub displayIncorrectHypTokens {
 	
 	for my $i (0..$#$hypSnt) {
 		if (!$alHash->{$i}) {
-			my $surfForm = $hypSnt->[$i]->[0];
-			my $rawToken = join("|", @{$hypSnt->[$i]});
+			my $surfForm = io::str4xml($hypSnt->[$i]->[0]);
+			my $rawToken = io::tok2str4xml($hypSnt->[$i]);
 			
 			if (!$printedSome) {
 				print "\n";
@@ -198,61 +207,6 @@ sub displayIncorrectHypTokens {
 			print "\t<" . $tagId . "HypWord idx=\"$i\" " .
 				"surfaceForm=\"$surfForm\" " . 
 				"rawToken=\"$rawToken\"/>\n";
-		}
-	}
-}
-
-#####
-#
-#####
-sub getHypRefAlMap {
-	my ($al) = @_;
-	
-	my @result = ();
-	
-	for my $pt (@$al) {
-		$result[$pt->{'ref'}] = $pt->{'hyp'};
-	}
-	
-	return \@result;
-}
-
-#####
-#
-#####
-sub displayOrderErrors {
-	my ($refSnt, $hypSnt, $al) = @_;
-	
-	my $permList = unscramble::getListOfPermutations($al);
-	
-	my $hypIdxMap = getHypRefAlMap($al);
-	
-	my $printedSome = undef;
-	
-	#for my $permutation (sort { $a->{'refidx1'} <=> $b->{'refidx1'} } @$permList) {
-	for my $permutation (@$permList) {
-		if (!$printedSome) {
-			print "\n";
-			$printedSome = 1;
-		}
-		
-		if ($permutation->{'switch'}) {
-			my $idx1 = $hypIdxMap->[$permutation->{'refidx1'}];
-			my $idx2 = $hypIdxMap->[$permutation->{'refidx2'}];
-			my $tok1 = join("|", @{$hypSnt->[$idx1]});
-			my $tok2 = join("|", @{$hypSnt->[$idx2]});
-			
-			print "\t<orderErrorSwitchWords hypPos1=\"$idx1\" hypPos2=\"$idx2\" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
-		}
-		else {
-			my $hypPos = $hypIdxMap->[$permutation->{'refidx1'}];
-			my $hypTok = join("|", @{$hypSnt->[$hypPos]});
-			my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
-			my $rawShiftWidth = $targetHypPos - $hypPos;
-			
-			print "\t<orderErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" shiftWidth=\"" .
-				abs($rawShiftWidth) . "\" direction=\"" .
-				(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
 		}
 	}
 }

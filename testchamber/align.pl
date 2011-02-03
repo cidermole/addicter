@@ -18,6 +18,7 @@ use beamsearch;
 use counter;
 
 binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
 
 my ($reffile, $hypfile, $caseSensitive, $alFactor) =
 	processInputArgsAndOpts();

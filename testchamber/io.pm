@@ -172,5 +172,25 @@ sub hashFactors {
 	
 	return $result;
 }
+
+#####
+#
+#####
+sub str4xml {
+	my $str = shift;
 	
+	$str =~ s/"/\\"/g;
+	
+	return $str;
+}
+
+#####
+#
+#####
+sub tok2str4xml {
+	my ($token) = @_;
+	
+	return str4xml(join("|", @$token));
+}
+
 1;
