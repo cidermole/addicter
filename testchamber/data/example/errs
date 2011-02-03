@@ -1,0 +1,20 @@
+<sentence index="0">
+	<source length="8"/>
+	<reference length="10" aligned="8"/>
+	<hypothesis length="10" aligned="8"/>
+
+	<untranslatedHypWord idx="6" surfaceForm="suur" token="suur|content|suur"/>
+	<extraHypWord idx="8" surfaceForm="too" token="too|aux|too"/>
+
+	<missingRefWord idx="2" surfaceForm="a" token="a|aux|a"/>
+	<missingRefWord idx="7" surfaceForm="huge" token="huge|content|huge"/>
+
+	<unequalAlignedTokens hypIdx="1" hypToken="lambs|content|lamb" refIdx="4" refToken="lamb|content|lamb" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="3" hypToken="has|aux|have" refIdx="1" refToken="had|aux|have" unequalFactorList="0"/>
+
+	<ordSimMetrics spearmansRho="0.810"/>
+
+	<ordErrorShiftWord hypPos="2" hypToken="mary|content|mary" distance="2" direction="towardsBeginning"/>
+	<ordErrorShiftWord hypPos="3" hypToken="has|aux|have" distance="3" direction="towardsBeginning"/>
+</sentence>
+

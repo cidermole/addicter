@@ -58,7 +58,7 @@ while (<$fh>) {
 			$missingRefWords->{getCat($fields->{'token'})}++;
 		}
 		elsif ($tagId eq "extraHypWord") {
-			$incorrectHypWords->{getCat($fields->{'token'})}++;
+			$incorrectHypWords->{'extra, ' . getCat($fields->{'token'})}++;
 		}
 		elsif ($tagId eq "untranslatedHypWord") {
 			$incorrectHypWords->{'untranslated'}++;
