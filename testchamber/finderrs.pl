@@ -147,8 +147,9 @@ sub displayMatchedUnequalTokens {
 				$printedSome = 1;
 			}
 			
-			print "\t<unequalAlignedTokens hypToken=\"$rawHypToken\" refToken=\"$rawRefToken\" " .
-				"unequalFactorList=\"$uneqFactorList\"/>\n";
+			print "\t<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
+				"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
+				"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>\n";
 		}
 	}
 }
@@ -175,7 +176,7 @@ sub displayMissingRefTokens {
 			
 			print "\t<missingRefWord idx=\"$i\" " .
 				"surfaceForm=\"$surfForm\" " . 
-				"rawToken=\"$rawToken\"";
+				"token=\"$rawToken\"";
 			print "/>\n";
 		}
 	}
@@ -206,7 +207,7 @@ sub displayIncorrectHypTokens {
 			
 			print "\t<" . $tagId . "HypWord idx=\"$i\" " .
 				"surfaceForm=\"$surfForm\" " . 
-				"rawToken=\"$rawToken\"/>\n";
+				"token=\"$rawToken\"/>\n";
 		}
 	}
 }

@@ -47,16 +47,64 @@ while (<$fh>) {
 			$totalNumOfAligned += $currentNumOfAligned;
 			$totalHypLen += $fields->{'length'};
 		}
-		elsif ($tagId eq "orderSimilarityMetrics") {
+		elsif ($tagId eq "ordSimMetrics") {
 			my $rho = $fields->{'spearmansRho'};
 			
 			if ($rho ne "undef") {
 				$totalRho += ($fields->{'spearmansRho'} + 1) * $currentNumOfAligned / 2;
 			}
 		}
-		elsif ($tagId eq "") {
+		elsif ($tagId eq "missingRefWord") {
+			$missingRefWords->{getCat($fields->{'token'})}++;
+		}
+		elsif ($tagId eq "extraHypWord") {
+			$incorrectHypWords->{getCat($fields->{'token'})}++;
+		}
+		elsif ($tagId eq "untranslatedHypWord") {
+			$incorrectHypWords->{'untranslated'}++;
+		}
+		elsif ($tagId eq "unequalAlignedTokens") {
+			$incorrectHypWords->{'wrong form'}++;
+		}
+		elsif ($tagId =~ /^ordError/) {
+			my $dist = $fields->{'distance'};
+			
+			$orderErrors->{($dist > 7? "8+": $dist)}++;
 		}
 	}
 }
 
-printf "%.3f\n", $totalRho / $totalNumOfAligned;
+printf "Total sentences: %10d\n", $totalNumOfSnts;
+printf "Total ref words: %10d\n", $totalRefLen;
+printf "Total hyp words: %10d\n", $totalHypLen;
+
+printWithCats($missingRefWords, 'Missing ref words', 'ref', $totalRefLen);
+printWithCats($incorrectHypWords, 'Incorrect hyp words', 'hyp', $totalHypLen);
+printWithCats($orderErrors, 'Order errors, by shift distance', 'hyp', $totalHypLen);
+
+#####
+#
+#####
+sub printWithCats {
+	my ($hash, $setId, $aux, $total) = @_;
+	
+	print "\n$setId:\n";
+	
+	my $sum = 0;
+	
+	for my $k (sort { $a <=> $b } keys %$hash) {
+		my $val = $hash->{$k};
+		$sum += $val;
+		printf "\t%13s: %7d (%5.2f%% of $aux)\n", $k, $val, 100*$val/$total;
+	}
+	printf "\n\t%13s: %7d (%5.2f%% of $aux)\n", 'total', $sum, 100*$sum/$total;
+}
+
+#####
+#
+#####
+sub getCat {
+	my $token = shift;
+	my @fields = split(/\|/, $token);
+	return $fields[1];
+}

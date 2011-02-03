@@ -82,7 +82,9 @@ sub guessShiftsAndSwitches {
 			my $tok1 = io::tok2str4xml($hyp->[$idx1]);
 			my $tok2 = io::tok2str4xml($hyp->[$idx2]);
 			
-			print "\t<orderErrorSwitchWords hypPos1=\"$idx1\" hypPos2=\"$idx2\" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
+			print "\t<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
+				" distance=\"" . abs($idx1 - $idx2) . "\"" .
+				" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
 		}
 		else {
 			my $hypPos = $hypIdxMap->[$permutation->{'refidx1'}];
@@ -90,7 +92,7 @@ sub guessShiftsAndSwitches {
 			my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
 			my $rawShiftWidth = $targetHypPos - $hypPos;
 			
-			print "\t<orderErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" shiftWidth=\"" .
+			print "\t<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
 				abs($rawShiftWidth) . "\" direction=\"" .
 				(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
 		}
@@ -146,7 +148,7 @@ sub displaySimilarityMetrics {
 	my $rho = getSpearmanRho($al);
 	my $fmtRho = sprintf("%.3f", $rho);
 	
-	print "\n\t<orderSimilarityMetrics spearmansRho=\"" . (defined($rho)? $fmtRho: "undef") . "\"/>\n";
+	print "\n\t<ordSimMetrics spearmansRho=\"" . (defined($rho)? $fmtRho: "undef") . "\"/>\n";
 }
 
 1;
