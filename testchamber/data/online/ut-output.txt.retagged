@@ -210,7 +210,7 @@ the|Aux|the examination|Content|examination shall|Aux|shall be|Content|be carrie
 solvents|Content|solvent for|Aux|for the|Aux|the extraction|Content|extraction of|Aux|of unix|Content|<unknown> scripts|Content|script has|Content|have been|Content|be used|Content|use
 solvents|Content|solvent for|Aux|for the|Aux|the extraction|Content|extraction of|Aux|of unix|Content|<unknown> scripts|Content|script has|Content|have been|Content|be used|Content|use
 i|Content|i live|Content|live läänemaal|Content|<unknown> .|Aux|. i|Content|i '|Aux|' m|Content|m 65|Number|@card@ years|Content|year old|Content|old .|Aux|. ämm|Content|<unknown> is|Content|be living|Content|live in|Aux|in a|Aux|a cross|Content|cross alevikus|Content|<unknown> and|Aux|and is|Content|be kind|Content|kind of|Aux|of sick|Content|sick person|Content|person .|Aux|.
-once|Content|once põhjapõdrapoiss|Content|<unknown> was|Content|be habitually|Content|habitually resident|Content|resident whose|WP$|whose sarvedest|Content|<unknown> was|Content|be always|Content|always show|Content|show to|Aux|to which|Aux|which it|Aux|it mõtles|Content|<unknown> .|Aux|.
+once|Content|once põhjapõdrapoiss|Content|<unknown> was|Content|be habitually|Content|habitually resident|Content|resident whose|Aux|whose sarvedest|Content|<unknown> was|Content|be always|Content|always show|Content|show to|Aux|to which|Aux|which it|Aux|it mõtles|Content|<unknown> .|Aux|.
 the|Aux|the forest|Content|forest was|Content|be habitually|Content|habitually resident|Content|resident mutionu|Content|<unknown>
 the|Aux|the forest|Content|forest was|Content|be habitually|Content|habitually resident|Content|resident muti|Content|<unknown> uncle|Content|uncle
 the|Aux|the forest|Content|forest ,|Punct|, in|Aux|in the|Aux|the middle|Content|middle of|Aux|of the|Aux|the mutionu|Content|<unknown> was|Content|be habitually|Content|habitually resident|Content|resident kuuski|Content|<unknown> young|Content|young people|Content|people -|Punct|- old|Content|old under|Aux|under kadakpõõsa|Content|<unknown> root|Content|root ,|Punct|, eluruum|Content|<unknown> it|Aux|it deep|Content|deep .|Aux|.
@@ -347,7 +347,7 @@ i|Content|i am|Content|be estonian|Content|Estonian .|Aux|.
 eastern|Content|eastern virumaal|Content|<unknown> lost|Content|lose keskerakond|Content|<unknown> four|Number|four voting|Content|voting rights|Content|right ,|Punct|, in|Aux|in notes|Content|note ,|Punct|, which|Aux|which was|Content|be repealed|Content|repeal .|Aux|. in|Aux|in tallinn|Content|Tallinn is|Content|be also|Content|also changes|Content|change in|Aux|in ülelugemisega|Content|<unknown> lost|Content|lose votes|Content|vote keskerakond|Content|<unknown> 40|Number|@card@ votes|Content|vote and|Aux|and the|Aux|the sotsiaaldemokraadid|Content|<unknown> 6|Number|6 votes|Content|vote .|Aux|.
 each|Aux|each year|Content|year about|Aux|about the|Aux|the draw|Content|draw at|Aux|at the|Aux|the end|Content|end of|Aux|of which|Aux|which shall|Aux|shall be|Content|be carried|Content|carry out|Aux|out between|Aux|between supporters|Content|supporter peaauhinnaks|Content|<unknown> is|Content|be kalepurjeka|Content|<unknown> retk|Content|<unknown> around|Aux|around the|Aux|the võrtsjärve|Content|<unknown> .|Aux|. loosimises|Content|<unknown> please|Content|please to|Aux|to meet|Content|meet to|Aux|to participate|Content|participate in|Aux|in the|Aux|the aid|Content|aid after|Aux|after the|Aux|the transfer|Content|transfer of|Aux|of the|Aux|the following|Content|follow data|Content|datum :|Punct|:
 each|Aux|each start|Content|start is|Content|be difficult|Content|difficult and|Aux|and therefore|Content|therefore we|Aux|we '|Aux|' re|Content|re set|Content|set up|Content|up similar|Content|similar to|Aux|to the|Aux|the levels|Content|level in|Aux|in käiakse|Content|<unknown> trennis|Content|<unknown> groups|Content|group in|Aux|in which|Aux|which the|Aux|the two|Number|two evening|Content|evening weekly|Content|weekly .|Aux|.
-any|Aux|any person|Content|person whose|WP$|whose inside|Content|inside ,|Punct|, peace|Content|peace ,|Punct|, is|Content|be a|Aux|a well|Content|well -|Punct|-
+any|Aux|any person|Content|person whose|Aux|whose inside|Content|inside ,|Punct|, peace|Content|peace ,|Punct|, is|Content|be a|Aux|a well|Content|well -|Punct|-
 at|Aux|at the|Aux|the time|Content|time of|Aux|of its|Aux|its liistu|Content|<unknown> each|Aux|each kingsepp|Content|Kingsepp jäägu|Content|<unknown>
 each|Aux|each training|Content|training ,|Punct|, where|Aux|where i|Content|i '|Aux|' õpetasin|Content|<unknown> needs|Content|need proof|Content|proof of|Aux|of training|Content|training carried|Content|carry out|Aux|out organisation|Content|organisation
 each|Aux|each man|Content|man is|Content|be its|Aux|its lucky|Content|lucky enough|Content|enough ,|Punct|, sepp|Content|Sepp
@@ -601,10 +601,10 @@ algoritmid|Content|<unknown> complex|Content|complex ,|Punct|, which|Aux|which i
 kellaeg|Content|<unknown> there|Aux|there is|Content|be a|Aux|a lot|Content|lot of|Aux|of
 but|Aux|but there|Aux|there is|Content|be a|Aux|a lot|Content|lot of|Aux|of kellaeg|Content|<unknown> kirjutan|Content|<unknown> tomorrow|Content|tomorrow on|Aux|on this|Aux|this subject|Content|subject
 who|Aux|who you|Aux|you '|Aux|' today|Content|today for|Aux|for a|Aux|a drink|Content|drink you|Aux|you '|Punct|' re|Aux|re going|Content|go ?|Aux|?
-whose|WP$|whose foot|Content|foot tatsub|Content|<unknown> ,|Punct|, its|Aux|its foot|Content|foot matsub|Content|<unknown>
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the most|Content|most ilusamad|Content|<unknown> ?|Aux|?
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the most|Content|most kaunimad|Content|<unknown> ?|Aux|?
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the most|Content|most kenamad|Content|<unknown> ?|Aux|?
+whose|Aux|whose foot|Content|foot tatsub|Content|<unknown> ,|Punct|, its|Aux|its foot|Content|foot matsub|Content|<unknown>
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the most|Content|most ilusamad|Content|<unknown> ?|Aux|?
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the most|Content|most kaunimad|Content|<unknown> ?|Aux|?
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the most|Content|most kenamad|Content|<unknown> ?|Aux|?
 hingekella|Content|<unknown> which|Aux|which shall|Aux|shall be|Content|be affixed|Content|affix to|Aux|to the|Aux|the
 someone|Content|someone was|Content|be right|Content|right .|Aux|.
 live|Content|live to|Aux|to leave|Content|leave the|Aux|the
@@ -1844,7 +1844,7 @@ peter|Content|peter and|Aux|and eggs|Content|egg is|Content|be idiots|Content|id
 peter|Content|peter had|Content|have to|Aux|to be|Content|be home|Content|home and|Aux|and valetas|Content|valeta so|Content|so that|Aux|that the|Aux|the foot|Content|foot suitses|Content|<unknown>
 beet|Content|beet ,|Punct|, potatoes|Content|potato and|Aux|and tomato|Content|tomato -|Punct|- they|Aux|they are|Content|be vegetables|Content|vegetable .|Aux|.
 peetril|Content|<unknown> põles|Content|<unknown> yesterday|Content|yesterday house|Content|house down|Content|down .|Aux|.
-peotuli|Content|<unknown> whose|WP$|whose journey|Content|journey started|Content|start tartust|Content|<unknown> tallinna|Content|<unknown> half|Content|half
+peotuli|Content|<unknown> whose|Aux|whose journey|Content|journey started|Content|start tartust|Content|<unknown> tallinna|Content|<unknown> half|Content|half
 petturite|Content|<unknown> detection|Content|detection
 php|Content|<unknown> progress|Content|progress is|Content|be under|Aux|under way|Content|way
 a|Aux|a long|Content|long -|Punct|- term|Content|term loan|Content|loan of|Aux|of cyp|Content|<unknown> and|Aux|and in|Aux|in terms|Content|term of|Aux|of leasing|Content|leasing ,|Punct|,

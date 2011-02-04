@@ -210,7 +210,7 @@ examination|Content|examination will|Aux|will take|Content|take place|Content|pl
 unix|Content|<unknown> scripts|Content|script were|Content|be used|Content|use for|Aux|for extracting|Content|extract .|Aux|.
 unix|Content|<unknown> scripts|Content|script were|Content|be used|Content|use for|Aux|for extracting|Content|extract .|Aux|.
 i|Content|i live|Content|live in|Aux|in läänemaa|Content|<unknown> ,|Punct|, i|Content|i '|Aux|' m|Content|m 65|Number|@card@ years|Content|year old|Content|old .|Aux|. mother|Content|mother -|Punct|- in|Aux|in -|Punct|- law|Content|law lives|Content|life in|Aux|in risti|Content|<unknown> hamlet|Content|hamlet and|Aux|and is|Content|be an|Aux|an ill|Content|ill person|Content|person .|Aux|.
-once|Content|once there|Aux|there was|Content|be a|Aux|a boy|Content|boy reindeer|Content|reindeer ,|Punct|, whose|WP$|whose horns|Content|horn indicated|Content|indicate what|Aux|what he|Aux|he was|Content|be thinking|Content|think of|Aux|of .|Aux|.
+once|Content|once there|Aux|there was|Content|be a|Aux|a boy|Content|boy reindeer|Content|reindeer ,|Punct|, whose|Aux|whose horns|Content|horn indicated|Content|indicate what|Aux|what he|Aux|he was|Content|be thinking|Content|think of|Aux|of .|Aux|.
 uncle|Content|uncle muti|Content|<unknown> lived|Content|live in|Aux|in a|Aux|a forest|Content|forest .|Aux|.
 uncle|Content|uncle muti|Content|<unknown> lived|Content|live in|Aux|in a|Aux|a forest|Content|forest .|Aux|.
 uncle|Content|uncle muti|Content|<unknown> lived|Content|live in|Aux|in a|Aux|a forest|Content|forest ,|Punct|, in|Aux|in the|Aux|the midst|Content|midst of|Aux|of the|Aux|the young|Content|young and|Aux|and old|Content|old firs|Content|fir ,|Punct|, beneath|Aux|beneath the|Aux|the root|Content|root of|Aux|of the|Aux|the juniper|Content|juniper bush|Content|bush his|Aux|his living|Content|living room|Content|room deep|Content|deep .|Aux|.
@@ -601,10 +601,10 @@ complicated|Content|complicated algorithms|Content|algorithm ,|Punct|, which|Aux
 it|Aux|it '|Aux|' s|Content|S late|Content|late .|Aux|.
 the|Aux|the hour|Content|hour is|Content|be late|Content|late but|Aux|but i|Content|i '|Aux|' ll|Content|<unknown> write|Content|write about|Aux|about that|Aux|that topic|Content|topic tomorrow|Content|tomorrow .|Aux|.
 who|Aux|who are|Content|be you|Aux|you going|Content|go drinking|Content|drinking with|Aux|with today|Content|today ?|Aux|?
-whose|WP$|whose foot|Content|foot toddles|Content|toddle ,|Punct|, its|Aux|its mouth|Content|mouth munches|Content|munch .|Aux|.
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the most|Content|most beautiful|Content|beautiful ?|Aux|?
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the fairest|Content|fair ?|Aux|?
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the nicest|Content|nice ?|Aux|?
+whose|Aux|whose foot|Content|foot toddles|Content|toddle ,|Punct|, its|Aux|its mouth|Content|mouth munches|Content|munch .|Aux|.
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the most|Content|most beautiful|Content|beautiful ?|Aux|?
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the fairest|Content|fair ?|Aux|?
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the nicest|Content|nice ?|Aux|?
 for|Aux|for whom|Aux|whom the|Aux|the bell|Content|bell tolls|Content|toll ?|Aux|?
 nobody|Content|nobody was|Content|be right|Content|right .|Aux|.
 to|Aux|to leave|Content|leave somebody|Content|somebody .|Aux|.

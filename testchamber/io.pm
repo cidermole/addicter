@@ -50,7 +50,7 @@ sub getWordFactor {
 	
 	my $result = $word->[$factor];
 	
-	unless ($result) {
+	if (!$result or $result =~ /^@.*@$/ or $result eq "<unknown>") {
 		$result = $word->[0];
 	}
 	

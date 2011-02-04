@@ -80,6 +80,10 @@ printf "Total hyp words: %10d\n", $totalHypLen;
 
 printWithCats($missingRefWords, 'Missing ref words', 'ref', $totalRefLen);
 printWithCats($incorrectHypWords, 'Incorrect hyp words', 'hyp', $totalHypLen);
+
+print "\nOrder similarity metrics\n";
+printf "\t%13s: %5.3f\n", "Spearman's rho", $totalRho / $totalNumOfAligned;
+
 printWithCats($orderErrors, 'Order errors, by shift distance', 'hyp', $totalHypLen);
 
 #####

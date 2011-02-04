@@ -210,7 +210,7 @@ on|Aux|on the|Aux|the tuesday|Content|Tuesday of|Aux|of the|Aux|the examination|
 unixi|Content|<unknown> is|Content|be used|Content|use for|Aux|for the|Aux|the extraction|Content|extraction skripte|Content|<unknown>
 for|Aux|for the|Aux|the extraction|Content|extraction has|Content|have been|Content|be used|Content|use skripte|Content|<unknown> unix|Content|<unknown>
 live|Content|live läänemaal|Content|<unknown> ,|Punct|, i|Content|i '|Aux|' m|Content|m of|Aux|of 65|Number|@card@ years|Content|year old|Content|old .|Aux|. ämm|Content|<unknown> resides|Content|reside in|Aux|in a|Aux|a cross|Content|cross alevikus|Content|<unknown> and|Aux|and is|Content|be sick|Content|sick man|Content|man .|Aux|.
-once|Content|once põhjapõdrapoiss|Content|<unknown> lived|Content|live ,|Punct|, whose|WP$|whose sarvedest|Content|<unknown> always|Content|always had|Content|have to|Aux|to see|Content|see that|Aux|that he|Aux|he thought|Content|think .|Aux|.
+once|Content|once põhjapõdrapoiss|Content|<unknown> lived|Content|live ,|Punct|, whose|Aux|whose sarvedest|Content|<unknown> always|Content|always had|Content|have to|Aux|to see|Content|see that|Aux|that he|Aux|he thought|Content|think .|Aux|.
 lived|Content|live in|Aux|in the|Aux|the mutionu|Content|<unknown>
 lived|Content|live in|Aux|in the|Aux|the muti|Content|<unknown> uncle|Content|uncle
 mutionu|Content|<unknown> lived|Content|live in|Aux|in the|Aux|the forest|Content|forest ,|Punct|, young|Content|young people|Content|people in|Aux|in the|Aux|the middle|Content|middle of|Aux|of the|Aux|the kuuski|Content|<unknown> -|Punct|- old|Content|old kadakpõõsa|Content|<unknown> root|Content|root ,|Punct|, in|Aux|in eluruum|Content|<unknown> under|Aux|under it|Aux|it .|Aux|.
@@ -601,10 +601,10 @@ algoritmid|Content|<unknown> ,|Punct|, which|Aux|which is|Content|be complex|Con
 kellaeg|Content|<unknown> is|Content|be much|Content|much
 kellaeg|Content|<unknown> is|Content|be much|Content|much but|Aux|but tomorrow|Content|tomorrow '|Punct|' in|Aux|in this|Aux|this communication|Content|communication
 who|Aux|who you|Aux|you today|Content|today drink|Content|drink goin|Content|<unknown> '|Aux|' ?|Aux|?
-the|Aux|the tatsub|Content|<unknown> whose|WP$|whose leg|Content|leg ,|Punct|, foot|Content|foot matsub|Content|<unknown>
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the most|Content|most ilusamad|Content|<unknown> ?|Aux|?
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the most|Content|most kaunimad|Content|<unknown> ?|Aux|?
-whose|WP$|whose children|Content|child are|Content|be the|Aux|the most|Content|most kenamad|Content|<unknown> ?|Aux|?
+the|Aux|the tatsub|Content|<unknown> whose|Aux|whose leg|Content|leg ,|Punct|, foot|Content|foot matsub|Content|<unknown>
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the most|Content|most ilusamad|Content|<unknown> ?|Aux|?
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the most|Content|most kaunimad|Content|<unknown> ?|Aux|?
+whose|Aux|whose children|Content|child are|Content|be the|Aux|the most|Content|most kenamad|Content|<unknown> ?|Aux|?
 which|Aux|which shall|Aux|shall be|Content|be stamped|Content|stamp hingekella|Content|<unknown>
 you|Aux|you were|Content|be right|Content|right .|Aux|.
 one|Aux|one leave|Content|leave
