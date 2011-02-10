@@ -73,6 +73,7 @@ sub countWordClasses {
 	
 	#count words -- seen words as themselves, unseen words as "UNK"
 	my $counthash = {};
+	
 	for my $hypw (@$hypSnt) {
 		my $factor = io::getWordFactor($hypw, $alFactor);
 		my $class = ($refWordHash->{$factor})? $factor: $const::UNK_TAG;

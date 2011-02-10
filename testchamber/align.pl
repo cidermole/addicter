@@ -153,9 +153,9 @@ sub genAlNextStates {
 sub getCoverString {
 	my $state = shift;
 	my $al = $state->{'alignment'};
-	my @cleanAl = grep(!/^\Q0\E$/, @$al);
+	my @cleanAl = grep(!/^\Q-1\E$/, @$al);
 	my @sortAl = sort { $a <=> $b } @cleanAl;
-	return "@sortAl";
+	return join("/", @sortAl);
 }
 
 #####
