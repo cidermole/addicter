@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage{acl-hlt2011}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{url}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\setlength\titlebox{6.5cm}    % Expanding the titlebox
+
+\newcommand{\tmp}[1]{\textit{[#1]}}
+
+\title{Automatic Translation Error Analysis}
+
+\author{Mark Fishel \\
+  Dept. of Computer Science \\
+  University of Tartu \\
+  Tartu, Estonia \\
+  {\tt fishel@ut.ee} \\
+%  \And
+%  Second Author \\
+%  Affiliation / Address line 1 \\
+%  Affiliation / Address line 2 \\
+%  Affiliation / Address line 3 \\
+%  {\tt email@domain} \\
+%  \And
+%  Third Author \\
+%  Affiliation / Address line 1 \\
+%  Affiliation / Address line 2 \\
+%  Affiliation / Address line 3 \\
+%  {\tt email@domain} \\
+  }
+
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\end{abstract}
+
+\section{Introduction}
+
+\tmp{most efforts on MT eval concentrated on producing a single score (BLEU, NIST, METEOR, TER, SemPOS, LRscore, ad
+$\inf$). while that's convenient for comparison, it is not informative.}
+
+\tmp{manual evaluation does scoring (HTER, fluency/adequacy, rank) and some analysis (Vilar et al. 2006). {\bf TODO}
+other examples.}
+
+\tmp{we introduce a method of automatic analysis of translation errors. It only requires the source, reference and
+hypothesis translations. The whole thing is language independent, but is capable of taking additional information into
+account, such as linguistic analysis (lemmatizing, PoS tagging, synonym detection), training sets or dictionaries,
+etc.}
+
+\tmp{in this work we tune our method to mimick the error taxonomy of Vilar et al.}
+
+\tmp{Evaluated: a) in comparison with manual analysis of 4 En-Cz translation and b) by comparing the weaknesses of some
+state-of-the-art statistical systems (Moses, cdec, Google) and comparing the result with what we expected (like better
+order modelling in one of the systems, etc.); any languages}
+
+\section{Related Work}
+
+\section{Method Description}
+
+Word alignment between hypothesis and reference, error detection and classification, error summarization.
+
+\subsection{Alignment}
+
+\subsection{Error Detection}
+
+\subsection{Summarization}
+
+\section{Experiments and Results}
+
+\end{document}
