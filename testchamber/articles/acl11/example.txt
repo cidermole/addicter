@@ -1,0 +1,39 @@
+\begin{verbatim}
+Total sentences:       2656
+Total ref words:      23536
+Total hyp words:      20432
+
+Missing ref words:
+	       number:      30 ( 0.13% of ref)
+	        punct:     183 ( 0.78% of ref)
+	      content:    4439 (18.86% of ref)
+	       filler:    5254 (22.32% of ref)
+
+	        total:    9906 (42.09% of ref)
+
+Incorrect hyp words:
+	   wrong form:     621 ( 3.04% of hyp)
+	 untranslated:     507 ( 2.48% of hyp)
+	 
+	extra, number:      27 ( 0.13% of hyp)
+	 extra, punct:     161 ( 0.79% of hyp)
+	extra, content:    3721 (18.22% of hyp)
+	extra, filler:    2384 (11.67% of hyp)
+
+	        total:    7423 (36.33% of hyp)
+
+Order similarity metrics
+	Spearman's rho: 0.930
+
+Word order errors, by shift distance:
+	            1:     152 ( 0.74% of hyp)
+	            2:     207 ( 1.01% of hyp)
+	            3:     191 ( 0.93% of hyp)
+	            4:     156 ( 0.76% of hyp)
+	            5:     117 ( 0.57% of hyp)
+	            6:     103 ( 0.50% of hyp)
+	            7:      60 ( 0.29% of hyp)
+	           8+:     294 ( 1.44% of hyp)
+
+	        total:    1280 ( 6.26% of hyp)
+\end{verbatim}
