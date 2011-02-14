@@ -26,7 +26,7 @@ sub getTransWeight {
 	#prev cannot be unaligned (-1) while decoding, since
 	#the next non-nil alignment is used, but
 	#just in case:
-	if ($prev == -1) {
+	if ($prev == -1 or $curr == -1) {
 		return 1;
 	}
 	
@@ -38,7 +38,7 @@ sub getTransWeight {
 	}
 	
 	#distortion penalty -- the closer, the smaller
-	return 2 ** (-abs($curr - $prev - 1));
+	return 2 ** (-abs($curr - $prev - 1)*2);
 }
 
 #####

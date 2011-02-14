@@ -137,6 +137,9 @@ sub genAlNextStates {
 				$auxinfo->{'probs'}->{'trans'}->{$currAlPoint}->{$refIdx};
 			
 			if ($newProb != 0) {
+				#print STDERR "emit $nextHypWord $refIdx: " . $auxinfo->{'probs'}->{'emit'}->{$nextHypWord}->{$refIdx} . ";\n";
+				#print STDERR "trans $currAlPoint $refIdx: " . $auxinfo->{'probs'}->{'trans'}->{$currAlPoint}->{$refIdx} . ";\n";
+				
 				my $newstate = genNewAlState($currState->{'prob'} + log($newProb),
 					[@$currAlignment, $refIdx], $nextPos);
 				push @$result, $newstate;

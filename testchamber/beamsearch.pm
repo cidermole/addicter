@@ -6,7 +6,7 @@ use const;
 #
 #####
 sub tmplog {
-	print STDERR "DEBUG: @_;\n";
+	#print STDERR "DEBUG: @_;\n";
 }
 
 #####
@@ -15,18 +15,18 @@ sub tmplog {
 sub tmpstatelog {
 	my $state = shift;
 	
-	print STDERR "DEBUG STATE: ";
+	#print STDERR "DEBUG STATE: ";
 	
 	for my $k (qw(pos prob)) {
-		print STDERR "$k => " . $state->{$k} . ", ";
+		#print STDERR "$k => " . $state->{$k} . ", ";
 	}
 	my $ar = $state->{'alignment'};
 	for my $i (0..$#$ar) {
 		my $x = $ar->[$i];
-		print STDERR "$i-$x/";
+		#print STDERR "$i-$x/";
 	}
 	
-	print STDERR "\n";
+	#print STDERR "\n";
 }
 
 #####
@@ -80,16 +80,17 @@ sub pushState {
 	
 	for my $existingState (@{$queue->{$pos}}) {
 		if ($state->{'hash'} eq $existingState->{'hash'}) {
-			print STDERR "\t\tduplicate\n";
+			tmplog("\t\tduplicate\n");
+			
 			if ($state->{'prob'} > $existingState->{'prob'}) {
 				for my $key (keys %$existingState) {
 					$existingState->{$key} = $state->{$key};
 				}
 				
-				print STDERR "\t\t\tinserted\n";
+				tmplog("\t\t\tinserted\n");
 			}
 			else {
-				print STDERR "\t\t\tdropped\n";
+				tmplog("\t\t\tdropped\n");
 			}
 
 			return;
@@ -97,22 +98,22 @@ sub pushState {
 	}
 	
 	if ((scalar @{$queue->{$pos}}) < $const::BEAM_WIDTH) {
-		print STDERR "\t\tadded\n";
+		tmplog("\t\tadded\n");
 		unshift @{$queue->{$pos}}, $state;
 	}
 	else {
-		print STDERR "\t\toverflow\n";
+		tmplog("\t\toverflow\n");
 		
 		my ($minIdx, $minProb, $minSecProb) = findMin($queue->{$pos});
 		
 		if (!isStateLessProbable($state, $minProb, $minSecProb, 1)) {
-			print STDERR "\t\t\tinserted instead of ";
+			tmplog("\t\t\tinserted instead of ");
 			tmpstatelog($queue->{$pos}->[$minIdx]);
 			
 			$queue->{$pos}->[$minIdx] = $state;
 		}
 		else {
-			print STDERR "\t\t\tdropped\n";
+			tmplog("\t\t\tdropped\n");
 		}
 	}
 }
@@ -169,21 +170,21 @@ sub decode {
 			tmpstatelog($nextState);
 			
 			if (&$isFinalStateFunc($nextState, $auxinfo)) {
-				print STDERR "\tfinal\n";
+				tmplog("\tfinal\n");
 				if ($nextState->{'prob'} > $finalState->{'prob'}) {
 					$finalState = $nextState;
-					print STDERR "\t\twon!\n";
+					tmplog("\t\twon!\n");
 				}
 				else {
-					print STDERR "\t\tlost!\n";
+					tmplog("\t\tlost!\n");
 				}
 			}
 			else {
-				print STDERR "\tinter\n";
+				tmplog("\tinter\n");
 				pushState($nextState, $stateQueue);
 			}
 		}
-		print STDERR "\n";
+		tmplog("\n");
 	}
 	
 	return $finalState;
