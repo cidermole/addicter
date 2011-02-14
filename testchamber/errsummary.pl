@@ -69,7 +69,7 @@ while (<$fh>) {
 		elsif ($tagId =~ /^ordError/) {
 			my $dist = $fields->{'distance'};
 			
-			$orderErrors->{($dist > 0? "8+": $dist)}++;
+			$orderErrors->{($dist > 7? "8+": $dist)}++;
 		}
 	}
 }
@@ -108,8 +108,6 @@ sub printWithCats {
 #
 #####
 sub getCat {
-	return '--';
-
 	my $token = shift;
 	my @fields = split(/\|/, $token);
 	return $fields[1];
