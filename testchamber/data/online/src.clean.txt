@@ -113,11 +113,8 @@ bussid tartusse väljuvad igal täistunnil .
 bussi pilet maksab 150 eesti krooni .
 bussipilet maksab 150 eesti krooni .
 buss sõidab tartust tallinnasse kaks ja pool tundi .
-interx
 catts on sitaks mitu korda jube abiks olnd
 catts on sitaks mitu korda jube abiks olnud
-interx
-interx
 columbus ootab tagasisidet
 columbus tahab tagasisidet
 detaili number on sama juhendis ja spetsis . nii saad teada millega tegu .
@@ -251,7 +248,6 @@ euroopa liit on loomas uut seadusandlust
 eurooplased teavad liiga vähe jaapanist ja aasiast
 eurooplased teavad vähe jaapanist
 euroopa autotootjad ei kasuta vöötkoodis i sümbolit
-interx
 failid on manuses
 fail on muutunud
 fenomenograafia uurib , missuguseid tähendusi annavad inimesed erinevatele sotsiaalsetele nähtustele ( fenomenidele ) , missugune on nende kogemus
@@ -263,7 +259,6 @@ gaasileke lükkas kosmosesüstiku stardi edasi .
 galaktikate mudelite koostamisel tuleb arvestada mitmesuguste detailidega .
 geomeetriline lähenemine
 gerold on loll lammas , et ei tea asjadest midagi
-interx
 google chrome on hea veebibrauser
 graafi semiootiliste invariantide kasutamine isomorfismi tuvastamiseks
 graafi semiootiliste invariantide kasutanine isomorfismi tuvastamiseks
@@ -309,7 +304,6 @@ hiir hüppas , kass kargas , vana karu lõi trummi
 hiir hüppas , kass kargas , vanakaru lõi trummi
 hiir hüppas kass kargas vana karu lõi trummi
 hiir hüppas kass kargas vanakaru lõi trummi
-interx
 hirm ja rahu ei saa korraga eksisteerida
 hirm ja rahu ei saa korraga eksisteerida inimese sees
 hirm ja rahu välistavad teineteist
@@ -355,8 +349,6 @@ igav on
 igaüks , kes oskab laulda
 igaüks , kes oskab laulda , tunneb enda sees rõõmu
 igaüks , kes tunneb ennast rahulikult
-interx
-interx
 ihkan romantikat
 iidse vea valgus
 iirimaa reis
@@ -371,8 +363,6 @@ ilusam linn on tallinn .
 ilus kala ujub vees
 imelik igaljuhul
 imelik igal juhul
-interx
-interx
 informatsioon ei ole erapooletu
 informatsioon võib olla ilustatud
 informatsioon võib olla puudulik
@@ -564,8 +554,6 @@ kas te olete uus töötaja siin ?
 kas te olite oma otsuse juba teinud ?
 kas te oskate öelda , kuhu jääb lähim bensiinijaam ?
 kas te oskate öelda , mis kell on ?
-interx
-interx
 kas tuleb see kõne alla
 kas tõesti olete varem mind kohanud ?
 kas tõlge see nädal töötab ?
@@ -596,7 +584,6 @@ keda te lolliks peate ?
 keegi ei saanud eksida .
 keegi on istunud ta välismaalase disainitud toolil .
 keel ilma morfoloogiliste muutusteta ei ole keel
-interx
 keerulised algoritmid , mis on
 kellaeg on palju
 kellaeg on palju aga homme kirjutan sel teemal
@@ -613,8 +600,6 @@ kell on palju ja ma pean koodi lahti mõtestama
 kell on viis
 kena inimene
 keri kuu peale
-interx
-interx
 kes elab metsa sees
 kes elab metsa sees ?
 kes elab metsa sees ?
@@ -821,7 +806,6 @@ kui sinu sees on rahu
 kui suur
 kui suur on laeva süvis
 kui ta ei saa aru , siis korda oma lauset
-interx
 kui te arvate et vajate selgitust
 kui teha nii
 kui teha nii , et muudab selle uue faili nime
@@ -880,7 +864,6 @@ kus töötab ilma tarkvarata
 kutsus sõbra külla
 kuule , ole tubli siis väike mees !
 kuule ole tubli siis väike mees !
-interx
 kuulus belgia detektiiv hercule poirot tegutseb kapten hastingsiga londonis .
 kuulus belgia detektiiv hercule poirot tegutseb londoni allmaailmas koos oma parema käe kapten hastingsiga .
 kuuma ja külma kannatas ta kõige paremini .
@@ -905,7 +888,6 @@ kõndisin üksinda
 käbi ei kuku kännust kaugele
 käbi ei kuku kännust kaugele .
 käesolevaga lõpetame selle teema .
-käesolevaga määrame teile tähtaja puuduste likvideerimiseks
 käesolevaga tõendame , et
 käesoleva lause eesmärk on katsetada masintõlke programmi ning hinnata selle väljundit .
 käesoleva lause eesmärk on katsetada masintõlke programmi ning kontrollida selle väljundi kvaliteeti .

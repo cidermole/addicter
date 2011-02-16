@@ -113,11 +113,8 @@ bussid|S|buss tartusse|S|tar_tuss väljuvad|V|välju igal|P|iga täistunnil|S|t�
 bussi|S|buss pilet|S|pilet maksab|V|maks 150|N|150 eesti|G|eesti krooni|S|kroon .|Z|.
 bussipilet|S|bussi_pilet maksab|V|maks 150|N|150 eesti|G|eesti krooni|S|kroon .|Z|.
 buss|S|buss sõidab|V|sõit tartust|A|tartud tallinnasse|S|tal_linn kaks|N|kaks ja|J|ja pool|N|pool tundi|S|tund .|Z|.
-interx|S|interx
 catts|S|catts on|V|ole sitaks|S|sitt mitu|P|mitu korda|S|kord jube|A|jube abiks|S|abi olnd|S|olnd
 catts|S|catts on|V|ole sitaks|S|sitt mitu|P|mitu korda|S|kord jube|A|jube abiks|S|abi olnud|A|ol=nud
-interx|S|interx
-interx|S|interx
 columbus|S|col_umbus ootab|V|oota tagasisidet|S|tagasi_side
 columbus|S|col_umbus tahab|V|taht tagasisidet|S|tagasi_side
 detaili|S|detail number|S|number on|V|ole sama|P|sama juhendis|S|juhend ja|J|ja spetsis|S|spets .|Z|. nii|D|nii saad|V|saa teada|V|tead millega|P|mis tegu|S|tegu .|Z|.
@@ -251,7 +248,6 @@ euroopa|G|euroopa liit|S|liit on|V|ole loomas|V|loo uut|A|uus seadusandlust|S|se
 eurooplased|S|eurooplane teavad|V|tead liiga|D|liiga vähe|D|vähe jaapanist|S|jaapan ja|J|ja aasiast|S|aasia
 eurooplased|S|eurooplane teavad|V|tead vähe|D|vähe jaapanist|S|jaapan
 euroopa|G|euroopa autotootjad|S|auto_tootja ei|V|ei kasuta|V|kasuta vöötkoodis|S|vööt_kood i|Y|i sümbolit|S|sümbol
-interx|S|interx
 failid|S|fail on|V|ole manuses|S|manus
 fail|S|fail on|V|ole muutunud|V|muutu
 fenomenograafia|S|fenomenograafia uurib|V|uuri ,|Z|, missuguseid|P|mis_sugune tähendusi|S|tähendus annavad|V|and inimesed|S|inimene erinevatele|A|erinev sotsiaalsetele|A|sotsiaalne nähtustele|S|nähtus (|Z|( fenomenidele|S|fenomen )|Z|) ,|Z|, missugune|P|mis_sugune on|V|ole nende|P|tema kogemus|S|kogemus
@@ -263,7 +259,6 @@ gaasileke|S|gaasi_leke lükkas|V|lükka kosmosesüstiku|S|kosmose_süstik stardi
 galaktikate|S|galaktika mudelite|S|mudel koostamisel|S|koostamine tuleb|V|tule arvestada|V|arvesta mitmesuguste|P|mitme_sugune detailidega|S|detail .|Z|.
 geomeetriline|A|geomeetriline lähenemine|S|lähenemine
 gerold|S|gerold on|V|ole loll|A|loll lammas|S|lammas ,|Z|, et|J|et ei|V|ei tea|V|tead asjadest|S|asi midagi|P|miski
-interx|S|interx
 google|S|google chrome|S|chrome on|V|ole hea|A|hea veebibrauser|S|veebi_brauser
 graafi|S|graaf semiootiliste|A|semiootiline invariantide|S|invariant kasutamine|S|kasutamine isomorfismi|S|isomorfism tuvastamiseks|S|tuvastamine
 graafi|S|graaf semiootiliste|A|semiootiline invariantide|S|invariant kasutanine|S|kasutanine isomorfismi|S|isomorfism tuvastamiseks|S|tuvastamine
@@ -309,7 +304,6 @@ hiir|S|hiir hüppas|V|hüppa ,|Z|, kass|S|kass kargas|V|karga ,|Z|, vana|A|vana 
 hiir|S|hiir hüppas|V|hüppa ,|Z|, kass|S|kass kargas|V|karga ,|Z|, vanakaru|S|vana_karu lõi|V|loo trummi|S|trumm
 hiir|S|hiir hüppas|V|hüppa kass|S|kass kargas|V|karga vana|A|vana karu|S|karu lõi|V|loo trummi|S|trumm
 hiir|S|hiir hüppas|V|hüppa kass|S|kass kargas|V|karga vanakaru|S|vana_karu lõi|V|loo trummi|S|trumm
-interx|S|interx
 hirm|S|hirm ja|J|ja rahu|S|rahu ei|V|ei saa|V|saa korraga|D|korraga eksisteerida|V|eksisteeri
 hirm|S|hirm ja|J|ja rahu|S|rahu ei|V|ei saa|V|saa korraga|D|korraga eksisteerida|V|eksisteeri inimese|S|inimene sees|K|sees
 hirm|S|hirm ja|J|ja rahu|S|rahu välistavad|V|välista teineteist|P|teine_teise
@@ -355,8 +349,6 @@ igav|A|igav on|V|ole
 igaüks|P|iga_üks ,|Z|, kes|P|kes oskab|V|oska laulda|V|laul
 igaüks|P|iga_üks ,|Z|, kes|P|kes oskab|V|oska laulda|V|laul ,|Z|, tunneb|V|tund enda|P|ise sees|K|sees rõõmu|S|rõõm
 igaüks|P|iga_üks ,|Z|, kes|P|kes tunneb|V|tund ennast|P|ise rahulikult|D|rahulikult
-interx|S|interx
-interx|S|interx
 ihkan|V|ihka romantikat|S|romantika
 iidse|A|iidne vea|S|viga valgus|S|valgus
 iirimaa|G|iiri_maa reis|S|reis
@@ -371,8 +363,6 @@ ilusam|C|ilusam linn|S|linn on|V|ole tallinn|S|tal_linn .|Z|.
 ilus|A|ilus kala|S|kala ujub|V|uju vees|S|vesi
 imelik|A|imelik igaljuhul|S|igal_juht
 imelik|A|imelik igal|P|iga juhul|S|juht
-interx|S|interx
-interx|S|interx
 informatsioon|S|informatsioon ei|V|ei ole|V|ole erapooletu|A|era_pooletu
 informatsioon|S|informatsioon võib|V|või olla|V|ole ilustatud|V|ilusta
 informatsioon|S|informatsioon võib|V|või olla|V|ole puudulik|A|puudulik
@@ -564,8 +554,6 @@ kas|D|kas te|P|sina olete|V|ole uus|A|uus töötaja|S|töötaja siin|D|siin ?|Z|
 kas|D|kas te|P|sina olite|V|ole oma|P|oma otsuse|S|otsus juba|D|juba teinud|V|tege ?|Z|?
 kas|D|kas te|P|sina oskate|V|oska öelda|V|ütle ,|Z|, kuhu|D|kuhu jääb|V|jää lähim|U|lähim bensiinijaam|S|bensiini_jaam ?|Z|?
 kas|D|kas te|P|sina oskate|V|oska öelda|V|ütle ,|Z|, mis|P|mis kell|S|kell on|V|ole ?|Z|?
-interx|S|interx
-interx|S|interx
 kas|D|kas tuleb|V|tule see|P|see kõne|S|kõne alla|K|alla
 kas|D|kas tõesti|D|tõesti olete|V|ole varem|D|varem mind|P|mina kohanud|V|koha ?|Z|?
 kas|D|kas tõlge|S|tõlge see|P|see nädal|S|nädal töötab|V|tööta ?|Z|?
@@ -596,7 +584,6 @@ keda|P|kes te|P|sina lolliks|S|loll peate|V|pida ?|Z|?
 keegi|P|keegi ei|V|ei saanud|V|saa eksida|V|eksi .|Z|.
 keegi|P|keegi on|V|ole istunud|V|istu ta|P|tema välismaalase|S|välis_maalane disainitud|V|disaini toolil|S|tool .|Z|.
 keel|S|keel ilma|K|ilma morfoloogiliste|A|morfoloogiline muutusteta|S|muutus ei|V|ei ole|V|ole keel|S|keel
-interx|S|interx
 keerulised|A|keeruline algoritmid|S|algoritm ,|Z|, mis|P|mis on|V|ole
 kellaeg|S|kell_aeg on|V|ole palju|D|palju
 kellaeg|S|kell_aeg on|V|ole palju|D|palju aga|J|aga homme|D|homme kirjutan|V|kirjuta sel|P|see teemal|S|teema
@@ -613,8 +600,6 @@ kell|S|kell on|V|ole palju|D|palju ja|J|ja ma|P|mina pean|V|pida koodi|S|kood la
 kell|S|kell on|V|ole viis|N|viis
 kena|A|kena inimene|S|inimene
 keri|V|keri kuu|S|kuu peale|K|peale
-interx|S|interx
-interx|S|interx
 kes|P|kes elab|V|ela metsa|S|mets sees|K|sees
 kes|P|kes elab|V|ela metsa|S|mets sees|K|sees ?|Z|?
 kes|P|kes elab|V|ela metsa|S|mets sees|K|sees ?|Z|?
@@ -821,7 +806,6 @@ kui|D|kui sinu|P|sina sees|K|sees on|V|ole rahu|S|rahu
 kui|D|kui suur|A|suur
 kui|D|kui suur|A|suur on|V|ole laeva|S|laev süvis|S|süvis
 kui|D|kui ta|P|tema ei|V|ei saa|V|saa aru|S|aru ,|Z|, siis|J|siis korda|S|kord oma|P|oma lauset|S|lause
-interx|S|interx
 kui|D|kui te|P|sina arvate|V|arva et|J|et vajate|V|vaja selgitust|S|selgitus
 kui|D|kui teha|V|tege nii|D|nii
 kui|D|kui teha|V|tege nii|D|nii ,|Z|, et|J|et muudab|V|muut selle|P|see uue|A|uus faili|S|fail nime|S|nimi
@@ -880,7 +864,6 @@ kus|D|kus töötab|V|tööta ilma|K|ilma tarkvarata|S|tark_vara
 kutsus|V|kutsu sõbra|S|sõber külla|S|küla
 kuule|V|kuul ,|Z|, ole|V|ole tubli|A|tubli siis|J|siis väike|A|väike mees|S|mees !|Z|!
 kuule|V|kuul ole|V|ole tubli|A|tubli siis|J|siis väike|A|väike mees|S|mees !|Z|!
-interx|S|interx
 kuulus|A|kuulus belgia|G|belgia detektiiv|S|detektiiv hercule|S|hercu poirot|S|poiro tegutseb|V|tegutse kapten|S|kapten hastingsiga|A|hasting_siga londonis|S|londonis .|Z|.
 kuulus|A|kuulus belgia|G|belgia detektiiv|S|detektiiv hercule|S|hercu poirot|S|poirot tegutseb|V|tegutse londoni|G|londoni allmaailmas|S|all_maa_ilm koos|K|koos oma|P|oma parema|C|parem käe|S|käsi kapten|S|kapten hastingsiga|A|hasting_siga .|Z|.
 kuuma|A|kuum ja|J|ja külma|A|külm kannatas|V|kannata ta|P|tema kõige|D|kõige paremini|D|paremini .|Z|.
@@ -905,7 +888,6 @@ kõndisin|V|kõndi üksinda|D|üksinda
 käbi|S|käbi ei|V|ei kuku|V|kukku kännust|S|känd kaugele|D|kaugele
 käbi|S|käbi ei|V|ei kuku|V|kukku kännust|S|känd kaugele|D|kaugele .|Z|.
 käesolevaga|A|käes_olev lõpetame|V|lõpeta selle|P|see teema|S|teema .|Z|.
-käesolevaga|A|käes_olev määrame|V|määra teile|P|sina tähtaja|S|täht_aeg puuduste|S|puudus likvideerimiseks|S|likvideerimine
 käesolevaga|A|käes_olev tõendame|V|tõenda ,|Z|, et|J|et
 käesoleva|A|käes_olev lause|S|lause eesmärk|S|ees_märk on|V|ole katsetada|V|katseta masintõlke|S|masin_tõlge programmi|S|programm ning|J|ning hinnata|V|hinda selle|P|see väljundit|S|väljund .|Z|.
 käesoleva|A|käes_olev lause|S|lause eesmärk|S|ees_märk on|V|ole katsetada|V|katseta masintõlke|S|masin_tõlge programmi|S|programm ning|J|ning kontrollida|V|kontrolli selle|P|see väljundi|S|väljund kvaliteeti|S|kvaliteet .|Z|.

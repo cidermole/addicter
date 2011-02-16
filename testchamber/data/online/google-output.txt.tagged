@@ -113,11 +113,8 @@ tartu|NN|<unknown> ,|,|, buses|NNS|bus depart|VBP|depart every|DT|every hour|NN|
 bus|NN|bus ticket|NN|ticket costs|VBZ|cost 150|CD|@card@ estonian|JJ|Estonian kroons|NNS|kroon .|SENT|.
 bus|NN|bus ticket|NN|ticket costs|VBZ|cost 150|CD|@card@ estonian|JJ|Estonian kroons|NNS|kroon .|SENT|.
 bus|NN|bus travel|NN|travel from|IN|from tartu|NN|<unknown> to|TO|to tallinn|NP|Tallinn for|IN|for two|CD|two and|CC|and a|DT|a half|JJ|half hours|NNS|hour .|SENT|.
-interx|NN|<unknown>
 catts|NNS|<unknown> sitaks|NNS|<unknown> is|VBZ|be scary|JJ|scary how|WRB|how many|JJ|many times|NNS|time helpful|JJ|helpful olnd|NP|<unknown>
 catts|NNS|<unknown> sitaks|NNS|<unknown> is|VBZ|be scary|JJ|scary how|WRB|how many|JJ|many times|NNS|time have|VBP|have been|VBN|be assisted|VBN|assist
-interx|NN|<unknown>
-interx|NN|<unknown>
 columbus|NN|Columbus awaits|VBZ|await feedback|NN|feedback
 columbus|NN|Columbus wants|VBZ|want feedback|NN|feedback
 no|DT|no detail|NN|detail is|VBZ|be the|DT|the same|JJ|same instructions|NNS|instruction and|CC|and specifications|NNS|specification .|SENT|. so|RB|so you|PP|you get|VBP|get to|TO|to know|VB|know it|PP|it .|SENT|.
@@ -251,7 +248,6 @@ the|DT|the european|JJ|European union|NN|union is|VBZ|be creating|VBG|create new
 europeans|NNS|European know|VBP|know too|RB|too little|RB|little about|IN|about japan|NN|japan and|CC|and asia|NN|Asia
 europeans|NNS|European know|VBP|know little|RB|little about|RB|about japan|JJ|japan
 european|JJ|European car|NN|car manufacturers|NNS|manufacturer do|VBP|do not|RB|not use|VB|use a|DT|a bar|NN|bar code|NN|code symbol|NN|symbol i|NP|i
-interx|NN|<unknown>
 attachment|NN|attachment files|NNS|file
 file|NN|file has|VBZ|have been|VBN|be changed|VBN|change
 fenomenograafia|NN|<unknown> investigate|VB|investigate what|WP|what meanings|NNS|meaning people|NNS|people give|VBP|give to|TO|to various|JJ|various social|JJ|social phenomena|NNS|phenomenon (|(|( the|DT|the phenomenon|NN|phenomenon )|)|) ,|,|, what|WP|what is|VBZ|be their|PP$|their experience|NN|experience
@@ -263,7 +259,6 @@ gas|NN|gas leak|NN|leak was|VBD|be rejected|VBN|reject on|IN|on the|DT|the space
 models|NNS|model of|IN|of galaxies|NNS|galaxy must|MD|must be|VB|be taken|VBN|take into|IN|into account|NN|account in|IN|in drawing|VBG|draw up|RP|up the|DT|the various|JJ|various components|NNS|component .|SENT|.
 geometric|JJ|geometric approach|NN|approach
 gerold|NP|Gerold sheep|NN|sheep are|VBP|be stupid|JJ|stupid ,|,|, things|NNS|thing that|WDT|that do|VBP|do not|RB|not know|VB|know anything|NN|anything
-interx|NN|<unknown>
 google|NN|<unknown> chrome|NN|chrome is|VBZ|be a|DT|a good|JJ|good web|NN|web browser|NN|browser
 using|VBG|use graph|NN|graph isomorphism|NN|isomorphism detection|NN|detection semiotic|JJ|semiotic invariants|NNS|invariant
 graph|NN|graph isomorphism|NN|isomorphism detection|NN|detection kasutanine|NN|<unknown> semiotic|JJ|semiotic invariants|NNS|invariant
@@ -309,7 +304,6 @@ jumping|VBG|jump mouse|NN|mouse ,|,|, the|DT|the cat|NN|cat jumped|VBD|jump ,|,|
 jumping|VBG|jump mouse|NN|mouse ,|,|, the|DT|the cat|NN|cat jumped|VBD|jump ,|,|, the|DT|the old|JJ|old bears|NNS|bear created|VBD|create a|DT|a drum|VB|drum
 jumping|VBG|jump mouse|NN|mouse old|JJ|old cat|NN|cat jumped|VBD|jump bears|NNS|bear created|VBD|create a|DT|a drum|VB|drum
 jumping|VBG|jump mouse|NN|mouse old|JJ|old cat|NN|cat jumped|VBD|jump bears|NNS|bear created|VBD|create a|DT|a drum|VB|drum
-interx|NN|<unknown>
 fear|NN|fear ,|,|, and|CC|and peace|NN|peace can|MD|can not|RB|not coexist|VB|coexist
 fear|NN|fear ,|,|, and|CC|and peace|NN|peace can|MD|can not|RB|not coexist|VB|coexist within|IN|within the|DT|the human|NN|human
 fear|NN|fear and|CC|and peace|NN|peace mutually|RB|mutually exclusive|JJ|exclusive
@@ -355,8 +349,6 @@ bored|VBN|bore
 anyone|NN|anyone who|WP|who can|MD|can sing|VB|sing
 anyone|NN|anyone who|WP|who can|MD|can sing|VB|sing ,|,|, feel|VB|feel the|DT|the joy|NN|joy inside|RB|inside
 anyone|NN|anyone who|WP|who is|VBZ|be feeling|VBG|feel calm|JJ|calm
-interx|NN|<unknown>
-interx|NN|<unknown>
 would|MD|would rather|RB|rather see|VB|see a|DT|a romance|NN|romance
 error|NN|error in|IN|in light|NN|light of|IN|of the|DT|the ancient|JJ|ancient
 ireland|NN|<unknown> trip|NN|trip
@@ -371,8 +363,6 @@ tallinn|NP|Tallinn is|VBZ|be a|DT|a beautiful|JJ|beautiful city|NN|city .|SENT|.
 beautiful|JJ|beautiful fish|NN|fish swims|NNS|swim in|IN|in water|NN|water
 strange|JJ|strange in|IN|in any|DT|any case|NN|case
 strange|JJ|strange in|IN|in any|DT|any case|NN|case
-interx|NN|<unknown>
-interx|NN|<unknown>
 information|NN|information is|VBZ|be not|RB|not impartial|JJ|impartial
 information|NN|information can|MD|can be|VB|be fancy|JJ|fancy
 information|NN|information may|MD|may be|VB|be incomplete|JJ|incomplete
@@ -564,8 +554,6 @@ whether|IN|whether you|PP|you '|''|' re|IN|re a|DT|a new|JJ|new employee|NN|empl
 were|VBD|be you|PP|you already|RB|already made|VBD|make your|PP$|your decision|NN|decision ?|SENT|?
 can|MD|can you|PP|you say|VB|say where|WRB|where is|VBZ|be the|DT|the nearest|JJS|near service|NN|service station|NN|station ?|SENT|?
 can|MD|can you|PP|you tell|VB|tell what|WP|what time|NN|time it|PP|it is|VBZ|be ?|SENT|?
-interx|NN|<unknown>
-interx|NN|<unknown>
 this|DT|this question|NN|question should|MD|should be|VB|be whether|IN|whether the|DT|the
 do|VB|do you|PP|you really|RB|really want|VBP|want me|PP|me to|TO|to have|VB|have met|VBN|meet you|PP|you before|IN|before ?|SENT|?
 whether|IN|whether the|DT|the translation|NN|translation is|VBZ|be working|VBG|work this|DT|this week|NN|week ?|SENT|?
@@ -596,7 +584,6 @@ whom|WP|whom you|PP|you need|VBP|need to|TO|to fool|VB|fool ?|SENT|?
 nobody|NN|nobody could|MD|could be|VB|be wrong|JJ|wrong .|SENT|.
 someone|NN|someone is|VBZ|be sitting|VBG|sit on|IN|on a|DT|a chair|NN|chair he|PP|he designed|VBD|design the|DT|the alien|NN|alien .|SENT|.
 language|NN|language is|VBZ|be not|RB|not a|DT|a language|NN|language without|IN|without morphological|JJ|morphological changes|NNS|change
-interx|NN|<unknown>
 complex|JJ|complex algorithms|NNS|algorithm ,|,|, which|WDT|which are|VBP|be
 there|EX|there are|VBP|be many|JJ|many times|NNS|time set|VBD|set
 however|RB|however ,|,|, there|EX|there are|VBP|be many|JJ|many times|NNS|time set|VBN|set for|IN|for tomorrow|NN|tomorrow ,|,|, i|NP|i write|VBP|write on|IN|on this|DT|this topic|NN|topic
@@ -613,8 +600,6 @@ i|NP|i have|VBP|have a|DT|a lot|NN|lot of|IN|of time|NN|time and|CC|and the|DT|t
 it|PP|it '|POS|' s|NN|S five|CD|five o|NN|o '|POS|' clock|NN|clock
 nice|JJ|nice person|NN|person
 scroll|VB|scroll down|RB|down to|TO|to the|DT|the moon|NN|moon
-interx|NN|<unknown>
-interx|NN|<unknown>
 who|WP|who lives|VBZ|live in|IN|in the|DT|the forest|NN|forest
 who|WP|who lives|VBZ|live in|IN|in the|DT|the forest|NN|forest ?|SENT|?
 who|WP|who lives|VBZ|live in|IN|in the|DT|the forest|NN|forest ?|SENT|?
@@ -821,7 +806,6 @@ where|WRB|where peace|NN|peace is|VBZ|be within|IN|within you|PP|you
 how|WRB|how much|RB|much
 how|WRB|how big|JJ|big is|VBZ|be the|DT|the hull|NN|hull of|IN|of a|DT|a boat|NN|boat
 if|IN|if he|PP|he does|VBZ|do not|RB|not understand|VB|understand the|DT|the times|NNS|time in|IN|in your|PP$|your sentence|NN|sentence
-interx|NN|<unknown>
 if|IN|if you|PP|you think|VBP|think that|IN|that you|PP|you need|VBP|need an|DT|an explanation|NN|explanation
 so|RB|so as|RB|as to|TO|to make|VB|make
 when|WRB|when done|VBN|do ,|,|, so|IN|so that|WDT|that makes|VBZ|make it|PP|it a|DT|a new|JJ|new file|NN|file name|NN|name
@@ -880,7 +864,6 @@ which|WDT|which works|VBZ|work without|IN|without software|NN|software
 invited|VBN|invite to|TO|to visit|VB|visit a|DT|a friend|NN|friend
 months|NNS|month ,|,|, not|RB|not good|JJ|good when|WRB|when the|DT|the little|JJ|little guy|NN|guy !|SENT|!
 not|RB|not a|DT|a good|JJ|good month|NN|month when|WRB|when the|DT|the little|JJ|little guy|NN|guy !|SENT|!
-interx|NN|<unknown>
 the|DT|the famous|JJ|famous belgian|JJ|Belgian detective|NN|detective ,|,|, hercule|NN|<unknown> poirot|NN|<unknown> ,|,|, captain|NN|captain hastings|NNS|<unknown> operates|VBZ|operate in|IN|in london|NN|<unknown> .|SENT|.
 the|DT|the famous|JJ|famous belgian|JJ|Belgian detective|NN|detective ,|,|, hercule|NN|<unknown> poirot|NN|<unknown> acts|NNS|act as|IN|as london|NP|London '|POS|' s|JJ|<unknown> underworld|NN|underworld with|IN|with his|PP$|his right|JJ|right hand|NN|hand ,|,|, captain|NN|captain hastings|NNS|<unknown> .|SENT|.
 hot|JJ|hot and|CC|and cold|JJ|cold ,|,|, he|PP|he suffered|VBD|suffer the|DT|the most|JJS|most .|SENT|.
@@ -905,7 +888,6 @@ walking|VBG|walk alone|RB|alone
 cone|NN|cone does|VBZ|do not|RB|not fall|VB|fall far|RB|far from|IN|from stump|NN|stump
 cone|NN|cone does|VBZ|do not|RB|not fall|VB|fall far|RB|far from|IN|from stump|NN|stump .|SENT|.
 the|DT|the finish|NN|finish on|IN|on this|DT|this topic|NN|topic .|SENT|.
-to|TO|to designate|VB|designate the|DT|the time|NN|time you|PP|you address|VBP|address the|DT|the weaknesses|NNS|weakness in|IN|in
 we|PP|we hereby|RB|hereby certify|VB|certify that|DT|that
 this|DT|this sentence|NN|sentence is|VBZ|be intended|VBN|intend to|TO|to test|VB|test a|DT|a machine|NN|machine translation|NN|translation program|NN|program and|CC|and evaluate|VB|evaluate its|PP$|its outputs|NNS|output .|SENT|.
 this|DT|this sentence|NN|sentence is|VBZ|be intended|VBN|intend to|TO|to test|VB|test a|DT|a machine|NN|machine translation|NN|translation program|NN|program ,|,|, and|CC|and check|VB|check the|DT|the output|NN|output quality|NN|quality .|SENT|.

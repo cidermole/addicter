@@ -113,11 +113,8 @@ tartu|Content|<unknown> ,|Punct|, buses|Content|bus depart|Content|depart every|
 bus|Content|bus ticket|Content|ticket costs|Content|cost 150|Number|@card@ estonian|Content|Estonian kroons|Content|kroon .|Aux|.
 bus|Content|bus ticket|Content|ticket costs|Content|cost 150|Number|@card@ estonian|Content|Estonian kroons|Content|kroon .|Aux|.
 bus|Content|bus travel|Content|travel from|Aux|from tartu|Content|<unknown> to|Aux|to tallinn|Content|Tallinn for|Aux|for two|Number|two and|Aux|and a|Aux|a half|Content|half hours|Content|hour .|Aux|.
-interx|Content|<unknown>
 catts|Content|<unknown> sitaks|Content|<unknown> is|Content|be scary|Content|scary how|Aux|how many|Content|many times|Content|time helpful|Content|helpful olnd|Content|<unknown>
 catts|Content|<unknown> sitaks|Content|<unknown> is|Content|be scary|Content|scary how|Aux|how many|Content|many times|Content|time have|Content|have been|Content|be assisted|Content|assist
-interx|Content|<unknown>
-interx|Content|<unknown>
 columbus|Content|Columbus awaits|Content|await feedback|Content|feedback
 columbus|Content|Columbus wants|Content|want feedback|Content|feedback
 no|Aux|no detail|Content|detail is|Content|be the|Aux|the same|Content|same instructions|Content|instruction and|Aux|and specifications|Content|specification .|Aux|. so|Content|so you|Aux|you get|Content|get to|Aux|to know|Content|know it|Aux|it .|Aux|.
@@ -251,7 +248,6 @@ the|Aux|the european|Content|European union|Content|union is|Content|be creating
 europeans|Content|European know|Content|know too|Content|too little|Content|little about|Aux|about japan|Content|japan and|Aux|and asia|Content|Asia
 europeans|Content|European know|Content|know little|Content|little about|Content|about japan|Content|japan
 european|Content|European car|Content|car manufacturers|Content|manufacturer do|Content|do not|Content|not use|Content|use a|Aux|a bar|Content|bar code|Content|code symbol|Content|symbol i|Content|i
-interx|Content|<unknown>
 attachment|Content|attachment files|Content|file
 file|Content|file has|Content|have been|Content|be changed|Content|change
 fenomenograafia|Content|<unknown> investigate|Content|investigate what|Aux|what meanings|Content|meaning people|Content|people give|Content|give to|Aux|to various|Content|various social|Content|social phenomena|Content|phenomenon (|Punct|( the|Aux|the phenomenon|Content|phenomenon )|Punct|) ,|Punct|, what|Aux|what is|Content|be their|Aux|their experience|Content|experience
@@ -263,7 +259,6 @@ gas|Content|gas leak|Content|leak was|Content|be rejected|Content|reject on|Aux|
 models|Content|model of|Aux|of galaxies|Content|galaxy must|Aux|must be|Content|be taken|Content|take into|Aux|into account|Content|account in|Aux|in drawing|Content|draw up|Aux|up the|Aux|the various|Content|various components|Content|component .|Aux|.
 geometric|Content|geometric approach|Content|approach
 gerold|Content|Gerold sheep|Content|sheep are|Content|be stupid|Content|stupid ,|Punct|, things|Content|thing that|Aux|that do|Content|do not|Content|not know|Content|know anything|Content|anything
-interx|Content|<unknown>
 google|Content|<unknown> chrome|Content|chrome is|Content|be a|Aux|a good|Content|good web|Content|web browser|Content|browser
 using|Content|use graph|Content|graph isomorphism|Content|isomorphism detection|Content|detection semiotic|Content|semiotic invariants|Content|invariant
 graph|Content|graph isomorphism|Content|isomorphism detection|Content|detection kasutanine|Content|<unknown> semiotic|Content|semiotic invariants|Content|invariant
@@ -309,7 +304,6 @@ jumping|Content|jump mouse|Content|mouse ,|Punct|, the|Aux|the cat|Content|cat j
 jumping|Content|jump mouse|Content|mouse ,|Punct|, the|Aux|the cat|Content|cat jumped|Content|jump ,|Punct|, the|Aux|the old|Content|old bears|Content|bear created|Content|create a|Aux|a drum|Content|drum
 jumping|Content|jump mouse|Content|mouse old|Content|old cat|Content|cat jumped|Content|jump bears|Content|bear created|Content|create a|Aux|a drum|Content|drum
 jumping|Content|jump mouse|Content|mouse old|Content|old cat|Content|cat jumped|Content|jump bears|Content|bear created|Content|create a|Aux|a drum|Content|drum
-interx|Content|<unknown>
 fear|Content|fear ,|Punct|, and|Aux|and peace|Content|peace can|Aux|can not|Content|not coexist|Content|coexist
 fear|Content|fear ,|Punct|, and|Aux|and peace|Content|peace can|Aux|can not|Content|not coexist|Content|coexist within|Aux|within the|Aux|the human|Content|human
 fear|Content|fear and|Aux|and peace|Content|peace mutually|Content|mutually exclusive|Content|exclusive
@@ -355,8 +349,6 @@ bored|Content|bore
 anyone|Content|anyone who|Aux|who can|Aux|can sing|Content|sing
 anyone|Content|anyone who|Aux|who can|Aux|can sing|Content|sing ,|Punct|, feel|Content|feel the|Aux|the joy|Content|joy inside|Content|inside
 anyone|Content|anyone who|Aux|who is|Content|be feeling|Content|feel calm|Content|calm
-interx|Content|<unknown>
-interx|Content|<unknown>
 would|Aux|would rather|Content|rather see|Content|see a|Aux|a romance|Content|romance
 error|Content|error in|Aux|in light|Content|light of|Aux|of the|Aux|the ancient|Content|ancient
 ireland|Content|<unknown> trip|Content|trip
@@ -371,8 +363,6 @@ tallinn|Content|Tallinn is|Content|be a|Aux|a beautiful|Content|beautiful city|C
 beautiful|Content|beautiful fish|Content|fish swims|Content|swim in|Aux|in water|Content|water
 strange|Content|strange in|Aux|in any|Aux|any case|Content|case
 strange|Content|strange in|Aux|in any|Aux|any case|Content|case
-interx|Content|<unknown>
-interx|Content|<unknown>
 information|Content|information is|Content|be not|Content|not impartial|Content|impartial
 information|Content|information can|Aux|can be|Content|be fancy|Content|fancy
 information|Content|information may|Aux|may be|Content|be incomplete|Content|incomplete
@@ -564,8 +554,6 @@ whether|Aux|whether you|Aux|you '|Punct|' re|Aux|re a|Aux|a new|Content|new empl
 were|Content|be you|Aux|you already|Content|already made|Content|make your|Aux|your decision|Content|decision ?|Aux|?
 can|Aux|can you|Aux|you say|Content|say where|Aux|where is|Content|be the|Aux|the nearest|Content|near service|Content|service station|Content|station ?|Aux|?
 can|Aux|can you|Aux|you tell|Content|tell what|Aux|what time|Content|time it|Aux|it is|Content|be ?|Aux|?
-interx|Content|<unknown>
-interx|Content|<unknown>
 this|Aux|this question|Content|question should|Aux|should be|Content|be whether|Aux|whether the|Aux|the
 do|Content|do you|Aux|you really|Content|really want|Content|want me|Aux|me to|Aux|to have|Content|have met|Content|meet you|Aux|you before|Aux|before ?|Aux|?
 whether|Aux|whether the|Aux|the translation|Content|translation is|Content|be working|Content|work this|Aux|this week|Content|week ?|Aux|?
@@ -596,7 +584,6 @@ whom|Aux|whom you|Aux|you need|Content|need to|Aux|to fool|Content|fool ?|Aux|?
 nobody|Content|nobody could|Aux|could be|Content|be wrong|Content|wrong .|Aux|.
 someone|Content|someone is|Content|be sitting|Content|sit on|Aux|on a|Aux|a chair|Content|chair he|Aux|he designed|Content|design the|Aux|the alien|Content|alien .|Aux|.
 language|Content|language is|Content|be not|Content|not a|Aux|a language|Content|language without|Aux|without morphological|Content|morphological changes|Content|change
-interx|Content|<unknown>
 complex|Content|complex algorithms|Content|algorithm ,|Punct|, which|Aux|which are|Content|be
 there|Aux|there are|Content|be many|Content|many times|Content|time set|Content|set
 however|Content|however ,|Punct|, there|Aux|there are|Content|be many|Content|many times|Content|time set|Content|set for|Aux|for tomorrow|Content|tomorrow ,|Punct|, i|Content|i write|Content|write on|Aux|on this|Aux|this topic|Content|topic
@@ -613,8 +600,6 @@ i|Content|i have|Content|have a|Aux|a lot|Content|lot of|Aux|of time|Content|tim
 it|Aux|it '|Aux|' s|Content|S five|Number|five o|Content|o '|Aux|' clock|Content|clock
 nice|Content|nice person|Content|person
 scroll|Content|scroll down|Content|down to|Aux|to the|Aux|the moon|Content|moon
-interx|Content|<unknown>
-interx|Content|<unknown>
 who|Aux|who lives|Content|live in|Aux|in the|Aux|the forest|Content|forest
 who|Aux|who lives|Content|live in|Aux|in the|Aux|the forest|Content|forest ?|Aux|?
 who|Aux|who lives|Content|live in|Aux|in the|Aux|the forest|Content|forest ?|Aux|?
@@ -821,7 +806,6 @@ where|Aux|where peace|Content|peace is|Content|be within|Aux|within you|Aux|you
 how|Aux|how much|Content|much
 how|Aux|how big|Content|big is|Content|be the|Aux|the hull|Content|hull of|Aux|of a|Aux|a boat|Content|boat
 if|Aux|if he|Aux|he does|Content|do not|Content|not understand|Content|understand the|Aux|the times|Content|time in|Aux|in your|Aux|your sentence|Content|sentence
-interx|Content|<unknown>
 if|Aux|if you|Aux|you think|Content|think that|Aux|that you|Aux|you need|Content|need an|Aux|an explanation|Content|explanation
 so|Content|so as|Content|as to|Aux|to make|Content|make
 when|Aux|when done|Content|do ,|Punct|, so|Aux|so that|Aux|that makes|Content|make it|Aux|it a|Aux|a new|Content|new file|Content|file name|Content|name
@@ -880,7 +864,6 @@ which|Aux|which works|Content|work without|Aux|without software|Content|software
 invited|Content|invite to|Aux|to visit|Content|visit a|Aux|a friend|Content|friend
 months|Content|month ,|Punct|, not|Content|not good|Content|good when|Aux|when the|Aux|the little|Content|little guy|Content|guy !|Aux|!
 not|Content|not a|Aux|a good|Content|good month|Content|month when|Aux|when the|Aux|the little|Content|little guy|Content|guy !|Aux|!
-interx|Content|<unknown>
 the|Aux|the famous|Content|famous belgian|Content|Belgian detective|Content|detective ,|Punct|, hercule|Content|<unknown> poirot|Content|<unknown> ,|Punct|, captain|Content|captain hastings|Content|<unknown> operates|Content|operate in|Aux|in london|Content|<unknown> .|Aux|.
 the|Aux|the famous|Content|famous belgian|Content|Belgian detective|Content|detective ,|Punct|, hercule|Content|<unknown> poirot|Content|<unknown> acts|Content|act as|Aux|as london|Content|London '|Aux|' s|Content|<unknown> underworld|Content|underworld with|Aux|with his|Aux|his right|Content|right hand|Content|hand ,|Punct|, captain|Content|captain hastings|Content|<unknown> .|Aux|.
 hot|Content|hot and|Aux|and cold|Content|cold ,|Punct|, he|Aux|he suffered|Content|suffer the|Aux|the most|Content|most .|Aux|.
@@ -905,7 +888,6 @@ walking|Content|walk alone|Content|alone
 cone|Content|cone does|Content|do not|Content|not fall|Content|fall far|Content|far from|Aux|from stump|Content|stump
 cone|Content|cone does|Content|do not|Content|not fall|Content|fall far|Content|far from|Aux|from stump|Content|stump .|Aux|.
 the|Aux|the finish|Content|finish on|Aux|on this|Aux|this topic|Content|topic .|Aux|.
-to|Aux|to designate|Content|designate the|Aux|the time|Content|time you|Aux|you address|Content|address the|Aux|the weaknesses|Content|weakness in|Aux|in
 we|Aux|we hereby|Content|hereby certify|Content|certify that|Aux|that
 this|Aux|this sentence|Content|sentence is|Content|be intended|Content|intend to|Aux|to test|Content|test a|Aux|a machine|Content|machine translation|Content|translation program|Content|program and|Aux|and evaluate|Content|evaluate its|Aux|its outputs|Content|output .|Aux|.
 this|Aux|this sentence|Content|sentence is|Content|be intended|Content|intend to|Aux|to test|Content|test a|Aux|a machine|Content|machine translation|Content|translation program|Content|program ,|Punct|, and|Aux|and check|Content|check the|Aux|the output|Content|output quality|Content|quality .|Aux|.

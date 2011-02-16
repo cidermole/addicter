@@ -113,11 +113,8 @@ busses|NNS|buss depart|VBP|depart to|TO|to tartu|NN|<unknown> at|IN|at every|DT|
 bus|NN|bus ticket|NN|ticket costs|VBZ|cost 150|CD|@card@ estonian|JJ|Estonian kroons|NNS|kroon .|SENT|.
 bus|NN|bus ticket|NN|ticket costs|VBZ|cost 150|CD|@card@ estonian|JJ|Estonian kroons|NNS|kroon .|SENT|.
 bus|NN|bus travels|NNS|travel from|IN|from tartu|NN|<unknown> to|TO|to tallinn|NP|Tallinn for|IN|for two|CD|two and|CC|and a|DT|a half|JJ|half hours|NNS|hour .|SENT|.
-interx|NN|<unknown>
 catts|NP|<unknown> has|VBZ|have been|VBN|be a|DT|a huge|JJ|huge assistance|NN|assistance in|IN|in hell|NN|hell of|IN|of a|DT|a lot|NN|lot of|IN|of times|NNS|time .|SENT|.
 catts|NP|<unknown> has|VBZ|have been|VBN|be terribly|RB|terribly helpful|JJ|helpful in|IN|in a|DT|a hell|NN|hell of|IN|of a|DT|a lot|NN|lot of|IN|of occasions|NNS|occasion .|SENT|.
-interx|NN|<unknown>
-interx|NN|<unknown>
 columbus|NN|Columbus awaits|VBZ|await feedback|NN|feedback .|SENT|.
 columbus|NN|Columbus wants|VBZ|want feedback|NN|feedback .|SENT|.
 the|DT|the number|NN|number of|IN|of the|DT|the detail|NN|detail is|VBZ|be the|DT|the same|JJ|same in|IN|in instructions|NNS|instruction and|CC|and in|IN|in specification|NN|specification .|SENT|. that|IN|that '|POS|' s|NN|S how|WRB|how you|PP|you '|POS|' ll|NNS|<unknown> know|VBP|know what|WP|what you|PP|you '|POS|' re|NN|re dealing|VBG|deal with|IN|with .|SENT|.
@@ -251,7 +248,6 @@ european|JJ|European union|NN|union is|VBZ|be in|IN|in the|DT|the process|NN|pro
 europeans|NNS|European know|VBP|know too|RB|too little|RB|little of|IN|of japan|NN|japan and|CC|and asia|NN|Asia .|SENT|.
 europeans|NNS|European know|VBP|know little|RB|little of|IN|of japan|NN|japan .|SENT|.
 european|JJ|European car|NN|car manufacturers|NNS|manufacturer don|VB|don '|''|' t|NN|t use|VB|use the|DT|the symbol|NN|symbol '|POS|' i|NP|i '|''|' in|IN|in the|DT|the barcode|NN|barcode .|SENT|.
-interx|NN|<unknown>
 files|NNS|file are|VBP|be in|IN|in attachment|NN|attachment .|SENT|.
 file|NN|file has|VBZ|have changed|VBN|change .|SENT|.
 phenomenography|NN|<unknown> investigates|VBZ|investigate which|WDT|which meanings|NNS|meaning people|NNS|people give|VBP|give to|TO|to various|JJ|various social|JJ|social events|NNS|event (|(|( phenomena|NNS|phenomenon )|)|) ,|,|, what|WP|what is|VBZ|be their|PP$|their experience|NN|experience .|SENT|.
@@ -263,7 +259,6 @@ gas|NN|gas leak|NN|leak postponed|VBD|postpone spaceship|NN|spaceship start|NN|s
 compiling|VBG|compile the|DT|the models|NNS|model of|IN|of the|DT|the galaxies|NNS|galaxy diverse|JJ|diverse details|NNS|detail have|VBP|have to|TO|to be|VB|be reckoned|VBN|reckon with|IN|with .|SENT|.
 geometric|JJ|geometric approach|NN|approach .|SENT|.
 gerold|NP|Gerold is|VBZ|be a|DT|a stupid|JJ|stupid sheep|NN|sheep that|IN|that he|PP|he doesn|NNS|<unknown> '|POS|' t|NN|t know|VBP|know anything|NN|anything about|IN|about things|NNS|thing .|SENT|.
-interx|NN|<unknown>
 google|NN|<unknown> chrome|NN|chrome is|VBZ|be a|DT|a good|JJ|good web|NN|web browser|NN|browser .|SENT|.
 using|VBG|use semiotic|JJ|semiotic invariants|NNS|invariant of|IN|of a|DT|a graph|NN|graph to|TO|to identify|VB|identify isomorphism|NN|isomorphism .|SENT|.
 using|VBG|use semiotic|JJ|semiotic invariants|NNS|invariant of|IN|of a|DT|a graph|NN|graph to|TO|to identify|VB|identify isomorphism|NN|isomorphism .|SENT|.
@@ -309,7 +304,6 @@ the|DT|the mouse|NN|mouse jumped|VBD|jump ,|,|, the|DT|the cat|NN|cat sprang|VBD
 the|DT|the mouse|NN|mouse jumped|VBD|jump ,|,|, the|DT|the cat|NN|cat sprang|VBD|spring ,|,|, the|DT|the old|JJ|old bear|NN|bear beat|VBD|beat the|DT|the drum|VB|drum .|SENT|.
 the|DT|the mouse|NN|mouse jumped|VBD|jump the|DT|the cat|NN|cat sprang|VBD|spring the|DT|the old|JJ|old bear|NN|bear beat|VBD|beat the|DT|the drum|VB|drum .|SENT|.
 the|DT|the mouse|NN|mouse jumped|VBD|jump the|DT|the cat|NN|cat sprang|VBD|spring the|DT|the old|JJ|old bear|NN|bear beat|VBD|beat the|DT|the drum|VB|drum .|SENT|.
-interx|NN|<unknown>
 fear|NN|fear and|CC|and peace|NN|peace cannot|MD|can coexist|VB|coexist .|SENT|.
 fear|NN|fear and|CC|and peace|NN|peace cannot|MD|can coexist|VB|coexist within|IN|within a|DT|a human|NN|human .|SENT|.
 fear|NN|fear and|CC|and peace|NN|peace exclude|VBP|exclude each|DT|each other|JJ|other .|SENT|.
@@ -355,8 +349,6 @@ i|NP|i '|POS|' m|NN|m bored|VBN|bore .|SENT|.
 everyone|NN|everyone who|WP|who can|MD|can sing|VB|sing .|SENT|.
 everyone|NN|everyone who|WP|who can|MD|can sing|VB|sing feels|VBZ|feel joy|NN|joy within|IN|within himself|PP|himself .|SENT|.
 everyone|NN|everyone who|WP|who feels|VBZ|feel himself|PP|himself peacefully|RB|peacefully .|SENT|.
-interx|NN|<unknown>
-interx|NN|<unknown>
 i|NP|i desire|NN|desire romance|NN|romance .|SENT|.
 the|DT|the light|NN|light of|IN|of an|DT|an ancient|JJ|ancient mistake|NN|mistake .|SENT|.
 ireland|NN|<unknown> trip|NN|trip .|SENT|.
@@ -371,8 +363,6 @@ more|RBR|more beautiful|JJ|beautiful city|NN|city is|VBZ|be tallinn|NP|Tallinn .
 beautiful|JJ|beautiful fish|NN|fish swims|NNS|swim in|IN|in the|DT|the water|NN|water .|SENT|.
 weird|JJ|weird by|IN|by all|DT|all means|NNS|mean .|SENT|.
 weird|JJ|weird by|IN|by all|DT|all means|NNS|mean .|SENT|.
-interx|NN|<unknown>
-interx|NN|<unknown>
 information|NN|information isn|NN|<unknown> '|POS|' t|NN|t unbiased|JJ|unbiased .|SENT|.
 information|NN|information may|MD|may be|VB|be glorified|VBN|glorify .|SENT|.
 information|NN|information may|MD|may be|VB|be deficient|JJ|deficient .|SENT|.
@@ -564,8 +554,6 @@ are|VBP|be you|PP|you the|DT|the new|JJ|new worker|NN|worker here|RB|here ?|SENT
 have|VBP|have you|PP|you made|VBD|make your|PP$|your decision|NN|decision ?|SENT|?
 can|MD|can you|PP|you tell|VB|tell which|WDT|which way|NN|way the|DT|the nearest|JJS|near gas|NN|gas station|NN|station lays|VBZ|lay ?|SENT|?
 can|MD|can you|PP|you tell|VB|tell what|WP|what time|NN|time it|PP|it is|VBZ|be ?|SENT|?
-interx|NN|<unknown>
-interx|NN|<unknown>
 will|MD|will it|PP|it be|VB|be under|IN|under the|DT|the question|NN|question ?|SENT|?
 have|VBP|have you|PP|you really|RB|really met|VBD|meet me|PP|me before|RB|before ?|SENT|?
 is|VBZ|be the|DT|the translation|NN|translation working|VBG|work this|DT|this week|NN|week ?|SENT|?
@@ -596,7 +584,6 @@ who|WP|who do|VBP|do you|PP|you think|VBP|think is|VBZ|be stupid|JJ|stupid ?|SEN
 nobody|NN|nobody could|MD|could err|VB|err .|SENT|.
 somebody|NN|somebody has|VBZ|have been|VBN|be sitting|VBG|sit in|IN|in the|DT|the chair|NN|chair designed|VBN|design by|IN|by his|PP$|his foreigner|NN|foreigner .|SENT|.
 language|NN|language without|IN|without morphological|JJ|morphological changes|NNS|change is|VBZ|be not|RB|not a|DT|a language|NN|language .|SENT|.
-interx|NN|<unknown>
 complicated|JJ|complicated algorithms|NNS|algorithm ,|,|, which|WDT|which are|VBP|be
 it|PP|it '|POS|' s|NN|S late|RB|late .|SENT|.
 the|DT|the hour|NN|hour is|VBZ|be late|JJ|late but|CC|but i|NP|i '|POS|' ll|NNS|<unknown> write|VBP|write about|IN|about that|DT|that topic|NN|topic tomorrow|NN|tomorrow .|SENT|.
@@ -613,8 +600,6 @@ the|DT|the hour|NN|hour is|VBZ|be late|JJ|late and|CC|and i|NP|i have|VBP|have t
 it|PP|it '|POS|' s|NN|S five|CD|five o|NN|o '|POS|' clock|NN|clock .|SENT|.
 nice|JJ|nice person|NN|person .|SENT|.
 get|VB|get on|IN|on the|DT|the moon|NN|moon .|SENT|.
-interx|NN|<unknown>
-interx|NN|<unknown>
 who|WP|who lives|VBZ|live in|IN|in the|DT|the forest|NN|forest ?|SENT|?
 who|WP|who lives|VBZ|live in|IN|in the|DT|the forest|NN|forest ?|SENT|?
 who|WP|who lives|VBZ|live in|IN|in the|DT|the forest|NN|forest ?|SENT|?
@@ -821,7 +806,6 @@ when|WRB|when there|EX|there is|VBZ|be peace|NN|peace within|IN|within you|PP|yo
 how|WRB|how big|JJ|big ?|SENT|?
 how|WRB|how deep|RB|deep is|VBZ|be the|DT|the draught|NN|draught of|IN|of a|DT|a ship|NN|ship ?|SENT|?
 if|IN|if he|PP|he doesn|NN|<unknown> '|POS|' t|NN|t understand|VBP|understand ,|,|, then|RB|then you|PP|you will|MD|will repeat|VB|repeat your|PP$|your sentence|NN|sentence .|SENT|.
-interx|NN|<unknown>
 if|IN|if you|PP|you think|VBP|think that|IN|that you|PP|you will|MD|will need|VB|need an|DT|an explanation|NN|explanation .|SENT|.
 when|WRB|when making|VBG|make it|PP|it so|RB|so .|SENT|.
 making|VBG|make it|PP|it so|RB|so that|IN|that it|PP|it changes|VBZ|change the|DT|the name|NN|name of|IN|of that|DT|that new|JJ|new file|NN|file .|SENT|.
@@ -880,7 +864,6 @@ where|WRB|where does|VBZ|do it|PP|it work|VB|work without|IN|without software|NN
 invited|VBN|invite a|DT|a friend|NN|friend over|RP|over .|SENT|.
 listen|VB|listen ,|,|, be|VB|be good|JJ|good then|RB|then ,|,|, little|JJ|little man|NN|man !|SENT|!
 listen|VB|listen ,|,|, be|VB|be good|JJ|good then|RB|then ,|,|, little|JJ|little man|NN|man !|SENT|!
-interx|NN|<unknown>
 the|DT|the famous|JJ|famous belgian|JJ|Belgian detective|NN|detective hercule|NN|<unknown> poirot|NN|<unknown> operates|VBZ|operate with|IN|with captain|NN|captain hastings|NNS|<unknown> in|IN|in london|NN|<unknown> .|SENT|.
 the|DT|the famous|JJ|famous belgian|JJ|Belgian detective|NN|detective hercule|NN|<unknown> poirot|NN|<unknown> operates|VBZ|operate with|IN|with captain|NN|captain hastings|NNS|<unknown> as|IN|as his|PP$|his right|NN|right -|:|- hand|NN|hand in|IN|in the|DT|the underworld|NN|underworld of|IN|of london|NN|<unknown> .|SENT|.
 he|PP|he tolerated|VBD|tolerate the|DT|the heat|NN|heat and|CC|and the|DT|the cold|NN|cold the|DT|the best|JJS|good .|SENT|.
@@ -905,7 +888,6 @@ i|NP|i walked|VBD|walk alone|RB|alone .|SENT|.
 the|DT|the pinecone|NN|<unknown> doesn|NN|<unknown> '|POS|' t|NN|t fall|NN|fall far|RB|far from|IN|from the|DT|the stump|NN|stump .|SENT|.
 the|DT|the pinecone|NN|<unknown> doesn|NN|<unknown> '|POS|' t|NN|t fall|NN|fall far|RB|far from|IN|from the|DT|the stump|NN|stump .|SENT|.
 herewith|RB|herewith we|PP|we terminate|VB|terminate this|DT|this topic|NN|topic .|SENT|.
-elukohateates|NNS|<unknown>
 we|PP|we hereby|RB|hereby certify|VB|certify that|DT|that
 the|DT|the purpose|NN|purpose of|IN|of the|DT|the current|JJ|current sentence|NN|sentence is|VBZ|be to|TO|to test|VB|test the|DT|the machine|NN|machine translation|NN|translation program|NN|program and|CC|and to|TO|to evaluate|VB|evaluate the|DT|the output|NN|output .|SENT|.
 the|DT|the purpose|NN|purpose of|IN|of the|DT|the current|JJ|current sentence|NN|sentence is|VBZ|be to|TO|to test|VB|test the|DT|the machine|NN|machine translation|NN|translation program|NN|program and|CC|and to|TO|to check|VB|check the|DT|the quality|NN|quality of|IN|of the|DT|the output|NN|output .|SENT|.

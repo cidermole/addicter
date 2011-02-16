@@ -113,11 +113,8 @@ busses depart to tartu at every full hour .
 bus ticket costs 150 estonian kroons .
 bus ticket costs 150 estonian kroons .
 bus travels from tartu to tallinn for two and a half hours .
-interx
 catts has been a huge assistance in hell of a lot of times .
 catts has been terribly helpful in a hell of a lot of occasions .
-interx
-interx
 columbus awaits feedback .
 columbus wants feedback .
 the number of the detail is the same in instructions and in specification . that ' s how you ' ll know what you ' re dealing with .
@@ -251,7 +248,6 @@ european union is in the process of creating a new legislation .
 europeans know too little of japan and asia .
 europeans know little of japan .
 european car manufacturers don ' t use the symbol ' i ' in the barcode .
-interx
 files are in attachment .
 file has changed .
 phenomenography investigates which meanings people give to various social events ( phenomena ) , what is their experience .
@@ -263,7 +259,6 @@ gas leak postponed spaceship start .
 compiling the models of the galaxies diverse details have to be reckoned with .
 geometric approach .
 gerold is a stupid sheep that he doesn ' t know anything about things .
-interx
 google chrome is a good web browser .
 using semiotic invariants of a graph to identify isomorphism .
 using semiotic invariants of a graph to identify isomorphism .
@@ -309,7 +304,6 @@ the mouse jumped , the cat sprang , the old bear beat the drum .
 the mouse jumped , the cat sprang , the old bear beat the drum .
 the mouse jumped the cat sprang the old bear beat the drum .
 the mouse jumped the cat sprang the old bear beat the drum .
-interx
 fear and peace cannot coexist .
 fear and peace cannot coexist within a human .
 fear and peace exclude each other .
@@ -355,8 +349,6 @@ i ' m bored .
 everyone who can sing .
 everyone who can sing feels joy within himself .
 everyone who feels himself peacefully .
-interx
-interx
 i desire romance .
 the light of an ancient mistake .
 ireland trip .
@@ -371,8 +363,6 @@ more beautiful city is tallinn .
 beautiful fish swims in the water .
 weird by all means .
 weird by all means .
-interx
-interx
 information isn ' t unbiased .
 information may be glorified .
 information may be deficient .
@@ -564,8 +554,6 @@ are you the new worker here ?
 have you made your decision ?
 can you tell which way the nearest gas station lays ?
 can you tell what time it is ?
-interx
-interx
 will it be under the question ?
 have you really met me before ?
 is the translation working this week ?
@@ -596,7 +584,6 @@ who do you think is stupid ?
 nobody could err .
 somebody has been sitting in the chair designed by his foreigner .
 language without morphological changes is not a language .
-interx
 complicated algorithms , which are
 it ' s late .
 the hour is late but i ' ll write about that topic tomorrow .
@@ -613,8 +600,6 @@ the hour is late and i have to decode .
 it ' s five o ' clock .
 nice person .
 get on the moon .
-interx
-interx
 who lives in the forest ?
 who lives in the forest ?
 who lives in the forest ?
@@ -821,7 +806,6 @@ when there is peace within you .
 how big ?
 how deep is the draught of a ship ?
 if he doesn ' t understand , then you will repeat your sentence .
-interx
 if you think that you will need an explanation .
 when making it so .
 making it so that it changes the name of that new file .
@@ -880,7 +864,6 @@ where does it work without software ?
 invited a friend over .
 listen , be good then , little man !
 listen , be good then , little man !
-interx
 the famous belgian detective hercule poirot operates with captain hastings in london .
 the famous belgian detective hercule poirot operates with captain hastings as his right - hand in the underworld of london .
 he tolerated the heat and the cold the best .
@@ -905,7 +888,6 @@ i walked alone .
 the pinecone doesn ' t fall far from the stump .
 the pinecone doesn ' t fall far from the stump .
 herewith we terminate this topic .
-elukohateates
 we hereby certify that
 the purpose of the current sentence is to test the machine translation program and to evaluate the output .
 the purpose of the current sentence is to test the machine translation program and to check the quality of the output .

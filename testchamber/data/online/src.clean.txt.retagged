@@ -113,11 +113,8 @@ bussid|Content|buss tartusse|Content|tar_tuss väljuvad|Content|välju igal|Aux|
 bussi|Content|buss pilet|Content|pilet maksab|Content|maks 150|Number|150 eesti|Content|eesti krooni|Content|kroon .|Punct|.
 bussipilet|Content|bussi_pilet maksab|Content|maks 150|Number|150 eesti|Content|eesti krooni|Content|kroon .|Punct|.
 buss|Content|buss sõidab|Content|sõit tartust|Content|tartud tallinnasse|Content|tal_linn kaks|Number|kaks ja|Aux|ja pool|Number|pool tundi|Content|tund .|Punct|.
-interx|Content|interx
 catts|Content|catts on|Content|ole sitaks|Content|sitt mitu|Aux|mitu korda|Content|kord jube|Content|jube abiks|Content|abi olnd|Content|olnd
 catts|Content|catts on|Content|ole sitaks|Content|sitt mitu|Aux|mitu korda|Content|kord jube|Content|jube abiks|Content|abi olnud|Content|ol=nud
-interx|Content|interx
-interx|Content|interx
 columbus|Content|col_umbus ootab|Content|oota tagasisidet|Content|tagasi_side
 columbus|Content|col_umbus tahab|Content|taht tagasisidet|Content|tagasi_side
 detaili|Content|detail number|Content|number on|Content|ole sama|Aux|sama juhendis|Content|juhend ja|Aux|ja spetsis|Content|spets .|Punct|. nii|Content|nii saad|Content|saa teada|Content|tead millega|Aux|mis tegu|Content|tegu .|Punct|.
@@ -251,7 +248,6 @@ euroopa|Content|euroopa liit|Content|liit on|Content|ole loomas|Content|loo uut|
 eurooplased|Content|eurooplane teavad|Content|tead liiga|Content|liiga vähe|Content|vähe jaapanist|Content|jaapan ja|Aux|ja aasiast|Content|aasia
 eurooplased|Content|eurooplane teavad|Content|tead vähe|Content|vähe jaapanist|Content|jaapan
 euroopa|Content|euroopa autotootjad|Content|auto_tootja ei|Content|ei kasuta|Content|kasuta vöötkoodis|Content|vööt_kood i|Content|i sümbolit|Content|sümbol
-interx|Content|interx
 failid|Content|fail on|Content|ole manuses|Content|manus
 fail|Content|fail on|Content|ole muutunud|Content|muutu
 fenomenograafia|Content|fenomenograafia uurib|Content|uuri ,|Punct|, missuguseid|Aux|mis_sugune tähendusi|Content|tähendus annavad|Content|and inimesed|Content|inimene erinevatele|Content|erinev sotsiaalsetele|Content|sotsiaalne nähtustele|Content|nähtus (|Punct|( fenomenidele|Content|fenomen )|Punct|) ,|Punct|, missugune|Aux|mis_sugune on|Content|ole nende|Aux|tema kogemus|Content|kogemus
@@ -263,7 +259,6 @@ gaasileke|Content|gaasi_leke lükkas|Content|lükka kosmosesüstiku|Content|kosm
 galaktikate|Content|galaktika mudelite|Content|mudel koostamisel|Content|koostamine tuleb|Content|tule arvestada|Content|arvesta mitmesuguste|Aux|mitme_sugune detailidega|Content|detail .|Punct|.
 geomeetriline|Content|geomeetriline lähenemine|Content|lähenemine
 gerold|Content|gerold on|Content|ole loll|Content|loll lammas|Content|lammas ,|Punct|, et|Aux|et ei|Content|ei tea|Content|tead asjadest|Content|asi midagi|Aux|miski
-interx|Content|interx
 google|Content|google chrome|Content|chrome on|Content|ole hea|Content|hea veebibrauser|Content|veebi_brauser
 graafi|Content|graaf semiootiliste|Content|semiootiline invariantide|Content|invariant kasutamine|Content|kasutamine isomorfismi|Content|isomorfism tuvastamiseks|Content|tuvastamine
 graafi|Content|graaf semiootiliste|Content|semiootiline invariantide|Content|invariant kasutanine|Content|kasutanine isomorfismi|Content|isomorfism tuvastamiseks|Content|tuvastamine
@@ -309,7 +304,6 @@ hiir|Content|hiir hüppas|Content|hüppa ,|Punct|, kass|Content|kass kargas|Cont
 hiir|Content|hiir hüppas|Content|hüppa ,|Punct|, kass|Content|kass kargas|Content|karga ,|Punct|, vanakaru|Content|vana_karu lõi|Content|loo trummi|Content|trumm
 hiir|Content|hiir hüppas|Content|hüppa kass|Content|kass kargas|Content|karga vana|Content|vana karu|Content|karu lõi|Content|loo trummi|Content|trumm
 hiir|Content|hiir hüppas|Content|hüppa kass|Content|kass kargas|Content|karga vanakaru|Content|vana_karu lõi|Content|loo trummi|Content|trumm
-interx|Content|interx
 hirm|Content|hirm ja|Aux|ja rahu|Content|rahu ei|Content|ei saa|Content|saa korraga|Content|korraga eksisteerida|Content|eksisteeri
 hirm|Content|hirm ja|Aux|ja rahu|Content|rahu ei|Content|ei saa|Content|saa korraga|Content|korraga eksisteerida|Content|eksisteeri inimese|Content|inimene sees|Aux|sees
 hirm|Content|hirm ja|Aux|ja rahu|Content|rahu välistavad|Content|välista teineteist|Aux|teine_teise
@@ -355,8 +349,6 @@ igav|Content|igav on|Content|ole
 igaüks|Aux|iga_üks ,|Punct|, kes|Aux|kes oskab|Content|oska laulda|Content|laul
 igaüks|Aux|iga_üks ,|Punct|, kes|Aux|kes oskab|Content|oska laulda|Content|laul ,|Punct|, tunneb|Content|tund enda|Aux|ise sees|Aux|sees rõõmu|Content|rõõm
 igaüks|Aux|iga_üks ,|Punct|, kes|Aux|kes tunneb|Content|tund ennast|Aux|ise rahulikult|Content|rahulikult
-interx|Content|interx
-interx|Content|interx
 ihkan|Content|ihka romantikat|Content|romantika
 iidse|Content|iidne vea|Content|viga valgus|Content|valgus
 iirimaa|Content|iiri_maa reis|Content|reis
@@ -371,8 +363,6 @@ ilusam|Content|ilusam linn|Content|linn on|Content|ole tallinn|Content|tal_linn 
 ilus|Content|ilus kala|Content|kala ujub|Content|uju vees|Content|vesi
 imelik|Content|imelik igaljuhul|Content|igal_juht
 imelik|Content|imelik igal|Aux|iga juhul|Content|juht
-interx|Content|interx
-interx|Content|interx
 informatsioon|Content|informatsioon ei|Content|ei ole|Content|ole erapooletu|Content|era_pooletu
 informatsioon|Content|informatsioon võib|Content|või olla|Content|ole ilustatud|Content|ilusta
 informatsioon|Content|informatsioon võib|Content|või olla|Content|ole puudulik|Content|puudulik
@@ -564,8 +554,6 @@ kas|Content|kas te|Aux|sina olete|Content|ole uus|Content|uus töötaja|Content|
 kas|Content|kas te|Aux|sina olite|Content|ole oma|Aux|oma otsuse|Content|otsus juba|Content|juba teinud|Content|tege ?|Punct|?
 kas|Content|kas te|Aux|sina oskate|Content|oska öelda|Content|ütle ,|Punct|, kuhu|Content|kuhu jääb|Content|jää lähim|Content|lähim bensiinijaam|Content|bensiini_jaam ?|Punct|?
 kas|Content|kas te|Aux|sina oskate|Content|oska öelda|Content|ütle ,|Punct|, mis|Aux|mis kell|Content|kell on|Content|ole ?|Punct|?
-interx|Content|interx
-interx|Content|interx
 kas|Content|kas tuleb|Content|tule see|Aux|see kõne|Content|kõne alla|Aux|alla
 kas|Content|kas tõesti|Content|tõesti olete|Content|ole varem|Content|varem mind|Aux|mina kohanud|Content|koha ?|Punct|?
 kas|Content|kas tõlge|Content|tõlge see|Aux|see nädal|Content|nädal töötab|Content|tööta ?|Punct|?
@@ -596,7 +584,6 @@ keda|Aux|kes te|Aux|sina lolliks|Content|loll peate|Content|pida ?|Punct|?
 keegi|Aux|keegi ei|Content|ei saanud|Content|saa eksida|Content|eksi .|Punct|.
 keegi|Aux|keegi on|Content|ole istunud|Content|istu ta|Aux|tema välismaalase|Content|välis_maalane disainitud|Content|disaini toolil|Content|tool .|Punct|.
 keel|Content|keel ilma|Aux|ilma morfoloogiliste|Content|morfoloogiline muutusteta|Content|muutus ei|Content|ei ole|Content|ole keel|Content|keel
-interx|Content|interx
 keerulised|Content|keeruline algoritmid|Content|algoritm ,|Punct|, mis|Aux|mis on|Content|ole
 kellaeg|Content|kell_aeg on|Content|ole palju|Content|palju
 kellaeg|Content|kell_aeg on|Content|ole palju|Content|palju aga|Aux|aga homme|Content|homme kirjutan|Content|kirjuta sel|Aux|see teemal|Content|teema
@@ -613,8 +600,6 @@ kell|Content|kell on|Content|ole palju|Content|palju ja|Aux|ja ma|Aux|mina pean|
 kell|Content|kell on|Content|ole viis|Number|viis
 kena|Content|kena inimene|Content|inimene
 keri|Content|keri kuu|Content|kuu peale|Aux|peale
-interx|Content|interx
-interx|Content|interx
 kes|Aux|kes elab|Content|ela metsa|Content|mets sees|Aux|sees
 kes|Aux|kes elab|Content|ela metsa|Content|mets sees|Aux|sees ?|Punct|?
 kes|Aux|kes elab|Content|ela metsa|Content|mets sees|Aux|sees ?|Punct|?
@@ -821,7 +806,6 @@ kui|Content|kui sinu|Aux|sina sees|Aux|sees on|Content|ole rahu|Content|rahu
 kui|Content|kui suur|Content|suur
 kui|Content|kui suur|Content|suur on|Content|ole laeva|Content|laev süvis|Content|süvis
 kui|Content|kui ta|Aux|tema ei|Content|ei saa|Content|saa aru|Content|aru ,|Punct|, siis|Aux|siis korda|Content|kord oma|Aux|oma lauset|Content|lause
-interx|Content|interx
 kui|Content|kui te|Aux|sina arvate|Content|arva et|Aux|et vajate|Content|vaja selgitust|Content|selgitus
 kui|Content|kui teha|Content|tege nii|Content|nii
 kui|Content|kui teha|Content|tege nii|Content|nii ,|Punct|, et|Aux|et muudab|Content|muut selle|Aux|see uue|Content|uus faili|Content|fail nime|Content|nimi
@@ -880,7 +864,6 @@ kus|Content|kus töötab|Content|tööta ilma|Aux|ilma tarkvarata|Content|tark_v
 kutsus|Content|kutsu sõbra|Content|sõber külla|Content|küla
 kuule|Content|kuul ,|Punct|, ole|Content|ole tubli|Content|tubli siis|Aux|siis väike|Content|väike mees|Content|mees !|Punct|!
 kuule|Content|kuul ole|Content|ole tubli|Content|tubli siis|Aux|siis väike|Content|väike mees|Content|mees !|Punct|!
-interx|Content|interx
 kuulus|Content|kuulus belgia|Content|belgia detektiiv|Content|detektiiv hercule|Content|hercu poirot|Content|poiro tegutseb|Content|tegutse kapten|Content|kapten hastingsiga|Content|hasting_siga londonis|Content|londonis .|Punct|.
 kuulus|Content|kuulus belgia|Content|belgia detektiiv|Content|detektiiv hercule|Content|hercu poirot|Content|poirot tegutseb|Content|tegutse londoni|Content|londoni allmaailmas|Content|all_maa_ilm koos|Aux|koos oma|Aux|oma parema|Content|parem käe|Content|käsi kapten|Content|kapten hastingsiga|Content|hasting_siga .|Punct|.
 kuuma|Content|kuum ja|Aux|ja külma|Content|külm kannatas|Content|kannata ta|Aux|tema kõige|Content|kõige paremini|Content|paremini .|Punct|.
@@ -905,7 +888,6 @@ kõndisin|Content|kõndi üksinda|Content|üksinda
 käbi|Content|käbi ei|Content|ei kuku|Content|kukku kännust|Content|känd kaugele|Content|kaugele
 käbi|Content|käbi ei|Content|ei kuku|Content|kukku kännust|Content|känd kaugele|Content|kaugele .|Punct|.
 käesolevaga|Content|käes_olev lõpetame|Content|lõpeta selle|Aux|see teema|Content|teema .|Punct|.
-käesolevaga|Content|käes_olev määrame|Content|määra teile|Aux|sina tähtaja|Content|täht_aeg puuduste|Content|puudus likvideerimiseks|Content|likvideerimine
 käesolevaga|Content|käes_olev tõendame|Content|tõenda ,|Punct|, et|Aux|et
 käesoleva|Content|käes_olev lause|Content|lause eesmärk|Content|ees_märk on|Content|ole katsetada|Content|katseta masintõlke|Content|masin_tõlge programmi|Content|programm ning|Aux|ning hinnata|Content|hinda selle|Aux|see väljundit|Content|väljund .|Punct|.
 käesoleva|Content|käes_olev lause|Content|lause eesmärk|Content|ees_märk on|Content|ole katsetada|Content|katseta masintõlke|Content|masin_tõlge programmi|Content|programm ning|Aux|ning kontrollida|Content|kontrolli selle|Aux|see väljundi|Content|väljund kvaliteeti|Content|kvaliteet .|Punct|.
