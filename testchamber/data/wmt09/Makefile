@@ -14,7 +14,11 @@ TECTOMT=/home/bojar/diplomka/granty/emplus/mtmetrics/stopwords-reduction/tectomt
 SRUNBLOCKS=$(TECTOMT)/tools/srunblocks_streaming/srunblocks
 LOT2TMT=$(TECTOMT)/tools/format_convertors/line_oriented_tmt/lot_to_tmt.sh
 
-INPUTFILES=second.cu-bojar.hyp second.cu-tectomt.hyp second.google.hyp second.pctrans.hyp second.ref
+INPUTFILES= \
+  first.cu-bojar.hyp first.cu-tectomt.hyp first.google.hyp \
+  first.pctrans.hyp first.ref \
+  second.cu-bojar.hyp second.cu-tectomt.hyp second.google.hyp \
+  second.pctrans.hyp second.ref
 
 %.analyzed.gz: %
 	qruncmd --join --jobs=2 " \
