@@ -1,44 +1,7 @@
 package ordersim;
 use strict;
 use unscramble;
-
-our %methodHash = (
-	'individualChanges' => \&guessShiftsAndSwitches,
-);
-
-#####
-#
-#####
-sub getDefaultMethod {
-	return 'individualChanges';
-}
-
-#####
-#
-#####
-sub testMethodId {
-	my ($methodId) = @_;
-	
-	if (!defined($methodHash{$methodId})) {
-		die("Method of analyzing order similary with id `$methodId' not defined");
-	}
-}
-
-#####
-#
-#####
-sub display {
-	my ($ref, $hyp, $al, $mId) = @_;
-	
-	my $methodFunc = $methodHash{$mId};
-	
-	if (defined($methodFunc)) {
-		return &$methodFunc($ref, $hyp, $al);
-	}
-	else {
-		die("Strange, should have tested for this -- method with id `$mId' undefined");
-	}
-}
+use const;
 
 #####
 #
@@ -58,10 +21,12 @@ sub getHypRefAlMap {
 #####
 #
 #####
-sub guessShiftsAndSwitches {
-	my ($ref, $hyp, $al) = @_;
+sub display {
+	my ($ref, $hyp, $al, $outputFormat, $flaggedHyp) = @_;
 	
-	displaySimilarityMetrics($al, $hyp);
+	if ($outputFormat eq $const::FMT_XML) {
+		displaySimilarityMetrics($al, $hyp);
+	}
 	
 	my $permList = unscramble::getListOfPermutations($al);
 	
@@ -71,9 +36,11 @@ sub guessShiftsAndSwitches {
 	
 	#for my $permutation (sort { $a->{'refidx1'} <=> $b->{'refidx1'} } @$permList) {
 	for my $permutation (@$permList) {
-		if (!$printedSome) {
-			print "\n";
-			$printedSome = 1;
+		if ($outputFormat eq $const::FMT_XML) {
+			if (!$printedSome) {
+				print "\n";
+				$printedSome = 1;
+			}
 		}
 		
 		if ($permutation->{'switch'}) {
@@ -82,9 +49,15 @@ sub guessShiftsAndSwitches {
 			my $tok1 = io::tok2str4xml($hyp->[$idx1]);
 			my $tok2 = io::tok2str4xml($hyp->[$idx2]);
 			
-			print "\t<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
-				" distance=\"" . abs($idx1 - $idx2) . "\"" .
-				" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
+			if ($outputFormat eq $const::FMT_XML) {
+				print "\t<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
+					" distance=\"" . abs($idx1 - $idx2) . "\"" .
+					" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
+			}
+			elsif ($outputFormat eq $const::FMT_FLAG) {
+				push @{$flaggedHyp->{'hyp'}->[$idx1]->{'flags'}}, "ows";
+				push @{$flaggedHyp->{'hyp'}->[$idx2]->{'flags'}}, "ows";
+			}
 		}
 		else {
 			my $hypPos = $hypIdxMap->[$permutation->{'refidx1'}];
@@ -92,9 +65,14 @@ sub guessShiftsAndSwitches {
 			my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
 			my $rawShiftWidth = $targetHypPos - $hypPos;
 			
-			print "\t<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
-				abs($rawShiftWidth) . "\" direction=\"" .
-				(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
+			if ($outputFormat eq $const::FMT_XML) {
+				print "\t<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
+					abs($rawShiftWidth) . "\" direction=\"" .
+					(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
+			}
+			elsif ($outputFormat eq $const::FMT_FLAG) {
+				push @{$flaggedHyp->{'hyp'}->[$hypPos]->{'flags'}}, "owl";
+			}
 		}
 	}
 }
@@ -149,6 +127,62 @@ sub displaySimilarityMetrics {
 	my $fmtRho = sprintf("%.3f", $rho);
 	
 	print "\n\t<ordSimMetrics spearmansRho=\"" . (defined($rho)? $fmtRho: "undef") . "\"/>\n";
+}
+
+#####
+#
+#####
+sub displayFlagged {
+	my $flaggedHyp = shift;
+	
+	displayFlaggedMissingRef($flaggedHyp);
+	
+	displayFlaggedHyp($flaggedHyp);
+	
+	print "\n";
+}
+
+#####
+#
+#####
+sub displayFlaggedHyp {
+	my $flaggedHyp = shift;
+	
+	for my $hypWord (@{$flaggedHyp->{'hyp'}}) {
+		my $surfForm = $hypWord->{'factors'}->[0];
+		
+		for my $flag (@{$hypWord->{'flags'}}) {
+			print $flag . "::";
+		}
+		
+		print $surfForm . " ";
+	}
+}
+
+#####
+#
+#####
+sub displayFlaggedMissingRef {
+	my $flaggedHyp = shift;
+	
+	for my $missRefWord (@{$flaggedHyp->{'missed'}}) {
+		my @factors = split(/\|/, $missRefWord);
+		my $surfForm = $factors[0];
+		my $pos = $factors[1];
+		my $auxFlag;
+		
+		if ($pos eq "content") {
+			$auxFlag = "C";
+		}
+		elsif ($pos eq "aux") {
+			$auxFlag = "A";
+		}
+		else {
+			$auxFlag = "X";
+		}
+		
+		print "miss" . $auxFlag . "::" . $surfForm . " ";
+	}
 }
 
 1;

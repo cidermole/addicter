@@ -24,6 +24,26 @@ sub sentence {
 #####
 #
 #####
+sub factoredToFlaggable {
+	my $sentence = shift;
+	my $newsnt = [];
+	
+	for my $w (@$sentence) {
+		my $neww = { 'factors' => [], 'flags' => [] };
+		
+		for my $f (@$w) {
+			push @{$neww->{'factors'}}, $f;
+		}
+		
+		push @$newsnt, $neww;
+	}
+	
+	return { 'hyp' => $newsnt, 'missed' => [] };
+}
+
+#####
+#
+#####
 sub alignment {
 	my $string = shift;
 	my @result;

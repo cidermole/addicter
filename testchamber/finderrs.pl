@@ -16,11 +16,12 @@ use io;
 use parse;
 use counter;
 use ordersim;
+use const;
 
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
-my ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $orderSimMethod) =
+my ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $outputFormat) =
 	processInputArgsAndOpts();
 
 my ($fhSrc, $fhRef, $fhHyp, $fhAli) = io::openMany($srcfile, $reffile, $hypfile, $alifile);
@@ -33,7 +34,7 @@ while($tuple = io::readSentences($fhSrc, $fhRef, $fhHyp, $fhAli)) {
 	my $hypSnt = parse::sentence($tuple->[2], $caseSensitive);
 	my $alignment = parse::alignment($tuple->[3]);
 	
-	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment, $orderSimMethod);
+	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment, $outputFormat);
 	
 	counter::update($cnt);
 }
@@ -46,15 +47,12 @@ io::closeMany($fhRef, $fhHyp);
 #
 #####
 sub processInputArgsAndOpts {
-	my ($caseSensitive, $orderSimMethod);
+	my ($caseSensitive, $outputFormat);
 	
-	GetOptions('c' => \$caseSensitive, 'd=s' => \$orderSimMethod);
+	GetOptions('c' => \$caseSensitive, 'f=s' => \$outputFormat);
 	
-	if ($orderSimMethod) {
-		ordersim::testMethodId($orderSimMethod);
-	}
-	else {
-		$orderSimMethod = ordersim::getDefaultMethod();
+	if (!defined($outputFormat)) {
+		$outputFormat = $const::FMT_FLAG;
 	}
 	
 	my ($srcfile, $reffile, $hypfile, $alifile) = @ARGV;
@@ -63,31 +61,40 @@ sub processInputArgsAndOpts {
 		die("Required arguments: source file, reference file, hypothesis file, alignment file");
 	}
 	
-	return ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $orderSimMethod);
+	return ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $outputFormat);
 }
 
 #####
 #
 #####
 sub displayErrors {
-	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al, $orderSimMethod) = @_;
+	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al, $outputFormat) = @_;
 	
-	sntStart($sntIdx);
-	sntInfo($srcSnt, $refSnt, $hypSnt, $al);
+	my $flaggedHyp = parse::factoredToFlaggable($hypSnt);
+	
+	if ($outputFormat eq $const::FMT_XML) {
+		sntStart($sntIdx);
+		sntInfo($srcSnt, $refSnt, $hypSnt, $al);
+	}
 	
 	#incorrect (not in ref)
-	displayIncorrectHypTokens($srcSnt, $hypSnt, $al);
+	displayIncorrectHypTokens($srcSnt, $hypSnt, $al, $outputFormat, $flaggedHyp);
 	
 	#missing (not in hyp)
-	displayMissingRefTokens($refSnt, $al);
+	displayMissingRefTokens($refSnt, $al, $outputFormat, $flaggedHyp);
 	
 	#matched, not same (like same lemma, wrong surface form)
-	displayMatchedUnequalTokens($refSnt, $hypSnt, $al);
+	displayMatchedUnequalTokens($refSnt, $hypSnt, $al, $outputFormat, $flaggedHyp);
 	
 	#word/phrase order
-	ordersim::display($refSnt, $hypSnt, $al, $orderSimMethod);
+	ordersim::display($refSnt, $hypSnt, $al, $outputFormat, $flaggedHyp);
 	
-	sntFinish();
+	if ($outputFormat eq $const::FMT_XML) {
+		sntFinish();
+	}
+	elsif ($outputFormat eq $const::FMT_FLAG) {
+		ordersim::displayFlagged($flaggedHyp);
+	}
 }
 
 #####
@@ -117,7 +124,7 @@ sub max {
 #
 #####
 sub displayMatchedUnequalTokens {
-	my ($refSnt, $hypSnt, $al) = @_;
+	my ($refSnt, $hypSnt, $al, $outputFormat, $flaggedHyp) = @_;
 	
 	my $printedSome = undef;
 	
@@ -142,14 +149,19 @@ sub displayMatchedUnequalTokens {
 			my $rawHypToken = io::tok2str4xml($hypToken);
 			my $uneqFactorList = join(",", @uneqFactors);
 			
-			if (!$printedSome) {
-				print "\n";
-				$printedSome = 1;
+			if ($outputFormat eq $const::FMT_XML) {
+				if (!$printedSome) {
+					print "\n";
+					$printedSome = 1;
+				}
+				
+				print "\t<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
+					"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
+					"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>\n";
 			}
-			
-			print "\t<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
-				"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
-				"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>\n";
+			elsif ($outputFormat eq $const::FMT_FLAG) {
+				push @{$flaggedHyp->{'hyp'}->[$pair->{'hyp'}]->{'flags'}}, "form";
+			}
 		}
 	}
 }
@@ -158,7 +170,7 @@ sub displayMatchedUnequalTokens {
 #
 #####
 sub displayMissingRefTokens {
-	my ($refSnt, $al) = @_;
+	my ($refSnt, $al, $outputFormat, $flaggedHyp) = @_;
 	
 	my $alHash = hashAlignment($al, 'ref');
 	
@@ -166,18 +178,26 @@ sub displayMissingRefTokens {
 	
 	for my $i (0..$#$refSnt) {
 		if (!$alHash->{$i}) {
-			my $surfForm = io::str4xml($refSnt->[$i]->[0]);
+			#my $surfForm = io::str4xml($refSnt->[$i]->[0]);
+			my $surfForm = $refSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($refSnt->[$i]);
 			
-			if (!$printedSome) {
-				print "\n";
-				$printedSome = 1;
+			if ($outputFormat eq $const::FMT_XML) {
+				if (!$printedSome) {
+					print "\n";
+					$printedSome = 1;
+				}
+				
+				print "\t<missingRefWord idx=\"$i\" " .
+					"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
+					"token=\"$rawToken\"";
+				print "/>\n";
 			}
-			
-			print "\t<missingRefWord idx=\"$i\" " .
-				"surfaceForm=\"$surfForm\" " . 
-				"token=\"$rawToken\"";
-			print "/>\n";
+			elsif ($outputFormat eq $const::FMT_FLAG) {
+				my $flag;
+				
+				push @{$flaggedHyp->{'missed'}}, $rawToken;
+			}
 		}
 	}
 }
@@ -186,7 +206,7 @@ sub displayMissingRefTokens {
 #
 #####
 sub displayIncorrectHypTokens {
-	my ($srcSnt, $hypSnt, $al) = @_;
+	my ($srcSnt, $hypSnt, $al, $outputFormat, $flaggedHyp) = @_;
 	
 	my $srcHash = io::hashFactors($srcSnt, 0);
 	my $alHash = hashAlignment($al, 'hyp');
@@ -195,19 +215,27 @@ sub displayIncorrectHypTokens {
 	
 	for my $i (0..$#$hypSnt) {
 		if (!$alHash->{$i}) {
-			my $surfForm = io::str4xml($hypSnt->[$i]->[0]);
+			#my $surfForm = io::str4xml($hypSnt->[$i]->[0]);
+			my $surfForm = $hypSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($hypSnt->[$i]);
 			
-			if (!$printedSome) {
-				print "\n";
-				$printedSome = 1;
+			if ($outputFormat eq $const::FMT_XML) {
+				if (!$printedSome) {
+					print "\n";
+					$printedSome = 1;
+				}
+				
+				my $tagId = ($srcHash->{$surfForm})? "untranslated": "extra";
+				
+				print "\t<" . $tagId . "HypWord idx=\"$i\" " .
+					"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
+					"token=\"$rawToken\"/>\n";
 			}
-			
-			my $tagId = ($srcHash->{$surfForm})? "untranslated": "extra";
-			
-			print "\t<" . $tagId . "HypWord idx=\"$i\" " .
-				"surfaceForm=\"$surfForm\" " . 
-				"token=\"$rawToken\"/>\n";
+			elsif ($outputFormat eq $const::FMT_FLAG) {
+				my $flag;
+				
+				push @{$flaggedHyp->{'hyp'}->[$i]->{'flags'}}, (($srcHash->{$surfForm})? "untr": "extra");
+			}
 		}
 	}
 }
