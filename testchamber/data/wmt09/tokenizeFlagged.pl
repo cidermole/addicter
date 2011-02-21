@@ -40,7 +40,7 @@ while (<FL>) {
 		
 		$tkStartPos = $tkEndPos + 1;
 		
-		#print "matching token $flPos ($flToken):\n";
+		#print "matching token $flPos ($flToken/$flSurfForm):\n";
 		
 		my $tkToken;
 		
@@ -78,15 +78,27 @@ sub tokenizeFlagged {
 	for my $cleanTok (@cleanToks) {
 		my $cleanTokForMatching = clean($cleanTok);
 		
-		if ($rawFlTok =~ /^(([A-Za-z]+::)*)\Q$cleanTokForMatching\E(.*)$/) {
-			my $flags = $1;
-			$rawFlTok = $3;
+		if ($rawFlTok =~ /^(([A-Za-z]+::)*)\Q$cleanTokForMatching\E(([A-Za-z]+::)*)(.*)$/) {
+			my ($flags, $nextFlags, $nextSurfForm) = ($1, $3, $5);
 			
-			if ($flags =~ /punct::/ and $rawFlTok =~ /^(([A-Za-z]+::)*)([[:punct:]].*)$/) {
-				my ($newflags, $remainder) = ($1, $3);
-				$flags =~ s/punct:://g;
-				$rawFlTok = $newflags . "punct::" . $remainder;
+			if ($cleanTok =~ /^[[:punct:]]+$/) {
+				my $newNextFlags = $flags;
+				
+				if ($flags =~ /punct::/) {
+					$newNextFlags =~ s/punct:://g;
+					$flags = "punct::";
+				}
+				else {
+					$flags = "";
+				}
+				
+				$nextFlags .= $newNextFlags;
 			}
+			elsif ($flags =~ /punct::/ and $nextSurfForm =~ /^[[:punct:]]/) {
+				$flags =~ s/punct:://g;
+				$nextFlags .= "punct::";
+			}
+			$rawFlTok = $nextFlags . $nextSurfForm;
 			
 			push @result, "$flags$cleanTok";
 		}

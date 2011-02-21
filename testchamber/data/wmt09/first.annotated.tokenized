@@ -1,19 +1,19 @@
 257	cu-bojar		Miroslav Čepický přitahuje pozornost potenciálních lex::problémů : „ zákon umožňuje takové spekulace , nicméně jen zanedbatelné procento zákazníků form::využít služeb těchto firem .
-257	cu-bojar	missA::na	Miroslav Čepický disam::přitahuje extra::pozornost potenciálních problémů : case::„ zákon umožňuje takové spekulace , nicméně jen zanedbatelné procento zákazníků form::využít služeb těchto firem .
-257	cu-tectomt		disam::Čepická disam::Miroslava disam::kreslí pozornost lex::k potenciálním problémům : extra::„ že zákon umožňuje form::tato spekulace extra::přesto , disam::že pouze nevýznamné procento zákazníků používá služby těchto společností .
-257	cu-tectomt		form::Čepická form::Miroslava disam::kreslí extra::pozornost k potenciálním problémům : extra::„ že zákon umožňuje form::tato spekulace disam::přesto , že pouze nevýznamné procento zákazníků disam::používá služby těchto společností .
+257	cu-bojar	missA::na	Miroslav Čepický disam::přitahuje extra::pozornost potenciálních problémů : „ case::zákon umožňuje takové spekulace , nicméně jen zanedbatelné procento zákazníků form::využít služeb těchto firem .
+257	cu-tectomt		disam::Čepická disam::Miroslava disam::kreslí pozornost lex::k potenciálním problémům : „ extra::že zákon umožňuje form::tato spekulace extra::přesto , disam::že pouze nevýznamné procento zákazníků používá služby těchto společností .
+257	cu-tectomt		form::Čepická form::Miroslava disam::kreslí extra::pozornost k potenciálním problémům : „ extra::že zákon umožňuje form::tato spekulace disam::přesto , že pouze nevýznamné procento zákazníků disam::používá služby těchto společností .
 257	google		Miroslav Čepický upozorňuje na potenciální problémy : „ Zákon umožňuje tyto spekulace , nicméně pouze nevýznamné procento klientů využívá služeb těchto společností .
 257	google		Miroslav Čepický upozorňuje na potenciální problémy : „ Zákon umožňuje tyto spekulace , nicméně pouze nevýznamné procento klientů využívá služeb těchto společností .
 257	pctrans		Miroslav Čepický form::upozorní na potenciální problémy : “ zákon umožňuje takové spekulování , nicméně jen form::bezvýznamný procento zákazníků užívá služby těchto společností .
 257	pctrans		Miroslav Čepický form::upozorní na potenciální problémy : “ case::zákon umožňuje takové spekulování , nicméně jen form::bezvýznamný procento zákazníků užívá form::služby těchto společností .
 2469	cu-bojar	missA::se missA::bylo	„ italský disam::podnik vyvinul v iracionální , “ poznamenává Paolo opl::form::Anec Protti , prezident , „ je užitečné , že nové stavby lex::stojí , ale je také disam::důležité , aby přežití stávajících zaručeno , protože disam::kdysi divadlo ve městě zavře , ne form::všechny jeho form::hostů form::může být disam::sklon k převodu do form::multiplexes .
-2469	cu-bojar	missA::se missA::bylo missA::jedno	case::„ italský disam::podnik vyvinul extra::v form::iracionální , “ poznamenává Paolo ows::form::Anec Protti , prezident , „ je užitečné , že nové stavby lex::stojí , ale je také důležité , aby přežití stávajících ows::zaručeno , protože disam::kdysi divadlo ve městě zavře , ne form::všechny jeho form::hostů form::může disam::být sklon k disam::převodu do unk::multiplexes .
+2469	cu-bojar	missA::se missA::bylo missA::jedno	„ case::italský disam::podnik vyvinul extra::v form::iracionální , “ poznamenává Paolo ows::form::Anec Protti , prezident , „ je užitečné , že nové stavby lex::stojí , ale je také důležité , aby přežití stávajících ows::zaručeno , protože disam::kdysi divadlo ve městě zavře , ne form::všechny jeho form::hostů form::může disam::být sklon k disam::převodu do unk::multiplexes .
 2469	cu-tectomt	missA::se missA::že missA::jsou missA::ve missA::ne	« extra::unk::The , italský disam::obchod vyvinul punct::, extra::že form::neracionelní extra::unk::way » disam::pozoruje Paola Protti punct::prezident Anec punct::“ užitečné nové struktury opl::je form::postaveno , ale to je také disam::základní , že přežití form::existující extra::nikoho lex::není zaručeno , protože extra::se disam::jednou divadlo form::město form::zavírá , všichni jeho patroni form::nemohou být disam::skloněni punct::, extra::aby převedli do multiplexů .
-2469	cu-tectomt	missA::se missC::je missA::,_že missC::je missA::jedno	punct::tok::« The , italský disam::obchod vyvinul , extra::že form::neracionelní extra::way » disam::pozoruje Paola Protti prezident form::Anec “ užitečné nové struktury form::je form::postaveno , ale extra::to je také disam::základní , že přežití form::existující lex::nikoho extra::není zaručeno , protože se disam::jednou divadlo form::město zavírá , všichni jeho form::patroni nemohou být disam::skloněni , extra::aby disam::převedli do multiplexů .
+2469	cu-tectomt	missA::se missC::je missA::,_že missC::je missA::jedno	punct::« tok::The , italský disam::obchod vyvinul , extra::že form::neracionelní extra::way » disam::pozoruje Paola Protti prezident form::Anec “ užitečné nové struktury form::je form::postaveno , ale extra::to je také disam::základní , že přežití form::existující lex::nikoho extra::není zaručeno , protože se disam::jednou divadlo form::město zavírá , všichni jeho form::patroni nemohou být disam::skloněni , extra::aby disam::převedli do multiplexů .
 2469	google	missC::nakloněni	« Italská disam::obchodní vyvinula extra::v iracionálním způsobem , „ poznamenává Paolo Protti , ANEC form::ows::prezidenta , “ je extra::to užitečné , že nové disam::struktury jsou postaveny , ale je také důležité , že přežití těch stávajících form::je zaručeno , lex::že jednou form::divadla ve městě form::uzavírá , extra::že ne všechny svůj disam::patronát může být disam::převod do multikin .
 2469	google	missA::se missA::jedno missC::ochotni_k	« Italská disam::obchodní vyvinula extra::v iracionálním způsobem , „ poznamenává Paolo Protti , ANEC ows::form::prezidenta , “ je extra::to užitečné , že nové struktury jsou form::postaveny , ale je také důležité , že přežití těch stávajících je zaručeno , lex::že disam::jednou form::divadla ve městě form::uzavírá , extra::že ne form::všechny svůj disam::patronát form::může být disam::převod do multikin .
 2469	pctrans	missA::se	« The italský disam::obchod vyvinul v nerozumný unk::way » disam::sleduje Paolo Protti , form::Anec - extra::ovo prezident , „ extra::to je užitečné extra::ty nové disam::struktury jsou form::postavené ale extra::to je také disam::základní , že disam::pozůstatek extra::po form::existující extra::jeden je form::zaručený , protože disam::jednou extra::za divadlo ve městě form::zavírá , ne form::všechno jeho form::patrony mohou být form::nakloněný k disam::přemístit do unk::multiplexer .
-2469	pctrans	missA::se missA::,_že missA::jedno	tok::« The italský disam::obchod vyvinul extra::v form::nerozumný extra::way » disam::sleduje Paolo Protti , ows::form::Anec - extra::ovo prezident , extra::„ to je užitečné extra::ty nové struktury jsou form::postavené punct::ale extra::to je také disam::základní , že disam::pozůstatek extra::po form::existující ows::disam::jeden je form::zaručený , protože disam::jednou extra::za divadlo ve městě form::zavírá , ne form::všechno jeho disam::patrony mohou být form::nakloněný k form::přemístit do unk::multiplexer .
+2469	pctrans	missA::se missA::,_že missA::jedno	« tok::The italský disam::obchod vyvinul extra::v form::nerozumný extra::way » disam::sleduje Paolo Protti , ows::form::Anec - extra::ovo prezident , „ extra::to je užitečné extra::ty nové struktury jsou form::postavené punct::ale extra::to je také disam::základní , že disam::pozůstatek extra::po form::existující ows::disam::jeden je form::zaručený , protože disam::jednou extra::za divadlo ve městě form::zavírá , ne form::všechno jeho disam::patrony mohou být form::nakloněný k form::přemístit do unk::multiplexer .
 2486	cu-bojar	missC::ndranghety	Existuje však mnoho místních politiků , kteří form::odolali tlaku extra::na extra::podle extra::let extra::nato , form::hrdinové , kteří zůstávají form::čisté “ .
 2486	cu-bojar		Existuje však mnoho místních politiků , kteří odolali tlaku extra::na extra::podle extra::let lex::nato , form::hrdinové , kteří zůstávají form::čisté “ .
 2486	cu-tectomt		disam::ows::Jakkoli je mnoho místních politiků , disam::kdo vzdorují tlaku extra::nasadit ' form::ndrangheta hrdinů punct::, kdo zůstává čistý . “
@@ -134,8 +134,8 @@
 1376	google	missA::tímto	Šla do Paříže lex::za form::kampaň Mango extra::je disam::zavěšené na podporu nové pobočky punct::, a form::prezentace extra::z nejvýznamnějších ocenění pro lex::módní sponzorované španělského módního form::domu .
 1376	pctrans	missC::na_kterou missC::že	Ona lex::šla do Paříže lex::pro disam::volební Mango extra::je disam::drží extra::si form::podporovat novou disam::větev , a form::prezentace nejdůležitějších cen lex::pro módu sponzorovanou španělským domem form::módami .
 1376	pctrans	missA::tímto	extra::Ona šla do Paříže lex::pro disam::volební Mango extra::je disam::drží extra::si form::podporovat novou disam::větev , a form::prezentace nejdůležitějších cen pro módu sponzorovanou španělským domem form::ows::módami .
-887	cu-bojar	missC::vyhození missC::podle	Ale později se extra::to disam::začalo form::právníků form::nebyla form::hodnocena extra::stejně lex::špatně než mnozí jejich kolegové , lex::které mnozí pozorovatelé soudí , že punct::unk::„ sackings byl politicky - lex::motivy .
-887	cu-bojar	missA::že missC::vyhození	Ale později se extra::to lex::začalo form::právníků form::nebyla form::hodnocena disam::stejně form::špatně než mnozí jejich kolegové , extra::které mnozí pozorovatelé soudí , že unk::„ sackings byl politicky punct::- lex::motivy .
+887	cu-bojar	missC::vyhození missC::podle	Ale později se extra::to disam::začalo form::právníků form::nebyla form::hodnocena extra::stejně lex::špatně než mnozí jejich kolegové , lex::které mnozí pozorovatelé soudí , že punct::„ unk::sackings byl politicky - lex::motivy .
+887	cu-bojar	missA::že missC::vyhození	Ale později se extra::to lex::začalo form::právníků form::nebyla form::hodnocena disam::stejně form::špatně než mnozí jejich kolegové , extra::které mnozí pozorovatelé soudí , že „ unk::sackings byl politicky punct::- lex::motivy .
 887	cu-tectomt	missC::než missA::k	Ale později se lex::objevilo , že form::vyhodit form::advokátů nebyli ohodnoceni form::jakákoli hůř mnoho lex::svých kolegů , disam::že extra::se form::vedou extra::ke mnoho pozorovatelů disam::uzavírání , že disam::drancování byla unk::politically - motivated .
 887	cu-tectomt	missA::než	Ale později se lex::objevilo , že lex::vyhodit form::advokátů nebyli ohodnoceni form::jakákoli hůř mnoho lex::svých kolegů , disam::že extra::se form::vedou owl::ke mnoho pozorovatelů disam::uzavírání , že disam::drancování byla unk::politically - motivated .
 887	google		Ale později se ukázalo , že extra::se advokáti lex::ows::padáka form::nebyla form::hodnocené extra::víc špatně , než mnozí z form::jeho kolegů , což vede mnohé pozorovatele k závěru , že unk::sackings byl politicky - motivovaný .
@@ -182,13 +182,13 @@
 1362	google		Nakonec , to není nic víc než typické unk::T - shirt pro muže , s form::bavlnou lex::interiér , disam::hustá a extra::tvar bez rukávů .
 1362	pctrans	missC::z	Nakonec punct::, toto neg::je nic víc než typické tričko pro lidi , extra::s extra::interiérem bavlny , form::těsný a bez rukávů extra::tvar .
 1362	pctrans	missA::z	Nakonec , toto lex::je nic víc než typické tričko pro disam::lidi , s lex::interiérem bavlny , form::těsný a bez rukávů extra::tvar .
-2253	cu-bojar	missC::sdílené	case::punct::„ přirozeně , “ rozhořčeně punct::„ dost owl::bylo disam::owl::vyvýšené , upřímně extra::se před tragédií , že vzhledem ke své velikosti , vyvolalo extra::to pobouření ve sdělovacích prostředcích a zapojení veřejnosti , ale každodenní form::reality disam::navrhuje form::dramatických form::případů , jejichž dynamika form::jsou disam::i opakující se “ .
+2253	cu-bojar	missC::sdílené	punct::„ case::přirozeně , “ rozhořčeně punct::„ dost owl::bylo disam::owl::vyvýšené , upřímně extra::se před tragédií , že vzhledem ke své velikosti , vyvolalo extra::to pobouření ve sdělovacích prostředcích a zapojení veřejnosti , ale každodenní form::reality disam::navrhuje form::dramatických form::případů , jejichž dynamika form::jsou disam::i opakující se “ .
 2253	cu-bojar	missC::sdílené missA::které	punct::„ přirozeně , “ rozhořčeně punct::„ dost bylo disam::vyvýšené , upřímně extra::se disam::před form::tragédií , extra::že vzhledem ke své velikosti punct::, form::vyvolalo extra::to pobouření ve sdělovacích prostředcích a zapojení veřejnosti , ale každodenní form::reality disam::navrhuje dramatických případů , jejichž dynamika jsou i opakující se “ .
 2253	cu-tectomt	missC::bylo_vzneseno	punct::„ Přirozeně rozhorlené punct::‘ dost punct::' extra::byl disam::extra::zvýšena punct::, extra::že upřímně sdílí lex::před form::tragédiemi , důvod jejich velikosti provokuje lex::křik médii a zapojení veřejného stanoviska , ale každodenní form::reality , že dramatické případy extra::jehož owl::dynamiky jsou dokonce opakované . “
 2253	cu-tectomt	missC::nabízí	„ Přirozeně rozhorlené ‘ dost ' form::byl disam::zvýšena , extra::že upřímně form::sdílí disam::před tragédiemi , extra::důvod form::jejich form::velikosti provokuje křik médii a zapojení form::veřejného extra::stanoviska , ale každodenní form::reality , extra::že dramatické případy form::jehož form::dynamiky form::jsou dokonce form::opakované . “
 2253	google		„ Samozřejmě , že extra::jeden form::rozhořčený ' dost ' form::byl disam::vzkříšen , upřímně form::sdílené před tragédií , že vzhledem ke své velikosti , vyvolají pobouření ze strany médií a zapojení veřejnosti , ale každodenní form::realitou disam::navrhuje dramatické případy , jejichž dynamika je i opakující se punct::“ .
 2253	google	missA::které	„ Samozřejmě , že extra::jeden form::rozhořčený ' dost ' form::byl form::disam::vzkříšen , upřímně sdílené disam::před form::tragédií , extra::že vzhledem ke své velikosti , vyvolají pobouření ze strany médií a zapojení veřejnosti , ale každodenní form::realitou navrhuje dramatické případy , jejichž dynamika je i opakující se “ .
-2253	pctrans	missC::mezi_sdělovacími	case::„ přirozeně , form::rozhořčený punct::dost extra::' form::byl disam::owl::zvednutý , upřímně form::sdílený před tragédiemi že , kvůli jejich velikosti , lex::provokovat poprask prostředky a zahrnutí veřejného punct::mínění ale každodenní realita disam::navrhuje dramatické případy , form::jehož dynamiky jsou dokonce opakované “ .
+2253	pctrans	missC::mezi_sdělovacími	„ case::přirozeně , form::rozhořčený punct::dost ' form::byl disam::owl::zvednutý , upřímně form::sdílený před tragédiemi že , kvůli jejich velikosti , lex::provokovat poprask prostředky a zahrnutí veřejného punct::mínění ale každodenní realita disam::navrhuje dramatické případy , form::jehož dynamiky jsou dokonce opakované “ .
 2253	pctrans	missA::které missA::v	„ přirozeně , form::rozhořčený dost ' form::byl disam::zvednutý , upřímně form::sdílený disam::před tragédiemi extra::že , kvůli jejich velikosti punct::, form::provokovat poprask disam::prostředky a zahrnutí veřejného mínění ale každodenní realita navrhuje dramatické případy , form::jehož dynamiky jsou dokonce opakované “ .
 928	cu-bojar		Seth punct::Donlin lex::Preservation lex::bydlení punct::, owl::mluvčí řekl , že to form::byl skutečně extra::ve form::městě form::chtějí form::prodávat extra::na ulici a poznamenal , že ows::form::agentura posláním je rozvíjet disam::vlastnosti než disam::zvládnout .
 928	cu-bojar	missA::ho	Seth Donlin Preservation bydlení , owl::mluvčí řekl , že extra::to extra::byl skutečně ve městě form::chtějí form::prodávat extra::na ulici a poznamenal , že form::ows::agentura posláním je rozvíjet disam::vlastnosti než disam::zvládnout .
@@ -230,11 +230,11 @@
 1493	google		owl::unk::Somniloquy Jakmile se objeví , pokuste se zachovat klid .
 1493	pctrans	missC::Jakmile	Jednou mluvení ze spaní owl::se lex::jeví , form::zkusit disam::mírnit se .
 1493	pctrans		disam::Jednou ops::mluvení ze spaní se disam::jeví , form::zkusit mírnit ows::se .
-713	cu-bojar	missC::driblingu missC::důrazně_řekl	case::„ potřebujeme více form::styl a více extra::mu , punct::' Jol . . .
-713	cu-bojar	missC::driblingu missC::důrazně missC::řekl	case::„ potřebujeme více disam::styl a více extra::mu , punct::' Jol . . .
-713	cu-tectomt		garbled::‚ , aby potřebovali více stylu a více chodby ‘ jola požadovala .
+713	cu-bojar	missC::driblingu missC::důrazně_řekl	„ case::potřebujeme více form::styl a více extra::mu , punct::' Jol . . .
+713	cu-bojar	missC::driblingu missC::důrazně missC::řekl	„ case::potřebujeme více disam::styl a více extra::mu , punct::' Jol . . .
+713	cu-tectomt		‚ , aby potřebovali více stylu a více chodby ‘ jola požadovala .
 713	cu-tectomt		‚ punct::, extra::aby case::form::potřebovali více stylu a více lex::chodby ‘ disam::jola ows::disam::form::požadovala .
-713	google		„ Potřebujeme více stylu i form::dribling extra::více , punct::ows::' Jol požadoval .
+713	google		„ Potřebujeme více stylu i form::dribling extra::více , punct::' ows::Jol požadoval .
 713	google		„ Potřebujeme více stylu i ows::form::dribling více , ' Jol ows::disam::požadoval .
 713	pctrans		' my potřebujeme disam::větší form::styl a více driblování , ' ows::Jol požadoval .
 713	pctrans		' case::my potřebujeme lex::větší styl a více driblování , ' Jol ows::disam::požadoval .
@@ -264,8 +264,8 @@
 2068	pctrans		V prvním kole punct::, form::opl::polovina disam::množství je plánovaný extra::být disam::strávený .
 2334	cu-bojar		Největší rozpor v americké žurnalistice lex::se dnes mezi těmi , kdo form::spravovat extra::ve zpravodajském lex::sále - to je lex::režiséři - a lex::novináři , kteří pracují pro ně .
 2334	cu-bojar	missA::je	Největší disam::rozpor v americké disam::žurnalistice extra::se dnes mezi těmi , kdo disam::form::spravovat extra::ve zpravodajském sále - to je disam::režiséři - a novináři , kteří pracují ops::pro ně .
-2334	cu-tectomt	missC::mezi	Největší trhlina v americké žurnalistice ows::dnes form::jsou punct::, těch , kdo spravují form::redakce punct::, - punct::, extra::že to form::je form::ředitel - a extra::od reportéři , lex::kdo pracují pro ně .
-2334	cu-tectomt	missA::mezi	Největší disam::trhlina v americké disam::žurnalistice dnes form::jsou punct::, form::těch , kdo spravují redakce , - punct::, extra::že to je form::ředitel - a extra::od form::reportéři , kdo pracují ops::pro ně .
+2334	cu-tectomt	missC::mezi	Největší trhlina v americké žurnalistice ows::dnes form::jsou punct::, těch , kdo spravují form::redakce punct::, punct::- , extra::že to form::je form::ředitel - a extra::od reportéři , lex::kdo pracují pro ně .
+2334	cu-tectomt	missA::mezi	Největší disam::trhlina v americké disam::žurnalistice dnes form::jsou punct::, form::těch , kdo spravují redakce , punct::- , extra::že to je form::ředitel - a extra::od form::reportéři , kdo pracují ops::pro ně .
 2334	google		Největší trhlina v form::americké form::žurnalistiky je v dnešní době mezi těmi , kteří spravují form::redakcích - to je disam::režiséři - a form::reportéři , kteří pro ně pracují .
 2334	google		Největší disam::trhlina v americké disam::form::žurnalistiky je v dnešní době mezi těmi , kteří disam::spravují form::redakcích - to je form::disam::režiséři - a form::reportéři , kteří pro ně pracují .
 2334	pctrans		Největší rozpor v americkém novinářství v nynější době je mezi form::extra::ti punct::, i kdo form::řídilo redakce - to je ředitelé - a zpravodajové punct::lex::kdo pracuje pro ně .
@@ -360,10 +360,10 @@
 150	pctrans		Mobil trh v disam::Czechia je docela pokročilý a místní operátoři nabízejí prakticky disam::přesto služby jak jejich partneři v západní Evropě .
 2073	cu-bojar	missC::času missC::ráno	Na písemné form::formě form::balíček byl publikován v osm večer punct::, v ows::neděli ve disam::Washingtonu , disam::v otevírací form::době na asijských form::trzích ( form::v 2 ve střední form::Evropu ) , ale to disam::nebyla disam::příčina disam::mnohem disam::rostoucí na burzovním trhu .
 2073	cu-bojar	missC::času	lex::Na písemné formě balíček byl publikován v osm večer , owl::v neděli ve form::Washingtonu , v otevírací době na asijských trzích ( v 2 ve střední form::Evropu ) , ale to disam::nebyla příčina disam::mnohem form::rostoucí na burzovním trhu .
-2073	cu-tectomt	missC::ráno	Písemný disam::formulář balíčku byl publikován disam::na 8 disam::odpoledne na nedělním washingtonském form::čase na disam::punct::( čas disam::otevření asijských trhů punct::disam::na 2 extra::madam v unk::Central - Europe ) , ale form::nezpůsobilo disam::moc disam::vzrůst na trhu akcie ows::form::výměny .
+2073	cu-tectomt	missC::ráno	Písemný disam::formulář balíčku byl publikován disam::na 8 disam::odpoledne na nedělním washingtonském form::čase na punct::( disam::čas disam::otevření asijských trhů punct::disam::na 2 extra::madam v unk::Central - Europe ) , ale form::nezpůsobilo disam::moc disam::vzrůst na trhu akcie ows::form::výměny .
 2073	cu-tectomt		Písemný disam::formulář balíčku byl publikován disam::na 8 odpoledne na form::nedělním washingtonském form::čase extra::na ( čas otevření asijských trhů na 2 lex::madam v unk::Central - Europe ) , ale nezpůsobilo moc vzrůst na trhu form::akcie disam::výměny .
 2073	google	missC::večer	V písemné form::formě balíčku byla zveřejněna v 8 hodin v neděli , form::case::Washington punct::form::čas disam::na disam::otevírací extra::doby na asijské form::trhy ( disam::na 2 tok::hod . - ve střední Evropě ) , ale form::nezpůsobilo disam::mnoho form::roste na burze .
-2073	google	missC::večer	V písemné form::formě balíčku byla zveřejněna v 8 hodin v neděli punct::, form::Washington punct::čas disam::na otevírací doby na asijské form::trhy ( na 2 hod . punct::- ve střední Evropě ) , ale nezpůsobilo mnoho disam::roste na burze .
+2073	google	missC::večer	V písemné form::formě balíčku byla zveřejněna v 8 hodin v neděli punct::, form::Washington punct::čas disam::na otevírací doby na asijské form::trhy ( na 2 hod punct::. - ve střední Evropě ) , ale nezpůsobilo mnoho disam::roste na burze .
 2073	pctrans		Psaná forma balíku form::byl publikovaná v 8 disam::odpoledni v neděli , form::case::Washington čas , disam::při disam::otevření disam::času asijských trhů ( form::v 2 ráno form::v case::Střední Evropě ) ale to nezpůsobilo disam::moc disam::stoupání na disam::akcii extra::devizovém trhu .
 2073	pctrans		Psaná forma balíku form::byl publikovaná v 8 form::odpoledni v neděli , form::Washington čas , při otevření form::času asijských trhů ( v 2 ráno v Střední Evropě ) ale to nezpůsobilo moc stoupání na form::akcii devizovém trhu .
 683	cu-bojar	missC::o_polovinu	Sazby form::domácí form::německé letů se snížil i průzkum punct::, ows::říká .
@@ -414,12 +414,12 @@
 1189	google	missA::němž	Román disam::soupravy na místě form::autora disam::nezná a vypráví o dosud neznámý form::předmět . Navzdory tomu punct::, Mario Vargas Llosa se form::potýkáme s novým projektem , extra::je ows::na disam::pracovní , form::román , jehož protagonista , Roger Casemant , je irský nacionalista , který strávil dvacet let svého života v Kongu a disam::zkříženými unk::Amazon .
 1189	pctrans	missA::ktere missC::na_kterém	Román disam::sady v místě autor disam::neví ows::ještě a vypravuje o neznámém disam::předmětu . Navzdory form::toto , Mario Vargas Llosa extra::je zápolí s novým projektem extra::on pracuje extra::v , román punct::jehož protagonista , Roger Casemant , je irský disam::vlastenec punct::disam::kdo strávil dvacet let extra::jeho života v Kongu a form::zkřížený Amazon .
 1189	pctrans	missA::na_kterém	Román disam::sady v místě form::autor disam::neví ows::ještě a vypravuje o neznámém předmětu . Navzdory form::toto punct::, Mario Vargas Llosa extra::je zápolí s novým projektem extra::on pracuje extra::v , punct::form::román jehož protagonista , Roger Casemant , je irský punct::vlastenec form::kdo strávil dvacet let form::jeho života v Kongu a disam::zkřížený unk::Amazon .
-466	cu-bojar		Dopis od jeho představenstva , tedy disam::hlasy disam::manifest form::touha po form::„ komplexní form::řešení punct::.
-466	cu-bojar		Dopis od jeho představenstva , tedy form::hlasy manifest form::touha po form::„ komplexní řešení punct::.
+466	cu-bojar		Dopis od jeho představenstva , tedy disam::hlasy disam::manifest form::touha po „ form::komplexní form::řešení punct::.
+466	cu-bojar		Dopis od jeho představenstva , tedy form::hlasy manifest form::touha po „ form::komplexní řešení punct::.
 466	cu-tectomt		disam::Písmeno ze své form::rady ředitelů proto lex::slyší zjevnou touhu po ‚ komplexním disam::roztoku ‘ .
-466	cu-tectomt		disam::Písmeno disam::ze své rady ředitelů proto disam::slyší zjevnou touhu po punct::‚ komplexním disam::roztoku ‘ punct::.
-466	google		V dopise z unk::Pfiedstavenstvo form::ows::jeho , proto disam::hlasy disam::manifestu touhu po form::„ komplexní řešení ' punct::.
-466	google		V dopise disam::z case::lex::Pfiedstavenstvo ows::jeho , proto disam::hlasy form::manifestu form::touhu po form::„ komplexní řešení ' punct::.
+466	cu-tectomt		disam::Písmeno disam::ze své rady ředitelů proto disam::slyší zjevnou touhu po punct::‚ komplexním disam::roztoku punct::‘ .
+466	google		V dopise z unk::Pfiedstavenstvo form::ows::jeho , proto disam::hlasy disam::manifestu touhu po „ form::komplexní řešení punct::' .
+466	google		V dopise disam::z case::lex::Pfiedstavenstvo ows::jeho , proto disam::hlasy form::manifestu form::touhu po „ form::komplexní řešení punct::' .
 466	pctrans		Dopis od jeho form::správních form::rad , disam::podle toho , vyjadřuje očividnou touhu po ' komplexní solution  '
 466	pctrans		Dopis od jeho správních form::rad , podle toho , vyjadřuje očividnou touhu po punct::' komplexní unk::solution  punct::'
 2122	cu-bojar		Podle Kinga Göncz punct::, existuje dobrá šance , že americko - form::maďarské form::dohody o vízové form::výjimky disam::projeví kolem 12 . ledna , řekl ministr zahraničí v Chicagu extra::a disam::držel extra::řeč před vůdci místních Maďarů .
@@ -447,21 +447,21 @@
 681	pctrans		V Německu , sazby klesly ještě víc ostře než v dalších form::Evropských zemích .
 681	pctrans		V Německu punct::, sazby klesly ještě víc disam::ostře než v dalších case::Evropských zemích .
 1574	cu-bojar		„ form::bylo by chybou extra::je podceňovat ji .
-1574	cu-bojar		case::„ bylo by chybou extra::je podceňovat ji .
-1574	cu-tectomt		punct::ows::„ By to byla chyba podceňovat ji .
+1574	cu-bojar		„ case::bylo by chybou extra::je podceňovat ji .
+1574	cu-tectomt		punct::„ ows::By to byla chyba podceňovat ji .
 1574	cu-tectomt		„ By to byla chyba podceňovat ji .
 1574	google		„ Bylo by chybou ji podcenit .
 1574	google		„ Bylo by chybou ji podcenit .
 1574	pctrans		„ to by form::bylo chyba extra::k extra::tomu , extra::aby form::podceňovala form::ows::jí .
-1574	pctrans		case::„ to by form::bylo chyba extra::k extra::tomu , extra::aby form::podceňovala form::jí .
+1574	pctrans		„ case::to by form::bylo chyba extra::k extra::tomu , extra::aby form::podceňovala form::jí .
 1639	cu-bojar		„ jinými slovy , to znamená , že 12 milionů form::krevní form::produkty form::budou distribuovány lex::do form::někoho punct::, extra::kdo je form::nakažených Hiv .
-1639	cu-bojar	missC::než	case::„ jinými slovy , to znamená , že 12 milionů form::krevní form::produkty form::budou form::distribuovány lex::do form::někoho punct::, extra::kdo form::je form::nakažených case::Hiv .
+1639	cu-bojar	missC::než	„ case::jinými slovy , to znamená , že 12 milionů form::krevní form::produkty form::budou form::distribuovány lex::do form::někoho punct::, extra::kdo form::je form::nakažených case::Hiv .
 1639	cu-tectomt		„ V jiných slovech toto disam::myslí , že ows::form::produkty ows::12 miliónů ows::form::krev budou distribuovány extra::být , než někdo je nakažen HIV .
-1639	cu-tectomt		extra::„ V form::jiných form::punct::slovech toto lex::myslí , že form::owl::produkty 12 miliónů disam::form::krev form::budou distribuovány extra::být , než někdo form::je nakažen HIV .
+1639	cu-tectomt		„ extra::V form::jiných form::punct::slovech toto lex::myslí , že form::owl::produkty 12 miliónů disam::form::krev form::budou distribuovány extra::být , než někdo form::je nakažen HIV .
 1639	google		„ Jinými slovy to znamená , že 12 milionů krevních produktů bude distribuována lex::do někdo je form::nakaženo extra::virem HIV .
 1639	google		„ Jinými punct::slovy to znamená , že 12 milionů krevních produktů bude form::punct::distribuována disam::do někdo form::je form::nakaženo virem HIV .
 1639	pctrans		„ jinými slovy , toto znamená , že 12 milion krevních produktů bude form::distribuovaný předtím , než někdo je form::nakažený HIV .
-1639	pctrans		case::„ jinými slovy , toto znamená , že 12 form::milion krevních produktů bude form::distribuovaný předtím , než někdo form::je nakažený HIV .
+1639	pctrans		„ case::jinými slovy , toto znamená , že 12 form::milion krevních produktů bude form::distribuovaný předtím , než někdo form::je nakažený HIV .
 1954	cu-bojar		Jeho cílem je upozornit na form::chronickou jaterní zánět form::způsobují viry , příčiny jeho form::vznik a význam disam::předčasné disam::uznání .
 1954	cu-bojar		Jeho cílem je upozornit na form::chronickou ows::jaterní zánět disam::způsobují viry , příčiny jeho form::vznik a význam disam::form::předčasné disam::uznání .
 1954	cu-tectomt	missC::na	disam::Toho disam::míří , aby disam::zavolalo form::pozornosti form::chronického ows::form::jaterního form::zánětu form::způsobující viry , form::příčinami form::své indukce a form::významem brzkého disam::uznání .
@@ -479,13 +479,13 @@
 1255	pctrans		Ona byla form::buddhistická a vegetarián , a disam::bránil důvod k disam::likvidaci korzetu protože to disam::předešlo form::ženy extra::z disam::posunu volně .
 1255	pctrans	missA::se	extra::Ona byla disam::buddhistická a form::vegetarián punct::, a disam::form::bránil důvod k likvidaci punct::korzetu protože extra::to disam::form::předešlo form::ženy extra::z disam::posunu volně .
 1561	cu-bojar	missC::předán	„ pokud extra::se projekt je skutečně mrtev ( . . . ) pak disam::přenosu bude rychle Fedu ( americká centrální banka ) a form::další form::centrální form::banky k řešení krize , disam::které by dále disam::posílit úvěrové podmínky , “ předpověděl Brian Bethune , hlavní ekonom Global Insight .
-1561	cu-bojar	missC::předána	case::„ pokud extra::se ows::projekt je skutečně mrtev ( . . . punct::) pak disam::form::přenosu bude rychle Fedu ( americká centrální banka ) a další centrální form::banky k řešení krize , disam::které by disam::dále form::posílit úvěrové podmínky , “ předpověděl Brian Bethune , hlavní ekonom Global Insight .
+1561	cu-bojar	missC::předána	„ case::pokud extra::se ows::projekt je skutečně mrtev punct::( . . . ) pak disam::form::přenosu bude rychle Fedu ( americká centrální banka ) a další centrální form::banky k řešení krize , disam::které by disam::dále form::posílit úvěrové podmínky , “ předpověděl Brian Bethune , hlavní ekonom Global Insight .
 1561	cu-tectomt		„ opl::Centrální bankovní projektu ( účinně mrtvé . . . pak disam::relé je rychle být projít Fedu ) unk::e unk::U unk::S a jiné centrální banky spravovat krizi , disam::která by dále form::utáhla úvěrové podmínky “ form::předpověděly Brian punct::Bethune form::hlavního form::ekonoma na lex::globální lex::postřeh .
-1561	cu-tectomt		garbled::„ Centrální bankovní projektu ( účinně mrtvé . . . pak relé je rychle být projít Fedu ) e U S a jiné centrální banky spravovat krizi , která by dále utáhla úvěrové podmínky “ předpověděly Brian Bethune hlavního ekonoma na globální postřeh .
+1561	cu-tectomt		„ garbled::Centrální bankovní projektu ( účinně mrtvé . . . pak relé je rychle být projít Fedu ) e U S a jiné centrální banky spravovat krizi , která by dále utáhla úvěrové podmínky “ předpověděly Brian Bethune hlavního ekonoma na globální postřeh .
 1561	google		„ Pokud projekt je skutečně form::mrtvá ( . . . ) pak disam::relé bude rychle disam::přešla na Fed ( tj . form::americké form::centrální form::banky ) a ostatní centrální banky k disam::řízení krize , disam::která by form::další disam::zpřísnění form::úvěrových form::podmínek “ , předpověděl Brian Bethune , hlavní ekonom Global Insight .
-1561	google		„ Pokud ows::projekt je skutečně form::mrtvá ( . . . punct::) pak disam::relé bude rychle disam::form::přešla extra::na form::Fed ( tj . americké centrální banky ) a ostatní centrální form::banky k disam::řízení form::krize , disam::která by disam::další lex::zpřísnění úvěrových form::podmínek “ , předpověděl Brian Bethune , hlavní ekonom Global Insight .
+1561	google		„ Pokud ows::projekt je skutečně form::mrtvá punct::( . . . ) pak disam::relé bude rychle disam::form::přešla extra::na form::Fed ( tj . americké centrální banky ) a ostatní centrální form::banky k disam::řízení form::krize , disam::která by disam::další lex::zpřísnění úvěrových form::podmínek “ , předpověděl Brian Bethune , hlavní ekonom Global Insight .
 1561	pctrans		„ jestli projekt je disam::účinný mrtvý ( . . . ) pak disam::přenos bude rychle form::prošel do disam::krmení ( i . e . unk::U . S . disam::ústřední banka ) a další disam::ústřední banky k tomu , aby řídily punct::krizi disam::která dále by form::utáhla disam::kredit lex::stavy “ , form::předpovězený Brian Bethune , hlavní ekonom v Global form::Insightu .
-1561	pctrans		case::„ jestli ows::projekt je lex::účinný mrtvý ( . . . punct::) pak disam::přenos bude rychle disam::prošel extra::do disam::krmení unk::( i . e . unk::U . S . ústřední banka ) a další ústřední form::banky k tomu , aby disam::řídily punct::krizi disam::která ows::disam::dále by disam::form::utáhla disam::kredit disam::stavy “ , form::předpovězený Brian Bethune , hlavní ekonom v Global Insightu .
+1561	pctrans		„ case::jestli ows::projekt je lex::účinný mrtvý punct::( . . . ) pak disam::přenos bude rychle disam::prošel extra::do disam::krmení ( unk::i . e . unk::U . S . ústřední banka ) a další ústřední form::banky k tomu , aby disam::řídily punct::krizi disam::která ows::disam::dále by disam::form::utáhla disam::kredit disam::stavy “ , form::předpovězený Brian Bethune , hlavní ekonom v Global Insightu .
 921	cu-bojar		Ale výbor preferuje to , disam::že ulice ows::města zůstaly v ruce , a extra::tak požádal o nový plán , který má být předložen příští měsíc , řekla form::Zuzana Stetzer , form::okresního form::ředitele ows::disam::společenství punct::, rada 3 .
 921	cu-bojar		Ale výbor preferuje to , disam::že ulice města zůstaly v form::ruce , a tak požádal o nový plán , který má být předložen příští měsíc , disam::opl::řekla disam::Zuzana Stetzer , form::okresního disam::form::ředitele ows::společenství punct::, case::form::rada 3 .
 921	cu-tectomt		Ale výbor preferuje , disam::že ulice form::zůstává v rukou města a extra::že extra::se disam::zeptalo o nový plán extra::být form::ows::předložen další měsíc , řekla Susan punct::Stetzer správce oblasti Rady disam::společenství 3 .
@@ -551,13 +551,13 @@
 2518	pctrans		Zelený Power , na druhé straně , již produkuje energii pro obchodní centrum a parkoviště používání šesti turbín pod vodou v New Yorkském Orientu River .
 2518	pctrans		lex::Zelený Power , na druhé straně , již produkuje energii pro obchodní centrum a parkoviště form::používání šesti turbín lex::pod lex::vodou v New Yorkském lex::Orientu River .
 1699	cu-bojar		„ to je tradiční názor , že všechny vlády si zopakoval .
-1699	cu-bojar		case::„ to je tradiční názor , disam::že všechny vlády extra::si form::zopakoval .
+1699	cu-bojar		„ case::to je tradiční názor , disam::že všechny vlády extra::si form::zopakoval .
 1699	cu-tectomt		„ Toto je tradiční pozice , že se všechny vlády opakovaly .
 1699	cu-tectomt		„ Toto je tradiční disam::pozice , disam::že extra::se všechny vlády opakovaly .
 1699	google		“ To je tradiční názor , že všechny vlády zopakoval .
 1699	google		“ To je tradiční názor , disam::že všechny vlády form::zopakoval .
 1699	pctrans		„ toto je tradiční pozice že všechny vlády znovu opakovaly .
-1699	pctrans		case::„ toto je tradiční disam::punct::pozice disam::že všechny vlády znovu opakovaly .
+1699	pctrans		„ case::toto je tradiční disam::punct::pozice disam::že všechny vlády znovu opakovaly .
 2449	cu-bojar		Podle SUNIA ops::zvláštní intervence , je nezbytné , aby prostřednictvím form::revizi form::daně , ceny by mohly být disam::vychladl .
 2449	cu-bojar		Podle SUNIA zvláštní intervence punct::, je nezbytné , aby prostřednictvím form::revizi form::daně , ceny by mohly být form::disam::vychladl .
 2449	cu-bojar		Podle SUNIA zvláštní intervence , je nezbytné , aby prostřednictvím revizi daně , ceny by mohly být vychladl .
@@ -643,17 +643,17 @@
 2516	pctrans		Elektřina je form::poslaná disam::do břehu skrz kabely pod vodou .
 2516	pctrans		Elektřina je poslaná do břehu skrz kabely pod vodou .
 1843	cu-bojar	missC::považoval, missC::ne	Francouzské form::filmaře Bertrand Tavernier extra::s disam::ním , bez humoru , „ jako disam::životní výzvu “ form::underplaying „ disam::posuzování jeho výkony příliš disam::podporován .
-1843	cu-bojar	missC::považoval missC::ne	Francouzské form::filmaře Bertrand Tavernier s form::ním , bez humoru , „ jako životní výzvu “ underplaying form::„ posuzování jeho výkony příliš form::podporován .
-1843	cu-bojar	missA::že missA::ve	Francouzské form::filmaře Bertrand Tavernier s ním , bez humoru , „ jako životní výzvu “ underplaying punct::lex::„ posuzování form::jeho form::výkony příliš lex::podporován .
+1843	cu-bojar	missC::považoval missC::ne	Francouzské form::filmaře Bertrand Tavernier s form::ním , bez humoru , „ jako životní výzvu “ underplaying „ form::posuzování jeho výkony příliš form::podporován .
+1843	cu-bojar	missA::že missA::ve	Francouzské form::filmaře Bertrand Tavernier s ním , bez humoru , „ jako životní výzvu “ underplaying punct::„ lex::posuzování form::jeho form::výkony příliš lex::podporován .
 1843	cu-tectomt	missC::ho	Francouzský filmař Bertrand Tavernier považoval ne bez humoru „ za disam::obývák výzvu „ lex::důležitý „ extra::že soudí disam::své výkony disam::také disam::podpůrné .
-1843	cu-tectomt		Francouzský filmař Bertrand Tavernier form::považoval ne bez humoru „ za lex::obývák výzvu lex::„ důležitý extra::„ že form::soudí disam::své výkony disam::také disam::podpůrné .
-1843	cu-tectomt	missC::ho	Francouzský filmař Bertrand Tavernier punct::považoval ne bez punct::humoru „ za lex::obývák výzvu lex::punct::„ důležitý ows::punct::„ že form::soudí form::své form::výkony disam::také lex::podpůrné .
+1843	cu-tectomt		Francouzský filmař Bertrand Tavernier form::považoval ne bez humoru „ za lex::obývák výzvu „ lex::důležitý „ extra::že form::soudí disam::své výkony disam::také disam::podpůrné .
+1843	cu-tectomt	missC::ho	Francouzský filmař Bertrand Tavernier punct::považoval ne bez punct::humoru „ za lex::obývák výzvu punct::„ lex::důležitý punct::„ ows::že form::soudí form::své form::výkony disam::také lex::podpůrné .
 1843	google	missA::podle	form::Francouzské režisér Bertrand Tavernier form::považována extra::za disam::ním , a ne bez humoru , „ jako živou form::výzvou “ form::underplaying „ soudě jeho výkony příliš disam::podporován .
 1843	google		Francouzské režisér Bertrand Tavernier form::považována extra::za ním , a ne bez humoru , „ jako živou výzvou “ underplaying „ soudě jeho form::výkony příliš form::podporován .
 1843	google	missA::že missA::ve	form::Francouzské lex::režisér Bertrand Tavernier považována za ním , a ne bez humoru , „ jako živou výzvou “ underplaying punct::„ soudě form::jeho form::výkony příliš lex::podporován .
 1843	pctrans		Francouzský filmař Bertrand Tavernier disam::zvažoval ows::ho , disam::ne bez humoru , „ jak žijící form::výzva na “ lex::podhodí „ disam::souzení jeho výkony příliš disam::podporované .
-1843	pctrans		Francouzský filmař Bertrand Tavernier disam::zvažoval ho , ne bez humoru , „ form::jak žijící form::výzva na lex::“ podhodí form::„ souzení jeho form::výkony příliš podporované .
-1843	pctrans	missA::že missA::ve	Francouzský filmař Bertrand Tavernier lex::zvažoval ows::ho , ne bez humoru , lex::„ jak žijící form::výzva extra::na lex::“ podhodí punct::form::„ souzení form::jeho form::výkony příliš lex::podporované .
+1843	pctrans		Francouzský filmař Bertrand Tavernier disam::zvažoval ho , ne bez humoru , „ form::jak žijící form::výzva na “ lex::podhodí „ form::souzení jeho form::výkony příliš podporované .
+1843	pctrans	missA::že missA::ve	Francouzský filmař Bertrand Tavernier lex::zvažoval ows::ho , ne bez humoru , „ lex::jak žijící form::výzva extra::na “ lex::podhodí punct::„ form::souzení form::jeho form::výkony příliš lex::podporované .
 1129	cu-bojar	missC::between missC::věří missC::to	Více než 90 hrobů byly těžce form::poškodil na hřbitově v form::Traun nedaleko form::Linec , nějaký čas extra::v pátek v form::noci a ráno extra::na form::ows::policii , že byla organizovaná akce .
 1129	cu-bojar	missC::dnes missC::věří,	Více než 90 hrobů form::byly těžce form::poškodil na hřbitově v Traun nedaleko Linec , nějaký čas disam::v pátek v noci a punct::ráno na form::policii , že byla organizovaná akce .
 1129	cu-bojar	missA::mezi missC::dnešním missC::věří missA::to	Více než 90 hrobů form::byly těžce form::poškodil na hřbitově v form::Traun nedaleko form::Linec , opl::lex::nějaký čas extra::v form::pátek v noci a form::ráno extra::na form::policii , že byla organizovaná akce .
@@ -679,8 +679,8 @@
 2417	pctrans		Zajímavý jsou nějaké funkce form::charakteristický pro nějaké disam::jednotky jako form::ten , form::které disam::počítají se form::snížením velikosti PowerPoint prezentací , užitečný například pro poslání form::nich přes email , nebo možnost disam::dovážení PDF lex::nastoupí do grafické jednotky , disam::údržby disam::originálního disam::objevení se stránky .
 2417	pctrans	missA::při	Zajímavý jsou nějaké funkce form::charakteristický pro form::nějaké lex::jednotky jako form::ten , které lex::počítají extra::se snížením velikosti PowerPoint prezentací , form::užitečný například pro poslání form::ows::nich přes email , nebo možnost lex::dovážení PDF extra::nastoupí do grafické jednotky , form::údržby originálního lex::objevení extra::se stránky .
 1786	cu-bojar	missC::vyšlo missC::pojištěny	Je možné , že se z této slepé uličky od chvíle , kdy demokraté dohodli , že některé „ disam::jedovatý “ akcie podniků v nesnázích form::je pouze u vlády , než aby disam::nakupovali .
-1786	cu-bojar	missC::dostali missC::pojištěné, missA::je	Je lex::možné , že se z této slepé uličky od chvíle , kdy demokraté disam::dohodli , že některé disam::„ jedovatý “ akcie podniků v nesnázích form::je pouze u vlády , než aby nakupovali .
-1786	cu-bojar	missC::našlo missC::východisko missA::za missC::ručit missC::je	Je možné , že se z této slepé uličky od chvíle , kdy demokraté lex::dohodli , že některé form::„ jedovatý “ akcie podniků v nesnázích form::je ows::pouze extra::u form::vlády , než aby form::nakupovali .
+1786	cu-bojar	missC::dostali missC::pojištěné, missA::je	Je lex::možné , že se z této slepé uličky od chvíle , kdy demokraté disam::dohodli , že některé „ disam::jedovatý “ akcie podniků v nesnázích form::je pouze u vlády , než aby nakupovali .
+1786	cu-bojar	missC::našlo missC::východisko missA::za missC::ručit missC::je	Je možné , že se z této slepé uličky od chvíle , kdy demokraté lex::dohodli , že některé „ form::jedovatý “ akcie podniků v nesnázích form::je ows::pouze extra::u form::vlády , než aby form::nakupovali .
 1786	cu-tectomt		Je věřeno , že extra::musí form::jít z této uličky disam::někdy , extra::že demokraté souhlasili , že určité „ toxické “ akcie společností disam::obtíží ows::pouze jsou pojištěny vládou , disam::že form::zakoupí .
 1786	cu-tectomt	missC::od_doby,_kdy missA::než, missA::je	Je form::věřeno , že disam::musí form::disam::jít z této uličky lex::někdy punct::, extra::že demokraté souhlasili , že určité „ toxické “ akcie společností form::obtíží pouze ows::jsou pojištěny vládou , že zakoupí .
 1786	cu-tectomt	missA::se missC::vyjít missA::od missC::chvíle, missA::v missA::nikoli	extra::Je form::věřeno , že musí jít z této uličky někdy , lex::že demokraté souhlasili , že určité „ toxické “ akcie společností form::obtíží ows::pouze jsou pojištěny vládou , lex::že form::zakoupí .
@@ -704,16 +704,16 @@
 2206	pctrans		Podle zklamaného form::Merkela punct::, selhání CSU ops::nebude ops::mít záporný dopad na koaliční vládu v Berlíně .
 1519	cu-bojar		disam::Komise slíbila přijmout „ disam::s konstruktivní form::duch “ a form::doufají , že „ dorazí s praktickými návrhy “ .
 1519	cu-bojar		disam::Komise slíbila přijmout „ s form::konstruktivní duch “ a doufají , že „ dorazí s praktickými návrhy “ .
-1519	cu-bojar	missC::ho	lex::Komise form::slíbila přijmout lex::„ s konstruktivní form::duch “ a doufají , že „ dorazí s praktickými návrhy “ .
+1519	cu-bojar	missC::ho	lex::Komise form::slíbila přijmout „ lex::s konstruktivní form::duch “ a doufají , že „ dorazí s praktickými návrhy “ .
 1519	cu-tectomt		disam::Druhá form::sliboval , že se přijme „ s konstruktivním duchem “ a doufají , že „ dorazí s praktickými návrhy . “
 1519	cu-tectomt		disam::Druhá form::sliboval , že se přijme „ s form::konstruktivním duchem “ a doufají , že „ dorazí s praktickými návrhy . “
-1519	cu-tectomt		lex::Druhá form::sliboval , že se přijme lex::„ s konstruktivním duchem “ a doufají , že „ dorazí s praktickými návrhy . “
+1519	cu-tectomt		lex::Druhá form::sliboval , že se přijme „ lex::s konstruktivním duchem “ a doufají , že „ dorazí s praktickými návrhy . “
 1519	google		Ten si slíbili přijmout „ punct::, disam::s konstruktivním duchu “ a extra::oni doufají , že „ se disam::dostaneme s praktickými návrhy “ .
 1519	google		disam::Ten si form::slíbili punct::přijmout „ , form::s konstruktivním duchu “ a oni doufají , že „ se disam::dostaneme s praktickými návrhy “ .
-1519	google	missC::ho	lex::Ten si slíbili přijmout „ punct::, lex::s konstruktivním duchu “ a extra::oni doufají , že „ se lex::dostaneme s praktickými návrhy “ .
+1519	google	missC::ho	lex::Ten si slíbili přijmout punct::„ , lex::s konstruktivním duchu “ a extra::oni doufají , že „ se lex::dostaneme s praktickými návrhy “ .
 1519	pctrans	missA::že	Pozdější form::slíbil přijmout „ s konstruktivním duchem “ a form::oni doufají on „ disam::přijede s praktickými návrhy “ .
 1519	pctrans		disam::Pozdější form::slíbil form::přijmout „ s form::konstruktivním duchem “ a oni doufají extra::on „ form::přijede s praktickými návrhy “ .
-1519	pctrans	missC::ho missA::,že	Pozdější form::slíbil přijmout lex::„ s konstruktivním duchem “ a extra::oni doufají extra::on „ přijede s praktickými návrhy “ .
+1519	pctrans	missC::ho missA::,že	Pozdější form::slíbil přijmout „ lex::s konstruktivním duchem “ a extra::oni doufají extra::on „ přijede s praktickými návrhy “ .
 1081	cu-bojar		O pět let později , form::uznávaná form::Hurston životopis od Roberta E . Hemenway opětovného opl::disam::zavedení do disam::postele , aby americká lex::case::Canon .
 1081	cu-bojar	missC::přišel_do_polic missA::ji	O pět let později punct::, form::uznávaná form::Hurston životopis od Roberta E . form::Hemenway form::opětovného form::zavedení do lex::postele , owl::aby form::americká disam::Canon .
 1081	cu-bojar	missC::ji missC::znovu missC::zařadil missA::do	O pět let později , form::uznávaná form::Hurston životopis od Roberta E . form::Hemenway extra::opětovného opl::lex::zavedení opl::do opl::lex::postele , aby form::americká lex::Canon .
@@ -743,7 +743,7 @@
 106	pctrans	missA::, missA::se	extra::To je disam::dost aby ows::plnilo ows::zařízení extra::s hudbou disam::používání USB z počítače .
 106	pctrans		extra::To extra::je lex::dost extra::aby form::plnilo zařízení extra::s hudbou form::používání USB z počítače .
 641	cu-bojar		„ to není form::žádné amnestie pro naši zemi .
-641	cu-bojar		case::„ to není form::žádné amnestie pro naši zemi .
+641	cu-bojar		„ case::to není form::žádné amnestie pro naši zemi .
 641	cu-tectomt		' toto není žádná amnestie pro naši zemi .
 641	cu-tectomt		' case::toto není žádná amnestie pro naši zemi .
 641	google		„ To není amnestie pro naši zemi .
@@ -775,13 +775,13 @@
 1808	pctrans		Mezitím , lex::napříč unk::Channel , britská vláda ops::zdá ops::se extra::právě znárodnit další lex::bankovní disam::úder finanční krizí .
 1808	pctrans		Mezitím , lex::napříč unk::Channel , britská vláda zdá se právě form::znárodnit další form::bankovní lex::úder finanční krizí .
 1057	cu-bojar	missA::že missC::vidí	„ lidé byli vždy form::rád , form::Zora , “ pan Franklin ows::řekl .
-1057	cu-bojar	missA::že missC::vidí	case::„ lidé byli vždy form::rád , form::Zora , “ pan Franklin ows::řekl .
+1057	cu-bojar	missA::že missC::vidí	„ case::lidé byli vždy form::rád , form::Zora , “ pan Franklin ows::řekl .
 1057	cu-tectomt		„ Lidé byli vždycky form::rád , že vidí Zoru , “ řekl unk::Mr form::Franklina .
 1057	cu-tectomt		„ Lidé byli vždycky form::rád , že vidí Zoru , “ řekl unk::Mr form::Franklina .
 1057	google	missA::že missC::vidí	„ Lidé byli vždy form::rád , form::Zora , “ řekl pan Franklin .
 1057	google	missA::že missC::vidí	„ Lidé byli vždy form::rád , form::Zora , “ řekl pan Franklin .
 1057	pctrans		„ lidi vždy byli form::rád , že form::vidět Zoru , “ pan Franklin ows::řekl .
-1057	pctrans		case::„ lidi vždy byli form::rád , že form::vidět Zoru , “ pan Franklin ows::řekl .
+1057	pctrans		„ case::lidi vždy byli form::rád , že form::vidět Zoru , “ pan Franklin ows::řekl .
 159	cu-bojar	missA::, missC::předstírají,	Mobilní operátoři , na druhé straně extra::je form::rád , že český trh je velmi konkurenční .
 159	cu-bojar		Mobilní operátoři punct::, na druhé straně lex::je form::ows::rád , že český trh je velmi konkurenční .
 159	cu-tectomt		disam::Subjektům lex::mobilu se na druhé straně líbí předstírat , že český trh je extrémně konkurenční .
@@ -813,7 +813,7 @@
 1683	google	missA::v missC::doplňovacích	Poté , co disam::generální disam::rada Liberální form::strana disam::hotova , Jean Charest včera navštívil Jean - Talon , Quebec unk::City , kde se nový ministr zdravotnictví , Yves form::bolduky ( vlevo ) se snaží disam::dostat form::zvoleni form::ve volbách form::do - dnes .
 1683	google	missA::v	Poté , co generální rada Liberální form::strana disam::hotova , Jean Charest včera navštívil Jean - Talon , Quebec City , kde se nový ministr zdravotnictví , Yves lex::bolduky ( vlevo ) extra::se snaží disam::dostat form::zvoleni ve volbách ows::form::do - dnes .
 1683	pctrans	missA::v	extra::Jednou disam::hlavní disam::obecní disam::úřad liberální strany lex::dokončené , Jean Charest včera navštívil Jean - disam::dráp , form::Quebec extra::City , kde nový ows::lex::zdravotní ministr punct::, Yves Bolduc ( disam::odešel ) zkouší disam::dostat form::zvolený v doplňovacích volbách owl::dnes .
-1683	pctrans	missA::v	disam::Jednou hlavní extra::obecní disam::úřad case::liberální strany owl::disam::dokončené , Jean Charest včera navštívil Jean - lex::dráp , Quebec City , kde nový form::ows::zdravotní ministr , Yves Bolduc disam::( odešel ) zkouší disam::dostat zvolený v doplňovacích volbách ows::form::dnes .
+1683	pctrans	missA::v	disam::Jednou hlavní extra::obecní disam::úřad case::liberální strany owl::disam::dokončené , Jean Charest včera navštívil Jean - lex::dráp , Quebec City , kde nový form::ows::zdravotní ministr , Yves Bolduc ( disam::odešel ) zkouší disam::dostat zvolený v doplňovacích volbách ows::form::dnes .
 1065	cu-bojar	missA::, missA::aby	Orange County ows::úředníci chtěli umístit pět form::pruhu dálnice přes město form::nahradit form::Kennedy unk::boulevard , disam::obce unk::puttering form::dva disam::pruhy extra::v hlavní ulici .
 1065	cu-bojar	missA::která missC::měla missA::se	Orange County ows::úředníci chtěli umístit form::pět form::pruhu form::dálnice přes punct::město nahradit Kennedy case::boulevard , ows::obce unk::puttering form::dva pruhy extra::v hlavní ows::ulici .
 1065	cu-tectomt		disam::Oranžové disam::okresní form::úředníky chtěli punct::, extra::aby disam::dali unk::five - lane dálnici do města , aby form::nahradilo form::Kennedy boulevard unk::two - lane hlavní ulici disam::společenství extra::nepatrného .
