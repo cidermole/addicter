@@ -22,7 +22,7 @@ my $fhyp = undef;
 while (<STDIN>) {
 	s/\n//g;
 	
-	if (/^([0-9]+\t[^ ]+\t)([^\t].*)$/) {
+	if (/^([0-9]+\t[^ \t]+\t)([^\t].*)$/) {
 		my $info = $1;
 		my $text = $2;
 		$text =~ s/\t/ /g;
