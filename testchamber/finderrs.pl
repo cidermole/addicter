@@ -43,7 +43,7 @@ while($tuple = io::readSentences($fhSrc, $fhRef, $fhHyp, $fhAli)) {
 
 counter::finish($cnt);
 
-io::closeMany($fhRef, $fhHyp);
+io::closeMany($fhSrc, $fhRef, $fhHyp, $fhAli);
 
 #####
 #

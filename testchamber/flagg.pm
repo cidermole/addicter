@@ -72,8 +72,11 @@ sub displayFlaggedMissingRef {
 		elsif ($pos eq "aux" or $pos eq "A") {
 			$auxFlag = "A";
 		}
+		elsif ($pos eq "punct" or $pos eq "P") {
+			$auxFlag = "P";
+		}
 		else {
-			$auxFlag = "X";
+			$auxFlag = "_";
 		}
 		
 		for my $i (1..$count) {

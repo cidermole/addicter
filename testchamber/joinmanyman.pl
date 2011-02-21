@@ -22,6 +22,13 @@ my $fhyp = undef;
 while (<STDIN>) {
 	s/\n//g;
 	
+	if (/^([0-9]+\t[^ ]+\t)([^\t].*)$/) {
+		my $info = $1;
+		my $text = $2;
+		$text =~ s/\t/ /g;
+		$_ = "$info\t$text";
+	}
+	
 	if (/^([0-9]+\t[^ ]+\t\t)(.*)$/) {
 		my $currId = $1;
 		my $snt = $2;

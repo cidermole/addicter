@@ -145,6 +145,8 @@ sub parseFlaggTokFlags {
 sub flagg {
 	my ($snt) = @_;
 	
+	$snt =~ s/\n//g;
+	
 	my $missHash = {};
 	my $hypErrList; #[ { 'factors' => [], 'flags' => [] } ]
 	
