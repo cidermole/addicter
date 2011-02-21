@@ -1,5 +1,6 @@
 package io;
 use strict;
+use const;
 
 #####
 #
@@ -145,6 +146,62 @@ sub tok2str4xml {
 	my ($token) = @_;
 	
 	return str4xml(join("|", @$token));
+}
+
+#####
+#
+#####
+sub displayFlagged {
+	my $flaggedHyp = shift;
+	
+	displayFlaggedMissingRef($flaggedHyp);
+	
+	displayFlaggedHyp($flaggedHyp);
+	
+	print "\n";
+}
+
+#####
+#
+#####
+sub displayFlaggedHyp {
+	my $flaggedHyp = shift;
+	
+	for my $hypWord (@{$flaggedHyp->{'hyp'}}) {
+		my $surfForm = $hypWord->{'factors'}->[0];
+		
+		for my $flag (@{$hypWord->{'flags'}}) {
+			print $flag . "::";
+		}
+		
+		print $surfForm . " ";
+	}
+}
+
+#####
+#
+#####
+sub displayFlaggedMissingRef {
+	my $flaggedHyp = shift;
+	
+	for my $missRefWord (@{$flaggedHyp->{'missed'}}) {
+		my @factors = split(/\|/, $missRefWord);
+		my $surfForm = $factors[0];
+		my $pos = $factors[1];
+		my $auxFlag;
+		
+		if ($pos eq "content" or $pos eq "C") {
+			$auxFlag = "C";
+		}
+		elsif ($pos eq "aux" or $pos eq "A") {
+			$auxFlag = "A";
+		}
+		else {
+			$auxFlag = "X";
+		}
+		
+		print "miss" . $auxFlag . "::" . $surfForm . " ";
+	}
 }
 
 1;

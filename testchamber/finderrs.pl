@@ -93,7 +93,7 @@ sub displayErrors {
 		sntFinish();
 	}
 	elsif ($outputFormat eq $const::FMT_FLAG) {
-		ordersim::displayFlagged($flaggedHyp);
+		io::displayFlagged($flaggedHyp);
 	}
 }
 
