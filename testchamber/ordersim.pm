@@ -55,8 +55,8 @@ sub display {
 					" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				push @{$flaggedHyp->{'hyp'}->[$idx1]->{'flags'}}, "ows";
-				push @{$flaggedHyp->{'hyp'}->[$idx2]->{'flags'}}, "ows";
+				$flaggedHyp->{'hyp'}->[$idx1]->{'flags'}->{'ows'} = 1;
+				$flaggedHyp->{'hyp'}->[$idx2]->{'flags'}->{'ows'} = 1;
 			}
 		}
 		else {
@@ -71,7 +71,7 @@ sub display {
 					(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				push @{$flaggedHyp->{'hyp'}->[$hypPos]->{'flags'}}, "owl";
+				$flaggedHyp->{'hyp'}->[$hypPos]->{'flags'}->{'owl'} = 1;
 			}
 		}
 	}

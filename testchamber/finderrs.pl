@@ -17,6 +17,8 @@ use parse;
 use counter;
 use ordersim;
 use const;
+use flagg;
+use math;
 
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
@@ -70,7 +72,7 @@ sub processInputArgsAndOpts {
 sub displayErrors {
 	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al, $outputFormat) = @_;
 	
-	my $flaggedHyp = parse::factoredToFlaggable($hypSnt);
+	my $flaggedHyp = flagg::convertFromFactored($hypSnt);
 	
 	if ($outputFormat eq $const::FMT_XML) {
 		sntStart($sntIdx);
@@ -93,7 +95,7 @@ sub displayErrors {
 		sntFinish();
 	}
 	elsif ($outputFormat eq $const::FMT_FLAG) {
-		io::displayFlagged($flaggedHyp);
+		flagg::display($flaggedHyp);
 	}
 }
 
@@ -114,15 +116,6 @@ sub hashAlignment {
 #####
 #
 #####
-sub max {
-	my ($a, $b) = @_;
-	
-	return ($a < $b)? $b: $a;
-}
-
-#####
-#
-#####
 sub displayMatchedUnequalTokens {
 	my ($refSnt, $hypSnt, $al, $outputFormat, $flaggedHyp) = @_;
 	
@@ -134,7 +127,7 @@ sub displayMatchedUnequalTokens {
 		
 		my @uneqFactors = ();
 		
-		my $maxidx = max($#$hypToken, $#$refToken);
+		my $maxidx = math::max($#$hypToken, $#$refToken);
 		for my $i (0..$maxidx) {
 			my $hypFact = io::getWordFactor($hypToken, $i);
 			my $refFact = io::getWordFactor($refToken, $i);
@@ -160,7 +153,7 @@ sub displayMatchedUnequalTokens {
 					"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				push @{$flaggedHyp->{'hyp'}->[$pair->{'hyp'}]->{'flags'}}, "form";
+				$flaggedHyp->{'hyp'}->[$pair->{'hyp'}]->{'flags'}->{'form'} = 1;
 			}
 		}
 	}
@@ -178,7 +171,6 @@ sub displayMissingRefTokens {
 	
 	for my $i (0..$#$refSnt) {
 		if (!$alHash->{$i}) {
-			#my $surfForm = io::str4xml($refSnt->[$i]->[0]);
 			my $surfForm = $refSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($refSnt->[$i]);
 			
@@ -194,9 +186,7 @@ sub displayMissingRefTokens {
 				print "/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				my $flag;
-				
-				push @{$flaggedHyp->{'missed'}}, $rawToken;
+				$flaggedHyp->{'missed'}->{$rawToken}++;
 			}
 		}
 	}
@@ -215,7 +205,6 @@ sub displayIncorrectHypTokens {
 	
 	for my $i (0..$#$hypSnt) {
 		if (!$alHash->{$i}) {
-			#my $surfForm = io::str4xml($hypSnt->[$i]->[0]);
 			my $surfForm = $hypSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($hypSnt->[$i]);
 			
@@ -232,9 +221,9 @@ sub displayIncorrectHypTokens {
 					"token=\"$rawToken\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				my $flag;
+				my $flag = (($srcHash->{$surfForm})? "untr": "extra");
 				
-				push @{$flaggedHyp->{'hyp'}->[$i]->{'flags'}}, (($srcHash->{$surfForm})? "untr": "extra");
+				$flaggedHyp->{'hyp'}->[$i]->{'flags'}->{$flag} = 1;
 			}
 		}
 	}
