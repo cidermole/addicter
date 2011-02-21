@@ -82,17 +82,19 @@ sub tokenizeFlagged {
 			my ($flags, $nextFlags, $nextSurfForm) = ($1, $3, $5);
 			
 			if ($cleanTok =~ /^[[:punct:]]+$/) {
-				my $newNextFlags = $flags;
-				
-				if ($flags =~ /punct::/) {
-					$newNextFlags =~ s/punct:://g;
-					$flags = "punct::";
+				if ($nextSurfForm) {
+					my $newNextFlags = $flags;
+					
+					if ($flags =~ /punct::/) {
+						$newNextFlags =~ s/punct:://g;
+						$flags = "punct::";
+					}
+					else {
+						$flags = "";
+					}
+					
+					$nextFlags .= $newNextFlags;
 				}
-				else {
-					$flags = "";
-				}
-				
-				$nextFlags .= $newNextFlags;
 			}
 			elsif ($flags =~ /punct::/ and $nextSurfForm =~ /^[[:punct:]]/) {
 				$flags =~ s/punct:://g;

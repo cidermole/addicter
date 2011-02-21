@@ -62,13 +62,13 @@
 1208	google	missC::minut	Deset lex::až extra::v form::šest hodin ráno .
 1208	pctrans		Deset lex::k šesti ráno .
 1208	pctrans	missC::minut	Deset k šesti ráno .
-1640	cu-bojar		Protože Héma - Quebec každoročně disam::rozděluje mezi 400000 až 500000 krevní produkty , bude trvat více než lex::dvacet let , než se případ přenosu viru HIV přes krevní produkty owl::objeví .
+1640	cu-bojar		Protože Héma tok::- Quebec každoročně disam::rozděluje mezi 400000 až 500000 krevní produkty , bude trvat více než lex::dvacet let , než se případ přenosu viru HIV přes krevní produkty owl::objeví .
 1640	cu-bojar	missC::čtyři	Protože Héma - Quebec každoročně rozděluje mezi 400000 až 500000 form::krevní produkty , bude trvat více než dvacet let , než se případ přenosu viru HIV přes krevní produkty owl::objeví .
 1640	cu-tectomt	missC::Protože missA::než	Héma - Quebec extra::to disam::všechno rok distribuuje 400 punct::, 000 lex::a punct::, 500 punct::, 000 krevní form::produkty extra::je , extra::že disam::vezme více 24 roků před případem HIV ows::přenosu punct::, extra::že lex::ke krevnímu produktu form::owl::dochází .
 1640	cu-tectomt	missA::než	Héma - Quebec lex::to lex::všechno rok distribuuje 400 , 000 disam::a , 500 , 000 form::krevní form::produkty extra::je , extra::že disam::vezme více 24 roků před případem HIV přenosu , že ke krevnímu produktu dochází .
 1640	google	missA::k	Vzhledem k tomu , že Héma - Quebec každý rok disam::rozděluje mezi 400000 a 500000 krevních produktů , ows::to bude trvat déle než 24 let , než form::případ přenosu HIV prostřednictvím form::krve disam::výrobku owl::form::dochází .
 1640	google		Vzhledem k tomu , že Héma - Quebec každý rok rozděluje mezi 400000 a 500000 form::krevních form::produktů , extra::to bude trvat déle než 24 let , než případ přenosu HIV prostřednictvím form::krve výrobku form::owl::dochází .
-1640	pctrans		lex::Od punct::Hema - Quebec každý rok distribuuje mezi 400000 a 500000 krevními produkty , extra::to disam::vezme víc než 24 let disam::před případem HIV ows::přenosu disam::skrz krevní produkt form::owl::nastanou .
+1640	pctrans		lex::Od punct::Hema tok::- Quebec každý rok distribuuje mezi 400000 a 500000 krevními produkty , extra::to disam::vezme víc než 24 let disam::před případem HIV ows::přenosu disam::skrz krevní produkt form::owl::nastanou .
 1640	pctrans		disam::Od Hema - Quebec každý rok distribuuje mezi 400000 a 500000 krevními produkty , extra::to disam::vezme víc než 24 let před případem HIV přenosu skrz krevní produkt nastanou .
 1955	cu-bojar		To bolelo méně , lex::že věříte v case::boha ?
 1955	cu-bojar		To form::bolelo méně , disam::že věříte v boha ?
@@ -223,7 +223,7 @@
 1082	pctrans	missA::když	Projekt hlavní silnice disam::přijela právě disam::tak form::owl::Eatonvilleovu form::nejslavnější form::dceru ještě jednou našla světlo reflektoru .
 1082	pctrans		Projekt hlavní silnice disam::přijela právě disam::tak Eatonvilleovu nejslavnější form::dceru disam::ještě jednou form::našla světlo reflektoru .
 960	cu-bojar	missC::Ponoření_do_angličtiny	punct::- extra::jak zdůrazňuje téměř výhradní používání angličtiny v obsahu výuky .
-960	cu-bojar	missC::Ponoření_do_angličtiny	- extra::jak zdůrazňuje téměř výhradní používání angličtiny v obsahu výuky .
+960	cu-bojar	missC::Ponoření_do_angličtiny	extra::- extra::jak zdůrazňuje téměř výhradní používání angličtiny v obsahu výuky .
 960	cu-bojar	missC::ponoření_do_angličtiny	- extra::jak zdůrazňuje téměř výhradní používání angličtiny v obsahu výuky .
 960	cu-tectomt		form::ows::Anglické ponoření zdůrazňuje unk::near - exclusive použití angličtiny ve lex::spokojeném disam::pokynu .
 960	cu-tectomt		disam::Anglické disam::ows::ponoření zdůrazňuje unk::near - exclusive použití angličtiny ve lex::spokojeném lex::pokynu .
@@ -428,8 +428,8 @@
 2470	cu-tectomt		form::neg::Zmínit o form::lex::chybět lex::přidělení disam::fondů form::v disam::laskavosti subjektů : extra::se předchozí debet form::státem neg::není přibližně 10 form::miliony euro .
 2470	google		Nemluvě o nezdařeném přidělování finančních prostředků ve prospěch provozovatelů : předchozí disam::inkasu ze strany státu je přibližně 10 milionů Euro .
 2470	google		Nemluvě o nezdařeném přidělování finančních prostředků ve prospěch provozovatelů : předchozí disam::inkasu ze strany státu je přibližně 10 milionů Euro .
-2470	pctrans		form::Nezmiňovat extra::se zmeškaná rozdělení ve prospěch operátorů : předchozí debet extra::stavem / form::státem je přibližně 10 milionu form::Eura .
-2470	pctrans		form::Nezmiňovat extra::se disam::zmeškaná rozdělení ve prospěch operátorů : předchozí debet extra::stavem / form::státem je přibližně 10 form::milionu form::Eura .
+2470	pctrans		form::Nezmiňovat extra::se zmeškaná rozdělení ve prospěch operátorů : předchozí debet extra::stavem extra::/ form::státem je přibližně 10 milionu form::Eura .
+2470	pctrans		form::Nezmiňovat extra::se disam::zmeškaná rozdělení ve prospěch operátorů : předchozí debet extra::stavem extra::/ form::státem je přibližně 10 form::milionu form::Eura .
 1377	cu-bojar	missC::vás	Teplá a tichá , extra::ale unk::conquers extra::se docela rychle .
 1377	cu-bojar	missA::vás	Teplá a tichá , extra::ale unk::conquers extra::se docela rychle .
 1377	cu-tectomt		Teplá a bázlivá form::dobývá form::tebe docela rychle .
@@ -669,7 +669,7 @@
 922	google		„ Existuje jen velmi málo prostoru ve vlastnictví lex::města - levý , a my bychom rádi , kdyby extra::se město i nadále form::vlastní Extra Place , “ řekla .
 922	google		„ Existuje jen velmi málo prostoru ve vlastnictví extra::tok::města - levý , a my bychom rádi , kdyby extra::se město i nadále disam::vlastní Extra Place , “ řekla .
 922	pctrans		„ extra::tam je velmi disam::malé form::město - vlastněný prostor lex::levý , a chtěli bychom opl::město extra::k extra::tomu , aby lex::pokračovalo vlastnit Extra lex::Placi , “ extra::ona řekla .
-922	pctrans		„ extra::tam extra::je velmi form::malé tok::město - vlastněný form::prostor disam::owl::levý , a chtěli bychom owl::město extra::k extra::tomu , aby pokračovalo disam::vlastnit Extra form::Placi , “ ona řekla .
+922	pctrans		„ extra::tam extra::je velmi form::malé tok::město - vlastněný form::prostor disam::owl::levý , a chtěli bychom owl::město extra::k extra::tomu , aby pokračovalo disam::vlastnit Extra form::Placi , tok::“ ona řekla .
 416	cu-bojar	missC::by	Také form::ušetřit náklady , „ říká .
 416	cu-bojar	missA::se	Také form::ušetřit náklady , „ říká .
 416	cu-tectomt		Také by disam::uložilo náklady , “ říká .
@@ -710,7 +710,7 @@
 961	google	missA::s missA::o	Paní Mikels , form::kteří nesouhlasí bilingvní form::vzdělávání , mi form::řekl , „ jsme ows::měli extra::s obrovským form::úspěchem se form::student , který je zbrusu form::nové z Mexika , a budete form::chodit do form::třídě 12 měsíců později , a disam::nechtěli jste extra::být schopni rozeznat , který disam::jeden byl . “
 961	pctrans	missA::když	disam::Paní punct::. Mikels , form::kdo oponuje dvojjazyčnému vzdělání , form::řeklo mi , že , „ měli jsme ohromný úspěch s extra::mít punct::form::studenta form::kdo je zbrusu nový z Mexika a vy byste vstoupili do třídy 12 form::měsíce punct::později extra::a nebyli byste form::schopný extra::k extra::tomu , extra::aby punct::form::vybraly které disam::on byl . “
 961	pctrans	missA::o	Paní . Mikels , disam::kdo oponuje dvojjazyčnému vzdělání , řeklo ows::mi , že , „ měli jsme ohromný úspěch s extra::mít punct::studenta disam::kdo je zbrusu nový z Mexika a extra::vy form::byste vstoupili do třídy 12 form::měsíce později punct::a nebyli byste schopný k extra::tomu , aby form::vybraly form::které on byl . “
-1964	cu-bojar	missC::vstoupili	Výzkumníci očekávali , že disam::vidím form::obraz unk::Virgin unk::Mary - věřící ows::by do jakési náboženské form::rozpoložení . case::da form::Vinci extra::je obraz byl vybrán punct::, disam::protože jeho podobný styl a uklidňující disam::příroda .
+1964	cu-bojar	missC::vstoupili	Výzkumníci očekávali , že disam::vidím form::obraz unk::Virgin unk::Mary extra::- věřící ows::by do jakési náboženské form::rozpoložení . case::da form::Vinci extra::je obraz byl vybrán punct::, disam::protože jeho podobný styl a uklidňující disam::příroda .
 1964	cu-bojar	missC::vstoupili missC::má	Výzkumníci očekávali , že form::vidím obraz lex::Virgin lex::Mary - věřící by do form::jakési náboženské rozpoložení . case::da Vinci extra::je obraz byl vybrán , protože extra::jeho podobný styl a uklidňující disam::form::příroda .
 1964	cu-tectomt		Vědci očekávali , že by - disam::viz disam::obrázku unk::Virgin lex::Maru - věřící disam::zadal disam::řazení náboženského disam::státu mysli . Obraz extra::Toho Vinciho byl vybrán kvůli jeho podobnému stylu a uklidňující povaze .
 1964	cu-tectomt	missA::do	Vědci očekávali , že by - disam::viz obrázku lex::Virgin lex::Maru - věřící disam::zadal extra::řazení náboženského disam::státu mysli . Obraz disam::Toho Vinciho byl vybrán kvůli extra::jeho podobnému stylu a uklidňující povaze .
@@ -733,7 +733,7 @@
 258	google		Na disam::vrcholu se , extra::že musí souhlasit s tím , že se SIM kartou ve form::svém telefonu není form::registrován extra::pod jejich jméno , a tak nemohou využívat všech jeho funkcí , jako extra::je disam::pravidelné form::zákazníky mobilních operátorů owl::může . “
 258	google		Na disam::vrcholu se , extra::že musí souhlasit s tím , že extra::se SIM form::kartou ve form::svém telefonu není form::registrován pod jejich form::jméno , a tak nemohou využívat všech jeho funkcí , jako extra::je form::pravidelné form::zákazníky mobilních operátorů form::může . “
 258	pctrans		Ještě navíc , oni musí přijmout , že SIM karta v jejich telefonu není form::registrovaný pod jejich jménem , a tak extra::oni form::nemůže užívat ows::ty form::všechno rysy jako disam::pravidelní zákazníci form::mobilu form::operátoři owl::mohou . “
-258	pctrans		Ještě navíc , oni musí přijmout , že SIM karta v jejich telefonu není form::registrovaný pod jejich jménem , a tak oni form::nemůže užívat ty všechno disam::rysy jako pravidelní zákazníci form::mobilu operátoři mohou . “
+258	pctrans		Ještě navíc , oni musí přijmout tok::, že SIM karta v jejich telefonu není form::registrovaný pod jejich jménem , a tak oni form::nemůže užívat ty všechno disam::rysy jako pravidelní zákazníci form::mobilu operátoři mohou . “
 913	cu-bojar	missC::tam	disam::Neexistují žádné názvy ulic .
 913	cu-bojar	missC::cedule	Neexistují žádné názvy ulic .
 913	cu-tectomt	missC::tam	Nejsou žádné disam::znaky ulice .
