@@ -9,6 +9,7 @@ binmode(FL, ":utf8");
 open(TK, $tokenizedFile) or die("no tokenized");
 binmode(TK, ":utf8");
 binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
 
 my $currTokId = "blaaah";
 my $tkLine;
@@ -55,7 +56,7 @@ while (<FL>) {
 			die("Still `$tkToken' != `$flSurfForm', $currTokId");
 		}
 		
-		push @outputTokens, tokenizeFlagged($flToken, @{$tkLine->{'hyp'}}[$tkStartPos..$tkEndPos]);
+		push @outputTokens, tokenizeFlagged($flToken, $flLine->{'missed'}, @{$tkLine->{'hyp'}}[$tkStartPos..$tkEndPos]);
 		
 		#print "ok\n";
 	}
@@ -72,6 +73,7 @@ close(TK);
 sub tokenizeFlagged {
 	my $rawFlTok = shift;
 	$rawFlTok = clean($rawFlTok);
+	my $missList = shift;
 	my @cleanToks = @_;
 	my @result;
 	
@@ -79,28 +81,11 @@ sub tokenizeFlagged {
 		my $cleanTokForMatching = clean($cleanTok);
 		
 		if ($rawFlTok =~ /^(([A-Za-z]+::)*)\Q$cleanTokForMatching\E(([A-Za-z]+::)*)(.*)$/) {
-			my ($flags, $nextFlags, $nextSurfForm) = ($1, $3, $5);
+			my ($flags, $nextFlags, $nextToks) = ($1, $3, $5);
 			
-			if ($cleanTok =~ /^[[:punct:]]+$/) {
-				if ($nextSurfForm) {
-					my $newNextFlags = $flags;
-					
-					if ($flags =~ /punct::/) {
-						$newNextFlags =~ s/punct:://g;
-						$flags = "punct::";
-					}
-					else {
-						$flags = "";
-					}
-					
-					$nextFlags .= $newNextFlags;
-				}
-			}
-			elsif ($flags =~ /punct::/ and $nextSurfForm =~ /^[[:punct:]]/) {
-				$flags =~ s/punct:://g;
-				$nextFlags .= "punct::";
-			}
-			$rawFlTok = $nextFlags . $nextSurfForm;
+			redistributeFlags($cleanTok, $nextToks, $missList, \$flags, \$nextFlags);
+			
+			$rawFlTok = $nextFlags . $nextToks;
 			
 			push @result, "$flags$cleanTok";
 		}
@@ -110,6 +95,66 @@ sub tokenizeFlagged {
 	}
 	
 	return @result;
+}
+
+#####
+#
+#####
+sub shiftFlags {
+	my $flagsRef = shift;
+	my $nextFlagsRef = shift;
+	my $removeFromCurrent = shift;
+	my @flags = @_;
+	
+	if (scalar @flags > 0) {
+		my $flag = pop @flags;
+		
+		if ($$flagsRef =~ /($flag)::/ and $$nextFlagsRef !~ /($flag)::/) {
+			$$nextFlagsRef .= $flag . "::";
+			
+			if ($removeFromCurrent) {
+				$$flagsRef =~ s/($flag):://g;
+			}
+		}
+		
+		shiftFlags($flagsRef, $nextFlagsRef, $removeFromCurrent, @flags);
+	}
+}
+
+#####
+#
+#####
+sub redistributeFlags {
+	my ($cleanTok, $nextToks, $missList, $flagsRef, $nextFlagsRef) = @_;
+	
+	#tokenization is imposed in this script, so we lose the tag for tokenization errors
+	$$flagsRef =~ s/tok:://g;
+	
+	my $thisTokIsPunct = ($cleanTok =~ /^[[:punct:]]+$/);
+	my $nextTokIsEmpty = ($nextToks eq "");
+	my $nextTokIsPunct = ($nextToks =~ /^[[:punct:]]/);
+	
+	if ($nextTokIsEmpty) {
+		# punct::word means missing punctuation, shifting it into the missed token list;
+		# "missP::???" means unknown punctuation is missing
+		if (!$thisTokIsPunct and $$flagsRef =~ /punct::/) {
+			push @$missList, "missP::???";
+			$$flagsRef =~ s/punct:://g;
+		}
+	}
+	else {
+		#extra::XY actually means extra::X and extra::Y
+		shiftFlags($flagsRef, $nextFlagsRef, undef, "extra");
+	
+		if (!$thisTokIsPunct and $nextTokIsPunct) {
+			shiftFlags($flagsRef, $nextFlagsRef, 1, "punct");
+		}
+		elsif ($thisTokIsPunct and !$nextTokIsPunct) {
+			#shift everything except "punct::", "extra::" and "miss?::"
+			shiftFlags($flagsRef, $nextFlagsRef, 1,
+				"case", "form", "neg", "ows", "owl", "ops", "opl", "unk", "lex", "disam", "garbled", "idiom");
+		}
+	}
 }
 
 #####
