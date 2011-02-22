@@ -85,6 +85,54 @@ sub displayFlaggedMissingRef {
 	}
 }
 
+our $conflictRules = [
+	[qw(ows owl)],
+	[qw(ows opl)],
+	[qw(ows ops)],
+	[qw(owl opl)],
+	[qw(owl ops)],
+	[qw(ops opl)],
+	
+	[qw(neg form)],
+	[qw(lex form)],
+	[qw(extra form)],
+	[qw(unk form)],
+	[qw(disam form)],
+	
+	[qw(unk neg)],
+	[qw(extra neg)],
+	[qw(disam neg)],
+	[qw(lex neg)],
+	
+	[qw(unk disam)],
+	[qw(extra disam)],
+	[qw(lex disam)],
+	
+	[qw(unk lex)],
+	[qw(extra lex)],
+	
+	[qw(unk extra)],
+];
+
+#####
+#
+#####
+sub resolveFlagConflicts {
+	my ($fhyp) = @_;
+	
+	for my $fhypTok (@{$fhyp->{'hyp'}}) {
+		my $flagHash = $fhypTok->{'flags'};
+		
+		for my $conflictTuple (@$conflictRules) {
+			my ($winner, $loser) = @$conflictTuple;
+			
+			if ($flagHash->{$winner} and $flagHash->{$loser}) {
+				delete $flagHash->{$loser};
+			}
+		}
+	}
+}
+
 #####
 #
 #####
@@ -103,8 +151,10 @@ sub append {
 	}
 	
 	for my $i (0..($hypsize - 1)) {
+		my $destHypTok = $dest->{'hyp'}->[$i];
+		
 		for my $newFlag (keys %{$src->{'hyp'}->[$i]->{'flags'}}) {
-			$dest->{'hyp'}->[$i]->{'flags'}->{$newFlag} = 1;
+			$destHypTok->{'flags'}->{$newFlag} = 1;
 		}
 	}
 }

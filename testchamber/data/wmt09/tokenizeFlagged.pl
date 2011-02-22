@@ -143,9 +143,6 @@ sub redistributeFlags {
 		}
 	}
 	else {
-		#extra::XY actually means extra::X and extra::Y
-		shiftFlags($flagsRef, $nextFlagsRef, undef, "extra");
-	
 		if (!$thisTokIsPunct and $nextTokIsPunct) {
 			shiftFlags($flagsRef, $nextFlagsRef, 1, "punct");
 		}
@@ -154,6 +151,15 @@ sub redistributeFlags {
 			shiftFlags($flagsRef, $nextFlagsRef, 1,
 				"case", "form", "neg", "ows", "owl", "ops", "opl", "unk", "lex", "disam", "garbled", "idiom");
 		}
+		
+		if ($$nextFlagsRef !~ /punct::/) {
+			#extra::XY actually means extra::X and extra::Y
+			shiftFlags($flagsRef, $nextFlagsRef, undef, "extra");
+		}
+	}
+	
+	if ($thisTokIsPunct and $$flagsRef =~ /extra::/) {
+		$$flagsRef =~ s/extra::/punct::/g;
 	}
 }
 

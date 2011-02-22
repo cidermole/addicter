@@ -50,6 +50,8 @@ while (<STDIN>) {
 			$fhyp = flagg::clone($currfhyp);
 		}
 		
+		flagg::resolveFlagConflicts($fhyp);
+		
 		$prevId = $currId;
 	}
 	else {
