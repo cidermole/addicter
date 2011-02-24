@@ -25,6 +25,7 @@ while(<>)
     my @missing = split(/\s+/, $missing);
     my $n_miss_a = 0;
     my $n_miss_c = 0;
+    my $n_miss_p = 0;
     foreach my $token (@missing)
     {
         if($token =~ m/^missA::.*$/)
@@ -34,6 +35,10 @@ while(<>)
         elsif($token =~ m/^missC::.*$/)
         {
             $n_miss_c++;
+        }
+        elsif($token =~ m/^missP::.*$/)
+        {
+            $n_miss_p++;
         }
         else
         {
@@ -59,7 +64,7 @@ while(<>)
         push(@splitok, {'form' => $form, 'error' => $error});
     }
     # There may be more than one annotation (@missing + @splitok) per sentence and system.
-    push(@{$annot{$sid}{$sysid}}, {'missing' => \@missing, 'sentence' => \@splitok}, 'orig' => $_);
+    push(@{$annot{$sid}{$sysid}}, {'missing' => \@missing, 'sentence' => \@splitok, 'orig' => $_});
 }
 # Iterate over sentences and do the rest of summarization.
 foreach my $sid (sort {$a<=>$b} (keys(%annot)))
@@ -88,14 +93,27 @@ foreach my $sid (sort {$a<=>$b} (keys(%annot)))
         {
             foreach my $token (@{$a->[$i]{sentence}})
             {
-                $errstat{$token->{error}} += 1/$nanot;
+                # The annotators were allowed to flag more than one error per token.
+                # Sometimes the combinations may seem conflicting but we are not going to judge that now.
+                # Let's just distribute the occurrence uniformly among the errors flagged.
+                my @tokerrors = split(/::/, $token->{error});
+                my $ntokerrors = scalar(@tokerrors);
+                foreach my $error (@tokerrors)
+                {
+                    $errstat{$error} += 1/$nanot/$ntokerrors;
+                }
             }
         }
     }
 }
 # Print summary.
 print("SUMMARY OF ERRORS:\n");
-foreach my $error (sort(keys(%errstat)))
+# Order errors by descending frequency.
+@sortederrors = sort {$errstat{$b} <=> $errstat{$a}} (keys(%errstat));
+$total = 0;
+foreach my $error (@sortederrors)
 {
+    $total += $errstat{$error};
     print("$error\t$errstat{$error}\n");
 }
+print("TOTAL\t$total\n");
