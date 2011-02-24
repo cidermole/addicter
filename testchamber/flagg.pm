@@ -66,6 +66,10 @@ sub displayFlaggedMissingRef {
 		my $pos = $factors[1];
 		my $auxFlag;
 		
+		if ($surfForm =~ /^[[:punct:]]+$/) {
+			$pos = "P";
+		}
+		
 		if ($pos eq "content" or $pos eq "C") {
 			$auxFlag = "C";
 		}
@@ -74,6 +78,7 @@ sub displayFlaggedMissingRef {
 		}
 		elsif ($pos eq "punct" or $pos eq "P") {
 			$auxFlag = "P";
+			$surfForm = "???";
 		}
 		else {
 			$auxFlag = "_";
@@ -85,6 +90,10 @@ sub displayFlaggedMissingRef {
 	}
 }
 
+# every entry represents a tuple, consisting of a winner and a loser;
+# thus, if and only if a token has both flags, the loser is deleted
+# e.g. "ows" "owl" means that in case owl and ows are present, only
+# ows will be left
 our $conflictRules = [
 	[qw(ows owl)],
 	[qw(ows opl)],
@@ -93,16 +102,16 @@ our $conflictRules = [
 	[qw(owl ops)],
 	[qw(ops opl)],
 	
-	[qw(neg form)],
-	[qw(lex form)],
-	[qw(extra form)],
 	[qw(unk form)],
+	[qw(extra form)],
+	[qw(lex form)],
 	[qw(disam form)],
+	[qw(neg form)],
 	
 	[qw(unk neg)],
 	[qw(extra neg)],
-	[qw(disam neg)],
 	[qw(lex neg)],
+	[qw(disam neg)],
 	
 	[qw(unk disam)],
 	[qw(extra disam)],
@@ -118,15 +127,16 @@ our $conflictRules = [
 #
 #####
 sub resolveFlagConflicts {
-	my ($fhyp) = @_;
+	my ($fhypHyp) = @_;
 	
-	for my $fhypTok (@{$fhyp->{'hyp'}}) {
+	for my $fhypTok (@{$fhypHyp}) {
 		my $flagHash = $fhypTok->{'flags'};
 		
 		for my $conflictTuple (@$conflictRules) {
 			my ($winner, $loser) = @$conflictTuple;
 			
 			if ($flagHash->{$winner} and $flagHash->{$loser}) {
+				print STDERR "conflict: $winner kept, $loser deleted\n";
 				delete $flagHash->{$loser};
 			}
 		}

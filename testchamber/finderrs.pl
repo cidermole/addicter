@@ -153,7 +153,13 @@ sub displayMatchedUnequalTokens {
 					"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				$flaggedHyp->{'hyp'}->[$pair->{'hyp'}]->{'flags'}->{'form'} = 1;
+				my $hypWord = $flaggedHyp->{'hyp'}->[$pair->{'hyp'}];
+				my $surfForm = $hypWord->{'factors'}->[0];
+				my $pos = io::getWordFactor($hypWord->{'factors'}, 1);
+				
+				my $flag = ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "P" or $pos eq "punct")? "punct": "form";
+				
+				$hypWord->{'flags'}->{$flag} = 1;
 			}
 		}
 	}
@@ -221,7 +227,13 @@ sub displayIncorrectHypTokens {
 					"token=\"$rawToken\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				my $flag = (($srcHash->{$surfForm})? "untr": "extra");
+				my $flag = (($srcHash->{$surfForm})? "unk": "extra");
+				
+				my $pos = io::getWordFactor($hypSnt->[$i], 1);
+				
+				if ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "punct" or $pos eq "P") {
+					$flag = "punct";
+				}
 				
 				$flaggedHyp->{'hyp'}->[$i]->{'flags'}->{$flag} = 1;
 			}

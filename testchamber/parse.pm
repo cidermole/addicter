@@ -120,6 +120,9 @@ sub parseFlaggTokFlags {
 		my @flagList = split(/::/, $flagStr);
 		
 		for my $flag (@flagList) {
+			if ($flag eq "neg") {
+				$flag = "form";
+			}
 			$flags->{$flag} = 1;
 			
 			if ($flag =~ /^miss(.)$/) {

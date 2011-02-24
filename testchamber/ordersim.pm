@@ -2,6 +2,7 @@ package ordersim;
 use strict;
 use unscramble;
 use const;
+use io;
 
 #####
 #
@@ -55,8 +56,8 @@ sub display {
 					" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				$flaggedHyp->{'hyp'}->[$idx1]->{'flags'}->{'ows'} = 1;
-				$flaggedHyp->{'hyp'}->[$idx2]->{'flags'}->{'ows'} = 1;
+				setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx1], 'ows');
+				setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx2], 'ows');
 			}
 		}
 		else {
@@ -71,10 +72,24 @@ sub display {
 					(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
 			}
 			elsif ($outputFormat eq $const::FMT_FLAG) {
-				$flaggedHyp->{'hyp'}->[$hypPos]->{'flags'}->{'owl'} = 1;
+				setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$hypPos], 'owl');
 			}
 		}
 	}
+}
+
+#####
+#
+#####
+sub setMaybeOrderFlag {
+	my ($word, $flag) = @_;
+	
+	my $surfForm = $word->{'factors'}->[0];
+	my $pos = io::getWordFactor($word->{'factors'}, 1);
+	
+	my $truFlag = ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "punct" or $pos eq "P")? "punct": $flag;
+	
+	$word->{'flags'}->{$flag} = 1;
 }
 
 #####
