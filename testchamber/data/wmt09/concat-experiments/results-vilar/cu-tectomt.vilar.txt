@@ -1,8 +1,0 @@
-   1981 extra::
-    423 form::
-    646 missA::
-   1452 missC::
-    182 missP::
-    159 owl::
-    146 ows::
-    211 untr::
