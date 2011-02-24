@@ -138,12 +138,17 @@ sub singleRefMissStats {
 	my $weight = 0;
 	my $stats = {};
 	
+	my $totalRefMissLen = 0;
+	my $totalHypMissLen = 0;
+	
 	my $coveredHyp = {};
 	
 	for my $k (keys %$refMiss) {
 		my ($refForm, $refPos) = split(/\|/, $k);
 		my $refCount = $refMiss->{$k};
 		my $totalHypCount = 0;
+		
+		$totalRefMissLen += $refCount;
 		
 		my $refTag = "miss$refPos";
 		
@@ -176,6 +181,8 @@ sub singleRefMissStats {
 			}
 		}
 		
+		$totalHypMissLen += $totalHypCount;
+		
 		if ($totalHypCount < $refCount) {
 			$stats->{$refTag}->{""} += ($refCount - $totalHypCount);
 		}
@@ -184,9 +191,14 @@ sub singleRefMissStats {
 	for my $hk (keys %$hypMiss) {
 		unless ($coveredHyp->{$hk}) {
 			my ($hypForm, $hypPos) = split(/\|/, $hk);
-			$stats->{""}->{"miss$hypPos"} += $hypMiss->{$hk};
+			my $hypMissCount = $hypMiss->{$hk};
+			$stats->{""}->{"miss$hypPos"} += $hypMissCount;
+			$totalHypMissLen += $hypMissCount;
 		}
 	}
+	
+	#print "ref $totalRefMissLen, hyp $totalHypMissLen\n";
+	$stats->{""}->{""} = math::max(0, $refSize - math::max($totalRefMissLen, $totalHypMissLen));
 	
 	return ($stats, $weight);
 }
