@@ -23,28 +23,6 @@ while(<>)
     my $missing = shift(@fields); # list of tokens missing from the system output
     my $sentence = shift(@fields); # tokenized and annotated system output
     my @missing = split(/\s+/, $missing);
-    my $n_miss_a = 0;
-    my $n_miss_c = 0;
-    my $n_miss_p = 0;
-    foreach my $token (@missing)
-    {
-        if($token =~ m/^missA::.*$/)
-        {
-            $n_miss_a++;
-        }
-        elsif($token =~ m/^missC::.*$/)
-        {
-            $n_miss_c++;
-        }
-        elsif($token =~ m/^missP::.*$/)
-        {
-            $n_miss_p++;
-        }
-        else
-        {
-            print STDERR ("Unknown missing token '$token'\n");
-        }
-    }
     my @sentence = split(/\s+/, $sentence);
     my @splitok;
     foreach my $token (@sentence)
@@ -72,11 +50,43 @@ foreach my $sid (sort {$a<=>$b} (keys(%annot)))
     # Iterate over systems that translated the current sentence.
     foreach my $sysid (sort(keys(%{$annot{$sid}})))
     {
+        $systems{$sysid}++;
         # Shortcut to the list of annotations of this system output.
         my $a = $annot{$sid}{$sysid};
+        my $nanot = scalar(@{$a});
+        # Each annotation may have suggested different number of missing tokens of the respective classes A, C and P.
+        # For each of the missing classes, we will find the average number of missing tokens in that class, averaged over annotators.
+        # NOTE: We will not check whether two annotators, each proposing two missC tokens, actually proposed the SAME tokens.
+        for(my $i = 0; $i<$nanot; $i++)
+        {
+            my $na = 0;
+            my $nc = 0;
+            my $np = 0;
+            foreach my $misstoken (@{$a->[$i]{missing}})
+            {
+                if($misstoken =~ m/^missA::/)
+                {
+                    $na++;
+                }
+                elsif($misstoken =~ m/^missC::/)
+                {
+                    $nc++;
+                }
+                elsif($misstoken =~ m/^missP::/)
+                {
+                    $np++;
+                }
+                else
+                {
+                    die("Unknown missing token $misstoken.\n");
+                }
+            }
+            $misstat{missA}{$sysid} += $na/$nanot;
+            $misstat{missC}{$sysid} += $nc/$nanot;
+            $misstat{missP}{$sysid} += $np/$nanot;
+        }
         # All annotations relate to the same system output, so they ought to have the same number of tokens.
         my $ntok = scalar(@{$a->[0]{sentence}});
-        my $nanot = scalar(@{$a});
         for(my $i = 1; $i<$nanot; $i++)
         {
             my $ntok1 = scalar(@{$a->[$i]{sentence}});
@@ -100,20 +110,35 @@ foreach my $sid (sort {$a<=>$b} (keys(%annot)))
                 my $ntokerrors = scalar(@tokerrors);
                 foreach my $error (@tokerrors)
                 {
-                    $errstat{$error} += 1/$nanot/$ntokerrors;
+                    $errstat{$error}{$sysid} += 1/$nanot/$ntokerrors;
                 }
             }
         }
     }
 }
 # Print summary.
-print("SUMMARY OF ERRORS:\n");
-# Order errors by descending frequency.
-@sortederrors = sort {$errstat{$b} <=> $errstat{$a}} (keys(%errstat));
-$total = 0;
-foreach my $error (@sortederrors)
+foreach my $system (sort(keys(%systems)))
 {
-    $total += $errstat{$error};
-    print("$error\t$errstat{$error}\n");
+    print("SUMMARY OF ERRORS ($system, averaged over annotators):\n");
+    # Order errors by descending frequency.
+    my @sortederrors = sort {$errstat{$b}{$system} <=> $errstat{$a}{$system}} (keys(%errstat));
+    my $total = 0;
+    foreach my $error (@sortederrors)
+    {
+        $total += $errstat{$error}{$system};
+        print("$error\t$errstat{$error}{$system}\n");
+    }
+    print("TOTAL\t$total\n");
+    print('precision = ', $errstat{correct}{$system}/$total, "\n");
+    print("\n");
+    print("MISSING WORDS ($system, each category averaged over annotators)\n");
+    @sortederrors = sort {$misstat{$b}{$system} <=> $misstat{$a}{$system}} (keys(%misstat));
+    my $mtotal = 0;
+    foreach my $error (@sortederrors)
+    {
+        $mtotal += $misstat{$error}{$system};
+        print("$error\t$misstat{$error}{$system}\n");
+    }
+    print("TOTAL\t$mtotal\n");
+    print("\n");
 }
-print("TOTAL\t$total\n");
