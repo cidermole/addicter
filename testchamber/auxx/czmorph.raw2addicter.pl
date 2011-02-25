@@ -21,10 +21,10 @@ while (<STDIN>) {
 			$lemma = tryFixLemma($lemma, $fixCode);
 		}
 		
-		if ($tag =~ /^[ACDNVX]/) {
+		if ($tag =~ /^[acdnvx]/) {
 			$tag = "content";
 		}
-		elsif ($tag =~ /^Z/) {
+		elsif ($tag =~ /^z/) {
 			$tag = "punct";
 		}
 		else {
