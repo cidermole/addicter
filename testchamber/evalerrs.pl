@@ -58,8 +58,42 @@ updateStats($hypAnalysis, $refTrans, \@refAnalysisArr, $stats);
 
 for my $groupId ("lex", "order", "punct", "missed") {
 	logHash($stats, $groupId);
+	precRecHash($stats, $groupId);
 }
 
+#####
+#
+#####
+sub precRecHash {
+	my ($stats, $id) = @_;
+	
+	my $flags = $groups{$id};
+	
+	my ($precDenom, $recDenom);
+	
+	for my $k1 (undef, @$flags) {
+		for my $k2 (undef, @$flags) {
+			my $val = $stats->{$id}->{$k1}->{$k2};
+			
+			$precDenom->{$k2} += $val;
+			$recDenom->{$k1} += $val;
+		}
+	}
+	
+	print "\n";
+	
+	for my $k1 (undef, @$flags) {
+		my $dk1 = ($k1)? $k1: "(empty)";
+		
+		printf "%-8s: precision = %5.3f, recall = %5.3f\n", $dk1,
+			(($precDenom->{$k1})? $stats->{$id}->{$k1}->{$k1} / $precDenom->{$k1}: 0),
+			(($recDenom->{$k1})? $stats->{$id}->{$k1}->{$k1} / $recDenom->{$k1}: 0);
+	}
+}
+
+#####
+#
+#####
 sub logHash {
 	my ($stats, $id) = @_;
 	
@@ -72,20 +106,19 @@ sub logHash {
 	for my $flag (@$flags) {
 		printf "%8s", $flag;
 	}
-	printf "%15s\n", "total";
+	print "\n";
 	
 	for my $k1 (undef, @$flags) {
 		my $dk1 = ($k1)? $k1: "(empty)";
-		my $sum = 0;
 		
 		printf "%8s", $dk1;
 		
 		for my $k2 (undef, @$flags) {
 			my $val = (0 + $stats->{$id}->{$k2}->{$k1});
 			printf "%8s", $val;
-			$sum += $val;
 		}
-		printf "%15d\n", $sum;
+		
+		print "\n";
 	}
 }
 
