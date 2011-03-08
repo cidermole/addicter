@@ -1,0 +1,62 @@
+
+---=== Confusion matrix for lex errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)   disam     lex   extra     unk    form
+ (empty)    1926       1       2       7       0      16
+   disam       0       0       0       0       0       0
+     lex       0       0       0       0       0       0
+   extra     950     138      77     150       6     153
+     unk      54       0       3      10      19      14
+    form     437      45      31      19       5     213
+
+(empty) : precision = 0.987, recall = 0.572
+disam   : precision = 0.000, recall = 0.000
+lex     : precision = 0.000, recall = 0.000
+extra   : precision = 0.102, recall = 0.806
+unk     : precision = 0.190, recall = 0.633
+form    : precision = 0.284, recall = 0.538
+
+---=== Confusion matrix for order errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)     ows     owl     ops     opl
+ (empty)    4224      32      12       4       4
+     ows       0       0       0       0       0
+     owl       0       0       0       0       0
+     ops       0       0       0       0       0
+     opl       0       0       0       0       0
+
+(empty) : precision = 0.988, recall = 1.000
+ows     : precision = 0.000, recall = 0.000
+owl     : precision = 0.000, recall = 0.000
+ops     : precision = 0.000, recall = 0.000
+opl     : precision = 0.000, recall = 0.000
+
+---=== Confusion matrix for punct errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)   punct
+ (empty)    4079      13
+   punct     129      55
+
+(empty) : precision = 0.997, recall = 0.969
+punct   : precision = 0.299, recall = 0.809
+
+---=== Confusion matrix for missed errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)   missA   missP   missC
+ (empty)    2543      24       1      70
+   missA     472      20       0       8
+   missP     105       0       7       0
+   missC    1168       5       0      22
+
+(empty) : precision = 0.964, recall = 0.593
+missA   : precision = 0.040, recall = 0.408
+missP   : precision = 0.062, recall = 0.875
+missC   : precision = 0.018, recall = 0.220
