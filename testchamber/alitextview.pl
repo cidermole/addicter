@@ -5,10 +5,16 @@
 # Ondrej Bojar, bojar@ufal.mff.cuni.cz
 
 use strict;
+use Getopt::Long;
 
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
+
+my $hack_bad_ali = 0;
+GetOptions(
+  "hack-bad-alignments" => \$hack_bad_ali, # add extra words if needed
+) or exit 1;
 
 my $nr = 0;
 while (<>) {
@@ -21,8 +27,21 @@ while (<>) {
   my @ali = ();
   foreach my $pair (split(/ /, trim($alistr))) {
     my ($a, $b) = split /-/, $pair;
-    die "$nr:Bad alignment point $pair: out of source sent" if $a > $#src;
-    die "$nr:Bad alignment point $pair: out of target sent" if $b > $#tgt;
+    if ($hack_bad_ali) {
+      if ($a > $#src) {
+        my $needws = $a-$#src;
+        push @src, map { "HACK" } (1..$needws);
+        print STDERR "$nr:Hacking src sent to show bad alignment point $pair\n";
+      }
+      if ($b > $#tgt) {
+        my $needws = $b-$#tgt;
+        push @tgt, map { "HACK" } (1..$needws);
+        print STDERR "$nr:Hacking tgt sent to show bad alignment point $pair\n";
+      }
+    } else {
+      die "$nr:Bad alignment point $pair: out of source sent" if $a > $#src;
+      die "$nr:Bad alignment point $pair: out of target sent" if $b > $#tgt;
+    }
     $ali[$a][$b] = 1;
   }
   
