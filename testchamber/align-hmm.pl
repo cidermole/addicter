@@ -21,18 +21,26 @@ use counter;
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
-my ($reffile, $hypfile, $caseSensitive, $alFactor) =
+my ($reffile, $hypfile, $caseSensitive, $alFactor, $morePtsFile) =
 	processInputArgsAndOpts();
 
-my ($fhRef, $fhHyp) = io::openMany($reffile, $hypfile);
+my @files = ($reffile, $hypfile);
+
+if ($morePtsFile) {
+	push @files, $morePtsFile;
+}
+
+my @fhs = io::openMany(@files);
 my $tuple;
 my $cnt = counter::init();
 
-while($tuple = io::readSentences($fhRef, $fhHyp)) {
+while($tuple = io::readSentences(@fhs)) {
 	my $refSnt = parse::sentence($tuple->[0], $caseSensitive);
 	my $hypSnt = parse::sentence($tuple->[1], $caseSensitive);
 	
-	my $probs = probs::generate($refSnt, $hypSnt, $alFactor);
+	my $morePts = ($morePtsFile? parse::morepts($tuple->[2]): undef);
+	
+	my $probs = probs::generate($refSnt, $hypSnt, $alFactor, $morePts);
 	my $alignment = decodeAlignment($refSnt, $hypSnt, $alFactor, $probs);
 	displayAlignment($alignment);
 	
@@ -41,17 +49,18 @@ while($tuple = io::readSentences($fhRef, $fhHyp)) {
 
 counter::finish($cnt);
 
-io::closeMany($fhRef, $fhHyp);
+io::closeMany(@fhs);
 
 #####
 #
 #####
 sub processInputArgsAndOpts {
-	my ($caseSensitive, $alFactor);
+	my ($caseSensitive, $alFactor, $morePtsFile);
 	
 	GetOptions(
 		'c' => \$caseSensitive,
-		'n=i' => \$alFactor);
+		'n=i' => \$alFactor,
+		'a=s' => \$morePtsFile) or die("Options failed");
 	
 	if (!defined($alFactor)) {
 		$alFactor = 0;
@@ -67,7 +76,7 @@ sub processInputArgsAndOpts {
 		die("Required arguments: reference file, hypothesis file");
 	}
 	
-	return ($reffile, $hypfile, $caseSensitive, $alFactor);
+	return ($reffile, $hypfile, $caseSensitive, $alFactor, $morePtsFile);
 }
 
 #####
@@ -84,6 +93,10 @@ sub decodeAlignment {
 	
 	my $result = beamsearch::decode(genAlInitState(), $auxinfo,
 		\&genAlNextStates, \&isAlFinalState);
+	
+	unless ($result->{'alignment'}) {
+		die("fail");
+	}
 	
 	return $result->{'alignment'};
 }
@@ -126,20 +139,21 @@ sub genAlNextStates {
 	my $currAlignment = $currState->{'alignment'};
 	my $currAlPoint = getLastNonNilPoint($currAlignment);
 	
-	my $nextHypWord = io::getWordFactor($auxinfo->{'hypsnt'}->[$nextPos], $auxinfo->{'alfact'});
-	
 	my $result = [];
 	
+	#print STDERR "DB\tgenerating for $nextPos;\n";
+	
 	for my $refIdx (-1..$#$refSnt) {
+		#print STDERR "DB\ttrying $refIdx;\n";
+		
 		if ($refIdx == -1 or grep(/^\Q$refIdx\E$/, @$currAlignment) == 0) {
 			my $newProb =
-				$auxinfo->{'probs'}->{'emit'}->{$nextHypWord}->{$refIdx} *
+				$auxinfo->{'probs'}->{'emit'}->[$nextPos]->{$refIdx} *
 				$auxinfo->{'probs'}->{'trans'}->{$currAlPoint}->{$refIdx};
 			
+			#print STDERR "DB\tp($refIdx) = $newProb;\n";
+			
 			if ($newProb != 0) {
-				#print STDERR "emit $nextHypWord $refIdx: " . $auxinfo->{'probs'}->{'emit'}->{$nextHypWord}->{$refIdx} . ";\n";
-				#print STDERR "trans $currAlPoint $refIdx: " . $auxinfo->{'probs'}->{'trans'}->{$currAlPoint}->{$refIdx} . ";\n";
-				
 				my $newstate = genNewAlState($currState->{'prob'} + log($newProb),
 					[@$currAlignment, $refIdx], $nextPos);
 				push @$result, $newstate;
@@ -185,7 +199,7 @@ sub displayAlignment {
 	my $al = shift;
 	
 	if (!$al) {
-		print "undef\n";
+		print "fail\n";
 	}
 	else {
 		for my $i (0..$#$al) {

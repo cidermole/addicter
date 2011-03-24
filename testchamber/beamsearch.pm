@@ -6,27 +6,29 @@ use const;
 #
 #####
 sub tmplog {
-	#print STDERR "DEBUG: @_;\n";
+	return;
+	print STDERR "DEBUG: @_";
 }
 
 #####
 #
 #####
 sub tmpstatelog {
+	return;
 	my $state = shift;
 	
-	#print STDERR "DEBUG STATE: ";
+	print STDERR "DEBUG STATE: ";
 	
 	for my $k (qw(pos prob)) {
-		#print STDERR "$k => " . $state->{$k} . ", ";
+		print STDERR "$k => " . $state->{$k} . ", ";
 	}
 	my $ar = $state->{'alignment'};
 	for my $i (0..$#$ar) {
 		my $x = $ar->[$i];
-		#print STDERR "$i-$x/";
+		print STDERR "$i-$x/";
 	}
 	
-	#print STDERR "\n";
+	print STDERR "\n";
 }
 
 #####

@@ -66,60 +66,113 @@ sub genTransPs {
 #####
 #
 #####
-sub countWordClasses {
-	my ($refSnt, $hypSnt, $alFactor) = @_;
+sub getAllowedPoints {
+	my ($refSnt, $hypSnt, $alFactor, $morePts) = @_;
 	
-	my $refWordHash = io::hashFactors($refSnt, $alFactor);
+	my $result = {};
+	my $resultx = {};
 	
-	#count words -- seen words as themselves, unseen words as "UNK"
-	my $counthash = {};
-	
-	for my $hypw (@$hypSnt) {
-		my $factor = io::getWordFactor($hypw, $alFactor);
-		my $class = ($refWordHash->{$factor})? $factor: $const::UNK_TAG;
-		$counthash->{$class}++;
+	for my $hypIdx (0..$#$hypSnt) {
+		my $hypw = $hypSnt->[$hypIdx];
+		my $hypf = io::getWordFactor($hypw, $alFactor);
+		
+		my $covered = undef;
+		
+		for my $refIdx (0..$#$refSnt) {
+			my $refw = $refSnt->[$refIdx];
+			my $reff = io::getWordFactor($refw, $alFactor);
+			
+			if ($hypf eq $reff or defined($morePts) and $morePts->{$hypIdx}->{$refIdx}) {
+				$result->{$hypIdx}->{$refIdx} = 1;
+				$resultx->{$refIdx}->{$hypIdx} = 1;
+				$covered = 1;
+			}
+		}
+		
+		unless ($covered) {
+			#print "$hypIdx is unseen\n";
+			$result->{-1}++;
+		}
 	}
 	
-	return $counthash;
+	return ($result, $resultx);
 }
 
 #####
 #
 #####
+sub setProb {
+	my ($hash, $hypIdx, $refIdx, $prob) = @_;
+	
+	$hash->[$hypIdx]->{$refIdx} = $prob;
+	#print STDERR "PROB p($refIdx | $hypIdx) = $prob;\n";
+}
+#####
+#
+#####
 sub genEmitPs {
-	my ($refSnt, $hypSnt, $alFactor) = @_;
-	my $hash = {};
+	my ($refSnt, $hypSnt, $alFactor, $morePts) = @_;
 	
-	my $refSize = scalar @$refSnt;
+	my ($hrAllowedPoints, $rev) = getAllowedPoints($refSnt, $hypSnt, $alFactor, $morePts);
+  
+	my $result = [];
 	
-	my $wcCount = countWordClasses($refSnt, $hypSnt, $alFactor);
-	
-	for my $hypw (@$hypSnt) {
-		my $hypf = io::getWordFactor($hypw, $alFactor);
+	for my $hypIdx (0..$#$hypSnt) {
+		my $canAlignTo = $hrAllowedPoints->{$hypIdx};
 		
-		if ($wcCount->{$hypf}) {
-			my $currUnalignProb = ($wcCount->{$hypf} == 1)? 0: $const::SEEN_UNAL_PROB;
+		if ($canAlignTo) {
+			my @refPts = keys %$canAlignTo;
+			my $refPtNum = scalar @refPts;
+			my $allowUnalign = undef;
 			
-			$hash->{$hypf}->{-1} = $currUnalignProb;
+			for my $refPrePt (@refPts) {
+				if (scalar keys %{$rev->{$refPrePt}} > 1) {
+					$allowUnalign = 1;
+				}
+			}
 			
-			for my $class (0..($refSize-1)) {
-				$hash->{$hypf}->{$class} = ($hypf eq io::getWordFactor($refSnt->[$class], $alFactor))?
-					(1.0 - $currUnalignProb) / $wcCount->{$hypf}: 0;
+			my $unalProb = $allowUnalign? $const::SEEN_UNAL_PROB: 0;
+			
+			if ($allowUnalign) {
+				setProb($result, $hypIdx, -1, $unalProb);
+			}
+			
+			my $probForOthers = (1 - $unalProb) / $refPtNum;
+			
+			for my $refPt (@refPts) {
+				setProb($result, $hypIdx, $refPt, $probForOthers);
 			}
 		}
 		else {
-			$hash->{$hypf}->{-1} = 1.0 / $wcCount->{$const::UNK_TAG};
+			setProb($result, $hypIdx, -1, 1.0 / $hrAllowedPoints->{-1});
 		}
 	}
 	
-	return $hash;
+	return $result;
+}
+
+#####
+#
+#####
+sub stophere {
+	my $arr = shift;
+	
+	for my $x (0..$#$arr) {
+		my $xh = $arr->[$x];
+		
+		for my $y (keys %$xh) {
+			print "$x - $y: " . $xh->{$y} . ";\n";
+		}
+	}
+	
+	die('ok');
 }
 
 #####
 #
 #####
 sub generate {
-	my ($refSnt, $hypSnt, $alFactor) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $morePts) = @_;
 	
 	my $refSize = scalar @$refSnt;
 	
@@ -127,7 +180,7 @@ sub generate {
 	
 	$result->{'init'} = genInitPs($refSize);
 	$result->{'trans'} = genTransPs($refSize);
-	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor);
+	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor, $morePts);
 	
 	return $result;
 }

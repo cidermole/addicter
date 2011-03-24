@@ -50,6 +50,22 @@ sub alignment {
 #####
 #
 #####
+sub morepts {
+	my $string = shift;
+	my $result = {};
+	
+	my $alParse = alignment($string);
+	
+	for my $alPt (@$alParse) {
+		$result->{$alPt->{'hyp'}}->{$alPt->{'ref'}} = 1;
+	}
+	
+	return $result;
+}
+
+#####
+#
+#####
 sub xmlTagFields {
 	my $str = shift;
 	my $resultHash = {};
