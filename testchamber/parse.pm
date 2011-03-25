@@ -28,20 +28,34 @@ sub alignment {
 	my $string = shift;
 	my @result;
 	
+	my ($refHash, $hypHash) = ({}, {});
+	
 	my @tokens = split(/ /, $string);
 	
 	for my $token (@tokens) {
-		my @alPts = split(/-/, $token);
-		
-		unless (scalar @alPts == 2) {
-			die("Alignment points expected to be formatted as `idx-idx'");
+		if ($token =~ /^([0-9]+)-(-1|[0-9]+)$/) {
+			my ($hyp, $ref) = ($1, $2);
+			
+			if ($hypHash->{$hyp}) {
+				die("Alignment has to be 1-to-1, duplicate hyp point $hyp");
+			}
+			else {
+				$hypHash->{$hyp} = 1;
+			}
+			
+			if ($refHash->{$ref}) {
+				die("Alignment has to be 1-to-1, duplicate ref point $ref");
+			}
+			else {
+				$refHash->{$ref} = 1;
+			}
+			
+			push @result, { 'hyp' => $hyp, 'ref' => $ref };
 		}
-		
-		unless ($alPts[0] =~ /^[0-9]+$/ and $alPts[1] =~ /^[0-9]+$/) {
-			die("Alignment point indexes should be non-negative numeric");
+		else {
+			my $msg = "Failed to parse `$token' as an alignment pair";
+			die($msg);
 		}
-		
-		push @result, { 'hyp' => $alPts[0], 'ref' => $alPts[1] };
 	}
 	
 	return \@result;
