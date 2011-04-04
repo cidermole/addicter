@@ -25,7 +25,7 @@ sub sentence {
 #
 #####
 sub alignment {
-	my $string = shift;
+	my ($string, $ignoreDuplicates) = @_;
 	my @result;
 	
 	my ($refHash, $hypHash) = ({}, {});
@@ -36,14 +36,14 @@ sub alignment {
 		if ($token =~ /^([0-9]+)-(-1|[0-9]+)$/) {
 			my ($hyp, $ref) = ($1, $2);
 			
-			if ($hypHash->{$hyp}) {
+			if (!$ignoreDuplicates and $hypHash->{$hyp}) {
 				die("Alignment has to be 1-to-1, duplicate hyp point $hyp");
 			}
 			else {
 				$hypHash->{$hyp} = 1;
 			}
 			
-			if ($refHash->{$ref}) {
+			if (!$ignoreDuplicates and $refHash->{$ref}) {
 				die("Alignment has to be 1-to-1, duplicate ref point $ref");
 			}
 			else {
@@ -68,7 +68,7 @@ sub morepts {
 	my $string = shift;
 	my $result = {};
 	
-	my $alParse = alignment($string);
+	my $alParse = alignment($string, 1);
 	
 	for my $alPt (@$alParse) {
 		$result->{$alPt->{'hyp'}}->{$alPt->{'ref'}} = 1;

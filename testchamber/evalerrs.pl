@@ -26,7 +26,6 @@ our %groups = (
 	"missed" => [qw(missA missP missC)]
 );
 
-
 my ($refAnalysisFile, $hypAnalysisFile, $refTransFile) = @ARGV;
 
 if (!$refAnalysisFile or !$hypAnalysisFile or !$refTransFile) {
@@ -64,6 +63,19 @@ for my $groupId ("lex", "order", "punct", "missed") {
 #####
 #
 #####
+sub printPrecRecFscore {
+	my ($id, $precd, $recd, $corr) = @_;
+	
+	my $prec = (($precd)? $corr / $precd: 0);
+	my $rec = (($recd)? $corr / $recd: 0);
+	my $fscore = ($prec == 0 and $rec == 0)? 0: 2 * $prec * $rec / ($prec + $rec);
+	
+	printf "%-8s: precision = %5.3f, recall = %5.3f, f-score = %5.3f\n", $id, $prec, $rec, $fscore;
+}
+
+#####
+#
+#####
 sub precRecHash {
 	my ($stats, $id) = @_;
 	
@@ -82,13 +94,21 @@ sub precRecHash {
 	
 	print "\n";
 	
+	my ($totalCorrect, $totalRecDenom, $totalPrecDenom);
+	
 	for my $k1 (undef, @$flags) {
 		my $dk1 = ($k1)? $k1: "(empty)";
 		
-		printf "%-8s: precision = %5.3f, recall = %5.3f\n", $dk1,
-			(($precDenom->{$k1})? $stats->{$id}->{$k1}->{$k1} / $precDenom->{$k1}: 0),
-			(($recDenom->{$k1})? $stats->{$id}->{$k1}->{$k1} / $recDenom->{$k1}: 0);
+		if ($k1) {
+			$totalCorrect += $stats->{$id}->{$k1}->{$k1};
+			$totalRecDenom += $recDenom->{$k1};
+			$totalPrecDenom += $precDenom->{$k1};
+		}
+		
+		printPrecRecFscore($dk1, $precDenom->{$k1}, $recDenom->{$k1}, $stats->{$id}->{$k1}->{$k1});
 	}
+	
+	printPrecRecFscore("total (no empty)", $totalPrecDenom, $totalRecDenom, $totalCorrect);
 }
 
 #####
