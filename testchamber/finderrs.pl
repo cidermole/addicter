@@ -23,7 +23,7 @@ use math;
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
-my ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $outputFormat) =
+my ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive) =
 	processInputArgsAndOpts();
 
 my ($fhSrc, $fhRef, $fhHyp, $fhAli) = io::openMany($srcfile, $reffile, $hypfile, $alifile);
@@ -36,7 +36,7 @@ while($tuple = io::readSentences($fhSrc, $fhRef, $fhHyp, $fhAli)) {
 	my $hypSnt = parse::sentence($tuple->[2], $caseSensitive);
 	my $alignment = parse::alignment($tuple->[3]);
 	
-	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment, $outputFormat);
+	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment);
 	
 	counter::update($cnt);
 }
@@ -49,13 +49,9 @@ io::closeMany($fhSrc, $fhRef, $fhHyp, $fhAli);
 #
 #####
 sub processInputArgsAndOpts {
-	my ($caseSensitive, $outputFormat);
+	my ($caseSensitive);
 	
-	GetOptions('c' => \$caseSensitive, 'f=s' => \$outputFormat);
-	
-	if (!defined($outputFormat)) {
-		$outputFormat = $const::FMT_FLAG;
-	}
+	GetOptions('c' => \$caseSensitive);
 	
 	my ($srcfile, $reffile, $hypfile, $alifile) = @ARGV;
 
@@ -63,40 +59,31 @@ sub processInputArgsAndOpts {
 		die("Required arguments: source file, reference file, hypothesis file, alignment file");
 	}
 	
-	return ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive, $outputFormat);
+	return ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive);
 }
 
 #####
 #
 #####
 sub displayErrors {
-	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al, $outputFormat) = @_;
+	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al) = @_;
 	
-	my $flaggedHyp = flagg::convertFromFactored($hypSnt);
-	
-	if ($outputFormat eq $const::FMT_XML) {
-		sntStart($sntIdx);
-		sntInfo($srcSnt, $refSnt, $hypSnt, $al);
-	}
+	sntStart($sntIdx);
+	sntInfo($srcSnt, $refSnt, $hypSnt, $al);
 	
 	#incorrect (not in ref)
-	displayIncorrectHypTokens($srcSnt, $hypSnt, $al, $outputFormat, $flaggedHyp);
+	displayIncorrectHypTokens($srcSnt, $hypSnt, $al);
 	
 	#missing (not in hyp)
-	displayMissingRefTokens($refSnt, $al, $outputFormat, $flaggedHyp);
+	displayMissingRefTokens($refSnt, $al);
 	
 	#matched, not same (like same lemma, wrong surface form)
-	displayMatchedUnequalTokens($refSnt, $hypSnt, $al, $outputFormat, $flaggedHyp);
+	displayMatchedUnequalTokens($refSnt, $hypSnt, $al);
 	
 	#word/phrase order
-	ordersim::display($refSnt, $hypSnt, $al, $outputFormat, $flaggedHyp);
+	ordersim::display($refSnt, $hypSnt, $al);
 	
-	if ($outputFormat eq $const::FMT_XML) {
-		sntFinish();
-	}
-	elsif ($outputFormat eq $const::FMT_FLAG) {
-		flagg::display($flaggedHyp);
-	}
+	sntFinish();
 }
 
 #####
@@ -117,7 +104,7 @@ sub hashAlignment {
 #
 #####
 sub displayMatchedUnequalTokens {
-	my ($refSnt, $hypSnt, $al, $outputFormat, $flaggedHyp) = @_;
+	my ($refSnt, $hypSnt, $al) = @_;
 	
 	my $printedSome = undef;
 	
@@ -142,7 +129,7 @@ sub displayMatchedUnequalTokens {
 			my $rawHypToken = io::tok2str4xml($hypToken);
 			my $uneqFactorList = join(",", @uneqFactors);
 			
-			if ($outputFormat eq $const::FMT_XML) {
+			#if ($outputFormat eq $const::FMT_XML) {
 				if (!$printedSome) {
 					print "\n";
 					$printedSome = 1;
@@ -151,16 +138,16 @@ sub displayMatchedUnequalTokens {
 				print "\t<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
 					"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
 					"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>\n";
-			}
-			elsif ($outputFormat eq $const::FMT_FLAG) {
-				my $hypWord = $flaggedHyp->{'hyp'}->[$pair->{'hyp'}];
-				my $surfForm = $hypWord->{'factors'}->[0];
-				my $pos = io::getWordFactor($hypWord->{'factors'}, 1);
-				
-				my $flag = ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "P" or $pos eq "punct")? "punct": "form";
-				
-				$hypWord->{'flags'}->{$flag} = 1;
-			}
+			#}
+			#elsif ($outputFormat eq $const::FMT_FLAG) {
+			#	my $hypWord = $flaggedHyp->{'hyp'}->[$pair->{'hyp'}];
+			#	my $surfForm = $hypWord->{'factors'}->[0];
+			#	my $pos = io::getWordFactor($hypWord->{'factors'}, 1);
+			#	
+			#	my $flag = ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "P" or $pos eq "punct")? "punct": "form";
+			#	
+			#	$hypWord->{'flags'}->{$flag} = 1;
+			#}
 		}
 	}
 }
@@ -169,7 +156,7 @@ sub displayMatchedUnequalTokens {
 #
 #####
 sub displayMissingRefTokens {
-	my ($refSnt, $al, $outputFormat, $flaggedHyp) = @_;
+	my ($refSnt, $al) = @_;
 	
 	my $alHash = hashAlignment($al, 'ref');
 	
@@ -180,7 +167,7 @@ sub displayMissingRefTokens {
 			my $surfForm = $refSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($refSnt->[$i]);
 			
-			if ($outputFormat eq $const::FMT_XML) {
+			#if ($outputFormat eq $const::FMT_XML) {
 				if (!$printedSome) {
 					print "\n";
 					$printedSome = 1;
@@ -190,10 +177,10 @@ sub displayMissingRefTokens {
 					"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
 					"token=\"$rawToken\"";
 				print "/>\n";
-			}
-			elsif ($outputFormat eq $const::FMT_FLAG) {
-				$flaggedHyp->{'missed'}->{$rawToken}++;
-			}
+			#}
+			#elsif ($outputFormat eq $const::FMT_FLAG) {
+			#	$flaggedHyp->{'missed'}->{$rawToken}++;
+			#}
 		}
 	}
 }
@@ -202,7 +189,7 @@ sub displayMissingRefTokens {
 #
 #####
 sub displayIncorrectHypTokens {
-	my ($srcSnt, $hypSnt, $al, $outputFormat, $flaggedHyp) = @_;
+	my ($srcSnt, $hypSnt, $al) = @_;
 	
 	my $srcHash = io::hashFactors($srcSnt, 0);
 	my $alHash = hashAlignment($al, 'hyp');
@@ -214,7 +201,7 @@ sub displayIncorrectHypTokens {
 			my $surfForm = $hypSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($hypSnt->[$i]);
 			
-			if ($outputFormat eq $const::FMT_XML) {
+			#if ($outputFormat eq $const::FMT_XML) {
 				if (!$printedSome) {
 					print "\n";
 					$printedSome = 1;
@@ -225,18 +212,18 @@ sub displayIncorrectHypTokens {
 				print "\t<" . $tagId . "HypWord idx=\"$i\" " .
 					"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
 					"token=\"$rawToken\"/>\n";
-			}
-			elsif ($outputFormat eq $const::FMT_FLAG) {
-				my $flag = (($srcHash->{$surfForm})? "unk": "extra");
-				
-				my $pos = io::getWordFactor($hypSnt->[$i], 1);
-				
-				if ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "punct" or $pos eq "P") {
-					$flag = "punct";
-				}
-				
-				$flaggedHyp->{'hyp'}->[$i]->{'flags'}->{$flag} = 1;
-			}
+			#}
+			#elsif ($outputFormat eq $const::FMT_FLAG) {
+			#	my $flag = (($srcHash->{$surfForm})? "unk": "extra");
+			#	
+			#	my $pos = io::getWordFactor($hypSnt->[$i], 1);
+			#	
+			#	if ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "punct" or $pos eq "P") {
+			#		$flag = "punct";
+			#	}
+			#	
+			#	$flaggedHyp->{'hyp'}->[$i]->{'flags'}->{$flag} = 1;
+			#}
 		}
 	}
 }
@@ -264,7 +251,7 @@ sub sntInfo {
 	
 	my $numOfAligned = scalar @$al;
 	
-	print "\t<source length=\"" . scalar @$srcSnt . "\"/>\n";
-	print "\t<reference length=\"" . scalar @$refSnt . "\" aligned=\"$numOfAligned\"/>\n";
-	print "\t<hypothesis length=\"" . scalar @$hypSnt . "\" aligned=\"$numOfAligned\"/>\n";
+	print "\t<source length=\"" . scalar @$srcSnt . "\" text=\"" . io::snt2txt($srcSnt) . "\"/>\n";
+	print "\t<reference length=\"" . scalar @$refSnt . "\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>\n";
+	print "\t<hypothesis length=\"" . scalar @$hypSnt . "\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($hypSnt) . "\"/>\n";
 }

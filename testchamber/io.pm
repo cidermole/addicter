@@ -148,4 +148,18 @@ sub tok2str4xml {
 	return str4xml(join("|", @$token));
 }
 
+#####
+#
+#####
+sub snt2txt {
+	my ($snt) = @_;
+	my @resArr = ();
+	
+	for my $w (@$snt) {
+		push @resArr, $w->[0];
+	}
+	
+	return str4xml(join(" ", @resArr));
+}
+
 1;

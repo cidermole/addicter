@@ -4,6 +4,14 @@ use strict;
 #####
 #
 #####
+sub token {
+	my ($str) = @_;
+	return [ split(/\|/, $str) ]
+}
+
+#####
+#
+#####
 sub sentence {
 	my ($string, $caseSensitive) = @_;
 	my @result;
@@ -15,7 +23,7 @@ sub sentence {
 	my @tokens = split(/ /, $string);
 	
 	for my $token (@tokens) {
-		push @result, [ split(/\|/, $token) ];
+		push @result, token($token);
 	}
 	
 	return \@result;

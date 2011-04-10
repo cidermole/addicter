@@ -58,7 +58,7 @@ sub displayFlaggedHyp {
 sub displayFlaggedMissingRef {
 	my $flaggedHyp = shift;
 	
-	for my $missRefWord (keys %{$flaggedHyp->{'missed'}}) {
+	for my $missRefWord (sort keys %{$flaggedHyp->{'missed'}}) {
 		my $count = $flaggedHyp->{'missed'}->{$missRefWord};
 		
 		my @factors = split(/\|/, $missRefWord);

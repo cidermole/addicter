@@ -23,11 +23,9 @@ sub getHypRefAlMap {
 #
 #####
 sub display {
-	my ($ref, $hyp, $al, $outputFormat, $flaggedHyp) = @_;
+	my ($ref, $hyp, $al) = @_;
 	
-	if ($outputFormat eq $const::FMT_XML) {
-		displaySimilarityMetrics($al, $hyp);
-	}
+	displaySimilarityMetrics($al, $hyp);
 	
 	my $permList = unscramble::getListOfPermutations($al);
 	
@@ -37,12 +35,12 @@ sub display {
 	
 	#for my $permutation (sort { $a->{'refidx1'} <=> $b->{'refidx1'} } @$permList) {
 	for my $permutation (@$permList) {
-		if ($outputFormat eq $const::FMT_XML) {
+		#if ($outputFormat eq $const::FMT_XML) {
 			if (!$printedSome) {
 				print "\n";
 				$printedSome = 1;
 			}
-		}
+		#}
 		
 		if ($permutation->{'switch'}) {
 			my $idx1 = $hypIdxMap->[$permutation->{'refidx1'}];
@@ -50,15 +48,15 @@ sub display {
 			my $tok1 = io::tok2str4xml($hyp->[$idx1]);
 			my $tok2 = io::tok2str4xml($hyp->[$idx2]);
 			
-			if ($outputFormat eq $const::FMT_XML) {
+			#if ($outputFormat eq $const::FMT_XML) {
 				print "\t<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
 					" distance=\"" . abs($idx1 - $idx2) . "\"" .
 					" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
-			}
-			elsif ($outputFormat eq $const::FMT_FLAG) {
-				setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx1], 'ows');
-				setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx2], 'ows');
-			}
+			#}
+			#elsif ($outputFormat eq $const::FMT_FLAG) {
+			#	setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx1], 'ows');
+			#	setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx2], 'ows');
+			#}
 		}
 		else {
 			my $hypPos = $hypIdxMap->[$permutation->{'refidx1'}];
@@ -66,14 +64,14 @@ sub display {
 			my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
 			my $rawShiftWidth = $targetHypPos - $hypPos;
 			
-			if ($outputFormat eq $const::FMT_XML) {
+			#if ($outputFormat eq $const::FMT_XML) {
 				print "\t<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
 					abs($rawShiftWidth) . "\" direction=\"" .
 					(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
-			}
-			elsif ($outputFormat eq $const::FMT_FLAG) {
-				setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$hypPos], 'owl');
-			}
+			#}
+			#elsif ($outputFormat eq $const::FMT_FLAG) {
+			#	setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$hypPos], 'owl');
+			#}
 		}
 	}
 }
