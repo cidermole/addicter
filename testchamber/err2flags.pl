@@ -16,7 +16,7 @@ use parse;
 use io;
 use flagg;
 
-my ($srcSnt, $refSnt, $hypSnt);
+my $hypSnt;
 
 my $filename = (scalar @ARGV == 0)? "-": $ARGV[0];
 
@@ -30,13 +30,7 @@ while (<$fh>) {
 		my $tagId = $tag->{'id'};
 		my $fields = $tag->{'fields'};
 		
-		if ($tagId eq "source") {
-			$srcSnt = parse::sentence($fields->{'text'});
-		}
-		elsif ($tagId eq "reference") {
-			$refSnt = parse::sentence($fields->{'text'});
-		}
-		elsif ($tagId eq "hypothesis") {
+		if ($tagId eq "hypothesis") {
 			$hypSnt = flagg::convertFromFactored(parse::sentence($fields->{'text'}));
 		}
 		elsif ($tagId eq "missingRefWord") {
