@@ -23,67 +23,263 @@ use math;
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
-my ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive) =
-	processInputArgsAndOpts();
+my $opts = processInputArgsAndOpts();
+my @inputFiles = @ARGV;
+my $numOfRefs = ((scalar @inputFiles) - 2) / 2;
 
-my ($fhSrc, $fhRef, $fhHyp, $fhAli) = io::openMany($srcfile, $reffile, $hypfile, $alifile);
+print STDERR "NB! order of input arguments changed to support multiple references\n" . getUsage() . "\n";
+
+my @handles = io::openMany(@inputFiles);
 my $tuple;
 my $cnt = counter::init();
 
-while($tuple = io::readSentences($fhSrc, $fhRef, $fhHyp, $fhAli)) {
-	my $srcSnt = parse::sentence($tuple->[0], $caseSensitive);
-	my $refSnt = parse::sentence($tuple->[1], $caseSensitive);
-	my $hypSnt = parse::sentence($tuple->[2], $caseSensitive);
-	my $alignment = parse::alignment($tuple->[3]);
+while($tuple = io::readSentences(@handles)) {
+	my $srcSnt = parse::sentence($tuple->[0], $opts->{'caseSensitive'});
+	my $hypSnt = parse::sentence($tuple->[1], $opts->{'caseSensitive'});
 	
-	displayErrors($cnt->{'val'}, $srcSnt, $refSnt, $hypSnt, $alignment);
+	my (@refSntArr, @aliArr);
+	
+	for my $i (0..($numOfRefs-1)) {
+		push @refSntArr, parse::sentence($tuple->[2 + $i * 2], $opts->{'caseSensitive'});
+		push @aliArr, parse::alignment($tuple->[2 + $i * 2 + 1]);
+	}
+	
+	displayErrors($cnt->{'val'}, $srcSnt, $hypSnt, \@refSntArr, \@aliArr, $opts->{'multiRefMethod'});
 	
 	counter::update($cnt);
 }
 
 counter::finish($cnt);
 
-io::closeMany($fhSrc, $fhRef, $fhHyp, $fhAli);
+io::closeMany(@handles);
 
 #####
 #
 #####
 sub processInputArgsAndOpts {
-	my ($caseSensitive);
+	my ($caseSensitive, $multiRefMethod);
 	
-	GetOptions('c' => \$caseSensitive);
+	GetOptions('c' => \$caseSensitive, 'm=s' => \$multiRefMethod);
 	
-	my ($srcfile, $reffile, $hypfile, $alifile) = @ARGV;
-
-	if (!$srcfile or !$alifile or !$reffile or !$hypfile) {
-		die("Required arguments: source file, reference file, hypothesis file, alignment file");
+	if (!defined($multiRefMethod)) {
+		$multiRefMethod = $const::MRM_ERRCAT;
 	}
 	
-	return ($srcfile, $reffile, $hypfile, $alifile, $caseSensitive);
+	unless ($const::mrmTest->{$multiRefMethod}) {
+		my $msg = "Unknown method for handling " .
+			"multiple references: `$multiRefMethod'";
+		die($msg);
+	}
+	
+	my $numOfArgs = scalar @ARGV;
+	if ($numOfArgs < 4) {
+		my $msg = "Arguments missing, check them carefully;\n" .
+			getUsage();
+		die($msg);
+	}
+	if ($numOfArgs % 2 == 1) {
+		my $msg = "Last reference file is missing an alignment file, " .
+			"check the arguments carefully;\n" .
+			getUsage();
+		die($msg);
+	}
+	
+	return { 'caseSensitive' => $caseSensitive, 'multiRefMethod' => $multiRefMethod };
+}
+
+#####
+#
+#####
+sub getUsage {
+	return "Required arguments: source, hypothesis, reference, alignment [, ref-2, ali-2 [, ref-3, ali-3 [...]]]\n";
 }
 
 #####
 #
 #####
 sub displayErrors {
-	my ($sntIdx, $srcSnt, $refSnt, $hypSnt, $al) = @_;
+	my ($sntIdx, $srcSnt, $hypSnt, $refSntArr, $aliArr, $mrm) = @_;
 	
-	sntStart($sntIdx);
-	sntInfo($srcSnt, $refSnt, $hypSnt, $al);
+	printSntStart($sntIdx);
+	printGeneralSntInfo($srcSnt, $hypSnt);
 	
-	#incorrect (not in ref)
-	displayIncorrectHypTokens($srcSnt, $hypSnt, $al);
+	if ($mrm eq $const::MRM_ALL) {
+		displayAllErrors($srcSnt, $hypSnt, $refSntArr, $aliArr);
+	}
+	elsif ($mrm eq $const::MRM_SNT) {
+		displaySentenceOptimizedErrors($srcSnt, $hypSnt, $refSntArr, $aliArr);
+	}
+	elsif ($mrm eq $const::MRM_ERRCAT) {
+		displayCategoryOptimizedErrors($srcSnt, $hypSnt, $refSntArr, $aliArr);
+	}
 	
-	#missing (not in hyp)
-	displayMissingRefTokens($refSnt, $al);
+	printSntFinish();
+}
+
+#####
+#
+#####
+sub wrongHypWrap {
+	my ($ref, $ali, $idx, $src, $hyp) = @_;
+	return getIncorrectHypTokenErrs($src, $hyp, $ali);
+}
+
+#####
+#
+#####
+sub missingWrap {
+	my ($ref, $ali, $idx, $src, $hyp) = @_;
+	return getMissingRefTokenErrs($ref, $ali);
+}
+
+#####
+#
+#####
+sub aliUneqWrap {
+	my ($ref, $ali, $idx, $src, $hyp) = @_;
+	return getAlignedUneqTokenErrs($ref, $hyp, $ali);
+}
+
+#####
+#
+#####
+sub orderWrap {
+	my ($ref, $ali, $idx, $src, $hyp) = @_;
+	return ordersim::getOrderErrs($ref, $hyp, $ali)
+}
+
+#####
+#
+#####
+sub displayCategoryOptimizedErrors {
+	my ($srcSnt, $hypSnt, $refSntArr, $aliArr) = @_;
+	my $lines = [];
 	
-	#matched, not same (like same lemma, wrong surface form)
-	displayMatchedUnequalTokens($refSnt, $hypSnt, $al);
+	for my $i (0..$#$refSntArr) {
+		appendLines($lines, 1, getRefInfo($refSntArr->[$i], $aliArr->[$i], $i));
+	}
 	
-	#word/phrase order
-	ordersim::display($refSnt, $hypSnt, $al);
+	for my $catFunc (\&wrongHypWrap, \&missingWrap, \&aliUneqWrap, \&orderWrap) {
+		my $lowestCost = 1e600;
+		my $chosenLines = undef;
+		
+		for my $i (0..$#$refSntArr) {
+			my $refSnt = $refSntArr->[$i];
+			my $ali = $aliArr->[$i];
+			
+			my $currLines = &$catFunc($refSnt, $ali, $i, $srcSnt, $hypSnt);
+			
+			my $cost = getCost($currLines);
+			
+			if ($cost > 0) {
+				unshift @$currLines, "<chosenReference index=\"$i\">";
+			}
+			
+			if ($cost < $lowestCost) {
+				$lowestCost = $cost;
+				$chosenLines = $currLines;
+			}
+		}
+		
+		appendLines($lines, 0, $chosenLines);
+	}
 	
-	sntFinish();
+	printLines(1, $lines);
+}
+
+#####
+#
+#####
+sub displaySentenceOptimizedErrors {
+	my ($srcSnt, $hypSnt, $refSntArr, $aliArr) = @_;
+	
+	my $lowestCost = 1e600;
+	my $chosenLines = undef;
+	
+	for my $i (0..$#$refSntArr) {
+		my $currLines = [];
+		my $refSnt = $refSntArr->[$i];
+		my $ali = $aliArr->[$i];
+		
+		appendLines($currLines, 1, getRefInfo($refSnt, $ali, $i));
+		appendLines($currLines, 0, getIncorrectHypTokenErrs($srcSnt, $hypSnt, $ali));
+		appendLines($currLines, 0, getMissingRefTokenErrs($refSnt, $ali));
+		appendLines($currLines, 0, getAlignedUneqTokenErrs($refSnt, $hypSnt, $ali));
+		appendLines($currLines, 0, ordersim::getOrderErrs($refSnt, $hypSnt, $ali));
+		
+		my $cost = getCost($currLines);
+		
+		if ($cost < $lowestCost) {
+			$lowestCost = $cost;
+			$chosenLines = $currLines;
+		}
+	}
+	
+	printLines(1, $chosenLines)
+}
+
+#####
+#
+#####
+sub getCost {
+	my $lines = shift;
+	
+	return scalar grep(!/^\s*$/, @$lines);
+}
+
+#####
+#
+#####
+sub appendLines {
+	my ($buff, $skipLine, $newlines) = @_;
+	
+	if (defined($newlines) and (scalar @$newlines > 0)) {
+		unless ($skipLine) {
+			push @$buff, "";
+		}
+		
+		push @$buff, @$newlines;
+	}
+}
+
+#####
+#
+#####
+sub displayAllErrors {
+	my ($srcSnt, $hypSnt, $refSntArr, $aliArr) = @_;
+	
+	for my $i (0..$#$refSntArr) {
+		my $currLines = [];
+		my $refSnt = $refSntArr->[$i];
+		my $ali = $aliArr->[$i];
+		
+		printRefStart($i);
+		
+		appendLines($currLines, 1, getRefInfo($refSnt, $ali));
+		appendLines($currLines, 0, getIncorrectHypTokenErrs($srcSnt, $hypSnt, $ali));
+		appendLines($currLines, 0, getMissingRefTokenErrs($refSnt, $ali));
+		appendLines($currLines, 0, getAlignedUneqTokenErrs($refSnt, $hypSnt, $ali));
+		appendLines($currLines, 0, ordersim::getOrderErrs($refSnt, $hypSnt, $ali));
+		
+		printLines(2, $currLines);
+		
+		printRefFinish();
+	}
+}
+
+#####
+#
+#####
+sub printLines {
+	my ($tabs, $lines) = @_;
+	
+	if (defined($lines)) {
+		for my $line (@$lines) {
+			print "\t" x $tabs;
+			print $line;
+			print "\n";
+		}
+	}
 }
 
 #####
@@ -103,10 +299,10 @@ sub hashAlignment {
 #####
 #
 #####
-sub displayMatchedUnequalTokens {
+sub getAlignedUneqTokenErrs {
 	my ($refSnt, $hypSnt, $al) = @_;
 	
-	my $printedSome = undef;
+	my @output = ();
 	
 	for my $pair (@$al) {
 		my $hypToken = $hypSnt->[$pair->{'hyp'}];
@@ -115,6 +311,7 @@ sub displayMatchedUnequalTokens {
 		my @uneqFactors = ();
 		
 		my $maxidx = math::max($#$hypToken, $#$refToken);
+		
 		for my $i (0..$maxidx) {
 			my $hypFact = io::getWordFactor($hypToken, $i);
 			my $refFact = io::getWordFactor($refToken, $i);
@@ -129,109 +326,70 @@ sub displayMatchedUnequalTokens {
 			my $rawHypToken = io::tok2str4xml($hypToken);
 			my $uneqFactorList = join(",", @uneqFactors);
 			
-			#if ($outputFormat eq $const::FMT_XML) {
-				if (!$printedSome) {
-					print "\n";
-					$printedSome = 1;
-				}
-				
-				print "\t<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
-					"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
-					"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>\n";
-			#}
-			#elsif ($outputFormat eq $const::FMT_FLAG) {
-			#	my $hypWord = $flaggedHyp->{'hyp'}->[$pair->{'hyp'}];
-			#	my $surfForm = $hypWord->{'factors'}->[0];
-			#	my $pos = io::getWordFactor($hypWord->{'factors'}, 1);
-			#	
-			#	my $flag = ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "P" or $pos eq "punct")? "punct": "form";
-			#	
-			#	$hypWord->{'flags'}->{$flag} = 1;
-			#}
+			push @output, "<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
+				"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
+				"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>";
 		}
 	}
+	
+	return \@output;
 }
 
 #####
 #
 #####
-sub displayMissingRefTokens {
+sub getMissingRefTokenErrs {
 	my ($refSnt, $al) = @_;
 	
-	my $alHash = hashAlignment($al, 'ref');
+	my @output = ();
 	
-	my $printedSome = undef;
+	my $alHash = hashAlignment($al, 'ref');
 	
 	for my $i (0..$#$refSnt) {
 		if (!$alHash->{$i}) {
 			my $surfForm = $refSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($refSnt->[$i]);
 			
-			#if ($outputFormat eq $const::FMT_XML) {
-				if (!$printedSome) {
-					print "\n";
-					$printedSome = 1;
-				}
-				
-				print "\t<missingRefWord idx=\"$i\" " .
-					"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
-					"token=\"$rawToken\"";
-				print "/>\n";
-			#}
-			#elsif ($outputFormat eq $const::FMT_FLAG) {
-			#	$flaggedHyp->{'missed'}->{$rawToken}++;
-			#}
+			push @output, "<missingRefWord idx=\"$i\" " .
+				"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
+				"token=\"$rawToken\"/>";
 		}
 	}
+	
+	return \@output;
 }
 
 #####
 #
 #####
-sub displayIncorrectHypTokens {
+sub getIncorrectHypTokenErrs {
 	my ($srcSnt, $hypSnt, $al) = @_;
+	
+	my @output = ();
 	
 	my $srcHash = io::hashFactors($srcSnt, 0);
 	my $alHash = hashAlignment($al, 'hyp');
-	
-	my $printedSome = undef;
 	
 	for my $i (0..$#$hypSnt) {
 		if (!$alHash->{$i}) {
 			my $surfForm = $hypSnt->[$i]->[0];
 			my $rawToken = io::tok2str4xml($hypSnt->[$i]);
 			
-			#if ($outputFormat eq $const::FMT_XML) {
-				if (!$printedSome) {
-					print "\n";
-					$printedSome = 1;
-				}
-				
-				my $tagId = ($srcHash->{$surfForm})? "untranslated": "extra";
-				
-				print "\t<" . $tagId . "HypWord idx=\"$i\" " .
-					"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
-					"token=\"$rawToken\"/>\n";
-			#}
-			#elsif ($outputFormat eq $const::FMT_FLAG) {
-			#	my $flag = (($srcHash->{$surfForm})? "unk": "extra");
-			#	
-			#	my $pos = io::getWordFactor($hypSnt->[$i], 1);
-			#	
-			#	if ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "punct" or $pos eq "P") {
-			#		$flag = "punct";
-			#	}
-			#	
-			#	$flaggedHyp->{'hyp'}->[$i]->{'flags'}->{$flag} = 1;
-			#}
+			my $tagId = ($srcHash->{$surfForm})? "untranslated": "extra";
+			
+			push @output, "<" . $tagId . "HypWord idx=\"$i\" " .
+				"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
+				"token=\"$rawToken\"/>";
 		}
 	}
+	
+	return \@output;
 }
 
 #####
 #
 #####
-sub sntStart {
+sub printSntStart {
 	my $idx = shift;
 	print "<sentence index=\"$idx\">\n";
 }
@@ -239,19 +397,45 @@ sub sntStart {
 #####
 #
 #####
-sub sntFinish {
+sub printSntFinish {
 	print "</sentence>\n\n";
 }
 
 #####
 #
 #####
-sub sntInfo {
-	my ($srcSnt, $refSnt, $hypSnt, $al) = @_;
-	
-	my $numOfAligned = scalar @$al;
+sub printRefStart {
+	my $idx = shift;
+	print "\t<reference index=\"$idx\">\n";
+}
+
+#####
+#
+#####
+sub printRefFinish {
+	print "\t</reference>\n";
+}
+
+#####
+#
+#####
+sub printGeneralSntInfo {
+	my ($srcSnt, $hypSnt) = @_;
 	
 	print "\t<source length=\"" . scalar @$srcSnt . "\" text=\"" . io::snt2txt($srcSnt) . "\"/>\n";
-	print "\t<reference length=\"" . scalar @$refSnt . "\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>\n";
-	print "\t<hypothesis length=\"" . scalar @$hypSnt . "\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($hypSnt) . "\"/>\n";
+	print "\t<hypothesis length=\"" . scalar @$hypSnt . "\" text=\"" . io::snt2txt($hypSnt) . "\"/>\n";
+}
+
+#####
+#
+#####
+sub getRefInfo {
+	my ($refSnt, $ali, $idx) = @_;
+	
+	my $numOfAligned = scalar @$ali;
+	
+	my $idxInfo = (defined($idx))? " index=\"$idx\"": "";
+	
+	return ["<reference$idxInfo length=\"" . (scalar @$refSnt) .
+		"\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>"];
 }

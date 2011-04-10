@@ -22,41 +22,41 @@ sub getHypRefAlMap {
 #####
 #
 #####
-sub display {
+sub getOrderErrs {
 	my ($ref, $hyp, $al) = @_;
-	
-	displaySimilarityMetrics($al, $hyp);
 	
 	my $permList = unscramble::getListOfPermutations($al);
 	
 	my $hypIdxMap = getHypRefAlMap($al);
 	
-	my $printedSome = undef;
+	my $output = permutationToErrs($permList, $hypIdxMap, $hyp);
 	
-	#for my $permutation (sort { $a->{'refidx1'} <=> $b->{'refidx1'} } @$permList) {
-	for my $permutation (@$permList) {
-		#if ($outputFormat eq $const::FMT_XML) {
-			if (!$printedSome) {
-				print "\n";
-				$printedSome = 1;
-			}
-		#}
-		
+	my $metrics = getSimilarityMetrics($al, $hyp);
+	
+	return (defined($output) and (scalar @$output > 0))?
+		[@$metrics, "", @$output]:
+		$metrics;
+}
+
+#####
+#
+#####
+sub permutationToErrs {
+	my ($permList, $hypIdxMap, $hyp) = @_;
+	
+	my @output = ();
+	
+	#for my $permutation (@$permList) {
+	for my $permutation (sort { $a->{'refidx1'} <=> $b->{'refidx1'} } @$permList) {
 		if ($permutation->{'switch'}) {
 			my $idx1 = $hypIdxMap->[$permutation->{'refidx1'}];
 			my $idx2 = $hypIdxMap->[$permutation->{'refidx2'}];
 			my $tok1 = io::tok2str4xml($hyp->[$idx1]);
 			my $tok2 = io::tok2str4xml($hyp->[$idx2]);
 			
-			#if ($outputFormat eq $const::FMT_XML) {
-				print "\t<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
-					" distance=\"" . abs($idx1 - $idx2) . "\"" .
-					" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>\n";
-			#}
-			#elsif ($outputFormat eq $const::FMT_FLAG) {
-			#	setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx1], 'ows');
-			#	setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$idx2], 'ows');
-			#}
+			push @output, "<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
+				" distance=\"" . abs($idx1 - $idx2) . "\"" .
+				" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>";
 		}
 		else {
 			my $hypPos = $hypIdxMap->[$permutation->{'refidx1'}];
@@ -64,30 +64,13 @@ sub display {
 			my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
 			my $rawShiftWidth = $targetHypPos - $hypPos;
 			
-			#if ($outputFormat eq $const::FMT_XML) {
-				print "\t<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
-					abs($rawShiftWidth) . "\" direction=\"" .
-					(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>\n";
-			#}
-			#elsif ($outputFormat eq $const::FMT_FLAG) {
-			#	setMaybeOrderFlag($flaggedHyp->{'hyp'}->[$hypPos], 'owl');
-			#}
+			push @output, "<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
+				abs($rawShiftWidth) . "\" direction=\"" .
+				(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>";
 		}
 	}
-}
-
-#####
-#
-#####
-sub setMaybeOrderFlag {
-	my ($word, $flag) = @_;
 	
-	my $surfForm = $word->{'factors'}->[0];
-	my $pos = io::getWordFactor($word->{'factors'}, 1);
-	
-	my $truFlag = ($surfForm =~ /^[[:punct:]]+$/ or $pos eq "punct" or $pos eq "P")? "punct": $flag;
-	
-	$word->{'flags'}->{$flag} = 1;
+	return \@output;
 }
 
 #####
@@ -133,13 +116,16 @@ sub getSpearmanRho {
 #####
 #
 #####
-sub displaySimilarityMetrics {
+sub getSimilarityMetrics {
 	my ($al, $hyp) = @_;
 	
 	my $rho = getSpearmanRho($al);
 	my $fmtRho = sprintf("%.3f", $rho);
 	
-	print "\n\t<ordSimMetrics spearmansRho=\"" . (defined($rho)? $fmtRho: "undef") . "\"/>\n";
+	my $rhoText = "<ordSimMetrics spearmansRho=\"" .
+		(defined($rho)? $fmtRho: "undef") . "\"/>";
+	
+	return [$rhoText];
 }
 
 1;
