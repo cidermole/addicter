@@ -62,7 +62,7 @@ sub processInputArgsAndOpts {
 	GetOptions('c' => \$caseSensitive, 'm=s' => \$multiRefMethod);
 	
 	if (!defined($multiRefMethod)) {
-		$multiRefMethod = $const::MRM_ERRCAT;
+		$multiRefMethod = $const::MRM_SNT;
 	}
 	
 	unless ($const::mrmTest->{$multiRefMethod}) {
