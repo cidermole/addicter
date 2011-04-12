@@ -67,7 +67,7 @@ sub genTransPs {
 #
 #####
 sub getAllowedPoints {
-	my ($refSnt, $hypSnt, $alFactor, $morePts) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts) = @_;
 	
 	my $result = {};
 	my $resultx = {};
@@ -82,7 +82,7 @@ sub getAllowedPoints {
 			my $refw = $refSnt->[$refIdx];
 			my $reff = io::getWordFactor($refw, $alFactor);
 			
-			if ($hypf eq $reff or defined($morePts) and $morePts->{$hypIdx}->{$refIdx}) {
+			if ((!$exPts and ($hypf eq $reff)) or (defined($morePts) and $morePts->{$hypIdx}->{$refIdx})) {
 				$result->{$hypIdx}->{$refIdx} = 1;
 				$resultx->{$refIdx}->{$hypIdx} = 1;
 				$covered = 1;
@@ -111,9 +111,9 @@ sub setProb {
 #
 #####
 sub genEmitPs {
-	my ($refSnt, $hypSnt, $alFactor, $morePts) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts) = @_;
 	
-	my ($hrAllowedPoints, $rev) = getAllowedPoints($refSnt, $hypSnt, $alFactor, $morePts);
+	my ($hrAllowedPoints, $rev) = getAllowedPoints($refSnt, $hypSnt, $alFactor, $morePts, $exPts);
   
 	my $result = [];
 	
@@ -172,7 +172,7 @@ sub stophere {
 #
 #####
 sub generate {
-	my ($refSnt, $hypSnt, $alFactor, $morePts) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts) = @_;
 	
 	my $refSize = scalar @$refSnt;
 	
@@ -180,7 +180,7 @@ sub generate {
 	
 	$result->{'init'} = genInitPs($refSize);
 	$result->{'trans'} = genTransPs($refSize);
-	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor, $morePts);
+	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor, $morePts, $exPts);
 	
 	return $result;
 }

@@ -27,7 +27,7 @@ my $opts = processInputArgsAndOpts();
 my @inputFiles = @ARGV;
 my $numOfRefs = ((scalar @inputFiles) - 2) / 2;
 
-print STDERR "NB! order of input arguments changed to support multiple references\n" . getUsage() . "\n";
+#print STDERR "NB! order of input arguments changed to support multiple references\n" . getUsage() . "\n";
 
 my @handles = io::openMany(@inputFiles);
 my $tuple;
