@@ -1,12 +1,14 @@
 #!/usr/bin/perl
 # Indexes parallel training data for viewing in Addicter.
-# Copyright © 2010 Dan Zeman <zeman@ufal.mff.cuni.cz>
+# Copyright © 2010, 2011 Dan Zeman <zeman@ufal.mff.cuni.cz>
 # License: GNU GPL
+# 2011-05-05: Source and target language words must be indexed separately (so that English and Czech "to" are different words).
 
 use utf8;
 sub usage
 {
     print STDERR ("Usage: addictindex.pl <options>\n");
+    print STDERR ("To create a two-way index, call the script twice with swapped source and target languages.\n");
     print STDERR ("Options:\n");
     print STDERR ("  -trs path ... path to source side of training data\n");
     print STDERR ("  -trt path ... path to target side of training data\n");
@@ -17,6 +19,10 @@ sub usage
     print STDERR ("  -ra path .... path to alignment of source and reference\n");
     print STDERR ("  -ha path .... path to alignment of source and hypothesis\n");
     print STDERR ("  -o path ..... path to output folder (number of index files will go there; default '.')\n");
+    print STDERR ("  -oprf pref .. prefix of index file names (e.g. 's' or 't')\n");
+    print STDERR ("                The index files represent the language that we put in as source.\n");
+    print STDERR ("                If we swapped source and target we need to distinguish the index files.\n");
+    print STDERR ("                '-oprf t' will name the output files 'tindex*.txt' instead of 'index*.txt'\n");
 }
 
 use open ":utf8";
@@ -37,7 +43,8 @@ GetOptions
     'h=s'   => \$hpath,
     'ra=s'  => \$rapath,
     'ha=s'  => \$hapath,
-    'o=s'   => \$opath
+    'o=s'   => \$opath,
+    'oprf=s'=> \$oprf,
 );
 if($trspath eq '' || $trtpath eq '' || $trapath eq '')
 {
@@ -64,7 +71,7 @@ if($spath ne '' && $hpath ne '' && $hapath ne '')
 map {$_ =~ m/^(.)/; $firstletters{$1}++} (@keys);
 print STDERR ("The words in the corpus begin in ", scalar(keys(%firstletters)), " distinct characters.\n");
 # Print the master index (list of first letters).
-$indexname = "$opath/index.txt";
+$indexname = "$opath/${oprf}index.txt";
 open(INDEX, ">$indexname") or die("Cannot write $indexname: $!\n");
 print INDEX (join(' ', sort(keys(%firstletters))), "\n");
 close(INDEX);
@@ -79,7 +86,7 @@ foreach my $key (@keys)
     if($fl ne $last_fl)
     {
         close(INDEX) unless($last_fl eq '');
-        my $indexname = sprintf("$opath/index%04x.txt", ord($fl));
+        my $indexname = sprintf("$opath/${oprf}index%04x.txt", ord($fl));
         open(INDEX, ">$indexname") or die("Cannot write $indexname: $!\n");
         print STDERR ("Writing index $indexname for words beginning in $fl...\n");
         $last_fl = $fl;
@@ -167,6 +174,7 @@ sub index_corpus
         my @srcwords = split(/\s+/, $srcline);
         my @tgtwords = split(/\s+/, $tgtline);
         my @alignments = map {my @a = split(/-/, $_); \@a} (split(/\s+/, $aliline));
+        # For each source word find all target words it is aligned to.
         for(my $i = 0; $i<=$#srcwords; $i++)
         {
             my %record =
@@ -177,15 +185,21 @@ sub index_corpus
             );
             push(@{$index->{$srcwords[$i]}}, \%record);
         }
-        for(my $i = 0; $i<=$#tgtwords; $i++)
+        # Keep source index separate from target index. Don't do this reverse indexing here.
+        # Instead, call addictindex.pl twice and swap source with target.
+        if(0)
         {
-            my %record =
-            (
-                'file' => $tid,
-                'line' => $i_sentence,
-                'aliphrase' => join(' ', map {$srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)))
-            );
-            push(@{$index->{$tgtwords[$i]}}, \%record);
+            # For each target word find all source words it is aligned to.
+            for(my $i = 0; $i<=$#tgtwords; $i++)
+            {
+                my %record =
+                (
+                    'file' => $tid,
+                    'line' => $i_sentence,
+                    'aliphrase' => join(' ', map {$srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)))
+                );
+                push(@{$index->{$tgtwords[$i]}}, \%record);
+            }
         }
         $i_sentence++;
     }
