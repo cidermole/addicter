@@ -2,6 +2,7 @@
 # Addicter CGI viewer
 # Copyright © 2010 Dan Zeman <zeman@ufal.mff.cuni.cz>
 # License: GNU GPL
+# 2011-05-05: Source and target index files separated.
 
 use utf8;
 use open ":utf8";
@@ -40,36 +41,12 @@ if(exists($config{experiment}))
     $experiment = $config{experiment};
     if(!exists($config{letter}))
     {
-        # Read the master index (first letters of words).
-        open(INDEX, "$experiment/index.txt") or print("<p style='color:red'>Cannot open index.txt!</p>\n");
-        $firstletters = <INDEX>;
-        close(INDEX);
-        $firstletters =~ s/\r?\n$//;
-        @firstletters = split(/\s+/, $firstletters);
-        # Print list of words we can inspect.
-        print("  <p>The corpus contains words beginning in the following letters. Click on a letter to view the list of words beginning in that letter.</p>\n");
-        foreach my $letter (@firstletters)
-        {
-            print("  <a href='index.pl?experiment=$experiment&amp;letter=$letter'>$letter</a>\n");
-        }
+        print_start_letters('s');
+        print_start_letters('t');
     }
     else
     {
-        # Which index file do we need?
-        my $indexname = sprintf("$experiment/index%04x.txt", ord($config{letter}));
-        open(INDEX, $indexname) or print("<p style='color:red'>Cannot open $indexname: $!</p>\n");
-        while(<INDEX>)
-        {
-            s/\r?\n$//;
-            my ($word, $sentences) = split(/\t/, $_);
-            my @sentences = split(/\s+/, $sentences);
-            $index{$word} = \@sentences;
-        }
-        close(INDEX);
-        foreach my $word (sort(keys(%index)))
-        {
-            print("  <a href='example.pl?experiment=$experiment&amp;word=$word'>$word</a>\n");
-        }
+        print_words_by_letter();
     }
 }
 # Close the HTML document.
@@ -94,4 +71,56 @@ sub get_subfolders
     my @subfolders = grep {-d $_ && !m/^\./} (readdir(DIR));
     closedir(DIR);
     return \@subfolders;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Reads an index (source or target) and prints the list of start letters of
+# words in that index.
+#------------------------------------------------------------------------------
+sub print_start_letters
+{
+    # Which index to read? 's' or 't'?
+    my $oprf = shift;
+    my $indexname = $oprf.'index.txt';
+    # Read the master index (first letters of words).
+    open(INDEX, "$experiment/$indexname") or print("<p style='color:red'>Cannot open $indexname!</p>\n");
+    my $firstletters = <INDEX>;
+    close(INDEX);
+    $firstletters =~ s/\r?\n$//;
+    my @firstletters = split(/\s+/, $firstletters);
+    # Print list of words we can inspect.
+    my $corpus_part = $oprf eq 's' ? 'source' : $oprf eq 't' ? 'target' : "<span style='color:red'>unknown</span>";
+    print("  <p>The $corpus_part corpus contains words beginning in the following letters. Click on a letter to view the list of words beginning in that letter.</p>\n");
+    foreach my $letter (@firstletters)
+    {
+        print("  <a href='index.pl?experiment=$experiment&amp;lang=$oprf&amp;letter=$letter'>$letter</a>\n");
+    }
+}
+
+
+
+#------------------------------------------------------------------------------
+# Reads an index (source or target) and prints the list of words that start
+# with a given letter in that index.
+#------------------------------------------------------------------------------
+sub print_words_by_letter
+{
+    # Which index file do we need?
+    my $indexname = sprintf("$experiment/$config{lang}index%04x.txt", ord($config{letter}));
+    my %index;
+    open(INDEX, $indexname) or print("<p style='color:red'>Cannot open $indexname: $!</p>\n");
+    while(<INDEX>)
+    {
+        s/\r?\n$//;
+        my ($word, $sentences) = split(/\t/, $_);
+        my @sentences = split(/\s+/, $sentences);
+        $index{$word} = \@sentences;
+    }
+    close(INDEX);
+    foreach my $word (sort(keys(%index)))
+    {
+        print("  <a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$word'>$word</a>\n");
+    }
 }

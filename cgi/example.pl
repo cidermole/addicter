@@ -2,6 +2,8 @@
 # Addicter CGI viewer
 # Copyright © 2010 Dan Zeman <zeman@ufal.mff.cuni.cz>
 # License: GNU GPL
+# 2010-06-28: New parameter lang=s|t selects language for words that appear on both sides (e.g. 'USA').
+# 2011-05-05: Source and target index files separated.
 
 use utf8;
 use open ":utf8";
@@ -35,7 +37,7 @@ if(exists($config{experiment}))
     # Figure out the name of the index file.
     $config{word} =~ m/^(.)/;
     $fl = $1;
-    $indexname = sprintf("$experiment/index%04x.txt", ord($fl));
+    $indexname = sprintf("$experiment/$config{lang}index%04x.txt", ord($fl));
     # Read the index.
     open(INDEX, $indexname) or print("<p style='color:red'>Cannot open $indexname: $!</p>\n");
     while(<INDEX>)
@@ -70,6 +72,7 @@ if(exists($config{experiment}))
             @examples = @{$index{$config{word}}};
         }
         my $numsnt = scalar(@examples);
+        ###!!! Just testing how the styles work...
         print("<style>span.x:hover {color:green}</style>\n");
         my $plural = $numsnt>1 ? 's' : '';
         print("<p>Examples <span class='x'>of</span> the word in the <span class='x'>$config{filter}</span> data:\n");
@@ -85,13 +88,13 @@ if(exists($config{experiment}))
                 {
                     my $prevexno = $config{exno}-1;
                     ###!!! all parameters should be preserved, not just filter
-                    push(@links, "<a href='example.pl?experiment=$experiment&amp;word=$config{word}&amp;exno=$prevexno&amp;filter=$config{filter}'>previous</a>");
+                    push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;exno=$prevexno&amp;filter=$config{filter}'>previous</a>");
                 }
                 if($config{exno}<$#examples)
                 {
                     my $nextexno = $config{exno}+1;
                     ###!!! all parameters should be preserved, not just filter
-                    push(@links, "<a href='example.pl?experiment=$experiment&amp;word=$config{word}&amp;exno=$nextexno&amp;filter=$config{filter}'>next</a>");
+                    push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;exno=$nextexno&amp;filter=$config{filter}'>next</a>");
                 }
             }
             else
@@ -100,7 +103,7 @@ if(exists($config{experiment}))
                 if($#examples>0)
                 {
                     ###!!! all parameters should be preserved, not just filter
-                    push(@links, "<a href='example.pl?experiment=$experiment&amp;word=$config{word}&amp;exno=1&amp;filter=$config{filter}'>next</a>");
+                    push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;exno=1&amp;filter=$config{filter}'>next</a>");
                 }
             }
             # So what do we need to read?
