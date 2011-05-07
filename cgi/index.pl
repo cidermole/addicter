@@ -22,7 +22,7 @@ print("  <title>Addicter</title>\n");
 print("</head>\n");
 print("<body>\n");
 print("  <style><!-- A:link, A:visited { text-decoration: none } A:hover { text-decoration: underline } --></style>");
-print("  <h1>Addicter: explore words in training corpus</h1>\n");
+print("  <h1>Addicter</h1>\n");
 # Read cgi parameters.
 dzcgi::cist_parametry(\%config);
 # Get list of subfolders that should contain index files of experiments.
@@ -39,6 +39,9 @@ if(exists($config{experiment}))
 {
     # Path to experiment we are analyzing (can be relative to the location of this script).
     $experiment = $config{experiment};
+    print("  <h2>Browse Test Corpus</h2>\n");
+    print("  <p><a href='browsetest.pl?experiment=$config{experiment}'>Click here.</a></p>\n");
+    print("  <h2>Explore Words in Training Corpus</h2>\n");
     if(!exists($config{letter}))
     {
         print_start_letters('s');
