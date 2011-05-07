@@ -145,9 +145,9 @@ if(exists($config{experiment}))
             print(sentence_to_table(\%files, $sntno, $srcfile, $tgtfile, $alifile));
             # Print links to adjacent examples.
             ###!!! Add links to filters: training only, test/reference, test/hypothesis.
-            push(@links, "<a href='example.pl?experiment=$experiment&amp;word=$config{word}&amp;filter=tr'>training data only</a>");
-            push(@links, "<a href='example.pl?experiment=$experiment&amp;word=$config{word}&amp;filter=r'>test/reference</a>");
-            push(@links, "<a href='example.pl?experiment=$experiment&amp;word=$config{word}&amp;filter=h'>test/hypothesis</a>");
+            push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;filter=tr'>training data only</a>");
+            push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;filter=r'>test/reference</a>");
+            push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;filter=h'>test/hypothesis</a>");
             if(scalar(@links))
             {
                 my $links = join(' | ', @links);
@@ -181,7 +181,7 @@ if(exists($config{experiment}))
                 $n += $c;
                 if($i<20)
                 {
-                    $list .= '  <li>'.word_to_link($experiment, $acp)." ($c)</li>\n";
+                    $list .= '  <li>'.word_to_link($experiment, swaplang(), $acp)." ($c)</li>\n";
                 }
             }
             print("<p>The word '$config{word}' occurred $n times and got aligned to ", scalar(@alicps), " distinct words/phrases. The most frequent ones follow (with frequencies):</p>\n");
@@ -266,7 +266,7 @@ sub sentence_to_table
         else
         {
             # Every word except for the current one is a link to its own examples.
-            $html .= '<td>'.word_to_link($experiment, $srcwords[$i]).'</td>';
+            $html .= '<td>'.word_to_link($experiment, 's', $srcwords[$i]).'</td>';
         }
     }
     $html .= "</tr>\n";
@@ -301,7 +301,7 @@ sub sentence_to_table
         else
         {
             # Every word except for the current one is a link to its own examples.
-            $html .= '<td>'.word_to_link($experiment, $tgtwords[$i])."<br/>$translit</td>";
+            $html .= '<td>'.word_to_link($experiment, 't', $tgtwords[$i])."<br/>$translit</td>";
         }
     }
     ###!!! If the filter is test+reference, show a third row with system hypothesis.
@@ -332,7 +332,7 @@ sub sentence_to_table
             else
             {
                 # Every word except for the current one is a link to its own examples.
-                $html .= '<td>'.word_to_link($experiment, $tgtwords[$i])."<br/>$translit</td>";
+                $html .= '<td>'.word_to_link($experiment, 't', $tgtwords[$i])."<br/>$translit</td>";
             }
         }
     }
@@ -350,7 +350,35 @@ sub sentence_to_table
 sub word_to_link
 {
     my $experiment = shift;
+    my $lang = shift;
     my $word = shift;
-    my $html = "<a href='example.pl?experiment=$experiment&amp;word=$word'>$word</a>";
+    my $html = "<a href='example.pl?experiment=$experiment&amp;lang=$lang&amp;word=$word'>$word</a>";
     return $html;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Changes the language parameter to the other value. Returns the other value.
+# Useful for creating cross links.
+#------------------------------------------------------------------------------
+sub swaplang
+{
+    my $current = shift;
+    $current = $config{lang} unless($current);
+    # Return target if current is source.
+    if($current =~ m/^s/i)
+    {
+        return 't';
+    }
+    # Return source if current is target.
+    elsif($current =~ m/^t/i)
+    {
+        return 's';
+    }
+    # If current is neither source nor target, return unknown.
+    else
+    {
+        return 'x';
+    }
 }
