@@ -15,6 +15,7 @@ use lib '/home/zeman/lib';
 use dzcgi;
 use translit;
 use translit::brahmi;
+use AddicterHTML;
 
 # Print the HTML header (so that any debugging can possibly also output to the browser).
 print("Content-type: text/html; charset=utf8\n\n");
@@ -256,29 +257,7 @@ sub sentence_to_table
     my @tgtwords = split(/\s+/, $tgtline);
     # Display the source words along with their alignment links.
     $html .= "<table border style='font-family:Code2000'>\n";
-    $html .= "  <tr>";
-    for(my $i = 0; $i<=$#srcwords; $i++)
-    {
-        if($srcwords[$i] eq $config{word})
-        {
-            $html .= "<td style='color:red'>$srcwords[$i]</td>";
-        }
-        else
-        {
-            # Every word except for the current one is a link to its own examples.
-            $html .= '<td>'.word_to_link($experiment, 's', $srcwords[$i]).'</td>';
-        }
-    }
-    $html .= "</tr>\n";
-    # Second row contains target words aligned to source words.
-    $html .= "  <tr>";
-    for(my $i = 0; $i<=$#srcwords; $i++)
-    {
-        my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[0]==$i} (@alignments)));
-        my $ali_ctpart = join('&nbsp;', map {$tgtwords[$_->[1]] eq $config{word} ? "<span style='color:red'>$tgtwords[$_->[1]]</span>" : $tgtwords[$_->[1]]} (grep {$_->[0]==$i} (@alignments)));
-        $html .= "<td>$ali_ctpart<br/>$ali_word</td>";
-    }
-    $html .= "</tr>\n";
+    $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0);
     # An empty row separates source and target sections.
     $html .= "  <tr><td></td></tr>\n";
     # Display the target words along with their alignment links.
