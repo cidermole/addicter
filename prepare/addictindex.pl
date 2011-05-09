@@ -8,8 +8,9 @@ use utf8;
 sub usage
 {
     print STDERR ("Usage: addictindex.pl <options>\n");
-    print STDERR ("To create a two-way index, call the script twice with swapped source and target languages.\n");
+    print STDERR ("To create a two-way index, call the script twice, the second time with -target.\n");
     print STDERR ("Options:\n");
+    print STDERR ("  -target ..... index target language words (default is source language)\n");
     print STDERR ("  -trs path ... path to source side of training data\n");
     print STDERR ("  -trt path ... path to target side of training data\n");
     print STDERR ("  -tra path ... path to alignment file for training data\n");
@@ -35,34 +36,56 @@ use dzsys;
 $opath = '.';
 GetOptions
 (
-    'trs=s' => \$trspath,
-    'trt=s' => \$trtpath,
-    'tra=s' => \$trapath,
-    's=s'   => \$spath,
-    'r=s'   => \$rpath,
-    'h=s'   => \$hpath,
-    'ra=s'  => \$rapath,
-    'ha=s'  => \$hapath,
-    'o=s'   => \$opath,
-    'oprf=s'=> \$oprf,
+    'target' => \$target,
+    'trs=s'  => \$trspath,
+    'trt=s'  => \$trtpath,
+    'tra=s'  => \$trapath,
+    's=s'    => \$spath,
+    'r=s'    => \$rpath,
+    'h=s'    => \$hpath,
+    'ra=s'   => \$rapath,
+    'ha=s'   => \$hapath,
+    'o=s'    => \$opath,
+    'oprf=s' => \$oprf,
 );
 if($trspath eq '' || $trtpath eq '' || $trapath eq '')
 {
     usage();
     die("Training data input paths are mandatory. The output path defaults to '.'.\n");
 }
-# Build index.
+# Build the index.
 print STDERR ("Reading the training corpus...\n");
-index_corpus('training', $trspath, $trtpath, $trapath, \%index, $opath);
+if($target)
+{
+    index_corpus('training', $trtpath, $trspath, $trapath, \%index, $opath);
+}
+else
+{
+    index_corpus('training', $trspath, $trtpath, $trapath, \%index, $opath);
+}
 if($spath ne '' && $rpath ne '' && $rapath ne '')
 {
     print STDERR ("Reading the reference test data...\n");
-    index_corpus('test', $spath, $rpath, $rapath, \%index, $opath);
+    if($target)
+    {
+        index_corpus('test', $rpath, $spath, $rapath, \%index, $opath);
+    }
+    else
+    {
+        index_corpus('test', $spath, $rpath, $rapath, \%index, $opath);
+    }
 }
 if($spath ne '' && $hpath ne '' && $hapath ne '')
 {
     print STDERR ("Reading the system output...\n");
-    index_corpus('test.system', $spath, $hpath, $hapath, \%index, $opath);
+    if($target)
+    {
+        index_corpus('test.system', $hpath, $spath, $hapath, \%index, $opath);
+    }
+    else
+    {
+        index_corpus('test.system', $spath, $hpath, $hapath, \%index, $opath);
+    }
 }
 # To speed up reading the index, do not save it in one huge file.
 # Instead, split it up according to the first letters of the words.
@@ -117,6 +140,9 @@ sub index_corpus
     my $apath = shift;
     my $index = shift; # Reference to the index hash.
     my $opath = shift; # Output path to copy the input files to.
+    # We only have to copy the corpus to the output folder once.
+    # We want to do this when indexing source language because for target, we have the sides swapped.
+    my $copy = !$target;
     my ($sid, $tid);
     if($corptype eq 'training')
     {
@@ -145,9 +171,12 @@ sub index_corpus
     my $hsrc = dzsys::gopen($spath);
     my $htgt = dzsys::gopen($tpath);
     my $hali = dzsys::gopen($apath);
-    open(OSRC, ">$ospath") or die("Cannot write $ospath: $!\n");
-    open(OTGT, ">$otpath") or die("Cannot write $otpath: $!\n");
-    open(OALI, ">$oapath") or die("Cannot write $oapath: $!\n");
+    if($copy)
+    {
+        open(OSRC, ">$ospath") or die("Cannot write $ospath: $!\n");
+        open(OTGT, ">$otpath") or die("Cannot write $otpath: $!\n");
+        open(OALI, ">$oapath") or die("Cannot write $oapath: $!\n");
+    }
     my $i_sentence = 0;
     while(1)
     {
@@ -164,9 +193,12 @@ sub index_corpus
         my $tgtline = <$htgt>;
         my $aliline = <$hali>;
         # Copy the lines just read to the output folder.
-        print OSRC ($srcline);
-        print OTGT ($tgtline);
-        print OALI ($aliline);
+        if($copy)
+        {
+            print OSRC ($srcline);
+            print OTGT ($tgtline);
+            print OALI ($aliline);
+        }
         # Chop off the line break.
         $srcline =~ s/\r?\n$//;
         $tgtline =~ s/\r?\n$//;
@@ -185,30 +217,17 @@ sub index_corpus
             );
             push(@{$index->{$srcwords[$i]}}, \%record);
         }
-        # Keep source index separate from target index. Don't do this reverse indexing here.
-        # Instead, call addictindex.pl twice and swap source with target.
-        if(0)
-        {
-            # For each target word find all source words it is aligned to.
-            for(my $i = 0; $i<=$#tgtwords; $i++)
-            {
-                my %record =
-                (
-                    'file' => $tid,
-                    'line' => $i_sentence,
-                    'aliphrase' => join(' ', map {$srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)))
-                );
-                push(@{$index->{$tgtwords[$i]}}, \%record);
-            }
-        }
         $i_sentence++;
     }
     close($hsrc);
     close($htgt);
     close($hali);
-    close(OSRC);
-    close(OTGT);
-    close(OALI);
+    if($copy)
+    {
+        close(OSRC);
+        close(OTGT);
+        close(OALI);
+    }
     print STDERR ("Found $i_sentence word-aligned sentence pairs.\n");
     print STDERR ("The index contains ", scalar(keys(%{$index})), " distinct words (both source and target).\n");
 }
