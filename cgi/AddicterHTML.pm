@@ -28,6 +28,8 @@ sub sentence_to_table_row
     my $tgtwords = shift; # array reference
     my $alignments = shift; # reference to array of arrays (pairs).
     my $target = shift; # 0|1: influences not only the order of the table rows
+    # Optionally, words can be transliterated from a foreign script to the Roman alphabet.
+    my $translitroutine = shift; # ref to subroutine
     my ($linklang, $aithis, $aithat);
     unless($target)
     {
@@ -45,8 +47,13 @@ sub sentence_to_table_row
     $mainrow .= "  <tr>";
     for(my $i = 0; $i<=$#{$srcwords}; $i++)
     {
+        my $translit;
+        if($translitroutine)
+        {
+            $translit = '<br/>'.&{$translitroutine}($srcwords->[$i]);
+        }
         # Every word except for the current one is a link to its own examples.
-        $mainrow .= '<td>'.word_to_link($experiment, $linklang, $srcwords->[$i]).'</td>';
+        $mainrow .= '<td>'.word_to_link($experiment, $linklang, $srcwords->[$i]).$translit.'</td>';
     }
     $mainrow .= "</tr>\n";
     # Get the alignments in the order of the source sentence.

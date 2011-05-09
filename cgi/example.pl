@@ -261,6 +261,7 @@ sub sentence_to_table
     # An empty row separates source and target sections.
     $html .= "  <tr><td></td></tr>\n";
     # Display the target words along with their alignment links.
+    $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1, \&translit_russian);
     $html .= "  <tr>";
     for(my $i = 0; $i<=$#tgtwords; $i++)
     {
@@ -318,6 +319,43 @@ sub sentence_to_table
     $html .= "</tr>\n";
     $html .= "</table>\n";
     return $html;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Transliterates text from a Brahmi-based script to the Roman alphabet. Can be
+# applied to the displayed words. Uses the global hash %prevod.
+#------------------------------------------------------------------------------
+sub translit_brahmi
+{
+    my $input = shift;
+    my $output = translit::prevest(\%prevod, $input);
+    return $output;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Transliterates text from Russian Cyrillic to the Roman alphabet. Can be
+# applied to the displayed words.
+#------------------------------------------------------------------------------
+sub translit_russian
+{
+    my $input = shift;
+    # Just a test... obviously it is very inefficient to declare the transliteration table here!
+    # Unicode hex 400..45F (dec 1024..1119)
+    my @roman = ('E', 'Ë', 'DJ', 'GJ', 'JE', 'S', 'I', 'JI', 'J', 'LJ', 'NJ', 'Ć', 'KJ', 'I', 'W', 'DŽ',
+                 'A', 'B', 'V', 'G', 'D', 'E', 'Ž', 'Z', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'F', 'H', 'C', 'Č', 'Š', 'ŠČ', "''", 'Y', "'", 'E', 'JU', 'JA',
+                 'a', 'b', 'v', 'g', 'd', 'e', 'ž', 'z', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'h', 'c', 'č', 'š', 'šč', "''", 'y', "'", 'e', 'ju', 'ja',
+                 'e', 'ë', 'dj', 'gj', 'je', 's', 'i', 'ji', 'j', 'lj', 'nj', 'ć', 'kj', 'i', 'w', 'dž');
+    my %prevod;
+    for(my $i = 0; $i<=$#roman; $i++)
+    {
+        $prevod{chr(1024+$i)} = $roman[$i];
+    }
+    my $output = translit::prevest(\%prevod, $input);
+    return $output;
 }
 
 
