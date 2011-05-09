@@ -257,33 +257,11 @@ sub sentence_to_table
     my @tgtwords = split(/\s+/, $tgtline);
     # Display the source words along with their alignment links.
     $html .= "<table border style='font-family:Code2000'>\n";
-    $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0);
+    $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0, $config{word});
     # An empty row separates source and target sections.
     $html .= "  <tr><td></td></tr>\n";
     # Display the target words along with their alignment links.
-    $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1, \&translit_russian);
-    $html .= "  <tr>";
-    for(my $i = 0; $i<=$#tgtwords; $i++)
-    {
-        my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[1]==$i} (@alignments)));
-        my $ali_ctpart = join('&nbsp;', map {$srcwords[$_->[0]] eq $config{word} ? "<span style='color:red'>$srcwords[$_->[0]]</span>" : $srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)));
-        $html .= "<td>$ali_word<br/>$ali_ctpart</td>";
-    }
-    $html .= "</tr>\n";
-    $html .= "  <tr>";
-    for(my $i = 0; $i<=$#tgtwords; $i++)
-    {
-        my $translit = translit::prevest(\%prevod, $tgtwords[$i]);
-        if($tgtwords[$i] eq $config{word})
-        {
-            $html .= "<td style='color:red'>$tgtwords[$i]<br/>$translit</td>";
-        }
-        else
-        {
-            # Every word except for the current one is a link to its own examples.
-            $html .= '<td>'.word_to_link($experiment, 't', $tgtwords[$i])."<br/>$translit</td>";
-        }
-    }
+    $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1, $config{word}, \&translit_russian);
     ###!!! If the filter is test+reference, show a third row with system hypothesis.
     if($config{filter} eq 'r')
     {
@@ -293,30 +271,8 @@ sub sentence_to_table
         my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
         my @tgtwords = split(/\s+/, $tgtline);
         $html .= "  <tr><td></td></tr>\n";
-        $html .= "  <tr>";
-        for(my $i = 0; $i<=$#tgtwords; $i++)
-        {
-            my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[1]==$i} (@alignments)));
-            my $ali_ctpart = join('&nbsp;', map {$srcwords[$_->[0]] eq $config{word} ? "<span style='color:red'>$srcwords[$_->[0]]</span>" : $srcwords[$_->[0]]} (grep {$_->[1]==$i} (@alignments)));
-            $html .= "<td>$ali_word<br/>$ali_ctpart</td>";
-        }
-        $html .= "</tr>\n";
-        $html .= "  <tr>";
-        for(my $i = 0; $i<=$#tgtwords; $i++)
-        {
-            my $translit = translit::prevest(\%prevod, $tgtwords[$i]);
-            if($tgtwords[$i] eq $config{word})
-            {
-                $html .= "<td style='color:red'>$tgtwords[$i]<br/>$translit</td>";
-            }
-            else
-            {
-                # Every word except for the current one is a link to its own examples.
-                $html .= '<td>'.word_to_link($experiment, 't', $tgtwords[$i])."<br/>$translit</td>";
-            }
-        }
+        $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1, $config{word}, \&translit_russian);
     }
-    $html .= "</tr>\n";
     $html .= "</table>\n";
     return $html;
 }
@@ -345,10 +301,12 @@ sub translit_russian
     my $input = shift;
     # Just a test... obviously it is very inefficient to declare the transliteration table here!
     # Unicode hex 400..45F (dec 1024..1119)
-    my @roman = ('E', 'Ë', 'DJ', 'GJ', 'JE', 'S', 'I', 'JI', 'J', 'LJ', 'NJ', 'Ć', 'KJ', 'I', 'W', 'DŽ',
-                 'A', 'B', 'V', 'G', 'D', 'E', 'Ž', 'Z', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'F', 'H', 'C', 'Č', 'Š', 'ŠČ', "''", 'Y', "'", 'E', 'JU', 'JA',
-                 'a', 'b', 'v', 'g', 'd', 'e', 'ž', 'z', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'h', 'c', 'č', 'š', 'šč', "''", 'y', "'", 'e', 'ju', 'ja',
-                 'e', 'ë', 'dj', 'gj', 'je', 's', 'i', 'ji', 'j', 'lj', 'nj', 'ć', 'kj', 'i', 'w', 'dž');
+    # chr(200) ... LATIN CAPITAL LETTER E WITH GRAVE
+    # chr(232) ... LATIN SMALL LETTER E WITH GRAVE
+    my @roman = (chr(200), 'Ë', 'DJ', 'GJ', 'JE', 'S', 'I', 'JI', 'J', 'LJ', 'NJ', 'Ć', 'KJ', 'I', 'W', 'DŽ',
+                 'A', 'B', 'V', 'G', 'D', 'E', 'Ž', 'Z', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'F', 'H', 'C', 'Č', 'Š', 'ŠČ', "''", 'Y', "'", chr(200), 'JU', 'JA',
+                 'a', 'b', 'v', 'g', 'd', 'e', 'ž', 'z', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'h', 'c', 'č', 'š', 'šč', "''", 'y', "'", chr(232), 'ju', 'ja',
+                 chr(232), 'ë', 'dj', 'gj', 'je', 's', 'i', 'ji', 'j', 'lj', 'nj', 'ć', 'kj', 'i', 'w', 'dž');
     my %prevod;
     for(my $i = 0; $i<=$#roman; $i++)
     {

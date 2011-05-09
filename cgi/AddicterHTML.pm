@@ -28,6 +28,8 @@ sub sentence_to_table_row
     my $tgtwords = shift; # array reference
     my $alignments = shift; # reference to array of arrays (pairs).
     my $target = shift; # 0|1: influences not only the order of the table rows
+    # Optionally, specify focus word. It will be highlighted and will not be a hyperlink.
+    my $focusword = shift; # string
     # Optionally, words can be transliterated from a foreign script to the Roman alphabet.
     my $translitroutine = shift; # ref to subroutine
     my ($linklang, $aithis, $aithat);
@@ -53,7 +55,8 @@ sub sentence_to_table_row
             $translit = '<br/>'.&{$translitroutine}($srcwords->[$i]);
         }
         # Every word except for the current one is a link to its own examples.
-        $mainrow .= '<td>'.word_to_link($experiment, $linklang, $srcwords->[$i]).$translit.'</td>';
+        my $word = $focusword && $srcwords->[$i] eq $focusword ? "<span style='color:red'>$focusword</span>" : word_to_link($experiment, $linklang, $srcwords->[$i]);
+        $mainrow .= "<td>$word$translit</td>";
     }
     $mainrow .= "</tr>\n";
     # Get the alignments in the order of the source sentence.
@@ -86,7 +89,13 @@ sub sentence_to_table_row
     $alirow .= "  <tr>";
     for(my $i = 0; $i<=$#alirow; $i++)
     {
-        $alirow .= "<td colspan='$alirow[$i][2]'>$alirow[$i][0]<br/>$alirow[$i][1]</td>";
+        my $aliphrase = $alirow[$i][0];
+        # Highlight the focus word in the aligned phrase, too.
+        if($focusword)
+        {
+            $aliphrase =~ s/\Q$focusword\E/<span style='color:red'>$focusword<\/span>/g;
+        }
+        $alirow .= "<td colspan='$alirow[$i][2]'>$aliphrase<br/>$alirow[$i][1]</td>";
     }
     $alirow .= "</tr>\n";
     # Put the two rows together.
