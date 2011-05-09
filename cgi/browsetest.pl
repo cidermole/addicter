@@ -190,18 +190,51 @@ sub sentence_to_table_row
         $mainrow .= '<td>'.word_to_link($config{experiment}, $linklang, $srcwords->[$i]).'</td>';
     }
     $mainrow .= "</tr>\n";
+    # Get the alignments in the order of the source sentence.
+    # Preprocess them into an array first, this will enable us to collapse subsequent identical cells into one.
+    my @alirow;
+    for(my $i = 0; $i<=$#{$srcwords}; $i++)
+    {
+        my $ali_word = join('&nbsp;', map {$tgtwords->[$_->[$aithat]]} (grep {$_->[$aithis]==$i} (@{$alignments})));
+        my $ali_link = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[$aithis]==$i} (@{$alignments})));
+        # The third element is the column span of the cell, initially set to 1 everywhere.
+        push(@alirow, [$ali_word, $ali_link, 1]);
+    }
+    # Collapse neighboring cells into one if they contain the same words.
+    my $last_word;
+    for(my $i = $#alirow; $i>=0; $i--)
+    {
+        if($i<$#alirow && $alirow[$i][0] eq $last_word)
+        {
+            # Copy over the alignment links from right.
+            $alirow[$i][1] .= '&nbsp;'.$alirow[$i+1][1];
+            # Extend the current column span.
+            $alirow[$i][2] += $alirow[$i+1][2];
+            # Remove the record neighboring to the right.
+            splice(@alirow, $i+1, 1);
+        }
+        $last_word = $alirow[$i][0];
+    }
     # Second row contains target words aligned to source words.
     my $alirow;
     $alirow .= "  <tr>";
-    for(my $i = 0; $i<=$#{$srcwords}; $i++)
+    for(my $i = 0; $i<=$#alirow; $i++)
     {
-        my $ali_word = join('&nbsp;', map {join('-', @{$_})} (grep {$_->[$aithis]==$i} (@{$alignments})));
-        my $ali_ctpart = join('&nbsp;', map {$tgtwords->[$_->[$aithat]]} (grep {$_->[$aithis]==$i} (@{$alignments})));
-        $alirow .= "<td>$ali_ctpart<br/>$ali_word</td>";
+        $alirow .= "<td colspan='$alirow[$i][2]'>$alirow[$i][0]<br/>$alirow[$i][1]</td>";
     }
     $alirow .= "</tr>\n";
     # Put the two rows together.
-    my $html = $target ? $alirow.$mainrow : $mainrow.$alirow;
+    # Originally, for target sentences, we displayed the alignment row before the main row.
+    # Perhaps it would be better to always show the main row first.
+    my $html;
+    if(0)
+    {
+        $html = $target ? $alirow.$mainrow : $mainrow.$alirow;
+    }
+    else
+    {
+        $html = $mainrow.$alirow;
+    }
     return $html;
 }
 
