@@ -182,7 +182,7 @@ if(exists($config{experiment}))
                 $n += $c;
                 if($i<20)
                 {
-                    $list .= '  <li>'.word_to_link($experiment, swaplang(), $acp)." ($c)</li>\n";
+                    $list .= '  <li>'.AddicterHTML::word_to_link($experiment, swaplang(), $acp)." ($c)</li>\n";
                 }
             }
             print("<p>The word '$config{word}' occurred $n times and got aligned to ", scalar(@alicps), " distinct words/phrases. The most frequent ones follow (with frequencies):</p>\n");
@@ -213,29 +213,6 @@ print("</html>\n");
 
 
 #------------------------------------------------------------------------------
-# Reads the n-th sentence (line) from a file. Does not assume we want to read
-# more so it opens and closes the file. Definitely not the most efficient way
-# of reading the whole file! Before returning the line, the function strips the
-# final line-break character.
-#------------------------------------------------------------------------------
-sub get_nth_line
-{
-    my $path = shift;
-    my $n = shift;
-    open(IN, $path) or print("<p style='color:red'>Cannot read $path: $!</p>\n");
-    my $line;
-    for(my $i = 0; $i<=$n; $i++)
-    {
-        $line = <IN>;
-    }
-    close(IN);
-    $line =~ s/\r?\n$//;
-    return $line;
-}
-
-
-
-#------------------------------------------------------------------------------
 # Generates a HTML table with a sentence pair/triple (for test data, triples of
 # source, reference and hypothesis may be available).
 #------------------------------------------------------------------------------
@@ -248,9 +225,9 @@ sub sentence_to_table
     my $tgtfile = shift;
     my $alifile = shift;
     my $html;
-    my $srcline = get_nth_line($files->{$srcfile}, $sntno);
-    my $tgtline = get_nth_line($files->{$tgtfile}, $sntno);
-    my $aliline = get_nth_line($files->{$alifile}, $sntno);
+    my $srcline = AddicterHTML::get_nth_line($files->{$srcfile}, $sntno);
+    my $tgtline = AddicterHTML::get_nth_line($files->{$tgtfile}, $sntno);
+    my $aliline = AddicterHTML::get_nth_line($files->{$alifile}, $sntno);
     # Decompose alignments into array of arrays (pairs).
     my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
     my @srcwords = split(/\s+/, $srcline);
@@ -265,8 +242,8 @@ sub sentence_to_table
     ###!!! If the filter is test+reference, show a third row with system hypothesis.
     if($config{filter} eq 'r')
     {
-        my $tgtline = get_nth_line($files->{H}, $sntno);
-        my $aliline = get_nth_line($files->{HA}, $sntno);
+        my $tgtline = AddicterHTML::get_nth_line($files->{H}, $sntno);
+        my $aliline = AddicterHTML::get_nth_line($files->{HA}, $sntno);
         # Decompose alignments into array of arrays (pairs).
         my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
         my @tgtwords = split(/\s+/, $tgtline);
@@ -314,21 +291,6 @@ sub translit_russian
     }
     my $output = translit::prevest(\%prevod, $input);
     return $output;
-}
-
-
-
-#------------------------------------------------------------------------------
-# Converts a word into a hyperlink to the page with an example of the word as
-# occurs in the corpus.
-#------------------------------------------------------------------------------
-sub word_to_link
-{
-    my $experiment = shift;
-    my $lang = shift;
-    my $word = shift;
-    my $html = "<a href='example.pl?experiment=$experiment&amp;lang=$lang&amp;word=$word'>$word</a>";
-    return $html;
 }
 
 

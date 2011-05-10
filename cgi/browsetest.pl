@@ -104,11 +104,11 @@ sub sentence_to_table
     my $hypfile = shift;
     my $halifile = shift;
     my $html;
-    my $srcline = get_nth_line($srcfile, $sntno);
-    my $tgtline = get_nth_line($tgtfile, $sntno);
-    my $aliline = get_nth_line($alifile, $sntno);
-    my $hypline = get_nth_line($hypfile, $sntno);
-    my $haliline = get_nth_line($halifile, $sntno);
+    my $srcline = AddicterHTML::get_nth_line($srcfile, $sntno);
+    my $tgtline = AddicterHTML::get_nth_line($tgtfile, $sntno);
+    my $aliline = AddicterHTML::get_nth_line($alifile, $sntno);
+    my $hypline = AddicterHTML::get_nth_line($hypfile, $sntno);
+    my $haliline = AddicterHTML::get_nth_line($halifile, $sntno);
     # Print raw sentences first. No tables, to make reading easier.
     $html .= "<dl>\n";
     $html .= "  <dt><b>source</b></dt>\n";
@@ -169,27 +169,4 @@ sub count_lines
     }
     close(IN);
     return $n;
-}
-
-
-
-#------------------------------------------------------------------------------
-# Reads the n-th sentence (line) from a file. Does not assume we want to read
-# more so it opens and closes the file. Definitely not the most efficient way
-# of reading the whole file! Before returning the line, the function strips the
-# final line-break character.
-#------------------------------------------------------------------------------
-sub get_nth_line
-{
-    my $path = shift;
-    my $n = shift;
-    open(IN, $path) or print("<p style='color:red'>Cannot read $path: $!</p>\n");
-    my $line;
-    for(my $i = 0; $i<=$n; $i++)
-    {
-        $line = <IN>;
-    }
-    close(IN);
-    $line =~ s/\r?\n$//;
-    return $line;
 }

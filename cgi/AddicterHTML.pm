@@ -10,6 +10,29 @@ use open ":utf8";
 
 
 #------------------------------------------------------------------------------
+# Reads the n-th sentence (line) from a file. Does not assume we want to read
+# more so it opens and closes the file. Definitely not the most efficient way
+# of reading the whole file! Before returning the line, the function strips the
+# final line-break character.
+#------------------------------------------------------------------------------
+sub get_nth_line
+{
+    my $path = shift;
+    my $n = shift;
+    open(IN, $path) or print("<p style='color:red'>Cannot read $path: $!</p>\n");
+    my $line;
+    for(my $i = 0; $i<=$n; $i++)
+    {
+        $line = <IN>;
+    }
+    close(IN);
+    $line =~ s/\r?\n$//;
+    return $line;
+}
+
+
+
+#------------------------------------------------------------------------------
 # Generates a part of an HTML table with a sentence and corresponding aligned
 # words from the other language. The function generates two table rows. One row
 # contains words (tokens) of the sentence. The other row contains the
