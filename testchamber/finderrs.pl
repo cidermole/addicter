@@ -44,6 +44,9 @@ my @handles = io::gopenMany(@inputFiles);
 my $tuple;
 my $cnt = counter::init();
 
+# There must be one root element in the output XML, otherwise the XML::Parser will complain.
+print("<document>\n");
+
 while($tuple = io::readSentences(@handles)) {
 	my $srcSnt = parse::sentence($tuple->[0], $opts->{'caseSensitive'});
 	my $hypSnt = parse::sentence($tuple->[1], $opts->{'caseSensitive'});
@@ -78,6 +81,9 @@ while($tuple = io::readSentences(@handles)) {
 counter::finish($cnt);
 
 io::closeMany(@handles);
+
+# There must be one root element in the output XML, otherwise the XML::Parser will complain.
+print("</document>\n");
 
 #####
 #

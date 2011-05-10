@@ -170,7 +170,10 @@ sub hashFactors {
 sub str4xml {
 	my $str = shift;
 	
-	$str =~ s/"/\\"/g;
+    $str =~ s/&/&amp;/g;
+    $str =~ s/</&lt;/g;
+    $str =~ s/>/&gt;/g;
+    $str =~ s/"/&quot;/g;
 	
 	return $str;
 }
