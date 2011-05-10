@@ -1,5 +1,6 @@
 package ordersim;
 use strict;
+use Carp; # confess() debugs better than die()
 use unscramble;
 use const;
 use io;
@@ -51,6 +52,8 @@ sub permutationToErrs {
 		if ($permutation->{'switch'}) {
 			my $idx1 = $hypIdxMap->[$permutation->{'refidx1'}];
 			my $idx2 = $hypIdxMap->[$permutation->{'refidx2'}];
+            # DZ: I got index out of bounds on my data.
+            confess("hyp[0..$#{$hyp}], idx1=$idx1, idx2=$idx2") if($idx1<0 || $idx1>$#{$hyp} || $idx2<0 || $idx2>$#{$hyp});
 			my $tok1 = io::tok2str4xml($hyp->[$idx1]);
 			my $tok2 = io::tok2str4xml($hyp->[$idx2]);
 			

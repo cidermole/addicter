@@ -4,12 +4,12 @@ use File::Spec;
 use Getopt::Long;
 
 BEGIN {
-	#include packages from same folder where the
-	#script is, even if launched from elsewhere
-	
-	my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
-	pop @dirs;
-	push(@INC, File::Spec->catdir(@dirs));
+    # include packages from same folder where the
+    # script is, even if launched from elsewhere
+    # unshift(), not push(), to give own functions precedence over other libraries
+    my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
+    pop @dirs;
+    unshift(@INC, File::Spec->catdir(@dirs));
 }
 
 use io;
@@ -30,7 +30,7 @@ if ($morePtsFile) {
 	push @files, $morePtsFile;
 }
 
-my @fhs = io::openMany(@files);
+my @fhs = io::gopenMany(@files);
 my $tuple;
 my $cnt = counter::init();
 

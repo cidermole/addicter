@@ -23,6 +23,24 @@ sub openRead {
 	return $fh;
 }
 
+
+
+#------------------------------------------------------------------------------
+# Opens a file for reading. If the file is gzipped, opens a pipe through gzip.
+# Returns the file handle. Throws an exception if the file cannot be opened.
+#------------------------------------------------------------------------------
+sub gopenRead
+{
+    my $filename = shift;
+    if($filename =~ m/\.gz$/)
+    {
+        $filename = "gunzip -c $filename |";
+    }
+    return openRead($filename);
+}
+
+
+
 #####
 #
 #####
@@ -33,6 +51,24 @@ sub openMany {
 	}
 	return @fhs;
 }
+
+
+
+#------------------------------------------------------------------------------
+# Opens several potentially gzipped files for reading and returns an array of
+# file handles. Same as openMany() but uses gopenRead() instead of openRead().
+#------------------------------------------------------------------------------
+sub gopenMany
+{
+    my @fhs = ();
+    for my $file (@_)
+    {
+        push(@fhs, gopenRead($file));
+    }
+    return @fhs;
+}
+
+
 
 #####
 #
@@ -143,8 +179,8 @@ sub str4xml {
 #
 #####
 sub tok2str4xml {
+    # Expected one parameter: an array reference.
 	my ($token) = @_;
-	
 	return str4xml(join("|", @$token));
 }
 

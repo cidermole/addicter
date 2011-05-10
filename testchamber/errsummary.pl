@@ -4,12 +4,12 @@ use File::Spec;
 use Getopt::Long;
 
 BEGIN {
-	#include packages from same folder where the
-	#script is, even if launched from elsewhere
-	
-	my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
-	pop @dirs;
-	push(@INC, File::Spec->catdir(@dirs));
+    # include packages from same folder where the
+    # script is, even if launched from elsewhere
+    # unshift(), not push(), to give own functions precedence over other libraries
+    my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
+    pop @dirs;
+    unshift(@INC, File::Spec->catdir(@dirs));
 }
 
 use io;
@@ -82,7 +82,14 @@ printWithCats($missingRefWords, 'Missing ref words', 'ref', $totalRefLen);
 printWithCats($incorrectHypWords, 'Incorrect hyp words', 'hyp', $totalHypLen);
 
 print "\nOrder similarity metrics\n";
-printf "\t%13s: %5.3f\n", "Spearman's rho", $totalRho / $totalNumOfAligned;
+if($totalNumOfAligned != 0)
+{
+    printf "\t%13s: %5.3f\n", "Spearman's rho", $totalRho / $totalNumOfAligned;
+}
+else
+{
+    printf("\t%13s: %5s\n", "Spearman's rho", "$totalRho / $totalNumOfAligned ... cannot divide by zero");
+}
 
 printWithCats($orderErrors, 'Order errors, by shift distance', 'hyp', $totalHypLen);
 

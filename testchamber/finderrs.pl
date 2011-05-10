@@ -4,12 +4,12 @@ use File::Spec;
 use Getopt::Long;
 
 BEGIN {
-	#include packages from same folder where the
-	#script is, even if launched from elsewhere
-	
-	my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
-	pop @dirs;
-	push(@INC, File::Spec->catdir(@dirs));
+    # include packages from same folder where the
+    # script is, even if launched from elsewhere
+    # unshift(), not push(), to give own functions precedence over other libraries
+    my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
+    pop @dirs;
+    unshift(@INC, File::Spec->catdir(@dirs));
 }
 
 use io;
@@ -20,8 +20,19 @@ use const;
 use flagg;
 use math;
 
+sub getUsage {
+    # return "Usage: finderrs.pl source.txt hypothesis.txt reference.txt alignment.txt > errorlist.txt\n";
+	return "Required arguments: source, hypothesis, reference, alignment [, ref-2, ali-2 [, ref-3, ali-3 [...]]]\n";
+}
+
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
+# Autoflush (useful for debugging)
+my $old_fh = select(STDERR);
+$| = 1;
+select(STDOUT);
+$| = 1;
+select($old_fh);
 
 my $opts = processInputArgsAndOpts();
 my @inputFiles = @ARGV;
@@ -29,7 +40,7 @@ my $numOfRefs = ((scalar @inputFiles) - 2) / 2;
 
 #print STDERR "NB! order of input arguments changed to support multiple references\n" . getUsage() . "\n";
 
-my @handles = io::openMany(@inputFiles);
+my @handles = io::gopenMany(@inputFiles);
 my $tuple;
 my $cnt = counter::init();
 
@@ -42,6 +53,21 @@ while($tuple = io::readSentences(@handles)) {
 	for my $i (0..($numOfRefs-1)) {
 		push @refSntArr, parse::sentence($tuple->[2 + $i * 2], $opts->{'caseSensitive'});
 		push @aliArr, parse::alignment($tuple->[2 + $i * 2 + 1]);
+        # DZ: Avoid later confusing errors: Check that the alignment indices are consistent with the two aligned sentences.
+        my $refSnt = $refSntArr[$#refSntArr];
+        my $aliHypRef = $aliArr[$#aliArr];
+        foreach my $aliPoint (@{$aliHypRef})
+        {
+            # Note: parse::alignment() always assumes that left side is hyp and right side is ref.
+            if($aliPoint->{'hyp'}>$#{$hypSnt} || $aliPoint->{'ref'}>$#{$refSnt})
+            {
+                print STDERR ("SRC[0..$#{$srcSnt}]: $tuple->[0]\n");
+                print STDERR ("HYP[0..$#{$hypSnt}]: $tuple->[1]\n");
+                print STDERR ("REF[0..$#{$refSnt}]: $tuple->[2+$i*2]\n");
+                print STDERR ("ALI[HYP-REF]: $tuple->[2+$i*2+1]\n");
+                die("Alignment point $aliPoint->{hyp}-$aliPoint->{ref} points to nowhere");
+            }
+        }
 	}
 	
 	displayErrors($cnt->{'val'}, $srcSnt, $hypSnt, \@refSntArr, \@aliArr, $opts->{'multiRefMethod'});
@@ -85,13 +111,6 @@ sub processInputArgsAndOpts {
 	}
 	
 	return { 'caseSensitive' => $caseSensitive, 'multiRefMethod' => $multiRefMethod };
-}
-
-#####
-#
-#####
-sub getUsage {
-	return "Required arguments: source, hypothesis, reference, alignment [, ref-2, ali-2 [, ref-3, ali-3 [...]]]\n";
 }
 
 #####
@@ -351,7 +370,7 @@ sub getMissingRefTokenErrs {
 			my $rawToken = io::tok2str4xml($refSnt->[$i]);
 			
 			push @output, "<missingRefWord idx=\"$i\" " .
-				"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
+				"surfaceForm=\"" . io::str4xml($surfForm) . "\" " .
 				"token=\"$rawToken\"/>";
 		}
 	}
@@ -378,7 +397,7 @@ sub getIncorrectHypTokenErrs {
 			my $tagId = ($srcHash->{$surfForm})? "untranslated": "extra";
 			
 			push @output, "<" . $tagId . "HypWord idx=\"$i\" " .
-				"surfaceForm=\"" . io::str4xml($surfForm) . "\" " . 
+				"surfaceForm=\"" . io::str4xml($surfForm) . "\" " .
 				"token=\"$rawToken\"/>";
 		}
 	}
