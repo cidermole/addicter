@@ -14,6 +14,8 @@ use open ":utf8";
 # more so it opens and closes the file. Definitely not the most efficient way
 # of reading the whole file! Before returning the line, the function strips the
 # final line-break character.
+#
+# Note that $n==1 means the first sentence, not $n==0.
 #------------------------------------------------------------------------------
 sub get_nth_line
 {
@@ -21,7 +23,7 @@ sub get_nth_line
     my $n = shift;
     open(IN, $path) or print("<p style='color:red'>Cannot read $path: $!</p>\n");
     my $line;
-    for(my $i = 0; $i<=$n; $i++)
+    for(my $i = 0; $i<$n; $i++)
     {
         $line = <IN>;
     }

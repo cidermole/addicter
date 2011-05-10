@@ -12,6 +12,7 @@ use lib 'C:\Documents and Settings\Dan\Dokumenty\Lingvistika\lib';
 use lib '/home/zeman/lib';
 use dzcgi;
 use AddicterHTML;
+use ReadFindErrs;
 
 # Print the HTML header (so that any debugging can possibly also output to the browser).
 print("Content-type: text/html; charset=utf8\n\n");
@@ -37,7 +38,8 @@ if(exists($config{experiment}))
         'R'   => "${path}test.tgt",
         'H'   => "${path}test.system.tgt",
         'RA'  => "${path}test.ali",
-        'HA'  => "${path}test.system.ali"
+        'HA'  => "${path}test.system.ali",
+        'XML' => "${path}tcerr.txt"
     );
     print("  <h1>Test Data of $config{experiment}</h1>\n");
     # How many lines (sentences) are there in the test data?
@@ -48,7 +50,7 @@ if(exists($config{experiment}))
         # So what do we need to read?
         my $sntno = $config{sntno}>0 ? $config{sntno} : 1;
         print(get_navigation($sntno, $numsnt));
-        print(sentence_to_table($sntno, $files{S}, $files{R}, $files{RA}, $files{H}, $files{HA}));
+        print(sentence_to_table($sntno, $files{S}, $files{R}, $files{RA}, $files{H}, $files{HA}, $files{XML}));
     }
 }
 else
@@ -82,7 +84,7 @@ sub get_navigation
     my $previous = $sntno-1;
     my $next = $sntno+1;
     push(@links, $previous>0 ? "<a href='browsetest.pl?experiment=$config{experiment}&amp;sntno=$previous'>previous</a>" : 'previous');
-    push(@links, $next<$numsnt ? "<a href='browsetest.pl?experiment=$config{experiment}&amp;sntno=$next'>next</a>" : 'next');
+    push(@links, $next<=$numsnt ? "<a href='browsetest.pl?experiment=$config{experiment}&amp;sntno=$next'>next</a>" : 'next');
     $html .= " Go to [".join(' | ', @links)."].";
     $html .= "</p>\n";
     return $html;
@@ -103,6 +105,7 @@ sub sentence_to_table
     my $alifile = shift;
     my $hypfile = shift;
     my $halifile = shift;
+    my $finderrsxmlfile = shift;
     my $html;
     my $srcline = AddicterHTML::get_nth_line($srcfile, $sntno);
     my $tgtline = AddicterHTML::get_nth_line($tgtfile, $sntno);
@@ -146,6 +149,30 @@ sub sentence_to_table
             $html .= "<table border style='font-family:Code2000'>\n";
             $html .= $rowpair;
             $html .= "</table>\n";
+        }
+    }
+    # Additional information by finderrs.pl from Mark's Testchamber.
+    if(-f $finderrsxmlfile)
+    {
+        my $xmlrecord = ReadFindErrs::get_nth_sentence($finderrsxmlfile, $sntno);
+        $html .= "<h2>Automatically Identified Errors</h2>\n";
+        if($xmlrecord->{state} eq 'waiting')
+        {
+            $html .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
+        }
+        elsif($xmlrecord->{state} eq 'finished')
+        {
+            $html .= "<dl>\n";
+            foreach my $key (keys(%{$xmlrecord->{errors}}))
+            {
+                $html .= "<dt><b>$key</b></dt>\n";
+                $html .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+            }
+            $html .= "</dl>\n";
+        }
+        else
+        {
+            $html .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
         }
     }
     return $html;
