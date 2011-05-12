@@ -109,6 +109,9 @@ if(exists($config{experiment}))
             }
             # So what do we need to read?
             my $sntno = $example->{line};
+            # In the index files, the first sentence has index 0. However, we present it to the user as the sentence no. 1,
+            # and so does also the get_nth_line() function work.
+            $sntno++;
             my ($srcfile, $tgtfile, $alifile);
             if($example->{file} eq 'TRS' || $example->{file} eq 'TRT')
             {
