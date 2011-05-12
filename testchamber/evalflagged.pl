@@ -329,7 +329,7 @@ sub getTruFlag {
 				$result = $flag;
 			}
 			else {
-				print STDERR "conflict between $flag and $result\n";
+				#print STDERR "conflict between $flag and $result\n";
 				
 				if (defined($desiredFlag)) {
 					if ($flag eq $desiredFlag) {
@@ -337,7 +337,7 @@ sub getTruFlag {
 					}
 				}
 				else {
-					die("Duplicate flag in hypothesis, damn (@$group)");
+					#die("Duplicate flag in hypothesis, damn (@$group)");
 				}
 			}
 		}

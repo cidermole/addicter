@@ -1,5 +1,6 @@
+<document>
 <sentence index="0">
-	<source length="29" text="miroslav čepický draws attention to potential problems : \" the law enables such speculation , nevertheless only an insignificant percentage of customers use the services of these companies ."/>
+	<source length="29" text="miroslav čepický draws attention to potential problems : &quot; the law enables such speculation , nevertheless only an insignificant percentage of customers use the services of these companies ."/>
 	<hypothesis length="23" text="miroslav čepický přitahuje pozornost potenciálních problémů : „ zákon umožňuje takové spekulace , nicméně jen zanedbatelné procento zákazníků využít služeb těchto firem ."/>
 	<reference index="0" length="23" aligned="22" text="na možné problémy upozorňuje miroslav čepický : „ zákon podobné spekulace umožňuje , nicméně služeb těchto firem využívá pouze zanedbatelné procento zákazníků ."/>
 	
@@ -29,9 +30,9 @@
 </sentence>
 
 <sentence index="1">
-	<source length="64" text="« the italian business has developed in an irrational way » observes paolo protti , anec 's president , \" it 's useful that new structures are built but it 's also essential that the survival of existing ones is guaranteed , because once a theatre in a city closes , not all its patrons may be inclined to transfer to the multiplexes ."/>
+	<source length="64" text="« the italian business has developed in an irrational way » observes paolo protti , anec 's president , &quot; it 's useful that new structures are built but it 's also essential that the survival of existing ones is guaranteed , because once a theatre in a city closes , not all its patrons may be inclined to transfer to the multiplexes ."/>
 	<hypothesis length="53" text="„ italský podnik vyvinul v iracionální , “ poznamenává paolo anec protti , prezident , „ je užitečné , že nové stavby stojí , ale je také důležité , aby přežití stávajících zaručeno , protože kdysi divadlo ve městě zavře , ne všechny jeho hostů může být sklon k převodu do multiplexes ."/>
-	<reference index="0" length="52" aligned="44" text="« italský postup se vyvinul neracionálně » tvrdí paolo protti , president anecu , \" je užitečné vytvářet nové struktury , ale bylo by potřeba garantovat , že ty již existující přežijí , protože když jedno kino ve městě zavře , ne všichni jeho návštěvníci jsou ochotni se přemístit do multiplexu ."/>
+	<reference index="0" length="52" aligned="44" text="« italský postup se vyvinul neracionálně » tvrdí paolo protti , president anecu , &quot; je užitečné vytvářet nové struktury , ale bylo by potřeba garantovat , že ty již existující přežijí , protože když jedno kino ve městě zavře , ne všichni jeho návštěvníci jsou ochotni se přemístit do multiplexu ."/>
 	
 	<untranslatedHypWord idx="6" surfaceForm="," token=",|punct|,"/>
 	<untranslatedHypWord idx="10" surfaceForm="anec" token="anec|content|anec"/>
@@ -52,14 +53,14 @@
 	<missingRefWord idx="28" surfaceForm="ty" token="ty|aux|ten"/>
 	<missingRefWord idx="35" surfaceForm="jedno" token="jedno|content|jeden"/>
 	
-	<unequalAlignedTokens hypIdx="0" hypToken="„|punct|\"" refIdx="0" refToken="«|punct|\"" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="0" hypToken="„|punct|&quot;" refIdx="0" refToken="«|punct|&quot;" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="2" hypToken="podnik|content|podnik" refIdx="2" refToken="postup|content|postup" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="4" hypToken="v|aux|v" refIdx="3" refToken="se|aux|se" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="iracionální|content|iracionální" refIdx="5" refToken="neracionálně|content|racionální" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="7" hypToken="“|punct|\"" refIdx="6" refToken="»|punct|\"" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="7" hypToken="“|punct|&quot;" refIdx="6" refToken="»|punct|&quot;" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="8" hypToken="poznamenává|content|poznamenat" refIdx="7" refToken="tvrdí|content|tvrdit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="prezident|content|prezident" refIdx="11" refToken="president|content|prezident" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="15" hypToken="„|punct|\"" refIdx="14" refToken="\"|punct|\"" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="15" hypToken="„|punct|&quot;" refIdx="14" refToken="&quot;|punct|&quot;" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="21" hypToken="stavby|content|stavba" refIdx="19" refToken="struktury|content|struktura" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="25" hypToken="je|content|být" refIdx="22" refToken="bylo|content|být" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="26" hypToken="také|content|také" refIdx="29" refToken="již|content|již" unequalFactorList="0,2"/>
@@ -85,7 +86,7 @@
 </sentence>
 
 <sentence index="2">
-	<source length="24" text="however , there are many local politicians who resist the pressure put on by the ' ndrangheta , heroes who remain clean \" ."/>
+	<source length="24" text="however , there are many local politicians who resist the pressure put on by the ' ndrangheta , heroes who remain clean &quot; ."/>
 	<hypothesis length="21" text="existuje však mnoho místních politiků , kteří odolali tlaku na podle let nato , hrdinové , kteří zůstávají čisté “ ."/>
 	<reference index="0" length="21" aligned="18" text="ale máme také mnoho místních politiků , kteří odolávají nátlakům ' ndranghety , hrdinů , kteří jsou stále neposkvrnění “ ."/>
 	
@@ -332,7 +333,7 @@
 </sentence>
 
 <sentence index="11">
-	<source length="46" text="\" from the beginning , with both of them and also with the chorus , i tried to make sure that they had clear articulation , so that the text could be understood well , so that they were in harmony , \" he said ."/>
+	<source length="46" text="&quot; from the beginning , with both of them and also with the chorus , i tried to make sure that they had clear articulation , so that the text could be understood well , so that they were in harmony , &quot; he said ."/>
 	<hypothesis length="37" text="„ od začátku se oba a také sbor , snažil jsem se , aby se ujistil , že se jasným přízvukem , takže text může být chápán tak , aby byly v souladu , “ řekl ."/>
 	<reference index="0" length="32" aligned="26" text="„ od začátku jsem se u obou a potom také se sborem snažil dbát , aby měli jasnou dikci , aby bylo textu dobře rozumět , aby souzněli , “ uvedl ."/>
 	
@@ -421,7 +422,7 @@
 </sentence>
 
 <sentence index="14">
-	<source length="56" text="but dannemarie could not profit and could not cause any major problems to the illhaeusern eleven who just fell back a little to make its defence more \" compact \" , except in the very last few seconds of the game where , after a big mess , the ball went very near the crosspiece ."/>
+	<source length="56" text="but dannemarie could not profit and could not cause any major problems to the illhaeusern eleven who just fell back a little to make its defence more &quot; compact &quot; , except in the very last few seconds of the game where , after a big mess , the ball went very near the crosspiece ."/>
 	<hypothesis length="43" text="ale dannemarie nelze zisku a může způsobit vážné problémy na illhaeusern eleven , která se právě se trochu na jeho obranu více „ kompaktní “ , až v posledních sekundách hry , jestliže po velký nepořádek , míč šel velmi blízko tvarovce ."/>
 	<reference index="0" length="46" aligned="28" text="dannemarie však z toho nedokázal vytěžit a jedenáctce z illhaeusern , která se jen trochu stáhla , aby „ zahustila “ obranu , již nezpůsobil žádné větší potíže , s výjimkou úplně posledních vteřin zápasu , kdy míč po velkém zmatku proletěl velice blízko břevna ."/>
 	
@@ -474,8 +475,6 @@
 	<unequalAlignedTokens hypIdx="34" hypToken="velký|content|velký" refIdx="39" refToken="velkém|content|velký" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="35" hypToken="nepořádek|content|nepořádek" refIdx="40" refToken="zmatku|content|zmatek" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="37" hypToken="míč|content|míč" refIdx="41" refToken="proletěl|content|proletět" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="40" hypToken="blízko|aux|blízko" refIdx="43" refToken="blízko|content|blízko" unequalFactorList="1"/>
-	<unequalAlignedTokens hypIdx="41" hypToken="tvarovce|content|tvarovka" refIdx="44" refToken="břevna|content|břevno" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.999"/>
 	
@@ -483,7 +482,7 @@
 </sentence>
 
 <sentence index="15">
-	<source length="13" text="one of lados 's \" study visits \" was to a beer-house ."/>
+	<source length="13" text="one of lados 's &quot; study visits &quot; was to a beer-house ."/>
 	<hypothesis length="12" text="jeden z lados „ studijní pobyty “ na pivo - dům ."/>
 	<reference index="0" length="12" aligned="11" text="při své „ studijní cestě “ si lados vyhlédl jednu pivnici ."/>
 	
@@ -541,9 +540,6 @@
 	<unequalAlignedTokens hypIdx="13" hypToken="prezentací|content|prezentace" refIdx="18" refToken="nevýznamnějších|content|významný" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="nejdůležitějších|content|důležitý" refIdx="19" refToken="módních|content|módní" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="pro|aux|pro" refIdx="21" refToken=",|punct|," unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="19" hypToken="španělskou|content|španělský" refIdx="24" refToken="španělská|content|španělský" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="20" hypToken="módní|content|módní" refIdx="25" refToken="firma|content|firma" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="21" hypToken="dům|content|dům" refIdx="26" refToken="sponzoruje|content|sponzorovat" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -554,7 +550,7 @@
 	<reference index="0" length="31" aligned="25" text="avšak později se ukázalo , že propuštění advokáti nebyli ohodnoceni o nic hůře než mnoho jejich kolegů , což mnohé pozorovatele vedlo k závěru , že propouštění bylo motivováno politicky ."/>
 	
 	<extraHypWord idx="8" surfaceForm="stejně" token="stejně|content|stejný"/>
-	<extraHypWord idx="21" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="21" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="25" surfaceForm="-" token="-|punct|-"/>
 	
 	<missingRefWord idx="3" surfaceForm="ukázalo" token="ukázalo|content|ukázat"/>
@@ -579,8 +575,6 @@
 	<unequalAlignedTokens hypIdx="18" hypToken="soudí|content|soudit" refIdx="23" refToken="závěru|content|závěr" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="22" hypToken="sackings|content|sackings" refIdx="26" refToken="propouštění|content|propouštět" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="23" hypToken="byl|content|být" refIdx="27" refToken="bylo|content|být" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="24" hypToken="politicky|content|politický" refIdx="28" refToken="motivováno|content|motivovat" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="26" hypToken="motivy|content|motiv" refIdx="29" refToken="politicky|content|politický" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -746,14 +740,14 @@
 </sentence>
 
 <sentence index="23">
-	<source length="51" text="\" naturally , an indignant ‘ enough ' has been raised , sincerely shared in front of tragedies that , due to their size , provoke an outcry by the media and the involvement of public opinion but everyday reality proposes dramatic cases , whose dynamics are even repetitive \" ."/>
+	<source length="51" text="&quot; naturally , an indignant ‘ enough ' has been raised , sincerely shared in front of tragedies that , due to their size , provoke an outcry by the media and the involvement of public opinion but everyday reality proposes dramatic cases , whose dynamics are even repetitive &quot; ."/>
 	<hypothesis length="46" text="„ přirozeně , “ rozhořčeně „ dost bylo vyvýšené , upřímně se před tragédií , že vzhledem ke své velikosti , vyvolalo to pobouření ve sdělovacích prostředcích a zapojení veřejnosti , ale každodenní reality navrhuje dramatických případů , jejichž dynamika jsou i opakující se “ ."/>
 	<reference index="0" length="45" aligned="33" text="„ přirozeně bylo vzneseno pobouřené ' dost ' , upřímně sdíleno tváří v tvář tragédiím , které svým rozsahem vyvolávají rozruch v médiích a účast veřejného mínění , avšak každodenní skutečnost nám znovu nabízí dramatické případy , dokonce se opakující ve své dynamice “ ."/>
 	
 	<extraHypWord idx="1" surfaceForm="přirozeně" token="přirozeně|content|přirozený"/>
 	<untranslatedHypWord idx="2" surfaceForm="," token=",|punct|,"/>
-	<extraHypWord idx="3" surfaceForm="“" token="“|punct|\""/>
-	<extraHypWord idx="5" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="3" surfaceForm="“" token="“|punct|&quot;"/>
+	<extraHypWord idx="5" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="6" surfaceForm="dost" token="dost|content|dost"/>
 	<extraHypWord idx="15" surfaceForm="že" token="že|aux|že"/>
 	<extraHypWord idx="16" surfaceForm="vzhledem" token="vzhledem|aux|vzhledem"/>
@@ -833,7 +827,6 @@
 	<unequalAlignedTokens hypIdx="22" hypToken="agentura|content|agentura" refIdx="22" refToken="úkolem|content|úkol" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="25" hypToken="rozvíjet|content|rozvíjet" refIdx="26" refToken="majetek|content|majetek" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="26" hypToken="vlastnosti|content|vlastnost" refIdx="28" refToken="rozvíjet|content|rozvíjet" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="28" hypToken="zvládnout|content|zvládnout" refIdx="30" refToken="spravovat|content|spravovat" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.992"/>
 	
@@ -974,13 +967,13 @@
 	<unequalAlignedTokens hypIdx="3" hypToken="styl|content|styl" refIdx="3" refToken="citu|content|cit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="více|content|hodně" refIdx="5" refToken="víc|content|hodně" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="mu|aux|on" refIdx="7" refToken=",|punct|," unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="8" hypToken="'|punct|'" refIdx="8" refToken="“|punct|\"" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="8" hypToken="'|punct|'" refIdx="8" refToken="“|punct|&quot;" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
 
 <sentence index="30">
-	<source length="36" text="furthermore , and here 's where mr. obama should take note , according to linda mikels , sixth street 's principal , the school 's instructional approach for english learners is \" full immersion . \""/>
+	<source length="36" text="furthermore , and here 's where mr. obama should take note , according to linda mikels , sixth street 's principal , the school 's instructional approach for english learners is &quot; full immersion . &quot;"/>
 	<hypothesis length="32" text="navíc tu a tam pan obama je třeba brát v potaz , podle jana mikels , šesté ulice hlavní , školní vyučovací postup pro angličtinu žáky je „ úplné ponoření . “"/>
 	<reference index="0" length="36" aligned="26" text="dále , a toho by si obama měl povšimnout , je podle lindy mikelsové , ředitelky sixth street , pedagogický přístup školy pro ty , kteří se anglicky teprve učí , „ úplné ponoření “ ."/>
 	
@@ -1020,7 +1013,7 @@
 	<ordSimMetrics spearmansRho="0.999"/>
 	
 	<ordErrorSwitchWords hypIdx1="5" hypIdx2="6" distance="1" hypToken1="obama|content|ob" hypToken2="je|content|být"/>
-	<ordErrorSwitchWords hypIdx1="30" hypIdx2="31" distance="1" hypToken1=".|punct|." hypToken2="“|punct|\""/>
+	<ordErrorSwitchWords hypIdx1="30" hypIdx2="31" distance="1" hypToken1=".|punct|." hypToken2="“|punct|&quot;"/>
 </sentence>
 
 <sentence index="31">
@@ -1128,8 +1121,6 @@
 	<unequalAlignedTokens hypIdx="4" hypToken="má|content|mít" refIdx="5" refToken="mají|content|mít" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="8" hypToken="čeká|content|čekat" refIdx="11" refToken="čekají|content|čekat" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="9" hypToken="nezbytná|content|zbytný" refIdx="13" refToken="nutné|content|nutný" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="10" hypToken="povolení|content|povolit" refIdx="15" refToken="kvůli|aux|kvůli" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="11" hypToken="k|aux|k" refIdx="16" refToken="možnosti|content|možný" unequalFactorList="0,1,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -1156,7 +1147,7 @@
 </sentence>
 
 <sentence index="37">
-	<source length="46" text="the inspector general 's report was highly critical of mr gonzales 's role in the affair , saying he bore \" primary responsibility \" for the sackings , that he \" abdicated \" his leadership role and was \" remarkably unengaged \" in the process ."/>
+	<source length="46" text="the inspector general 's report was highly critical of mr gonzales 's role in the affair , saying he bore &quot; primary responsibility &quot; for the sackings , that he &quot; abdicated &quot; his leadership role and was &quot; remarkably unengaged &quot; in the process ."/>
 	<hypothesis length="38" text="generální inspektor zpráva byla velmi kritická pana gonzalese role ve skandálu , že se „ primární odpovědnost “ za to , že „ abdicated sackings “ jeho vůdčí role a byl „ pozoruhodně unengaged “ v procesu ."/>
 	<reference index="0" length="42" aligned="33" text="zpráva generálního inspektora se k roli gonzalese v aféře vyjadřovala velmi kriticky , přičemž říkala , že nesl „ hlavní zodpovědnost “ za propouštění , že „ abdikoval “ ze své vedoucí pozice a v dění se „ pozoruhodně neangažoval “ ."/>
 	
@@ -1192,7 +1183,6 @@
 	<unequalAlignedTokens hypIdx="27" hypToken="vůdčí|content|vůdčí" refIdx="31" refToken="vedoucí|content|vedoucí" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="28" hypToken="role|content|role" refIdx="32" refToken="pozice|content|pozice" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="30" hypToken="byl|content|být" refIdx="36" refToken="se|aux|se" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="33" hypToken="unengaged|content|unengaged" refIdx="39" refToken="neangažoval|content|angažovat" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.992"/>
 	
@@ -1431,7 +1421,6 @@
 	<unequalAlignedTokens hypIdx="4" hypToken="se|aux|se" refIdx="10" refToken="o|aux|o" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="snížil|content|snížit" refIdx="7" refToken="klesly|content|klesnout" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="i|aux|i" refIdx="9" refToken="dokonce|content|dokonce" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="7" hypToken="průzkum|content|průzkum" refIdx="11" refToken="polovinu|content|polovina" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.762"/>
 	
@@ -1548,7 +1537,6 @@
 	<unequalAlignedTokens hypIdx="7" hypToken="problémům|content|problém" refIdx="7" refToken="následky|content|následek" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="11" hypToken="cirhóza|content|cirhóza" refIdx="18" refToken="cirhóze|content|cirhóza" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="nebo|aux|nebo" refIdx="17" refToken="jaterní|content|jaterní" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="14" hypToken="rakovinu|content|rakovina" refIdx="20" refToken="rakovině|content|rakovina" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="je|content|být" refIdx="10" refToken="není|content|být" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="17" hypToken="ošetřeno|content|ošetřit" refIdx="11" refToken="léčena|content|léčit" unequalFactorList="0,2"/>
 	
@@ -1631,8 +1619,6 @@
 	<unequalAlignedTokens hypIdx="28" hypToken="hrdina|content|hrdina" refIdx="35" refToken="hrdinou|content|hrdina" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="32" hypToken="je|content|být" refIdx="39" refToken=",|punct|," unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="37" hypToken="strávil|content|strávit" refIdx="44" refToken="žil|content|žít" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="43" hypToken="a|aux|a" refIdx="51" refToken="i|aux|i" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="45" hypToken="amazon|content|amazon" refIdx="53" refToken="amazonii|content|amazonia" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -1650,7 +1636,7 @@
 	<missingRefWord idx="11" surfaceForm="že" token="že|aux|že"/>
 	<missingRefWord idx="12" surfaceForm="se" token="se|aux|se"/>
 	<missingRefWord idx="13" surfaceForm="snaží" token="snaží|content|snažit"/>
-	<missingRefWord idx="18" surfaceForm="“" token="“|punct|\""/>
+	<missingRefWord idx="18" surfaceForm="“" token="“|punct|&quot;"/>
 	<missingRefWord idx="19" surfaceForm="pro" token="pro|aux|pro"/>
 	<missingRefWord idx="20" surfaceForm="celý" token="celý|content|celý"/>
 	<missingRefWord idx="21" surfaceForm="bankovní" token="bankovní|content|bankovní"/>
@@ -1663,7 +1649,6 @@
 	<unequalAlignedTokens hypIdx="6" hypToken="hlasy|content|hlas" refIdx="5" refToken="tamního|content|tamní" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="manifest|content|manifest" refIdx="6" refToken="představenstva|content|představenstvo" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="8" hypToken="touha|content|touha" refIdx="7" refToken="mluví|content|mluvit" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="9" hypToken="po|content|po" refIdx="14" refToken="o|aux|o" unequalFactorList="0,1,2"/>
 	
 	<ordSimMetrics spearmansRho="0.967"/>
 	
@@ -1708,7 +1693,6 @@
 	<unequalAlignedTokens hypIdx="30" hypToken="před|aux|před" refIdx="32" refToken="vedoucími|content|vedoucí" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="31" hypToken="vůdci|content|vůdce" refIdx="33" refToken="představiteli|content|představitel" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="32" hypToken="místních|content|místní" refIdx="34" refToken="místní|content|místní" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="33" hypToken="maďarů|content|maďar" refIdx="36" refToken="komunity|content|komunita" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.924"/>
 	
@@ -1766,7 +1750,7 @@
 </sentence>
 
 <sentence index="56">
-	<source length="10" text="\" it would be a mistake to underestimate her ."/>
+	<source length="10" text="&quot; it would be a mistake to underestimate her ."/>
 	<hypothesis length="8" text="„ bylo by chybou je podceňovat ji ."/>
 	<reference index="0" length="7" aligned="7" text="„ bylo by chybou ji podcenit ."/>
 	
@@ -1780,7 +1764,7 @@
 </sentence>
 
 <sentence index="57">
-	<source length="22" text="\" in other words , this means that 12 million blood products will be distributed before someone is infected with hiv ."/>
+	<source length="22" text="&quot; in other words , this means that 12 million blood products will be distributed before someone is infected with hiv ."/>
 	<hypothesis length="22" text="„ jinými slovy , to znamená , že 12 milionů krevní produkty budou distribuovány do někoho , kdo je nakažených hiv ."/>
 	<reference index="0" length="22" aligned="19" text="„ jinými slovy , znamená to , že než se někdo nakazí hiv , bude třeba distribuovat 12 milionů krevních produktů ."/>
 	
@@ -1826,8 +1810,6 @@
 	<unequalAlignedTokens hypIdx="6" hypToken="jaterní|content|jaterní" refIdx="7" refToken="jater|content|játra" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="8" hypToken="způsobují|content|způsobovat" refIdx="8" refToken="způsobovaný|content|způsobovat" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="vznik|content|vznik" refIdx="15" refToken="vzniku|content|vznik" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="16" hypToken="předčasné|content|předčasný" refIdx="20" refToken="rozpoznání|content|rozpoznat" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="17" hypToken="uznání|content|uznat" refIdx="21" refToken="nemoci|content|nemoc" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.998"/>
 	
@@ -1861,7 +1843,7 @@
 </sentence>
 
 <sentence index="60">
-	<source length="54" text="\" if the project is effectively dead ( ... ) then the relay will be quickly passed to the fed ( i.e. the u.s. central bank ) and other central banks to manage the crisis which would further tighten the credit conditions \" , predicted brian bethune , chief economist at global insight ."/>
+	<source length="54" text="&quot; if the project is effectively dead ( ... ) then the relay will be quickly passed to the fed ( i.e. the u.s. central bank ) and other central banks to manage the crisis which would further tighten the credit conditions &quot; , predicted brian bethune , chief economist at global insight ."/>
 	<hypothesis length="47" text="„ pokud se projekt je skutečně mrtev ( . . . ) pak přenosu bude rychle fedu ( americká centrální banka ) a další centrální banky k řešení krize , které by dále posílit úvěrové podmínky , “ předpověděl brian bethune , hlavní ekonom global insight ."/>
 	<reference index="0" length="56" aligned="43" text="„ jestli je tento projekt skutečně odsouzen k zániku ( . . . ) , štafeta bude neprodleně předána fedu ( americká centrální banka , pozn . red . ) a ostatním centrálním bankám , aby zažehnaly krizi , což by více upevnilo úvěrové podmínky , “ upozornil brian bethune , vedoucí ekonom global insight ."/>
 	
@@ -1896,8 +1878,6 @@
 	<unequalAlignedTokens hypIdx="30" hypToken="které|aux|který" refIdx="39" refToken="což|aux|což" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="32" hypToken="dále|content|dále" refIdx="41" refToken="více|content|hodně" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="33" hypToken="posílit|content|posílit" refIdx="42" refToken="upevnilo|content|upevnit" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="38" hypToken="předpověděl|content|předpovědět" refIdx="47" refToken="upozornil|content|upozornit" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="42" hypToken="hlavní|content|hlavní" refIdx="51" refToken="vedoucí|content|vedoucí" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.974"/>
 	
@@ -2026,8 +2006,6 @@
 	<unequalAlignedTokens hypIdx="21" hypToken="zda|aux|zda" refIdx="26" refToken="jestli|aux|jestli" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="23" hypToken="moci|content|moci" refIdx="12" refToken="mohla|content|moci" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="24" hypToken="zůstat|content|zůstat" refIdx="27" refToken="zůstane|content|zůstat" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="30" hypToken="vrací|content|vracet" refIdx="34" refToken="bangladéše|content|bangladéš" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="32" hypToken="bangladéše|content|bangladéš" refIdx="35" refToken="vrátí|content|vrátit" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.936"/>
 	
@@ -2158,7 +2136,7 @@
 </sentence>
 
 <sentence index="69">
-	<source length="12" text="\" this is a traditional position that all governments have reiterated ."/>
+	<source length="12" text="&quot; this is a traditional position that all governments have reiterated ."/>
 	<hypothesis length="12" text="„ to je tradiční názor , že všechny vlády si zopakoval ."/>
 	<reference index="0" length="13" aligned="10" text="„ jedná se o tradiční postoj , který opakovaly všechny dosavadní vlády ."/>
 	
@@ -2253,8 +2231,6 @@
 	<unequalAlignedTokens hypIdx="7" hypToken="obec|content|obec" refIdx="9" refToken="komunita|content|komunita" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="11" hypToken="chudoby|content|chudoba" refIdx="18" refToken="dvojnásobná|content|dvojnásobný" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="dvakrát|content|dvakrát" refIdx="19" refToken="oproti|aux|oproti" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="17" hypToken="celostátní|content|celostátní" refIdx="20" refToken="celonárodnímu|content|celonárodní" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="18" hypToken="průměr|content|průměr" refIdx="21" refToken="průměru|content|průměr" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="0.997"/>
 	
@@ -2319,7 +2295,6 @@
 	<missingRefWord idx="31" surfaceForm="podobu" token="podobu|content|podoba"/>
 	<missingRefWord idx="32" surfaceForm="." token=".|punct|."/>
 	
-	<unequalAlignedTokens hypIdx="0" hypToken="písemné|content|písemný" refIdx="30" refToken="písemnou|content|písemný" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="ekonomické|content|ekonomický" refIdx="5" refToken="ekonomiky|content|ekonomika" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="8" hypToken="pomoci|content|pomoc" refIdx="2" refToken="balíku|content|balík" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="9" hypToken="balíčku|content|balíček" refIdx="4" refToken="záchranu|content|záchrana" unequalFactorList="0,2"/>
@@ -2377,13 +2352,13 @@
 </sentence>
 
 <sentence index="77">
-	<source length="27" text="the french filmmaker bertrand tavernier considered him , not without humour , \" as a living challenge to \" underplaying \" judging his performances too supported ."/>
+	<source length="27" text="the french filmmaker bertrand tavernier considered him , not without humour , &quot; as a living challenge to &quot; underplaying &quot; judging his performances too supported ."/>
 	<hypothesis length="23" text="francouzské filmaře bertrand tavernier s ním , bez humoru , „ jako životní výzvu “ underplaying „ posuzování jeho výkony příliš podporován ."/>
 	<reference index="0" length="29" aligned="19" text="francouzský filmař bertrand tavernier jej , nikoli bez humoru , považoval „ za živou výzvu underplayingu “ , soudě , že ve svých výkonech příliš tlačil na pilu ."/>
 	
 	<extraHypWord idx="4" surfaceForm="s" token="s|aux|s"/>
 	<untranslatedHypWord idx="15" surfaceForm="underplaying" token="underplaying|content|underplaying"/>
-	<extraHypWord idx="16" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="16" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="17" surfaceForm="posuzování" token="posuzování|content|posuzovat"/>
 	
 	<missingRefWord idx="6" surfaceForm="nikoli" token="nikoli|aux|nikoli"/>
@@ -2404,8 +2379,6 @@
 	<unequalAlignedTokens hypIdx="12" hypToken="životní|content|životní" refIdx="13" refToken="živou|content|živý" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="výzvu|content|výzva" refIdx="15" refToken="underplayingu|content|underplayingu" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="18" hypToken="jeho|aux|jeho" refIdx="22" refToken="svých|aux|svůj" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="19" hypToken="výkony|content|výkon" refIdx="23" refToken="výkonech|content|výkon" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="21" hypToken="podporován|content|podporovat" refIdx="27" refToken="pilu|content|pila" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -2449,7 +2422,6 @@
 	<unequalAlignedTokens hypIdx="21" hypToken="ráno|content|ráno" refIdx="22" refToken="policie|content|policie" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="23" hypToken="policii|content|policie" refIdx="24" refToken="přesvědčena|content|přesvědčit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="27" hypToken="organizovaná|content|organizovat" refIdx="29" refToken="organizovanou|content|organizovat" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="28" hypToken="akce|content|akce" refIdx="30" refToken="akci|content|akce" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -2495,7 +2467,7 @@
 </sentence>
 
 <sentence index="80">
-	<source length="37" text="it is believed to have come out of this impasse ever since the democrats have agreed that certain \" toxic \" shares of companies in difficulty are only insured by the government , rather than purchased ."/>
+	<source length="37" text="it is believed to have come out of this impasse ever since the democrats have agreed that certain &quot; toxic &quot; shares of companies in difficulty are only insured by the government , rather than purchased ."/>
 	<hypothesis length="34" text="je možné , že se z této slepé uličky od chvíle , kdy demokraté dohodli , že některé „ jedovatý “ akcie podniků v nesnázích je pouze u vlády , než aby nakupovali ."/>
 	<reference index="0" length="37" aligned="31" text="od chvíle , kdy demokraté přistoupili na to , že za některá „ toxická “ aktiva společností majících potíže bude vláda pouze ručit , ale neodkoupí je , panuje přesvědčení , že bezvýchodná situace je zažehnána ."/>
 	
@@ -2558,9 +2530,6 @@
 	
 	<unequalAlignedTokens hypIdx="3" hypToken="skutečnost|content|skutečný" refIdx="6" refToken="těžko|content|těžko" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="bude|content|být" refIdx="11" refToken="nebude|content|být" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="12" hypToken="koaliční|content|koaliční" refIdx="19" refToken="berlínskou|content|berlínský" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="13" hypToken="vládu|content|vláda" refIdx="20" refToken="velkou|content|velký" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="15" hypToken="berlíně|content|berlín" refIdx="21" refToken="koalici|content|koalice" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.989"/>
 	
@@ -2568,7 +2537,7 @@
 </sentence>
 
 <sentence index="82">
-	<source length="24" text="the latter have promised to accept \" with a constructive spirit \" and they hope he \" will arrive with practical proposals \" ."/>
+	<source length="24" text="the latter have promised to accept &quot; with a constructive spirit &quot; and they hope he &quot; will arrive with practical proposals &quot; ."/>
 	<hypothesis length="19" text="komise slíbila přijmout „ s konstruktivní duch “ a doufají , že „ dorazí s praktickými návrhy “ ."/>
 	<reference index="0" length="24" aligned="19" text="posledně jmenovaní slíbili , že bude přijat „ v konstruktivním duchu “ , a doufají , že „ přijde s konkrétními návrhy “ ."/>
 	
@@ -2585,7 +2554,6 @@
 	<unequalAlignedTokens hypIdx="5" hypToken="konstruktivní|content|konstruktivní" refIdx="9" refToken="konstruktivním|content|konstruktivní" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="duch|content|duch" refIdx="10" refToken="duchu|content|duch" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="dorazí|content|dorazit" refIdx="18" refToken="přijde|content|přijít" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="15" hypToken="praktickými|content|praktický" refIdx="20" refToken="konkrétními|content|konkrétní" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -2610,8 +2578,6 @@
 	<unequalAlignedTokens hypIdx="13" hypToken="opětovného|content|opětovný" refIdx="20" refToken="znovu|content|znovu" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="zavedení|content|zavést" refIdx="21" refToken="zařadil|content|zařadit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="18" hypToken="aby|aux|aby" refIdx="19" refToken="ji|aux|on" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="19" hypToken="americká|content|americký" refIdx="23" refToken="amerického|content|americký" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="20" hypToken="canon|content|canon" refIdx="24" refToken="kánonu|content|kánon" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.979"/>
 	
@@ -2749,8 +2715,6 @@
 	<unequalAlignedTokens hypIdx="1" hypToken="přes|aux|přes" refIdx="4" refToken="la|content|la" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="2" hypToken="kanál|content|kanál" refIdx="5" refToken="manche|content|manche" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="8" hypToken="nationalize|content|nationalize" refIdx="14" refToken="znárodnění|content|znárodnit" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="9" hypToken="jiné|content|jiný" refIdx="15" refToken="další|content|další" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="13" hypToken="krize|content|krize" refIdx="19" refToken="krizí|content|krize" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="0.984"/>
 	
@@ -2758,7 +2722,7 @@
 </sentence>
 
 <sentence index="90">
-	<source length="14" text="\" people were always glad to see zora , \" mr. franklin said ."/>
+	<source length="14" text="&quot; people were always glad to see zora , &quot; mr. franklin said ."/>
 	<hypothesis length="13" text="„ lidé byli vždy rád , zora , “ pan franklin řekl ."/>
 	<reference index="0" length="11" aligned="10" text="„ lidé zoru vždycky rádi viděli , “ řekl franklin ."/>
 	
@@ -2984,7 +2948,7 @@
 	<hypothesis length="12" text="mnozí oprávněně poukazují na to , že „ není operační systém ."/>
 	<reference index="0" length="12" aligned="11" text="mnozí oprávněně poukázali na to , že prohlížeč není operační systém ."/>
 	
-	<extraHypWord idx="7" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="7" surfaceForm="„" token="„|punct|&quot;"/>
 	
 	<missingRefWord idx="7" surfaceForm="prohlížeč" token="prohlížeč|content|prohlížeč"/>
 	
@@ -3027,7 +2991,7 @@
 </sentence>
 
 <sentence index="100">
-	<source length="13" text="she has good instincts nonetheless \" , warned bill clinton this weekend ."/>
+	<source length="13" text="she has good instincts nonetheless &quot; , warned bill clinton this weekend ."/>
 	<hypothesis length="13" text="má dobré instinkty , nicméně „ , varoval bill clinton o víkendu ."/>
 	<reference index="0" length="11" aligned="11" text="je nadaná , “ upozornil nicméně o víkendu bill clinton ."/>
 	
@@ -3036,7 +3000,7 @@
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="má|content|mít" refIdx="0" refToken="je|content|být" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="2" hypToken="instinkty|content|instinkt" refIdx="1" refToken="nadaná|content|nat-2" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="5" hypToken="„|punct|\"" refIdx="3" refToken="“|punct|\"" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="5" hypToken="„|punct|&quot;" refIdx="3" refToken="“|punct|&quot;" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="varoval|content|varovat" refIdx="4" refToken="upozornil|content|upozornit" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.900"/>
@@ -3205,7 +3169,7 @@
 </sentence>
 
 <sentence index="106">
-	<source length="25" text="\" we tried to find a solution to this with the ministry , and initially they did not permit the movement of the passengers ."/>
+	<source length="25" text="&quot; we tried to find a solution to this with the ministry , and initially they did not permit the movement of the passengers ."/>
 	<hypothesis length="15" text="„ my pokusili najít řešení této s knězem , a zprvu neumožňovaly pohyb osob ."/>
 	<reference index="0" length="12" aligned="9" text="„ toto jsme s ministerstvem řešili a zprvu pohyb cestujících nedovolilo ."/>
 	
@@ -3302,7 +3266,7 @@
 </sentence>
 
 <sentence index="110">
-	<source length="30" text="\" the revolving doors – says brunetta – are a tool for working better , with a higher productivity , higher presence and more services \" specifies the minister ."/>
+	<source length="30" text="&quot; the revolving doors – says brunetta – are a tool for working better , with a higher productivity , higher presence and more services &quot; specifies the minister ."/>
 	<hypothesis length="28" text="„ otočné dveře - říká brunetta - jsou nástroje pro práci lépe , s vyšší produktivitu práce , vyšší výskyt a další služby , “ upřesňuje ministr ."/>
 	<reference index="0" length="25" aligned="24" text="„ otáčivé dveře - říká brunetta - jsou nástrojem pro lepší práci , vyšší výkonnost , více prezencí a více služeb “ upřesňuje ministr ."/>
 	
@@ -3341,7 +3305,6 @@
 	
 	<unequalAlignedTokens hypIdx="2" hypToken="vlny|content|vlna" refIdx="4" refToken="přílivu|content|příliv" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="3" hypToken=",|punct|," refIdx="5" refToken="a|aux|a" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="4" hypToken="vlny|content|vlna" refIdx="7" refToken="odlivu|content|odliv" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -3378,20 +3341,20 @@
 </sentence>
 
 <sentence index="113">
-	<source length="37" text="always on the same track , it is possible to create \" hybrid pdf \" documents , that join the standard graphics of the adobe format with the elements of a spreadsheet or a word processor ."/>
+	<source length="37" text="always on the same track , it is possible to create &quot; hybrid pdf &quot; documents , that join the standard graphics of the adobe format with the elements of a spreadsheet or a word processor ."/>
 	<hypothesis length="28" text="vždy na stejné dráze , je možné vytvořit „ hybridní “ pdf dokumentů , že do standardní grafiku ve formátu adobe s prvky „ nebo textový procesor ."/>
 	<reference index="0" length="28" aligned="22" text="stále z tohohle hlediska můžeme vytvářet dokumenty „ pdf hybridy “ , které se podobají typické grafice formátu adobe a mají vlastnosti tabulkového procesoru nebo textového programu ."/>
 	
 	<untranslatedHypWord idx="4" surfaceForm="," token=",|punct|,"/>
 	<extraHypWord idx="5" surfaceForm="je" token="je|content|být"/>
 	<extraHypWord idx="7" surfaceForm="vytvořit" token="vytvořit|content|vytvořit"/>
-	<extraHypWord idx="8" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="8" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="12" surfaceForm="dokumentů" token="dokumentů|content|dokument"/>
-	<extraHypWord idx="23" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="23" surfaceForm="„" token="„|punct|&quot;"/>
 	
 	<missingRefWord idx="6" surfaceForm="dokumenty" token="dokumenty|content|dokument"/>
 	<missingRefWord idx="9" surfaceForm="hybridy" token="hybridy|content|hybrid"/>
-	<missingRefWord idx="10" surfaceForm="“" token="“|punct|\""/>
+	<missingRefWord idx="10" surfaceForm="“" token="“|punct|&quot;"/>
 	<missingRefWord idx="15" surfaceForm="typické" token="typické|content|typický"/>
 	<missingRefWord idx="22" surfaceForm="tabulkového" token="tabulkového|content|tabulkový"/>
 	<missingRefWord idx="23" surfaceForm="procesoru" token="procesoru|content|procesor"/>
@@ -3402,7 +3365,7 @@
 	<unequalAlignedTokens hypIdx="3" hypToken="dráze|content|dráha" refIdx="3" refToken="hlediska|content|hledisko" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="možné|content|možný" refIdx="4" refToken="můžeme|content|moci" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="9" hypToken="hybridní|content|hybridní" refIdx="5" refToken="vytvářet|content|vytvářet" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="10" hypToken="“|punct|\"" refIdx="7" refToken="„|punct|\"" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="10" hypToken="“|punct|&quot;" refIdx="7" refToken="„|punct|&quot;" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="že|aux|že" refIdx="12" refToken="které|aux|který" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="15" hypToken="do|aux|do" refIdx="13" refToken="se|aux|se" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="standardní|content|standardní" refIdx="14" refToken="podobají|content|podobat" unequalFactorList="0,2"/>
@@ -3489,8 +3452,6 @@
 	<unequalAlignedTokens hypIdx="14" hypToken="együtt|content|együtt" refIdx="18" refToken="nadaci|content|nadace" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="15" hypToken="évezredért|content|évezredért" refIdx="19" refToken="együtt|content|együtt" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="18" hypToken="alapítvány|content|alapítvány" refIdx="22" refToken="évezredért|content|évezredért" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="20" hypToken="přijaté|content|přmout-2" refIdx="24" refToken="sám|aux|sám" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="21" hypToken="částky|content|částka" refIdx="27" refToken="protihodnotu|content|protihodnota" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -3514,7 +3475,6 @@
 	<unequalAlignedTokens hypIdx="0" hypToken="nezapomeňte|content|zapomenout" refIdx="0" refToken="připomeňte|content|připomenout" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="4" hypToken="to|aux|ten" refIdx="11" refToken="toho|aux|ten" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="neurážlivý|content|urážlivý" refIdx="7" refToken="neškodná|content|škodný" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="13" hypToken="bude|content|být" refIdx="21" refToken="nebude|content|být" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="15" hypToken="něco|aux|něco" refIdx="13" refToken="co|aux|co" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="je|content|být" refIdx="14" refToken="se|aux|se" unequalFactorList="0,1,2"/>
 	
@@ -3583,7 +3543,6 @@
 	<unequalAlignedTokens hypIdx="10" hypToken=",|punct|," refIdx="11" refToken="byli|content|být" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="11" hypToken="kritizoval|content|kritizovat" refIdx="12" refToken="kritizováni|content|kritizovat" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="12" hypToken="za|aux|za" refIdx="16" refToken="že|aux|že" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="13" hypToken="nedokázali|content|dokázat" refIdx="19" refToken="nespolupracovali|content|spolupracovat" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.991"/>
 	
@@ -3694,12 +3653,12 @@
 </sentence>
 
 <sentence index="123">
-	<source length="16" text="\" the threat cannot be ignored any more \" , marks the tages-anzeiger from geneva ."/>
+	<source length="16" text="&quot; the threat cannot be ignored any more &quot; , marks the tages-anzeiger from geneva ."/>
 	<hypothesis length="14" text="„ hrozba nelze přehlížet další “ , označuje tages - anzeiger v ženevě ."/>
 	<reference index="0" length="13" aligned="10" text="hrozbu již nelze dále opomíjet , poukazuje ženevský deník tages - anzeiger ."/>
 	
-	<extraHypWord idx="0" surfaceForm="„" token="„|punct|\""/>
-	<extraHypWord idx="5" surfaceForm="“" token="“|punct|\""/>
+	<extraHypWord idx="0" surfaceForm="„" token="„|punct|&quot;"/>
+	<extraHypWord idx="5" surfaceForm="“" token="“|punct|&quot;"/>
 	<extraHypWord idx="11" surfaceForm="v" token="v|aux|v"/>
 	<extraHypWord idx="12" surfaceForm="ženevě" token="ženevě|content|ženeva"/>
 	
@@ -3765,7 +3724,7 @@
 </sentence>
 
 <sentence index="126">
-	<source length="33" text="but , he added , rocking in his chair on a back patio overlooking lake sabelia , where hurston was most likely baptized , \" she never did stay too long . \""/>
+	<source length="33" text="but , he added , rocking in his chair on a back patio overlooking lake sabelia , where hurston was most likely baptized , &quot; she never did stay too long . &quot;"/>
 	<hypothesis length="26" text="dodal ale , houpal se na židli na zadní terase nad jezerem , kde hurston sabelia nejpravděpodobnější křtěni „ nikdy neměl zůstat příliš dlouho . “"/>
 	<reference index="0" length="32" aligned="24" text="ale , dodal , houpaje se na židli na zadní terase s výhledem na jezero sabelia , kde byla hurstonová s největší pravděpodobností pokřtěna , „ nikdy nezůstala příliš dlouho . “"/>
 	
@@ -3787,7 +3746,6 @@
 	<unequalAlignedTokens hypIdx="14" hypToken="hurston|content|hurston" refIdx="19" refToken="hurstonová|content|hurstonová" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="nejpravděpodobnější|content|pravděpodobný" refIdx="22" refToken="pravděpodobností|content|pravděpodobný" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="17" hypToken="křtěni|content|křtít" refIdx="23" refToken="pokřtěna|content|pokřtít" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="21" hypToken="zůstat|content|zůstat" refIdx="27" refToken="nezůstala|content|zůstat" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="0.997"/>
 	
@@ -3812,9 +3770,6 @@
 	<unequalAlignedTokens hypIdx="5" hypToken="eatonville|content|eatonville" refIdx="8" refToken="kdy|content|kdy" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="nejznámější|content|známý" refIdx="9" refToken="nejslavnější|content|slavný" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="dcera|content|dcera" refIdx="11" refToken="eatonvillu|content|eatonvillu" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="8" hypToken="opět|content|opět" refIdx="12" refToken="znovu|content|znovu" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="9" hypToken="našel|content|najít" refIdx="13" refToken="nalezla|content|nalézt" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="10" hypToken="reflektor|content|reflektor" refIdx="15" refToken="ramp|content|rampa" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.979"/>
 	
@@ -3871,7 +3826,7 @@
 </sentence>
 
 <sentence index="130">
-	<source length="36" text="furthermore , and here 's where mr. obama should take note , according to linda mikels , sixth street 's principal , the school 's instructional approach for english learners is \" full immersion . \""/>
+	<source length="36" text="furthermore , and here 's where mr. obama should take note , according to linda mikels , sixth street 's principal , the school 's instructional approach for english learners is &quot; full immersion . &quot;"/>
 	<hypothesis length="32" text="navíc tu a tam pan obama je třeba brát v potaz , podle jana mikels , šesté ulice hlavní , školní vyučovací postup pro angličtinu žáky je „ úplné ponoření . “"/>
 	<reference index="0" length="36" aligned="26" text="dále , a toho by si obama měl povšimnout , je podle lindy mikelsové , ředitelky sixth street , pedagogický přístup školy pro ty , kteří se anglicky teprve učí , „ úplné ponoření “ ."/>
 	
@@ -3911,7 +3866,7 @@
 	<ordSimMetrics spearmansRho="0.999"/>
 	
 	<ordErrorSwitchWords hypIdx1="5" hypIdx2="6" distance="1" hypToken1="obama|content|ob" hypToken2="je|content|být"/>
-	<ordErrorSwitchWords hypIdx1="30" hypIdx2="31" distance="1" hypToken1=".|punct|." hypToken2="“|punct|\""/>
+	<ordErrorSwitchWords hypIdx1="30" hypIdx2="31" distance="1" hypToken1=".|punct|." hypToken2="“|punct|&quot;"/>
 </sentence>
 
 <sentence index="131">
@@ -3949,7 +3904,6 @@
 	<unequalAlignedTokens hypIdx="4" hypToken="hospodářské|content|hospodářský" refIdx="9" refToken="nouzové|content|nouzový" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="stabilizaci|content|stabilizace" refIdx="10" refToken="ekonomické|content|ekonomický" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="act|content|act" refIdx="11" refToken="stabilizaci|content|stabilizace" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="15" hypToken="hlasování|content|hlasovat" refIdx="25" refToken="hlasovat|content|hlasovat" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="17" hypToken="sněmovně|content|sněmovna" refIdx="19" refToken="program|content|program" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="18" hypToken="reprezentantů|content|reprezentant" refIdx="20" refToken="ustanovit|content|ustanovit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="20" hypToken="za|aux|za" refIdx="6" refToken="jméno|content|jméno" unequalFactorList="0,1,2"/>
@@ -3963,7 +3917,7 @@
 </sentence>
 
 <sentence index="132">
-	<source length="46" text="the writer , always favoured for the nobel prize in literature , confessed yesterday during the hay festival in segovia , that the draft he is dealing with is a \" chance \" and that everything indicates that i should not write it down . \""/>
+	<source length="46" text="the writer , always favoured for the nobel prize in literature , confessed yesterday during the hay festival in segovia , that the draft he is dealing with is a &quot; chance &quot; and that everything indicates that i should not write it down . &quot;"/>
 	<hypothesis length="38" text="spisovatel , vždycky udělal pro nobelovu cenu za literaturu , přiznal včera v hay festival v segovia , že návrh je řešení je „ náhodou “ a že to všechno znamená , že bych neměl psát . “"/>
 	<reference index="0" length="43" aligned="30" text="věčný favorit nobelovy ceny za literaturu se včera na festivalu hay festival segovia přiznal , že projekt , který ho právě zaměstnává , „ je troufalost “ , a že „ vše nasvědčuje tomu , že bych neměl psát “ tento román ."/>
 	
@@ -3974,7 +3928,7 @@
 	<extraHypWord idx="15" surfaceForm="v" token="v|aux|v"/>
 	<extraHypWord idx="20" surfaceForm="je" token="je|content|být"/>
 	<extraHypWord idx="21" surfaceForm="řešení" token="řešení|content|řešit"/>
-	<extraHypWord idx="37" surfaceForm="“" token="“|punct|\""/>
+	<extraHypWord idx="37" surfaceForm="“" token="“|punct|&quot;"/>
 	
 	<missingRefWord idx="11" surfaceForm="festival" token="festival|content|festival"/>
 	<missingRefWord idx="13" surfaceForm="přiznal" token="přiznal|content|přiznat"/>
@@ -3985,9 +3939,9 @@
 	<missingRefWord idx="22" surfaceForm="," token=",|punct|,"/>
 	<missingRefWord idx="24" surfaceForm="je" token="je|content|být"/>
 	<missingRefWord idx="27" surfaceForm="," token=",|punct|,"/>
-	<missingRefWord idx="30" surfaceForm="„" token="„|punct|\""/>
+	<missingRefWord idx="30" surfaceForm="„" token="„|punct|&quot;"/>
 	<missingRefWord idx="38" surfaceForm="psát" token="psát|content|psát"/>
-	<missingRefWord idx="39" surfaceForm="“" token="“|punct|\""/>
+	<missingRefWord idx="39" surfaceForm="“" token="“|punct|&quot;"/>
 	<missingRefWord idx="40" surfaceForm="tento" token="tento|aux|tento"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="spisovatel|content|spisovatel" refIdx="0" refToken="věčný|content|věčný" unequalFactorList="0,2"/>
@@ -4004,7 +3958,6 @@
 	<unequalAlignedTokens hypIdx="28" hypToken="to|aux|ten" refIdx="33" refToken="tomu|aux|ten" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="29" hypToken="všechno|aux|všechen" refIdx="31" refToken="vše|aux|všechen" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="30" hypToken="znamená|content|znamenat" refIdx="32" refToken="nasvědčuje|content|nasvědčovat" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="35" hypToken="psát|content|psát" refIdx="41" refToken="román|content|román" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.999"/>
 	
@@ -4012,7 +3965,7 @@
 </sentence>
 
 <sentence index="133">
-	<source length="48" text="\" pushing the limits of our last great northern frontier \" : this is the long-term ambition that jean charest presented with visual strength while remaining within the broad outline of the term of the general council of the liberal party of quebec , in levis yesterday ."/>
+	<source length="48" text="&quot; pushing the limits of our last great northern frontier &quot; : this is the long-term ambition that jean charest presented with visual strength while remaining within the broad outline of the term of the general council of the liberal party of quebec , in levis yesterday ."/>
 	<hypothesis length="40" text="„ pushing meze naší poslední velké severní hranice : “ je to dlouhodobá proto , že jean charest představil s vizuální sílu , a přitom zůstávají v hrubý nástin termín generální rady z liberální strany quebeku v levis včera ."/>
 	<reference index="0" length="37" aligned="30" text="„ odsunout meze naší poslední velké severní hranice “ : taková je dlouhodobá ambice , kterou jean charest včera představil vizuálně poutavým způsobem v závěru sjezdu liberální strany québeku v lévisu , aniž však sdělil podrobnosti ."/>
 	
@@ -4051,7 +4004,7 @@
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 	
-	<ordErrorSwitchWords hypIdx1="8" hypIdx2="9" distance="1" hypToken1=":|punct|:" hypToken2="“|punct|\""/>
+	<ordErrorSwitchWords hypIdx1="8" hypIdx2="9" distance="1" hypToken1=":|punct|:" hypToken2="“|punct|&quot;"/>
 </sentence>
 
 <sentence index="134">
@@ -4068,7 +4021,7 @@
 	<missingRefWord idx="2" surfaceForm="začala" token="začala|content|začít"/>
 	<missingRefWord idx="10" surfaceForm="co" token="co|aux|co"/>
 	<missingRefWord idx="11" surfaceForm="dělat" token="dělat|content|dělat"/>
-	<missingRefWord idx="13" surfaceForm="“" token="“|punct|\""/>
+	<missingRefWord idx="13" surfaceForm="“" token="“|punct|&quot;"/>
 	
 	<unequalAlignedTokens hypIdx="9" hypToken="stále|content|stálý" refIdx="9" refToken="hodně|content|hoý-2" unequalFactorList="0,2"/>
 	
@@ -4080,7 +4033,7 @@
 </sentence>
 
 <sentence index="135">
-	<source length="37" text="there is a border along which there has been no agreement for too long a time and , when the opportunity arises , i reiterate this position there on behalf of government \" , he said ."/>
+	<source length="37" text="there is a border along which there has been no agreement for too long a time and , when the opportunity arises , i reiterate this position there on behalf of government &quot; , he said ."/>
 	<hypothesis length="29" text="existuje hranice , po nichž nedošlo k dohodě o příliš dlouhou dobu , a když je příležitost , jsem opětovně tuto pozici tam jménem vlády „ , řekl ."/>
 	<reference index="0" length="30" aligned="24" text="existuje jedna hraniční čára , o které již dlouho neexistuje úmluva , a nastane - li vhodná příležitost , ve jménu vlády tento postoj znovu zaujmu , “ naznačil ."/>
 	
@@ -4110,7 +4063,7 @@
 	<unequalAlignedTokens hypIdx="20" hypToken="tuto|aux|tento" refIdx="22" refToken="tento|aux|tento" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="21" hypToken="pozici|content|pozice" refIdx="23" refToken="postoj|content|postoj" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="23" hypToken="jménem|content|jméno" refIdx="20" refToken="jménu|content|jméno" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="25" hypToken="„|punct|\"" refIdx="27" refToken="“|punct|\"" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="25" hypToken="„|punct|&quot;" refIdx="27" refToken="“|punct|&quot;" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="27" hypToken="řekl|content|říci" refIdx="28" refToken="naznačil|content|naznačit" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.974"/>
@@ -4121,7 +4074,7 @@
 	<ordErrorShiftWord hypPos="23" hypToken="jménem|content|jméno" distance="3" direction="towardsBeginning"/>
 	<ordErrorShiftWord hypPos="24" hypToken="vlády|content|vláda" distance="4" direction="towardsBeginning"/>
 	<ordErrorShiftWord hypPos="19" hypToken="opětovně|content|opětovný" distance="5" direction="towardsEnd"/>
-	<ordErrorSwitchWords hypIdx1="25" hypIdx2="26" distance="1" hypToken1="„|punct|\"" hypToken2=",|punct|,"/>
+	<ordErrorSwitchWords hypIdx1="25" hypIdx2="26" distance="1" hypToken1="„|punct|&quot;" hypToken2=",|punct|,"/>
 </sentence>
 
 <sentence index="136">
@@ -4140,7 +4093,7 @@
 </sentence>
 
 <sentence index="137">
-	<source length="54" text="\" he left an example of the highest level for all of us , \" notes george clooney , perhaps one of the few who try to live today as paul newman did : maintaining in high consideration the need for rectitude and having a serious private life , away from the cameras ."/>
+	<source length="54" text="&quot; he left an example of the highest level for all of us , &quot; notes george clooney , perhaps one of the few who try to live today as paul newman did : maintaining in high consideration the need for rectitude and having a serious private life , away from the cameras ."/>
 	<hypothesis length="46" text="„ nechal příklad nejvyšší úroveň pro všechny z nás , “ konstatuje george clooney , možná jeden z mála , kteří se snaží žít dnes jako paul newman : udržet se v nejvyšší úctě k potřebě poctivostí a s vážným soukromý život , od kamery ."/>
 	<reference index="0" length="47" aligned="38" text="„ ten lišák nám všem nasadil pěkně vysokou laťku , “ konstatuje george clooney , možná jeden z mála , který má v dnešní době odvahu snažit se žít jako žil paul newman - zakládá si na poctivosti a vede seriózní soukromý život daleko od kamer ."/>
 	
@@ -4209,8 +4162,8 @@
 	<reference index="0" length="19" aligned="14" text="angličtí mluvčí mu říkají ' tank ' , ale le fabuleux marcel z bruselu vyniká nad všechny ostatní ."/>
 	
 	<extraHypWord idx="1" surfaceForm="to" token="to|aux|ten"/>
-	<extraHypWord idx="2" surfaceForm="„" token="„|punct|\""/>
-	<extraHypWord idx="4" surfaceForm="“" token="“|punct|\""/>
+	<extraHypWord idx="2" surfaceForm="„" token="„|punct|&quot;"/>
+	<extraHypWord idx="4" surfaceForm="“" token="“|punct|&quot;"/>
 	<untranslatedHypWord idx="10" surfaceForm="," token=",|punct|,"/>
 	<untranslatedHypWord idx="15" surfaceForm="marcel" token="marcel|content|marcel"/>
 	<extraHypWord idx="16" surfaceForm="stojí" token="stojí|content|stát"/>
@@ -4239,7 +4192,7 @@
 </sentence>
 
 <sentence index="140">
-	<source length="24" text="napolitano does not conceal that \" undoubtedly there 's also a resources problem : it 's important to invest in training and information ."/>
+	<source length="24" text="napolitano does not conceal that &quot; undoubtedly there 's also a resources problem : it 's important to invest in training and information ."/>
 	<hypothesis length="21" text="napolitana , nelze zakrýt , že „ nepochybně je také prostředky problém : důležité je investovat do vzdělání a informace ."/>
 	<reference index="0" length="20" aligned="18" text="napolitano neskrývá , že „ zde bezpochyby existuje i problém zdrojů : je rozhodující investovat do školení a informovanosti ."/>
 	
@@ -4295,8 +4248,6 @@
 	<unequalAlignedTokens hypIdx="11" hypToken="oznámila|content|oznámit" refIdx="14" refToken="ukázala|content|ukázat" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="12" hypToken="byl|content|být" refIdx="15" refToken=",|punct|," unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="sťat|content|setnout" refIdx="17" refToken="mafiánská|content|mafiánský" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="15" hypToken="piromalli|content|piromalli" refIdx="21" refToken="konečný|content|konečný" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="16" hypToken="gangu|content|gang" refIdx="22" refToken="zásah|content|zásah" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.987"/>
 	
@@ -4367,9 +4318,6 @@
 	<unequalAlignedTokens hypIdx="11" hypToken="silnice|content|silnice" refIdx="18" refToken="chvíli|content|chvíle" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="15" hypToken="dva|content|dva" refIdx="19" refToken="oba|content|oba" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="cestující|content|cestovat" refIdx="20" refToken="pasažéři|content|pasažér" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="17" hypToken="odletěli|content|odletět" refIdx="26" refToken="útěk|content|útěk" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="19" hypToken="zalesněného|content|zalesnit" refIdx="28" refToken="lesnatého|content|lesnatý" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="20" hypToken="prostoru|content|prostor" refIdx="29" refToken="porostu|content|porost" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.949"/>
 	
@@ -4701,7 +4649,7 @@
 	<hypothesis length="14" text="„ určitě se pokusí společného startu windows 7 a windows mobile 7 společně ."/>
 	<reference index="0" length="17" aligned="11" text="v microsoftu se určitě budou snažit uvést na trh windows 7 a windows mobile 7 společně ."/>
 	
-	<extraHypWord idx="0" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="0" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="4" surfaceForm="společného" token="společného|content|společný"/>
 	<extraHypWord idx="5" surfaceForm="startu" token="startu|content|start"/>
 	
@@ -4981,8 +4929,6 @@
 	<unequalAlignedTokens hypIdx="49" hypToken="a|aux|a" refIdx="54" refToken="k|aux|k" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="50" hypToken="na|aux|na" refIdx="53" refToken="až|aux|až" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="51" hypToken="maximálně|content|maximální" refIdx="55" refToken="maximálním|content|maximální" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="54" hypToken="victoria|content|victoria" refIdx="59" refToken="zóně|content|zóna" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="55" hypToken="pásmo|content|pásmo" refIdx="60" refToken="vittoria|content|vittorio" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.977"/>
 	
@@ -5004,7 +4950,7 @@
 	
 	<extraHypWord idx="0" surfaceForm="někteří" token="někteří|aux|některý"/>
 	<extraHypWord idx="2" surfaceForm="mohou" token="mohou|content|moci"/>
-	<extraHypWord idx="6" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="6" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="9" surfaceForm="jako" token="jako|aux|jako"/>
 	<extraHypWord idx="12" surfaceForm="u" token="u|aux|u"/>
 	<extraHypWord idx="13" surfaceForm="právního" token="právního|content|právní"/>
@@ -5131,7 +5077,7 @@
 </sentence>
 
 <sentence index="170">
-	<source length="21" text="she added that \" everything depends on whether the electronic access control system will be employed overseas in time \" ."/>
+	<source length="21" text="she added that &quot; everything depends on whether the electronic access control system will be employed overseas in time &quot; ."/>
 	<hypothesis length="22" text="dodala , že „ všechno závisí na tom , zda elektronický systém řízení přístupu je zaměstnán v zahraničí v čase “ ."/>
 	<reference index="0" length="29" aligned="19" text="podle jejího názoru „ teď už záleží skoro všechno jen na tom , bude - li za mořem včas vybudován elektronický systém povolování cest , respektive kontrol “ ."/>
 	
@@ -5155,7 +5101,6 @@
 	<unequalAlignedTokens hypIdx="2" hypToken="že|aux|že" refIdx="1" refToken="jejího|aux|jeho" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="závisí|content|záviset" refIdx="9" refToken="jen|aux|jen" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="9" hypToken="zda|aux|zda" refIdx="19" refToken="vybudován|content|vybudovat" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="12" hypToken="řízení|content|řídit" refIdx="22" refToken="povolování|content|povolovat" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="je|content|být" refIdx="13" refToken="bude|content|být" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="15" hypToken="zaměstnán|content|zaměstnat" refIdx="15" refToken="li|aux|li" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="v|aux|v" refIdx="16" refToken="za|aux|za" unequalFactorList="0,2"/>
@@ -5171,11 +5116,11 @@
 </sentence>
 
 <sentence index="171">
-	<source length="45" text="\" during the further reconciliations having come to an end on saturday night , east coast time , the congressional leaders managed to agree on the debate of several days , which concerned the 700 billion dollar bailout package \" , the reuters confirmed ."/>
+	<source length="45" text="&quot; during the further reconciliations having come to an end on saturday night , east coast time , the congressional leaders managed to agree on the debate of several days , which concerned the 700 billion dollar bailout package &quot; , the reuters confirmed ."/>
 	<hypothesis length="39" text="„ během další vyrovnání má skončit v sobotu v noci při východním pobřeží , představitelé kongresu podařilo dohodnout se na debatu o několik dnů , které se týkaly 700 miliard dolarů pomoci , balíček “ , reuters potvrzeno ."/>
 	<reference index="0" length="39" aligned="27" text="po dalších jednáních , která skončila až v sobotu po půlnoci amerického východního času , dospěli představitelé kongresu k dohodě v několik dní trvající debatě o záchranném balíku v celkové hodnotě 700 miliard dolarů , sdělila agentura reuters ."/>
 	
-	<extraHypWord idx="0" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="0" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="4" surfaceForm="má" token="má|content|mít"/>
 	<extraHypWord idx="8" surfaceForm="v" token="v|aux|v"/>
 	<untranslatedHypWord idx="13" surfaceForm="," token=",|punct|,"/>
@@ -5185,7 +5130,7 @@
 	<extraHypWord idx="26" surfaceForm="se" token="se|aux|se"/>
 	<extraHypWord idx="31" surfaceForm="pomoci" token="pomoci|content|pomoc"/>
 	<extraHypWord idx="33" surfaceForm="balíček" token="balíček|content|balíček"/>
-	<extraHypWord idx="34" surfaceForm="“" token="“|punct|\""/>
+	<extraHypWord idx="34" surfaceForm="“" token="“|punct|&quot;"/>
 	<untranslatedHypWord idx="35" surfaceForm="," token=",|punct|,"/>
 	
 	<missingRefWord idx="3" surfaceForm="," token=",|punct|,"/>
@@ -5251,7 +5196,7 @@
 </sentence>
 
 <sentence index="173">
-	<source length="32" text="\" avalon bay 's principal concern is refurbishing this derelict alleyway and turning it into a public amenity , \" she said , adding that the city had suggested the sale ."/>
+	<source length="32" text="&quot; avalon bay 's principal concern is refurbishing this derelict alleyway and turning it into a public amenity , &quot; she said , adding that the city had suggested the sale ."/>
 	<hypothesis length="29" text="„ avalon bay je hlavní starostí je modernizace tohoto trosečník uličkou a obrátil se na veřejné společnosti , “ řekla a dodala , že město se navrhovaný prodej ."/>
 	<reference index="0" length="29" aligned="26" text="„ hlavním záměrem avalon bay je opravit tuto zpustlou uličku a udělat z ní krásné místo pro veřejnost , “ řekla a dodala , že prodej navrhlo město ."/>
 	
@@ -5303,8 +5248,6 @@
 	<unequalAlignedTokens hypIdx="5" hypToken="rozhodnější|content|rozhodný" refIdx="7" refToken="vysoce|content|vysoce" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="kongresmanů|content|kongresman" refIdx="10" refToken="poslanců|content|poslanec" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="12" hypToken="prošetřit|content|prošetřit" refIdx="17" refToken="vyšetřovat|content|vyšetřovat" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="15" hypToken="volební|content|volební" refIdx="20" refToken="klamání|content|klamat" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="16" hypToken="podvody|content|podvod" refIdx="21" refToken="voličů|content|volič" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -5360,9 +5303,6 @@
 	<unequalAlignedTokens hypIdx="10" hypToken="televizní|content|televizní" refIdx="12" refToken="televizních|content|televizní" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="11" hypToken="obrazovky|content|obrazovka" refIdx="13" refToken="obrazovek|content|obrazovka" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="16" hypToken="nás|aux|já" refIdx="19" refToken="by|content|být" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="18" hypToken="stáli|content|stát" refIdx="23" refToken="stojí|content|stát" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="20" hypToken="očích|content|oko" refIdx="24" refToken="uprostřed|content|uprostřed" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="21" hypToken="bouři|content|bouře" refIdx="25" refToken="bouře|content|bouře" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="0.992"/>
 	
@@ -5460,7 +5400,6 @@
 	<unequalAlignedTokens hypIdx="17" hypToken="přenáší|content|přenášet" refIdx="20" refToken="krve|content|krev" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="18" hypToken="hmyz|content|hmyz" refIdx="21" refToken="bodnutím|content|bodnout" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="19" hypToken="v|aux|v" refIdx="19" refToken="do|aux|do" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="20" hypToken="krvi|content|krev" refIdx="22" refToken="hmyzu|content|hmyz" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.980"/>
 	
@@ -5497,9 +5436,6 @@
 	<unequalAlignedTokens hypIdx="19" hypToken="zamaskoval|content|zamaskovat" refIdx="23" refToken="zamaskování|content|zamaskovat" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="20" hypToken="motivy|content|motiv" refIdx="24" refToken="motivů|content|motiv" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="22" hypToken="poháněné|content|pohánět" refIdx="27" refToken="nenávistí|content|nenávist" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="23" hypToken="a|aux|a" refIdx="28" refToken="k|aux|k" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="25" hypToken="muslimských|content|muslimský" refIdx="29" refToken="muslimským|content|muslimský" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="26" hypToken="přistěhovalců|content|přistěhovalec" refIdx="30" refToken="imigrantům|content|imigrant" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.969"/>
 	
@@ -5576,16 +5512,16 @@
 </sentence>
 
 <sentence index="183">
-	<source length="26" text="\" there 's very little city-owned space left , and we would like the city to continue to own extra place , \" she said ."/>
+	<source length="26" text="&quot; there 's very little city-owned space left , and we would like the city to continue to own extra place , &quot; she said ."/>
 	<hypothesis length="20" text="„ je velmi málo město vlastní místo , a my jako město nadále vlastní extra náměstí , “ řekla ."/>
 	<reference index="0" length="24" aligned="16" text="„ město už vlastní jenom velmi málo pozemků , a rádi bychom , aby extra place v jeho vlastnictví zůstalo , “ řekla ."/>
 	
-	<extraHypWord idx="0" surfaceForm="„" token="„|punct|\""/>
+	<extraHypWord idx="0" surfaceForm="„" token="„|punct|&quot;"/>
 	<extraHypWord idx="4" surfaceForm="město" token="město|content|město"/>
 	<extraHypWord idx="5" surfaceForm="vlastní" token="vlastní|content|vlastnit"/>
 	<extraHypWord idx="11" surfaceForm="město" token="město|content|město"/>
 	
-	<missingRefWord idx="0" surfaceForm="„" token="„|punct|\""/>
+	<missingRefWord idx="0" surfaceForm="„" token="„|punct|&quot;"/>
 	<missingRefWord idx="1" surfaceForm="město" token="město|content|město"/>
 	<missingRefWord idx="2" surfaceForm="už" token="už|content|už"/>
 	<missingRefWord idx="10" surfaceForm="rádi" token="rádi|content|rád"/>
@@ -5610,7 +5546,7 @@
 </sentence>
 
 <sentence index="184">
-	<source length="10" text="it would also save costs , \" he says ."/>
+	<source length="10" text="it would also save costs , &quot; he says ."/>
 	<hypothesis length="7" text="také ušetřit náklady , „ říká ."/>
 	<reference index="0" length="9" aligned="6" text="ušetřilo by to i náklady , “ říká ."/>
 	
@@ -5621,7 +5557,7 @@
 	<missingRefWord idx="2" surfaceForm="to" token="to|aux|ten"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="také|content|také" refIdx="3" refToken="i|aux|i" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="4" hypToken="„|punct|\"" refIdx="6" refToken="“|punct|\"" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="4" hypToken="„|punct|&quot;" refIdx="6" refToken="“|punct|&quot;" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -5634,7 +5570,7 @@
 	<missingRefWord idx="8" surfaceForm="ještě" token="ještě|content|ještě"/>
 	<missingRefWord idx="9" surfaceForm="nikdy" token="nikdy|content|nikdy"/>
 	<missingRefWord idx="11" surfaceForm="se" token="se|aux|se"/>
-	<missingRefWord idx="28" surfaceForm="“" token="“|punct|\""/>
+	<missingRefWord idx="28" surfaceForm="“" token="“|punct|&quot;"/>
 	
 	<unequalAlignedTokens hypIdx="2" hypToken="je|aux|on" refIdx="2" refToken="je|content|být" unequalFactorList="1,2"/>
 	<unequalAlignedTokens hypIdx="3" hypToken="vše|aux|všechen" refIdx="3" refToken="všechno|aux|všechen" unequalFactorList="0"/>
@@ -5644,7 +5580,6 @@
 	<unequalAlignedTokens hypIdx="10" hypToken="ztráty|content|ztráta" refIdx="13" refToken="necítila|content|cítit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="11" hypToken="dosud|content|dosud" refIdx="14" refToken="ztracená|content|ztratit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="20" hypToken="které|aux|který" refIdx="23" refToken="jaké|aux|jaký" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="23" hypToken="viděl|content|vidět" refIdx="26" refToken="viděla|content|vidět" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="0.999"/>
 	
@@ -5689,14 +5624,12 @@
 	<unequalAlignedTokens hypIdx="11" hypToken="hrát|content|hrát" refIdx="15" refToken="udělala|content|udělat" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="12" hypToken="borovice|content|borovice" refIdx="16" refToken="stojku|content|stojka" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="udělal|content|udělat" refIdx="18" refToken="udělám|content|udělat" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="16" hypToken="to|aux|ten" refIdx="19" refToken="ji|aux|on" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="17" hypToken="stejně|content|stejný" refIdx="20" refToken="taky|content|taky" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
 
 <sentence index="188">
-	<source length="52" text="ms. mikels , who opposes bilingual education , told me , \" we 've had tremendous success with having a student who is brand new from mexico and you would walk into a classroom 12 months later and you wouldn 't be able to pick out which one he was . \""/>
+	<source length="52" text="ms. mikels , who opposes bilingual education , told me , &quot; we 've had tremendous success with having a student who is brand new from mexico and you would walk into a classroom 12 months later and you wouldn 't be able to pick out which one he was . &quot;"/>
 	<hypothesis length="46" text="sl . mikels , který brání dvojjazyčné vzdělávání , řekl mi , „ že jsme si obrovský úspěch s student , který je zbrusu nový z mexika a budete chodit do školy o rok později a že nebudou schopni rozeznat , kdo to byl . “"/>
 	<reference index="0" length="40" aligned="31" text="slečna mikelsová , která je proti bilingvnímu vzdělávání , mi řekla : „ měli jsme ohromný úspěch s jedním úplně novým žákem z mexika - po dvanácti měsících byste vešli do třídy a nepoznali , který to je . “"/>
 	
@@ -5789,8 +5722,6 @@
 	<unequalAlignedTokens hypIdx="24" hypToken="jeho|aux|jeho" refIdx="24" refToken="se|aux|se" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="25" hypToken="podobný|content|podobný" refIdx="27" refToken="příliš|content|příliš" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="26" hypToken="styl|content|styl" refIdx="28" refToken="neliší|content|lišit" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="28" hypToken="uklidňující|content|uklidňovat" refIdx="33" refToken="uklidňujícím|content|uklidňovat" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="29" hypToken="příroda|content|příroda" refIdx="34" refToken="dojmem|content|dojem" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="0.998"/>
 	
@@ -5808,7 +5739,7 @@
 </sentence>
 
 <sentence index="191">
-	<source length="42" text="on top of that , they must accept that the sim card in their telephone is not registered under their name , and thus they cannot use all of its features like the regular customers of the mobile operators can . \""/>
+	<source length="42" text="on top of that , they must accept that the sim card in their telephone is not registered under their name , and thus they cannot use all of its features like the regular customers of the mobile operators can . &quot;"/>
 	<hypothesis length="40" text="na to , že se musí smířit s tím , že se sim kartou v jejich telefon je registrována na jméno , a proto je nelze použít všechny jeho funkce jako v pravidelných zákazníků o mobilní operátory může . “"/>
 	<reference index="0" length="30" aligned="27" text="ti navíc musí akceptovat , že sim karta v jejich telefonu není vedená na jejich jméno , nemohou s ní tedy disponovat plnohodnotně jako běžní zákazníci mobilních operátorů . “"/>
 	
@@ -5905,7 +5836,7 @@
 </sentence>
 
 <sentence index="194">
-	<source length="50" text="a presidential visit which occurs at the same time as the general meeting of the \" crisis committee \" created by fishermen in brittany to come up with measures of addressing the soaring prices of oil , which peaked at an average of more than 1.14 euro per litre ."/>
+	<source length="50" text="a presidential visit which occurs at the same time as the general meeting of the &quot; crisis committee &quot; created by fishermen in brittany to come up with measures of addressing the soaring prices of oil , which peaked at an average of more than 1.14 euro per litre ."/>
 	<hypothesis length="43" text="a prezidentské návštěvy , které se ve stejné době , kdy valná hromada „ krizový výbor “ vytvořil rybáři v bretani a přijít s opatření řešit rostoucí ceny ropy , které vyvrcholilo v průměru více než 1 . 14 euro na litr ."/>
 	<reference index="0" length="37" aligned="29" text="prezidentská návštěva přichází ve stejnou chvíli jako valné shromáždění „ krizového výboru “ vytvořeného bretonskými rybáři s cílem získat opatření proti prudkému zvýšení cen nafty , která dosáhla vrcholu přesahujícího v průměru 1,14 eura za litr ."/>
 	
@@ -5988,7 +5919,6 @@
 	<missingRefWord idx="2" surfaceForm="v" token="v|aux|v"/>
 	
 	<unequalAlignedTokens hypIdx="1" hypToken="volební|content|volební" refIdx="1" refToken="porážce|content|porážka" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="2" hypToken="neúspěch|content|neúspěch" refIdx="3" refToken="hlasování|content|hlasovat" unequalFactorList="0,2"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
 </sentence>
@@ -6020,7 +5950,7 @@
 </sentence>
 
 <sentence index="198">
-	<source length="30" text="and further accentuating the sense of urgency , \" each day that passes sees the fall of another financial institution \" in the united states , emphasised mrs piegża ."/>
+	<source length="30" text="and further accentuating the sense of urgency , &quot; each day that passes sees the fall of another financial institution &quot; in the united states , emphasised mrs piegża ."/>
 	<hypothesis length="27" text="a další accentuating pocitu naléhavosti , „ každý den , co se děje za pád další finanční instituce “ ve spojených státech , zdůraznila paní piegża ."/>
 	<reference index="0" length="24" aligned="20" text="a s důrazem na naléhavost situace piegzaová podotkla , že ve spojených státech „ každý nový den přináší pád jedné finanční instituce “ ."/>
 	
@@ -6077,3 +6007,4 @@
 	<ordErrorSwitchWords hypIdx1="7" hypIdx2="8" distance="1" hypToken1="ně|aux|on" hypToken2="neustále|content|neustálý"/>
 </sentence>
 
+</document>

@@ -4,20 +4,20 @@
 (top: ref flags, side: hyp flags)
 
          (empty)   disam     lex   extra     unk    form
- (empty)    7486       8       4      29       0      44
+ (empty)    7671      38      13      30       2      76
    disam       0       0       0       0       0       0
      lex       0       0       0       0       0       0
-   extra    1822     237     135     506      14     239
-     unk      86       3       5      31      19      13
-    form    4172     681     331     243      99    1458
+   extra    1825     232     137     507      13     239
+     unk      85       3       5      31      19      14
+    form    4028     655     319     235      94    1394
 
-(empty) : precision = 0.989, recall = 0.552, f-score = 0.708
+(empty) : precision = 0.980, recall = 0.564, f-score = 0.716
 disam   : precision = 0.000, recall = 0.000, f-score = 0.000
 lex     : precision = 0.000, recall = 0.000, f-score = 0.000
-extra   : precision = 0.171, recall = 0.625, f-score = 0.269
-unk     : precision = 0.121, recall = 0.144, f-score = 0.131
-form    : precision = 0.209, recall = 0.831, f-score = 0.334
-total (no empty): precision = 0.196, recall = 0.484, f-score = 0.279
+extra   : precision = 0.172, recall = 0.631, f-score = 0.270
+unk     : precision = 0.121, recall = 0.148, f-score = 0.133
+form    : precision = 0.207, recall = 0.809, f-score = 0.330
+total (no empty): precision = 0.195, recall = 0.473, f-score = 0.276
 
 ---=== Confusion matrix for order errors: ===---
 
@@ -42,12 +42,12 @@ total (no empty): precision = 0.048, recall = 0.306, f-score = 0.083
 (top: ref flags, side: hyp flags)
 
          (empty)   punct
- (empty)   16802      50
-   punct     573     240
+ (empty)   16810      51
+   punct     570     234
 
 (empty) : precision = 0.997, recall = 0.967, f-score = 0.982
-punct   : precision = 0.295, recall = 0.828, f-score = 0.435
-total (no empty): precision = 0.295, recall = 0.828, f-score = 0.435
+punct   : precision = 0.291, recall = 0.821, f-score = 0.430
+total (no empty): precision = 0.291, recall = 0.821, f-score = 0.430
 
 ---=== Confusion matrix for missed errors: ===---
 
