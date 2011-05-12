@@ -4,12 +4,12 @@ use File::Spec;
 use Getopt::Long;
 
 BEGIN {
-    # include packages from same folder where the
-    # script is, even if launched from elsewhere
-    # unshift(), not push(), to give own functions precedence over other libraries
-    my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
-    pop @dirs;
-    unshift(@INC, File::Spec->catdir(@dirs));
+	# include packages from same folder where the
+	# script is, even if launched from elsewhere
+	# unshift(), not push(), to give own functions precedence over other libraries
+	my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
+	pop @dirs;
+	unshift(@INC, File::Spec->catdir(@dirs));
 }
 
 use io;
@@ -21,8 +21,8 @@ use flagg;
 use math;
 
 sub getUsage {
-    # return "Usage: finderrs.pl source.txt hypothesis.txt reference.txt alignment.txt > errorlist.txt\n";
-	return "Required arguments: source, hypothesis, reference, alignment [, ref-2, ali-2 [, ref-3, ali-3 [...]]]\n";
+	# return "Usage: finderrs.pl source.txt hypothesis.txt reference.txt alignment.txt > errorlist.txt\n";
+	return "Required arguments: source, hypothesis, alignment [, ref-2, ali-2 [, ref-3, ali-3 [...]]]\n";
 }
 
 binmode(STDOUT, ":utf8");
@@ -56,21 +56,28 @@ while($tuple = io::readSentences(@handles)) {
 	for my $i (0..($numOfRefs-1)) {
 		push @refSntArr, parse::sentence($tuple->[2 + $i * 2], $opts->{'caseSensitive'});
 		push @aliArr, parse::alignment($tuple->[2 + $i * 2 + 1]);
-        # DZ: Avoid later confusing errors: Check that the alignment indices are consistent with the two aligned sentences.
-        my $refSnt = $refSntArr[$#refSntArr];
-        my $aliHypRef = $aliArr[$#aliArr];
-        foreach my $aliPoint (@{$aliHypRef})
-        {
-            # Note: parse::alignment() always assumes that left side is hyp and right side is ref.
-            if($aliPoint->{'hyp'}>$#{$hypSnt} || $aliPoint->{'ref'}>$#{$refSnt})
-            {
-                print STDERR ("SRC[0..$#{$srcSnt}]: $tuple->[0]\n");
-                print STDERR ("HYP[0..$#{$hypSnt}]: $tuple->[1]\n");
-                print STDERR ("REF[0..$#{$refSnt}]: $tuple->[2+$i*2]\n");
-                print STDERR ("ALI[HYP-REF]: $tuple->[2+$i*2+1]\n");
-                die("Alignment point $aliPoint->{hyp}-$aliPoint->{ref} points to nowhere");
-            }
-        }
+		
+		# DZ: Avoid later confusing errors: Check that the alignment indices are consistent with the two aligned sentences.
+		my $refSnt = $refSntArr[$#refSntArr];
+		my $aliHypRef = $aliArr[$#aliArr];
+		foreach my $aliPoint (@{$aliHypRef})
+		{
+			# Note: parse::alignment() always assumes that left side is hyp and right side is ref.
+			if($aliPoint->{'hyp'}>$#{$hypSnt} || $aliPoint->{'ref'}>$#{$refSnt})
+			{
+				#MF: allow to ignore the out-of-boundary errors
+				if ($opts->{'ignoreOutOfBounds'}) {
+					print STDERR "alignment point $aliPoint->{hyp}-$aliPoint->{ref} points to nowhere\n";
+				}
+				else {
+					print STDERR ("SRC[0..$#{$srcSnt}]: $tuple->[0]\n");
+					print STDERR ("HYP[0..$#{$hypSnt}]: $tuple->[1]\n");
+					print STDERR ("REF[0..$#{$refSnt}]: $tuple->[2+$i*2]\n");
+					print STDERR ("ALI[HYP-REF]: $tuple->[2+$i*2+1]\n");
+					die("Alignment point $aliPoint->{hyp}-$aliPoint->{ref} points to nowhere");
+				}
+			}
+		}
 	}
 	
 	displayErrors($cnt->{'val'}, $srcSnt, $hypSnt, \@refSntArr, \@aliArr, $opts->{'multiRefMethod'});
@@ -89,9 +96,9 @@ print("</document>\n");
 #
 #####
 sub processInputArgsAndOpts {
-	my ($caseSensitive, $multiRefMethod);
+	my ($caseSensitive, $multiRefMethod, $ignoreOutOfBounds);
 	
-	GetOptions('c' => \$caseSensitive, 'm=s' => \$multiRefMethod);
+	GetOptions('c' => \$caseSensitive, 'm=s' => \$multiRefMethod, 'i' => \$ignoreOutOfBounds);
 	
 	if (!defined($multiRefMethod)) {
 		$multiRefMethod = $const::MRM_SNT;
@@ -116,7 +123,10 @@ sub processInputArgsAndOpts {
 		die($msg);
 	}
 	
-	return { 'caseSensitive' => $caseSensitive, 'multiRefMethod' => $multiRefMethod };
+	return {
+		'caseSensitive' => $caseSensitive,
+		'multiRefMethod' => $multiRefMethod,
+		'ignoreOutOfBounds' => $ignoreOutOfBounds };
 }
 
 #####
@@ -330,30 +340,35 @@ sub getAlignedUneqTokenErrs {
 	my @output = ();
 	
 	for my $pair (@$al) {
-		my $hypToken = $hypSnt->[$pair->{'hyp'}];
-		my $refToken = $refSnt->[$pair->{'ref'}];
-		
-		my @uneqFactors = ();
-		
-		my $maxidx = math::max($#$hypToken, $#$refToken);
-		
-		for my $i (0..$maxidx) {
-			my $hypFact = io::getWordFactor($hypToken, $i);
-			my $refFact = io::getWordFactor($refToken, $i);
+		if ($pair->{'hyp'} >= 0 and
+				$pair->{'hyp'} <= $#$hypSnt and
+				$pair->{'ref'} >= 0 and
+				$pair->{'ref'} <= $#$hypSnt) {
+			my $hypToken = $hypSnt->[$pair->{'hyp'}];
+			my $refToken = $refSnt->[$pair->{'ref'}];
 			
-			if ($hypFact ne $refFact) {
-				push @uneqFactors, $i;
+			my @uneqFactors = ();
+			
+			my $maxidx = math::max($#$hypToken, $#$refToken);
+			
+			for my $i (0..$maxidx) {
+				my $hypFact = io::getWordFactor($hypToken, $i);
+				my $refFact = io::getWordFactor($refToken, $i);
+				
+				if ($hypFact ne $refFact) {
+					push @uneqFactors, $i;
+				}
 			}
-		}
-		
-		if (@uneqFactors > 0) {
-			my $rawRefToken = io::tok2str4xml($refToken);
-			my $rawHypToken = io::tok2str4xml($hypToken);
-			my $uneqFactorList = join(",", @uneqFactors);
 			
-			push @output, "<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
-				"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
-				"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>";
+			if (@uneqFactors > 0) {
+				my $rawRefToken = io::tok2str4xml($refToken);
+				my $rawHypToken = io::tok2str4xml($hypToken);
+				my $uneqFactorList = join(",", @uneqFactors);
+				
+				push @output, "<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
+					"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
+					"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>";
+			}
 		}
 	}
 	

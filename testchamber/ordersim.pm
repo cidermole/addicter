@@ -53,23 +53,28 @@ sub permutationToErrs {
 			my $idx1 = $hypIdxMap->[$permutation->{'refidx1'}];
 			my $idx2 = $hypIdxMap->[$permutation->{'refidx2'}];
             # DZ: I got index out of bounds on my data.
-            confess("hyp[0..$#{$hyp}], idx1=$idx1, idx2=$idx2") if($idx1<0 || $idx1>$#{$hyp} || $idx2<0 || $idx2>$#{$hyp});
-			my $tok1 = io::tok2str4xml($hyp->[$idx1]);
-			my $tok2 = io::tok2str4xml($hyp->[$idx2]);
-			
-			push @output, "<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
-				" distance=\"" . abs($idx1 - $idx2) . "\"" .
-				" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>";
+				#confess("hyp[0..$#{$hyp}], idx1=$idx1, idx2=$idx2") if($idx1<0 || $idx1>$#{$hyp} || $idx2<0 || $idx2>$#{$hyp});
+			unless ($idx1 < 0 or $idx1 > $#{$hyp} or $idx2 < 0 or $idx2 > $#{$hyp}) {
+				my $tok1 = io::tok2str4xml($hyp->[$idx1]);
+				my $tok2 = io::tok2str4xml($hyp->[$idx2]);
+				
+				push @output, "<ordErrorSwitchWords hypIdx1=\"$idx1\" hypIdx2=\"$idx2\"" .
+					" distance=\"" . abs($idx1 - $idx2) . "\"" .
+					" hypToken1=\"$tok1\" hypToken2=\"$tok2\"/>";
+			}
 		}
 		else {
 			my $hypPos = $hypIdxMap->[$permutation->{'refidx1'}];
-			my $hypTok = io::tok2str4xml($hyp->[$hypPos]);
-			my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
-			my $rawShiftWidth = $targetHypPos - $hypPos;
 			
-			push @output, "<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
-				abs($rawShiftWidth) . "\" direction=\"" .
-				(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>";
+			unless ($hypPos < 0 or $hypPos > $#{$hyp}) {
+				my $hypTok = io::tok2str4xml($hyp->[$hypPos]);
+				my $targetHypPos = $hypIdxMap->[$permutation->{'refidx2'}];
+				my $rawShiftWidth = $targetHypPos - $hypPos;
+				
+				push @output, "<ordErrorShiftWord hypPos=\"$hypPos\" hypToken=\"$hypTok\" distance=\"" .
+					abs($rawShiftWidth) . "\" direction=\"" .
+					(($rawShiftWidth > 0)? "towardsEnd": "towardsBeginning") . "\"/>";
+			}
 		}
 	}
 	
