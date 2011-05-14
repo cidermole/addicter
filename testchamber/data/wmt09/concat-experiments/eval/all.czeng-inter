@@ -1,0 +1,64 @@
+
+---=== Confusion matrix for lex errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)lex/dism   extra     unk    form
+ (empty)    7483      29      13       1      61
+lex/dism    2054     649      64      53     372
+   extra    3439     494     701      52     446
+     unk     194       3      41      33      15
+    form     831      18      10       2     607
+
+(empty) : precision = 0.986, recall = 0.534, f-score = 0.693
+lex/dism: precision = 0.203, recall = 0.544, f-score = 0.296
+extra   : precision = 0.137, recall = 0.846, f-score = 0.235
+unk     : precision = 0.115, recall = 0.234, f-score = 0.155
+form    : precision = 0.413, recall = 0.404, f-score = 0.409
+total (no empty): precision = 0.197, recall = 0.543, f-score = 0.290
+
+---=== Confusion matrix for order errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)     ows     owl     ops     opl
+ (empty)   16035      82      33      14       6
+     ows     583     122       7       4       0
+     owl     706      21      40       9       3
+     ops       0       0       0       0       0
+     opl       0       0       0       0       0
+
+(empty) : precision = 0.992, recall = 0.926, f-score = 0.957
+ows     : precision = 0.170, recall = 0.542, f-score = 0.259
+owl     : precision = 0.051, recall = 0.500, f-score = 0.093
+ops     : precision = 0.000, recall = 0.000, f-score = 0.000
+opl     : precision = 0.000, recall = 0.000, f-score = 0.000
+total (no empty): precision = 0.108, recall = 0.475, f-score = 0.176
+
+---=== Confusion matrix for punct errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)   punct
+ (empty)   16349      24
+   punct     991     301
+
+(empty) : precision = 0.999, recall = 0.943, f-score = 0.970
+punct   : precision = 0.233, recall = 0.926, f-score = 0.372
+total (no empty): precision = 0.233, recall = 0.926, f-score = 0.372
+
+---=== Confusion matrix for missed errors: ===---
+
+(top: ref flags, side: hyp flags)
+
+         (empty)   missA   missP   missC
+ (empty)   11007      97      11     153
+   missA    1901      83       0      35
+   missP     944       0      82       0
+   missC    3300      11       0      41
+
+(empty) : precision = 0.977, recall = 0.642, f-score = 0.775
+missA   : precision = 0.041, recall = 0.435, f-score = 0.075
+missP   : precision = 0.080, recall = 0.882, f-score = 0.147
+missC   : precision = 0.012, recall = 0.179, f-score = 0.023
+total (no empty): precision = 0.032, recall = 0.402, f-score = 0.060
