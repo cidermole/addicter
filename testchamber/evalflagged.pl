@@ -22,7 +22,7 @@ binmode(STDERR, ":utf8");
 our %groups = (
 	"order" => [qw(ows owl ops opl)],
 	"punct" => ["punct"],
-	"lex" => [qw(disam lex extra unk form)],
+	"lex" => [qw(lex/dism extra unk form)],
 	"missed" => [qw(missA missP missC)]
 );
 

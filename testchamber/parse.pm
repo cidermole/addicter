@@ -146,7 +146,7 @@ sub xml {
 #
 #####
 sub parseFlaggTokFlags {
-	my $flagStr = shift;
+	my ($flagStr, $joinLexAndDisam) = @_;
 	
 	my $isMissingRef = undef;
 	my $pos = undef;
@@ -160,6 +160,10 @@ sub parseFlaggTokFlags {
 		for my $flag (@flagList) {
 			if ($flag eq "neg") {
 				$flag = "form";
+			}
+			#if ($joinLexAndDisam and $flag eq "disam") {
+			if ($flag eq "disam") {
+				$flag = "lex/dism";
 			}
 			$flags->{$flag} = 1;
 			
@@ -184,7 +188,7 @@ sub parseFlaggTokFlags {
 #
 #####
 sub flagg {
-	my ($snt) = @_;
+	my ($snt, $joinLexAndDisam) = @_;
 	
 	$snt =~ s/\n//g;
 	
@@ -196,7 +200,7 @@ sub flagg {
 			my $tokStr = $3;
 			my $flagStr = $1;
 			
-			my ($flags, $pos) = parseFlaggTokFlags($flagStr);
+			my ($flags, $pos) = parseFlaggTokFlags($flagStr, $joinLexAndDisam);
 			
 			if ($pos) {
 				$missHash->{"$tokStr|$pos"}++;

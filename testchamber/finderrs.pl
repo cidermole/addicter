@@ -22,7 +22,7 @@ use math;
 
 sub getUsage {
 	# return "Usage: finderrs.pl source.txt hypothesis.txt reference.txt alignment.txt > errorlist.txt\n";
-	return "Required arguments: source, hypothesis, alignment [, ref-2, ali-2 [, ref-3, ali-3 [...]]]\n";
+	return "Required arguments: source hypothesis reference alignment [ref-2 ali-2 [ref-3 ali-3 [...]]]\n";
 }
 
 binmode(STDOUT, ":utf8");

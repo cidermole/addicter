@@ -43,8 +43,8 @@ while (<$fh>) {
 			setMaybeFlag($hypSnt, $fields->{'idx'}, "unk", $fields->{'token'});
 		}
 		elsif ($tagId eq "unequalAlignedTokens") {
-			#TODO currently defaults to form::, support lex:: and disam::
-			setMaybeFlag($hypSnt, $fields->{'hypIdx'}, "form", $fields->{'hypToken'});
+			my $flagtag = ($fields->{'unequalFactorList'} =~ /2/)? 'lex/dism': 'form';
+			setMaybeFlag($hypSnt, $fields->{'hypIdx'}, $flagtag, $fields->{'hypToken'});
 		}
 		elsif ($tagId eq "ordErrorSwitchWords") {
 			setMaybeFlag($hypSnt, $fields->{'hypIdx1'}, 'ows', $fields->{'hypToken1'}, 1);
