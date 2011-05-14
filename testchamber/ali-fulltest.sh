@@ -4,14 +4,17 @@ ali=$1
 
 if [[ -z $ali ]]
 then
-	echo "Usage: ./alitestfull.sh alignment-id"
+	echo "Usage: ./ali-fulltest.sh alignment-id"
 	exit 1
 fi
 
-for corp in cu-bojar cu-tectomt google pctrans
-do
-	./finderrs.pl dt/corps/src dt/corps/$corp dt/corps/ref dt/ali/$corp.$ali > dt/errs/$corp.$ali
-	cat dt/errs/$corp.$ali | ./err2flags.pl > dt/flagged/$corp.$ali
-done
+echo find errors
+./finderrs.pl dt/corps/srcX4 dt/corps/hyp-all dt/corps/refX4 dt/ali/all.$ali > dt/errs/all.$ali
 
-./evalflagged.pl <( cat dt/flagged/*.man ) <(cat dt/flagged/*.$ali) <( ./times4.sh dt/corps/ref ) > dt/eval/all.$ali
+echo convert to flagged format
+cat dt/errs/all.$ali | ./err2flags.pl > dt/flagged/all.$ali
+
+echo compare to manual tags
+./evalflagged.pl dt/flagged/all.man dt/flagged/all.$ali dt/corps/refX4 > dt/eval/all.$ali
+
+echo 'done!'
