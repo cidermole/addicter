@@ -64,7 +64,8 @@ while (<$fh>) {
 			$incorrectHypWords->{'untranslated'}++;
 		}
 		elsif ($tagId eq "unequalAlignedTokens") {
-			$incorrectHypWords->{'wrong form'}++;
+			my $latag = ($fields->{'unequalFactorList'} =~ /2/)? 'lex error': 'wrong form';
+			$incorrectHypWords->{$latag}++;
 		}
 		elsif ($tagId =~ /^ordError/) {
 			my $dist = $fields->{'distance'};
