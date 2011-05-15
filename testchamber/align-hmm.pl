@@ -21,7 +21,7 @@ use counter;
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
-my ($reffile, $hypfile, $caseSensitive, $alFactor, $morePtsFiles, $exPts, $wPts) =
+my ($reffile, $hypfile, $caseSensitive, $alFactor, $morePtsFiles, $exPts, $uwPts) =
 	processInputArgsAndOpts();
 
 my @files = ($reffile, $hypfile);
@@ -46,7 +46,7 @@ while($tuple = io::readSentences(@fhs)) {
 	}
 	
 	my $probs = probs::generate($refSnt, $hypSnt,
-		$alFactor, $morePts, $exPts, $wPts);
+		$alFactor, $morePts, $exPts, $uwPts);
 	my $alignment = decodeAlignment($refSnt, $hypSnt, $alFactor, $probs, $cnt);
 	displayAlignment($alignment);
 	
@@ -61,7 +61,7 @@ io::closeMany(@fhs);
 #
 #####
 sub processInputArgsAndOpts {
-	my ($caseSensitive, $alFactor, $exclusiveMorePts, $weighedMorePts);
+	my ($caseSensitive, $alFactor, $exclusiveMorePts, $unweighedMorePts);
 	my @morePtsFiles;
 	
 	GetOptions(
@@ -69,7 +69,7 @@ sub processInputArgsAndOpts {
 		'n=i' => \$alFactor,
 		'a=s' => \@morePtsFiles,
 		'x' => \$exclusiveMorePts,
-		'w' => \$weighedMorePts) or die("Options failed");
+		'u' => \$unweighedMorePts) or die("Options failed");
 	
 	if (!defined($alFactor)) {
 		$alFactor = 0;
@@ -85,7 +85,7 @@ sub processInputArgsAndOpts {
 		die("Required arguments: reference file, hypothesis file");
 	}
 	
-	return ($reffile, $hypfile, $caseSensitive, $alFactor, \@morePtsFiles, $exclusiveMorePts, $weighedMorePts);
+	return ($reffile, $hypfile, $caseSensitive, $alFactor, \@morePtsFiles, $exclusiveMorePts, $unweighedMorePts);
 }
 
 #####

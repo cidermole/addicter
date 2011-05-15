@@ -134,13 +134,13 @@ sub toUnalignOrNotToUnalign {
 #
 #####
 sub postProcMap {
-	my ($ptMap, $wPts) = @_;
+	my ($ptMap, $uwPts) = @_;
 	
 	for my $hyp (keys %$ptMap) {
 		my $ptHypMap = $ptMap->{$hyp};
 		
 		for my $ref (keys %$ptHypMap) {
-			$ptHypMap->{$ref} = ($wPts)? $ptHypMap->{$ref} ** 2: 1;
+			$ptHypMap->{$ref} = ($uwPts)? 1: $ptHypMap->{$ref} ** 2;
 		}
 	}
 }
@@ -159,13 +159,13 @@ sub setProb {
 #
 #####
 sub genEmitPs {
-	my ($refSnt, $hypSnt, $alFactor, $ptMap, $exPts, $wPts) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $ptMap, $exPts, $uwPts) = @_;
 	
 	if (!$exPts) {
 		addEqTokPts($ptMap, $refSnt, $hypSnt, $alFactor);
 	}
 	
-	postProcMap($ptMap, $wPts);
+	postProcMap($ptMap, $uwPts);
 	
 	my $refAlCounts = getRefAlCounts($ptMap);
 	
@@ -216,7 +216,7 @@ sub stophere {
 #
 #####
 sub generate {
-	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts, $wPts) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts, $uwPts) = @_;
 	
 	my $refSize = scalar @$refSnt;
 	
@@ -224,7 +224,7 @@ sub generate {
 	
 	$result->{'init'} = genInitPs($refSize);
 	$result->{'trans'} = genTransPs($refSize);
-	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor, $morePts, $exPts, $wPts);
+	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor, $morePts, $exPts, $uwPts);
 	
 	return $result;
 }
