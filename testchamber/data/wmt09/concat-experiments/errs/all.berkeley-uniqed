@@ -4915,13 +4915,13 @@
 	<extraHypWord idx="25" surfaceForm="jediné" token="jediné|content|jediný"/>
 	<extraHypWord idx="28" surfaceForm="vede" token="vede|content|vést"/>
 	<extraHypWord idx="30" surfaceForm="nejméně" token="nejméně|content|málo"/>
-	<untranslatedHypWord idx="31" surfaceForm="650" token="650|content|650"/>
 	<untranslatedHypWord idx="32" surfaceForm="(" token="(|punct|("/>
 	<extraHypWord idx="33" surfaceForm="černé" token="černé|content|černý"/>
 	<extraHypWord idx="34" surfaceForm="pásy" token="pásy|content|pás"/>
 	<extraHypWord idx="35" surfaceForm="zóna" token="zóna|content|zóna"/>
 	<untranslatedHypWord idx="36" surfaceForm=")" token=")|punct|)"/>
 	<extraHypWord idx="37" surfaceForm="za" token="za|aux|za"/>
+	<extraHypWord idx="38" surfaceForm="průměrnou" token="průměrnou|content|průměrný"/>
 	
 	<missingRefWord idx="13" surfaceForm="," token=",|punct|,"/>
 	<missingRefWord idx="16" surfaceForm="brianza" token="brianza|content|brianza"/>
@@ -4955,7 +4955,7 @@
 	<unequalAlignedTokens hypIdx="26" hypToken="místnosti|content|místnost" refIdx="22" refToken="lůžko|content|lůžko" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="27" hypToken="jedna|content|jeden" refIdx="21" refToken="jedno|content|jeden" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="29" hypToken="z|aux|z" refIdx="32" refToken="od|aux|od" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="38" hypToken="průměrnou|content|průměrný" refIdx="33" refToken="minimální|content|minimální" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="31" hypToken="650|content|650" refIdx="33" refToken="minimální|content|minimální" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="39" hypToken="cenu|content|cena" refIdx="34" refToken="ceny|content|cena" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="40" hypToken="800|content|800" refIdx="35" refToken="650|content|650" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="42" hypToken="lambiate|content|lambiate" refIdx="42" refToken="střední|content|střední" unequalFactorList="0,2"/>
@@ -5028,7 +5028,7 @@
 	<extraHypWord idx="22" surfaceForm="služby" token="služby|content|služba"/>
 	<extraHypWord idx="23" surfaceForm="," token=",|punct|,"/>
 	<extraHypWord idx="24" surfaceForm="ale" token="ale|aux|ale"/>
-	<extraHypWord idx="30" surfaceForm="poskytnuté" token="poskytnuté|content|poskytnout"/>
+	<extraHypWord idx="31" surfaceForm="obžaloby" token="obžaloby|content|obžaloba"/>
 	<untranslatedHypWord idx="32" surfaceForm="-" token="-|punct|-"/>
 	<untranslatedHypWord idx="33" surfaceForm="-" token="-|punct|-"/>
 	<extraHypWord idx="34" surfaceForm="ani" token="ani|aux|ani"/>
@@ -5067,7 +5067,7 @@
 	<unequalAlignedTokens hypIdx="25" hypToken="její|aux|jeho" refIdx="17" refToken="se|aux|se" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="26" hypToken="účetní|content|účetní" refIdx="19" refToken="pohostinství|content|pohostinství" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="29" hypToken="informace|content|informace" refIdx="33" refToken="informací|content|informace" unequalFactorList="0"/>
-	<unequalAlignedTokens hypIdx="31" hypToken="obžaloby|content|obžaloba" refIdx="34" refToken="poskytnutých|content|poskytnout" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="30" hypToken="poskytnuté|content|poskytnout" refIdx="34" refToken="poskytnutých|content|poskytnout" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="35" hypToken="zmínit|content|zmínit" refIdx="35" refToken="státnímu|content|státní" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="36" hypToken="doklady|content|doklad" refIdx="36" refToken="zastupitelství|content|zastupitelství" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="37" hypToken="nadace|content|nadace" refIdx="38" refToken="znějící|content|znít" unequalFactorList="0,2"/>
@@ -5582,13 +5582,14 @@
 	<hypothesis length="7" text="také ušetřit náklady , „ říká ."/>
 	<reference index="0" length="9" aligned="6" text="ušetřilo by to i náklady , “ říká ."/>
 	
-	<extraHypWord idx="1" surfaceForm="ušetřit" token="ušetřit|content|ušetřit"/>
+	<extraHypWord idx="2" surfaceForm="náklady" token="náklady|content|náklad"/>
 	
 	<missingRefWord idx="0" surfaceForm="ušetřilo" token="ušetřilo|content|ušetřit"/>
 	<missingRefWord idx="1" surfaceForm="by" token="by|content|být"/>
 	<missingRefWord idx="2" surfaceForm="to" token="to|aux|ten"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="také|content|také" refIdx="3" refToken="i|aux|i" unequalFactorList="0,1,2"/>
+	<unequalAlignedTokens hypIdx="1" hypToken="ušetřit|content|ušetřit" refIdx="4" refToken="náklady|content|náklad" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="4" hypToken="„|punct|&quot;" refIdx="6" refToken="“|punct|&quot;" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
@@ -6841,14 +6842,13 @@
 <sentence index="223">
 	<source length="51" text="&quot; naturally , an indignant ‘ enough ' has been raised , sincerely shared in front of tragedies that , due to their size , provoke an outcry by the media and the involvement of public opinion but everyday reality proposes dramatic cases , whose dynamics are even repetitive &quot; ."/>
 	<hypothesis length="40" text="„ přirozeně rozhorlené ‘ dost ' byl zvýšena , že upřímně sdílí před tragédiemi , důvod jejich velikosti provokuje křik médii a zapojení veřejného stanoviska , ale každodenní reality , že dramatické případy jehož dynamiky jsou dokonce opakované . “"/>
-	<reference index="0" length="45" aligned="34" text="„ přirozeně bylo vzneseno pobouřené ' dost ' , upřímně sdíleno tváří v tvář tragédiím , které svým rozsahem vyvolávají rozruch v médiích a účast veřejného mínění , avšak každodenní skutečnost nám znovu nabízí dramatické případy , dokonce se opakující ve své dynamice “ ."/>
+	<reference index="0" length="45" aligned="35" text="„ přirozeně bylo vzneseno pobouřené ' dost ' , upřímně sdíleno tváří v tvář tragédiím , které svým rozsahem vyvolávají rozruch v médiích a účast veřejného mínění , avšak každodenní skutečnost nám znovu nabízí dramatické případy , dokonce se opakující ve své dynamice “ ."/>
 	
 	<extraHypWord idx="7" surfaceForm="zvýšena" token="zvýšena|content|zvýšit"/>
 	<untranslatedHypWord idx="8" surfaceForm="," token=",|punct|,"/>
 	<extraHypWord idx="15" surfaceForm="důvod" token="důvod|content|důvod"/>
 	<untranslatedHypWord idx="29" surfaceForm="," token=",|punct|,"/>
 	<extraHypWord idx="30" surfaceForm="že" token="že|aux|že"/>
-	<extraHypWord idx="34" surfaceForm="dynamiky" token="dynamiky|content|dynamika"/>
 	
 	<missingRefWord idx="1" surfaceForm="přirozeně" token="přirozeně|content|přirozený"/>
 	<missingRefWord idx="12" surfaceForm="v" token="v|aux|v"/>
@@ -6856,11 +6856,10 @@
 	<missingRefWord idx="16" surfaceForm="které" token="které|aux|který"/>
 	<missingRefWord idx="21" surfaceForm="v" token="v|aux|v"/>
 	<missingRefWord idx="31" surfaceForm="nám" token="nám|aux|já"/>
+	<missingRefWord idx="32" surfaceForm="znovu" token="znovu|content|znovu"/>
 	<missingRefWord idx="33" surfaceForm="nabízí" token="nabízí|content|nabízet"/>
-	<missingRefWord idx="38" surfaceForm="se" token="se|aux|se"/>
+	<missingRefWord idx="36" surfaceForm="," token=",|punct|,"/>
 	<missingRefWord idx="40" surfaceForm="ve" token="ve|aux|v"/>
-	<missingRefWord idx="41" surfaceForm="své" token="své|aux|svůj"/>
-	<missingRefWord idx="42" surfaceForm="dynamice" token="dynamice|content|dynamika"/>
 	
 	<unequalAlignedTokens hypIdx="1" hypToken="přirozeně|content|přirozený" refIdx="3" refToken="vzneseno|content|vznést" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="2" hypToken="rozhorlené|content|rozhorlit" refIdx="4" refToken="pobouřené|content|pobouřit" unequalFactorList="0,2"/>
@@ -6879,14 +6878,15 @@
 	<unequalAlignedTokens hypIdx="24" hypToken="stanoviska|content|stanovisko" refIdx="26" refToken="mínění|content|mínit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="26" hypToken="ale|aux|ale" refIdx="28" refToken="avšak|aux|avšak" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="28" hypToken="reality|content|realita" refIdx="30" refToken="skutečnost|content|skutečný" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="33" hypToken="jehož|aux|jenž" refIdx="32" refToken="znovu|content|znovu" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="35" hypToken="jsou|content|být" refIdx="36" refToken=",|punct|," unequalFactorList="0,1,2"/>
+	<unequalAlignedTokens hypIdx="35" hypToken="jsou|content|být" refIdx="38" refToken="se|aux|se" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="37" hypToken="opakované|content|opakovat" refIdx="39" refToken="opakující|content|opakovat" unequalFactorList="0"/>
 	
-	<ordSimMetrics spearmansRho="0.994"/>
+	<ordSimMetrics spearmansRho="0.991"/>
 	
 	<ordErrorShiftWord hypPos="6" hypToken="byl|content|být" distance="5" direction="towardsBeginning"/>
-	<ordErrorShiftWord hypPos="33" hypToken="jehož|aux|jenž" distance="2" direction="towardsBeginning"/>
+	<ordErrorShiftWord hypPos="36" hypToken="dokonce|content|dokonce" distance="1" direction="towardsBeginning"/>
+	<ordErrorShiftWord hypPos="35" hypToken="jsou|content|být" distance="2" direction="towardsBeginning"/>
+	<ordErrorShiftWord hypPos="37" hypToken="opakované|content|opakovat" distance="4" direction="towardsBeginning"/>
 	<ordErrorSwitchWords hypIdx1="38" hypIdx2="39" distance="1" hypToken1=".|punct|." hypToken2="“|punct|&quot;"/>
 </sentence>
 
@@ -11258,11 +11258,11 @@
 	<extraHypWord idx="22" surfaceForm="vyžadováno" token="vyžadováno|content|vyžadovat"/>
 	<extraHypWord idx="27" surfaceForm="jeden" token="jeden|content|jeden"/>
 	<extraHypWord idx="28" surfaceForm="jde" token="jde|content|jít"/>
-	<untranslatedHypWord idx="31" surfaceForm="650" token="650|content|650"/>
 	<extraHypWord idx="32" surfaceForm="černé" token="černé|content|černý"/>
 	<extraHypWord idx="33" surfaceForm="zóny" token="zóny|content|zóna"/>
 	<extraHypWord idx="34" surfaceForm="kapely" token="kapely|content|kapela"/>
 	<extraHypWord idx="35" surfaceForm="do" token="do|aux|do"/>
+	<extraHypWord idx="36" surfaceForm="průměrné" token="průměrné|content|průměrný"/>
 	<untranslatedHypWord idx="45" surfaceForm="a" token="a|aux|a"/>
 	<extraHypWord idx="46" surfaceForm="výše" token="výše|content|vysoko"/>
 	<extraHypWord idx="50" surfaceForm="viktoriiny" token="viktoriiny|content|viktoa-1"/>
@@ -11309,7 +11309,7 @@
 	<unequalAlignedTokens hypIdx="26" hypToken="pokoj|content|pokoj" refIdx="22" refToken="lůžko|content|lůžko" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="29" hypToken="z|aux|z" refIdx="30" refToken="se|aux|se" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="30" hypToken="minima|content|minimum" refIdx="31" refToken="platí|content|platit" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="36" hypToken="průměrné|content|průměrný" refIdx="33" refToken="minimální|content|minimální" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="31" hypToken="650|content|650" refIdx="33" refToken="minimální|content|minimální" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="38" hypToken="800|content|800" refIdx="38" refToken="bande|content|band" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="39" hypToken="lambiate|content|lambiate" refIdx="39" refToken="nere|content|ner" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="40" hypToken="zóny|content|zóna" refIdx="47" refToken="lambiate|content|lambiate" unequalFactorList="0,2"/>
@@ -12430,24 +12430,25 @@
 <sentence index="399">
 	<source length="12" text="most people have their cell phone on them at all times ."/>
 	<hypothesis length="11" text="největší lidé mají svůj buněčný telefon na ve všech časech ."/>
-	<reference index="0" length="8" aligned="6" text="mobil většina lidí nosí stále u sebe ."/>
+	<reference index="0" length="8" aligned="7" text="mobil většina lidí nosí stále u sebe ."/>
 	
 	<extraHypWord idx="2" surfaceForm="mají" token="mají|content|mít"/>
 	<extraHypWord idx="3" surfaceForm="svůj" token="svůj|aux|svůj"/>
-	<extraHypWord idx="4" surfaceForm="buněčný" token="buněčný|content|buněčný"/>
 	<extraHypWord idx="8" surfaceForm="všech" token="všech|aux|všechen"/>
 	<extraHypWord idx="9" surfaceForm="časech" token="časech|content|čas"/>
 	
 	<missingRefWord idx="0" surfaceForm="mobil" token="mobil|content|mobil"/>
-	<missingRefWord idx="5" surfaceForm="u" token="u|aux|u"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="největší|content|velký" refIdx="1" refToken="většina|content|většina" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="1" hypToken="lidé|content|člověk" refIdx="2" refToken="lidí|content|člověk" unequalFactorList="0"/>
+	<unequalAlignedTokens hypIdx="4" hypToken="buněčný|content|buněčný" refIdx="5" refToken="u|aux|u" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="telefon|content|telefon" refIdx="3" refToken="nosí|content|nosit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="na|aux|na" refIdx="4" refToken="stále|content|stálý" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="ve|aux|v" refIdx="6" refToken="sebe|aux|se" unequalFactorList="0,2"/>
 	
-	<ordSimMetrics spearmansRho="1.000"/>
+	<ordSimMetrics spearmansRho="0.893"/>
+	
+	<ordErrorShiftWord hypPos="4" hypToken="buněčný|content|buněčný" distance="2" direction="towardsEnd"/>
 </sentence>
 
 <sentence index="400">
@@ -12878,9 +12879,8 @@
 <sentence index="413">
 	<source length="35" text="it is generally assumed , however , that this very manner of music sales ( whether using gsm , the internet or wireless internet ) will take over the music industry in the future ."/>
 	<hypothesis length="33" text="je všeobecně předpokládá se však , že tento velmi způsob prodeje hudebních nahrávek ( ať už pomocí gsm , internetu nebo bezdrátový internet ) bude trvat více než hudebním průmyslu v budoucnu ."/>
-	<reference index="0" length="28" aligned="26" text="obecně se však předpokládá , že právě tento způsob prodeje hudby ( ať už přes gsm , internet nebo bezdrátový internet ) do budoucna opanuje hudební průmysl ."/>
+	<reference index="0" length="28" aligned="27" text="obecně se však předpokládá , že právě tento způsob prodeje hudby ( ať už přes gsm , internet nebo bezdrátový internet ) do budoucna opanuje hudební průmysl ."/>
 	
-	<extraHypWord idx="2" surfaceForm="předpokládá" token="předpokládá|content|předpokládat"/>
 	<extraHypWord idx="3" surfaceForm="se" token="se|aux|se"/>
 	<extraHypWord idx="11" surfaceForm="hudebních" token="hudebních|content|hudební"/>
 	<extraHypWord idx="24" surfaceForm="bude" token="bude|content|být"/>
@@ -12888,11 +12888,11 @@
 	<extraHypWord idx="26" surfaceForm="více" token="více|content|hodně"/>
 	<extraHypWord idx="27" surfaceForm="než" token="než|aux|než"/>
 	
-	<missingRefWord idx="0" surfaceForm="obecně" token="obecně|content|obecný"/>
 	<missingRefWord idx="23" surfaceForm="budoucna" token="budoucna|content|budoucno"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="je|aux|on" refIdx="1" refToken="se|aux|se" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="1" hypToken="všeobecně|content|všeobecný" refIdx="2" refToken="však|aux|však" unequalFactorList="0,1,2"/>
+	<unequalAlignedTokens hypIdx="2" hypToken="předpokládá|content|předpokládat" refIdx="0" refToken="obecně|content|obecný" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="4" hypToken="však|aux|však" refIdx="3" refToken="předpokládá|content|předpokládat" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="8" hypToken="velmi|content|velmi" refIdx="6" refToken="právě|content|právě" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="12" hypToken="nahrávek|content|nahrávka" refIdx="10" refToken="hudby|content|hudba" unequalFactorList="0,2"/>
@@ -12903,8 +12903,9 @@
 	<unequalAlignedTokens hypIdx="30" hypToken="v|aux|v" refIdx="22" refToken="do|aux|do" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="31" hypToken="budoucnu|content|budoucno" refIdx="26" refToken="průmysl|content|průmysl" unequalFactorList="0,2"/>
 	
-	<ordSimMetrics spearmansRho="0.997"/>
+	<ordSimMetrics spearmansRho="0.995"/>
 	
+	<ordErrorShiftWord hypPos="2" hypToken="předpokládá|content|předpokládat" distance="2" direction="towardsBeginning"/>
 	<ordErrorSwitchWords hypIdx1="7" hypIdx2="8" distance="1" hypToken1="tento|aux|tento" hypToken2="velmi|content|velmi"/>
 	<ordErrorSwitchWords hypIdx1="29" hypIdx2="30" distance="1" hypToken1="průmyslu|content|průmysl" hypToken2="v|aux|v"/>
 	<ordErrorShiftWord hypPos="28" hypToken="hudebním|content|hudební" distance="2" direction="towardsEnd"/>
@@ -13738,11 +13739,12 @@
 	<untranslatedHypWord idx="2" surfaceForm="boy" token="boy|content|boy"/>
 	<untranslatedHypWord idx="12" surfaceForm="paul" token="paul|content|paul"/>
 	
-	<missingRefWord idx="8" surfaceForm="si" token="si|aux|se"/>
+	<missingRefWord idx="7" surfaceForm="," token=",|punct|,"/>
 	<missingRefWord idx="15" surfaceForm="zdroj" token="zdroj|content|zdroj"/>
 	
 	<unequalAlignedTokens hypIdx="1" hypToken="bad|content|bad" refIdx="0" refToken="zlý|content|zlý" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="3" hypToken="dorazili|content|dorazit" refIdx="1" refToken="hoch|content|hoch" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="9" hypToken=",|punct|," refIdx="8" refToken="si|aux|se" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="10" hypToken="přijeli|content|přijet" refIdx="9" refToken="troufl|content|troufnout" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="11" hypToken="definovat|content|definovat" refIdx="11" refToken="označit|content|označit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="newman|content|newman" refIdx="10" refToken="newmana|content|newman" unequalFactorList="0"/>
@@ -14499,7 +14501,7 @@
 	<extraHypWord idx="12" surfaceForm="za" token="za|aux|za"/>
 	<extraHypWord idx="19" surfaceForm="za" token="za|aux|za"/>
 	<extraHypWord idx="21" surfaceForm="stanovených" token="stanovených|content|stanovit"/>
-	<extraHypWord idx="23" surfaceForm="jejím" token="jejím|aux|jeho"/>
+	<extraHypWord idx="22" surfaceForm="v" token="v|aux|v"/>
 	<untranslatedHypWord idx="25" surfaceForm="," token=",|punct|,"/>
 	<extraHypWord idx="27" surfaceForm="bude" token="bude|content|být"/>
 	<extraHypWord idx="33" surfaceForm="kdy" token="kdy|content|kdy"/>
@@ -14509,8 +14511,8 @@
 	<missingRefWord idx="10" surfaceForm="," token=",|punct|,"/>
 	<missingRefWord idx="11" surfaceForm="aby" token="aby|aux|aby"/>
 	<missingRefWord idx="13" surfaceForm="podstoupit" token="podstoupit|content|podstoupit"/>
+	<missingRefWord idx="14" surfaceForm="v" token="v|aux|v"/>
 	<missingRefWord idx="20" surfaceForm="podle" token="podle|aux|podle"/>
-	<missingRefWord idx="22" surfaceForm="jejího" token="jejího|aux|jeho"/>
 	<missingRefWord idx="23" surfaceForm="propuštění" token="propuštění|content|propustit"/>
 	<missingRefWord idx="31" surfaceForm="až" token="až|aux|až"/>
 	
@@ -14521,6 +14523,7 @@
 	<unequalAlignedTokens hypIdx="8" hypToken="parole|content|parole" refIdx="8" refToken="slovo|content|slovo" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="lékařskou|content|lékařský" refIdx="16" refToken="lékařský|content|lékařský" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="péči|content|péče" refIdx="17" refToken="zákrok|content|zákrok" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="23" hypToken="jejím|aux|jeho" refIdx="22" refToken="jejího|aux|jeho" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="24" hypToken="uvolnit|content|uvolnit" refIdx="15" refToken="zahraničí|content|zahraničí" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="26" hypToken="zda|aux|zda" refIdx="26" refToken="jestli|aux|jestli" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="28" hypToken="moci|content|moci" refIdx="12" refToken="mohla|content|moci" unequalFactorList="0"/>
@@ -14528,12 +14531,12 @@
 	<unequalAlignedTokens hypIdx="35" hypToken="vrátí|content|vrátit" refIdx="34" refToken="bangladéše|content|bangladéš" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="37" hypToken="bangladéše|content|bangladéš" refIdx="35" refToken="vrátí|content|vrátit" unequalFactorList="0,2"/>
 	
-	<ordSimMetrics spearmansRho="0.933"/>
+	<ordSimMetrics spearmansRho="0.945"/>
 	
 	<ordErrorShiftWord hypPos="28" hypToken="moci|content|moci" distance="15" direction="towardsBeginning"/>
-	<ordErrorShiftWord hypPos="22" hypToken="v|aux|v" distance="9" direction="towardsBeginning"/>
 	<ordErrorShiftWord hypPos="24" hypToken="uvolnit|content|uvolnit" distance="11" direction="towardsBeginning"/>
 	<ordErrorShiftWord hypPos="20" hypToken="podmínek|content|podmínka" distance="3" direction="towardsBeginning"/>
+	<ordErrorShiftWord hypPos="23" hypToken="jejím|aux|jeho" distance="6" direction="towardsBeginning"/>
 	<ordErrorSwitchWords hypIdx1="35" hypIdx2="36" distance="1" hypToken1="vrátí|content|vrátit" hypToken2="do|aux|do"/>
 </sentence>
 
@@ -16740,13 +16743,13 @@
 	<hypothesis length="8" text="co tyto self - service stroje vypadat ?"/>
 	<reference index="0" length="5" aligned="5" text="jak takové automaty vypadají ?"/>
 	
+	<extraHypWord idx="1" surfaceForm="tyto" token="tyto|aux|tento"/>
+	<extraHypWord idx="2" surfaceForm="self" token="self|content|self"/>
 	<extraHypWord idx="3" surfaceForm="-" token="-|punct|-"/>
-	<extraHypWord idx="4" surfaceForm="service" token="service|content|service"/>
-	<extraHypWord idx="5" surfaceForm="stroje" token="stroje|content|stroj"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="co|aux|co" refIdx="0" refToken="jak|content|jak" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="1" hypToken="tyto|aux|tento" refIdx="1" refToken="takové|aux|takový" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="2" hypToken="self|content|self" refIdx="2" refToken="automaty|content|automat" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="4" hypToken="service|content|service" refIdx="1" refToken="takové|aux|takový" unequalFactorList="0,1,2"/>
+	<unequalAlignedTokens hypIdx="5" hypToken="stroje|content|stroj" refIdx="2" refToken="automaty|content|automat" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="6" hypToken="vypadat|content|vypadat" refIdx="3" refToken="vypadají|content|vypadat" unequalFactorList="0"/>
 	
 	<ordSimMetrics spearmansRho="1.000"/>
@@ -19688,22 +19691,23 @@
 <sentence index="628">
 	<source length="9" text="once somniloquy appears , try to keep calm ."/>
 	<hypothesis length="11" text="jednou mluvení ze spaní se jeví , zkusit mírnit se ."/>
-	<reference index="0" length="10" aligned="7" text="když se objeví somnilokvie , pokuste se zachovat klid ."/>
+	<reference index="0" length="10" aligned="8" text="když se objeví somnilokvie , pokuste se zachovat klid ."/>
 	
 	<extraHypWord idx="1" surfaceForm="mluvení" token="mluvení|content|mluvit"/>
 	<extraHypWord idx="2" surfaceForm="ze" token="ze|aux|z"/>
 	<extraHypWord idx="3" surfaceForm="spaní" token="spaní|content|spát"/>
-	<extraHypWord idx="8" surfaceForm="mírnit" token="mírnit|content|mírnit"/>
 	
 	<missingRefWord idx="3" surfaceForm="somnilokvie" token="somnilokvie|content|somnilokvie"/>
-	<missingRefWord idx="7" surfaceForm="zachovat" token="zachovat|content|zachovat"/>
-	<missingRefWord idx="8" surfaceForm="klid" token="klid|content|klid"/>
+	<missingRefWord idx="5" surfaceForm="pokuste" token="pokuste|content|pokusit"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="jednou|content|jednou" refIdx="0" refToken="když|aux|když" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="jeví|content|jevit" refIdx="2" refToken="objeví|content|objevit" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="7" hypToken="zkusit|content|zkusit" refIdx="5" refToken="pokuste|content|pokusit" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="7" hypToken="zkusit|content|zkusit" refIdx="7" refToken="zachovat|content|zachovat" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="8" hypToken="mírnit|content|mírnit" refIdx="8" refToken="klid|content|klid" unequalFactorList="0,2"/>
 	
-	<ordSimMetrics spearmansRho="1.000"/>
+	<ordSimMetrics spearmansRho="0.929"/>
+	
+	<ordErrorShiftWord hypPos="9" hypToken="se|aux|se" distance="2" direction="towardsBeginning"/>
 </sentence>
 
 <sentence index="629">
@@ -21977,7 +21981,7 @@
 	<extraHypWord idx="2" surfaceForm="podle" token="podle|aux|podle"/>
 	<extraHypWord idx="3" surfaceForm="velikosti" token="velikosti|content|veliký"/>
 	<extraHypWord idx="6" surfaceForm="pro" token="pro|aux|pro"/>
-	<extraHypWord idx="11" surfaceForm="obstarání" token="obstarání|content|obstarat"/>
+	<extraHypWord idx="12" surfaceForm="také" token="také|content|také"/>
 	<extraHypWord idx="17" surfaceForm="jestli" token="jestli|aux|jestli"/>
 	<extraHypWord idx="26" surfaceForm="kvůli" token="kvůli|aux|kvůli"/>
 	<extraHypWord idx="27" surfaceForm="tomuto" token="tomuto|aux|tento"/>
@@ -21999,7 +22003,7 @@
 	<unequalAlignedTokens hypIdx="4" hypToken="zbytku|content|zbytek" refIdx="2" refToken="sblížit|content|sblížit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="rohy|content|roh" refIdx="3" refToken="protichůdné|content|protichůdný" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="každého|content|každý" refIdx="4" refToken="názory|content|názor" unequalFactorList="0,2"/>
-	<unequalAlignedTokens hypIdx="12" hypToken="také|content|také" refIdx="29" refToken="pokud|aux|pokud" unequalFactorList="0,1,2"/>
+	<unequalAlignedTokens hypIdx="11" hypToken="obstarání|content|obstarat" refIdx="29" refToken="pokud|aux|pokud" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="13" hypToken="byl|content|být" refIdx="7" refToken="bylo|content|být" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="14" hypToken="přidané|content|přidat" refIdx="9" refToken="opatření|content|opatřit" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="19" hypToken="musel|content|muset" refIdx="34" refToken="muset|content|muset" unequalFactorList="0"/>
@@ -22019,7 +22023,7 @@
 	
 	<ordErrorSwitchWords hypIdx1="35" hypIdx2="37" distance="2" hypToken1="k|aux|k" hypToken2=",|punct|,"/>
 	<ordErrorShiftWord hypPos="10" hypToken=",|punct|," distance="32" direction="towardsEnd"/>
-	<ordErrorShiftWord hypPos="12" hypToken="také|content|také" distance="30" direction="towardsEnd"/>
+	<ordErrorShiftWord hypPos="11" hypToken="obstarání|content|obstarat" distance="31" direction="towardsEnd"/>
 	<ordErrorShiftWord hypPos="19" hypToken="musel|content|muset" distance="23" direction="towardsEnd"/>
 	<ordErrorShiftWord hypPos="20" hypToken="zabrat|content|zabrat" distance="22" direction="towardsEnd"/>
 	<ordErrorShiftWord hypPos="21" hypToken="ztráty|content|ztráta" distance="21" direction="towardsEnd"/>
@@ -23520,20 +23524,20 @@
 	<reference index="0" length="12" aligned="9" text="no , snad až na na slano naložené švestky , br !"/>
 	
 	<untranslatedHypWord idx="1" surfaceForm="," token=",|punct|,"/>
-	<extraHypWord idx="4" surfaceForm="solných" token="solných|content|solný"/>
+	<extraHypWord idx="3" surfaceForm="výjimkou" token="výjimkou|content|výjimka"/>
 	<extraHypWord idx="9" surfaceForm="to" token="to|aux|ten"/>
 	<extraHypWord idx="10" surfaceForm="je" token="je|content|být"/>
 	<untranslatedHypWord idx="11" surfaceForm="." token=".|punct|."/>
 	
-	<missingRefWord idx="5" surfaceForm="na" token="na|aux|na"/>
+	<missingRefWord idx="4" surfaceForm="na" token="na|aux|na"/>
 	<missingRefWord idx="6" surfaceForm="slano" token="slano|content|slano"/>
 	<missingRefWord idx="7" surfaceForm="naložené" token="naložené|content|naložit"/>
 	
 	<unequalAlignedTokens hypIdx="0" hypToken="dobře|content|dobře" refIdx="0" refToken="no|aux|no" unequalFactorList="0,1,2"/>
 	<unequalAlignedTokens hypIdx="2" hypToken="s|aux|s" refIdx="1" refToken=",|punct|," unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="3" hypToken="výjimkou|content|výjimka" refIdx="2" refToken="snad|content|snad" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="4" hypToken="solných|content|solný" refIdx="2" refToken="snad|content|snad" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="5" hypToken="švestek|content|švestka" refIdx="3" refToken="až|aux|až" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="6" hypToken="v|aux|v" refIdx="4" refToken="na|aux|na" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="6" hypToken="v|aux|v" refIdx="5" refToken="na|aux|na" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="7" hypToken="oleji|content|olej" refIdx="8" refToken="švestky|content|švestka" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="12" hypToken="yeuch|content|yeuch" refIdx="10" refToken="br|content|br" unequalFactorList="0,2"/>
 	
@@ -23769,7 +23773,7 @@
 	<untranslatedHypWord idx="0" surfaceForm="a" token="a|content|a"/>
 	<extraHypWord idx="2" surfaceForm="-" token="-|punct|-"/>
 	<extraHypWord idx="8" surfaceForm="co" token="co|content|co"/>
-	<extraHypWord idx="13" surfaceForm="otevřel" token="otevřel|content|otevřít"/>
+	<extraHypWord idx="11" surfaceForm="samozřejmě" token="samozřejmě|content|samozřejmý"/>
 	
 	<missingRefWord idx="6" surfaceForm="po" token="po|aux|po"/>
 	<missingRefWord idx="15" surfaceForm="znovu" token="znovu|content|znovu"/>
@@ -23779,15 +23783,15 @@
 	<unequalAlignedTokens hypIdx="7" hypToken="poté|content|poté" refIdx="5" refToken="samozřejmě|content|samozřejmý" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="9" hypToken="hurston|content|hurston" refIdx="7" refToken="hurstonové|content|hurstonové" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="10" hypToken=",|punct|," refIdx="9" refToken="byla|content|být" unequalFactorList="0,1,2"/>
-	<unequalAlignedTokens hypIdx="11" hypToken="samozřejmě|content|samozřejmý" refIdx="10" refToken="otevřena|content|otevřít" unequalFactorList="0,2"/>
+	<unequalAlignedTokens hypIdx="13" hypToken="otevřel|content|otevřít" refIdx="10" refToken="otevřena|content|otevřít" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="18" hypToken="předláždí|content|předláždit" refIdx="16" refToken="vyasfaltovaném|content|vyasfaltovat" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="20" hypToken="zkrášleného|content|zkrášlit" refIdx="18" refToken="zkrášleném|content|zkrášlit" unequalFactorList="0"/>
 	<unequalAlignedTokens hypIdx="21" hypToken="kennedya|content|kennedya" refIdx="19" refToken="kennedyho|content|kennedy" unequalFactorList="0,2"/>
 	<unequalAlignedTokens hypIdx="22" hypToken="boulevarda|content|boulevarda" refIdx="20" refToken="boulevardu|content|boulevard" unequalFactorList="0,2"/>
 	
-	<ordSimMetrics spearmansRho="0.995"/>
+	<ordSimMetrics spearmansRho="0.998"/>
 	
-	<ordErrorShiftWord hypPos="12" hypToken=")|punct|)" distance="2" direction="towardsBeginning"/>
+	<ordErrorSwitchWords hypIdx1="10" hypIdx2="12" distance="2" hypToken1=",|punct|," hypToken2=")|punct|)"/>
 </sentence>
 
 <sentence index="764">

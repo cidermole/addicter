@@ -4,44 +4,44 @@
 (top: ref flags, side: hyp flags)
 
          (empty)lex/dism   extra     unk    form
- (empty)    7608      38      29       1      80
-lex/dism    3457     939     205     102     615
-   extra    1994     263     482      10     243
-     unk     109       4      32      19      13
-    form     833      23      30       2     534
+ (empty)    7606      38      29       1      82
+lex/dism    3454     942     205     102     616
+   extra    1998     260     482      10     240
+     unk     107       4      32      19      13
+    form     836      23      30       2     534
 
 (empty) : precision = 0.981, recall = 0.543, f-score = 0.699
-lex/dism: precision = 0.177, recall = 0.741, f-score = 0.285
+lex/dism: precision = 0.177, recall = 0.743, f-score = 0.286
 extra   : precision = 0.161, recall = 0.620, f-score = 0.256
-unk     : precision = 0.107, recall = 0.142, f-score = 0.122
-form    : precision = 0.376, recall = 0.360, f-score = 0.367
-total (no empty): precision = 0.199, recall = 0.539, f-score = 0.291
+unk     : precision = 0.109, recall = 0.142, f-score = 0.123
+form    : precision = 0.375, recall = 0.360, f-score = 0.367
+total (no empty): precision = 0.200, recall = 0.540, f-score = 0.291
 
 ---=== Confusion matrix for order errors: ===---
 
 (top: ref flags, side: hyp flags)
 
          (empty)     ows     owl     ops     opl
- (empty)   15652      95      36      14       3
-     ows     537      58       2       1       0
-     owl    1191      30      35       5       6
+ (empty)   15647      95      35      14       3
+     ows     539      58       2       1       0
+     owl    1194      30      36       5       6
      ops       0       0       0       0       0
      opl       0       0       0       0       0
 
-(empty) : precision = 0.991, recall = 0.901, f-score = 0.943
-ows     : precision = 0.097, recall = 0.317, f-score = 0.149
-owl     : precision = 0.028, recall = 0.479, f-score = 0.052
+(empty) : precision = 0.991, recall = 0.900, f-score = 0.943
+ows     : precision = 0.097, recall = 0.317, f-score = 0.148
+owl     : precision = 0.028, recall = 0.493, f-score = 0.054
 ops     : precision = 0.000, recall = 0.000, f-score = 0.000
 opl     : precision = 0.000, recall = 0.000, f-score = 0.000
-total (no empty): precision = 0.050, recall = 0.326, f-score = 0.087
+total (no empty): precision = 0.050, recall = 0.330, f-score = 0.087
 
 ---=== Confusion matrix for punct errors: ===---
 
 (top: ref flags, side: hyp flags)
 
          (empty)   punct
- (empty)   16807      44
-   punct     576     238
+ (empty)   16806      44
+   punct     577     238
 
 (empty) : precision = 0.997, recall = 0.967, f-score = 0.982
 punct   : precision = 0.292, recall = 0.844, f-score = 0.434
@@ -52,13 +52,13 @@ total (no empty): precision = 0.292, recall = 0.844, f-score = 0.434
 (top: ref flags, side: hyp flags)
 
          (empty)   missA   missP   missC
- (empty)   13842     140      31     176
-   missA    1066      45       0      23
-   missP     373       0      62       0
-   missC    1940       6       0      30
+ (empty)   13846     140      31     176
+   missA    1062      45       0      23
+   missP     375       0      62       0
+   missC    1938       6       0      30
 
-(empty) : precision = 0.976, recall = 0.804, f-score = 0.881
+(empty) : precision = 0.976, recall = 0.804, f-score = 0.882
 missA   : precision = 0.040, recall = 0.236, f-score = 0.068
-missP   : precision = 0.143, recall = 0.667, f-score = 0.235
+missP   : precision = 0.142, recall = 0.667, f-score = 0.234
 missC   : precision = 0.015, recall = 0.131, f-score = 0.027
 total (no empty): precision = 0.039, recall = 0.267, f-score = 0.068

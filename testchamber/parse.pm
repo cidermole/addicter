@@ -33,7 +33,7 @@ sub sentence {
 #
 #####
 sub alignment {
-	my ($string, $ignoreDuplicates) = @_;
+	my ($string, $ignoreDuplicates, $maxRef, $maxHyp) = @_;
 	my @result;
 	
 	my ($refHash, $hypHash) = ({}, {});
@@ -58,7 +58,9 @@ sub alignment {
 				$refHash->{$ref} = 1;
 			}
 			
-			push @result, { 'hyp' => $hyp, 'ref' => $ref };
+			if ($hyp >= 0 and $hyp <= $maxHyp and $ref >= 0 and $ref <= $maxRef) {
+				push @result, { 'hyp' => $hyp, 'ref' => $ref };
+			}
 		}
 		else {
 			my $msg = "Failed to parse `$token' as an alignment pair";
@@ -73,16 +75,13 @@ sub alignment {
 #
 #####
 sub morepts {
-	my $string = shift;
-	my $result = {};
+	my ($string, $result, $maxRef, $maxHyp) = @_;
 	
-	my $alParse = alignment($string, 1);
+	my $alParse = alignment($string, 1, $maxRef, $maxHyp);
 	
 	for my $alPt (@$alParse) {
-		$result->{$alPt->{'hyp'}}->{$alPt->{'ref'}} = 1;
+		$result->{$alPt->{'hyp'}}->{$alPt->{'ref'}}++;
 	}
-	
-	return $result;
 }
 
 #####

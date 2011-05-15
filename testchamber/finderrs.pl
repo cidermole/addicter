@@ -54,12 +54,13 @@ while($tuple = io::readSentences(@handles)) {
 	my (@refSntArr, @aliArr);
 	
 	for my $i (0..($numOfRefs-1)) {
-		push @refSntArr, parse::sentence($tuple->[2 + $i * 2], $opts->{'caseSensitive'});
-		push @aliArr, parse::alignment($tuple->[2 + $i * 2 + 1]);
+		my $refSnt = parse::sentence($tuple->[2 + $i * 2], $opts->{'caseSensitive'});
+		my $aliHypRef = parse::alignment($tuple->[2 + $i * 2 + 1], 0, $#$refSnt, $#$hypSnt);
+		 
+		push @refSntArr, $refSnt;
+		push @aliArr, $aliHypRef;
 		
 		# DZ: Avoid later confusing errors: Check that the alignment indices are consistent with the two aligned sentences.
-		my $refSnt = $refSntArr[$#refSntArr];
-		my $aliHypRef = $aliArr[$#aliArr];
 		foreach my $aliPoint (@{$aliHypRef})
 		{
 			# Note: parse::alignment() always assumes that left side is hyp and right side is ref.

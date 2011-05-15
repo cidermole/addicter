@@ -66,36 +66,83 @@ sub genTransPs {
 #####
 #
 #####
-sub getAllowedPoints {
-	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts) = @_;
-	
-	my $result = {};
-	my $resultx = {};
+sub addEqTokPts {
+	my ($ptMap, $refSnt, $hypSnt, $alFactor) = @_;
 	
 	for my $hypIdx (0..$#$hypSnt) {
 		my $hypw = $hypSnt->[$hypIdx];
 		my $hypf = io::getWordFactor($hypw, $alFactor);
 		
-		my $covered = undef;
-		
 		for my $refIdx (0..$#$refSnt) {
 			my $refw = $refSnt->[$refIdx];
 			my $reff = io::getWordFactor($refw, $alFactor);
 			
-			if ((!$exPts and ($hypf eq $reff)) or (defined($morePts) and $morePts->{$hypIdx}->{$refIdx})) {
-				$result->{$hypIdx}->{$refIdx} = 1;
-				$resultx->{$refIdx}->{$hypIdx} = 1;
-				$covered = 1;
+			if ($hypf eq $reff) {
+				$ptMap->{$hypIdx}->{$refIdx}++;
 			}
 		}
+	}
+}
+
+#####
+#
+#####
+sub getRefAlCounts {
+	my ($ptMap) = @_;
+	
+	#calculate nr. of connections for each ref point
+	my $refAlCounts = {};
+	
+	for my $hyp (keys %$ptMap) {
+		my $ptHypMap = $ptMap->{$hyp};
 		
-		unless ($covered) {
-			#print "$hypIdx is unseen\n";
-			$result->{-1}++;
+		for my $ref (keys %$ptHypMap) {
+			$refAlCounts->{$ref}++;
 		}
 	}
 	
-	return ($result, $resultx);
+	return $refAlCounts;
+}
+
+#####
+#
+#####
+sub toUnalignOrNotToUnalign {
+	my ($ptMap, $refAlCounts) = @_;
+	
+	#if a hyp point is connected to at least one ref point which has
+	#more than one connections, then that hyp point has to be allowed
+	#to be left unaligned
+	for my $hyp (keys %$ptMap) {
+		my $ptHypMap = $ptMap->{$hyp};
+		
+		my $canBeUnaligned = undef;
+		
+		for my $ref (keys %$ptHypMap) {
+			if ($refAlCounts->{$ref} > 1) {
+				$canBeUnaligned = 1;
+			}
+		}
+		
+		if ($canBeUnaligned) {
+			$ptHypMap->{-1} = $const::SEEN_UNAL_PROB;
+		}
+	}
+}
+
+#####
+#
+#####
+sub postProcMap {
+	my ($ptMap, $wPts) = @_;
+	
+	for my $hyp (keys %$ptMap) {
+		my $ptHypMap = $ptMap->{$hyp};
+		
+		for my $ref (keys %$ptHypMap) {
+			$ptHypMap->{$ref} = ($wPts)? $ptHypMap->{$ref} ** 2: 1;
+		}
+	}
 }
 
 #####
@@ -104,47 +151,44 @@ sub getAllowedPoints {
 sub setProb {
 	my ($hash, $hypIdx, $refIdx, $prob) = @_;
 	
-	$hash->[$hypIdx]->{$refIdx} = $prob;
 	#print STDERR "PROB p($refIdx | $hypIdx) = $prob;\n";
+	$hash->[$hypIdx]->{$refIdx} = $prob;
 }
+
 #####
 #
 #####
 sub genEmitPs {
-	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $ptMap, $exPts, $wPts) = @_;
 	
-	my ($hrAllowedPoints, $rev) = getAllowedPoints($refSnt, $hypSnt, $alFactor, $morePts, $exPts);
-  
+	if (!$exPts) {
+		addEqTokPts($ptMap, $refSnt, $hypSnt, $alFactor);
+	}
+	
+	postProcMap($ptMap, $wPts);
+	
+	my $refAlCounts = getRefAlCounts($ptMap);
+	
+	toUnalignOrNotToUnalign($ptMap, $refAlCounts);
+	
 	my $result = [];
 	
 	for my $hypIdx (0..$#$hypSnt) {
-		my $canAlignTo = $hrAllowedPoints->{$hypIdx};
-		
-		if ($canAlignTo) {
-			my @refPts = keys %$canAlignTo;
-			my $refPtNum = scalar @refPts;
-			my $allowUnalign = undef;
+		if ($ptMap->{$hypIdx} > 0) {
+			my $sum = 0.0;
+			my $ptHypMap = $ptMap->{$hypIdx};
 			
-			for my $refPrePt (@refPts) {
-				if (scalar keys %{$rev->{$refPrePt}} > 1) {
-					$allowUnalign = 1;
-				}
+			for my $refConn (keys %$ptHypMap) {
+				$sum += $ptHypMap->{$refConn};
 			}
 			
-			my $unalProb = $allowUnalign? $const::SEEN_UNAL_PROB: 0;
-			
-			if ($allowUnalign) {
-				setProb($result, $hypIdx, -1, $unalProb);
-			}
-			
-			my $probForOthers = (1 - $unalProb) / $refPtNum;
-			
-			for my $refPt (@refPts) {
-				setProb($result, $hypIdx, $refPt, $probForOthers);
+			for my $refConn (keys %$ptHypMap) {
+				setProb($result, $hypIdx, $refConn,
+					$ptHypMap->{$refConn} / $sum);
 			}
 		}
 		else {
-			setProb($result, $hypIdx, -1, 1.0 / $hrAllowedPoints->{-1});
+			setProb($result, $hypIdx, -1, 1.0);
 		}
 	}
 	
@@ -172,7 +216,7 @@ sub stophere {
 #
 #####
 sub generate {
-	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $morePts, $exPts, $wPts) = @_;
 	
 	my $refSize = scalar @$refSnt;
 	
@@ -180,7 +224,7 @@ sub generate {
 	
 	$result->{'init'} = genInitPs($refSize);
 	$result->{'trans'} = genTransPs($refSize);
-	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor, $morePts, $exPts);
+	$result->{'emit'} = genEmitPs($refSnt, $hypSnt, $alFactor, $morePts, $exPts, $wPts);
 	
 	return $result;
 }

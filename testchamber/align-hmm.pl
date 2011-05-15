@@ -21,12 +21,12 @@ use counter;
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
-my ($reffile, $hypfile, $caseSensitive, $alFactor, $morePtsFile, $exPts) =
+my ($reffile, $hypfile, $caseSensitive, $alFactor, $morePtsFiles, $exPts, $wPts) =
 	processInputArgsAndOpts();
 
 my @files = ($reffile, $hypfile);
 
-if ($morePtsFile) {
+for my $morePtsFile (@$morePtsFiles) {
 	push @files, $morePtsFile;
 }
 
@@ -35,13 +35,19 @@ my $tuple;
 my $cnt = counter::init();
 
 while($tuple = io::readSentences(@fhs)) {
-	my $refSnt = parse::sentence($tuple->[0], $caseSensitive);
-	my $hypSnt = parse::sentence($tuple->[1], $caseSensitive);
+	my $refSnt = parse::sentence(shift @$tuple, $caseSensitive);
+	my $hypSnt = parse::sentence(shift @$tuple, $caseSensitive);
 	
-	my $morePts = ($morePtsFile? parse::morepts($tuple->[2]): undef);
+	my $morePts = {};
 	
-	my $probs = probs::generate($refSnt, $hypSnt, $alFactor, $morePts, $exPts);
-	my $alignment = decodeAlignment($refSnt, $hypSnt, $alFactor, $probs);
+	my $morePtsLine;
+	while ($morePtsLine = shift @$tuple) {
+		parse::morepts($morePtsLine, $morePts, $#$refSnt, $#$hypSnt);
+	}
+	
+	my $probs = probs::generate($refSnt, $hypSnt,
+		$alFactor, $morePts, $exPts, $wPts);
+	my $alignment = decodeAlignment($refSnt, $hypSnt, $alFactor, $probs, $cnt);
 	displayAlignment($alignment);
 	
 	counter::update($cnt);
@@ -55,13 +61,15 @@ io::closeMany(@fhs);
 #
 #####
 sub processInputArgsAndOpts {
-	my ($caseSensitive, $alFactor, $morePtsFile, $exclusiveMorePts);
+	my ($caseSensitive, $alFactor, $exclusiveMorePts, $weighedMorePts);
+	my @morePtsFiles;
 	
 	GetOptions(
 		'c' => \$caseSensitive,
 		'n=i' => \$alFactor,
-		'a=s' => \$morePtsFile,
-		'x' => \$exclusiveMorePts) or die("Options failed");
+		'a=s' => \@morePtsFiles,
+		'x' => \$exclusiveMorePts,
+		'w' => \$weighedMorePts) or die("Options failed");
 	
 	if (!defined($alFactor)) {
 		$alFactor = 0;
@@ -77,14 +85,14 @@ sub processInputArgsAndOpts {
 		die("Required arguments: reference file, hypothesis file");
 	}
 	
-	return ($reffile, $hypfile, $caseSensitive, $alFactor, $morePtsFile, $exclusiveMorePts);
+	return ($reffile, $hypfile, $caseSensitive, $alFactor, \@morePtsFiles, $exclusiveMorePts, $weighedMorePts);
 }
 
 #####
 #
 #####
 sub decodeAlignment {
-	my ($refSnt, $hypSnt, $alFactor, $probs) = @_;
+	my ($refSnt, $hypSnt, $alFactor, $probs, $cnt) = @_;
 	
 	my $auxinfo = {
 		'refsnt' => $refSnt,
@@ -96,7 +104,8 @@ sub decodeAlignment {
 		\&genAlNextStates, \&isAlFinalState);
 	
 	unless ($result->{'alignment'}) {
-		die("fail");
+		my $msg = "Fail at " . $cnt->{'val'};
+		die($msg);
 	}
 	
 	return $result->{'alignment'};
