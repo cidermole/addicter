@@ -1,6 +1,15 @@
 package counter;
 use strict;
 
+our $symb = randSymb(qw(. , > : ; < - ? ! * + / = ^ % $ # @ ~ _ | { } [ ]));
+
+#####
+#
+#####
+sub randSymb {
+	return $_[int(rand() * (scalar @_))];
+}
+
 #####
 #
 #####
@@ -17,7 +26,7 @@ sub update {
 	my $counter = ++$cnt->{'val'};
 	
 	if ($counter % 10 == 0) {
-		print STDERR ".";
+		print STDERR $symb;
 	}
 	if ($counter % 100 == 0) {
 		print STDERR "$counter\n";
