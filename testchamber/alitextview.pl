@@ -16,6 +16,14 @@ GetOptions(
   "hack-bad-alignments" => \$hack_bad_ali, # add extra words if needed
 ) or exit 1;
 
+my %lettercombs = qw(
+SURE            	*
+POSSIBLE        	o
+PHRASAL         	O
+PHRASAL,SURE    	@
+PHRASAL,POSSIBLE	?
+);
+
 my $nr = 0;
 while (<>) {
   $nr++;
@@ -25,24 +33,30 @@ while (<>) {
   my @tgt = split / /, trim($tgt);
 
   my @ali = ();
+  my $type = "SURE";
   foreach my $pair (split(/ /, trim($alistr))) {
-    my ($a, $b) = split /-/, $pair;
-    if ($hack_bad_ali) {
-      if ($a > $#src) {
-        my $needws = $a-$#src;
-        push @src, map { "HACK" } (1..$needws);
-        print STDERR "$nr:Hacking src sent to show bad alignment point $pair\n";
+    if ($pair =~ /-/) {
+      my ($a, $b) = split /-/, $pair;
+      if ($hack_bad_ali) {
+        if ($a > $#src) {
+          my $needws = $a-$#src;
+          push @src, map { "HACK" } (1..$needws);
+          print STDERR "$nr:Hacking src sent to show bad alignment point $pair\n";
+        }
+        if ($b > $#tgt) {
+          my $needws = $b-$#tgt;
+          push @tgt, map { "HACK" } (1..$needws);
+          print STDERR "$nr:Hacking tgt sent to show bad alignment point $pair\n";
+        }
+      } else {
+        die "$nr:Bad alignment point $pair: out of source sent" if $a > $#src;
+        die "$nr:Bad alignment point $pair: out of target sent" if $b > $#tgt;
       }
-      if ($b > $#tgt) {
-        my $needws = $b-$#tgt;
-        push @tgt, map { "HACK" } (1..$needws);
-        print STDERR "$nr:Hacking tgt sent to show bad alignment point $pair\n";
-      }
+      $ali[$a][$b]->{$type} = 1;
     } else {
-      die "$nr:Bad alignment point $pair: out of source sent" if $a > $#src;
-      die "$nr:Bad alignment point $pair: out of target sent" if $b > $#tgt;
+      # setting ali type
+      $type = $pair;
     }
-    $ali[$a][$b] = 1;
   }
   
   my $srcmaxlen = 0;
@@ -56,7 +70,10 @@ while (<>) {
     printf "%${srcmaxlen}s ", $src[$sw]; # source word
     for(my $tw=0; $tw < @tgt; $tw++) {
       if (defined $ali[$sw][$tw]) {
-        print "*";
+        my $typemix = join(",", sort {$a cmp $b} keys %{$ali[$sw][$tw]});
+        my $mark = $lettercombs{$typemix};
+        die "$nr:Bad type mix: $typemix" if ! defined $mark;
+        print $mark;
       } else {
         print "-";
       }
