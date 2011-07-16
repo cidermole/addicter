@@ -192,21 +192,37 @@ if(exists($config{experiment}))
             print("<ol>\n");
             print($list);
             print("</ol>\n");
-            print("<h2>Phrase table</h2>\n");
             @examples = grep {$_->{file} =~ m/^PT$/} (@{$index{$config{word}}});
-            if(@examples)
+            if(scalar(@examples))
             {
-                print("<table>\n");
-                foreach my $example (@examples)
+                print("<h2>Phrase table</h2>\n");
+                # A phrase table may be huge (millions of lines) and we cannot seek every example from scratch.
+                # So we cannot use AddicterHTML::get_nth_line().
+                print("<table border>\n");
+                my $phrase_table = $path.'phrase_table.txt';
+                open(IN, $phrase_table) or print("<p style='color:red'>Cannot read $phrase_table: $!</p>\n");
+                my $i_example = 0;
+                my $i_line = 0;
+                while(my $line = <IN>)
                 {
-                    my $ptline = AddicterHTML::get_nth_line($files->{$srcfile}, $example->{line});
-                    # Fields are separated by three vertical bars.
-                    # List of fields: left hand side ||| source right hand side ||| target right hand side ||| weights
-                    # Example:
-                    # [X] ||| 100 [X,1] du [X,2] ||| 100 [X,1] of the [X,2] ||| 0.30103 1.0637686 1.1094114
-                    my @fields = split(/\s*\|\|\|\s*/, $_);
-                    print("  <tr><td>".join('</td><td>', @fields)."</td></tr>\n");
+                    if($i_line==$examples[$i_example]->{line})
+                    {
+                        # Chop off the line break.
+                        $line =~ s/\r?\n$//;
+                        # Fields are separated by three vertical bars.
+                        # List of fields: left hand side ||| source right hand side ||| target right hand side ||| weights
+                        # Example:
+                        # [X] ||| 100 [X,1] du [X,2] ||| 100 [X,1] of the [X,2] ||| 0.30103 1.0637686 1.1094114
+                        my @fields = split(/\s*\|\|\|\s*/, $line);
+                        my $ie = $i_example+1;
+                        my $il = $i_line+1;
+                        print("  <tr><td>$ie</td><td>$il</td><td>".join('</td><td>', @fields)."</td></tr>\n");
+                        $i_example++;
+                        last if($i_example>$#examples);
+                    }
+                    $i_line++;
                 }
+                close(IN);
                 print("</table>\n");
             }
         }
