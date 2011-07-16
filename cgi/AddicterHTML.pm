@@ -57,6 +57,8 @@ sub sentence_to_table_row
     my $focusword = shift; # string
     # Optionally, words can be transliterated from a foreign script to the Roman alphabet.
     my $translitroutine = shift; # ref to subroutine
+    # If we are generating static HTML pages we do not want to make every word link to its dynamic examples.
+    my $nodynamiclinks = shift; # 0|1
     my ($linklang, $aithis, $aithat);
     unless($target)
     {
@@ -80,7 +82,7 @@ sub sentence_to_table_row
             $translit = '<br/>'.&{$translitroutine}($srcwords->[$i]);
         }
         # Every word except for the current one is a link to its own examples.
-        my $word = $focusword && $srcwords->[$i] eq $focusword ? "<span style='color:red'>$focusword</span>" : word_to_link($experiment, $linklang, $srcwords->[$i]);
+        my $word = $focusword && $srcwords->[$i] eq $focusword ? "<span style='color:red'>$focusword</span>" : word_to_link($experiment, $linklang, $srcwords->[$i], $nodynamiclinks);
         $mainrow .= "<td>$word$translit</td>";
     }
     $mainrow .= "</tr>\n";
@@ -142,14 +144,24 @@ sub sentence_to_table_row
 
 #------------------------------------------------------------------------------
 # Converts a word into a hyperlink to the page with an example of the word as
-# occurs in the corpus.
+# occurs in the corpus. If dynamic links are off, makes the word blue without
+# linking anywhere.
 #------------------------------------------------------------------------------
 sub word_to_link
 {
     my $experiment = shift;
     my $lang = shift;
     my $word = shift;
-    my $html = "<a href='example.pl?experiment=$experiment&amp;lang=$lang&amp;word=$word'>$word</a>";
+    my $nodynamiclinks = shift;
+    my $html;
+    if($nodynamiclinks)
+    {
+        $html = "<span style='color:blue'>$word</span>";
+    }
+    else
+    {
+        $html = "<a href='example.pl?experiment=$experiment&amp;lang=$lang&amp;word=$word'>$word</a>";
+    }
     return $html;
 }
 
