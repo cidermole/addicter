@@ -192,6 +192,23 @@ if(exists($config{experiment}))
             print("<ol>\n");
             print($list);
             print("</ol>\n");
+            print("<h2>Phrase table</h2>\n");
+            @examples = grep {$_->{file} =~ m/^PT$/} (@{$index{$config{word}}});
+            if(@examples)
+            {
+                print("<table>\n");
+                foreach my $example (@examples)
+                {
+                    my $ptline = AddicterHTML::get_nth_line($files->{$srcfile}, $example->{line});
+                    # Fields are separated by three vertical bars.
+                    # List of fields: left hand side ||| source right hand side ||| target right hand side ||| weights
+                    # Example:
+                    # [X] ||| 100 [X,1] du [X,2] ||| 100 [X,1] of the [X,2] ||| 0.30103 1.0637686 1.1094114
+                    my @fields = split(/\s*\|\|\|\s*/, $_);
+                    print("  <tr><td>".join('</td><td>', @fields)."</td></tr>\n");
+                }
+                print("</table>\n");
+            }
         }
     }
     else

@@ -19,6 +19,7 @@ sub usage
     print STDERR ("  -h path ..... path to system output (hypothesis) for test data\n");
     print STDERR ("  -ra path .... path to alignment of source and reference\n");
     print STDERR ("  -ha path .... path to alignment of source and hypothesis\n");
+    print STDERR ("  -pt path .... path to the phrase table or grammar\n");
     print STDERR ("  -o path ..... path to output folder (number of index files will go there; default '.')\n");
     print STDERR ("  -oprf pref .. prefix of index file names (e.g. 's' or 't')\n");
     print STDERR ("                The index files represent the language that we put in as source.\n");
@@ -45,6 +46,7 @@ GetOptions
     'h=s'    => \$hpath,
     'ra=s'   => \$rapath,
     'ha=s'   => \$hapath,
+    'pt=s'   => \$ptpath,
     'o=s'    => \$opath,
     'oprf=s' => \$oprf,
 );
@@ -86,6 +88,12 @@ if($spath ne '' && $hpath ne '' && $hapath ne '')
     {
         index_corpus('test.system', $spath, $hpath, $hapath, \%index, $opath);
     }
+}
+# Index words in Moses phrase table / Joshua grammar.
+if($ptpath)
+{
+    print STDERR ("Reading the phrase table...\n");
+    index_phrase_table($ptpath, \%index, "$opath/phrase_table.txt");
 }
 # To speed up reading the index, do not save it in one huge file.
 # Instead, split it up according to the first letters of the words.
@@ -230,4 +238,66 @@ sub index_corpus
     }
     print STDERR ("Found $i_sentence word-aligned sentence pairs.\n");
     print STDERR ("The index contains ", scalar(keys(%{$index})), " distinct words (both source and target).\n");
+}
+
+
+
+#------------------------------------------------------------------------------
+# Indexes a phrase table (currently only in the format of a Joshua grammar).
+# For every word type notes all occurrences (line numbers).
+#------------------------------------------------------------------------------
+sub index_phrase_table
+{
+    my $ipath = shift; # Including the file name.
+    my $index = shift; # Reference to the index hash.
+    my $opath = shift; # Output path to copy the input files to, including the file name.
+    # We only have to copy the corpus to the output folder once.
+    # We want to do this when indexing source language because for target, we have the sides swapped.
+    my $copy = !$target;
+    my $ptid = 'PT';
+    my $hpt = dzsys::gopen($ipath);
+    if($copy)
+    {
+        open(OUT, ">$opath") or die("Cannot write $opath: $!\n");
+    }
+    my $i_line = 0;
+    while(<$hpt>)
+    {
+        # Copy the lines just read to the output folder.
+        if($copy)
+        {
+            print OUT;
+        }
+        # Chop off the line break.
+        s/\r?\n$//;
+        # Fields are separated by three vertical bars.
+        # List of fields: left hand side ||| source right hand side ||| target right hand side ||| weights
+        # Example:
+        # [X] ||| 100 [X,1] du [X,2] ||| 100 [X,1] of the [X,2] ||| 0.30103 1.0637686 1.1094114
+        my @fields = split(/\s*\|\|\|\s*/, $_);
+        my $myside = $target ? 2 : 1;
+        my @words = split(/\s+/, $fields[$myside]);
+        foreach my $word (@words)
+        {
+            # Skip nonterminals.
+            unless($word =~ m/^\[.+\]$/)
+            {
+                my %record =
+                (
+                    'file' => $ptid,
+                    'line' => $i_line,
+                    'aliphrase' => ''
+                );
+                push(@{$index->{$word}}, \%record);
+            }
+        }
+        $i_line++;
+    }
+    close($hpt);
+    if($copy)
+    {
+        close(OUT);
+    }
+    print STDERR ("Found $i_line phrase pairs / grammar rules.\n");
+    print STDERR ("The index contains ", scalar(keys(%{$index})), " distinct words.\n");
 }
