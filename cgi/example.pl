@@ -159,7 +159,7 @@ if(exists($config{experiment}))
             }
             # Compute and print summary of alignments.
             my %alicps;
-            foreach my $occ (@examples)
+            foreach my $occ (grep {$_->{file} ne 'PT'} (@examples))
             {
                 my $acp = $occ->{aliphrase};
                 # Transliteration needed? If $occ is source, then aliphrase is target, i.e. Hindi.
