@@ -1,4 +1,4 @@
-package Algorithm::Diff;
+package Diff;
 # Skip to first "=head" line for documentation.
 use strict;
 
