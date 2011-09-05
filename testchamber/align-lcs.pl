@@ -23,7 +23,7 @@ BEGIN {
 use io;
 use counter;
 use parse;
-use Algorithm::Diff;
+use Diff;
 
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
