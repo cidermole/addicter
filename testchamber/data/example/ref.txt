@@ -1,0 +1,2 @@
+life|content|life is|aux|be beautiful|content|beautiful !|punct|.
+a|aux|a "|punct|" four|content|four seasons|content|season "|punct|" pizza|content|pizza please|aux|please .|punct|.

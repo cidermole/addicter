@@ -1,0 +1,2 @@
+the|aux|the life|content|life is|aux|be beautiful|content|beautiful .|punct|.
+please|aux|please a|aux|a pizza|content|pizza "|punct|" four|content|four season|content|season "|punct|" .|punct|.
