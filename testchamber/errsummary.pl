@@ -61,7 +61,7 @@ while (<$fh>) {
 			$incorrectHypWords->{'extra, ' . getCat($fields->{'token'})}++;
 		}
 		elsif ($tagId eq "untranslatedHypWord") {
-			$incorrectHypWords->{'untranslated'}++;
+			$incorrectHypWords->{'unk'}++;
 		}
 		elsif ($tagId eq "unequalAlignedTokens") {
 			my $latag = ($fields->{'unequalFactorList'} =~ /2/)? 'lex error': 'wrong form';
@@ -70,7 +70,7 @@ while (<$fh>) {
 		elsif ($tagId =~ /^ordError/) {
 			my $dist = $fields->{'distance'};
 			
-			$orderErrors->{($dist > 7? "8+": $dist)}++;
+			$orderErrors->{($dist > 1? "many": $dist)}++;
 		}
 	}
 }
@@ -82,15 +82,15 @@ printf "Total hyp words: %10d\n", $totalHypLen;
 printWithCats($missingRefWords, 'Missing ref words', 'ref', $totalRefLen);
 printWithCats($incorrectHypWords, 'Incorrect hyp words', 'hyp', $totalHypLen);
 
-print "\nOrder similarity metrics\n";
-if($totalNumOfAligned != 0)
-{
-    printf "\t%13s: %5.3f\n", "Spearman's rho", $totalRho / $totalNumOfAligned;
-}
-else
-{
-    printf("\t%13s: %5s\n", "Spearman's rho", "$totalRho / $totalNumOfAligned ... cannot divide by zero");
-}
+#print "\nOrder similarity metrics\n";
+#if($totalNumOfAligned != 0)
+#{
+#	printf "\t%13s: %5.3f\n", "Spearman's rho", $totalRho / $totalNumOfAligned;
+#}
+#else
+#{
+#	  printf("\t%13s: %5s\n", "Spearman's rho", "$totalRho / $totalNumOfAligned ... cannot divide by zero");
+#}
 
 printWithCats($orderErrors, 'Order errors, by shift distance', 'hyp', $totalHypLen);
 
@@ -107,9 +107,9 @@ sub printWithCats {
 	for my $k (sort { $a <=> $b } keys %$hash) {
 		my $val = $hash->{$k};
 		$sum += $val;
-		printf "\t%13s: %7d (%5.2f%% of $aux)\n", $k, $val, 100*$val/$total;
+		printf "%10s: %7d (%5.2f%% of $aux)\n", $k, $val, 100*$val/$total;
 	}
-	printf "\n\t%13s: %7d (%5.2f%% of $aux)\n", 'total', $sum, 100*$sum/$total;
+	printf "\n%10s: %7d (%5.2f%% of $aux)\n", 'total', $sum, 100*$sum/$total;
 }
 
 #####
@@ -118,5 +118,6 @@ sub printWithCats {
 sub getCat {
 	my $token = shift;
 	my @fields = split(/\|/, $token);
-	return $fields[1];
+	my $res = substr($fields[1], 0, 1);
+	return $res;
 }

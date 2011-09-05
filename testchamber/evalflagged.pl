@@ -55,10 +55,16 @@ while ($refAnalysis = readRefAnalysis($fhRA)) {
 ($hypAnalysis, $refTrans) = readHAandRT($fhHA, $fhRT);
 updateStats($hypAnalysis, $refTrans, \@refAnalysisArr, $stats);
 
+our ($overallCorrect, $overallRecDenom, $overallPrecDenom);
+
 for my $groupId ("lex", "order", "punct", "missed") {
 	logHash($stats, $groupId);
 	precRecHash($stats, $groupId);
 }
+
+print "\n";
+
+printPrecRecFscore("overall (no empty)", $overallPrecDenom, $overallRecDenom, $overallCorrect);
 
 #####
 #
@@ -103,6 +109,10 @@ sub precRecHash {
 			$totalCorrect += $stats->{$id}->{$k1}->{$k1};
 			$totalRecDenom += $recDenom->{$k1};
 			$totalPrecDenom += $precDenom->{$k1};
+			
+			$overallCorrect += $stats->{$id}->{$k1}->{$k1};
+			$overallRecDenom += $recDenom->{$k1};
+			$overallPrecDenom += $precDenom->{$k1};
 		}
 		
 		printPrecRecFscore($dk1, $precDenom->{$k1}, $recDenom->{$k1}, $stats->{$id}->{$k1}->{$k1});

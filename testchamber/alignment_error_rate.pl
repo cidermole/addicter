@@ -14,6 +14,9 @@ my $tot_hyp_cap_refsure = 0;
 my $tot_hyp_cap_refposs = 0;
 my $tot_hypcnt = 0;
 while (<>) {
+	s/ +/ /;
+	s/^ //g;
+	s/ $//g;
   chomp;
   my ($ref, $hyp) = split /\t/;
   my %hypset = map { die "Bad point $_" if $_ !~ /^[0-9]+-[0-9]+$/; ($_, 1) }
@@ -37,7 +40,7 @@ while (<>) {
 my $recall = $tot_hyp_cap_refsure / $tot_refsure;
 my $precision = $tot_hyp_cap_refposs / $tot_hypcnt;
 
-my $alignment_error_rate = ($tot_hyp_cap_refsure + $tot_hyp_cap_refposs) 
+my $alignment_error_rate = 1 - ($tot_hyp_cap_refsure + $tot_hyp_cap_refposs) 
                            / ($tot_refsure + $tot_hypcnt);
 
 printf "total sure alignment points in the ref\t$tot_refsure\n";

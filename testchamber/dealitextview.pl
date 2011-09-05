@@ -45,13 +45,19 @@ resolve(\@lines) if 0 < scalar @lines;
 sub resolve {
   my $lines = shift;
   my @outpoints;
+  
+  my $hasManualCorrections = '';
+  
   for(my $r = 0; $r < scalar(@$lines); $r++) {
     my @points = @{$lines->[$r]};
     for(my $c = 0; $c < scalar(@{$lines->[$r]}); $c++) {
       if ($lines->[$r]->[$c] ne "-") {
+        if ($lines->[$r]->[$c] ne "*") {
+          $hasManualCorrections = 'M ';
+		  }
         push @outpoints, $r."-".$c;
       }
     }
   }
-  print "@outpoints\n";
+  print "$hasManualCorrections @outpoints\n";
 }
