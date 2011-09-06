@@ -470,6 +470,21 @@ sub printGeneralSntInfo {
 #####
 #
 #####
+sub aliToTxt {
+	my ($ali) = @_;
+	
+	my @resArr = ();
+	
+	for my $elem (@$ali) {
+		push @resArr, $elem->{'hyp'} . "-" . $elem->{'ref'};
+	}
+	
+	return join(" ", @resArr);
+}
+
+#####
+#
+#####
 sub getRefInfo {
 	my ($refSnt, $ali, $idx) = @_;
 	
@@ -478,5 +493,6 @@ sub getRefInfo {
 	my $idxInfo = (defined($idx))? " index=\"$idx\"": "";
 	
 	return ["<reference$idxInfo length=\"" . (scalar @$refSnt) .
-		"\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>"];
+		"\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>",
+		"<alignment raw=\"" . aliToTxt($ali) . "\">"];
 }

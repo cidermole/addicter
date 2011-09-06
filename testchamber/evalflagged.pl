@@ -23,7 +23,8 @@ our %groups = (
 	"order" => [qw(ows owl ops opl)],
 	"punct" => ["punct"],
 	"lex" => [qw(lex/dism extra unk form)],
-	"missed" => [qw(missA missP missC)]
+	"missed" => [qw(missA missP missC)],
+	"all" => [qw(miss infl ext lex reord)]
 );
 
 my ($refAnalysisFile, $hypAnalysisFile, $refTransFile) = @ARGV;
@@ -57,7 +58,8 @@ updateStats($hypAnalysis, $refTrans, \@refAnalysisArr, $stats);
 
 our ($overallCorrect, $overallRecDenom, $overallPrecDenom);
 
-for my $groupId ("lex", "order", "punct", "missed") {
+#for my $groupId ("lex", "order", "punct", "missed") {
+for my $groupId ("all") {
 	logHash($stats, $groupId);
 	precRecHash($stats, $groupId);
 }
@@ -382,6 +384,6 @@ sub readRefAnalysis {
 		return undef;
 	}
 	else {
-		die("Fail");
+		die("Fail on `$str'");
 	}
 }

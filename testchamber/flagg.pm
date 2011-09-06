@@ -26,11 +26,11 @@ sub convertFromFactored {
 #
 #####
 sub display {
-	my $flaggedHyp = shift;
+	my ($flaggedHyp, $tildes) = @_;
 	
-	displayFlaggedMissingRef($flaggedHyp);
+	displayFlaggedMissingRef($flaggedHyp, $tildes);
 	
-	displayFlaggedHyp($flaggedHyp);
+	displayFlaggedHyp($flaggedHyp, $tildes);
 	
 	print "\n";
 }
@@ -39,13 +39,13 @@ sub display {
 #
 #####
 sub displayFlaggedHyp {
-	my $flaggedHyp = shift;
+	my ($flaggedHyp, $tildes) = @_;
 	
 	for my $hypWord (@{$flaggedHyp->{'hyp'}}) {
 		my $surfForm = $hypWord->{'factors'}->[0];
 		
 		for my $flag (sort keys %{$hypWord->{'flags'}}) {
-			print $flag . "::";
+			print $flag . ($tildes? "~~": "::");
 		}
 		
 		print $surfForm . " ";
@@ -56,7 +56,7 @@ sub displayFlaggedHyp {
 #
 #####
 sub displayFlaggedMissingRef {
-	my $flaggedHyp = shift;
+	my ($flaggedHyp, $tildes) = @_;
 	
 	for my $missRefWord (sort keys %{$flaggedHyp->{'missed'}}) {
 		my $count = $flaggedHyp->{'missed'}->{$missRefWord};
@@ -85,7 +85,7 @@ sub displayFlaggedMissingRef {
 		}
 		
 		for my $i (1..$count) {
-			print "miss" . $auxFlag . "::" . $surfForm . " ";
+			print "miss" . $auxFlag . ($tildes? "~~": "::") . $surfForm . " ";
 		}
 	}
 }
