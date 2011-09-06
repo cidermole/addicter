@@ -2,7 +2,7 @@
 # Simple web server to serve Addicter's output.
 # Copyright © 2011 Dan Zeman <zeman@ufal.mff.cuni.cz>
 # (well, it's heavily based on documentation of HTTP::Daemon)
-# Licence: GNU GPL
+# License: GNU GPL
 
 use utf8;
 use open ":utf8";
@@ -23,7 +23,7 @@ else
 {
     $d = HTTP::Daemon->new || die;
 }
-print "Please contact me at: <URL:", $d->url, "cgi/index.pl>\n";
+print("Please contact me at: <URL:", $d->url, "cgi/index.pl>\n");
 while (my $c = $d->accept)
 {
     while (my $r = $c->get_request)
