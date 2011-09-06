@@ -4,3 +4,6 @@ StatMT repository with the DZlib repository daily, DZlib being the master copy.
 Then there will be a folder called (probably) $STATMT/perl/lib, and the users
 will have to include a pointer to that folder in their PERL5LIB environment
 variable.
+
+Update 2011-09-06: I patched a dummy script that ought to do the above.
+Let's see first if it works as expected.
