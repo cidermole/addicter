@@ -4,19 +4,19 @@ use File::Spec;
 use Getopt::Long;
 
 BEGIN {
-	#include packages from same folder where the
-	#script is, even if launched from elsewhere
-	
+	# include packages from same folder where the
+	# script is, even if launched from elsewhere
+	# unshift(), not push(), to give own functions precedence over other libraries
 	my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
 	pop @dirs;
-	push(@INC, File::Spec->catdir(@dirs));
+	unshift(@INC, File::Spec->catdir(@dirs));
 }
 
 use parse;
 use io;
 use flagg;
 
-my ($hypSnt, $refSnt);
+my ($hypSnt, $refSnt, $sntIdx);
 
 my $filename = (scalar @ARGV == 0)? "-": $ARGV[0];
 
@@ -58,10 +58,13 @@ while (<$fh>) {
 			setFlag($hypSnt, $fields->{'hypPos'}, 'reord');
 			setFlag($refSnt, $fields->{'refPos'}, 'reord');
 		}
+		elsif ($tagId eq "sentence") {
+			$sntIdx = $fields->{'index'};
+		}
 		elsif ($tagId eq "/sentence") {
-			print "HYP: ";
+			print "\n" . ($sntIdx + 1) . "::hyp-err-cats: ";
 			flagg::display($hypSnt, 1);
-			print "REF: ";
+			print "" . ($sntIdx + 1) . "::ref-err-cats: ";
 			flagg::display($refSnt, 1);
 		}
 	}
