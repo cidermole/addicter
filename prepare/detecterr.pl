@@ -30,7 +30,8 @@ unless($srcfile && $reffile && $hypfile)
     die('Missing (src|ref|hyp)file');
 }
 my $scriptpath = dzsys::get_script_path();
-my $tcpath = "$scriptpath/testchamber";
+my $tcpath = "$scriptpath/../testchamber";
+$tcpath =~ s-/prepare/..--;
 # Intermediate and output files:
 my $tcalignment = "$workdir/tcali.txt";
 my $tcerrorlist = "$workdir/tcerr.txt";
