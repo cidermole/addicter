@@ -76,7 +76,7 @@ sub processInputArgsAndOpts {
 	}
 	
 	if ($alFactor < 0) {
-		die("Looking for a positive-valued iteger for alignment factor");
+		die("Looking for a positive-valued integer for alignment factor");
 	}
 	
 	my ($reffile, $hypfile) = @ARGV;
