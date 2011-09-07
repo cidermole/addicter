@@ -125,7 +125,7 @@ sub prealign_same {
     my %r_forms;
     foreach my $r ( @{ $args->{free_r} } ) {
         my $r_form = $args->{"r$attr"}[$r];
-        if ( $r_forms{$r_form} ) {
+        if ( defined $r_forms{$r_form} ) {
             $r_forms{$r_form} = -2;
         }
         else {

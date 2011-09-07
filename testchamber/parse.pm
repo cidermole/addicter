@@ -45,14 +45,14 @@ sub alignment {
 			my ($hyp, $ref) = ($1, $2);
 			
 			if (!$ignoreDuplicates and $hypHash->{$hyp}) {
-				die("Alignment has to be 1-to-1, duplicate hyp point $hyp");
+				die("Alignment has to be 1-to-1, duplicate hyp point $hyp '$string'");
 			}
 			else {
 				$hypHash->{$hyp} = 1;
 			}
 			
 			if (!$ignoreDuplicates and $refHash->{$ref}) {
-				die("Alignment has to be 1-to-1, duplicate ref point $ref");
+				die("Alignment has to be 1-to-1, duplicate ref point $ref in '$string'");
 			}
 			else {
 				$refHash->{$ref} = 1;
