@@ -20,9 +20,16 @@ print("<html>\n");
 print("<head>\n");
 print("  <meta http-equiv='content-type' content='text/html; charset=utf8'/>\n");
 print("  <title>Addicter</title>\n");
+print("  <style>\n");
+print("    a:link, a:visited { text-decoration: none }\n");
+print("    a:hover { text-decoration: underline }\n");
+print("    a.info {position:relative; z-index:24; background-color:#ccc; color:#000; text-decoration:none}\n");
+print("    a.info:hover {z-index:25; background-color:#ff0}\n");
+print("    a.info span {display: none}\n");
+print("    a.info:hover span {display:block; position:absolute; top:2em; left:2em; width:15em; border:1px solid #0cf; background-color:#cff; color:#000; text-align:center; text-decoration:none}\n");
+print("  </style>\n");
 print("</head>\n");
 print("<body>\n");
-print("  <style><!-- A:link, A:visited { text-decoration: none } A:hover { text-decoration: underline } --></style>");
 print("  <h1>Addicter</h1>\n");
 # Read cgi parameters.
 dzcgi::cist_parametry(\%config);
@@ -46,7 +53,7 @@ if(exists($config{experiment}))
     print("      <td valign=top style='background:yellow'>\n");
     print("        <h2><a href='browsetest.pl?experiment=$experiment'>Test Data Browser</a></h2>\n");
     my $ellipsis = chr(8230); # ...
-    for(my $i = 1; $i<=5; $i++)
+    for(my $i = 1; $i<=4; $i++)
     {
         my $srcline = AddicterHTML::get_nth_line("$experiment/test.src", $i);
         my $tgtline = AddicterHTML::get_nth_line("$experiment/test.tgt", $i);
@@ -65,23 +72,27 @@ if(exists($config{experiment}))
     print("  <input type=hidden name=experiment value='$config{experiment}' />\n");
     print("  <input type=hidden name=lang value='s' />\n");
     my $default = $config{lang} eq 's' ? $config{re} : '';
-    print("  <input type=text name=re value='$default' />\n");
-    print_start_letters('s');
+    print("  <a class=info>\n");
+    print("  <input type=text name=re value='$default' />");
+    print("<span>Perl-style regular expression to search for source words</span></a>\n");
+    print_start_letters($experiment, 's');
     print("</form>\n");
     print("<form method=get action='index.pl'>\n");
     print("  TGT:\n");
     print("  <input type=hidden name=experiment value='$config{experiment}' />\n");
     print("  <input type=hidden name=lang value='t' />\n");
     $default = $config{lang} eq 't' ? $config{re} : '';
-    print("  <input type=text name=re value='$default' />\n");
-    print_start_letters('t');
+    print("  <a class=info>\n");
+    print("  <input type=text name=re value='$default' />");
+    print("<span>Perl-style regular expression to search for target words</span></a>\n");
+    print_start_letters($experiment, 't');
     print("</form>\n");
     print("      </td>\n");
     print("    </tr>\n");
     print("  </table>\n");
     if(exists($config{letter}))
     {
-        print_words_by_letter();
+        print_words_by_letter($experiment, $config{lang}, $config{letter});
     }
     elsif(exists($config{re}))
     {
@@ -130,6 +141,7 @@ sub get_subfolders
 #------------------------------------------------------------------------------
 sub print_start_letters
 {
+    my $experiment = shift;
     # Which index to read? 's' or 't'?
     my $oprf = shift;
     # Do we want to print the introductory sentence, too?
@@ -161,8 +173,11 @@ sub print_start_letters
 #------------------------------------------------------------------------------
 sub print_words_by_letter
 {
+    my $experiment = shift;
+    my $lang = shift;
+    my $letter = shift;
     # Which index file do we need?
-    my $indexname = sprintf("$experiment/$config{lang}index%04x.txt", ord($config{letter}));
+    my $indexname = sprintf("$experiment/${lang}index%04x.txt", ord($letter));
     my %index;
     open(INDEX, $indexname) or print("<p style='color:red'>Cannot open $indexname: $!</p>\n");
     while(<INDEX>)
@@ -222,7 +237,10 @@ sub print_words_matching_re
         my @words_rest = grep {$_ !~ m/^$re/} (@words);
         my $nwb = scalar(@words_beg);
         my $nwr = scalar(@words_rest);
-        print("Found $nwb words whose prefix matches the RE and $nwr other words that match the RE.</p>\n");
+        my $swb = 's' unless($nwb==1);
+        my $swr = 's' unless($nwr==1);
+        my $veswr = 'es' if($nwr==1);
+        print("Found $nwb word$swb whose prefix matches the RE and $nwr other word$swr that match$veswr the RE.</p>\n");
         @words = (@words_beg, @words_rest);
     }
     else
