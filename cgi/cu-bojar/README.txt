@@ -1,0 +1,1 @@
+cu-bojar.hmm has been copied here as test.refhyp.ali

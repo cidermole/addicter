@@ -50,7 +50,8 @@ if(exists($config{experiment}))
         # So what do we need to read?
         my $sntno = $config{sntno}>0 ? $config{sntno} : 1;
         print(get_navigation($sntno, $numsnt));
-        print(sentence_to_table($sntno, $files{S}, $files{R}, $files{RA}, $files{H}, $files{HA}, $files{XML}));
+        my $sentence = read_sentence($config{experiment}, $sntno);
+        print(sentence_to_table($sentence));
     }
 }
 else
@@ -93,44 +94,89 @@ sub get_navigation
 
 
 #------------------------------------------------------------------------------
+# Reads tokens and word aligments for the n-th sentence of the test data. Tries
+# to read the relevant line from all files that may be available.
+#------------------------------------------------------------------------------
+sub read_sentence
+{
+    my $experiment = shift;
+    my $sntno = shift; # number of current sentence (first sentence has number 1)
+    my %files =
+    (
+        'S'   => 'test.src',
+        'R'   => 'test.tgt',
+        'H'   => 'test.system.tgt',
+        'RA'  => 'test.ali',
+        'HA'  => 'test.system.ali',
+        'RH'  => 'test.refhyp.ali',
+        'XML' => 'tcerr.txt'
+    );
+    my %sentence;
+    foreach my $file (keys(%files))
+    {
+        my $path = "$experiment/$files{$file}";
+        if(-f $path)
+        {
+            unless($file eq 'XML')
+            {
+                $sentence{$file} = AddicterHTML::get_nth_line($path, $sntno);
+            }
+            else
+            {
+                $sentence{$file} = ReadFindErrs::get_nth_sentence($path, $sntno);
+            }
+        }
+    }
+    return \%sentence;
+}
+
+
+
+#------------------------------------------------------------------------------
 # Generates a HTML table with a sentence pair/triple (for test data, triples of
 # source, reference and hypothesis may be available).
 #------------------------------------------------------------------------------
 sub sentence_to_table
 {
     # This function accesses the global hashes %config and %prevod.
-    my $sntno = shift;
-    my $srcfile = shift;
-    my $tgtfile = shift;
-    my $alifile = shift;
-    my $hypfile = shift;
-    my $halifile = shift;
-    my $finderrsxmlfile = shift;
+    my $sentence = shift; # hash with read tokens and alignments
     my $html;
-    my $srcline = AddicterHTML::get_nth_line($srcfile, $sntno);
-    my $tgtline = AddicterHTML::get_nth_line($tgtfile, $sntno);
-    my $aliline = AddicterHTML::get_nth_line($alifile, $sntno);
-    my $hypline = AddicterHTML::get_nth_line($hypfile, $sntno);
-    my $haliline = AddicterHTML::get_nth_line($halifile, $sntno);
     # Print raw sentences first. No tables, to make reading easier.
     $html .= "<dl>\n";
     $html .= "  <dt><b>source</b></dt>\n";
-    $html .= "  <dd>$srcline</dd>\n";
+    $html .= "  <dd>$sentence->{S}</dd>\n";
     $html .= "  <dt><b>target</b></dt>\n";
-    $html .= "  <dd>$tgtline</dd>\n";
+    $html .= "  <dd>$sentence->{R}</dd>\n";
     $html .= "  <dt><b>system hypothesis</b></dt>\n";
-    $html .= "  <dd>$hypline</dd>\n";
+    $html .= "  <dd>$sentence->{H}</dd>\n";
     $html .= "</dl>\n";
     # Decompose alignments into array of arrays (pairs).
-    my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
-    my @srcwords = split(/\s+/, $srcline);
-    my @tgtwords = split(/\s+/, $tgtline);
-    my @halignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $haliline));
-    my @hypwords = split(/\s+/, $hypline);
+    my @srcwords = split(/\s+/, $sentence->{S});
+    my @tgtwords = split(/\s+/, $sentence->{R});
+    my @hypwords = split(/\s+/, $sentence->{H});
+    my @alignments;
+    my @halignments;
+    my @rhalignments;
+    @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{RA})) if(exists($sentence->{RA}));
+    @halignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{HA})) if(exists($sentence->{HA}));
+    @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{RH})) if(exists($sentence->{RH}));
     # Get HTML for the three sentences with alignments.
-    my $srcrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0);
-    my $tgtrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1);
-    my $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
+    my ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
+    if(exists($sentence->{RA}))
+    {
+        $srcrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0);
+        $tgtrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1);
+    }
+    if(exists($sentence->{HA}))
+    {
+        $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
+    }
+    if(exists($sentence->{RH}))
+    {
+        $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, \@rhalignments, 1);
+        $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, \@rhalignments, 0);
+    }
+    my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
     # We can display all three pairs of rows in one table or we can display them in separate tables.
     my $onetable = 0;
     if($onetable)
@@ -138,12 +184,12 @@ sub sentence_to_table
         # Display the source words along with their alignment links.
         $html .= "<table border style='font-family:Code2000'>\n";
         # An empty row separates source and target sections.
-        $html .= join("  <tr><td></td></tr>\n", ($srcrow, $tgtrow, $hyprow));
+        $html .= join("  <tr><td></td></tr>\n", @rowpairs);
         $html .= "</table>\n";
     }
     else # separate tables
     {
-        foreach my $rowpair ($srcrow, $tgtrow, $hyprow)
+        foreach my $rowpair (@rowpairs)
         {
             # Display the source words along with their alignment links.
             $html .= "<table border style='font-family:Code2000'>\n";
@@ -152,9 +198,9 @@ sub sentence_to_table
         }
     }
     # Additional information by finderrs.pl from Mark's Testchamber.
-    if(-f $finderrsxmlfile)
+    if(exists($sentence->{XML}))
     {
-        my $xmlrecord = ReadFindErrs::get_nth_sentence($finderrsxmlfile, $sntno);
+        my $xmlrecord = $sentence->{XML};
         $html .= "<h2>Automatically Identified Errors</h2>\n";
         if($xmlrecord->{state} eq 'waiting')
         {

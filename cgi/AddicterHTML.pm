@@ -29,6 +29,10 @@ sub get_nth_line
     }
     close(IN);
     $line =~ s/\r?\n$//;
+    ###!!! A hack:
+    # Some datasets contain factors, e.g. "me|PRP|I".
+    # We currently cannot use the factors (except the first one, word form) so we just discard them.
+    $line = join(' ', map {s/\|.*//; $_} (split(/\s+/, $line)));
     return $line;
 }
 
