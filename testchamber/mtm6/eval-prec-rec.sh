@@ -13,3 +13,8 @@
 # 2::hyp-err-cats: lex~~here too there infl~~is price and quality categories .  
 # ...
 #
+
+manfile=$1
+autofile=$2
+
+if [[ -z "$manfile" || -z "$autofile" ]]
