@@ -28,7 +28,8 @@ while (my $c = $d->accept)
 {
     while (my $r = $c->get_request)
     {
-        if ($r->method() eq 'GET' and $r->url()->as_string() =~ m-^/cgi/(.*\.pl)(?:\?(.*))$-)
+        print STDERR ('"', $r->method(), '" "', $r->url->as_string, "\"\n");
+        if ($r->method() eq 'GET' and $r->url()->as_string() =~ m-^/cgi/(.*\.pl)(?:\?(.*))?$-)
         {
             my $script = $1;
             my $params = $2;
