@@ -48,6 +48,7 @@ my @flags = sort keys %$allFlags;
 my $correct = 0;
 my $total = 0;
 
+print "||border=1\n";
 print "|| (left: auto; top: manual) ||||||||||||\n";
 
 printf "|| %15s ", "";
@@ -74,7 +75,7 @@ for my $autoFlag (@flags) {
 
 
 
-printf "|| total accuracy: %.3f ($correct / $total) ||||||||||||\n", $correct / $total;
+printf "|| total accuracy: %.3f ||||||||||||\n", $correct / $total;
 
 #####
 #
@@ -84,7 +85,7 @@ sub getFlags {
 	
 	my $result = {};
 	
-	my @parts = split(/::/, $word);
+	my @parts = split(/~~/, $word);
 	pop @parts;
 	
 	if (@parts > 0) {

@@ -18,3 +18,15 @@ manfile=$1
 autofile=$2
 
 if [[ -z "$manfile" || -z "$autofile" ]]
+then
+	echo "Usage: eval-prec-rec.sh manual_file automatic_file" 1>&2
+	exit 1
+fi
+
+for evaltype in ref hyp
+do
+	echo "Evaluating $manfile, $evaltype:"
+	./auxx/prec-rec-internal.pl \
+		<( cat "$manfile" | grep "$evaltype-err-cats" | cut -d " " -f 2-) \
+		<( cat "$autofile" | grep "$evaltype-err-cats" | cut -d " " -f 2-)
+done
