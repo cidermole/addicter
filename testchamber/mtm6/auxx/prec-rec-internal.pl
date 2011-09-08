@@ -63,7 +63,7 @@ for my $headFlag (@flags) {
 	printf "|| %8s", $headFlag;
 }
 
-print " ||! precision ||\n";
+print " ||! recall ||\n";
 
 #table
 for my $autoFlag (@flags) {
@@ -74,14 +74,14 @@ for my $autoFlag (@flags) {
 		printf "|| %8d", $val;
 	}
 	
-	printf(" ||! %9.3f ||\n", float($precRecs, 'prec', $autoFlag));
+	printf(" ||! %7.3f ||\n", float($precRecs, 'rec', $autoFlag));
 }
 
 #recalls
-printf("||! %14s ", 'recall');
+printf("||! %14s ", 'precision');
 
 for my $manFlag (@flags) {
-	my $val = float($precRecs, 'rec', $manFlag);
+	my $val = float($precRecs, 'prec', $manFlag);
 	printf "||! %7.3f", $val;
 }
 

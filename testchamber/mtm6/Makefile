@@ -8,7 +8,8 @@ ALIGNER_CMD=perl -I.. ../align-$(ALIGNER).pl
 DETECTOR=addicter
 
 # parameters for make all
-HYPS=jane pbt rpbt
+#HYPS=jane pbt rpbt
+HYPS=mix
 ALIGNERS=hmm greedy berk berkwmt
 DETECTORS=addicter hjerson hjersonlemma
 DATASETS=de-en
@@ -54,7 +55,7 @@ $(DATADIR)/$H.$(ALIGNER)-addicter.results: $(DATADIR)/$H.errors-$(ALIGNER)-addic
 all:
 	# TODO execute all $(HYPS) with both ALIGNERs, add Hjerson's flags, make summary tables
 	perl -e 'for my $$a (qw($(ALIGNERS))){for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){\
-	 system "make -s $(DO) ALIGNER=$$a H=$$h DATASET=$$d\n";}}}'
+	 system "make $(DO) ALIGNER=$$a H=$$h DATASET=$$d\n";}}}'
 
 clean:
 	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.{results,dat}
