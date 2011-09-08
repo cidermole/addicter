@@ -58,7 +58,7 @@ all:
 	 system "make $(DO) ALIGNER=$$a H=$$h DATASET=$$d\n";}}}'
 
 clean:
-	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.{results,dat}
+	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.errors-{results,dat}
 #*.factors files are now in the svn repository, so this is not needed (but may be useful in future)
 #FACTORS=full pos base
 #prepare_data: $(DATADIR)/$H.factors $(DATADIR)/ref.factors $(DATADIR)/src.factors
