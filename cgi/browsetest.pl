@@ -8,8 +8,6 @@ use open ":utf8";
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
-use lib 'C:\Documents and Settings\Dan\Dokumenty\Lingvistika\lib';
-use lib '/home/zeman/lib';
 use dzcgi;
 use AddicterHTML;
 use ReadFindErrs;
