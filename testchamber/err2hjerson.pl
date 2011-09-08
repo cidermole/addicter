@@ -62,10 +62,11 @@ while (<$fh>) {
 			$sntIdx = $fields->{'index'};
 		}
 		elsif ($tagId eq "/sentence") {
-			print "\n" . ($sntIdx + 1) . "::hyp-err-cats: ";
-			flagg::display($hypSnt, 1);
 			print "" . ($sntIdx + 1) . "::ref-err-cats: ";
 			flagg::display($refSnt, 1);
+			print "" . ($sntIdx + 1) . "::hyp-err-cats: ";
+			flagg::display($hypSnt, 1);
+			print "\n";
 		}
 	}
 }
