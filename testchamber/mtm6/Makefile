@@ -5,10 +5,12 @@ DATADIR=data/$(DATASET)
 H=jane
 ALIGNER=greedy
 ALIGNER_CMD=perl -I.. ../align-$(ALIGNER).pl
+DETECTOR=addicter
 
 # parameters for make all
 HYPS=jane pbt rpbt
 ALIGNERS=hmm greedy berk berkwmt
+DETECTORS=addicter hjerson hjersonlemma
 DATASETS=de-en
 DO=results
 
@@ -29,7 +31,7 @@ align: $(DATADIR)/$H.aligned-$(ALIGNER)
 
 $(DATADIR)/$H.aligned-$(ALIGNER): $(DATADIR)/ref.factors $(DATADIR)/$H.factors
 	case $(ALIGNER) in\
-	  berk | berkwmt) ../align-hmm.pl -x -a $(DATADIR)/non1to1align/$H.aligned-berk$*\
+	  berk | berkwmt) ../align-hmm.pl -x -a $(DATADIR)/non1to1align/$H.aligned-$(ALIGNER)\
 	                                  $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@;;\
 	  *) $(ALIGNER_CMD) $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@;;\
 	esac
@@ -41,9 +43,9 @@ $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml: $(foreach x,src $H ref,$(DATADIR)/$
 $(DATADIR)/%.errors-$(ALIGNER)-addicter.dat: $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml
 	../err2hjerson.pl < $< > $@
 
-# errors_by_hjerson: $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat
-# $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml: $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER)
-# 	../finderrs.pl $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER) > $@
+errors_by_hjerson: $(DATADIR)/$H.errors-hjerson.dat
+$(DATADIR)/%.errors-hjerson.dat: $(foreach x,ref $H,$(DATADIR)/$x.factors)
+	../hjerson/generic-wrapper.sh raw_hjerson.py $(foreach x,ref $H,$(DATADIR)/$x.factors) > $@
 
 results: $(DATADIR)/$H.$(ALIGNER)-addicter.results
 $(DATADIR)/$H.$(ALIGNER)-addicter.results: $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat
@@ -55,7 +57,7 @@ all:
 	 system "make -s $(DO) ALIGNER=$$a H=$$h DATASET=$$d\n";}}}'
 
 clean:
-	rm -rf $(DATADIR)/*.aligned-*
+	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.{results,dat}
 #*.factors files are now in the svn repository, so this is not needed (but may be useful in future)
 #FACTORS=full pos base
 #prepare_data: $(DATADIR)/$H.factors $(DATADIR)/ref.factors $(DATADIR)/src.factors
