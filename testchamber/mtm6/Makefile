@@ -16,6 +16,11 @@ DETECTORS=addicter hjerson
 DATASETS=de-en
 DO=results
 
+# for SGE cluster
+QCMD = ${TMT_ROOT}/tools/cluster_utils/qruncmd
+JOBS = 20
+
+
 define HELP_MESSAGE
 # To run all the experiments
 make all
@@ -61,6 +66,16 @@ all:
 	 next if $$e eq "addicter" && index("$(ADDICTER_VARIANTS)",$$v)==-1;#\
 	 for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){#\
 	 system "make -s info $(DO) DETECTOR=$$e VARIANT=$$v H=$$h DATASET=$$d\n";}}}}'
+
+# SGE cluster
+qall:
+	perl -e 'for my $$e (qw($(DETECTORS))){for my $$v (qw($(VARIANTS))){#\
+	 next if $$e eq "hjerson"  && index("$(HJERSON_VARIANTS)",$$v)==-1;#\
+	 next if $$e eq "addicter" && index("$(ADDICTER_VARIANTS)",$$v)==-1;#\
+	 for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){#\
+	 print "$(DO) DETECTOR=$$e VARIANT=$$v H=$$h DATASET=$$d\n";}}}}' | \
+	$(QCMD) --jobs=$(JOBS) --jobname=addicter --join "while read params; do make -s pp \$$params; done"
+
 
 clean:
 	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.errors-*.dat $(DATADIR)/*.results
