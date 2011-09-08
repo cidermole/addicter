@@ -18,6 +18,18 @@ print("<html>\n");
 print("<head>\n");
 print("  <meta http-equiv='content-type' content='text/html; charset=utf8'/>\n");
 print("  <title>Addicter: Test Data Browsing</title>\n");
+# CSS tab navigation tutorial found at http://blixt.org/articles/tabbed-navigation-using-css
+print("  <style>\n");
+print("    ol#toc { height: 2em; list-style: none; margin: 0; padding: 0; }\n");
+print("    ol#toc li { background: #bdf url(tabs.gif); float: left; margin: 0 1px 0 0; padding-left: 10px; }\n");
+print("    ol#toc a { background: url(tabs.gif) 100% 0; color: #008; float: left; line-height: 2em; padding-right: 10px; text-decoration: none; }\n");
+###!!! I have to put the JavaScript in order with the CSS, both examples copied from blixt.org, but incompatible.
+###!!! Originally (in the CSS example), there was li.current in the following two lines, and 'a' instead of 'a.active'.
+print("    ol#toc li { background-color: #48f; background-position: 0 -60px; }\n");
+print("    ol#toc li a.active { background-position: 100% -60px; color: #fff; font-weight: bold; }\n");
+print("    div.content { border: #48f solid 3px; clear: left; padding: 1em; }\n");
+print("    div.inactive { display: none }\n");
+print("  </style>\n");
 print("</head>\n");
 print("<body>\n");
 # We do not want underlined hyperlinks unless the mouse goes over them.
@@ -27,21 +39,9 @@ dzcgi::cist_parametry(\%config);
 if(exists($config{experiment}))
 {
     my $path = "$config{experiment}/";
-    my %files =
-    (
-        'TRS' => "${path}train.src",
-        'TRT' => "${path}train.tgt",
-        'TRA' => "${path}train.ali",
-        'S'   => "${path}test.src",
-        'R'   => "${path}test.tgt",
-        'H'   => "${path}test.system.tgt",
-        'RA'  => "${path}test.ali",
-        'HA'  => "${path}test.system.ali",
-        'XML' => "${path}tcerr.txt"
-    );
     print("  <h1>Test Data of $config{experiment}</h1>\n");
     # How many lines (sentences) are there in the test data?
-    my $numsnt = count_lines($files{S});
+    my $numsnt = count_lines("$config{experiment}/test.src");
     if($numsnt>0)
     {
         my $example;
@@ -51,6 +51,10 @@ if(exists($config{experiment}))
         my $sentence = read_sentence($config{experiment}, $sntno);
         print(sentence_to_table($sentence));
     }
+    print("  <script src='http://blixt.org/media/a/1/tabs-js/activatables.js' type='text/javascript'></script>\n");
+    print("  <script type='text/javascript'>\n");
+    print("    activatables('page', ['RH', 'RH1', 'RH2']);\n");
+    print("  </script>\n");
 }
 else
 {
@@ -107,6 +111,9 @@ sub read_sentence
         'RA'  => 'test.ali',
         'HA'  => 'test.system.ali',
         'RH'  => 'test.refhyp.ali',
+        ###!!! Temporary tests: load two alternative alignments using their names from the testchamber.
+        'RH1' => 'cu-bojar.giza',
+        'RH2' => 'cu-bojar.meteor',
         'XML' => 'tcerr.txt'
     );
     my %sentence;
@@ -148,6 +155,11 @@ sub sentence_to_table
     $html .= "  <dt><b>system hypothesis</b></dt>\n";
     $html .= "  <dd>$sentence->{H}</dd>\n";
     $html .= "</dl>\n";
+    $html .= "<ol id='toc'>\n";
+    $html .= "  <li><a href='#RH'>HMM</a></li>\n";
+    $html .= "  <li><a href='#RH1'>Giza++</a></li>\n";
+    $html .= "  <li><a href='#RH2'>Meteor</a></li>\n";
+    $html .= "</ol>\n";
     # Decompose alignments into array of arrays (pairs).
     my @srcwords = split(/\s+/, $sentence->{S});
     my @tgtwords = split(/\s+/, $sentence->{R});
@@ -157,43 +169,49 @@ sub sentence_to_table
     my @rhalignments;
     @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{RA})) if(exists($sentence->{RA}));
     @halignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{HA})) if(exists($sentence->{HA}));
-    @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{RH})) if(exists($sentence->{RH}));
-    # Get HTML for the three sentences with alignments.
-    my ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
-    if(exists($sentence->{RA}))
+    # There may be more than one RH (reference-hypothesis) alignment.
+    foreach my $aliid ('RH', 'RH1', 'RH2')
     {
-        $srcrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0);
-        $tgtrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1);
-    }
-    if(exists($sentence->{HA}))
-    {
-        $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
-    }
-    if(exists($sentence->{RH}))
-    {
-        $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, \@rhalignments, 1);
-        $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, \@rhalignments, 0);
-    }
-    my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
-    # We can display all three pairs of rows in one table or we can display them in separate tables.
-    my $onetable = 0;
-    if($onetable)
-    {
-        # Display the source words along with their alignment links.
-        $html .= "<table border style='font-family:Code2000'>\n";
-        # An empty row separates source and target sections.
-        $html .= join("  <tr><td></td></tr>\n", @rowpairs);
-        $html .= "</table>\n";
-    }
-    else # separate tables
-    {
-        foreach my $rowpair (@rowpairs)
+        $html .= "<div class='content' id='$aliid'>\n";
+        @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{$aliid})) if(exists($sentence->{$aliid}));
+        # Get HTML for the three sentences with alignments.
+        my ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
+        if(exists($sentence->{RA}))
+        {
+            $srcrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0);
+            $tgtrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@srcwords, \@alignments, 1);
+        }
+        if(exists($sentence->{HA}))
+        {
+            $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
+        }
+        if(exists($sentence->{$aliid}))
+        {
+            $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, \@rhalignments, 1);
+            $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, \@rhalignments, 0);
+        }
+        my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
+        # We can display all three pairs of rows in one table or we can display them in separate tables.
+        my $onetable = 0;
+        if($onetable)
         {
             # Display the source words along with their alignment links.
             $html .= "<table border style='font-family:Code2000'>\n";
-            $html .= $rowpair;
+            # An empty row separates source and target sections.
+            $html .= join("  <tr><td></td></tr>\n", @rowpairs);
             $html .= "</table>\n";
         }
+        else # separate tables
+        {
+            foreach my $rowpair (@rowpairs)
+            {
+                # Display the source words along with their alignment links.
+                $html .= "<table border style='font-family:Code2000'>\n";
+                $html .= $rowpair;
+                $html .= "</table>\n";
+            }
+        }
+        $html .= "</div>\n";
     }
     # Additional information by finderrs.pl from Mark's Testchamber.
     if(exists($sentence->{XML}))

@@ -41,10 +41,15 @@ while (my $c = $d->accept)
             print STDERR ("$script\n");
             print STDERR ("$ENV{QUERY_STRING}\n");
             my $cgiout = `perl $script`;
+            chdir('..');
             # $cgiout starts with the header so get rid of it.
             $cgiout =~ s/^.*\r?\n\r?\n//s;
             $r->add_content(encode('utf8', $cgiout));
             $c->send_response($r);
+        }
+        elsif($r->method() eq 'GET' && $r->url()->as_string() eq '/cgi/tabs.gif')
+        {
+            $c->send_file_response('tabs.gif');
         }
         else
         {
