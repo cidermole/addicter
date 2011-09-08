@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
-# Copyright 2011 Maja Popovic
+# Copyright 2011 Maja Popović
 # The program is distributed under the terms 
 # of the GNU General Public Licence (GPL)
 
