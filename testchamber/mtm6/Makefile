@@ -59,7 +59,7 @@ $(DATADIR)/$H.$(ALIGNER)-addicter.results: $(DATADIR)/$H.errors-$(ALIGNER)-addic
 all:
 	# TODO execute all $(HYPS) with both ALIGNERs, add Hjerson's flags, make summary tables
 	perl -e 'for my $$a (qw($(ALIGNERS))){for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){\
-	 system "make -s results ALIGNER=$a H=$$h DATASET=$$d\n";}}}' #>> $(RESULTS)
+	 system "make -s results ALIGNER=$$a H=$$h DATASET=$$d\n";}}}' #>> $(RESULTS)
 
 clean:
 	rm -rf $(DATADIR)/*.{factors,aligned-greedy,aligned-hmm}
