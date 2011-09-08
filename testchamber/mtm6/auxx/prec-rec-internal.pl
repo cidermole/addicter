@@ -4,6 +4,7 @@ use strict;
 my @fhs = openMany(@ARGV);
 
 my $stats = {};
+my $precRecs = {};
 
 my $allFlags = {};
 
@@ -36,12 +37,15 @@ while (my $snts = readSentences(@fhs)) {
 		$allFlags->{$manFlag} = 1;
 		
 		if ($autoFlags->{$manFlag}) {
-			$stats->{$manFlag}->{$manFlag}++;
+			#$stats->{$manFlag}->{$manFlag}++;
+			updateStats($stats, $precRecs, $manFlag, $manFlag);
 		}
 		else {
 			for my $autoFlag (keys %$autoFlags) {
-				$stats->{$autoFlag}->{$manFlag}++;
 				$allFlags->{$autoFlag} = 1;
+				
+				#$stats->{$autoFlag}->{$manFlag}++;
+				updateStats($stats, $precRecs, $autoFlag, $manFlag);
 			}
 		}
 	}
@@ -49,9 +53,7 @@ while (my $snts = readSentences(@fhs)) {
 
 my @flags = sort keys %$allFlags;
 
-my $correct = 0;
-my $total = 0;
-
+#header
 print "||border=1\n";
 print "|| (left: auto; top: manual) ||||||||||||\n";
 
@@ -61,25 +63,61 @@ for my $headFlag (@flags) {
 	printf "|| %8s", $headFlag;
 }
 
-print " ||\n";
+print " ||! precision ||\n";
 
+#table
 for my $autoFlag (@flags) {
 	printf "|| %15s ", $autoFlag;
 	
 	for my $manFlag (@flags) {
 		my $val = $stats->{$autoFlag}->{$manFlag};
 		printf "|| %8d", $val;
-		
-		$correct += ($autoFlag eq $manFlag)? $val: 0;
-		
-		$total += $val;
 	}
-	print " ||\n";
+	
+	printf(" ||! %9.3f ||\n", float($precRecs, 'prec', $autoFlag));
 }
 
+#recalls
+printf("||! %14s ", 'recall');
 
+for my $manFlag (@flags) {
+	my $val = float($precRecs, 'rec', $manFlag);
+	printf "||! %7.3f", $val;
+}
 
-printf "|| total accuracy: %.3f ||||||||||||\n", $correct / $total;
+printf(" ||! %9.3f ||\n", float($precRecs, 'all', 'all'));
+
+#####
+#
+#####
+sub float {
+	my ($db, $id, $flag) = @_;
+	
+	my $num = $db->{'correct-' . $id}->{$flag};
+	my $denom = $db->{'total-' . $id}->{$flag};
+	
+	return (($denom == 0)? 0: $num/$denom);
+}
+
+#####
+#
+#####
+sub updateStats {
+	my ($stats, $precRecs, $autoFlag, $manFlag) = @_;
+	
+	$stats->{$autoFlag}->{$manFlag}++;
+	
+	my $updVal = (($autoFlag eq $manFlag)? 1: 0);
+	
+	$precRecs->{'correct-rec'}->{$autoFlag} += $updVal;
+	$precRecs->{'total-rec'}->{$autoFlag}++;
+	
+	$precRecs->{'correct-prec'}->{$manFlag} += $updVal;
+	$precRecs->{'total-prec'}->{$manFlag}++;
+	
+	$precRecs->{'correct-all'}->{'all'} += $updVal;
+	$precRecs->{'total-all'}->{'all'}++;
+}
 
 #####
 #

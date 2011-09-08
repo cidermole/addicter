@@ -25,7 +25,7 @@ fi
 
 for evaltype in ref hyp
 do
-	echo "Evaluating $manfile, $evaltype:"
+	echo "Evaluating $autofile, $evaltype:"
 	./auxx/prec-rec-internal.pl \
 		<( cat "$manfile" | grep "$evaltype-err-cats" | cut -d " " -f 2-) \
 		<( cat "$autofile" | grep "$evaltype-err-cats" | cut -d " " -f 2-)
