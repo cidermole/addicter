@@ -21,12 +21,15 @@ print("  <title>Addicter: Test Data Browsing</title>\n");
 # CSS tab navigation tutorial found at http://blixt.org/articles/tabbed-navigation-using-css
 print("  <style>\n");
 print("    ol#toc { height: 2em; list-style: none; margin: 0; padding: 0; }\n");
-print("    ol#toc li { background: #bdf url(../tabs.gif); float: left; margin: 0 1px 0 0; padding-left: 10px; }\n");
-print("    ol#toc a { background: url(../tabs.gif) 100% 0; color: #008; float: left; line-height: 2em; padding-right: 10px; text-decoration: none; }\n");
+print("    ol#toc li { float: left; margin: 0 1px 0 0; }\n");
+print("    ol#toc a { background: #bdf url(../tabs.gif); color: #008; display: block; float: left; height: 2em; padding-left: 10px; text-decoration: none; }\n");
+print("    ol#toc a:hover { background-color: #3af; background-position: 0 -120px; }\n");
+print("    ol#toc a:hover span { background-position: 100% -120px; }\n");
 ###!!! I have to put the JavaScript in order with the CSS, both examples copied from blixt.org, but incompatible.
 ###!!! Originally (in the CSS example), there was li.current in the following two lines, and 'a' instead of 'a.active'.
-print("    ol#toc li { background-color: #48f; background-position: 0 -60px; }\n");
-print("    ol#toc li a.active { background-position: 100% -60px; color: #fff; font-weight: bold; }\n");
+print("    ol#toc li a.active { background-color: #48f; background-position: 0 -60px; }\n");
+print("    ol#toc li a.active span { background-position: 100% -60px; }\n");
+print("    ol#toc span { background: url(../tabs.gif) 100% 0; display: block; line-height: 2em; padding-right: 10px; }\n");
 print("    div.content { border: #48f solid 3px; clear: left; padding: 1em; }\n");
 print("    div.inactive { display: none }\n");
 print("  </style>\n");
@@ -156,9 +159,9 @@ sub sentence_to_table
     $html .= "  <dd>$sentence->{H}</dd>\n";
     $html .= "</dl>\n";
     $html .= "<ol id='toc'>\n";
-    $html .= "  <li><a href='#RH'>HMM</a></li>\n";
-    $html .= "  <li><a href='#RH1'>Giza++</a></li>\n";
-    $html .= "  <li><a href='#RH2'>Meteor</a></li>\n";
+    $html .= "  <li><a href='#RH'><span>HMM</span></a></li>\n";
+    $html .= "  <li><a href='#RH1'><span>Giza++</span></a></li>\n";
+    $html .= "  <li><a href='#RH2'><span>Meteor</span></a></li>\n";
     $html .= "</ol>\n";
     # Decompose alignments into array of arrays (pairs).
     my @srcwords = split(/\s+/, $sentence->{S});
