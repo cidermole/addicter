@@ -19,7 +19,7 @@ while (<STDIN>) {
 	
 	for my $token (@tokens) {
 		my ($word, $flag) = split(/~~/, $token);
-		push @output, ($flag eq "x"? "": $flag . "~~") . $word;
+		push @output, (($flag eq "x" or $flag eq "")? "": $flag . "~~") . $word;
 	}
 	
 	print join(" ", @output);
