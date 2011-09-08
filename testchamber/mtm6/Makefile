@@ -8,7 +8,7 @@ ALIGNER_CMD=perl -I.. ../align-$(ALIGNER).pl
 
 # parameters for make all
 HYPS=jane pbt rpbt
-ALIGNERS=hmm greedy
+ALIGNERS=hmm greedy berk berkwmt
 DATASETS=de-en
 DO=results
 
@@ -35,6 +35,10 @@ $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml: $(foreach x,src $H ref,$(DATADIR)/$
 
 $(DATADIR)/%.errors-$(ALIGNER)-addicter.dat: $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml
 	../err2hjerson.pl < $< > $@
+
+# errors_by_hjerson: $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat
+# $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml: $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER)
+# 	../finderrs.pl $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER) > $@
 
 results: $(DATADIR)/$H.$(ALIGNER)-addicter.results
 $(DATADIR)/$H.$(ALIGNER)-addicter.results: $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat
