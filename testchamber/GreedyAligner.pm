@@ -132,11 +132,26 @@ sub prealign_same {
             $r_forms{$r_form} = $r;
         }
     }
+
+    my %h_forms;
     foreach my $h ( @{ $args->{free_h} } ) {
-        my $r = $r_forms{ $args->{"h$attr"}[$h] };
+        my $h_form = $args->{"h$attr"}[$h];
+        my $r      = $r_forms{$h_form};
         if ( defined $r && $r != -2 ) {
-            $self->_align( $args, $h, $r );
+            if ( defined $h_forms{$h_form} ) {
+                $h_forms{$h_form} = -2;
+            }
+            else {
+                $h_forms{$h_form} = $h;
+            }
         }
+    }
+
+    foreach my $h_form ( keys %h_forms ) {
+        my $h = $h_forms{$h_form};
+        next if $h == -2;
+        my $r = $r_forms{$h_form};
+        $self->_align( $args, $h, $r );
     }
     return;
 }
