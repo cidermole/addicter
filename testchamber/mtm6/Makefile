@@ -26,8 +26,13 @@ help:
 	@echo "$$HELP_MESSAGE" | egrep --color '^(make.*|)'
 
 align: $(DATADIR)/$H.aligned-$(ALIGNER)
+
 $(DATADIR)/$H.aligned-$(ALIGNER): $(DATADIR)/ref.factors $(DATADIR)/$H.factors
-	$(ALIGNER_CMD) $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@
+	case $(ALIGNER) in\
+	  berk | berkwmt) ../align-hmm.pl -x -a $(DATADIR)/non1to1align/$H.aligned-berk$*\
+	                                  $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@;;\
+	  *) $(ALIGNER_CMD) $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@;;\
+	esac
 
 errors_by_addicter: $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat
 $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml: $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER)
@@ -50,8 +55,7 @@ all:
 	 system "make -s $(DO) ALIGNER=$$a H=$$h DATASET=$$d\n";}}}'
 
 clean:
-	rm -rf $(DATADIR)/*.aligned-{greedy,hmm}
-
+	rm -rf $(DATADIR)/*.aligned-*
 #*.factors files are now in the svn repository, so this is not needed (but may be useful in future)
 #FACTORS=full pos base
 #prepare_data: $(DATADIR)/$H.factors $(DATADIR)/ref.factors $(DATADIR)/src.factors
