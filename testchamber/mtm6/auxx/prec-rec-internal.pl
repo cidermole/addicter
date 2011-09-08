@@ -19,8 +19,12 @@ while (my $snts = readSentences(@fhs)) {
 	}
 	
 	for my $i (0..$#wordsMan) {
-		my $manFlags = getFlags($wordsMan[$i]);
-		my $autoFlags = getFlags($wordsAuto[$i]);
+		my ($manFlags, $manSform) = getFlags($wordsMan[$i]);
+		my ($autoFlags, $autoSform) = getFlags($wordsAuto[$i]);
+		
+		if (lc($manSform) ne lc($autoSform)) {
+			die("Words in manual and automatic annotated files should match ($manSform != $autoSform)");
+		}
 		
 		if (scalar keys %$manFlags > 1) {
 			die("Many manual flags");
