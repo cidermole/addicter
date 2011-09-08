@@ -15,7 +15,7 @@ hyp=$3
 # check for mandatory arguments
 if [[ -z "$ref" || -z "$hyp" ]]
 then
-	echo "Usage: wrapper.sh reference-file hypothesis-file" 1>&2
+	echo "Usage: $0 (raw_hjerson.py|raw_hjerson_lemma_wer.py) reference-file hypothesis-file" 1>&2
 	exit 1
 fi
 
