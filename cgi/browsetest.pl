@@ -21,8 +21,8 @@ print("  <title>Addicter: Test Data Browsing</title>\n");
 # CSS tab navigation tutorial found at http://blixt.org/articles/tabbed-navigation-using-css
 print("  <style>\n");
 print("    ol#toc { height: 2em; list-style: none; margin: 0; padding: 0; }\n");
-print("    ol#toc li { background: #bdf url(tabs.gif); float: left; margin: 0 1px 0 0; padding-left: 10px; }\n");
-print("    ol#toc a { background: url(tabs.gif) 100% 0; color: #008; float: left; line-height: 2em; padding-right: 10px; text-decoration: none; }\n");
+print("    ol#toc li { background: #bdf url(../tabs.gif); float: left; margin: 0 1px 0 0; padding-left: 10px; }\n");
+print("    ol#toc a { background: url(../tabs.gif) 100% 0; color: #008; float: left; line-height: 2em; padding-right: 10px; text-decoration: none; }\n");
 ###!!! I have to put the JavaScript in order with the CSS, both examples copied from blixt.org, but incompatible.
 ###!!! Originally (in the CSS example), there was li.current in the following two lines, and 'a' instead of 'a.active'.
 print("    ol#toc li { background-color: #48f; background-position: 0 -60px; }\n");
@@ -51,7 +51,7 @@ if(exists($config{experiment}))
         my $sentence = read_sentence($config{experiment}, $sntno);
         print(sentence_to_table($sentence));
     }
-    print("  <script src='http://blixt.org/media/a/1/tabs-js/activatables.js' type='text/javascript'></script>\n");
+    print("  <script src='../activatables.js' type='text/javascript'></script>\n");
     print("  <script type='text/javascript'>\n");
     print("    activatables('page', ['RH', 'RH1', 'RH2']);\n");
     print("  </script>\n");

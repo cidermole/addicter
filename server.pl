@@ -47,9 +47,11 @@ while (my $c = $d->accept)
             $r->add_content(encode('utf8', $cgiout));
             $c->send_response($r);
         }
-        elsif($r->method() eq 'GET' && $r->url()->as_string() eq '/cgi/tabs.gif')
+        elsif($r->method() eq 'GET' && $r->url()->as_string() =~ m-^/(tabs\.gif|activatables\.js)$-)
         {
-            $c->send_file_response('tabs.gif');
+            my $file = $1;
+            print STDERR ("Sending file $file\n");
+            $c->send_file_response($file);
         }
         else
         {
