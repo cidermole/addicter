@@ -72,7 +72,7 @@ sub processInputArgsAndOpts {
 		'u' => \$unweighedMorePts) or die("Options failed");
 	
 	if (!defined($alFactor)) {
-		$alFactor = 0;
+		$alFactor = 2;
 	}
 	
 	if ($alFactor < 0) {
