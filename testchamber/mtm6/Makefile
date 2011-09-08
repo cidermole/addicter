@@ -1,8 +1,8 @@
+# Makefile written by Martin Popel, 2011
 SHELL=bash
 DATASET=de-en
 DATADIR=data/$(DATASET)
 H=jane
-FACTORS=full pos base
 ALIGNER=greedy
 ALIGNER_CMD=perl -I.. ../align-$(ALIGNER).pl
 
@@ -10,14 +10,11 @@ ALIGNER_CMD=perl -I.. ../align-$(ALIGNER).pl
 HYPS=jane pbt rpbt
 ALIGNERS=hmm greedy
 DATASETS=de-en
-
+DO=results
 
 define HELP_MESSAGE
-# To run the experiments
-make errors_by_addicter
-# Additional parameters
-# H (hypothesis, MT-system name) = jane pbt rpbt
-# ALIGNER = hmm greedy
+# To run all the experiments
+make all
 # For more details see the Makefile
 
 # To delete all generated files
@@ -28,38 +25,40 @@ export HELP_MESSAGE
 help:
 	@echo "$$HELP_MESSAGE" | egrep --color '^(make.*|)'
 
-prepare_data: $(DATADIR)/$h.hyp.factors $(DATADIR)/ref.factors $(DATADIR)/src.factors
-
-$(DATADIR)/$H.hyp.factors: $(foreach f,$(FACTORS),$(DATADIR)/$H.hyp.$f)
-	auxx/joinfactors.pl $(foreach f,$(FACTORS),$(DATADIR)/$H.hyp.$f) > $@ 
-
-$(DATADIR)/ref.factors: $(foreach f,$(FACTORS),$(DATADIR)/ref.$f)
-	auxx/joinfactors.pl $(foreach f,$(FACTORS),$(DATADIR)/ref.$f) > $@ 
-
-$(DATADIR)/src.factors:
-	[ -f $(DATADIR)/src.full ] &&\
-	auxx/joinfactors.pl $(foreach f,$(FACTORS),$(DATADIR)/src.$f) > $@ ||\
-	cat $(DATADIR)/ref.full | sed -e "s/^.*/(dummy text)/g" > $@
-
 align: $(DATADIR)/$H.aligned-$(ALIGNER)
-$(DATADIR)/$H.aligned-$(ALIGNER): $(DATADIR)/ref.factors $(DATADIR)/$H.hyp.factors
-	$(ALIGNER_CMD) $(DATADIR)/ref.factors $(DATADIR)/$H.hyp.factors > $@
+$(DATADIR)/$H.aligned-$(ALIGNER): $(DATADIR)/ref.factors $(DATADIR)/$H.factors
+	$(ALIGNER_CMD) $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@
 
 errors_by_addicter: $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat
-$(DATADIR)/%.errors-$(ALIGNER)-addicter.xml: $(foreach x,src $H.hyp ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER)
-	../finderrs.pl $(foreach x,src $H.hyp ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER) > $@
+$(DATADIR)/%.errors-$(ALIGNER)-addicter.xml: $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER)
+	../finderrs.pl $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(ALIGNER) > $@
 
 $(DATADIR)/%.errors-$(ALIGNER)-addicter.dat: $(DATADIR)/%.errors-$(ALIGNER)-addicter.xml
 	../err2hjerson.pl < $< > $@
 
 results: $(DATADIR)/$H.$(ALIGNER)-addicter.results
 $(DATADIR)/$H.$(ALIGNER)-addicter.results: $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat
-	./eval-prec-rec.sh $(DATADIR)/$H.hum-all.dat $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat > $@
+	./eval-prec-rec.sh $(DATADIR)/$H.errors.gold.dat $(DATADIR)/$H.errors-$(ALIGNER)-addicter.dat > $@
 
 all:
 	# TODO execute all $(HYPS) with both ALIGNERs, add Hjerson's flags, make summary tables
 	perl -e 'for my $$a (qw($(ALIGNERS))){for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){\
-	 system "make -s results ALIGNER=$$a H=$$h DATASET=$$d\n";}}}' #>> $(RESULTS)
+	 system "make -s $(DO) ALIGNER=$$a H=$$h DATASET=$$d\n";}}}'
 
 clean:
-	rm -rf $(DATADIR)/*.{factors,aligned-greedy,aligned-hmm}
+	rm -rf $(DATADIR)/*.aligned-{greedy,hmm}
+
+#*.factors files are now in the svn repository, so this is not needed (but may be useful in future)
+#FACTORS=full pos base
+#prepare_data: $(DATADIR)/$H.factors $(DATADIR)/ref.factors $(DATADIR)/src.factors
+#
+#$(DATADIR)/$H.factors: $(foreach f,$(FACTORS),$(DATADIR)/$H.hyp.$f)
+#	auxx/joinfactors.pl $(foreach f,$(FACTORS),$(DATADIR)/$H.hyp.$f) > $@ 
+#
+#$(DATADIR)/ref.factors: $(foreach f,$(FACTORS),$(DATADIR)/ref.$f)
+# 	auxx/joinfactors.pl $(foreach f,$(FACTORS),$(DATADIR)/ref.$f) > $@ 
+# 
+# $(DATADIR)/src.factors:
+# 	[ -f $(DATADIR)/src.full ] &&\
+# 	auxx/joinfactors.pl $(foreach f,$(FACTORS),$(DATADIR)/src.$f) > $@ ||\
+# 	cat $(DATADIR)/ref.full | sed -e "s/^.*/(dummy text)/g" > $@
