@@ -54,10 +54,6 @@ if(exists($config{experiment}))
         my $sentence = read_sentence($config{experiment}, $sntno);
         print(sentence_to_table($sentence));
     }
-    print("  <script src='../activatables.js' type='text/javascript'></script>\n");
-    print("  <script type='text/javascript'>\n");
-    print("    activatables('page', ['RH', 'RH1', 'RH2']);\n");
-    print("  </script>\n");
 }
 else
 {
@@ -135,7 +131,27 @@ sub read_sentence
             }
         }
     }
+    # Are there subfolders with alternative RH alignments?
+    my $subfolders = get_subfolders($experiment);
+    $sentence{sub} = $subfolders;
+    $sentence{sntno} = $sntno;
     return \%sentence;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Scans the experiment folder for subfolders. E.g. there could be alternative
+# reference-hypothesis alignments created using different methods.
+#------------------------------------------------------------------------------
+sub get_subfolders
+{
+    my $folder = shift;
+    opendir(DIR, $folder) or print("<p style='color:red'>Cannot read folder $folder: $!</p>\n");
+    my @subfolders = readdir(DIR) or 'no subfolders found';
+    @subfolders = grep {-d "$folder/$_" && !m/^\./} (@subfolders);
+    closedir(DIR);
+    return \@subfolders;
 }
 
 
@@ -159,9 +175,10 @@ sub sentence_to_table
     $html .= "  <dd>$sentence->{H}</dd>\n";
     $html .= "</dl>\n";
     $html .= "<ol id='toc'>\n";
-    $html .= "  <li><a href='#RH'><span>HMM</span></a></li>\n";
-    $html .= "  <li><a href='#RH1'><span>Giza++</span></a></li>\n";
-    $html .= "  <li><a href='#RH2'><span>Meteor</span></a></li>\n";
+    foreach my $aliid (@{$sentence->{sub}})
+    {
+        $html .= "  <li><a href='#$aliid'><span>$aliid</span></a></li>\n";
+    }
     $html .= "</ol>\n";
     # Decompose alignments into array of arrays (pairs).
     my @srcwords = split(/\s+/, $sentence->{S});
@@ -173,10 +190,9 @@ sub sentence_to_table
     @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{RA})) if(exists($sentence->{RA}));
     @halignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{HA})) if(exists($sentence->{HA}));
     # There may be more than one RH (reference-hypothesis) alignment.
-    foreach my $aliid ('RH', 'RH1', 'RH2')
+    foreach my $aliid (@{$sentence->{sub}})
     {
         $html .= "<div class='content' id='$aliid'>\n";
-        @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $sentence->{$aliid})) if(exists($sentence->{$aliid}));
         # Get HTML for the three sentences with alignments.
         my ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
         if(exists($sentence->{RA}))
@@ -188,8 +204,10 @@ sub sentence_to_table
         {
             $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
         }
-        if(exists($sentence->{$aliid}))
+        ###!!! If we have found a subfolder we automatically expect it to contain test.refhyp.ali.
         {
+            my $aliseq = AddicterHTML::get_nth_line("$config{experiment}/$aliid/test.refhyp.ali", $sentence->{sntno});
+            @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliseq));
             $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, \@rhalignments, 1);
             $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, \@rhalignments, 0);
         }
@@ -240,6 +258,10 @@ sub sentence_to_table
             $html .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
         }
     }
+    $html .= "  <script src='../activatables.js' type='text/javascript'></script>\n";
+    $html .= "  <script type='text/javascript'>\n";
+    $html .= "    activatables('page', [".join(', ', map {"'$_'"} (@{$sentence->{sub}}))."]);\n";
+    $html .= "  </script>\n";
     return $html;
 }
 
