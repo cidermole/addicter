@@ -493,6 +493,7 @@ sub getRefInfo {
 	my $idxInfo = (defined($idx))? " index=\"$idx\"": "";
 	
 	return ["<reference$idxInfo length=\"" . (scalar @$refSnt) .
-		"\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>",
-		"<alignment raw=\"" . aliToTxt($ali) . "\">"];
+		"\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>"
+		#, "<alignment raw=\"" . aliToTxt($ali) . "\">"
+		];
 }
