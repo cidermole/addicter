@@ -8,8 +8,16 @@
 # prints to stdout
 #
 
-ref=$1
-hyp=$2
+hjerson=$1
+ref=$2
+hyp=$3
+
+# check for mandatory arguments
+if [[ -z "$ref" || -z "$hyp" ]]
+then
+	echo "Usage: wrapper.sh reference-file hypothesis-file" 1>&2
+	exit 1
+fi
 
 #safety function
 function ordie {
@@ -36,13 +44,6 @@ function wherearewe {
 	echo $scriptdir
 }
 
-# check for mandatory arguments
-if [[ -z "$ref" || -z "$hyp" ]]
-then
-	echo "Usage: wrapper.sh reference-file hypothesis-file" 1>&2
-	exit 1
-fi
-
 location=$( wherearewe )
 
 $location/splitfactors.pl "$ref" 0 > .tmp-ref-sform; ordie
@@ -50,7 +51,7 @@ $location/splitfactors.pl "$ref" 2 > .tmp-ref-lemma; ordie
 $location/splitfactors.pl "$hyp" 0 > .tmp-hyp-sform; ordie
 $location/splitfactors.pl "$hyp" 2 > .tmp-hyp-lemma; ordie
 
-$location/hjerson.py -R .tmp-ref-sform -B .tmp-ref-lemma -H .tmp-hyp-sform -b .tmp-hyp-lemma -c .tmp-hjerson-output 1>/dev/null; ordie
+$location/$hjerson -R .tmp-ref-sform -B .tmp-ref-lemma -H .tmp-hyp-sform -b .tmp-hyp-lemma -c .tmp-hjerson-output 1>/dev/null; ordie
 $location/reverse-flags.pl < .tmp-hjerson-output; ordie
 
 rm .tmp-hjerson-output .tmp-ref-sform .tmp-ref-lemma .tmp-hyp-sform .tmp-hyp-lemma
