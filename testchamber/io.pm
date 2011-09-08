@@ -1,6 +1,7 @@
 package io;
 use strict;
 use const;
+use Carp;
 
 #####
 #
@@ -145,7 +146,7 @@ sub readSentences {
 		return undef;
 	}
 	else {
-		die("Unequal number of lines in the input files");
+		confess("Unequal number of lines in the input files");
 	}
 }
 

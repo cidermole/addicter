@@ -72,7 +72,7 @@ sub align_sentence {
         $score[ $max_h + 1 ][ $max_r + 1 ] += $self->weights->{aligned_left_neighbor} if $max_h != $hlast && $max_r != $rlast;
 
         # Now find the maximum again
-        # TODO use heap instead to make it faster
+        # TODO use heap instead to make it faster (see Array::Heap or Heap::Simple)
         $max_score = 0;
         foreach my $h ( @{ $args->{free_h} } ) {
             foreach my $r ( @{ $args->{free_r} } ) {
