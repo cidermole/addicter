@@ -38,3 +38,5 @@ do
 done
 
 paste -d " " .tmp-ref .tmp-hyp | sed -e "s/||border=1 //"
+
+rm .tmp-ref .tmp-hyp
