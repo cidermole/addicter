@@ -221,7 +221,14 @@ sub lemma_similarity {
     my ( $self, $args, $h, $r ) = @_;
 	my ( $hlemma, $rlemma ) = ( $args->{hlemmas}[$h], $args->{rlemmas}[$r] );
 	return 0 if !defined $hlemma || !defined $rlemma;
-    return Text::JaroWinkler::strcmp95( $hlemma, $rlemma, 20 );
+    my $jw = Text::JaroWinkler::strcmp95( $hlemma, $rlemma, 20 );
+
+	# jw==0.6 means that the two lemmas are too different
+	# to be derivations of each other or spelling variants,
+	# so the lemma_similarity for such lemmas should be 0.
+	my $limit = 0.6;
+	return 0 if $jw <= $limit;
+	return ($jw - $limit) / (1 - $limit);
 }
 
 sub tag_similarity {
