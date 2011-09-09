@@ -25,6 +25,13 @@ has punct_tag_regex => (
 	documentation => 'which POS tags represent punctuation symbols',
 );
 
+has debug => (
+	is => 'ro',
+	isa => 'Int',
+	default => 0,
+	documentation => 'debug level, by default 0=no messages',
+);
+
 sub _build_weights {
     return {
         lemma_similarity       => 7,
@@ -55,6 +62,7 @@ sub align_sentence {
     $self->prealign_same( $args, 'forms' );
     $self->prealign_same( $args, 'lemmas' );
 
+	# Pre-computed scores for all pairs of free nodes
     my $max_score = 0;
     my ( $max_h, $max_r, @score );
     foreach my $h ( @{ $args->{free_h} } ) {
@@ -71,7 +79,7 @@ sub align_sentence {
     while ( $max_score >= $self->score_limit ) {
 
         # Mark the winning alignment pair from the lat iteration.
-        $self->_align( $args, $max_h, $max_r );
+        $self->_align( $args, $max_h, $max_r, $max_score );
 
         # The only weights that must be updated are aligned_*_neighbor.
         $score[ $max_h - 1 ][ $max_r - 1 ] += $self->weights->{aligned_right_neighbor} if $max_h && $max_r;
@@ -157,22 +165,44 @@ sub prealign_same {
         my $h = $h_forms{$h_form};
         next if $h == -2;
         my $r = $r_forms{$h_form};
-        $self->_align( $args, $h, $r );
+        $self->_align( $args, $h, $r, "prealign-$attr" );
     }
     return;
 }
 
 sub _align {
-    my ( $self, $args, $h, $r ) = @_;
+    my ( $self, $args, $h, $r, $score ) = @_;
     $args->{align}[$h] = $r;
 
     # Delete the aligned nodes from the pool of free nodes.
     $args->{free_h} = [ grep { $_ != $h } @{ $args->{free_h} } ];
     $args->{free_r} = [ grep { $_ != $r } @{ $args->{free_r} } ];
+	
+	if ($self->debug){
+		my ( $hform, $rform ) = ( $args->{hforms}[$h], $args->{rforms}[$r] );
+		warn "score=$score\taligning $h-$r: $hform-$rform\n";
+		if ($self->debug > 1){
+			my %feats = %{$self->compute_features($args, $h, $r)};
+			while (my ($f,$v) = each %feats){
+				warn sprintf("$f=%.3f\n",$v) if $v;
+			}
+		}
+	}
     return;
 }
 
 sub score {
+    my ( $self, $args, $h, $r ) = @_;
+    my %features = %{$self->compute_features($args, $h, $r)};
+
+    my $score = 0;
+    foreach my $feature_name ( keys %features ) {
+        $score += $features{$feature_name} * $self->weights->{$feature_name};
+    }
+    return $score;
+}
+
+sub compute_features {
     my ( $self, $args, $h, $r ) = @_;
     my ( $hlast, $rlast ) = ( $args->{hlast}, $args->{rlast} );
     my %features;
@@ -182,12 +212,7 @@ sub score {
     $features{aligned_left_neighbor}  = 1 if $h           && $args->{align}[ $h - 1 ] == $r - 1;
     $features{aligned_right_neighbor} = 1 if $h != $hlast && $args->{align}[ $h + 1 ] == $r + 1;
     $features{ord_similarity} = 1 - abs( ( $h / $hlast ) - ( $r / $rlast ) );
-
-    my $score = 0;
-    foreach my $feature_name ( keys %features ) {
-        $score += $features{$feature_name} * $self->weights->{$feature_name};
-    }
-    return $score;
+	return \%features;
 }
 
 use Text::JaroWinkler;
