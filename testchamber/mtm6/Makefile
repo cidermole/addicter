@@ -18,7 +18,7 @@ DO=results ranking
 
 # for SGE cluster
 QCMD = ${TMT_ROOT}/tools/cluster_utils/qruncmd
-JOBS = 20
+JOBS = 24
 
 # For experiments with all systems merged into one
 REF=ref
@@ -92,7 +92,7 @@ qall:
 
 
 clean:
-	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.errors-*.dat $(DATADIR)/*.results $(DATADIR)/*.ranking
+	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.errors-*.dat $(DATADIR)/*.{results,ranking}
 
 #*.factors files are now in the svn repository, so this is not needed (but may be useful in future)
 #FACTORS=full pos base
