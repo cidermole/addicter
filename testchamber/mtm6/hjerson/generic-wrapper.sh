@@ -46,12 +46,23 @@ function wherearewe {
 
 location=$( wherearewe )
 
-$location/splitfactors.pl "$ref" 0 > .tmp-ref-sform; ordie
-$location/splitfactors.pl "$ref" 2 > .tmp-ref-lemma; ordie
-$location/splitfactors.pl "$hyp" 0 > .tmp-hyp-sform; ordie
-$location/splitfactors.pl "$hyp" 2 > .tmp-hyp-lemma; ordie
+# The former solution led to collisions when parallelized.
+# For a proper way of creating temporary files see e.g. "man tempfile".
+# However, we can do it also without temp files.
 
-$location/$hjerson -R .tmp-ref-sform -B .tmp-ref-lemma -H .tmp-hyp-sform -b .tmp-hyp-lemma -c .tmp-hjerson-output 1>/dev/null; ordie
-$location/reverse-flags.pl < .tmp-hjerson-output; ordie
+# $location/splitfactors.pl "$ref" 0 > .tmp-ref-sform; ordie
+# $location/splitfactors.pl "$ref" 2 > .tmp-ref-lemma; ordie
+# $location/splitfactors.pl "$hyp" 0 > .tmp-hyp-sform; ordie
+# $location/splitfactors.pl "$hyp" 2 > .tmp-hyp-lemma; ordie
+# 
+# $location/$hjerson -R .tmp-ref-sform -B .tmp-ref-lemma -H .tmp-hyp-sform -b .tmp-hyp-lemma -c .tmp-hjerson-output 1>/dev/null; ordie
+# $location/reverse-flags.pl < .tmp-hjerson-output; ordie
+# 
+# rm .tmp-hjerson-output .tmp-ref-sform .tmp-ref-lemma .tmp-hyp-sform .tmp-hyp-lemma
 
-rm .tmp-hjerson-output .tmp-ref-sform .tmp-ref-lemma .tmp-hyp-sform .tmp-hyp-lemma
+$location/$hjerson\
+ -R <($location/splitfactors.pl "$ref" 0)\
+ -B <($location/splitfactors.pl "$ref" 2)\
+ -H <($location/splitfactors.pl "$hyp" 0)\
+ -b <($location/splitfactors.pl "$hyp" 2)\
+ -c /dev/stdout | $location/reverse-flags.pl

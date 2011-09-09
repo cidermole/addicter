@@ -88,7 +88,7 @@ qall:
 	 next if $$e eq "addicter" && index("$(ADDICTER_VARIANTS)",$$v)==-1;#\
 	 for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){#\
 	 print "$(DO) DETECTOR=$$e VARIANT=$$v H=$$h DATASET=$$d\n";}}}}' | \
-	$(QCMD) --jobs=$(JOBS) --jobname=addicter --join "while read params; do make -s \$$params; done"
+	$(QCMD) --jobs=$(JOBS) --jobname=addicter --join "while read params; do make -s info \$$params; done"
 
 
 clean:
