@@ -76,25 +76,19 @@ for my $autoFlag (@flags) {
 	print " ||\n";
 }
 
-#precisions
-printf("||! %14s ", 'precision');
+#precisions and recalls
+for my $types (['precision', 'prec'], ['recall', 'rec']) {
+	printf("||! %14s ", $types->[0]);
 
-for my $manFlag (@flags) {
-	printf("||! %7.2f",
-		float($precRecs, 'prec', $manFlag));
+	for my $manFlag (@flags) {
+		printf("||! %7.2f",
+			float($precRecs, $types->[1], $manFlag));
+	}
+
+	print " ||\n";
 }
 
-print " ||\n";
-
-#recalls
-printf("||! %14s ", 'recall');
-
-for my $manFlag (@flags) {
-	printf("||! %7.2f",
-		float($precRecs, 'rec', $manFlag));
-}
-
-print " ||\n";
+printf STDERR "Total accuracy: %.3f\n", float($precRecs, 'all', 'all');
 
 #####
 #
@@ -123,6 +117,9 @@ sub updateStats {
 	
 	$precRecs->{'correct-rec'}->{$manFlag} += $updVal;
 	$precRecs->{'total-rec'}->{$manFlag}++;
+	
+	$precRecs->{'correct-all'}->{'all'} += $updVal;
+	$precRecs->{'total-all'}->{'all'}++;
 }
 
 #####

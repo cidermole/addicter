@@ -1,7 +1,8 @@
 package counter;
 use strict;
 
-our $symb = randSymb(qw(. , > : ; < - ? ! * + / = ^ % $ # @ ~ _ | { } [ ]));
+#our $symb = randSymb(qw(. , > : ; < - ? ! * + / = ^ % $ # @ ~ _ | { } [ ]));
+our $symb = ".";
 
 #####
 #

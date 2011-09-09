@@ -18,15 +18,16 @@
 
 manfile=$1
 autofile=$2
+sysname=$3
 
-if [[ -z "$manfile" || -z "$autofile" ]]
+if [[ -z "$manfile" || -z "$autofile" || -z "$sysname" ]]
 then
-	echo "Usage: eval-rank.sh manual_file automatic_file" 1>&2
+	echo "Usage: eval-rank.sh manual_file automatic_file auto_system_name" 1>&2
 	exit 1
 fi
 
 #print header
-output="|| $autofile ||"
+output="|| $sysname ||"
 table="evals man auto\n"
 
 #print a row of numbers

@@ -33,8 +33,8 @@ else
 	sysname=tmp-system-$idx
 fi
 
-tmpman=".tmp-manual-$idx"
-tmpauto=".$sysname"
+tmpman=$( tempfile )
+tmpauto=$( tempfile )
 
 if [[ -z "$manfile" || -z "$autofile" || -z $idx ]]
 then
@@ -45,6 +45,6 @@ fi
 head -$[ $idx * 180 ] "$manfile" | tail -180 > $tmpman
 head -$[ $idx * 180 ] "$autofile" | tail -180 > $tmpauto
 
-./eval-rank.sh $tmpman $tmpauto
+./eval-rank.sh $tmpman $tmpauto $sysname
 
 rm $tmpman $tmpauto

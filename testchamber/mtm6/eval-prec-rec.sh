@@ -23,20 +23,35 @@ then
 	exit 1
 fi
 
+function doeval {
+	evaltype=$1
+	
+	outfile=$( tempfile )
+	accfile=$( tempfile )
+	
+	./auxx/prec-rec-internal.pl \
+		<( cat "$manfile" | grep "$evaltype-err-cats" | cut -d " " -f 2-) \
+		<( cat "$autofile" | grep "$evaltype-err-cats" | cut -d " " -f 2-) > $outfile 2> $accfile
+	
+	echo $outfile $accfile
+}
+
 sysname=$( echo $autofile | cut -d - -f 3- | cut -d . -f 1 | sed -e "s/-/ /g" )
 
 echo -n '!!!'
 echo " Evaluating $sysname (ref / hyp tables; left: auto / top: manual):"
 
-for evaltype in ref hyp
-do
-	(
-		./auxx/prec-rec-internal.pl \
-			<( cat "$manfile" | grep "$evaltype-err-cats" | cut -d " " -f 2-) \
-			<( cat "$autofile" | grep "$evaltype-err-cats" | cut -d " " -f 2-)
-	) > .tmp-$evaltype
-done
+reffiles=$( doeval ref )
+reffile=$( echo $reffiles | cut -d " " -f 1 )
+refaccf=$( echo $reffiles | cut -d " " -f 2 )
+refacc=$( cat $refaccf | cut -d " " -f 3 )
 
-paste -d " " .tmp-ref .tmp-hyp | sed -e "s/||border=1 //"
+hypfiles=$( doeval hyp )
+hypfile=$( echo $hypfiles | cut -d " " -f 1 )
+hypaccf=$( echo $hypfiles | cut -d " " -f 2 )
+hypacc=$( cat $hypaccf | cut -d " " -f 3 )
 
-rm .tmp-ref .tmp-hyp
+paste -d " " $reffile $hypfile | sed -e "s/||border=1 //"
+echo "Total accuracy (ref/hyp): $refacc / $hypacc" 1>&2
+
+rm -f $reffile $hypfile
