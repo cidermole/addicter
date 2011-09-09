@@ -68,7 +68,7 @@ $(DATADIR)/$H.$(VARIANT)-$(DETECTOR).results: $(DATADIR)/$H.errors-$(VARIANT)-$(
 
 ranking: $(DATADIR)/$H.$(VARIANT)-$(DETECTOR).ranking
 $(DATADIR)/$H.$(VARIANT)-$(DETECTOR).ranking: $(DATADIR)/$H.errors-$(VARIANT)-$(DETECTOR).dat
-	perl -e 'print "Ranking evaluation for $(DETECTOR), $(VARIANT) ($(DATADIR), $(H); manual/automatic counts)\n||border=1\n||! system || infl || reord || miss || ext || lex ||! rho ||\n"; for my $$idx (1..3) { \
+	perl -e 'print "Ranking evaluation for $(DETECTOR), $(VARIANT) (manual/automatic counts)\n||border=1\n||! system || infl || reord || miss || ext || lex ||! rho ||\n"; for my $$idx (1..3) { \
 		system "./eval-rank-parts.sh $(DATADIR)/$H.errors.gold.dat $(DATADIR)/$H.errors-$(VARIANT)-$(DETECTOR).dat $$idx"; }' > $@
 
 info:
