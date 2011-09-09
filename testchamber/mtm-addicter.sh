@@ -48,7 +48,7 @@ then
 	delali=yes
 	ali=".tmp-alignment"
 	#./align-hmm.pl -n 2 "$ref" "$hyp" > "$ali"; ordie
-	./align-greedy.pl -n 2 "$ref" "$hyp" > "$ali"; ordie
+	./align-greedy.pl "$ref" "$hyp" > "$ali"; ordie
 fi
 
 err=".tmp-errors"
