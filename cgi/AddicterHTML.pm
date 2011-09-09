@@ -39,6 +39,41 @@ sub get_nth_line
 
 
 #------------------------------------------------------------------------------
+# Processes a line of word alignments in the format "0-0 0-1 2-7 3-8". Returns
+# an array reference of the same, e.g. [[0, 0], [0, 1], [2, 7], [3, 8]].
+#------------------------------------------------------------------------------
+sub ali_line_to_array
+{
+    my $aliseq = shift;
+    my @alignment = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliseq));
+    return \@alignment;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Processes an array of alignments in the form [[0, 0], [0, 1], [2, 7], [3, 8]].
+# Returns a reference to a different array where the list of counterpart
+# indices can be easily accessed for each word.
+#------------------------------------------------------------------------------
+sub ali_array_index
+{
+    my $alignment = shift;
+    my @l2r;
+    my @r2l;
+    foreach my $a (@{$alignment})
+    {
+        my $l = $a->[0];
+        my $r = $a->[1];
+        push(@{$l2r[$l]}, $r);
+        push(@{$r2l[$r]}, $l);
+    }
+    return {'l2r' => \@l2r, 'r2l' => \@r2l};
+}
+
+
+
+#------------------------------------------------------------------------------
 # Generates a part of an HTML table with a sentence and corresponding aligned
 # words from the other language. The function generates two table rows. One row
 # contains words (tokens) of the sentence. The other row contains the

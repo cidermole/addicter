@@ -211,6 +211,12 @@ sub sentence_to_table
         {
             $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
         }
+        ###!!! If we have found a subfolder we automatically expect it to contain test.refhyp.ali.
+        # In future, we may just assume that it contains any of the expected files, for which tehere are alternatives.
+        # Files that are not present in a subfolder may be present in the superfolder as alternatives.
+        my $aliseq = AddicterHTML::get_nth_line("$config{experiment}/$aliid/test.refhyp.ali", $sentence->{sntno});
+        my $rhalignments = AddicterHTML::ali_line_to_array($aliseq);
+        my $rhalindex = AddicterHTML::ali_array_index($rhalignments);
         # Additional information by finderrs.pl from Mark's Testchamber.
         my $xmlfile = "$config{experiment}/$aliid/tcerr.txt";
         my @srcstyles;
@@ -244,6 +250,11 @@ sub sentence_to_table
                         elsif($key eq 'ordErrorShiftWord')
                         {
                             $tgtstyles[$token->{hypPos}] = 'background-color: lightgreen';
+                            # We should use the same color for the aligned counterpart of the reordered word.
+                            foreach my $r (@{$rhalindex->{l2r}[$token->{hypPos}]})
+                            {
+                                $srcstyles[$r] = 'background-color: lightgreen';
+                            }
                         }
                     }
                 }
@@ -254,15 +265,8 @@ sub sentence_to_table
                 $htmlerr .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
             }
         }
-        ###!!! If we have found a subfolder we automatically expect it to contain test.refhyp.ali.
-        # In future, we may just assume that it contains any of the expected files, for which tehere are alternatives.
-        # Files that are not present in a subfolder may be present in the superfolder as alternatives.
-        {
-            my $aliseq = AddicterHTML::get_nth_line("$config{experiment}/$aliid/test.refhyp.ali", $sentence->{sntno});
-            @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliseq));
-            $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, \@rhalignments, 1, 0, 0, 0, \@srcstyles);
-            $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, \@rhalignments, 0, 0, 0, 0, \@tgtstyles);
-        }
+        $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, $rhalignments, 1, 0, 0, 0, \@srcstyles);
+        $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, $rhalignments, 0, 0, 0, 0, \@tgtstyles);
         my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
         # We can display all three pairs of rows in one table or we can display them in separate tables.
         my $onetable = 0;
