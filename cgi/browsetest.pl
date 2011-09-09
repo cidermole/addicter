@@ -211,14 +211,57 @@ sub sentence_to_table
         {
             $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
         }
+        # Additional information by finderrs.pl from Mark's Testchamber.
+        my $xmlfile = "$config{experiment}/$aliid/tcerr.txt";
+        my @srcstyles;
+        my @tgtstyles;
+        my $htmlerr; # first construct, show later (after the alignments)
+        if(-f $xmlfile)
+        {
+            my $xmlrecord = ReadFindErrs::get_nth_sentence($xmlfile, $sentence->{sntno});
+            $htmlerr .= "<h2>Automatically Identified Errors</h2>\n";
+            if($xmlrecord->{state} eq 'waiting')
+            {
+                $htmlerr .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
+            }
+            elsif($xmlrecord->{state} eq 'finished')
+            {
+                $htmlerr .= "<dl>\n";
+                foreach my $key (keys(%{$xmlrecord->{errors}}))
+                {
+                    $htmlerr .= "<dt><b>$key</b></dt>\n";
+                    $htmlerr .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+                    foreach my $token (@{$xmlrecord->{errors}{$key}})
+                    {
+                        if($key eq 'missingRefWord')
+                        {
+                            $srcstyles[$token->{idx}] = 'background-color: lightblue';
+                        }
+                        elsif($key eq 'extraHypWord')
+                        {
+                            $tgtstyles[$token->{idx}] = 'background-color: lightblue';
+                        }
+                        elsif($key eq 'ordErrorShiftWord')
+                        {
+                            $tgtstyles[$token->{hypPos}] = 'background-color: lightgreen';
+                        }
+                    }
+                }
+                $htmlerr .= "</dl>\n";
+            }
+            else
+            {
+                $htmlerr .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
+            }
+        }
         ###!!! If we have found a subfolder we automatically expect it to contain test.refhyp.ali.
         # In future, we may just assume that it contains any of the expected files, for which tehere are alternatives.
         # Files that are not present in a subfolder may be present in the superfolder as alternatives.
         {
             my $aliseq = AddicterHTML::get_nth_line("$config{experiment}/$aliid/test.refhyp.ali", $sentence->{sntno});
             @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliseq));
-            $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, \@rhalignments, 1);
-            $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, \@rhalignments, 0);
+            $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, \@rhalignments, 1, 0, 0, 0, \@srcstyles);
+            $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, \@rhalignments, 0, 0, 0, 0, \@tgtstyles);
         }
         my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
         # We can display all three pairs of rows in one table or we can display them in separate tables.
@@ -241,31 +284,7 @@ sub sentence_to_table
                 $html .= "</table>\n";
             }
         }
-        # Additional information by finderrs.pl from Mark's Testchamber.
-        my $xmlfile = "$config{experiment}/$aliid/tcerr.txt";
-        if(-f $xmlfile)
-        {
-            my $xmlrecord = ReadFindErrs::get_nth_sentence($xmlfile, $sentence->{sntno});
-            $html .= "<h2>Automatically Identified Errors</h2>\n";
-            if($xmlrecord->{state} eq 'waiting')
-            {
-                $html .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
-            }
-            elsif($xmlrecord->{state} eq 'finished')
-            {
-                $html .= "<dl>\n";
-                foreach my $key (keys(%{$xmlrecord->{errors}}))
-                {
-                    $html .= "<dt><b>$key</b></dt>\n";
-                    $html .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
-                }
-                $html .= "</dl>\n";
-            }
-            else
-            {
-                $html .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
-            }
-        }
+        $html .= $htmlerr;
         $html .= "</div>\n";
     }
     $html .= "  <script src='../activatables.js' type='text/javascript'></script>\n";

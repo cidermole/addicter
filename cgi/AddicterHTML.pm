@@ -50,6 +50,8 @@ sub get_nth_line
 #------------------------------------------------------------------------------
 sub sentence_to_table_row
 {
+    ###!!! There are now too many parameters to this function and too many of them are optional.
+    ###!!! We should rewrite the function so that hash of parameters is an option.
     # Need experiment name as parameter, don't want to access the global %config from a library package.
     my $experiment = shift;
     # Source and target of the alignment, not necessarily source and target languages in the experiment analyzed.
@@ -63,6 +65,9 @@ sub sentence_to_table_row
     my $translitroutine = shift; # ref to subroutine
     # If we are generating static HTML pages we do not want to make every word link to its dynamic examples.
     my $nodynamiclinks = shift; # 0|1
+    # Styles of words (used for color marking of errors etc.)
+    my $srcstyles = shift; # array reference
+    my $tgtstyles = shift; # array reference
     my ($linklang, $aithis, $aithat);
     unless($target)
     {
@@ -87,7 +92,7 @@ sub sentence_to_table_row
         }
         # Every word except for the current one is a link to its own examples.
         my $word = $focusword && $srcwords->[$i] eq $focusword ? "<span style='color:red'>$focusword</span>" : word_to_link($experiment, $linklang, $srcwords->[$i], $nodynamiclinks);
-        $mainrow .= "<td>$word$translit</td>";
+        $mainrow .= "<td style='$srcstyles->[$i]'>$word$translit</td>";
     }
     $mainrow .= "</tr>\n";
     # Get the alignments in the order of the source sentence.
