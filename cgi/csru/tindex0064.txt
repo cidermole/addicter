@@ -1,0 +1,549 @@
+d	TRS:3572:	TRS:4626:d	TRS:5240:	TRS:9083:jazykem	TRS:12572:na	TRS:12828:oproti	TRS:15232:c	TRS:19232:e	TRS:19232:	TRS:20770:centrální	TRS:23700:d	TRS:30783:haass	TRS:32306:paříži	TRS:50037:a	TRS:57498:což	TRS:57504:	TRS:57519:své	TRS:62023:	TRS:62190:d	TRS:62227:d	TRS:62257:d	TRS:62309:d	TRS:62340:d	TRS:62381:d	TRS:62415:d	TRS:62444:d	TRS:62478:d	TRS:62513:d	TRS:62554:d	TRS:62600:d	TRS:62637:d	TRS:62683:d	TRS:62721:d	TRS:62755:d	TRS:62792:d	TRS:62833:d	TRS:62867:d	TRS:62903:d	TRS:62949:d	TRS:62985:d	TRS:63019:d	TRS:63076:d	TRS:63137:d	TRS:63181:d	TRS:63226:d	TRS:63263:d	TRS:63307:d	TRS:63346:d	TRS:63386:d	TRS:63427:d	TRS:63459:d	TRS:63502:d	TRS:63542:d	TRS:63584:d	TRS:63624:d	TRS:63662:d	TRS:63702:d	TRS:63745:d	TRS:63790:d	TRS:63831:d	TRS:63865:d	TRS:63948:d	TRS:63993:d	TRS:64049:d	TRS:64089:d	TRS:64128:d	TRS:64178:d	TRS:64220:d	TRS:64257:d	TRS:64299:d	TRS:64338:d	TRS:64376:d	TRS:64415:d	TRS:64454:d	TRS:64491:d	TRS:64539:d	TRS:64583:d	TRS:64618:d	TRS:64668:d	TRS:64704:d	TRS:64751:d	TRS:64788:d	TRS:64837:d	TRS:64879:d	TRS:64918:d	TRS:64955:d	TRS:65004:d	TRS:65044:d	TRS:65085:d	TRS:65121:d	TRS:65161:d	TRS:65210:d	TRS:65254:d	TRS:65296:d	TRS:65339:d	TRS:65377:d	TRS:65414:d	TRS:65457:d	TRS:65510:d	TRS:65545:d	TRS:65587:d	TRS:65634:d	TRS:65669:d	TRS:65716:d	TRS:65757:d	TRS:65803:d	TRS:65851:d	TRS:65893:d	TRS:65935:d	TRS:65978:d	TRS:66018:d	TRS:66063:d	TRS:66111:d	TRS:66160:d	TRS:66199:d	TRS:66242:d	TRS:66292:d	TRS:66338:d	TRS:66377:d	TRS:66424:d	TRS:66464:d	TRS:66507:d	TRS:66541:d	TRS:66584:d	TRS:66623:d	TRS:66670:d	TRS:66705:d	TRS:66741:d	TRS:68236:	TRS:71199:copak tam nezávislí novináři mají šanci ? " já	TRS:71199:	TRS:71210:drobných	TRS:71218:nezávislý	TRS:71224:ekonomiky	TRS:71227:	TRS:71231:	TRS:71231:	S:782:д	S:782:d
+daar	TRS:14006:s daar a
+dad	TRS:33943:širší	S:58:jud	S:64:jud	S:70:jud	S:58:dad	S:64:dad	S:70:dad
+daewoo	TRS:2507:	TRS:2509:společnost	TRS:2509:
+dagens	TRS:7352:
+dahrendorf	TRS:14037:svobody	TRS:14083:dahrendorf	TRS:14130:dahrendorf	TRS:14182:dahrendorf	TRS:14219:dahrendorf	TRS:14262:dahrendorf	TRS:14304:dahrendorf	TRS:14347:dahrendorf	TRS:14393:dahrendorf	TRS:14438:dahrendorf	TRS:14474:dahrendorf	TRS:14518:dahrendorf	TRS:14563:dahrendorf	TRS:14601:dahrendorf	TRS:14641:dahrendorf	TRS:14691:dahrendorf	TRS:14735:dahrendorf	TRS:14770:dahrendorf	TRS:14807:dahrendorf	TRS:14852:dahrendorf	TRS:14905:dahrendorf	TRS:14948:dahrendorf	TRS:15000:dahrendorf	TRS:15048:dahrendorf	TRS:15094:dahrendorf	TRS:15139:papež jan	TRS:15181:dahrendorf	TRS:15228:dahrendorf	TRS:15270:dahrendorf	TRS:15321:dahrendorf	TRS:15372:dahrendorf	TRS:15413:dahrendorf	TRS:15447:dahrendorf	TRS:15487:dahrendorf	TRS:15529:dahrendorf	TRS:15573:dahrendorf	TRS:15611:dahrendorf	TRS:15650:dahrendorf	TRS:15689:dahrendorf	TRS:15732:dahrendorf	TRS:15768:dahrendorf	TRS:15815:dahrendorf	TRS:15859:dahrendorf	TRS:15893:dahrendorf	TRS:15926:dahrendorf	TRS:15970:dahrendorf	TRS:16014:dahrendorf	TRS:16056:dahrendorf	TRS:16098:dahrendorf	TRS:16132:dahrendorf	TRS:16177:dahrendorf	TRS:16220:dahrendorf	TRS:16256:dahrendorf	TRS:16297:dahrendorf
+daily	TRS:42387:-	TRS:50518:současnosti držitelem	TRS:64179:china	TRS:68759:	TRS:84920:deník	TRS:87617:ghanského	TRS:87632:
+daimler	TRS:34878:
+daimlercrysler	TRS:53000:daimlerchrysler ,
+dají	S:763:	S:763:можно
+dalajlama	S:359:далай-лама	S:359:dalajlama
+daleko	S:146:далеко	S:277:	S:622:далеко	S:146:далеко	S:277:далеко	S:622:далеко
+dalekosáhlejší	S:632:серьезнее	S:632:дальше
+dali	S:47:	S:470:они	S:47:дали	S:470:знать
+dalo	S:234:	S:234:
+další	S:37:больше	S:51:	S:65:других	S:126:	S:135:другие	S:161:новое	S:201:другие	S:297:другие	S:364:еще	S:448:очередная	S:517:	S:580:другие	S:615:еще	S:687:ещё	S:687:выдернутый	S:777:другие	S:787:другие	S:791:другие	S:819:прояснить	S:912:еще один	S:913:еще	S:914:еще ое	S:37:требует	S:51:еще одно	S:65:другие	S:126:другие	S:135:прочие	S:161:дальнейшее	S:201:другие	S:297:другие	S:364:другие	S:448:другие	S:517:расширение	S:580:другие	S:615:еще	S:687:еще	S:687:другие	S:777:другие	S:787:другие	S:791:другие	S:819:другие	S:912:другие	S:913:еще больше	S:914:дальнейшее
+dalších	S:380:других	S:524:	S:605:частях	S:640:других	S:642:	S:702:	S:380:других	S:524:парниковых	S:605:других	S:640:других	S:642:других	S:702:других
+dalšího	S:78:совершённые	S:78:еще neuralgického
+dalším	S:660:	S:660:другим
+dalšími	S:64:другими	S:64:другими
+dalšímu	S:20:-асад один	S:20:еще
+dan	TRS:39313:dan
+danchin	TRS:16342:danchin
+dani	TRS:36132:dani	TRS:58347:dani	TRS:58391:dani	TRS:58438:dani	TRS:58484:dani	TRS:58528:dani	TRS:58574:dani	TRS:58616:dani	TRS:58646:dani	TRS:58687:dani	TRS:58731:dani	TRS:58779:dani	TRS:58825:dani	TRS:58859:dani	TRS:58908:dani
+daniel	TRS:11004:daniel	TRS:12805:daniel	TRS:12845:daniel	TRS:12917:daniel	TRS:30231:daniel	TRS:30270:daniel	TRS:30310:daniel	TRS:37959:daniel
+daniela	S:990:daniela	S:990:даниель
+daniels	TRS:79338:,
+danny	TRS:41837:danny
+danone	TRS:29503:oréal	TRS:50027:,	TRS:84320:třeba	TRS:84321:které
+dans	TRS:71202:	TRS:71205:	TRS:71216:
+dané	S:591:потребностей этой	S:805:	S:591:vědomostní каждой	S:805:этих
+daní	S:862:налогов	S:862:налогов
+daně	S:722:	S:722:налоги
+daoud	TRS:40183:daoud	TRS:40218:daoud	TRS:40252:daoud	TRS:40289:daoud	TRS:40316:daoud	TRS:40354:daoud	TRS:40395:daoud	TRS:40428:daoud	TRS:40466:daoud	TRS:40498:daoud	TRS:40525:daoud	TRS:40558:daoud	TRS:40597:daoud
+daoudkuttab	TRS:40314:	TRS:43649:
+dar	S:949:подарок	S:949:дар
+darmstädter	TRS:34872:,
+dasgupta	TRS:16418:partha dasgupta
+datong	TRS:42346:li datong
+daveri	TRS:80576:daveri
+david	TRS:8789:david	TRS:12104:david	TRS:19819:david	TRS:26085:	TRS:26322:	TRS:27507:david	TRS:46598:david	TRS:56273:david	TRS:57342:david	TRS:57372:david	TRS:57414:david	TRS:57446:david	TRS:57487:david	TRS:68396:světové	TRS:68747:david	TRS:84708:david
+davidson	TRS:16458:davidson	TRS:16489:davidson	TRS:16528:davidson	TRS:16564:davidson	TRS:16595:davidson	TRS:16636:davidson	TRS:16673:davidson	TRS:16709:davidson	TRS:16745:davidson	TRS:16788:davidson	TRS:16822:davidson	TRS:16854:davidson	TRS:16891:davidson	TRS:16927:davidson	TRS:16963:davidson	TRS:17002:davidson	TRS:17050:davidson	TRS:17099:davidson	TRS:17134:davidson	TRS:17177:davidson	TRS:17214:davidson	TRS:17252:davidson	TRS:17296:davidson	TRS:17333:davidson
+davis	TRS:17378:davis
+davisová	S:784:дэвис	S:800:дерва дэвис	S:784:davisová	S:800:davisová
+dawn	TRS:12670:publicista	TRS:19716:poukázal
+daň	S:19:	S:250:цену	S:351:	S:19:цену	S:250:налог	S:351:налог
+daňové	S:862:налогов	S:862:снижение
+daňoví	S:833:отчетность	S:833:налогоплательщики
+daňových	S:229:	S:229:снижений
+daří	S:20:чувствует	S:426:	S:440:	S:493:	S:658:они получают	S:976:	S:20:	S:426:идут	S:440:достигают успеха	S:493:konspiračním	S:658:удается	S:976:продавать
+dds	TRS:10129:
+de	TRS:3428:	TRS:8859:ředitelem	TRS:11610:de	TRS:11631:	TRS:15238:	TRS:19520:de	TRS:19759:v paříži ,	TRS:19779:.	TRS:19781:de	TRS:19863:de	TRS:19911:de	TRS:19938:de	TRS:19977:de	TRS:20019:de	TRS:20053:de	TRS:20082:de	TRS:20114:de	TRS:21936:tento	TRS:22579:	TRS:22824:de	TRS:31250:„	TRS:32306:	TRS:32629:„	TRS:34201:justice	TRS:36508:de	TRS:36508:	TRS:37936:,	TRS:39996:zasadit sld ránu z v parlamentních vyšetřovacích	TRS:41183:	TRS:41990:fait	TRS:42907:infantil (	TRS:42930:se	TRS:44488:de	TRS:44930:	TRS:59958:myslí	TRS:68361:“ . 	TRS:68362:	TRS:68362:	TRS:68364:udržely	TRS:68364:vyspívajících	TRS:68365:začít	TRS:68366:	TRS:68369:.	TRS:68369:	TRS:68370:úprav	TRS:68370:	TRS:68371:rozvojové	TRS:68372:států	TRS:68372:středně	TRS:68372:	TRS:68373:,	TRS:68373:	TRS:68374:/	TRS:68374:	TRS:68374:přírodních	TRS:68374:	TRS:68377:.	TRS:68378:opravdové	TRS:68378:ve	TRS:68378:zeměmi	TRS:68379:	TRS:68379:a	TRS:68379:      	TRS:68379:	TRS:68381:	TRS:68381:	TRS:68381:	TRS:68381:	TRS:68381:	TRS:68382:jako	TRS:68382:	TRS:68382:	TRS:68382:	TRS:68382:	TRS:68382:	TRS:68383:úvěrování	TRS:68384:	TRS:68386:středně	TRS:68387:,	TRS:68388:	TRS:68388:	TRS:68388:	TRS:68388:	TRS:68388:	TRS:68389:narůstá	TRS:68389:expanzi	TRS:68389:přestože	TRS:68389:	TRS:68389:	TRS:68393:by s nimi měla umět spolupracovat i za	TRS:68393:a	TRS:68393:,	TRS:68395:	TRS:68395:	TRS:68396:banky	TRS:68396:   	TRS:68397:	TRS:68398:ve smyslu síly se	TRS:68398:	TRS:68398:	TRS:68399:nenadešel	TRS:68400:aby	TRS:68400:úpravu	TRS:70010:(	TRS:71196:	TRS:71198:z	TRS:71200:	TRS:71203:kapitálových	TRS:71204:	TRS:71207:cover	TRS:71208:jejími	TRS:71209:této	TRS:71210:	TRS:71213:	TRS:71215:hrozilo	TRS:71218:v	TRS:71218:a	TRS:71220:	TRS:71221:yinguang	TRS:71221:na	TRS:71221:svých	TRS:71223:	TRS:71224:	TRS:71224:	TRS:71228:trh	TRS:71230:	TRS:71231:	TRS:71231:	TRS:71231:,	TRS:71231:	TRS:71231:	TRS:71231:	TRS:71232:například	TRS:71233:.	TRS:72141:andré	TRS:73762:v	TRS:73840:	TRS:77502:	TRS:84487:de	S:179:де	S:183:де	S:778:голля	S:828:де	S:943:de	S:179:де	S:183:де	S:778:де	S:828:де	S:943:де
+de-	TRS:80319:
+dealerům	S:671:дилеров	S:671:dealerům
+deba	TRS:68390:by
+debajo	TRS:68389:
+debata	S:971:споры	S:971:дебаты
+debatu	S:916:	S:916:дебатам
+debaty	S:142:дебатов	S:142:дискуссии
+debatě	S:973:дебаты	S:973:дебатах
+debe	TRS:68372:musí	TRS:68396:školenými	TRS:68397:
+deben	TRS:68364:plně
+debenedetti	TRS:13391:
+debería	TRS:68365:by	TRS:68393:nimi
+debido	TRS:68380:	TRS:68388:pomocí
+december	TRS:3031:prosinec	TRS:6123:prosinec	TRS:22294:prosinec	TRS:29944:prosinec	TRS:42514:december	TRS:71310:prosinec	TRS:84310:prosinec	TRS:84822:prosinec	TRS:85149:	TRS:85688:prosinec
+decir	TRS:68399:nenadešel
+decirse	TRS:68362:fond
+decode	TRS:30008:	TRS:30010:lidé
+deepak	TRS:40802:deepak	TRS:40853:deepak	TRS:40899:deepak	TRS:81889:deepak
+default	TRS:75247:
+defense	TRS:50880:
+deficitní	S:935:грэгори манкив -	S:935:дефициту
+deficity	S:104:пришлось	S:104:дефицит
+definovaly	S:545:значительной степени пересмотрены	S:545:definovaly
+definované	S:89:	S:89:расквартировки
+degli	TRS:24468:studi
+dei	TRS:85030:boha
+dejan	TRS:68383:
+dekád	S:181:проявлялся	S:181:десятилетий
+dekádě	S:730:десятилетии	S:730:десятилетия
+del	TRS:17451:graciana del	TRS:20417:tudíž	TRS:68364:banky	TRS:68364:	TRS:68365:se	TRS:68366:	TRS:68369:	TRS:68369:hlasovacích	TRS:68369:	TRS:68374:	TRS:68377:	TRS:68379:,	TRS:68382:	TRS:68388:miliard	TRS:68389:pod	TRS:68389:z	TRS:68396:a	TRS:68398:	TRS:68398:státech	S:830:дел	S:830:graciana del
+delano	S:874:делано	S:874:delano
+dell	TRS:23010:dell	TRS:23086:
+della	TRS:81209:della	TRS:81260:strukturální . 	TRS:81277:	TRS:81281:proměnila
+delong	TRS:17796:.	TRS:18042:.	S:925:	S:925:делонг
+delyagin	TRS:17411:delyagin
+delší	S:815:	S:815:интеллектом
+demanda	TRS:68386:
+demandas	TRS:68372:států
+demandent	TRS:71221:informaci
+demasiado	TRS:68363:ale
+democratici	TRS:81277:strany
+democrazia	TRS:81277:.
+democrático	TRS:11688:strany	TRS:11997:největší
+democrбtica	TRS:11610:že
+demoi	TRS:48943:,
+demoi-	TRS:48943:tedy
+demoi-краты	TRS:48954:-
+demokracie	S:379:демократическим	S:469:демократии	S:480:демократии	S:532:демократии	S:621:демократии	S:379:демократии	S:469:демократии	S:480:демократии	S:532:демократии	S:621:демократии
+demokracii	S:435:демократии	S:482:демократию	S:529:демократии	S:435:демократию	S:482:демократии	S:529:демократии
+demokraciích	S:392:демократических государствах	S:446:демократических	S:392:демократических государствах	S:446:демократических
+demokratickou	S:494:демократической	S:795:короткой демократического	S:494:демократической	S:795:демократические
+demokratické	S:261:демократические	S:853:демократические	S:261:демократические	S:853:демократичной
+demokratického	S:262:	S:527:демократической	S:262:демократической	S:527:демократического
+demokratický	S:482:земле	S:482:демократическое
+demokratických	S:375:демократических	S:670:демократических	S:729:демократических	S:826:	S:879:	S:881:демократических	S:375:демократических	S:670:демократических	S:729:демократических	S:826:демократических	S:879:демократических	S:881:демократических
+demokratickým	S:393:демократическим	S:393:демократическим
+demokratičtí	S:354:демократические	S:354:демократические
+demokratům	S:573:демократы сумели	S:573:демократы
+demos	TRS:48943:
+demostrado	TRS:68382:
+demystifikací	S:714:развеивание мифа “ 68-го ”	S:714:demystifikací
+den	S:13:день	S:13:день
+deng	TRS:43394:lety	TRS:68242:teng
+denise	TRS:22509:denise	TRS:22550:denise
+dennis	S:514:деннис	S:514:dennis
+denně	S:528:выкуривает	S:528:в день
+dentatus	TRS:45319:
+depardieu	TRS:13575:třídou
+depfa	TRS:84341:depfa z roku
+deportaci	S:441:управлению депортациями	S:441:депортации
+depot	TRS:59258:depot
+deprese	S:875:у	S:920:депресии	S:875:депрессии	S:920:депрессии
+depresi	S:863:депрессии	S:921:	S:863:депрессию	S:921:депрессию
+depresím	S:930:начинающимися	S:930:nastupujícím депрессия
+deptající	S:683:эквадору	S:683:deptající
+der	TRS:32378:der	TRS:35749:bonnu	TRS:55819:der	TRS:76671:titulem ,,	TRS:76707:vydalo	TRS:76744:"	TRS:76791:"	TRS:76887:"	TRS:76935:"	TRS:76978:grande	TRS:84081:der
+dernier	TRS:71200:státem	TRS:71200:	TRS:71222:společnosti
+derva	S:800:дерва	S:800:derva
+derviş	TRS:19643:derviş	TRS:19677:derviş
+des	TRS:25574:	TRS:28390:sciences	TRS:37254:,	TRS:45856:sciences	TRS:45927:	TRS:50291:études en	TRS:69154:přičemž	TRS:71200:plánovaného	TRS:71200:	TRS:71200:	TRS:71210:zůstaly	TRS:71210:	TRS:71212:	TRS:71213:	TRS:71218:ostatně	TRS:71218:	TRS:71222:	TRS:71232:a	TRS:71233:	TRS:81843:jsou les valeurs des modernes
+desa	TRS:52868:desa
+desai	TRS:19707:n desai
+desaiová	S:937:десаи	S:956:	S:937:desaiová	S:956:desaiová
+desarrolladas	TRS:68398:
+desarrollo	TRS:42907:(	TRS:68371:
+descamisados	TRS:32299:bohatým
+descentralización	TRS:68392:vzhledem k decentralizaci , která
+desde	TRS:68387:k
+desempleo	TRS:68379:
+desequilibrios	TRS:68379:
+deset	S:380:десять	S:380:десять
+deseti	S:116:10	S:217:10	S:775:десять	S:886:10	S:116:десять	S:217:десяти	S:775:десять	S:886:десять
+desetileté	S:727:сэкономит	S:727:десятилетний
+desetiletí	S:101:двадцать лет	S:101:десятилетий
+desetiletích	S:273:десятилетия	S:519:лет	S:273:десятилетий	S:519:десятилетий
+desetiletých	S:993:определенный отрезок времени доходность греческих десятилетних	S:993:desetiletých
+desigualdades	TRS:68379:.
+desillusion	TRS:76671:	TRS:76707:desillusion	TRS:76744:" v	TRS:76791:" v	TRS:76887:" v	TRS:76935:" v	TRS:76978:
+desmond	TRS:83293:desmond	TRS:83342:desmond
+despotu	S:369:деспота	S:369:despotu
+después	TRS:68388:
+destabilizace	S:8:дестабилизации	S:8:дестабилизации
+destabilizoval	S:827:дестабилизировала	S:827:дестабилизировать
+desítky	S:53:десятилетия	S:309:десятки	S:53:десятки	S:309:десятки
+detaily	S:428:мумбае	S:428:детали
+detractores	TRS:68386:,
+deutsch	TRS:19819:deutsch
+deutsche	TRS:34884:	TRS:34885:k	TRS:37939:organizací deutsche a
+deutschland	TRS:71015:
+deux	TRS:71201:transformaci
+devalvace	S:672:краткосрочной понижение	S:995:девальвации	S:672:обесценивание	S:995:девальвации
+devatenáctého	S:104:19	S:496:19	S:104:девятнадцатого	S:496:девятнадцатого
+development	TRS:9671:	TRS:33227:má	TRS:34201:development	TRS:44917:lidem	TRS:63973:chudým	TRS:75831:stojí	TRS:79117:proč	TRS:87756:pozvedly
+devenue	TRS:71211:se
+devices	TRS:13895:
+devra	S:784:девра	S:784:devra
+dezinformací	S:118:да – дезинформации	S:118:дезинформации
+dezinformačních	S:799:махинациями	S:799:dezinformačních
+di	TRS:81277:schválily
+diagnostice	S:786:выявлении	S:786:диагностике
+dian	TRS:42387:odvolán
+dianne	TRS:24353:dianne
+diaspoře	S:361:диаспоры	S:361:диаспоры
+dickensonová	S:973:донна дикенсон -	S:973:dickensonová
+die	TRS:1645:	TRS:2314:	TRS:23358:die	TRS:35749:v	TRS:76671:francouzský	TRS:76707:der	TRS:76744:der	TRS:76791:der	TRS:76887:der	TRS:76935:der	TRS:76978:"
+dienstbier	TRS:20212:dienstbier	TRS:20257:dienstbier
+difficile	TRS:71211:"
+diffuser	TRS:71211:
+diffиre	TRS:71221:akcií
+digitální	S:518:цифровое	S:518:компьютерное
+digitálního	S:516:цифровое	S:516:цифровой
+diktatury	S:337:-групп	S:337:диктатуры
+diktaturách	S:324:диктатурах	S:324:диктаторских
+diktátorům	S:481:диктаторов	S:481:диктаторам
+diktátoři	S:660:диктаторы	S:660:диктаторы
+dilemme	TRS:71201:	TRS:71223:
+dillí	S:487:дели	S:506:	S:487:дели	S:506:нью - дели
+dimap	TRS:46124:"	TRS:46171:skupiny	TRS:46240:­
+dimension	TRS:23497:
+diminuй	TRS:71205:
+dinero	TRS:68380:není
+dinkic	TRS:20299:mladjan dinkic
+diplomacie	S:607:дипломатия	S:607:дипломатии
+diplomatickou	S:657:дипломатическую	S:657:дипломатической
+diplomatické	S:552:дипломатической	S:552:дипломатической
+diplomatičtější	S:432:самоудовлетворённости по поводу нахождения более цивилизованного дипломатичного	S:432:diplomatičtější
+dire	TRS:71223:číně
+directly	TRS:24217:
+dirigent	S:318:дирижер	S:318:dirigent
+disidenty	S:626:диссидентами	S:626:диссидентов
+diskurzu	S:539:трансатлантическому	S:539:разговорам
+diskutovat	S:931:	S:931:вопрос
+disminuido	TRS:68387:pouze
+disponibles	TRS:71205:
+disposйs	TRS:71211:
+dispozice	S:792:врожденными	S:792:призвании
+dispozici	S:571:	S:692:	S:571:akademiemi	S:692:
+distinguer	TRS:71228:kontroluje
+distribuce	S:857:	S:878:распределение	S:857:распределение	S:878:распределения
+ditore	TRS:68218:právem	TRS:80308:byl	TRS:80351:“
+div	S:350:чудо	S:350:через
+diversity	TRS:35833:
+dividendy	S:907:будет выплачена дивидендах	S:907:дивиденды
+dividendě	S:171:дивидендах мира	S:171:dividendě
+divini	S:531:( divini	S:531:divini
+divu	S:183:удивительно	S:894:ничего удивительного том	S:183:ничего удивительного том atlantistické	S:894:неудивительно
+diw	TRS:21847:výzkum ( diw zpracoval
+dixit	TRS:20331:dixit
+diálogo	TRS:68366:bohatými
+djilas	TRS:20369:djilas	TRS:20414:djilas	TRS:20455:djilas	TRS:20503:djilas	TRS:20549:djilas
+dkuttab	TRS:40216:zní	TRS:40393:zní
+dlažebních	S:703:булыжниками	S:703:dlažebních
+dlouho	S:314:долгое время	S:362:переданными	S:401:течение долгого времени	S:497:тоо	S:745:давно	S:314:долго	S:362:předávané	S:401:долгое	S:497:долго	S:745:давно
+dlouhodobá	S:696:геотермальной	S:696:долгосрочная
+dlouhodobé	S:914:отношении долгосрочных	S:914:долгосрочные
+dlouhodobým	S:56:долговременным	S:147:долгосрочной	S:812:наблюдениями	S:56:развитием	S:147:долгосрочная	S:812:долгосрочных
+dlouhodobě	S:399:	S:693:	S:399:в долгосрочной перспективе	S:693:долгосрочной перспективе
+dlouhodobějším	S:587:прекращении	S:587:долгосрочной
+dlouhou	S:970:	S:970:долгое
+dlouhovlasí	S:329:длинноволосые фанаты	S:329:dlouhovlasí
+dlouhá	S:369:придворных	S:369:давней
+dlouhý	S:961:долгая	S:961:длинный
+dluhopisy	S:208:облигации	S:208:облигации
+dluhopisů	S:204:облигационной	S:908:облигаций	S:993:облигаций	S:204:облигаций	S:908:облигации	S:993:облигаций
+dluhu	S:203:долгов	S:203:долга
+dluhů	S:226:долга	S:226:долгового бремени
+dlužních	S:216:для	S:216:dlužních
+dmitri	TRS:83019:dmitri	TRS:83056:dmitri	TRS:83111:dmitri
+dmitry	TRS:71132:dmitry
+dmz	TRS:11149:adoptoval mě
+dna	TRS:41297:materiálu
+dnes	S:109:сейчас	S:168:сегодня	S:189:сегодня	S:232:сегодня	S:274:разыгрывать	S:396:сегодня	S:532:сегодня	S:777:сегодня	S:833:отчетность	S:922:сегодняшний	S:109:сегодня	S:168:сегодня	S:189:в настоящее время	S:232:сегодня	S:274:в настоящее время	S:396:в настоящее время	S:532:сегодня	S:777:сегодня	S:833:налогоплательщики	S:922:сегодня
+dnešní	S:169:сегодняшние	S:195:	S:354:сегодняшние	S:379:сегодня	S:716:сегодняшние	S:169:сегодняшние	S:195:сегодня	S:354:сегодня	S:379:сегодня	S:716:сегодняшние
+dnešních	S:283:требующих	S:375:демократических	S:283:сегодняшних	S:375:сегодняшних
+dnešního	S:714:сегодняшнего	S:714:сегодняшнего
+do	S:1:	S:22:	S:51:к	S:67:в	S:69:в	S:73:вторжение на	S:93:в	S:103:в	S:104:в	S:115:	S:123:до	S:124:	S:146:в	S:148:вступить в	S:154:в джабалию	S:157:вмешается	S:174:	S:191:в	S:197:на	S:201:переселяться в	S:268:к	S:285:в	S:285:	S:285:в ипотечное	S:288:в	S:288:к	S:289:инвестиции в	S:290:приняли	S:299:инвестировать в	S:299:зеленую	S:303:многом	S:344:заморожено в	S:371:	S:393:	S:419:к	S:429:вошел в	S:433:в	S:435:в	S:436:вступить в	S:444:в	S:467:в	S:467:в	S:492:в	S:565:приносят	S:602:в	S:647:в	S:668:вступил в	S:672:инвестиции на	S:674:	S:680:	S:691:в	S:702:	S:702:экспортеров	S:704:до	S:726:в	S:734:к	S:739:в ряды	S:776:в	S:805:на	S:817:той	S:841:к	S:842:цитадель	S:843:до	S:843:73000	S:844:	S:882:саморазрешиться в	S:932:в	S:932:в	S:1:в	S:22:в	S:51:в	S:67:в	S:69:в	S:73:вторжение в	S:93:в	S:103:в	S:104:вернуться в	S:115:в руки	S:123:в aleluja	S:124:obráceny в	S:146:в	S:148:вступлению в	S:154:в	S:157:в нейтрализации	S:174:	S:191:в	S:197:в	S:201:переместить в	S:268:в	S:285:в	S:285:	S:285:инвестировать в	S:288:в	S:288:в	S:289:в	S:290:в	S:299:вкладывать в	S:299:в	S:303:в значительной	S:344:в	S:371:в	S:393:на пути	S:419:в	S:429:вступил в	S:433:вступит в	S:435:в	S:436:вступить в	S:444:в	S:467:в	S:467:в	S:492:в	S:565:в	S:602:в	S:647:в	S:668:пришел к	S:672:инвестиции в	S:674:в	S:680:в	S:691:užitečně в	S:702:инвестиции в	S:702:údržby	S:704:	S:726:в	S:734:в	S:739:в	S:776:в	S:805:в	S:817:к	S:841:в	S:842:в	S:843:в	S:843:73000	S:844:в	S:882:в	S:932:в	S:932:в
+dob	S:144:	S:179:со времен	S:556:времен	S:144:времен	S:179:со времен	S:556:времен
+dobrou	S:5:хорошей	S:5:хорошие
+dobrovolné	S:85:добровольных	S:85:добровольной
+dobré	S:7:но хорошие	S:835:	S:7:хорошие	S:835:
+dobrý	S:507:идеей	S:507:хорошей
+dobrých	S:577:правилами	S:577:хороших
+dobu	S:216:время	S:970:времени	S:993:	S:216:rozbujelých	S:970:долгое время	S:993:некоторого времени
+doby	S:63:эпохи	S:614:утрачена	S:805:	S:808:мозговой	S:63:момента	S:614:пор	S:805:пор	S:808:времени
+dobytá	S:272:захваченные	S:272:dobytá
+dobýt	S:429:завоеванию	S:429:dobýt
+době	S:100:время	S:213:	S:214:неприятностями	S:460:времена	S:582:то время	S:721:	S:854:	S:100:то время	S:213:время	S:214:ближайшее время	S:460:то время	S:582:то время	S:721:последнее время	S:854:то время
+dobře	S:20:	S:540:	S:598:широко	S:631:хорошо	S:694:хорошо	S:799:хорошо	S:803:	S:809:интеллект	S:816:вполне	S:833:устраивает	S:898:неплохо	S:20:хорошо	S:540:вполне	S:598:хорошо	S:631:хорошо	S:694:хорошо	S:799:хорошо	S:803:хорошо	S:809:хорошо	S:816:вполне	S:833:хорошо	S:898:хорошо
+doc	TRS:23088:	TRS:23090:„
+docomo	TRS:21762:
+documentan	TRS:68384:
+dodatečném	S:918:дополнительный	S:918:dodatečném
+dodavatelé	S:767:поставщики	S:767:поставщики
+dodnes	S:158:до сих пор просыпается	S:401:	S:158:до	S:401:до сих пор
+dodržovanou	S:626:установившуюся	S:626:dodržovanou
+dodržování	S:984:	S:984:соблюдение
+dodávat	S:691:полезного	S:691:užitečně предоставление
+dodávek	S:233:доставки	S:233:доставки
+dodávky	S:156:снабжение	S:156:поставки
+dodává	S:617:предоставляет	S:617:предоставляет
+doepfner	TRS:20603:doepfner
+dohled	S:936:контроль	S:936:надзором	S:936:контроля	S:936:контроль
+dohledového	S:942:сосредоточением более пристального	S:942:dohledového
+dohod	S:63:соглашений	S:63:соглашений
+dohoda	S:959:согласование	S:959:соглашение
+dohodu	S:273:соглашение	S:290:соглашение	S:587:договора	S:605:соглашение	S:273:соглашения	S:290:соглашение	S:587:соглашение	S:605:соглашение
+dohody	S:268:соглашения	S:287:	S:296:копенгагене	S:609:соглашения	S:268:соглашения	S:287:соглашения	S:296:соглашения	S:609:сделки
+dohodách	S:642:соглашений	S:642:соглашениях
+dohodám	S:643:обвинялись	S:643:соглашениям
+dohodě	S:635:политического	S:635:соглашения
+doit	TRS:71228:sedm	TRS:71230:
+doit-il	TRS:71225:klíčoví bez
+doivent	TRS:71199:jim	TRS:71223:	TRS:71231:čínského
+dojednali	S:587:договора	S:587:подписали
+dojednaná	S:721:собой постконфликтный рецидив	S:721:урегулирование переговоры
+dojem	S:235:симптоматичным	S:235:впечатление
+dojmem	S:504:особы	S:504:ощущением vábného
+dojít	S:794:	S:794:произойти
+dokládala	S:591:убедительно говорилось о оказания	S:591:показывали
+dokonale	S:172:	S:377:	S:172:roztrhala в том	S:377:полностью
+dokonalejší	S:524:растениями	S:524:улучшение
+dokonalého	S:324:совершенному	S:324:идеального
+dokonce	S:144:даже	S:185:даже	S:194:даже	S:323:-звезде	S:447:даже	S:460:даже	S:573:даже	S:144:даже	S:185:даже	S:194:даже	S:323:даже	S:447:даже	S:460:даже	S:573:даже
+doktríně	S:574:доктрине которая могла	S:574:доктрины
+dokud	S:362:до тех пор пока	S:749:	S:914:до тех пор пока	S:362:до тех пор пока	S:749:до тех пор пока	S:914:до тех пор пока
+dokázala	S:559:сбалансированной	S:559:может
+dokázali	S:942:	S:942:
+dokáže	S:239:сумасшествия	S:933:немногие	S:239:	S:933:может
+dokážou	S:120:	S:120:могут
+dolar	S:194:долларом	S:194:	S:693:	S:698:доллар	S:702:	S:718:доллар	S:733:доллар	S:194:доллар	S:194:доллар	S:693:доллар	S:698:доллар	S:702:доллар	S:718:доллар	S:733:доллар
+dolarech	S:641:долларах	S:641:долларах
+dolaru	S:666:доллара	S:672:курса доллара	S:715:курса доллара	S:666:доллара	S:672:доллара	S:715:доллара
+dolarů	S:165:долларов сша	S:166:долларов сша	S:285:долларов	S:727:долларов	S:727:долларов	S:757:долларов	S:901:долларов	S:165:долларов	S:166:долларов	S:285:долларов	S:727:долларов	S:727:долларов	S:757:долларов	S:901:долларов
+dolce	TRS:36843:do
+doložily	S:653:тейлором то	S:653:taylorem показали
+doložit	S:391:	S:391:бы поспорить о том
+doma	S:180:обыденным	S:475:стране	S:553:внутри страны	S:652:дома	S:180:дома	S:475:дома	S:553:дома	S:652:преступников
+dombrovskis	S:979:домбровскис -	S:979:dombrovskis
+dominantního	S:85:военную мощь своего доминирующего члена	S:85:властной
+domingo	TRS:63084:	TRS:73938:domingo
+dominique	TRS:47721:dominique	TRS:47761:dominique	TRS:47797:dominique	TRS:47834:dominique	TRS:47876:dominique	TRS:47917:dominique	TRS:47953:dominique	TRS:47990:dominique	TRS:48029:dominique	TRS:48072:dominique	TRS:48114:dominique	TRS:48146:dominique	TRS:48183:dominique	TRS:48235:dominique	TRS:48276:dominique	TRS:48306:dominique	TRS:48344:dominique	TRS:48377:dominique	TRS:48408:dominique	TRS:48438:dominique	TRS:48473:dominique	TRS:48514:dominique	TRS:48540:dominique	TRS:48578:dominique	TRS:48619:dominique	TRS:48657:dominique	TRS:68113:dominique
+dominovat	S:541:	S:541:
+domlouvat	S:510:переработке	S:510:
+domnívají	S:13:надеются	S:762:	S:13:полагают	S:762:полагают
+domníval	S:19:полагал	S:19:полагал
+domnívá	S:169:похоже считает	S:169:считают
+domnělá	S:35:то	S:35:предполагаемая
+domnělé	S:914:воспринимаемый	S:914:предполагаемой
+domnělým	S:961:предполагаемым правом	S:961:так называемым законом
+domov	S:154:да	S:154:дом
+domoviny	S:777:эти земли предков	S:777:родины
+domovině	S:648:	S:648:стране
+domovském	S:201:	S:201:zapustili
+domácnosti	S:105:	S:233:семьям	S:105:семьи	S:233:семьи
+domácností	S:82:семей	S:217:семей	S:82:семей	S:217:семей
+domácí	S:58:	S:80:внутриевропейский	S:112:внутренних	S:305:внутренней	S:558:	S:889:находится	S:58:местные	S:80:внутренние	S:112:внутренний	S:305:внутренней	S:558:внутренней	S:889:внутренняя
+domácích	S:174:внутренних	S:174:внутренних
+domů	S:137:домой	S:887:на жилье	S:137:домой	S:887:на жильё
+don	TRS:21779:
+donald	TRS:36544:donald
+dong	TRS:87868:
+donna	S:973:донна	S:973:donna
+doom	TRS:72133:doom	TRS:72134:harris
+doomа	TRS:72134:líbá
+doorways	TRS:70585:)
+dopad	S:112:эффект	S:319:эффект	S:789:суфийской	S:931:	S:112:воздействие	S:319:воздействие	S:789:воздействие	S:931:воздействие
+dopady	S:192:эффект	S:227:последствиями	S:192:воздействие	S:227:последствия
+dopadá	S:498:враждебностью	S:498:затрагивает
+doplňuje	S:86:по	S:86:дополняет
+doplňující	S:194:сравняется с долларом	S:194:дополняющее
+doporučení	S:608:рекомендаций	S:608:рекомендации
+dopravních	S:516:навигации	S:773:	S:516:транспортных	S:773:транспортные
+dopravu	S:437:организован также	S:437:перевозкам
+doprovázet	S:726:	S:936:идти	S:726:сопровождаться	S:936:сопровождаться
+dorman	S:980:dorman	S:980:dorman
+dornbusch	TRS:20717:dornbusch	TRS:20754:dornbusch	TRS:20795:dornbusch	TRS:20854:dornbusch	TRS:20905:dornbusch	TRS:20940:dornbusch	TRS:20980:dornbusch	TRS:21029:dornbusch	TRS:21058:dornbusch	TRS:21107:dornbusch	TRS:21154:dornbusch	TRS:21197:dornbusch	TRS:21247:dornbusch	TRS:21290:dornbusch	TRS:21327:dornbusch	TRS:21372:dornbusch	TRS:21414:dornbusch	TRS:21462:dornbusch	TRS:21504:dornbusch	TRS:21545:dornbusch	TRS:21587:dornbusch	TRS:21629:dornbusch	TRS:21668:dornbusch	TRS:21744:dornbusch	TRS:21788:dornbusch	TRS:21830:dornbusch	TRS:21878:dornbusch	TRS:21933:dornbusch	TRS:21976:dornbusch	TRS:22025:dornbusch	TRS:22069:dornbusch	TRS:22110:dornbusch	TRS:22163:dornbusch	TRS:22213:dornbusch	TRS:22254:dornbusch	TRS:22296:dornbusch	TRS:22331:dornbusch	TRS:22375:dornbusch	TRS:22419:dornbusch	TRS:22458:dornbusch
+dorothy	TRS:49909:dorothy	TRS:49959:dorothy
+dos	TRS:11894:nic	TRS:68367:skupiny	TRS:68379:	TRS:87269:80
+dosah	S:8:сферу влияния	S:8:влияния
+dosahovat	S:582:достичь желаемых	S:582:добиться
+dosažení	S:65:достижению	S:609:достижению	S:65:достижение	S:609:подтолкнёт достижения
+dosažitelné	S:697:	S:697:достижимы
+dospělosti	S:802:зрелости	S:812:взрослых	S:802:взрослой жизни	S:812:взрослой жизни
+dost	S:127:достаточно	S:540:	S:816:вполне	S:127:достаточно	S:540:вполне	S:816:вполне
+dostalo	S:901:	S:901:обеспечить бухгалтерского
+dostaly	S:729:пришедших	S:729:пришли
+dostane	S:690:ответят	S:690:будет получить
+dostat	S:22:	S:127:	S:22:экстремистов	S:127:наступить
+dostatečné	S:213:количественное	S:563:достаточно	S:213:достаточно количественные	S:563:достаточно
+dostačující	S:923:недостаточными	S:923:недостаточно
+dosti	S:854:	S:854:достаточно
+dostupnost	S:986:доступ	S:986:наличие
+dostupné	S:763:легкодоступными	S:763:доступны
+dostupnými	S:216:доступными	S:216:доступными
+dostává	S:894:получает	S:894:заголовках
+dosud	S:308:пока	S:308:узбекистане
+dosáhl	S:179:порвал	S:179:достиг
+dosáhla	S:909:достигла	S:909:зона
+dosáhly	S:167:	S:723:достигли	S:167:достигли	S:723:выросли
+dosáhnou	S:357:	S:810:	S:357:достигнут	S:810:достигнут
+dosáhnout	S:63:	S:268:достижения	S:296:	S:340:достичь	S:465:добиться	S:483:	S:524:растениями	S:63:достичь	S:268:достичь	S:296:достичь	S:340:достичь	S:465:достичь	S:483:сделать	S:524:достичь
+dotace	S:226:субсидии	S:226:субсидии
+dotací	S:846:субсидий	S:846:субсидий
+dotkla	S:78:совершённые	S:78:neuralgického
+dotlačí	S:609:прикрываются международным правом суда могут подтолкнуть стороны	S:609:подтолкнёт
+dots	TRS:24217:na	TRS:24239:dots	TRS:46859:,	TRS:46860:na
+doufají	S:716:надеются	S:716:надеются
+doufali	S:144:надеялись	S:144:надеялись на то
+doufáme	S:297:мы надеемся	S:297:мы надеемся
+dovolenou	S:733:проводить	S:733:отпуск
+dovolit	S:138:позволить себе	S:601:позволить	S:914:позволить себе	S:138:позволить себе	S:601:позволить себе	S:914:позволить себе
+dovozovými	S:326:импортированными звуками	S:326:prosycena dovozovými
+dovozu	S:641:импорта	S:641:импорта
+doznal	S:348:поврежден	S:348:признал большие
+dozvíme	S:684:ответ покажет ближайшее будущее	S:684:узнаем
+dozvěděly	S:750:становилось известно	S:750:узнали
+došel	S:817:достиг той	S:817:пришел к тому моменту
+došlo	S:154:джабалию	S:779:испортив	S:154:džabalíje	S:779:были
+dožívají	S:802:живут дольше	S:802:dožívají
+dpp	TRS:52534:frankem	TRS:52535:současný
+dr	TRS:68528:maskovala	TRS:68531:podporují	TRS:68544:formálně podporuje mezinárodní	TRS:68549:tón	TRS:68561:dr	TRS:85178:poukázat
+dr-	TRS:68527:republikou
+draculea	TRS:32346:o
+dragon	TRS:1535:stanici
+drahocenné	S:362:драгоценные фамильные реликвии	S:362:драгоценные
+drahé	S:161:дорожит	S:161:дорого
+drahého	S:320:дорогого	S:320:дорогостоящей
+drama	S:946:как	S:946:драму
+dramatické	S:10:драматическими	S:10:значительными
+dramatický	S:736:резкое	S:736:резкое
+draskovic	TRS:20436:
+dražební	S:821:аукционы	S:821:dražební
+dream	TRS:40622:zábavným
+dreams	TRS:70585:,
+dresser	TRS:22509:dresser	TRS:22550:dresser
+drnovšek	TRS:22581:janez drnovšek
+drobných	S:917:	S:917:zkonfiskovány небольших
+drog	S:753:синтетических .	S:764:наркотиков	S:768:синтетических	S:773:синтетических	S:753:наркотиков	S:764:наркотиков	S:768:наркотиков	S:773:наркотиков
+drogovou	S:771:пандемией	S:771:пандемия борьбе с наркотиками
+drogových	S:673:состоит на содержании наркотических	S:673:наркотической
+drogovým	S:671:дилеров наркотиков	S:671:наркотиков
+drogovými	S:615:наркокартелями	S:615:картелями	S:615:наркокартелями	S:615:картелями
+drogy	S:763:	S:763:наркотики
+droit	TRS:57498:což lze do češtiny	TRS:57504:	TRS:57519:snaha	TRS:71220:. 
+droite	TRS:71221:svých	TRS:71223:	TRS:71228:	TRS:71229:takové
+drosophila	TRS:30009:
+drtí	S:182:ломая	S:182:ramenou страдают от
+druh	S:582:самодовольным	S:582:
+druhou	S:26:ii	S:197:	S:402:вторую	S:26:другой	S:197:вторая	S:402:вторую
+druhá	S:638:	S:638:другая нанесла
+druhé	S:40:второй	S:50:второй	S:167:второй	S:574:другой	S:883:	S:40:второй	S:50:второй	S:167:второй	S:574:другой	S:883:другой
+druhým	S:563:намереваются	S:563:второй
+druhů	S:691:видов	S:691:видов
+družnosti	S:853:общительности	S:853:družnosti
+družstvech	S:407:сборных	S:407:družstvech
+držel	S:848:придерживался	S:848:удерживал
+držely	S:612:	S:612:поддерживали
+držení	S:998:	S:998:праве
+drží	S:613:держат	S:613:держат
+du	TRS:34201:development	TRS:71203:na kapitálových	TRS:71208:	TRS:71209:	TRS:71220:zveřejnili jsme případy cenových manipulací a zmanipulovaných zisků 	TRS:71232:a	TRS:71233:. 	TRS:71233:	TRS:81671:	TRS:81844:écroulement du
+dubai	TRS:19081:dubai	TRS:60830:k
+ducha	S:333:1968	S:536:призрака	S:333:дух	S:536:дух
+duchovní	S:530:духовному	S:530:духовные лица
+dugatkin	TRS:22622:dugatkin
+dui	TRS:35876:foundation
+duisenberg	TRS:22660:duisenberg	TRS:22715:duisenberg
+duke	TRS:55625:dukeovy univerzity
+dullien	S:989:dullien	S:989:dullien
+dun	TRS:35537:)
+durante	TRS:68361:světová
+durйe	TRS:71213:
+dusnatý	S:524:выбрасываемого	S:524:dusnatý
+dussel	TRS:22750:dussel
+duster	TRS:22789:duster
+dutch	TRS:50584:firma royal dutch shell	TRS:74910:
+duve	TRS:22824:duve
+dva	S:196:два	S:217:75	S:232:двое	S:822:два	S:196:два	S:217:два	S:232:два	S:822:два
+dvaceti	S:586:	S:586:двадцати
+dvacátého	S:348:двадцатого	S:348:двадцатого
+dvakrát	S:400:дважды	S:400:два раза
+dvd	TRS:19807:dvd	TRS:43802:	TRS:82763:zabíjených
+dveře	S:99:хлопая	S:99:двери
+dvojčata	S:529:близнецы-злодеи	S:793:близнецы	S:529:близнецам воплотить	S:793:близнецам воплотить
+dvorních	S:369:придворных шутов	S:369:dvorních
+dvou	S:71:	S:86:	S:101:последние	S:670:двух	S:71:двух	S:86:двум	S:101:двух	S:670:двух
+dvoucifernou	S:869:двузначными	S:869:выросла
+dvořák	S:331:дворак и вагнер – это	S:331:dvořák
+dvořáka	S:318:дворака	S:318:dvořáka
+dvě	S:394:два	S:528:две	S:394:два	S:528:две
+dvěma	S:543:два	S:543:двумя
+dynamickému	S:838:способствующей динамичному	S:838:динамике
+dynamiku	S:319:действие	S:841:динамизм	S:319:динамику	S:841:динамизм
+dynamique	TRS:71222:zastaveno
+dá	S:185:можно	S:185:можно
+dál	S:19:дальше	S:19:все	S:216:атаковать	S:231:все чаще	S:407:все	S:448:	S:651:все безнаказанностью	S:670:	S:19:нарушилось	S:19:все	S:216:продолжать	S:231:все slůvko	S:407:все еще частым	S:448:все	S:651:все důraznější	S:670:дальше
+dále	S:393:	S:448:больше подтачивалась	S:595:	S:705:далее	S:713:далее	S:780:идеально	S:393:далее	S:448:также	S:595:окампо	S:705:далее	S:713:далее	S:780:
+dálkových	S:521:	S:521:dálkových
+dárci	S:832:страны-доноры	S:834:страны-доноры	S:846:доноры	S:832:доноры	S:834:доноры	S:846:доноры
+dárfúru	S:87:дарфуре	S:656:дарфуре	S:87:дарфуре	S:656:дарфуре
+dávají	S:92:они	S:92:
+dávalo	S:400:национализм обвинили	S:400:обвиняют
+dávat	S:448:сваливать	S:448:дать
+dávky	S:763:	S:763:льгот
+dává	S:360:насилии	S:681:	S:360:обвинить в	S:681:возлагают
+década	TRS:68382:
+déclinologie	TRS:41974:a
+défense	S:782:	S:782:défense
+déj	TRS:8286:známé déja vu
+déjà	TRS:36804:
+délkou	S:813:интеллектом смертью	S:813:продолжительности
+délky	S:812:наблюдениями	S:812:продолжительности
+día	TRS:68379:rozsáhlé
+díky	S:94:полноценный	S:361:ностальгические	S:499:клановости	S:603:	S:909:благодаря	S:94:благодаря	S:361:благодаря	S:499:благодаря	S:603:благодаря	S:909:благодаря
+dílem	S:723:объясняет	S:787:	S:723:работа	S:787:равной
+dítěte	S:946:	S:946:ребенка
+dólares	TRS:68379:regionálním	TRS:68388:
+dědictví	S:362:реликвии	S:362:наследия
+děje	S:425:происходит	S:425:происходит
+dějin	S:429:историю	S:433:историю	S:527:истории	S:429:истории	S:433:истории	S:527:истории
+dějinnou	S:416:	S:416:историческим
+dějiny	S:507:историю	S:628:история	S:703:историю	S:742:историю	S:507:историю	S:628:история	S:703:история	S:742:coontzová истории
+dějinách	S:468:истории	S:628:истории	S:468:истории	S:628:истории
+děkuje	S:20:	S:20:děkuje
+děl	S:318:вагнера	S:318:wagnera
+dělat	S:111:доводом	S:393:непопулярные	S:512:запретов	S:111:делать	S:393:делать	S:512:делать
+dělbu	S:871:разделение	S:871:propracovanější разделение
+dělby	S:863:разделения	S:863:разделения
+dělit	S:199:потрёпанными	S:422:делиться	S:199:делиться	S:422:делиться
+dělnicím	S:735:размещения молодых женщин -работниц	S:735:dělnicím обеспечивали
+děložního	S:786:шейки	S:786:děložního
+dělá	S:155:прощупывает	S:239:и делает	S:322:делает	S:796:	S:821:делает	S:155:делает	S:239:	S:322:	S:796:neřízených	S:821:делает
+dění	S:841:приобщения	S:841:то что происходит
+děsivou	S:239:	S:239:огромную
+děsivé	S:915:медовый	S:915:ужасный
+děsivým	S:191:как	S:191:суровой
+dětem	S:236:детям	S:236:детям
+děti	S:120:детьми	S:172:детей	S:258:дети	S:264:дети	S:271:дети	S:120:дети	S:172:детей	S:258:детей	S:264:дети	S:271:дети
+dětmi	S:585:детей	S:752:детьми	S:585:детей	S:752:детьми
+dětství	S:108:искалеченные	S:182:детство	S:802:детстве	S:812:	S:108:детства	S:182:детства	S:802:детстве	S:812:детстве
+dětí	S:170:детей	S:279:детей	S:170:детей	S:279:детей
+dřív	S:942:до последующего укрепления	S:942:прежде
+dříve	S:43:ранее	S:399:рано	S:474:	S:43:раньше	S:399:рано	S:474:раньше
+důkazy	S:37:доказательств	S:576:свидетельство	S:760:	S:37:доказательств	S:576:доказательства	S:760:факты
+důležitou	S:663:-башира важный	S:663:bašírovu важную
+důležitá	S:580:важные	S:580:важна
+důležité	S:93:важным	S:296:копенгагене	S:364:комедиантов	S:985:	S:93:важно	S:296:важно	S:364:важной	S:985:важно
+důležitým	S:604:важной	S:604:важным
+důmyslné	S:54:далеко для того	S:54:усердные для того
+důraznější	S:651:возрастающую путем применения универсальной юрисдикции	S:651:důraznější
+důsledek	S:751:	S:751:результат
+důsledku	S:38:единодушии	S:160:результате	S:309:результате	S:562:	S:792:	S:38:	S:160:результате	S:309:результате	S:562:конечном ,	S:792:результате
+důsledky	S:292:последствия	S:632:последствия	S:820:последствиям	S:292:последствия	S:632:последствия	S:820:последствия
+důsledků	S:825:смягчительные	S:825:последствий
+důstojník	S:647:офицер	S:647:офицер
+důstojníka	S:646:офицер	S:646:důstojníka
+důvod	S:419:есть повод	S:776:причина	S:419:причин	S:776:причина
+důvodem	S:112:служит причиной	S:112:причиной того
+důvody	S:244:	S:598:доводы	S:244:причины	S:598:причины
+důvodů	S:86:причинам	S:324:причинам	S:422:причинам	S:594:причинам	S:662:	S:86:причинам	S:324:причинам	S:422:причинам	S:594:причинам	S:662:причин того
+důvěrně	S:163:	S:163:знакома
+důvěru	S:454:веру	S:454:доверие
+důvěry	S:229:доверия	S:229:доверия
+důvěryhodnost	S:81:репутацию	S:81:репутацию
+džabalíja	S:125:г . джабалия	S:125:džabalíja
+džabalíje	S:154:джабалию проходило на расстоянии	S:154:džabalíje
+džihádistické	S:1:джихад	S:1:джихада
+dйbat	TRS:71200:	TRS:71218:
+dйfaite	TRS:71200:	TRS:71200:
+dйja	TRS:36948:podivný déjŕ
+dйlocalisй	TRS:71206:
+dйmocrates	TRS:71200:	TRS:71223:
+dйmontrй	TRS:71222:
+dйmunies	TRS:71213:té
+dйpartement	TRS:71233:
+dйplacez	TRS:71223:i
+dйposer	TRS:71207:(
+dйterminait	TRS:71203:

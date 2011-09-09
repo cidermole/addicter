@@ -1,0 +1,436 @@
+a	TRS:6163:zabíjí nerovnost	TRS:14006:a	TRS:15232:na	TRS:21377:stránky demonstrantů (a 16	TRS:26887:–	TRS:31792:ohlásila	TRS:33135:obsahuje	TRS:34849:pak	TRS:34849:	TRS:46393:f	TRS:52067:silovější	TRS:57370:je	TRS:68236:	TRS:68364:potřebám prudce	TRS:68365:ekonomické	TRS:68370:aniž	TRS:68370:	TRS:68373:	TRS:68376:o	TRS:68380:, neboť	TRS:68380:trhy	TRS:68380:	TRS:68382:nestálé a náchylné k nenadálým výpadkům , jak dokládají	TRS:68383:	TRS:68386:slábne společně s poptávkou .	TRS:68387:	TRS:68388:pomocí	TRS:68388:trendu	TRS:68388:	TRS:68389:opět	TRS:68394:soukromého	TRS:68400:brettonwoodských	TRS:68400:   	TRS:68400:	TRS:71204:	TRS:71205:	TRS:71208:	TRS:85231:autor	TRS:85231:tyrany	S:1:и	S:6:и	S:7:и	S:10:и	S:11:всестороннего	S:17:и	S:17:и	S:19:а	S:23:и	S:27:и	S:28:и	S:32:а	S:35:и	S:36:и	S:38:и	S:39:и	S:41:и	S:45:и	S:48:и	S:50:и	S:51:и	S:53:и	S:53:и	S:54:и	S:56:и	S:56:и	S:58:и	S:65:и	S:66:и	S:67:и	S:73:и	S:74:и	S:80:а	S:83:и	S:86:и и	S:86:	S:87:и	S:88:и	S:89:и	S:89:и	S:90:обученных ,	S:92:характер	S:93:и	S:93:и	S:93:и	S:94:и	S:95:и	S:97:а и	S:102:	S:102:	S:103:и	S:106:и	S:109:и	S:110:и	S:110:,	S:112:	S:118:и	S:120:и	S:122:а	S:126:и	S:135:и	S:138:	S:138:и	S:143:	S:143:а	S:144:и	S:144:и	S:145:и	S:146:и	S:149:и	S:150:и	S:151:и	S:152:и	S:155:,	S:157:и	S:158:так	S:159:и	S:163:	S:166:и	S:174:и	S:182:и	S:183:и	S:184:и	S:188:и	S:189:и	S:191:и	S:192:	S:193:и	S:196:и	S:199:и	S:201:и	S:203:и	S:203:	S:204:	S:204:и	S:205:и	S:207:и	S:207:и	S:209:и	S:211:и	S:213:и	S:215:а	S:222:и	S:226:и	S:227:и	S:227:и	S:229:и	S:229:и	S:233:и	S:233:и	S:236:и	S:238:и	S:238:и	S:244:и	S:249:и	S:257:и	S:259:и	S:260:и	S:261:и	S:262:и	S:265:и	S:267:и	S:268:и	S:269:и	S:270:и	S:270:и	S:272:	S:273:и	S:276:а	S:276:и	S:277:и	S:277:и	S:282:и	S:283:и	S:285:и	S:288:а	S:288:и	S:295:и	S:297:а	S:299:и	S:303:	S:304:и	S:306:и	S:307:и	S:307:и	S:310:бесчувственные	S:313:и	S:314:и	S:317:и	S:318:и	S:319:и	S:321:и	S:322:и	S:324:	S:326:и	S:329:и	S:331:и	S:342:и	S:352:и	S:352:и	S:352:и	S:355:и	S:357:, а	S:357:	S:358:и	S:363:и	S:365:и	S:365:и	S:368:и	S:371:и	S:373:,	S:376:и	S:381:и	S:383:и	S:383:он	S:383:и	S:383:и	S:385:и	S:387:и	S:391:и	S:393:и	S:394:и	S:395:и	S:402:и	S:413:и	S:414:а	S:429:и	S:432:и	S:434:	S:435:и	S:435:а	S:437:а	S:438:и	S:443:и	S:449:и	S:450:и	S:451:и	S:452:и	S:457:и	S:460:и	S:463:и	S:463:и	S:466:	S:466:и	S:467:и	S:469:и	S:469:а	S:475:и	S:477:и	S:478:и	S:480:	S:491:и	S:493:и	S:495:и	S:495:	S:499:и	S:500:и	S:500:и	S:506:	S:510:и	S:516:и	S:519:и	S:523:и	S:527:и	S:529:и	S:539:и	S:540:и	S:540:и	S:543:и	S:543:и	S:546:и	S:547:и	S:549:и	S:551:и	S:551:а	S:552:и	S:558:и	S:564:и	S:565:и	S:566:и	S:570:и	S:571:и	S:575:и	S:580:	S:585:и	S:585:,	S:585:и	S:586:а	S:587:и	S:587:	S:588:и	S:590:и	S:591:и	S:591:и	S:593:и	S:595:и	S:596:,	S:598:и	S:605:	S:605:и	S:607:и	S:614:и	S:615:и	S:615:и	S:616:лоббировал	S:616:и	S:617:и	S:620:и	S:627:и	S:627:и	S:630:и	S:631:и	S:631:и	S:636:и	S:636:и	S:638:и	S:641:и	S:644:и	S:646:и	S:647:и	S:649:и	S:652:и	S:653:и	S:657:и	S:658:и	S:660:и	S:666:и	S:670:и	S:670:и	S:672:и	S:672:и	S:673:а	S:674:и	S:676:и	S:678:и	S:680:и	S:680:и	S:681:и	S:682:	S:686:и	S:687:выдернутый	S:690:и	S:693:	S:694:и	S:695:а	S:696:и	S:697:и	S:702:	S:703:и	S:705:и	S:713:и	S:718:и	S:719:и	S:721:	S:723:и	S:736:и	S:738:и	S:740:и	S:742:и	S:742:и	S:742:и	S:746:и	S:748:и	S:753:и	S:756:и	S:758:и	S:759:молодые	S:760:	S:760:	S:760:	S:763:и	S:764:и	S:765:	S:767:и	S:767:и	S:768:и	S:773:и	S:777:и	S:780:и	S:782:с	S:786:и	S:786:и	S:787:и	S:787:а	S:787:и	S:789:	S:789:и	S:791:и	S:794:и	S:795:и	S:797:и	S:799:и	S:800:и	S:801:а	S:802:и	S:803:и	S:804:и	S:806:	S:807:и	S:808:а	S:810:и	S:812:а	S:813:и	S:814:и	S:821:и	S:822:и	S:824:а	S:832:и	S:833:и	S:833:и	S:834:и	S:834:и	S:835:и	S:838:и	S:838:и	S:839:и	S:839:и	S:841:и	S:846:и	S:852:и	S:853:и	S:853:	S:853:и	S:855:а	S:856:	S:858:и	S:861:и	S:863:и	S:869:и	S:869:и	S:871:и	S:872:и	S:872:и	S:874:и	S:875:а	S:875:и	S:877:и	S:879:и	S:881:и	S:884:	S:887:и	S:888:и	S:888:и	S:888:а	S:890:и	S:893:и	S:894:и	S:896:и	S:899:и	S:900:и	S:902:и	S:903:и	S:909:и	S:913:а	S:914:и	S:917:и	S:918:и	S:925:	S:926:и	S:927:и	S:931:и	S:931:	S:935:и	S:939:и	S:940:и	S:941:и	S:941:и	S:942:и	S:944:и	S:947:и	S:953:и	S:955:и	S:961:а	S:961:или	S:962:и	S:964:и	S:965:и	S:965:и	S:966:,	S:968:и	S:969:и	S:973:и	S:974:и	S:975:и	S:977:и	S:984:	S:984:	S:992:и	S:992:и	S:997:и	S:998:а	S:1:и	S:6:и	S:7:и	S:10:и	S:11:и	S:17:и	S:17:и	S:19:и	S:23:и	S:27:и	S:28:и	S:32:и	S:35:и	S:36:и	S:38:и	S:39:и	S:41:и	S:45:и	S:48:и	S:50:а	S:51:и	S:53:и	S:53:и	S:54:и	S:56:и	S:56:и	S:58:,	S:65:и	S:66:и	S:67:,	S:73:и	S:74:и	S:80:и	S:83:и	S:86:и	S:86:и	S:87:и	S:88:и	S:89:и	S:89:и	S:90:и	S:92:и	S:93:и	S:93:и	S:93:и	S:94:и	S:95:и	S:97:и	S:102:и	S:102:и	S:103:и	S:106:и	S:109:и	S:110:и	S:110:и	S:112:и	S:118:и	S:120:и	S:122:и	S:126:и	S:135:и	S:138:милость	S:138:и	S:143:и	S:143:	S:144:и	S:144:и	S:145:и	S:146:и	S:149:и	S:150:и	S:151:и	S:152:и	S:155:и	S:157:и	S:158:и	S:159:и	S:163:и	S:166:и	S:174:и	S:182:и	S:183:и	S:184:и	S:188:и	S:189:и	S:191:и	S:192:и	S:193:и	S:196:и	S:199:и	S:201:и	S:203:и	S:203:и	S:204:и	S:204:и	S:205:и	S:207:и	S:207:и	S:209:и	S:211:а	S:213:и	S:215:и	S:222:и	S:226:и	S:227:и	S:227:и	S:229:и	S:229:и	S:233:и	S:233:и	S:236:и	S:238:и	S:238:и	S:244:и	S:249:и	S:257:и	S:259:и	S:260:и	S:261:и	S:262:и	S:265:и	S:267:и	S:268:и	S:269:и	S:270:и	S:270:и	S:272:и	S:273:и	S:276:и	S:276:и	S:277:и	S:277:и	S:282:и	S:283:и	S:285:и	S:288:и	S:288:и	S:295:и	S:297:и	S:299:и	S:303:и	S:304:и	S:306:и	S:307:и	S:307:и	S:310:и	S:313:и	S:314:и	S:317:и	S:318:и	S:319:и	S:321:и	S:322:и	S:324:и	S:326:и	S:329:и	S:331:и	S:342:и	S:352:и	S:352:и	S:352:и	S:355:и	S:357:и	S:357:и	S:358:а	S:363:и	S:365:и	S:365:и	S:368:и	S:371:и	S:373:и	S:376:и	S:381:и	S:383:и	S:383:и	S:383:и	S:383:и	S:385:и	S:387:и	S:391:и	S:393:и	S:394:и	S:395:и	S:402:и	S:413:и	S:414:и	S:429:и	S:432:и	S:434:и	S:435:и	S:435:а	S:437:и	S:438:и	S:443:и	S:449:и	S:450:и	S:451:и	S:452:и	S:457:и	S:460:и	S:463:и	S:463:и	S:466:и	S:466:и	S:467:и	S:469:и	S:469:и	S:475:и	S:477:и	S:478:и	S:480:и	S:491:и	S:493:и	S:495:и	S:495:и	S:499:и	S:500:и	S:500:и	S:506:и	S:510:и	S:516:и	S:519:и	S:523:и	S:527:и	S:529:и	S:539:и	S:540:и	S:540:и	S:543:и	S:543:и	S:546:и	S:547:и	S:549:и	S:551:и	S:551:и	S:552:и	S:558:и	S:564:и	S:565:а	S:566:и	S:570:и	S:571:и	S:575:и	S:580:и	S:585:и	S:585:и	S:585:и	S:586:и	S:587:и	S:587:и	S:588:и	S:590:и	S:591:и	S:591:и	S:593:и	S:595:и	S:596:и	S:598:и	S:605:и	S:605:и	S:607:и	S:614:и	S:615:и	S:615:и	S:616:лоббировал	S:616:и	S:617:и	S:620:и	S:627:и	S:627:а	S:630:и	S:631:и	S:631:и	S:636:и	S:636:и	S:638:и	S:641:и	S:644:и	S:646:и	S:647:и	S:649:и	S:652:и	S:653:и	S:657:и	S:658:и	S:660:и	S:666:и	S:670:и	S:670:и	S:672:и	S:672:и	S:673:и	S:674:и	S:676:и	S:678:и	S:680:и	S:680:и	S:681:и	S:682:и	S:686:и	S:687:и	S:690:и	S:693:и	S:694:и	S:695:и	S:696:и	S:697:и	S:702:и	S:703:и	S:705:и	S:713:и	S:718:и	S:719:и	S:721:и	S:723:и	S:736:и	S:738:и	S:740:и	S:742:и	S:742:и	S:742:и	S:746:и	S:748:и	S:753:и	S:756:и	S:758:и	S:759:и	S:760:и	S:760:а	S:760:и	S:763:и	S:764:и	S:765:и	S:767:и	S:767:и	S:768:и	S:773:и	S:777:и	S:780:и	S:782:и	S:786:и	S:786:и	S:787:и	S:787:и	S:787:и	S:789:и	S:789:и	S:791:и	S:794:и	S:795:и	S:797:и	S:799:а	S:800:и	S:801:и	S:802:и	S:803:и	S:804:и	S:806:и	S:807:и	S:808:и	S:810:и	S:812:и	S:813:и	S:814:и	S:821:и	S:822:и	S:824:и	S:832:и	S:833:и	S:833:и	S:834:и	S:834:и	S:835:и	S:838:и	S:838:и	S:839:и	S:839:и	S:841:и	S:846:и	S:852:и	S:853:и	S:853:и	S:853:и	S:855:и	S:856:и	S:858:и	S:861:и	S:863:и	S:869:и	S:869:и	S:871:и	S:872:и	S:872:и	S:874:и	S:875:и	S:875:и	S:877:и	S:879:и	S:881:и	S:884:и	S:887:и	S:888:и	S:888:и	S:888:и	S:890:и	S:893:и	S:894:и	S:896:и	S:899:и	S:900:и	S:902:и	S:903:и	S:909:и	S:913:и	S:914:и	S:917:и	S:918:и	S:925:и	S:926:и	S:927:и	S:931:и	S:931:и	S:935:и	S:939:и	S:940:и	S:941:и	S:941:и	S:942:и	S:944:и	S:947:и	S:953:и	S:955:и	S:961:и	S:961:и	S:962:и	S:964:и	S:965:и	S:965:и	S:966:и	S:968:и	S:969:и	S:973:и	S:974:и	S:975:и	S:977:и	S:984:и	S:984:и	S:992:и	S:992:и	S:997:и	S:998:и
+aaa	TRS:80217:
+aalesina	TRS:971:aalesina@harvard.edu a francesco.giavazzi@uni-bocconi.it 	TRS:1002:aalesina@harvard.edu a francesco.giavazzi@uni-bocconi.     	TRS:1121:jsou	TRS:1156:	TRS:1186:	TRS:1226:	TRS:1340:jsou	TRS:1382:	TRS:1610:	TRS:1741:aalesina@harvard.edu a francesco.giavazzi@uni-bocconi.it 
+aaron	TRS:23079:aaron
+abandonarlos	TRS:68375:
+abandonnйs	TRS:71199:
+abbas	S:619:аббас	S:619:аббас
+abbás	S:102:аббас	S:102:аббас
+abbáse	S:10:аббаса	S:10:аббаса
+abc	TRS:28788:nbc
+abcházii	S:605:за абхазией	S:605:абхазии
+abdallah	TRS:14006:abdallah
+abdalláh	S:237:абдулла	S:279:-абдулла	S:237:абдулла	S:279:абдулла
+abdou	TRS:24472:abdou	TRS:24503:abdou
+abdulhamid	TRS:73:abdulhamid	TRS:107:abdulhamid	TRS:145:abdulhamid	TRS:182:abdulhamid
+abdullah	S:117:abdullah	S:117:rania абдулла
+abierto	TRS:68397:
+abm	TRS:3469:znovu
+abn	TRS:39050:získat
+abordar	TRS:68365:ekonomické
+aboville	S:782:абовиль занимал пост посла франции	S:782:aboville
+abram	TRS:19781:abram
+abramsky	TRS:313:abramsky
+abrumadores	TRS:68363:cíle
+absenci	S:833:недостаточная	S:833:отсутствие
+absolutní	S:509:абсолютного	S:509:абсолютной
+absurdnost	S:101:всю абсурдность	S:101:осознают абсурдность
+abusada	TRS:348:abusada	TRS:383:abusada	TRS:421:abusada	TRS:459:abusada	TRS:506:abusada	TRS:545:abusada
+aby	S:12:израиль	S:14:прекратить	S:17:	S:48:	S:54:чтобы	S:93:чтобы	S:104:	S:126:чтобы	S:126:чтобы	S:137:чтобы	S:143:чтобы	S:155:чтобы	S:157:для того чтобы	S:187:противостояния	S:230:	S:239:для того чтобы	S:252:	S:295:чтобы	S:322:чтобы	S:323:концертом	S:329:чтобы	S:368:чтобы	S:374:	S:441:чтобы	S:491:умирать	S:509:препятствующих	S:521:	S:563:чтобы	S:580:чтобы	S:587:	S:587:достижению	S:652:чтобы	S:657:введение	S:686:для того чтобы	S:706:чтобы	S:725:	S:733:	S:735:-работниц	S:755:референдума	S:808:чтобы	S:810:чтобы	S:825:для	S:868:чтобы	S:892:чтобы	S:901:целях	S:932:	S:941:чтобы	S:12:чтобы	S:14:чтобы	S:17:чтобы	S:48:чтобы	S:54:чтобы	S:93:чтобы	S:104:чтобы	S:126:чтобы	S:126:чтобы	S:137:для того чтобы	S:143:чтобы	S:155:для того чтобы	S:157:для того чтобы	S:187:чтобы	S:230:чтобы	S:239:для того чтобы	S:252:чтобы	S:295:для того чтобы	S:322:чтобы	S:323:для того чтобы	S:329:чтобы	S:368:чтобы	S:374:для того чтобы	S:441:чтобы	S:491:для того чтобы	S:509:чтобы	S:521:чтобы	S:563:чтобы	S:580:чтобы	S:587:чтобы	S:587:	S:652:чтобы	S:657:чтобы	S:686:чтобы	S:706:для того чтобы	S:725:для того чтобы	S:733:чтобы	S:735:чтобы	S:755:чтобы	S:808:для того чтобы	S:810:чтобы	S:825:чтобы	S:868:для того чтобы	S:892:чтобы	S:901:чтобы	S:932:для того чтобы	S:941:чтобы
+abych	S:206:	S:743:зигмунда	S:206:чтобы	S:743:чтобы parafrázovala
+abychom	S:287:чтобы	S:290:чтобы мы	S:942:	S:969:необходимо	S:287:чтобы	S:290:чтобы	S:942:для того чтобы	S:969:чтобы
+accent	TRS:71229:
+acceso	TRS:68380:
+acciуn	TRS:11624:,
+accompli	TRS:13281:accompli
+accordant	TRS:71232:zásadové
+account	TRS:56025:	TRS:60205:pomoc	TRS:63249:
+accountability	TRS:68596:
+accounts	TRS:85231:a
+acelerado	TRS:68370: 
+aceptado	TRS:68397:pro ně podstatná , musí
+acharnйe	TRS:71205:už
+achmat	TRS:583:achmat
+acquis	TRS:2670:	TRS:3564:součástí neformálního acquis ,	TRS:12974:osmdesát	TRS:12975:onen ‚	TRS:12976:dlouhý	TRS:13022:listují	TRS:16545:	TRS:22589:chtějí	TRS:32056:– právní řád eu	TRS:54741:	TRS:58327:eu	TRS:85327:
+act	TRS:72260:	TRS:74645:,	TRS:74663:act	TRS:74665:způsob
+acta	S:636:	S:636:специальных таком
+action	TRS:23497:	TRS:36375:(	TRS:75586:trh
+acton	TRS:2042:absolutní
+actos	TRS:32629:říká
+ad	TRS:9212:hlavu	TRS:46146:francie	S:636:в	S:636:специальных
+adam	TRS:46558:adam	TRS:46631:adam	TRS:46666:adam	TRS:46707:adam
+adaptace	S:293:важной статьей	S:293:к адаптации
+adaptací	S:755:адаптации к	S:820:адаптации к	S:755:адаптироваться к	S:820:адаптироваться к
+adaptarse	TRS:68364:přizpůsobit potřebám	TRS:68391:její produkty je třeba adaptovat
+adaptují	S:767:приспосабливаются к	S:767:адаптация к
+addax	TRS:9731:15
+adelman	TRS:618:adelman
+adenauerem	S:527:началом канцлера конрада аденауэра	S:527:аденауером
+adiós	TRS:68399:nenadešel
+adjustment	TRS:84952:globalizaci ( egf ) na problém na	TRS:84955:
+admettre	TRS:71208:
+administraciуn	TRS:36508:
+administration	TRS:9083:zvyklostmi
+administrativa	S:633:клубка	S:633:буша
+administrativní	S:457:административной	S:457:административные
+adolfu	S:874:адольфа	S:874:adolfu
+adopter	TRS:71225:
+adquisitivo	TRS:68398:středně
+adr	TRS:27145:	TRS:27147:léků	TRS:27177:kontrola nežádoucích
+adrese	S:571:edu	S:571:по адресу
+aducen	TRS:68380:
+advanced	TRS:13895:
+advisory	TRS:7215:  
+advocacy	TRS:53116:
+afd	TRS:68358:
+affaire	TRS:71224:
+affairs	TRS:1548:časopisu	TRS:61426:
+afghanaid	TRS:54523:
+afghánistánu	S:9:афганистане	S:23:афганистане	S:9:афганистане	S:23:афганистане
+afghánskou	S:15:борцы	S:15:афганистана
+afianzarse	TRS:68371:,
+afl	TRS:69405:odborové
+afortunadamente	TRS:68368:taková
+africe	S:981:африке	S:981:африке
+africká	S:729:африканский	S:729:африканский
+afrikou	S:565:распространена африке	S:565:африке
+aga	TRS:36644:aga
+age	TRS:72122:age ,
+agency	TRS:63973:,
+agenda	TRS:23516:	TRS:68368:
+agendu	S:58:	S:600:основанную	S:58:повестку дня	S:600:программу
+agentury	S:992:агентства	S:992:агентства
+agenty	S:674:агентов	S:674:агентов
+agoa	TRS:79311:příležitostech	TRS:79313:zahrnutých	TRS:79313:	TRS:79314:agoa byla časově omezená , ale
+agonie	S:406:агония	S:753:агония	S:406:страданий	S:753:страданий
+agpl	TRS:12662:	TRS:12663:mezinárodní hranice
+agregátní	S:860:повышение совокупного	S:935:умственных	S:860:совокупный	S:935:совокупный
+agresivní	S:480:агрессивное	S:480:агрессивная
+agricole	TRS:39128:
+ahle	S:42:организации ахле хадит	S:42:ahle
+ahlin	TRS:46242:urban ahlin
+ahlmark	TRS:2022:ahlmark	TRS:2076:	TRS:2078:ahlmark	TRS:2129:ahlmark	TRS:2177:ahlmark	TRS:2221:ahlmark	TRS:2271:ahlmark	TRS:2323:ahlmark	TRS:2371:ahlmark
+ahmadínedžáda	S:246:ахмадинеджада	S:246:ахмадинежада
+ahmed	TRS:2458:samina ahmed
+ahn	TRS:2493:-	TRS:2528:-	TRS:2564:-	TRS:2595:-
+ahora	TRS:68365:mnoho	TRS:68372:samy 	TRS:68396:
+ahtisaari	TRS:2622:ahtisaari	TRS:2658:ahtisaari	TRS:60462:ahtisaari	S:294:ахтисаари	S:294:ahtisaari
+aids	S:713:спид	S:713:спидом
+aig	S:917:aig	S:917:aig
+aiment	TRS:71221:internetu
+aippa	TRS:49825:list
+airbus	TRS:21764:nejzajímavější	TRS:21766:prvních	TRS:21768:vpřed	TRS:31792:společnost	TRS:46117:	TRS:70656:	TRS:72946:airbus
+aires	TRS:39354:buenos aires herald .	S:647:-айресе	S:647:айросе
+airtours	TRS:1312:	TRS:1916:orgány	TRS:1921:airtours
+airways	TRS:6353:,
+aisйment	TRS:71206:
+aj	S:943:изобразительного искусства ай вэйвэя	S:943:aj
+ajmán	S:125:айман	S:145:айман очень хорошо учится	S:125:айман аль	S:145:айман аль берут
+ajmánova	S:163:жизнь	S:163:ajmánova
+ajmánův	S:137:аймана	S:170:аймана	S:264:отец аймана	S:137:ajmánův	S:170:ajmánův	S:264:ajmánův
+ajustements	TRS:71226:neexistují
+ajustes	TRS:68370:
+akademiemi	S:571:академий	S:571:akademiemi
+akademií	S:584:академий	S:604:академий	S:584:академий	S:604:академий
+akbar	S:412:j akbar	S:412:bradford акбар больше
+akceptovat	S:623:принять кубинское	S:635:	S:623:принять	S:635:принять
+akceptována	S:580:получить широкое признание	S:580:ser
+akcie	S:906:акции	S:910:разве акции	S:906:акции	S:910:акции
+akcionářům	S:906:зарабатывают	S:917:bear	S:906:держателями акций	S:917:bear
+akciová	S:32:московская фондовая	S:32:akciová
+akcií	S:906:на акциях	S:908:акций	S:906:kompozitní	S:908:акции
+akinsha	TRS:2723:konstantin akinsha	TRS:2773:konstantin akinsha
+akp	TRS:30601:členy	TRS:34075:v	TRS:53874:spravedlnosti
+aktiv	S:902:активы	S:902:активов
+aktivit	S:587:действий	S:587:действий
+aktivitách	S:776:действиях	S:776:действий
+aktuální	S:932:безопасные	S:932:
+aktérů	S:60:	S:60:игроков
+akční	S:825:балийский	S:825:balijský действий
+al	TRS:26090:přepážky společnosti el	TRS:26327:přepážky společnosti el	TRS:27800:al	TRS:27843:al	TRS:34444:al	TRS:49333:al	TRS:55162:se	TRS:68368:je	TRS:68371:	TRS:68371:	TRS:68371:	TRS:68379:	TRS:68379:,	TRS:68386:	TRS:68397:má	S:20:аль	S:117:al	S:279:аль	S:594:аль	S:595:	S:656:аль	S:663:аль	S:20:аль	S:117:rania «	S:279:аль	S:594:аль	S:595:аль	S:656:аль	S:663:аль
+alan	TRS:22622:alan	TRS:55338:svou
+alarmující	S:452:австрийскому тревогу	S:452:тревожный сигнал
+alba	TRS:3557:mužích
+albanian	TRS:43566:bojovníků
+albert	TRS:2622:albert	TRS:2658:albert	TRS:60462:albert	TRS:60496:albert
+alberto	TRS:674:alberto	TRS:709:alberto	TRS:752:alberto	TRS:801:alberto	TRS:845:alberto	TRS:887:alberto	TRS:931:alberto	TRS:973:alberto	TRS:1004:alberto	TRS:1042:alberto	TRS:1084:alberto	TRS:1158:alberto	TRS:1188:alberto	TRS:1229:alberto	TRS:1268:alberto	TRS:1302:alberto	TRS:1342:alberto	TRS:1384:alberto alesina	TRS:1428:alberto	TRS:1459:alberto alesina	TRS:1501:alberto	TRS:1575:alberto	TRS:1612:alberto	TRS:1636:alberto	TRS:1674:alberto	TRS:1710:alberto	TRS:1744:alberto	TRS:1790:alberto	TRS:1836:alberto	TRS:1874:alberto	TRS:1906:alberto	TRS:2853:alberto alesina	TRS:2909:alberto	TRS:2943:alberto alesina	TRS:2971:alberto alesina	TRS:3033:alberto alesina	TRS:3063:univerzita	TRS:11191:alberto	TRS:13869:alberto	TRS:13964:alberto	TRS:27878:alberto	S:456:by альберто	S:876:альберто	S:456:alberto	S:876:alberto
+alberts	S:522:албертс	S:522:alberts
+alcoa	TRS:78231:ještě společnosti	TRS:78233:ameriku
+ale	S:6:а	S:8:а	S:10:однако	S:19:однако	S:28:но	S:41:но	S:70:	S:111:	S:122:алгоритмах	S:123:но	S:129:но	S:132:но	S:136:	S:149:но	S:178:но	S:205:кредитоспособностью	S:234:но	S:235:но	S:244:	S:245:но	S:250:	S:278:однако	S:290:однако	S:292:но	S:304:каримов	S:339:но	S:351:но	S:393:но	S:416:ошибка	S:446:но	S:454:но	S:458:но	S:480:но	S:489:	S:494:однако	S:507:однако	S:529:но	S:598:ягненка	S:602:однако	S:605:вопиюще	S:614:достижений	S:618:но	S:620:но	S:634:но	S:635:однако	S:640:но	S:659:однако	S:668:однако	S:672:однако	S:673:но	S:700:но	S:722:	S:723:но	S:726:однако	S:733:а	S:734:но	S:775:однако	S:781:	S:792:вытекая	S:810:однако	S:811:однако	S:858:но	S:873:а	S:875:	S:879:а	S:891:но	S:910:но	S:921:не	S:924:	S:929:	S:932:но	S:933:однако	S:968:конкретизированы	S:6:но	S:8:но	S:10:но	S:19:но	S:28:но	S:41:но	S:70:но	S:111:но	S:122:но	S:123:но	S:129:но	S:132:но	S:136:но	S:149:но	S:178:но	S:205:но	S:234:но	S:235:но	S:244:но	S:245:но	S:250:но	S:278:но	S:290:но	S:292:но	S:304:но	S:339:но	S:351:но	S:393:но	S:416:но	S:446:но	S:454:но	S:458:но	S:480:но	S:489:но	S:494:но	S:507:но	S:529:но	S:598:а	S:602:но	S:605:но	S:614:но	S:618:но	S:620:но	S:634:но	S:635:но	S:640:но	S:659:не	S:668:но	S:672:но	S:673:но	S:700:но	S:722:но	S:723:а	S:726:но	S:733:но	S:734:но	S:775:но	S:781:но	S:792:но	S:810:но	S:811:но	S:858:но	S:873:а	S:875:но	S:879:но	S:891:но	S:910:но	S:921:но	S:924:но	S:929:но	S:932:но	S:933:но	S:968:но
+aleksa	TRS:20369:aleksa	TRS:20414:aleksa	TRS:20455:aleksa	TRS:20503:aleksa	TRS:20549:aleksa
+aleksander	TRS:12998:aleksander	TRS:40632:aleksander	TRS:73626:aleksander	TRS:73670:aleksander	TRS:73719:aleksander	TRS:73765:aleksander	TRS:73811:aleksander
+aleksey	TRS:44142:aleksey	TRS:44175:aleksey
+aleluja	S:123:до бесконечности	S:123:aleluja
+alesina	TRS:674:alesina	TRS:709:alesina	TRS:752:alesina	TRS:801:alesina	TRS:845:alesina	TRS:887:alesina	TRS:931:alesina	TRS:973:alesina	TRS:1004:alesina	TRS:1042:alesina	TRS:1084:alesina	TRS:1158:alesina	TRS:1188:alesina	TRS:1229:alesina	TRS:1268:alesina	TRS:1302:alesina	TRS:1342:alesina	TRS:1384:alesina	TRS:1428:alesina	TRS:1459:alesina	TRS:1501:alesina	TRS:1575:alesina	TRS:1612:alesina	TRS:1636:alesina	TRS:1674:alesina	TRS:1710:alesina	TRS:1744:alesina	TRS:1790:alesina	TRS:1836:alesina	TRS:1874:alesina	TRS:1906:alesina	TRS:2853:alesina	TRS:2909:alesina	TRS:2943:alesina	TRS:2971:alesina	TRS:3033:alesina	TRS:3063:.	S:456:алезина	S:876:алезина	S:456:alesina	S:876:alesina
+alespoň	S:136:	S:353:по крайней мере	S:503:по крайней мере	S:136:по крайней мере	S:353:по крайней мере	S:503:по крайней мере
+alexander	TRS:23736:alexander	TRS:23794:alexander	TRS:23861:alexander	TRS:23914:alexander	TRS:23970:alexander	TRS:28393:alexander	TRS:28432:alexander	TRS:42687:alexander	TRS:42723:alexander	TRS:82933:alexander
+alexei	TRS:3697:alexei
+alfonsín	TRS:3151:alfonsín	TRS:3202:alfonsín
+alfred	TRS:76066:alfred	TRS:76113:alfred	TRS:76153:alfred
+algoritmech	S:121:алгоритмах	S:122:алгоритмах	S:121:algoritmech	S:122:algoritmech
+algunos	TRS:68380:
+alhajji	TRS:3249:už
+aliance	S:776:альянса	S:776:нато
+aliancím	S:243:межрелигиозного	S:243:союза
+alija	TRS:20440:nikdy
+alimentarius	TRS:41918:,,
+alison	TRS:85690:alison
+all	TRS:127:způsobem	TRS:29640:all souls
+all4	TRS:128:byl webový
+alleanza	TRS:81268:nazionale
+allele	TRS:9997:
+allemagne	TRS:71226:kde
+allá	TRS:68365:se neměl věnovat jen	TRS:68395:
+almond	S:836:олмонд	S:836:almond
+almunia	S:975:алмуния –	S:975:almunia
+alphandéry	TRS:3388:alphandéry
+alpských	S:146:альпийских	S:146:alpských
+alstom	TRS:72946:alstom
+altamente	TRS:68396:institucemi
+altavista	TRS:43786:
+alternativní	S:194:альтернативная	S:194:альтернативный
+alto	S:191:- алто	S:191:- альто
+amal	TRS:27800:amal	TRS:27843:amal
+amanif	TRS:16640:
+amar	TRS:7963:amar	TRS:8009:amar
+amartya	TRS:2060:že
+amato	TRS:3430:amato	TRS:3488:amato	S:987:амато	S:987:amato
+amatérských	S:409:любителей подраться	S:409:которой amatérských
+amazon	TRS:35054:microsoft	TRS:62809:dříve	TRS:62810:amazonu	TRS:71057:	TRS:71058:.com
+ambice	S:227:	S:227:амбиции
+ambiciózní	S:600:амбициозную	S:600:амбициозные
+ambicí	S:477:амбиций	S:477:амбиций
+amenazas	TRS:68373:
+america	TRS:18022:ukládat	TRS:34896:	TRS:41400:kromě	TRS:84955:kterou roce 1962 zavedla kennedyho administrativa a jež
+american	TRS:6504:review 	TRS:26843:american	TRS:26871:zájem	TRS:26907:	TRS:27085:v	TRS:29064:	TRS:34321:	TRS:56016:american	TRS:56800:za	S:467:	S:467:pultíků
+american-	TRS:26907:www
+americe	S:181:америки	S:187:америки	S:187:америке	S:227:америке	S:556:сша	S:768:америки	S:181:америке	S:187:америке	S:187:америки	S:227:америке	S:556:америке	S:768:америке
+americkou	S:380:содержащих	S:380:сша
+americká	S:36:американская	S:136:сша	S:557:однополярные	S:36:paličatá америки	S:136:американская	S:557:однополюсный
+americké	S:14:	S:166:	S:186:американской	S:229:американским	S:232:сша	S:468:американской	S:480:американской	S:548:американской	S:576:американской	S:674:	S:733:американские	S:878:	S:896:американских	S:897:американских	S:14:	S:166:американской	S:186:podřizovala америки	S:229:американской	S:232:американской	S:468:сша	S:480:	S:548:американской	S:576:американской	S:674:американской	S:733:американские	S:878:американской	S:896:американских	S:897:американских
+amerického	S:162:сша	S:633:американского	S:162:американского	S:633:следующего америки
+americkém	S:742:	S:742:штате
+americkému	S:487:	S:487:американскому
+americký	S:62:разпад	S:464:американская	S:827:американская	S:62:американский	S:464:американская	S:827:zábor сша
+amerických	S:321:	S:468:сша	S:553:американского	S:616:американских	S:875:	S:321:президентских	S:468:сша	S:553:американское	S:616:американских	S:875:президентов
+americkým	S:372:смеются	S:461:джазовым	S:643:торговым	S:681:	S:372:америки sletům	S:461:jazzmanům америки	S:643:сша торговым	S:681:возлагают
+amerika	S:23:америка	S:219:америка	S:816:америка	S:867:америка	S:23:америка	S:219:америка	S:816:америка	S:867:америка
+ameriku	S:66:	S:496:америку	S:683:	S:66:америки	S:496:ošklivili америку	S:683:deptající америке
+ameriky	S:22:америки	S:184:америки	S:540:америки	S:547:америки	S:560:америки	S:628:америки	S:874:америки	S:22:америки	S:184:америки	S:540:америки	S:547:америки	S:560:америки	S:628:америки	S:874:америки
+američanky	S:743:же американские женщины	S:743:американские
+američané	S:887:американцы	S:887:американцы
+američtí	S:274:разыгрывать	S:274:американские
+amex	TRS:71051:aby	TRS:71053:čímž připravily amex
+amfetaminy	S:758:амфетамины ускоряют работу	S:758:amfetaminy
+ami	TRS:6616:ami	TRS:6647:ami	TRS:6681:ami	TRS:6721:ami	TRS:6752:ami	TRS:6789:ami	TRS:6825:ami	TRS:6856:ami	TRS:6891:ami	TRS:6920:ami	TRS:6951:ami	TRS:6984:ami	TRS:7018:ami	TRS:7050:ami
+amin	TRS:34444:amin
+ammannet	TRS:40216:zní	TRS:40392:	TRS:40393:zní	TRS:40595:	TRS:40630:arabské
+ammar	TRS:73:ammar	TRS:107:ammar	TRS:145:ammar	TRS:182:ammar
+ammán	S:125:амман - - айман	S:125:ammán
+amnestii	S:652:амнистии так	S:652:амнистии
+amnesty	TRS:11466:ke zrušení trestu	TRS:49872:amnesty	TRS:87707:děje , a se
+amp	TRS:19081:o	TRS:19081:usa	TRS:70861:je	TRS:70862:	TRS:70935:.
+ampliar	TRS:68396:spolupráci
+amro	TRS:39050:nizozemskou banku
+amsterdam	S:461:амстердам	S:461:амстердам
+amsterdamu	S:584:амстердаме	S:584:амстердаме
+amy	TRS:60651:amy
+amygdala	TRS:41375:
+amíků	S:402:янки	S:402:amíků
+amйliorer	TRS:71213:
+amйricains	TRS:71223:
+an	TRS:21779:
+ana	S:680:ана	S:680:ana
+analogické	S:209:предоставление аналогичных	S:209:аналогичные
+analýze	S:683:	S:683:для анализа
+analýzou	S:380:содержащих анализ расового вопроса америке	S:380:анализом
+analýzy	S:693:равно	S:693:статистические исследования
+anatole	TRS:19737:„
+ancienne	TRS:71204:čas	TRS:71211:v	TRS:71213:	TRS:71215:na jejichž	TRS:71216:	TRS:71225:
+anciens	TRS:71199:
+and	TRS:14903:for	TRS:15411:and	TRS:18903:	TRS:25599:napsal	TRS:29503:král	TRS:38900:nedokonalosti	TRS:41326:	TRS:44071:and	TRS:50089:&	TRS:50292:and	TRS:52806:.	TRS:58543:	TRS:58976:	TRS:67905:standard	TRS:69258:na	TRS:70529:robert	TRS:70773:,	TRS:70847:500	TRS:71348:a změny	TRS:75525:and	TRS:85423:britská	TRS:85940:	S:456:and	S:456:и francesco
+and-	TRS:84108:2
+anda	TRS:60762:anda
+anders	TRS:3848:anders	TRS:3904:anders	TRS:3957:anders	TRS:4011:anders	TRS:4067:anders	TRS:4115:anders	TRS:4165:anders	TRS:4221:anders	TRS:4276:anders	TRS:4328:anders	TRS:4373:anders	TRS:4426:anders	TRS:6086:anders	TRS:56820:anders	TRS:56865:anders
+andreescu	TRS:13599:a .
+andrei	TRS:13191:andrei	TRS:13227:andrei	TRS:13273:andrei	TRS:13316:andrei	TRS:13393:andrei	TRS:13430:andrei	TRS:13474:andrei	TRS:13517:andrei	TRS:13565:andrei	TRS:38041:andrei	TRS:55628:andrei	TRS:55660:andrei	TRS:55697:andrei
+andres	TRS:41142:andres	TRS:84203:andres	TRS:84255:andres
+andrew	TRS:44974:andrew
+andrzej	TRS:56743:andrzej
+andrés	TRS:60985:andrés
+andy	TRS:46522:andy
+anebo	S:203:или	S:459:дело	S:533:или же	S:556:или	S:655:или	S:898:	S:898:или	S:203:или	S:459:или	S:533:или	S:556:или	S:655:или	S:898:или	S:898:или же
+angažmá	S:240:действий	S:682:	S:240:	S:682:участие
+angažovanosti	S:244:развития	S:244:причастности
+angell	TRS:3586:angell
+anglických	S:403:английских	S:403:английских
+anglie	S:409:	S:409:англию
+angličané	S:402:англичанам которым удалось избежать	S:402:англичане
+angst	TRS:16041:
+ani	S:21:и	S:131:ни	S:131:ни	S:172:даже	S:270:правосторонних	S:272:или	S:272:	S:303:	S:348:поврежден	S:378:также	S:417:явные	S:419:ни	S:489:чуши	S:533:не	S:574:опознаваемых	S:637:ни	S:637:ни	S:653:даже	S:788:или	S:852:не	S:892:не	S:923:	S:21:и	S:131:	S:131:и tezaurus	S:172:ни	S:270:mantra	S:272:или	S:272:ни	S:303:случился	S:348:neodolal	S:378:или	S:417:не	S:419:и	S:489:jihoasijci	S:533:ни	S:574:и	S:637:ни	S:637:ни	S:653:не	S:788:даже	S:852:ни	S:892:недостаточно	S:923:даже
+aniž	S:115:не	S:622:не	S:779:не испортив при этом	S:115:odmaturovat не	S:622:не	S:779:не
+ann	TRS:5710:ann
+anna	TRS:33789:anna
+annamu	S:949:аннам	S:949:annamu
+annapoliský	S:17:сделать переговорный	S:17:сделает annapoliský
+anne	TRS:73556:anne
+annus	TRS:6097:šestadvacetiletý	TRS:7254:	TRS:39825:svou	TRS:86401:annus
+ano	S:631:да	S:631:да
+anopheles	TRS:54391:13
+ansary	TRS:24472:-
+answer	TRS:21779:
+anti	TRS:71214:
+antiamerikanismem	S:181:антиамериканизм проявлялся на	S:181:анти-американской
+antikoncepce	S:748:контрацепция	S:748:контрацепции
+antiretrovirální	S:986:art	S:986:анти -
+antisemitismus	S:497:антисемитизм	S:501:антисемитизм	S:497:антисемитизм	S:501:антисемитизм
+antje	TRS:84399:antje
+antoine	TRS:16342:antoine	TRS:44824:antoine
+anton	TRS:87770:anton
+antonio	TRS:12454:antonio	TRS:13611:antonio	TRS:13668:antonio	TRS:52799:antonio	TRS:53310:antonio	S:754:антонио	S:754:antonio
+anuales	TRS:68388:
+análně	S:310:они насиловали	S:310:análně
+apec	TRS:1964:zemí	TRS:1965:o	TRS:1967:dostatečně	TRS:51895:ve	TRS:73980:
+aphc	TRS:27407:
+aplastar	TRS:68370:
+apokalypsu	S:24:ядерный апокалипсис	S:24:apokalypsu
+apokalyptický	S:35:апокалипсический	S:35:apokalyptický
+appeasementu	S:429:умиротворения	S:429:попустительства
+apple	TRS:6463:když	TRS:23094:do přesune	TRS:69265:apple
+applique	TRS:71204:
+approprier	TRS:71207:
+appropriйs	TRS:71231:už
+apr	TRS:34541:	TRS:34558:biya
+apra	TRS:11999:apra už
+april	TRS:707:duben	TRS:4743:duben	TRS:10142:duben	TRS:16924:duben	TRS:19559:duben	TRS:22456:duben	TRS:40068:duben	TRS:58906:duben	TRS:68908:duben
+aprobó	TRS:68369:kvót
+aprovechar	TRS:68395:z
+aproximadamente	TRS:68388:
+aprиs	TRS:71200:čína	TRS:71200:	TRS:71213:v
+arabsko	S:80:арабо	S:80:арабо
+arabská	S:56:арабская	S:56:арабской
+arabské	S:41:арабские	S:41:арабские
+arabských	S:738:арабских	S:738:арабских
+arabským	S:7:арабским	S:7:арабским
+arabů	S:245:	S:246:арабов данного	S:245:арабов	S:246:арабов
+aras	TRS:3661:aras
+arbatov	TRS:3697:arbatov
+arbeit	TRS:35749: 	TRS:60777:„
+arcelor	TRS:34651:lucemburské
+archer	TRS:79338:ropné
+architektů	S:943:herzog	S:943:архитекторов
+argentina	TRS:68388:	S:997:аргентина	S:997:аргентине
+argentinského	S:646:	S:646:аргентины
+argentinský	S:656:аргентинский	S:656:аргентины
+argentinu	S:652:аргентину	S:652:аргентины
+argentině	S:649:аргентине	S:649:аргентине
+argumentace	S:914:аргументы	S:914:аргумент
+argumento	TRS:68372:	TRS:68383:podezření	TRS:68386:středně
+argumenty	S:589:	S:589:аргументы
+arias	TRS:3746:arias
+aristide	TRS:64547:násilí
+arlene	TRS:37744:arlene	TRS:37792:arlene
+armacost	TRS:3786:armacost
+army	TRS:43566:
+armáda	S:31:армия	S:673:армия	S:31:армия	S:673:армия
+armádu	S:73:	S:167:военные	S:437:маленькая	S:73:армию	S:167:вооруженные силы	S:437:армию
+arne	TRS:35204:arne	TRS:35246:arne	TRS:35272:arne	TRS:35320:arne	TRS:35355:arne	TRS:35388:arne	TRS:35422:arne	TRS:35464:arne
+arnold	TRS:17864:generální
+arpanet	TRS:62820:
+arrive	TRS:71209:v	TRS:71216:
+arrivent	TRS:71208:  
+art	S:986:art	S:986:будет
+arte	TRS:23010:arte
+artistes	TRS:37254:,
+artnews	TRS:2808:
+arundhati	TRS:60933:arundhati
+aryeh	TRS:49490:aryeh	TRS:49534:aryeh	TRS:49573:aryeh	TRS:49611:aryeh	TRS:49640:aryeh	TRS:49672:aryeh	TRS:49716:aryeh	TRS:49753:aryeh	TRS:49786:aryeh	TRS:49820:aryeh	TRS:49844:aryeh	TRS:49878:aryeh
+arzenu	S:555:мышьяка	S:562:миллиард	S:567:мышьяка	S:575:мышьяк здоровья	S:555:arzenu	S:562:arzenu	S:567:arzenu	S:575:arzenu
+arábie	S:65:аравии	S:65:аравия
+arábii	S:738:аравии	S:738:аравии
+aréně	S:944:арене	S:944:арене
+asada	S:29:аль - ассада	S:29:аль - ассада
+asadovi	S:20:-асад	S:21:аль -асад сумел уйти	S:20:ассада	S:21:ассада
+asean	TRS:2612:na	TRS:36389:	TRS:36399:,	TRS:36399:asean	TRS:36404:,	TRS:56093:dokument	TRS:56093:	TRS:56094:asean	TRS:56095:a	TRS:67241:zeměmi	TRS:67242:obchodu	TRS:84827:asie	TRS:84828:ponaučení ,	TRS:84829:	S:385:асеан	S:395:асеан	S:385:юго - восточной азии ( asean )	S:395:юго - восточной азии ( asean )
+ash	TRS:12998:ash
+ashton	TRS:29906:
+asi	S:120:	S:440:примерно	S:726:около	S:867:треть	S:120:	S:440:15	S:726:около	S:867:приблизительно
+asia	TRS:19735:desai
+asie	S:67:азию	S:97:азии	S:761:азия	S:67:азии	S:97:азии	S:761:азии
+asii	S:1:азии	S:27:азии	S:79:азии	S:484:	S:497:азии	S:498:азии	S:718:азии	S:760:	S:1:азии	S:27:азии	S:79:азии	S:484:азии	S:497:азии	S:498:азии	S:718:азии	S:760:азии
+asijské	S:388:страданию	S:956:	S:388:азиатской	S:956:азиатского
+asijských	S:385:азиатских	S:469:азиатских	S:385:азиатских	S:469:азии
+asijští	S:393:азиатские	S:393:азиатские
+asistencia	TRS:68377:
+asistent	S:701:бодриллардом – бывшего доцентом	S:701:asistent
+asiática	TRS:68382:let
+asmus	TRS:4475:asmus	TRS:46242:asmus
+aspekty	S:315:аспектом	S:315:аспекты
+aspiracemi	S:148:	S:148:стремление к
+aspx	TRS:23113:
+assar	TRS:42435:assar
+assistance	TRS:33711:	TRS:84955:
+associates	TRS:52911:byl	TRS:53002:ohmae associates	TRS:53031:byl
+association	TRS:29064:účinkuje	TRS:34321:
+assommants	TRS:71231:stanou
+assurance	TRS:71231:bez
+astley	TRS:4511:sian astley
+asumiendo	TRS:68392:nižší
+asuntos	TRS:68375:nechat
+asymetrickému	S:780:достичь эту двойную цель : оно даст возможность преобразования	S:780:asymetrickému
+at	TRS:36845:	TRS:78811:
+ataků	S:893:спекулятивные денежные атаки	S:893:ataků
+ateismu	S:341:марксистского	S:341:ateismu
+atlantic	TRS:19231:	TRS:19231:
+atlantistické	S:183:французские левые отвергают атлантистские	S:183:atlantistické
+atlasy	S:143:смахнуть пыль с атласов	S:143:atlasy
+atmosféra	S:326:воздух	S:326:атмосфера
+atributy	S:852:представлял	S:852:атрибутами
+ats	S:768:территории	S:768:ats
+attention	TRS:71232:zásadové
+attitude	TRS:62009:trhem
+attitudes	TRS:27648:	TRS:48579:12
+atén	S:968:берущих начало афин так далее	S:968:афины
+au	TRS:71201:, jenž odhodlaně sleduje	TRS:71212:	TRS:71216:	TRS:71222:vydání , němž reportáž , bylo společnosti zastaveno	TRS:71226:projevu	TRS:71227:tyto spory vyhrávají .    	TRS:71232:a	TRS:71232:na
+auc	TRS:11690:
+audacieuse	TRS:71199:
+august	TRS:75525:august	TRS:77600:srpen
+aumentando	TRS:68389:
+auprиs	TRS:71213:	TRS:71221:svých
+aureus	TRS:82936:	TRS:82953:
+ausencia	TRS:68393:svrchovaných zvýšit
+auspicious	TRS:20354:
+aussi	TRS:71206:	TRS:71209:
+aut	TRS:32979:	S:967:машин	S:967:автомобилей
+auto	TRS:61713:firmách auto	TRS:69405:pro
+autobusu	S:232:автобуса	S:232:autobusu
+autokrati	S:375:автократы	S:375:autokrati
+autokratických	S:477:неограниченных	S:477:автократических
+autokraté	S:393:автократы принимать	S:393:autokraté
+autokratů	S:373:автократы	S:373:диктаторов
+automaticky	S:173:автоматически	S:173:автоматически
+automatický	S:516:автоматизированное	S:517:автоматические воздушные перевозки	S:517:внедрения подобного автоматизированного воздушного	S:516:автоматическое	S:517:автоматическое	S:517:автоматическое
+automobil	S:106:покупку автомобилуй	S:106:автомобиль
+automobily	S:213:автомобили	S:213:автомобили
+autorem	S:237:аксиому	S:237:автор
+autoridades	TRS:68392:orgány
+autoritářství	S:157:авторитаризм	S:157:авторитаризма
+autostrade	TRS:84317:španělské
+autre	TRS:61984:autre europe
+autres	TRS:71199:já	TRS:71210:
+auténtico	TRS:68378:ve
+autуnomo	TRS:22579:
+aux	TRS:71198:,	TRS:71200:	TRS:71218:
+auxquels	TRS:71223:
+av	TRS:20016:(
+avancйe	TRS:71199:
+avant	TRS:71199:
+avec	TRS:71214:tím jsme se stali první seriózní publikací , která sektoru	TRS:71226:
+avineri	TRS:4551:avineri	TRS:4573:avineri	TRS:4610:avineri	TRS:4642:avineri	TRS:4683:avineri	TRS:4720:avineri	TRS:4745:avineri	TRS:4783:avineri	TRS:4826:avineri	TRS:4852:avineri	TRS:4891:avineri	TRS:4912:avineri	TRS:4949:avineri	TRS:4975:avineri	TRS:5011:avineri	TRS:5045:avineri	TRS:5074:avineri	TRS:5101:avineri	TRS:5129:avineri	TRS:5163:avineri	TRS:5200:avineri	TRS:5233:avineri	TRS:5266:avineri	TRS:5305:avineri	TRS:5335:avineri	TRS:5367:avineri	TRS:5409:avineri
+avril	TRS:71200:se
+avšak	S:14:	S:77:но	S:239:но	S:407:клубах	S:444:массивная	S:517:однако	S:631:однако	S:636:но	S:682:	S:710:но	S:777:но	S:14:но	S:77:но	S:239:но	S:407:но	S:444:но	S:517:но	S:631:но	S:636:но	S:682:но	S:710:но	S:777:но
+award	TRS:43902:"
+aws	TRS:39429:	TRS:39615:	TRS:39629:rozpadem
+axel	TRS:20642:skupiny
+axiomu	S:237:создал собственную аксиому	S:237:аксиому прежде всего
+axйe	TRS:71229:takové
+ayuda	TRS:68371:branže 	TRS:68388:opět
+ayudar	TRS:68394:
+años	TRS:68389:
+aún	TRS:68399:
+ač	S:180:хотя	S:180:хотя
+ať	S:1:будь	S:540:от того	S:693:	S:1:независимо от того	S:540:независимо от того	S:693:будь то
+až	S:13:наступит только	S:147:только	S:163:	S:314:слишком	S:468:	S:537:игнорируются	S:555:и	S:614:	S:627:придти	S:704:до	S:764:и заканчивая	S:898:так	S:908:	S:13:	S:147:когда	S:163:слишком	S:314:слишком	S:468:до	S:537:слишком	S:555:до	S:614:до	S:627:приехать	S:704:до	S:764:и заканчивая	S:898:уж	S:908:до
+aбр	TRS:31439:mezinárodního
+aвернуться	TRS:22386:vrátit
+aтатурком	TRS:30616:atatürkem

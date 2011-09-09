@@ -1,0 +1,95 @@
+w	S:77:джордж	S:487:джорджу	S:77:джордж	S:487:джорджу
+waal	TRS:20114:waal
+wada	TRS:46530:wada genetický
+wagnera	S:318:вагнера	S:318:артиллерии wagnera
+wagnerem	S:331:	S:331:wagnerem
+wakamiya	TRS:84526:wakamiya	TRS:84567:wakamiya
+wake	TRS:27182:
+wal-mart	TRS:59246:-	TRS:59249:	TRS:59250:haly wal	TRS:59251:	TRS:59252:se zásobovací	TRS:59253:-	TRS:59254:-	TRS:59254:	TRS:59256:-	TRS:59258:50	TRS:59259:martu jsou	TRS:59262:,	TRS:59264:usa	TRS:59265:	TRS:59267:například	TRS:59267:	TRS:59273:-	TRS:59275:-	TRS:59277:spočívá	TRS:59278:ohromující	TRS:59280:-
+waldemar	TRS:39983:waldemar
+waldron	TRS:87990:
+wales	TRS:84636:wales
+walger	TRS:84664:walger
+wall	TRS:18695:wall	TRS:41026:zprávu	TRS:84708:wall	TRS:85532:
+wallsten	TRS:84753:wallsten	TRS:84788:wallsten
+walmart	TRS:55832:své
+walsum	TRS:84130:walsum
+walter	TRS:22919:walter	TRS:76008:-	TRS:85554:walter	TRS:86126:walter
+wang	TRS:30676:wang	TRS:84825:wang	TRS:84876:wang
+wangari	TRS:43811:wangari
+wars	TRS:27410:
+washington	TRS:18801:washington	TRS:19074:new	TRS:68364:	S:742:вашингтон	S:742:вашингтон
+washingtonském	S:370:ужины « гридайрон »	S:370:вашингтоне
+wasmer	TRS:84948:wasmer jakob
+watan	TRS:76107:arabský
+watch	TRS:42328:	TRS:43954:	TRS:43969:	TRS:49608:	TRS:49637:	TRS:49670:	TRS:49872:rights watch	TRS:50575:nárůst	TRS:60760:rights watch	TRS:74619:usiluje	TRS:85262:	TRS:87707:
+way	TRS:71581:život
+wayne	TRS:13869:wayne
+we	TRS:50672:	TRS:71581:.
+web	TRS:78800:	TRS:84920:,	TRS:84923:	TRS:84927:lidé	TRS:84933:	TRS:84939:soucitu neboť	TRS:84940:	TRS:86557:vývěsek
+webová	S:127:веб-страница	S:127:webová
+webových	S:67:свои печатные	S:116:веб -	S:67:веб -	S:116:веб -
+webu	S:113:сети	S:129:сетевого определит	S:113:интернете	S:129:интернете
+weekly	TRS:5930:	TRS:42387:	S:467:как weekly	S:467:weekly
+wei	TRS:52984:společnost	TRS:52985:wei
+weida	TRS:10569:.	TRS:10570:weida znamená přesahovat i	TRS:10573:
+weiler	TRS:85031:weiler
+weiquan	TRS:86544:(
+weitz	TRS:85076:weitz
+weizsäcker	TRS:84948:weizsäcker	TRS:85112:weizsäcker
+wej	S:943:ай	S:943:защиту weje
+weje	S:943:вэйвэя	S:943:weje
+welt	TRS:23358:welt von gestern
+weltethos	TRS:40141:weltethos a
+werner	TRS:48925:werner	TRS:72741:-	TRS:72784:-	TRS:72821:-	TRS:72852:-	TRS:72885:-	TRS:72915:-	TRS:72956:-	TRS:72993:-	TRS:73030:werner	TRS:73071:werner	TRS:73105:-	TRS:73152:-	TRS:73201:-	TRS:73237:-	TRS:73267:-	TRS:73306:-	TRS:73353:-
+weschler	TRS:85151:weschler	TRS:85195:weschler	TRS:85233:weschler
+west	TRS:36802:programová
+westerwelle	TRS:85316:westerwelle
+weyma	TRS:43421:weyma
+whalley	TRS:85358:whalley
+what	TRS:74905:platíte
+whitsundays	TRS:69960:
+whittington	TRS:85419:whittington
+whu	TRS:26505:postgraduálních
+wieck	TRS:85439:-
+wiesel	TRS:2070:za
+wildersovy	S:505:растущей популярности	S:505:заключается wildersovy
+willett	TRS:85554:willett
+william	TRS:43551:
+williamsona	S:507:уильямсона могут казаться отвратительными	S:507:вилльямсоном
+wilson	TRS:25504:
+wim	TRS:22660:wim	TRS:22715:wim
+winckler	TRS:85642:winckler
+wincoop	TRS:5443:wincoop
+windows	TRS:900:	TRS:13882:	TRS:19807:windows	TRS:23080:přát nové	TRS:23094:propadl	TRS:23095:počítač	TRS:23095:pro	TRS:87268:
+winfried	TRS:26349:winfried
+wirtschaftsrat	TRS:72801:demokraty
+wissenschaft	TRS:7664:politiku
+wissenschaftszentrum	TRS:50459:wissenschaftszentrum .    
+with	TRS:85231:miracle
+without	TRS:9225:"
+witness	TRS:74610:	TRS:74612:	TRS:74613:diamantům	TRS:74616:ve
+wjh	TRS:32408:
+wolf	TRS:85690:wolf	TRS:85739:wolf
+wolfensohn	TRS:85940:
+wolfgang	TRS:67649:wolfgang	S:298:wolfgang	S:298:вольфганг
+women	TRS:36375:a
+woodrow	TRS:25504:
+woods	TRS:34956:	TRS:34960:dohod	TRS:38013:němuž došlo	TRS:38020:	TRS:38028:	TRS:68364:plně	TRS:68400:
+woodstock	TRS:41569:do
+word	TRS:23090:přestože	TRS:23113:čerta
+workers	TRS:42313:obchodování	TRS:69405:zajištění	TRS:69405:
+world	TRS:936:,	TRS:19081:world	TRS:36845:	TRS:44916:v	TRS:45959:	TRS:45994:	TRS:52806:rozvojovém	TRS:56442:poznámka	TRS:62834:	TRS:68519:kótovací	TRS:70525:.	TRS:79117:vysvětluje
+worldcom	TRS:888:worldcom	TRS:42743:historií	TRS:80236: 
+worldcoms	TRS:41703:
+worlds	TRS:27553:
+wright	TRS:86083:wright
+wriston	TRS:86126:wriston
+wto	TRS:21381:který	TRS:64907:
+wwf	TRS:41572:,	TRS:44882:přírody	TRS:44891:. 
+www	TRS:2683:z	TRS:2946:	TRS:5198:daduč	TRS:5231:bývalým	TRS:5625:www	TRS:7110:z	TRS:8323:, prostý :	TRS:9285:	TRS:10117:www	TRS:10408:z	TRS:12950:www	TRS:18445:z	TRS:18484:z	TRS:20643:z	TRS:26907:dvouměsíčníku	TRS:28702:	TRS:32092:www	TRS:33292:	TRS:33787:stáhnout	TRS:34364:z	TRS:34642:z	TRS:35536:world	TRS:39896:z	TRS:41288:children	TRS:42930:www	TRS:43228:global	TRS:45048:www	TRS:46477:www	TRS:47759:	TRS:51241:z	TRS:60298:z	TRS:63384:z	TRS:69944:je	TRS:69984:je	TRS:70026:je	TRS:71666:	TRS:71691:, otázka bývalého viceprezidenta	TRS:72229:	TRS:72472:	TRS:78905:z	TRS:80417:a	TRS:80788:z	TRS:83543:přeložil	TRS:85628:	S:571:www . edu	S:571:www
+www.	TRS:2720:www .eu	TRS:7314:internetové	TRS:8903:)	TRS:9124:)	TRS:9319:	TRS:33831:www	TRS:47515:	TRS:56402:	TRS:60896:	TRS:60931:www	TRS:62242:ve	TRS:62873:.org
+www.project-	TRS:9750:	TRS:15687:antony	TRS:15730:antony	TRS:15766:antony	TRS:15813:antony	TRS:18692:v	TRS:27098:	TRS:27876:-	TRS:32566:	TRS:33129:www	TRS:46840:bývalý	TRS:57067:	TRS:57097:je	TRS:61729:poslední	TRS:69856:z	TRS:79105:dříve	TRS:83340:	TRS:85552:z
+wwwproject	TRS:57444:
+wyborcza	TRS:12996:,	TRS:32649:wyborcza	TRS:46595:aby	TRS:46596:“	TRS:46664:	TRS:46761:
+wyplosz	TRS:86264:wyplosz	TRS:86316:wyplosz	TRS:86359:wyplosz	TRS:86400:wyplosz	TRS:86445:wyplosz	TRS:86493:wyplosz

@@ -1,0 +1,388 @@
+b	TRS:15232:a	TRS:22642:přínos	TRS:22644:.	TRS:26500:.	TRS:26500:.	TRS:68236:předznamenalo
+ba	S:170:вообще-то	S:278:	S:417:и	S:452:малоприятна и	S:460:даже	S:534:ватикане и	S:170:даже	S:278:даже	S:417:самые а	S:452:а	S:460:и	S:534:ватикане или даже
+baba	TRS:34532:baba
+bacchetta	TRS:5443:bacchetta
+badatelé	S:814:исследователи также пытались	S:814:исследователи
+bagdádu	S:77:багдад	S:77:багдада
+bajce	S:598:сказке федра про	S:598:krylovově bajce
+bajo	TRS:68372:už
+bakerovou	S:460:джозефин бейкер	S:460:bakerovou
+bakteriálního	S:984:устойчивость к противотуберкулезным препаратам возникает	S:984:bakteriálního
+balancuje	S:884:балансирует	S:884:стоит
+balcerowicz	TRS:5553:balcerowicz	TRS:5597:balcerowicz	TRS:5627:balcerowicz	TRS:5672:balcerowicz
+baldwin	TRS:5710:baldwin
+balibar	TRS:5746:balibar
+balijský	S:825:балийский	S:825:balijský
+balkáně	S:314:балканах	S:399:балканах	S:314:балканах	S:399:балканах
+balliol	TRS:6613:
+baltic	TRS:23516:
+baltimore	S:981:балтимор - -	S:981:baltimore
+balík	S:107:пакете	S:107:спасателей
+balíček	S:297:пакет	S:297:пакет стимулов
+balíčky	S:726:	S:726:пакеты
+bambang	TRS:5887:bambang
+banac	TRS:5932:banac
+banality	S:75:опасные банальности европы	S:75:банальности
+banamex	TRS:11631:nikoliv doma
+banca	TRS:20770:centrální
+bance	S:922:	S:922:банка
+banco	TRS:11631:	TRS:68359:	TRS:68361:světě	TRS:68364:	TRS:68369:banky	TRS:68371:banky	TRS:68377:	TRS:68389:banky	TRS:68390:spokojit	TRS:68393:s	TRS:68396:navázat	TRS:68397:
+bancomer	TRS:11631:
+bancos	TRS:68389:peněz
+bank	TRS:18022:občanů	TRS:29855:začaly	TRS:29862:	TRS:34872:ředitel darmstädter	TRS:34884:necitelnosti	TRS:34896:	TRS:45430:	TRS:45430:	TRS:59425:	TRS:75390:	TRS:75390:	TRS:86023:kolem nuly , ceny však přitom .	S:109:банками	S:110:банков	S:207:англии	S:208:англии	S:209:банкам	S:899:банков	S:109:банков	S:110:банков	S:207:англии	S:208:	S:209:банков	S:899:банков
+banka	S:32:банк	S:32:банк
+bankovek	S:927:печатает	S:927:банкнот
+bankovnictví	S:898:банковская	S:898:банки
+bankovní	S:111:доводом	S:215:банковский носит общемировой характер	S:998:банковской	S:111:банковской	S:215:банковского	S:998:банковской
+bankovním	S:109:	S:918:банковский	S:109:	S:918:банковского
+bankrot	S:918:банкротство	S:918:банкротство
+banky	S:100:банки	S:898:	S:100:банки	S:898:банка
+bankéři	S:991:банкиров	S:991:
+banlieues	TRS:25666:nechvalně	TRS:47980:častému	TRS:80806:
+banquet	TRS:81671:	TRS:81761:střediska	TRS:81804:)	TRS:81842:cerap
+bao	TRS:87886:souvislosti
+baracka	S:229:барака	S:229:барака
+barak	S:72:барак лидер	S:72:барак
+baraniuk	TRS:84636:baraniuk
+barany	TRS:6086:barany
+barclays	TRS:39050:
+bard	TRS:10698:	TRS:10741:
+bardot	TRS:13575:nebo
+barma	S:395:бирма	S:766:мьянма	S:395:бирма	S:766:бирма
+barmě	S:394:бирме	S:394:бирме
+barondess	TRS:6164:jeremiah
+baroni	S:660:обвиненные военачальники	S:660:ответчики лидеры
+baronů	S:673:баронов	S:673:наркотической парламента
+barry	TRS:61156:barry	TRS:61197:barry	TRS:61248:barry	TRS:61295:barry	TRS:61342:barry	TRS:61383:barry	TRS:61429:barry	TRS:61466:barry	TRS:61517:barry	TRS:61556:barry	TRS:61599:barry	TRS:61645:barry	TRS:61687:barry	TRS:80612:barry	S:263:барри	S:263:barry
+barvití	S:376:мере озорники	S:376:части barvití
+barvou	S:951:окрашен	S:951:цветом
+barvy	S:398:цвета	S:398:цвета
+based	TRS:85628:,
+basescu	TRS:13572:
+basin	TRS:23013:basin	TRS:23014:ale existuje
+basix	TRS:69737:
+basle	TRS:80215:
+basu	TRS:6194:basu	TRS:6241:basu	TRS:6294:basu	TRS:6333:basu
+battista	TRS:46842:battista
+baudrillard	S:701:джином	S:701:baudrillard
+baum	TRS:6376:baum
+bavit	S:367:развлекать	S:367:говорить
+bayer	TRS:53000:bayer
+bašára	S:29:башар	S:29:башара
+bašáru	S:20:башар	S:20:bašáru
+bašíra	S:594:-башира	S:656:-башира	S:594:ocampa bašíra	S:656:bašíra
+bašírovu	S:663:-башира серьезно подвергнет сомнению	S:663:bašírovu случай серьёзную по
+bašírův	S:595:аль-башира	S:595:и bašírův
+bb	TRS:41327:
+bbc	TRS:13427:
+be	TRS:34849:nepodléhají
+beamte	TRS:73003:,
+bear	S:917:акционеры bear	S:917:bear акционеров
+becker	TRS:6540:becker
+bed	TRS:57370:
+bedlivě	S:834:тщательно	S:834:внимательно
+beecham	TRS:49995:“
+beena	TRS:67323:beena
+beijer	TRS:42202:
+belang	TRS:10797:,	TRS:10798:vlaams belang přiživuje na	S:423:националистской	S:423:belang
+belgie	S:416:бельгия	S:424:бельгии	S:416:бельгия	S:424:бельгия
+belgii	S:411:бельгия на пороге	S:425:бельгии	S:411:бельгии	S:425:бельгии
+belgičané	S:418:у бельгийцев же	S:418:бельгийцы
+belgičtí	S:416:бельгийские	S:416:бельгийских
+bellot	TRS:71234:je
+ben	TRS:6616:ben	TRS:6647:ben	TRS:6681:ben	TRS:6721:ben	TRS:6752:ben	TRS:6789:ben	TRS:6825:ben	TRS:6856:ben	TRS:6891:ben	TRS:6920:ben	TRS:6951:ben	TRS:6984:ben	TRS:7018:ben	TRS:7050:ben
+benedetti	TRS:8859:fondazione
+benedict	TRS:17864:generální
+beneficiada	TRS:68366:společenství
+benefit	TRS:69405:
+beng	TRS:7084:beng
+benoît	S:782:бенуа	S:782:benoît
+bentégeat	S:98:бентежа	S:98:bentégeat
+benz	TRS:34878::
+bere	S:795:	S:795:принимается
+berezovsky	TRS:7112:berezovsky	TRS:7154:berezovsky
+berg	TRS:7197:berg
+bergström	TRS:7271:bergström	TRS:7316:bergström
+berkan	S:114:berkan	S:114:berkan
+berkeley	S:925:	S:925:беркли
+berlin	TRS:21847:)
+berlín	S:991:берлин	S:991:берлин
+berlínské	S:141:берлинской	S:171:после падения берлинской	S:141:берлинской	S:171:берлинской
+berlíně	S:552:берлине	S:552:берлине
+berlíňany	S:460:берлинцев восторг те времена	S:460:berlíňany
+bernsteina	S:318:бернштейна	S:318:bernsteina
+bertelsmann	TRS:35035:bertelsmann
+bertram	TRS:7381:bertram	TRS:7426:bertram	TRS:7475:bertram	TRS:7517:bertram	TRS:7555:bertram	TRS:7598:bertram	TRS:7630:bertram	TRS:7668:bertram	TRS:7700:bertram	TRS:7736:bertram	TRS:7777:bertram	TRS:7815:bertram	TRS:7854:bertram	TRS:7885:bertram	TRS:7923:bertram	TRS:41866:bertram
+bertrand	TRS:64547:pochopí
+beránci	S:606:по которому ягнята	S:606:beránci
+beránka	S:598:волк	S:599:бранится	S:598:отпущения	S:599:отпущения
+beránku	S:598:ягненка	S:598:beránku
+best	TRS:59258:target
+bestseller	S:485:бестселлер	S:485:ставшая бестселлером книга
+beta	TRS:28702:a	TRS:28789:.	TRS:28873:beta corp
+bethanien	TRS:60763:kunstlerhaus bethanien
+beton	S:352:бетоном	S:352:бетон искусства
+betonových	S:343:бетонных	S:343:бетонных
+beur	TRS:48645:pleti
+beverly	TRS:41326:
+bez	S:21:без	S:199:без	S:221:не трудоустроена	S:373:не	S:448:ненадёжных	S:496:без	S:621:без	S:668:без	S:763:	S:898:	S:961:без	S:961:	S:21:без	S:199:без	S:221:без	S:373:независимо	S:448:без	S:496:без	S:621:без	S:668:без	S:763:без	S:898:без	S:961:без	S:961:без
+beze	S:39:зоной от	S:598:ягненка	S:702:	S:39:зоной без	S:598:без	S:702:без
+beznadějně	S:372:весельем безнадежно	S:372:безнадежно vulgárnímu
+bezodkladné	S:932:немедленно повысить	S:932:решительные
+bezodkladně	S:667:	S:667:незамедлительно
+bezpečnost	S:247:безопасности	S:744:населению	S:247:безопасность	S:744:безопасности
+bezpečnosti	S:655:безопасности	S:657:безопасности	S:659:безопасности	S:660:безопасности	S:655:безопасности	S:657:безопасности	S:659:безопасности	S:660:безопасности
+bezpečnostní	S:39:безопасности	S:86:безопасности	S:198:предотвращавшего	S:551:безопасности	S:728:безопасности	S:39:безопасности	S:86:безопасности	S:198:предохранительный	S:551:области безопасности	S:728:безопасности
+bezpečnostních	S:720:актуальных безопасности	S:720:безопасности
+bezpečné	S:932:безопасную	S:932:чистой
+bezpečného	S:159:безопасного	S:159:безопасного
+bezpečnější	S:282:прибыльную	S:282:безопасный
+bezpečnějšího	S:288:станем	S:288:bezpečnějšího
+bezpečí	S:653:	S:653:безопасности
+bezplatně	S:571:146	S:571:бесплатно
+bezpochyby	S:602:, без сомнения	S:602:, несомненно ,
+bezprecedentní	S:855:беспрецедентный	S:855:беспрецедентные
+bezprostředního	S:667:предшественника провести какие-либо из основных	S:667:немедленного
+bezradné	S:68:нависшая над сектором	S:68:озадаченного
+beztrestnosti	S:651:безнаказанностью	S:655:безнаказанностью	S:651:безнаказанности	S:655:безнаказанности
+bezvýznamnou	S:637:превращаясь « снятый вопрос »	S:637:с
+bezúčelné	S:897:сша	S:897:bezúčelné
+beнecуэла	TRS:21289:venezuela
+bharatiya	TRS:81384:bharatiya
+bhidé	TRS:7963:bhidé	TRS:8009:bhidé
+bhikhu	TRS:54052:bhikhu parekh
+bidil	TRS:22812:nazvaný	TRS:22815:léčebný
+biedenkopf	TRS:8058:biedenkopf
+bielecki	TRS:8103:bielecki	TRS:8154:bielecki
+bien	TRS:68389:strany	TRS:71206:	TRS:71207:)	TRS:71209:zdá	TRS:71211:podrobněji	TRS:71211:
+bije	S:1:	S:1:оборот
+bijí	S:371:	S:371:бьются
+bijící	S:376:вдохновленные	S:376:идеалисты
+bilan	TRS:71207:
+bilaterálních	S:50:того	S:53:двустороннего	S:92:двусторонних	S:50:двусторонних	S:53:двусторонние	S:92:двусторонних
+bilbao	TRS:11631:
+bild	TRS:16659:okamžitě
+biliony	S:285:триллионов	S:285:триллионов
+bill	TRS:29378:,
+bills	TRS:79984:	TRS:79995:
+bimbo	TRS:11631:bilbao
+bin	TRS:32181:bin	TRS:32217:bin	TRS:32240:bin
+bing	TRS:42387:a
+biodiversidad	TRS:68373:
+biological	TRS:35833:
+biologické	S:41:биологическое	S:41:биологического
+biologických	S:39:биологическое	S:39:биологических
+biomedical	TRS:7215:a lékaři
+biomedicíně	S:965:биомедицине ряд	S:965:биомедицина
+biotechnologický	S:962:биотехнологий	S:962:индустрию биотехнологии
+biočipů	S:960:время ювин утверждает	S:960:biočipů
+bis	TRS:18424:švýcarsku	TRS:18432:ani
+biskup	S:504:итак	S:504:
+biskupa	S:507:епископа уильямсона	S:507:епископом
+bitpass	TRS:69258:výrazně
+bitvě	S:655:борьбе	S:655:борьбе
+bjp	TRS:12692:hoši	TRS:12693:bjp ovšem	TRS:60957:
+bjørn	TRS:42806:bjørn	TRS:42853:bjørn	TRS:42932:bjørn	TRS:42972:bjørn	TRS:43012:bjørn	TRS:43058:bjørn	TRS:43102:bjørn	TRS:43145:bjørn	TRS:43185:bjørn	TRS:43230:bjørn	TRS:43269:bjørn	TRS:43317:bjørn	TRS:43355:bjørn
+blackstone	TRS:19079:	TRS:19104:	TRS:19105:blackstone	TRS:19108:blackstone	TRS:19110:blackstone tuto reakci	TRS:19111:která	TRS:34823:private	TRS:60833:v
+blahobytu	S:857:что	S:857:благосостояния
+blair	TRS:71209:	S:549:блэр	S:549:блэр
+blairův	S:552:блэра	S:552:блэр уходит
+blanc	S:782:	S:782:blanc
+blanchard	TRS:8235:blanchard	TRS:8278:blanchard	TRS:8319:blanchard	TRS:8351:blanchard	TRS:8395:blanchard	TRS:8437:blanchard	TRS:8480:blanchard	TRS:8518:blanchard	TRS:8555:blanchard	TRS:71233:
+bloku	S:147:блока является	S:147:блока
+blomstrom	TRS:8689:magnus blomstrom
+bloom	TRS:8789:bloom	TRS:54318:bloom
+blue	TRS:71518:
+blueprints	TRS:84103:plánování	TRS:84114: 	TRS:84116:	TRS:84117:plánování	TRS:84119:,	TRS:84123:snadné .
+blues	TRS:344:blues	TRS:23013:blues	TRS:23014:tolik
+blyštivou	S:941:сверкающей действительностью	S:941:blyštivou
+blízkém	S:81:ближнем	S:81:ближнем
+blízký	S:11:ближний	S:55:ближний	S:760:	S:11:ближний	S:55:ближний	S:760:ближний
+blíž	S:974:ближе	S:974:ближе	S:974:ближе к	S:974:ближе к
+bmena	TRS:33943:širší
+bmw	TRS:34878:
+bnp	TRS:39128:	TRS:69649:bankou bnp	TRS:69652:banka	TRS:70844:ze
+bo	TRS:8789:bo
+board	TRS:21199:jako	TRS:21309:,	TRS:21478:měnovou	TRS:50880:	TRS:63087:
+bobinski	S:140:кржиштоф бобински	S:140:bobinski
+bocconi	TRS:971:	TRS:1002:	TRS:1121:	TRS:1156:	TRS:1186:	TRS:1226:	TRS:1340:	TRS:1382:	TRS:1610:	TRS:1741:
+bodovým	S:802:высокими результатами тестов на уровень	S:802:bodovým
+bodu	S:78:совершённые	S:234:плацдарма	S:867:процентного	S:78:neuralgického точки	S:234:opěrnému точки	S:867:
+body	TRS:16385:metoda „ sčítání	TRS:16412:těl “	S:317:вопросов	S:317:точки
+bodů	S:727:точек	S:993:пунктов	S:727:пунктов	S:993:пунктов
+boeing	TRS:21764:nejzajímavější	TRS:21766:zatímco boeing z ligy	TRS:21768:	TRS:21769:průmysl
+boeingu	S:519:«	S:519:boeing
+boer	S:828:боер	S:828:boer
+boeri	TRS:8829:tito boeri	TRS:8862:tito boeri	TRS:8908:tito boeri	TRS:13360:boeri
+bog	TRS:2946:
+bohatost	S:135:обнаруживая богатство	S:135:богатство
+bohatství	S:118:богатства	S:355:богатства	S:422:богатством	S:118:богатство	S:355:богатства	S:422:богатство
+bohaté	S:722:богатые	S:722:богатые
+bohatých	S:103:богатых	S:103:богатых
+bohatších	S:761:	S:761:более богатых
+bohu	S:59:всеохватывающие	S:59:сожалению
+bohužel	S:314:к сожалению	S:314:к сожалению
+boj	TRS:26481:	TRS:26482:že	S:35:апокалипсический	S:35:борьба
+boje	S:434:борьбу	S:930:борьбы	S:434:борьбы	S:930:борьбы
+bojechtivost	S:403:известная воинственность	S:403:bojechtivost
+bojem	S:897:	S:897:борьбой
+boji	S:878:	S:878:борьбы
+bojišti	S:92:полевых условиях	S:92:поле боя
+bojkotovali	S:242:бойкотировавшие	S:242:бойкотировали
+bojovali	S:491:сражаться	S:491:боролся
+bojovat	S:436:бороться	S:771:	S:436:бороться	S:771:бороться
+bojovníci	S:15:борцы	S:15:борцы
+bojovníka	S:505:качестве борца	S:505:борец
+bojovníkem	S:631:похоронен	S:631:
+bojová	S:91:battlegroups ( боевые	S:91:боевые
+bojových	S:940:боевых	S:940:боевых
+bojů	S:2:обострение	S:586:принимавшими	S:780:двойную	S:2:обострение борьбы	S:586:военных действий	S:780:asymetrickému конфликта
+bolestivé	S:896:	S:896:болезненные
+bolestivých	S:755:болезненной	S:755:серьезных
+bolestivější	S:897:бессмысленно	S:897:bolestivější
+bolestná	S:347:	S:347:болезненные
+boláky	S:759:	S:759:boláky
+bombaji	S:428:мумбае	S:506:	S:428:бомбее	S:506:бомбее
+bombajské	S:34:мумбаи	S:34:bombajské
+bombardování	S:162:под ударом	S:162:бомбардировки
+bomby	S:585:бомбы	S:585:бомбы
+bonds	TRS:70087:které
+boniface	TRS:8983:boniface	TRS:9024:boniface	TRS:9061:boniface	S:164:бонифас	S:164:boniface
+bonino	TRS:9126:bonino	TRS:9163:bonino	TRS:9259:bonino	TRS:9287:bonino
+booklets	TRS:47515:
+books	TRS:29770:londýnském	TRS:29818:průvodce	TRS:44103:	TRS:49082:	TRS:50014:těl	TRS:75174:	TRS:81928:„
+boomu	S:216:	S:216:rozbujelých бума
+boorman	TRS:9357:jack boorman
+boris	TRS:7112:boris	TRS:7154:boris	TRS:24244:boris	TRS:24301:boris
+bortí	S:35:решающий поединок	S:35:bortí
+boskin	S:190:boskin	S:190:boskin
+bosshard	TRS:9384:bosshard
+bouillabaisse	TRS:82879:kulajda
+bound	TRS:52658:
+bourbons	TRS:28429:.
+bouře	S:855:буря	S:904:бурь	S:855:бури	S:904:катаклизмы
+bouřlivého	S:350:усиленного	S:350:городского
+bouřlivých	S:288:	S:861:смутные	S:288:восстановить	S:861:восстановить
+bouří	S:740:браку	S:740:ураганов
+bovespa	TRS:70772:bovespa upraveným	TRS:70797:	TRS:70852:v
+bp	TRS:36834:,	TRS:37380:bp jsou	TRS:39904:pobočky	TRS:77404:-	TRS:81160:british
+br	TRS:311:	TRS:39981:copyright	TRS:75042:copyright
+bradford	TRS:17796:j	TRS:18042:j	S:925:	S:925:брэдфорд делонг
+bradky	S:687:бороды дядюшки	S:687:bradky strýčka
+braga	TRS:19520:braga
+branami	S:11:всестороннего	S:11:у ворот
+branko	TRS:46961:branko	TRS:47004:branko	TRS:47042:branko	TRS:47085:branko
+branku	S:38:разработке ядерного оружия свидетельствует о широком национальном единодушии	S:38:branku
+brasil	TRS:11849:país
+bratrstva	S:470:содружества	S:470:братства
+brazil	TRS:25788:týdeníku
+brazílie	S:227:бразилия	S:227:бразилия
+brazílii	S:682:	S:682:бразилии
+brca	TRS:32736:brca	TRS:32736:brca2 .	TRS:32737:%	TRS:32737:rakovina	TRS:32739:deseti	TRS:32739:geny	TRS:32741:nebo	TRS:32741:proto	TRS:32742:pro	TRS:32742:genů	TRS:32749:.	TRS:32749:,	TRS:32750:rekombinovat	TRS:32750:	TRS:32751: 	TRS:32751:	TRS:32753:způsobují	TRS:32757:2	TRS:32757:vysokou	TRS:32760:funkční	TRS:32760:1	TRS:32763:usmrcujících	TRS:32763:buňky
+bremmer	TRS:9673:bremmer	TRS:9715:bremmer	TRS:9752:bremmer	TRS:9804:bremmer	TRS:9853:bremmer	TRS:9899:bremmer	TRS:9942:bremmer	S:220:бреммер	S:220:bremmer
+bretton	TRS:34956:američané	TRS:34960:brettonwoodských dohod	TRS:38013:k	TRS:38020:brettonwoodského	TRS:38028:	TRS:68364:	TRS:68400:před
+brigitte	TRS:13575:sirotky	TRS:29181:brigitte	TRS:29222:brigitte	TRS:29266:brigitte	TRS:29297:brigitte	TRS:29334:brigitte	TRS:29416:brigitte	TRS:29470:brigitte	TRS:29523:brigitte	TRS:29561:brigitte	TRS:30105:brigitte	TRS:30146:brigitte	TRS:30189:brigitte
+brill	TRS:53065:brill
+brinkhorst	TRS:10075:brinkhorst
+british	TRS:6353:packard	TRS:15896:zájmy	TRS:27294:	TRS:56016:british	TRS:74910:za
+britská	S:323:британской	S:323:британское
+britské	S:208:	S:208:британской
+brittan	S:144:бриттан	S:144:brittan
+británie	S:414:британии	S:549:великобритании	S:414:великобритания	S:549:великобритании
+británii	S:549:великобритании	S:549:великобритании
+broadcasting	TRS:40621:společnost middle east broadcasting center se saúdskými	TRS:40622:broadcasting
+brok	TRS:10144:brok
+brookings	TRS:18236:obdoba	TRS:30827:
+broskvoně	S:951:цвет персикового дерева	S:951:broskvoně
+brothers	S:918:lehman brothers создало исключительный	S:918:братьев
+brozo	S:365:брозо украшенный зеленым	S:365:brozo
+bruce	TRS:45307:bruce	S:522:брюс	S:522:брюс
+bruegel	TRS:84323:se	TRS:84986:mozkovém trustu bruegel
+brzd	S:558:сдерживания	S:558:сдержек
+brzké	S:214:неприятностями	S:214:ближайшее
+brzy	S:61:вскоре	S:194:скором	S:684:покажет	S:61:вскоре	S:194:быстро	S:684:вскоре
+bránila	S:725:	S:725:воспрепятствовать
+bránilo	S:304:	S:304:не
+brání	S:213:количественное	S:213:приборы	S:381:препятствует	S:213:предотвращает	S:213:препятствует	S:381:не
+bse	TRS:70852:hned
+bsnl	TRS:56615:
+bubliny	S:921:	S:921:пузырь
+buchanan	S:321:патрика	S:321:buchanan
+buckyballs	TRS:85529:,
+buddhismus	S:348:буддизм	S:387:буддизм	S:348:буддизм	S:387:буддизм
+bude	S:39:основываться	S:72:нарушаемого	S:84:	S:129:определит	S:138:котором	S:144:	S:278:будет	S:319:окажет	S:517:потребует	S:528:	S:540:будет	S:649:привлекут	S:687:истолкуют	S:692:	S:728:случае	S:731:принести	S:770:поздно	S:826:	S:39:основываться	S:72:будет	S:84:будет	S:129:будет	S:138:будет	S:144:будет	S:278:будет	S:319:будет	S:517:потребует	S:528:будет	S:540:будет	S:649:будет	S:687:будет	S:692:,	S:728:если	S:731:будет	S:770:будет	S:826:будет
+budeme	S:218:	S:281:мы будем	S:288:мы будем	S:218:нам	S:281:мы будем	S:288:мы будем
+budou	S:13:созреют	S:105:будет	S:115:смогут	S:173:будет	S:216:будут	S:273:захотят	S:290:	S:295:будут	S:297:последуют	S:749:будут	S:820:будет	S:824:будут	S:923:недостаточными	S:13:	S:105:будут	S:115:будут	S:173:будут	S:216:будут	S:273:	S:290:они	S:295:будут	S:297:будут	S:749:они	S:820:будут	S:824:будут	S:923:будут
+budoucnost	S:97:будущего	S:138:будущее	S:513:будущее	S:588:будущего	S:97:будущее	S:138:будущее	S:513:будущее	S:588:будущее
+budoucnosti	S:115:будущем	S:129:будущее	S:289:будущее	S:600:будущему	S:874:будущее	S:912:будущем	S:932:будущем	S:115:будущем	S:129:будущего	S:289:будущего	S:600:будущего	S:874:будущего	S:912:будущем	S:932:будущем
+budoucí	S:145:будущей	S:213:количественное	S:363:будущее	S:145:будущем	S:213:предотвращает	S:363:будущие
+budoucích	S:56:будущем	S:881:будущих	S:56:уменьшения	S:881:будущем
+budoval	S:206:	S:206:построил
+budování	S:588:по созданию	S:644:интересует	S:588:производственные	S:644:построении
+budují	S:749:	S:749:строят свои
+buenos	TRS:39354:.	S:647:буэнос	S:647:буэнос
+bujak	TRS:10360:bujak
+bujení	S:984:противотуберкулезным	S:984:bakteriálního излишней
+bukharbaeva	S:301:bukharbaeva	S:301:bukharbaeva
+bulent	TRS:3661:bulent
+bulmer-	TRS:10502:bulmer
+buruma	TRS:10559:buruma	TRS:10609:buruma	TRS:10656:buruma	TRS:10701:buruma	TRS:10744:buruma	TRS:10788:buruma	TRS:10832:buruma	TRS:10878:buruma	TRS:10921:buruma
+burza	S:32:биржа	S:32:биржа
+bush	S:77:буш	S:473:буш	S:475:буш	S:77:буш	S:473:буш	S:475:буш
+bushe	S:552:буша	S:552:буша
+bushnell	S:514:бушнелл	S:514:bushnell
+bushova	S:169:администрация буша	S:633:клубка	S:169:администрация буша	S:633:администрация
+bushovi	S:487:бушу	S:487:бушу
+business	TRS:50031:v
+buttiglione	S:538:буттильоне –	S:538:рокко буттильоне
+buy	TRS:59258:,
+buy-	TRS:70875:akciovém	TRS:70877:sklouzl
+buď	S:203:в	S:533:осудить или	S:203:либо	S:533:осудить или
+buďto	S:92:укомплектованные либо	S:92:либо
+buňkami	S:970:женские	S:970:клетками
+buňkách	S:971:стволовых клеток	S:971:клетках
+by	S:2:может	S:3:можно	S:8:может	S:12:не	S:17:	S:17:позволит	S:62:разпад	S:62:будет	S:63:потребуется	S:69:улучшить	S:74:	S:86:бы	S:87:бы	S:103:должен	S:115:	S:116:	S:147:блока	S:156:если прекратит	S:160:	S:160:	S:186:	S:203:	S:210:пусть	S:212:ускорит	S:234:приведёт	S:234:будет	S:262:должны	S:304:	S:323:бы	S:335:может	S:350:	S:363:будет	S:381:должны	S:389:	S:391:бы	S:396:следует	S:423:	S:424:должна	S:425:может	S:436:должна	S:441:депортациями	S:456:by	S:508:может	S:520:могут	S:523:позволит	S:539:	S:541:должны	S:556:могут	S:556:вернется	S:567:	S:574:бы	S:576:	S:618:	S:618:	S:622:заходя	S:623:бы	S:636:	S:637:не	S:642:остальных	S:648:бы	S:648:бы	S:658:следует	S:660:покажет	S:662:подорвет	S:663:-башира	S:674:введет	S:686:бы	S:700:могут	S:700:	S:724:должно	S:729:	S:730:может	S:731:должны	S:752:бы	S:779:испортив	S:806:среднем	S:813:бы	S:816:вполне	S:819:необходимо	S:823:генерируя	S:834:должны	S:846:должны	S:853:бы	S:864:следует	S:866:	S:866:	S:866:	S:867:будет	S:868:должен	S:875:	S:880:	S:881:	S:893:могли бы	S:897:	S:899:невероятными	S:936:должен	S:971:	S:991:	S:994:может	S:995:	S:998:бы	S:998:будет	S:2:может	S:3:можно бы	S:8:позиция	S:12:бы	S:17:следует	S:17:annapoliský	S:62:может	S:62:	S:63:бы	S:69:бы	S:74:более	S:86:	S:87:очередь	S:103:должен	S:115:odmaturovat	S:116:бы	S:147:может	S:156:бы	S:160:	S:160:может	S:186:	S:203:бы	S:210:бы	S:212:стимул	S:234:	S:234:образом бы	S:262:должны	S:304:	S:323:бы	S:335:бы	S:350:не	S:363:мудрее	S:381:должны	S:389:должен	S:391:	S:396:должен	S:423:удивляться	S:424:должен	S:425:	S:436:должны	S:441:бы	S:456:бы	S:508:должно	S:520:бы	S:523:	S:539:	S:541:должны	S:556:бы	S:556:vyděšená	S:567:должно	S:574:должно	S:576:	S:618:	S:618:	S:622:zašli	S:623:бы	S:636:должно	S:637:должны	S:642:соглашениях	S:648:listin	S:648:бы	S:658:должно	S:660:оказалось	S:662:мус	S:663:bašírovu	S:674:бы	S:686:бы	S:700:бы	S:700:может	S:724:должен	S:729:	S:730:бы	S:731:нельзя	S:752:они	S:779:бы	S:806:может	S:813:	S:816:вполне	S:819:бы	S:823:	S:834:должны	S:846:должны	S:853:бы	S:864:должны	S:866:	S:866:бы	S:866:vypomáhaly бы	S:867:zadlužená	S:868:бы	S:875:должны	S:880:могут	S:881:бы	S:893:бы	S:897:бы	S:899:бы	S:936:должно	S:971:если бы	S:991:	S:994:бы	S:995:	S:998:бы	S:998:бы
+bych	S:885:я бы хотел	S:889:я бы	S:885:я бы подчеркнул	S:889:я ответил
+bychom	S:801:мы бы	S:932:мы бы	S:801:мы	S:932:мы
+bydliště	S:843:73000	S:843:73000
+bydlí	S:154:айман	S:154:проживают
+byl	S:44:	S:103:была	S:314:	S:318:был	S:327:был	S:365:был	S:367:был	S:401:был	S:434:	S:476:был	S:527:была	S:530:	S:533:считал	S:582:был	S:582:самодовольным	S:647:был	S:662:он создан	S:734:был	S:782:занимал	S:881:	S:900:представлял	S:994:евс	S:44:был	S:103:была	S:314:был	S:318:он был	S:327:fanouškem	S:365:был	S:367:nero	S:401:	S:434:был	S:476:был	S:527:был	S:530:был	S:533:был	S:582:был	S:582:	S:647:был	S:662:был	S:734:был	S:782:aboville	S:881:был	S:900:был	S:994:был
+byla	S:31:была	S:42:была	S:267:были	S:317:была	S:323:	S:324:была	S:326:заряжен	S:463:была	S:521:летать	S:535:папы	S:580:широкое	S:614:была	S:649:было	S:710:было	S:775:она оставалась	S:854:	S:869:	S:991:подтолкнуть	S:31:была	S:42:была	S:267:была	S:317:была	S:323:было	S:324:музыка	S:326:была	S:463:была	S:521:были	S:535:была папы	S:580:она была	S:614:	S:649:была	S:710:была	S:775:была	S:854:была	S:869:počata	S:991:была
+byli	S:343:кочевники были	S:479:они были	S:586:были	S:801:были	S:872:были	S:875:	S:947:	S:343:kočovníci были	S:479:были	S:586:были	S:801:были	S:872:	S:875:были	S:947:были
+bylo	S:3:воздушными	S:12:аннаполисе	S:42:было	S:86:было	S:112:	S:141:было	S:234:	S:256:было	S:341:была разгромлена	S:391:	S:409:происходило	S:509:препятствующих	S:586:	S:601:волка	S:602:	S:648:	S:649:было	S:652:наказаны	S:694:	S:807:	S:872:заключалась	S:897:было	S:3:было	S:12:было	S:42:было	S:86:	S:112:членства	S:141:было	S:234:было	S:256:было	S:341:было	S:391:было	S:409:было	S:509:можно было	S:586:было	S:601:было	S:602:осетии	S:648:было	S:649:было	S:652:было	S:694:было	S:807:было	S:872:было	S:897:было
+byly	S:40:времен	S:104:	S:106:	S:107:были	S:149:	S:324:считались	S:342:были	S:437:операцией	S:449:отметались	S:469:были	S:844:было	S:858:были	S:858:они были	S:868:удовлетворить	S:899:невероятными	S:917:mac	S:40:	S:104:были	S:106:йенах	S:107:были	S:149:были	S:324:считались	S:342:были	S:437:актов	S:449:были	S:469:были	S:844:были	S:858:были	S:858:непопулярные	S:868:	S:899:были немыслимы	S:917:mac
+byrokrat	S:476:бюрократ	S:476:бюрократ
+byrokraté	S:377:бюрократы	S:377:и бюрократы
+byrokratům	S:448:неуспешную политику бюрократов	S:448:бюрократам
+byung-	TRS:2493:byung	TRS:2528:byung	TRS:2564:byung	TRS:2595:byung
+byť	S:37:хотя	S:239:хотя	S:539:	S:703:булыжниками даже если	S:892:хотя	S:37:хотя	S:239:даже если	S:539:даже	S:703:даже если	S:892:хотя
+bádání	S:493:изысканий	S:815:	S:493:исследований	S:815:исследования
+bázi	S:45:уровне	S:45:основе
+bårdsen	TRS:6125:gunnar bårdsen
+bête	TRS:86340:
+bídě	S:217:нищете	S:217:бедности
+börse	TRS:84317:
+být	S:7:вещь	S:84:быть	S:132:быть	S:147:блока	S:152:	S:159:гражданами	S:201:	S:206:стать	S:259:	S:293:быть	S:347:отделение	S:373:быть	S:375:стали	S:436:быть	S:475:быть	S:543:быть	S:551:дискредитированными	S:602:суверенность	S:624:,	S:636:справедливых	S:637:стать	S:659:быть	S:671:скептическим	S:724:быть	S:881:администрациях	S:881:	S:7:быть	S:84:игроком	S:132:быть	S:147:быть	S:152:быть	S:159:гражданами	S:201:быть	S:206:быть inženýrem	S:259:быть	S:293:быть	S:347:быть	S:373:быть	S:375:nudní	S:436:быть	S:475:быть	S:543:быть	S:551:быть	S:602:быть	S:624:-видимому	S:636:быть	S:637:быть	S:659:быть	S:671:становится	S:724:быть	S:881:быть	S:881:
+bývají	S:565:часто	S:565:часто
+bývali	S:189:	S:474:прагматиками	S:189:был	S:474:был
+bývaly	S:893:	S:893:ataků были
+bývalé	S:148:бывшие	S:413:югославии	S:795:бывшие	S:148:бывшие	S:413:бывшей	S:795:бывшие
+bývalý	S:321:	S:490:бывший	S:590:бывший	S:321:бывший	S:490:бывший	S:590:бывший
+bývalým	S:925:	S:925:бывший
+bývá	S:429:возлагается	S:643:, часто обвинялись	S:429:uváděna	S:643:,
+běh	S:557:однополярные	S:557:ход
+během	S:168:холодной	S:178:	S:181:	S:216:	S:231:в течение	S:282:в	S:342:во время	S:535:папы в	S:626:гавану	S:736:на протяжении	S:792:в течение	S:802:в	S:859:в течение	S:867:на протяжении	S:886:за	S:893:в	S:936:во время	S:938:церемонии	S:966:во время огораживания	S:168:во время	S:178:во время	S:181:в течение	S:216:rozbujelých во время	S:231:в течение	S:282:в течение	S:342:во время	S:535:во время	S:626:в ходе	S:736:за	S:792:дефектов в	S:802:в	S:859:в течение	S:867:в течение	S:886:за	S:893:ataků во время	S:936:во время	S:938:во время slavnostního	S:966:во время
+bělorusko	S:153:белоруссия другое	S:153:беларусь
+běloruská	S:156:а	S:156:белоруссии
+běloši	S:460:уборными	S:460:белые
+běžnou	S:517:	S:517:обычным
+běžná	S:697:породы	S:697:обычным делом
+běžné	S:106:	S:106:обычным
+běžného	S:936:по текущим	S:936:текущего платежного
+běžném	S:104:текущих	S:104:текущего
+běžný	S:401:	S:401:общепринятой
+běžných	S:245:	S:245:простых
+běží	S:291:идет	S:291:значение
+břemenem	S:236:бременем	S:236:бременем
+břemeno	S:885:тяжесть	S:885:бремя
+března	S:137:марта	S:701:марта	S:137:марта	S:701:марта

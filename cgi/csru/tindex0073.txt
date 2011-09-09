@@ -1,0 +1,900 @@
+s	TRS:14006:s	TRS:18604:s	TRS:18605:.	TRS:18606:	TRS:18607:	TRS:25504:	TRS:25756:ratingové	TRS:25756:poor	TRS:29231:s	TRS:29640:, hlavním	TRS:36375:nadace	TRS:41400:s	TRS:45959:	TRS:45994:	TRS:50909:s	TRS:56188:	TRS:67905:	TRS:68759:	TRS:70147:městech	TRS:70148:	TRS:70773:o	TRS:70861:jednou	TRS:70862:růst	TRS:70935:2,56	TRS:71051:poor	TRS:71052:indexu	TRS:71204:	TRS:71207:story	TRS:71208:akciemi	TRS:71219:doby odvaha čínského finančního tisku roste	TRS:71231:neztrácím	TRS:74326:,	TRS:78813:´	TRS:78817:drtivě	TRS:78819:s	TRS:80668:hodnocení	TRS:84920:deník the people	TRS:84955:pomoc	TRS:85737:does	TRS:87990:	S:2:с	S:2:с	S:4:с	S:7:с	S:12:исключить	S:13:с	S:14:	S:14:с	S:14:	S:15:	S:35:апокалипсический	S:36:	S:49:опыта	S:54:беспорядочных	S:56:с	S:63:с	S:64:со	S:76:с	S:80:со	S:82:с	S:86:	S:87:содействия	S:89:с	S:95:с	S:125:	S:135:с	S:148:с	S:155:с	S:158:кричит	S:176:с	S:193:труд	S:197:	S:197:в низкой	S:211:	S:226:конгресса	S:233:с	S:236:с	S:260:с	S:268:с	S:276:	S:281:с	S:308:с	S:322:	S:331:дворак	S:354:с	S:381:с	S:398:сплачивающие	S:401:с	S:401:с	S:402:с	S:419:с	S:429:	S:432:футбольных	S:452:с	S:458:с	S:473:и	S:485:названием	S:485:манипулирования	S:494:с	S:496:взаимосвязях и	S:497:с	S:516:	S:520:исключением	S:528:с	S:544:и	S:549:	S:556:с	S:584:межакадемический	S:584:	S:587:с	S:600:названием	S:606:с	S:626:с	S:640:с	S:654:	S:667:с	S:668:с	S:708:с	S:713:	S:719:с	S:750:палин	S:752:с	S:771:с	S:775:с	S:779:с	S:795:с	S:802:с	S:818:с	S:819:	S:820:	S:820:адаптации	S:824:объемами	S:825:	S:846:	S:852:с	S:875:	S:875:	S:889:внутреннему	S:903:	S:906:s	S:908:с	S:938:с	S:940:исполнили	S:954:прутьев	S:970:женские	S:974:с	S:983:лекарственным	S:985:с	S:986:к	S:994:с	S:999:с	S:2:с	S:2:с	S:4:с	S:7:с	S:12:с	S:13:с	S:14:с	S:14:с	S:14:с	S:15:с	S:35:с	S:36:с	S:49:с	S:54:используя	S:56:с	S:63:с	S:64:с	S:76:с	S:80:с	S:82:с	S:86:с	S:87:с	S:89:с	S:95:с	S:125:с	S:135:с	S:148:с	S:155:с	S:158:с	S:176:с	S:193:с	S:197:с	S:197:с	S:211:с	S:226:с	S:233:с	S:236:с	S:260:с	S:268:с	S:276:с	S:281:с	S:308:с	S:322:с	S:331:с	S:354:с	S:381:с	S:398:с	S:401:с	S:401:с	S:402:с	S:419:с	S:429:с	S:432:исключением	S:452:с	S:458:с	S:473:с	S:485:с	S:485:с	S:494:с	S:496:с	S:497:с	S:516:с	S:520:исключением	S:528:с	S:544:с	S:549:с	S:556:с	S:584:с	S:584:названием	S:587:с	S:600:названием	S:606:с	S:626:с	S:640:с	S:654:с	S:667:с	S:668:с	S:708:после	S:713:со	S:719:с	S:750:с	S:752:с	S:771:с	S:775:с	S:779:с	S:795:с	S:802:с	S:818:с	S:819:с	S:820:с	S:820:адаптироваться	S:824:выбросами	S:825:с	S:846:с	S:852:с	S:875:с	S:875:исключением	S:889:с	S:903:с	S:906:s	S:908:с	S:938:с	S:940:в	S:954:с	S:970:с	S:974:с	S:983:vyskytujících	S:985:с	S:986:больных	S:994:с	S:999:с
+sa	TRS:71202:	TRS:71202:	S:443:са расистских законах	S:443:саад
+saad	TRS:33898:saad	TRS:33938:saad	TRS:33970:saad	TRS:34004:saad	TRS:34038:saad	TRS:34073:saad	TRS:34123:saad	TRS:34166:saad	TRS:34197:saad
+saarc	TRS:12664:proběhne	TRS:12681:islámábádském
+sabah	TRS:53497:	TRS:53543:sabah
+sabotovat	S:617:саботировать	S:617:саботировать
+sachs	TRS:17740:	TRS:34843:kvůli	TRS:59339:ve	TRS:59698:sachs	TRS:59717:	TRS:62190:sachs	TRS:62227:sachs	TRS:62257:sachs	TRS:62309:sachs	TRS:62340:sachs	TRS:62381:sachs	TRS:62415:sachs	TRS:62444:sachs	TRS:62478:sachs	TRS:62513:sachs	TRS:62554:sachs	TRS:62600:sachs	TRS:62637:sachs	TRS:62683:sachs	TRS:62721:sachs	TRS:62755:sachs	TRS:62792:sachs	TRS:62833:sachs	TRS:62867:sachs	TRS:62903:sachs	TRS:62949:sachs	TRS:62985:sachs	TRS:63019:sachs	TRS:63076:sachs	TRS:63137:sachs	TRS:63181:sachs	TRS:63226:sachs	TRS:63263:sachs	TRS:63307:sachs	TRS:63346:sachs	TRS:63386:sachs	TRS:63427:sachs	TRS:63459:sachs	TRS:63502:sachs	TRS:63542:sachs	TRS:63584:sachs	TRS:63624:sachs	TRS:63662:sachs	TRS:63702:sachs	TRS:63745:sachs	TRS:63790:sachs	TRS:63831:sachs	TRS:63865:sachs	TRS:63948:sachs	TRS:63993:sachs	TRS:64049:sachs	TRS:64089:sachs	TRS:64128:sachs	TRS:64178:sachs	TRS:64220:sachs	TRS:64257:sachs	TRS:64299:sachs	TRS:64338:sachs	TRS:64376:sachs	TRS:64415:sachs	TRS:64454:sachs	TRS:64491:sachs	TRS:64539:sachs	TRS:64583:sachs	TRS:64618:sachs	TRS:64668:sachs	TRS:64704:sachs	TRS:64751:sachs	TRS:64788:sachs	TRS:64837:sachs	TRS:64879:sachs	TRS:64918:sachs	TRS:64955:sachs	TRS:65004:sachs	TRS:65044:sachs	TRS:65085:sachs	TRS:65121:sachs	TRS:65161:sachs	TRS:65210:sachs	TRS:65254:sachs	TRS:65296:sachs	TRS:65339:sachs	TRS:65377:sachs	TRS:65414:sachs	TRS:65457:sachs	TRS:65510:sachs	TRS:65545:sachs	TRS:65587:sachs	TRS:65634:sachs	TRS:65669:sachs	TRS:65716:sachs	TRS:65757:sachs	TRS:65803:sachs	TRS:65851:sachs	TRS:65893:sachs	TRS:65935:sachs	TRS:65978:sachs	TRS:66018:sachs	TRS:66063:sachs	TRS:66111:sachs	TRS:66160:sachs	TRS:66199:sachs	TRS:66242:sachs	TRS:66292:sachs	TRS:66338:sachs	TRS:66377:sachs	TRS:66424:sachs	TRS:66464:sachs	TRS:66507:sachs	TRS:66541:sachs	TRS:66584:sachs	TRS:66623:sachs	TRS:66670:sachs	TRS:66705:sachs	TRS:66741:sachs	TRS:69001:sachs ceny bydlení ,	TRS:69475:goldman
+sackler	TRS:41326:
+sadc	TRS:49830:třinácti	TRS:49838:kterou	TRS:65174:zlořád	TRS:65175:narusí sadc	TRS:65175:mbekiho .	TRS:65205:.
+saddáma	S:434:саддама	S:434:саддама
+sadiqi	TRS:66825:sadiqi
+sadjadpour	TRS:66861:karim sadjadpour	TRS:66915:karim sadjadpour	TRS:66954:karim sadjadpour
+sahají	S:468:	S:468:идут
+sahajících	S:704:распространившемся с 1970-ых годов	S:704:освободительных
+saich	TRS:67065:tony saich
+salaire	TRS:71213:utajované
+saleem	TRS:37540:saleem
+salem	TRS:67145:salem	TRS:67181:salem
+sally	TRS:67218:sally
+salt	TRS:30755:duchu
+salter-nour	TRS:67274:cordelia salter
+salvador	S:680:самайоа	S:680:развитие сальвадора
+salvadorská	S:676:фронт	S:676:salvadorská
+salvadoru	S:678:серен	S:678:сальвадоре
+sama	S:687:сэма	S:687:одиночку
+samayoa	S:680:самайоа	S:680:samayoa
+sami	S:354:	S:402:они	S:759:	S:354:	S:402:они	S:759:сами
+samina	TRS:2458:samina
+samolibého	S:582:псевдосоциализмом	S:582:самодовольной
+samolibému	S:432:чопорной	S:432:samolibému
+samolibých	S:448:рассматривались	S:448:чрезмерного
+samolibě	S:487:	S:487:самодовольно
+samosprávou	S:10:автономией	S:10:властями
+samotné	S:160:сама	S:864:подкреплён	S:922:по	S:160:меняется ,	S:864:	S:922:
+samotný	S:70:пакистан сам	S:454:саму	S:70:пакистан	S:454:сам
+samozřejmým	S:495:паранойи	S:495:очевидный
+samozřejmě	S:188:, конечно ,	S:274:разыгрывать	S:328:конечно ,	S:331:заппа	S:366:,	S:685:разумеется ,	S:718:конечно	S:967:конечно ,	S:995:	S:188:pokročily	S:274:, конечно ,	S:328:, конечно же ,	S:331:wagnerem	S:366:, конечно ,	S:685:, конечно ,	S:718:конечно	S:967:конечно же ,	S:995:, конечно же ,
+samsung	TRS:2507:	TRS:2509:převzala	TRS:2509:od	TRS:87255:momentálně
+samy	S:100:они	S:100:сами
+samé	S:232:	S:232:вершину
+san	TRS:42930:se
+sanace	S:209:оказание помощи банкам происходит	S:209:очистки
+sanjay	TRS:41837:sanjay
+sanjiu	TRS:87251:
+sankcí	S:22:санкций	S:63:санкций	S:22:санкций	S:63:санкции
+sanou	TRS:45100:sanou	TRS:45137:sanou
+sans	TRS:49588:tento
+santayany	S:430:сантаяны гласит	S:430:santayany
+sanují	S:100:пытаются	S:100:sanují
+sap	TRS:900:
+sarkozy	S:176:саркози	S:177:саркози	S:179:саркози	S:176:саркози	S:177:саркози	S:179:саркози
+sarkozyho	S:175:саркози	S:180:саркози	S:183:атлантистские	S:186:саркози	S:755:саркози	S:175:саркози	S:180:саркози	S:183:саркози	S:186:саркози	S:755:саркози
+sars	TRS:12106:	TRS:12130:mezidruhově	TRS:12133:náhodně	TRS:12141:onemocnění	TRS:12145:jak	TRS:35867:větší	TRS:35874:sars	TRS:56091:	TRS:65722:	TRS:65740:sars
+sarwar	TRS:67323:sarwar
+sasha	TRS:313:sasha abramsky
+satarov	TRS:67391:satarov	TRS:67431:satarov
+satyabrata	TRS:12574:satyabrata	TRS:12617:satyabrata	TRS:12659:satyabrata	TRS:12698:satyabrata
+save	TRS:41288:pracující v rámci	TRS:74922:children
+savent	TRS:71211:šlo
+saving	TRS:41288:rámci
+sayan	TRS:67498:sayan
+sayigh	TRS:67536:sayigh
+sayonara	TRS:22447:
+saúdská	S:65:саудовской	S:65:саудовская
+saúdské	S:738:саудовской	S:738:саудовской
+saúdském	S:42:саудовском	S:42:саудовском
+sbohem	S:629:прощай	S:629:прощай
+sborům	S:658:боязни возмездия за миротворцев	S:658:миротворческие силы
+sběru	S:124:собирания	S:771:собирания	S:124:сбора	S:771:сбора
+scalapino	TRS:67563:scalapino
+scestí	S:431:серьёзное заблуждение	S:431:заблуждение
+schadenfreude	TRS:31157:říkají	TRS:47923:říkají	TRS:77535:škodolibost
+schatten	TRS:76671:s	TRS:76707:globalisierung vydalo	TRS:76744:globalisierung "	TRS:76791:globalisierung "	TRS:76887:globalisierung "	TRS:76935:globalisierung "	TRS:76978:la grande desillusion
+schell	TRS:35751:schell	TRS:67752:schell	TRS:67783:schell	TRS:67819:schell	TRS:67851:schell	TRS:67880:schell	TRS:67922:schell	TRS:68003:schell	TRS:68141:schell	TRS:68180:schell	TRS:68225:schell
+schevardnadze	TRS:67604:schevardnadze
+schiebinger	TRS:68032:schiebinger
+schlaraffenland	TRS:21866:
+schnapper	TRS:68113:schnapper
+schodky	S:875:	S:909:формируя	S:875:дефицит	S:909:дефицит
+school	TRS:25504:	TRS:36845:	TRS:37354:	TRS:39933:chystané	TRS:39980:
+schopni	S:115:смогут	S:115:способны odmaturovat
+schopnost	S:90:способность	S:203:охватившей	S:519:	S:582:	S:662:	S:90:способность	S:203:способность	S:519:способности	S:582:способность	S:662:способность
+schopnosti	S:809:интеллект	S:942:	S:809:способности	S:942:конкурентоспособности
+schopné	S:273:состоянии	S:273:будут
+schwarzer	S:990:schwarzer	S:990:schwarzer
+schäuble	TRS:67649:schäuble
+schůzkou	S:959:совещанием повысило	S:959:встречи
+science	TRS:9227:časopise science výsledky výzkumu , který	TRS:13137:	TRS:36553:.	TRS:36562:a	TRS:50880:	TRS:60642:titulem	TRS:71620:.	TRS:72476:časopis	TRS:72481:odvolal	TRS:73975:v	TRS:73978:, jež vědce
+sciences	TRS:14903:červen	TRS:15411:sciences	TRS:25671:ekonomie	TRS:25709:po	TRS:25740:a	TRS:28390:na	TRS:29326:studentů	TRS:29327:,	TRS:44071:sciences	TRS:45856:na	TRS:45927:	TRS:50089:sciences	TRS:50291:a	TRS:50292:sciences	TRS:67685:březen	TRS:71233:	TRS:75525:sciences	TRS:85072:for
+sciences-	TRS:84985:paříži
+scientific	TRS:27085:a
+scientifique	TRS:73762:	TRS:73840:
+score	TRS:38616:milionů
+scott	TRS:84753:scott	TRS:84788:scott
+scramble	TRS:84088:	TRS:84098:označeného
+scénářem	S:719:сценарием	S:719:сценария
+sdr	TRS:74563:,
+sdružení	S:395:асеан	S:395:ассоциаций
+sdružených	S:604:входящих	S:604:собранных
+sdílela	S:529:разделяли	S:529:себя
+sdílený	S:544:так совместные	S:544:осознание
+sdílet	S:84:единой для	S:84:использовать
+sdělil	S:487:манмохан	S:487:сказал
+se	TRS:19965:	TRS:68364:	TRS:68366:prospěšné	TRS:68369:kvót	TRS:68373:globálního	TRS:68379:smutnému	TRS:68395:	TRS:68400:	TRS:68400:	TRS:71198:se	TRS:71200:	TRS:71221:	S:6:	S:6:внезапно	S:12:	S:13:надеются	S:15:изменилась	S:15:афганские	S:15:	S:16:оказался	S:17:	S:17:	S:19:полагал	S:19:	S:20:	S:21:сумел	S:27:	S:35:,	S:36:	S:39:основываться	S:39:	S:46:,	S:50:,	S:50:оказались	S:52:	S:59:обамы	S:60:с	S:63:	S:66:с	S:78:	S:80:	S:82:	S:85:	S:86:	S:90:	S:101:внимание	S:104:	S:105:	S:107:с	S:109:похоже	S:116:	S:119:	S:121:основан	S:123:они	S:127:	S:132:с	S:133:предстоит	S:135:	S:145:айман	S:148:	S:150:они	S:157:	S:158:она	S:159:себя	S:160:боится	S:160:меняется	S:169:	S:174:	S:178:ошибаются	S:178:изменилось	S:180:	S:182:	S:184:	S:184:	S:185:,	S:186:	S:187:	S:191:	S:192:	S:192:	S:194:оно ,	S:196:приспособиться	S:199:учиться	S:199:	S:200:	S:201:	S:203:по	S:209:происходит	S:210:	S:218:возвращаться	S:221:	S:223:ошибаются	S:225:улицах	S:229:	S:230:обратились	S:230:обратились	S:231:оказались	S:232:	S:236:справиться	S:242:вернулись	S:244:	S:249:,	S:251:стать	S:251:, пророчеством	S:256:	S:257:	S:262:избежать	S:277:	S:281:справиться	S:283:	S:284:мы	S:287:	S:302:пытается	S:303:опасались	S:303:удалось	S:303:	S:307:	S:308:	S:316:не	S:316:	S:317:	S:320:	S:322:	S:344:заморожено	S:354:они	S:360:	S:362:	S:365:украшенный	S:372:смеются	S:376:	S:389:применения	S:389:	S:393:	S:393:	S:400:	S:405:,	S:413:отделились	S:414:избавиться	S:415:правило	S:419:	S:422:	S:422:и	S:425:	S:425:перерасти	S:426:	S:426:	S:430:	S:432:	S:440:	S:446:	S:447:разоблачался	S:448:	S:462:себя	S:468:с	S:473:произошло	S:487:	S:493:обычно	S:493:	S:495:	S:495:с	S:497:	S:505:	S:515:стареющей	S:515:со	S:517:становятся	S:529:	S:540:стали	S:545:были	S:546:	S:549:присоединились	S:551:в	S:553:ухудшающаяся	S:555:варьируются	S:556:	S:573:сумели	S:577:	S:586:	S:590:	S:591:	S:593:	S:609:когда	S:615:похоже	S:622:	S:624:,	S:624:вернуться	S:626:	S:627:	S:630:	S:630:	S:634:	S:635:стать	S:636:	S:637:не	S:638:оказались	S:639:	S:643:они	S:644:интересует	S:645:	S:646:	S:653:слободаном	S:658:	S:660:избегать	S:661:	S:665:вступил	S:667:	S:684:покажет	S:690:спросите	S:690:	S:695:, как	S:700:	S:706:	S:711:уклонялось	S:714:	S:716:уклониться	S:720:структурно	S:722:становятся	S:728:	S:729:	S:730:	S:736:было	S:739:ошибаются	S:740:	S:747:жены	S:749:избежать	S:750:	S:750:	S:755:	S:757:стимуляторов	S:760:	S:762:	S:763:,	S:764:	S:767:приспосабливаются	S:768:	S:780:подходит	S:787:кажется	S:788:с	S:789:	S:789:что	S:791:воздуха	S:792:,	S:795:	S:796:	S:801:	S:802:	S:807:ли	S:809:	S:814:пытались	S:816:	S:816:	S:817:появляются	S:825:	S:832:	S:834:станут	S:841:не	S:843:	S:845:невмешательства	S:848:	S:851:нарушила	S:852:,	S:855:	S:856:	S:861:	S:862:	S:862:	S:864:подкреплён	S:866:	S:868:	S:875:	S:879:кажется	S:882:ситуация	S:883:перевешивали	S:887:	S:887:выходят	S:888:переходят	S:889:	S:891:	S:894:растет	S:894:она	S:896:проявляется	S:898:	S:898:она	S:906:,	S:906:	S:907:выплачена	S:911:	S:914:	S:914:	S:923:	S:929:	S:936:с	S:939:,	S:943:с	S:946:стало	S:962:, пользуясь	S:963:	S:966:,	S:967:используются	S:968:	S:970:	S:971:	S:974:	S:976:	S:977:,	S:983:	S:991:появились	S:999:лобового	S:6:	S:6:neodtáhne	S:12:	S:13:полагают	S:15:изменилось	S:15:,	S:15:участвовал	S:16:стал	S:17:	S:17:	S:19:полагал	S:19:	S:20:	S:21:,	S:27:,	S:35:с	S:36:,	S:39:основываться	S:39:	S:46:,	S:50:	S:50:участвовать	S:52:	S:59:,	S:60:расширяющуюся	S:63:	S:66:со	S:78:	S:80:	S:82:	S:85:,	S:86:	S:90:служит	S:101:рассмотрим	S:104:,	S:105:,	S:107:	S:109:	S:116:говорят	S:119:	S:121:,	S:123:служит	S:127:	S:132:,	S:133:	S:135:	S:145:берут	S:148:стали ,	S:150:они	S:157:	S:158:сих	S:159:себя	S:160:опасается	S:160:	S:169:похоже	S:174:	S:178:ошибаются	S:178:изменилось	S:180:	S:182:	S:184:объединились	S:184:начали	S:185:,	S:186:	S:187:	S:191:,	S:192:ли	S:192:	S:194:	S:196:приспособиться	S:199:делиться	S:199:	S:200:переехать	S:201:, они	S:203:опасается	S:209:появились	S:210:	S:218:	S:221:рухнул	S:223:ошибаются	S:225:улицах	S:229:обамы	S:230:обратились ,	S:230:обратились	S:231:	S:232:	S:236:справиться	S:242:вернуться	S:244:	S:249:,	S:251:,	S:251:самореализующееся	S:256:	S:257:пытался	S:262:избежать	S:277:касаются ,	S:281:справиться	S:283:с	S:284:избавиться ,	S:287:	S:302:пытаются	S:303:опасались	S:303:опасались	S:303:	S:307:,	S:308:	S:316:солидаризируется	S:316:солидаризируется	S:317:старается	S:320:слухи	S:322:	S:344:zakonzervovalo	S:354:	S:360:ошибаются	S:362:	S:365:,	S:372:sletům	S:376:идеалисты	S:389:они и	S:389:	S:393:	S:393:	S:400:, было	S:405:, со	S:413:,	S:414:избавиться	S:415:кажется	S:419:оставить	S:422:	S:422:делиться	S:425:происходит	S:425:	S:426:идут	S:426:основан	S:430:	S:432:	S:440:они	S:446:	S:447:, как правило	S:448:	S:462:plácali	S:468:утверждалось	S:473:произошло	S:487:	S:493:konspiračním	S:493:	S:495:становятся	S:495:с	S:497:	S:505:	S:515:стать	S:515:со	S:517:,	S:529:,	S:540:,	S:545:,	S:546:	S:549:,	S:551:,	S:553:ухудшающееся	S:555:,	S:556:они	S:573:	S:577:	S:586:	S:590:выступает	S:591:сосредотачиваются	S:593:не	S:609:,	S:615:похоже	S:622:боятся	S:624:,	S:624:вернуться	S:626:,	S:627:	S:630:	S:630:кажется	S:634:	S:635:,	S:636:не	S:637:стать	S:638:,	S:639:спиной	S:643:	S:644:собираются	S:645:	S:646:	S:653:слободаном	S:658:	S:660:	S:661:,	S:665:	S:667:	S:684:узнаем	S:690:спросите	S:690:	S:695:,	S:700:,	S:706:,	S:711:	S:714:	S:716:,	S:720:	S:722:	S:728:	S:729:пришли	S:730:ожидают ,	S:736:	S:739:ошибаются	S:740:	S:747:	S:749:избежать	S:750:	S:750:	S:755:	S:757:,	S:760:	S:762:полагают	S:763:,	S:764:,	S:767:,	S:768:	S:780:адаптироваться	S:787:похоже	S:788:не	S:789:	S:789:с	S:791:загрязнителей	S:792:,	S:795:,	S:796:которому	S:801:стать	S:802:, как	S:807:	S:809:	S:814:,	S:816:	S:816:,	S:817:начинает	S:825:,	S:832:с	S:834:превратится	S:841:, не	S:843:	S:845:faire ,	S:848:	S:851:, не	S:852:,	S:855:	S:856:переехать	S:861:	S:862:,	S:862:,	S:864:рождено	S:866:	S:868:	S:875:	S:879:кажется ,	S:882:ситуация	S:883:, сильно	S:887:,	S:887:zotavují	S:888:	S:889:спрашивают	S:891:сейчас ,	S:894:,	S:894:заголовках	S:896:,	S:898:	S:898:казалось	S:906:,	S:906:в	S:907:	S:911:они	S:914:,	S:914:,	S:923:принимает ,	S:929:,	S:936:	S:939:hypnotizovat	S:943:	S:946:,	S:962:	S:963:,	S:966:становится	S:967:,	S:968:,	S:970:исчезает	S:971:,	S:974:	S:976:	S:977:,	S:983:, vyskytujících	S:991:	S:999:
+sean	TRS:13098:sean
+sebastian	TRS:23116:sebastian	TRS:23146:sebastian	S:989:sebastian	S:989:sebastian
+sebastien	TRS:5746:sebastien
+sebe	S:512:мучеников	S:512:себя
+sebenaplňující	S:251:пророчеством	S:251:самореализующееся
+sebeuspokojení	S:432:чопорной	S:450:самодовольство	S:432:самоуверенность	S:450:спокойствия
+sebevražedných	S:915:медовый	S:915:взрывов террористов-смертников
+sebevědomí	S:758:в себе	S:758:уверенности
+sebezáchovy	S:255:самосохранения не	S:255:самосохранения не
+sebral	S:257:	S:257:быть
+sebrané	S:374:заставлять	S:374:sebrané
+second	TRS:72112:s	TRS:72118:second life	TRS:72122:mohl	TRS:72145:second life
+sector	TRS:68382:	TRS:68394:
+securitate	TRS:43923:
+securities	TRS:29814:securities	TRS:69478:securities	TRS:69823:yaleově	TRS:69854:a	TRS:69943:yaleově	TRS:70061:univerzitě	TRS:70177:univerzitě	TRS:70568:the 21	TRS:70685:order	TRS:70799:order	TRS:70916:order
+security	TRS:18229:medicaid	TRS:18234:ne zcela pochopili	TRS:18235:velkých	TRS:18237:svou	TRS:18238:správy	TRS:18242:zabezpečení	TRS:18242:	TRS:18243:sociálního zabezpečení	TRS:18244:je	TRS:18247:na	TRS:18251:	TRS:33711:	TRS:66045:medicare	TRS:68207:rádi	TRS:78492:vztahu programu	TRS:78496:pokladničních poukázek	TRS:78499:zabezpečení	TRS:78501:zabezpečení	TRS:78507:do	TRS:78510:zabezpečení	TRS:78514:,	TRS:78528:zabezpečení	TRS:78529:	TRS:78532:na
+sedm	S:941:течение семи	S:941:семь
+sedmdesát	S:217:75	S:217:70
+sedí	S:182:	S:182:сидят
+sedět	S:232:чернокожим не	S:232:сидеть
+segmentech	S:105:сфер	S:105:слоев
+seguir	TRS:68364:brettonwoodské
+segunda	TRS:68370:úprav
+seguros	TRS:68394:k
+sein	TRS:71212:
+sejdou	S:287:соберутся	S:287:стран мира соберутся
+sekt	S:243:межрелигиозного союза	S:243:сект
+sektor	S:918:сектор	S:918:сектор
+sektorové	S:863:отраслевого	S:863:секторных
+sektoru	S:901:сектора	S:924:сектора	S:901:сектора	S:924:сектора
+sektářských	S:243:межрелигиозного	S:243:сектантские
+selekce	S:983:	S:983:отбора
+self-	TRS:959:od
+selhala	S:395:провалилась	S:395:потерпела неудачу
+selhalo	S:395:постигла	S:395:провалились
+selhání	S:976:	S:976:ошибки
+selháních	S:100:	S:100:selháních регулятивного механизма
+selhávají	S:225:	S:225:провал водяную
+selžou	S:837:этим справиться вероятна возможность повторного возгорания	S:837:терпят неудачу
+semble	TRS:71218:cenných
+sen	TRS:2060:demokraticky	S:464:мечта	S:464:мечта
+sencillamente	TRS:68375:
+senlis	TRS:9262:senlis	TRS:36531:
+separatisté	S:416:сепаратисты высказывают версию о том	S:416:сепаратистами
+september	TRS:28474:září	TRS:44071:september
+ser	TRS:68377:	TRS:68382:	TRS:68390:spokojit	TRS:68393:měla	TRS:68397:,	TRS:68397:místní
+sera	TRS:81209:sera
+serdar	TRS:67498:serdar
+sergei	TRS:36007:sergei kapitsa	TRS:36099:sergei kapitsa	TRS:36176:sergei	TRS:36231:sergei	TRS:36260:sergei	TRS:36300:sergei	TRS:60415:sergei
+sergio	TRS:13574:
+seriózní	S:286:серьезно относиться к изменению	S:380:содержащих серьезный	S:286:серьезную	S:380:серьезных анализом
+serrйes	TRS:71207:
+service	TRS:41400:,
+services	TRS:75586:evropský
+será	TRS:68370:
+sesbíraly	S:126:выдали направления собрать их	S:126:sesbíraly
+sestavit	S:21:создание	S:21:сможет
+sestavováním	S:132:составлением	S:132:подобной sestavováním
+sestru	S:158:пятилетнюю сестру	S:158:пятилетнюю сестре
+setká	S:135:столкнулись тексте	S:135:сталкивается
+setkání	S:47:проведя	S:47:встрече
+setkáním	S:371:евангелистов	S:371:сессия
+setrvale	S:261:постоянно	S:261:постоянно
+setrvávají	S:605:абхазией	S:605:они
+setrvávání	S:916:идеально	S:916:setrvávání очевидна
+settling	TRS:85231:[
+seulement	TRS:71200:1978 svoje reformy , čína	TRS:71232:,
+seven	TRS:36834:seven
+seventy	TRS:18453:období
+severino	TRS:29012:jean	TRS:68284:jean	TRS:68321:jean	TRS:68360:jean
+severní	S:195:северная	S:197:севере	S:323:северную	S:335:северной	S:768:северной	S:195:северной	S:197:северной	S:323:северной	S:335:северной	S:768:северной
+severním	S:816:северном	S:816:северном
+severokorejskou	S:319:северной кореи	S:319:северокорейским
+severokorejské	S:337:-групп	S:337:северной кореи
+señalado	TRS:68396:světové
+sežral	S:597:съел	S:597:sežral
+sežrat	S:598:съесть ягненка	S:598:sežrat
+sfor	TRS:67703:sfor konce
+sgp	TRS:82267:stability
+shafak	TRS:68445:shafak
+shall	TRS:50672:
+shan	TRS:36375:sdružení šanských žen ( swan ) a šanská	TRS:36375:to	TRS:87898:
+shanghai	TRS:70773:kompozitní index upravený	TRS:70850:
+shapiro	TRS:68598:shapiro
+shashi	TRS:81929:nedozpívaná	TRS:81973:shashi	TRS:82012:shashi	TRS:82055:shashi	TRS:82094:shashi
+shaw	TRS:19232:zase	TRS:68706:-	TRS:72699:-
+sheff	TRS:68747:sheff
+shell	TRS:37380:shell	TRS:50584:že	TRS:74910:
+shevtsova	TRS:68785:lilia shevtsova	TRS:68827:lilia shevtsova
+shikaki	TRS:68869:shikaki	TRS:68910:shikaki	TRS:68946:shikaki
+shiller	TRS:69957:shillerových	TRS:70148:o indexy
+shimbun	TRS:26833:jinak
+shlapentokh	TRS:71132:shlapentokh
+shlomo	TRS:4551:shlomo	TRS:4573:shlomo	TRS:4610:shlomo	TRS:4642:shlomo	TRS:4683:shlomo	TRS:4720:shlomo	TRS:4745:shlomo	TRS:4783:shlomo	TRS:4826:shlomo	TRS:4852:shlomo	TRS:4891:shlomo	TRS:4912:shlomo	TRS:4949:shlomo	TRS:4975:shlomo	TRS:5011:shlomo	TRS:5045:shlomo	TRS:5074:shlomo	TRS:5101:shlomo	TRS:5129:shlomo	TRS:5163:shlomo	TRS:5200:shlomo	TRS:5233:shlomo	TRS:5266:shlomo	TRS:5305:shlomo	TRS:5335:shlomo	TRS:5367:shlomo	TRS:5409:shlomo	TRS:6616:shlomo	TRS:6647:shlomo	TRS:6681:shlomo	TRS:6721:shlomo	TRS:6752:shlomo	TRS:6789:shlomo	TRS:6825:shlomo	TRS:6856:shlomo	TRS:6891:shlomo	TRS:6920:shlomo	TRS:6951:shlomo	TRS:6984:shlomo	TRS:7018:shlomo	TRS:7050:shlomo
+shodou	S:52:региональному политическому подходу	S:52:случайно
+shody	S:63:	S:63:согласия
+shouhui	TRS:12199:gongkuan	TRS:12201:ať
+show	S:371:шоу	S:371:шоу
+shrf	TRS:36375:	TRS:36380:swan	TRS:36386:shrf se
+shrne	S:132:вмещающей себя	S:132:shrne
+shromažďovat	S:123:собирать	S:123:собирать
+shromážděním	S:371:	S:371:собранием
+shuang	TRS:12194:ve které spoluexistují
+shuli	TRS:71197:shuli
+shura	TRS:76100:patří šúra
+si	TRS:68366:	TRS:68389:	TRS:68397:	S:26:хочет	S:40:печально	S:58:	S:70:признать	S:95:призван	S:101:	S:129:потребует	S:132:	S:138:позволить	S:151:	S:156:	S:160:	S:177:обещанный	S:178:думая	S:192:знаменательное	S:250:	S:258:заслуживают	S:265:не	S:275:заслуживают	S:278:выбран	S:285:признаем	S:317:	S:350:тибетцы	S:370:	S:374:	S:377:научились	S:381:себе	S:382:клоуна	S:404:помнят	S:461:	S:479:	S:486:читают	S:491:умирать	S:496:реакционеры	S:505:	S:559:себя	S:582:	S:601:себе	S:632:думает	S:660:	S:687:истолкуют	S:722:	S:749:вероятностью	S:759:осознавать	S:759:	S:781:масштабам	S:789:,	S:794:детородного	S:827:признают	S:856:заработать	S:858:жаловаться	S:859:вспомнить	S:864:	S:905:посчитайте	S:908:сравните	S:913:помните	S:914:	S:931:оправдать	S:947:	S:948:ноябрьский	S:970:заметили	S:26:хочет	S:40:сохраняет	S:58:пакистанские ,	S:70:,	S:95:ставит	S:101:осознают	S:129:потребует	S:132:потребует	S:138:позволить	S:151:осознавая	S:156:	S:160:признать	S:177:,	S:178:они	S:192:вспомнить	S:250:предполагаемые ,	S:258:заслуживают	S:265:израильтяне	S:275:заслуживают	S:278:выберут	S:285:понимаем	S:317:umělkyně	S:350:,	S:370:затягивают	S:374:покупать	S:377:,	S:381:признать	S:382:klauna	S:404:помнят	S:461:odpočinout	S:479:они	S:486:,	S:491:окончилось	S:496:реакционерами	S:505:имидж	S:559:	S:582:	S:601:	S:632:думают	S:660:	S:687:funesovo	S:722:потребует	S:749:они	S:759:	S:759:rozdrásali	S:781:сохранят	S:789:устанавливает	S:794:rodičovském	S:827:признать	S:856:они	S:858:жаловаться	S:859:вспомнить	S:864:сомневающиеся	S:905:spočtěte	S:908:сравните ,	S:913:вспомните	S:914:	S:931:осознать	S:947:интеллектуалы	S:948:возьмем , в	S:970:povšimli
+sian	TRS:4511:sian
+siang	S:385:сян	S:385:siang
+sice	S:70:	S:132:	S:136:	S:503:шанхае	S:507:отвратительными	S:529:близнецы-злодеи	S:673:зависима	S:682:	S:722:жертвами	S:726:спорным	S:70:в то время как	S:132:и	S:136:возможно	S:503:шанхае	S:507:вилльямсоном	S:529:nesnášela	S:673:в то время как	S:682:в	S:722:жертвой	S:726:то время как
+sida	TRS:68374:chráněných
+sidel	TRS:1312: 
+siebert	TRS:71270:horst siebert
+siemens	TRS:2344:volkswagenu	TRS:52975:tomografie ( takových	TRS:73219:
+siendo	TRS:68364:aby si brettonwoodské instituce
+sierra	TRS:71312:sierra	TRS:71349:sierra
+siglo	TRS:68363:příliš
+sigmunda	S:743:зигмунда	S:743:sigmunda
+signalizovalo	S:648:просигнализировало	S:648:переломная signalizovalo
+significa	TRS:68390:
+signály	S:52:сигналы	S:52:признаки
+sikhské	S:466:сикхских пенджаба	S:466:sikhské
+sil	S:13:созреют	S:197:мигрирует	S:198:силы	S:221:силы	S:494:сил	S:671:сил	S:727:развертывание	S:734:силе	S:13:сил	S:197:силы	S:198:силы	S:221:силы	S:494:силах	S:671:сил	S:727:сил	S:734:силы
+silami	S:268:силами	S:700:	S:268:силами	S:700:силами
+silnou	S:45:неоспоримая	S:45:сильное
+silné	S:120:	S:719:противоречиями	S:120:рожденные	S:719:сильные
+silných	S:92:прочных	S:92:сильных
+silně	S:100:управленческих	S:324:диктатурах	S:560:в	S:883:перевешивали	S:100:сильно	S:324:сильно	S:560:сильно	S:883:сильно
+silněji	S:448:больше	S:867:в	S:448:больше	S:867:более zadlužená
+silnější	S:860:совокупного	S:860:сильнее
+silou	S:478:силой	S:996:силой	S:478:силой	S:996:силой
+silvio	TRS:24433:silvio
+silách	S:322:возможное	S:322:наших силах для того
+simplement	TRS:71204:
+sin	TRS:68361:	TRS:68370: 	TRS:68375:	TRS:68384:narůstající soubor
+sin-	TRS:68706:sin	TRS:72699:sin
+sine	TRS:12978:od	TRS:34302:politiky	TRS:38121:nesmí
+singer	TRS:14006:singer	TRS:32380:singer	TRS:71463:singer	TRS:71499:singer	TRS:71531:singer	TRS:71572:singer	TRS:71607:singer	TRS:71653:singer	TRS:71694:singer	TRS:71738:singer	TRS:71773:singer	TRS:71817:singer	TRS:71859:singer	TRS:71899:singer	TRS:71928:singer	TRS:71963:singer	TRS:72000:singer	TRS:72038:singer	TRS:72075:singer	TRS:72111:singer	TRS:72152:singer	TRS:72198:singer	TRS:72238:singer	TRS:72275:singer	TRS:72311:singer	TRS:72347:singer	TRS:72390:singer	TRS:72428:singer	TRS:72474:singer	TRS:72507:singer	TRS:72539:singer	TRS:72581:singer
+singh	TRS:56111:singh	S:487:сингх	S:487:сингх
+single-	TRS:85532:
+sinistra	TRS:81277:podrobný
+sinn	TRS:72741:-	TRS:72784:-	TRS:72821:-	TRS:72852:-	TRS:72885:-	TRS:72915:-	TRS:72956:-	TRS:72993:-	TRS:73030:sinn	TRS:73071:sinn	TRS:73105:-	TRS:73152:-	TRS:73201:-	TRS:73237:-	TRS:73267:-	TRS:73306:-	TRS:73353:-
+sino	TRS:68371:zemích
+sionských	S:502:итак , « протоколы старейшин зиона	S:502:sionských протоколы мудрецов
+sir	TRS:30464:života	TRS:30465:kvasnic	TRS:30467:kterou	TRS:30472:přežití	TRS:30473:.	TRS:30475:savčí	TRS:30476:sir	TRS:30479:může	TRS:30489:
+sirius	TRS:28702:beta	TRS:28789:.	TRS:28873:sirius
+situace	S:553:обстановка	S:882:ситуация	S:884:ситуация	S:553:ситуация	S:882:ситуация	S:884:ситуация
+situaci	S:624:кубинскими	S:721:	S:859:ситуацию	S:624:ситуации	S:721:ситуацию	S:859:ситуацию
+situacích	S:731:ситуациях	S:731:ситуациях
+situation	TRS:71200:k
+siècle	TRS:81844:siècle a france : la
+sjednotili	S:184:сплотившись	S:184:объединились
+sjednotilo	S:546:объединилась	S:546:объединения
+sk	TRS:2507:
+skandinávských	S:146:сторону скандинавских	S:146:скандинавских странах
+skandálu	S:615:параполитические	S:615:параполитические
+skeptical	TRS:42888:
+skepticismus	S:447:скептицизм относительно	S:570:скептицизм	S:447:скептицизм	S:570:скептицизм
+skeptického	S:582:свежего	S:582:скептика
+skeptičtější	S:671:более	S:671:большим скептицизмом
+skidelsky	TRS:73475:skidelsky	TRS:73511:skidelsky
+skladbu	S:229:разработке	S:229:состав
+skleníkových	S:524:	S:524:парниковых
+skleněnými	S:310:братьев стеклянными	S:310:zneužívali
+skleslé	S:875:советников эйзенхауэра	S:875:skleslé
+skličující	S:385:	S:385:гнетущие
+sklo	S:352:стеклом всем протяжении китая	S:352:sklo
+sklon	S:402:	S:402:тенденцию
+sklouzne	S:655:затормозится	S:655:снова оказаться
+skládalo	S:946:не	S:946:которые
+skoda	TRS:61713:jiné ve phillip morris , škoda
+skončení	S:63:после	S:63:окончания
+skončil	S:53:заканчивался	S:53:разочарованием
+skončilo	S:50:	S:50:к концу
+skončily	S:478:	S:478:
+skončit	S:248:быть снята	S:248:осадили
+skot	S:414:	S:414:крупный рогатый скот
+skromný	S:475:	S:475:скромный
+skrytých	S:494:незримых	S:494:о скрытых силах
+skrytými	S:393:препятствуют группы лоббистов особые	S:393:место
+skrze	S:485:посредством	S:490:	S:878:	S:485:посредством	S:490:через	S:878:посредством
+skupin	S:60:группировок	S:243:межрелигиозного	S:676:	S:60:группировок	S:243:группы	S:676:восставших
+skupina	S:34:группировка	S:46:группировка	S:230:семерка	S:347:группой	S:34:группа	S:46:группа	S:230:группа	S:347:группа
+skupinami	S:64:мыслящими	S:64:группами
+skupiny	S:58:группировок	S:83:группировок	S:93:группы	S:58:группы	S:83:группы	S:93:группы
+skupině	S:230:обратились	S:230:группе
+skutečnost	S:375:заключается том	S:797:тот факт	S:375:заключается том	S:797:тот факт
+skutečnosti	S:179:порвал	S:179:действительности
+skutečná	S:454:настоящий	S:454:реальный
+skutečné	S:277:реальны	S:534:реальное	S:277:реальная	S:534:реальные
+skutečně	S:502:действительно действительно	S:715:действительно	S:788:частыми	S:803:конкурирует	S:963:	S:502:действительно	S:715:действительно	S:788:действительно	S:803:действительно	S:963:действительно
+skvělým	S:404:очень	S:404:грандиозным
+skype	TRS:34293:systém
+skýtá	S:578:можем извлечь из данного примера	S:578:дело
+slabá	S:437:слабые	S:437:слабые
+slabé	S:879:слабыми	S:982:слабыми	S:879:слабые	S:982:слабыми
+slabý	S:698:слабый	S:698:слабый
+slabým	S:992:слабым	S:992:слабым
+slabší	S:205:кредитоспособностью	S:693:	S:718:более низкий	S:733:что слабый	S:205:слабее	S:693:слабый	S:718:слабый	S:733:слабый
+sladěné	S:899:скоординированные действия со стороны оказались просто невероятными	S:899:sladěné
+slaughter	TRS:73556:slaughter
+slavnostního	S:938:церемонии	S:938:slavnostního
+slavné	S:404:великую	S:430:знаменитое предостережение	S:404:знаменитой	S:430:известной
+slavných	S:939:наполненных	S:939:знаменитых
+sld	TRS:39988:1997	TRS:39989:obliba	TRS:39992:roce kabinet	TRS:39995:	TRS:39996:	TRS:39997:v	TRS:40011:kwaśniewského
+sledování	S:988:наблюдения за устойчивым к туберкулезом	S:988:наблюдения
+sledováním	S:812:также долгосрочными наблюдениями за смертельными случаями	S:812:наблюдением
+sledujeme	S:625:страдает	S:625:наблюдается
+sledují	S:795:наблюдала за тем	S:795:наблюдали за тем
+slepé	S:262:политического тупика	S:262:слепые
+slepě	S:898:слепо	S:898:lpělo слепо
+sletům	S:372:над весельем	S:372:sletům
+slevit	S:637:вместо	S:637:закрыть глаза
+slibuje	S:135:обещает	S:135:обещает
+sliby	S:59:обещания	S:59:обещания
+slitování	S:387:акцент на сострадании милосердии не меньше	S:387:сострадания
+sloan	TRS:33706:
+slobodanem	S:653:слободаном	S:653:над слободаном
+sloučenin	S:794:	S:794:rušivých пищевые компоненты
+sloučením	S:676:	S:676:после
+slov	S:508:провоцируют	S:508:слов
+slova	S:598:ягненка	S:701:слова	S:598:слова	S:701:слова
+slovní	S:453:наиболее	S:453:высказывание
+slovník	S:131:словарь	S:131:словарь
+slovy	S:543:словами	S:543:словами
+slováci	S:413:словаки	S:413:словаки
+složek	S:764:аспектов	S:764:сил
+složený	S:318:вагнера	S:318:wagnera
+složité	S:54:сложными	S:54:сложны
+složky	S:46:	S:46:службы
+slučitelná	S:889:внутреннему состоянию	S:889:совместима
+slušnost	S:539:	S:539:порядочным человеком
+službou	S:27:службой	S:27:службу
+služby	S:93:услуг	S:93:услуги
+službách	S:935:	S:946:	S:935:услуги	S:946:услуг
+služeb	S:641:услуг	S:888:услуг	S:641:услуг	S:888:услуг
+slyšet	S:589:	S:589:раздается
+slábnoucí	S:958:ослабевающему	S:958:ослабление
+slíbil	S:176:он обещал	S:177:обещанный	S:176:пообещал	S:177:пообещал
+slůvko	S:231:кризисном положении будут слышать слово «	S:231:slůvko
+sme	TRS:12996:martin
+smeteny	S:469:отброшены в силу устарелости	S:469:захвачены в сторону
+smithkline	TRS:49995:měnou
+smlouvy	S:801:варшавскому договору	S:801:договора
+smolar	TRS:12998:smolar	TRS:73626:smolar	TRS:73670:smolar	TRS:73719:smolar	TRS:73765:smolar	TRS:73811:smolar
+smrt	S:410:смерть	S:410:смерть
+smyslem	S:288:безотлагательности	S:288:чувством
+smyslu	S:426:	S:481:смысле	S:426:чувства	S:481:смысле
+smírné	S:79:кашмирского	S:79:smírné
+smířit	S:322:	S:322:смириться
+smýšlejícími	S:64:мыслящими группировками	S:64:как smýšlejícími
+smělého	S:12:сша категоричны	S:12:smělého státnického
+smělých	S:476:смелых	S:476:смелые
+směnného	S:205:обменного	S:205:обменного
+směnných	S:893:обменных	S:893:обменных
+směrem	S:155:прощупывает	S:243:в сторону	S:297:зеленому	S:965:	S:155:стеснявшиеся	S:243:в направлении	S:297:в сторону	S:965:в направлении
+směrodatná	S:609:авторитетные	S:609:směrodatná
+směs	S:477:смесь из	S:477:смесь
+směsice	S:500:смесь	S:500:смесь
+směřování	S:15:динамика	S:222:тенденция	S:827:ориентацию	S:875:	S:15:направление	S:222:на пути	S:827:стремление	S:875:движения
+snad	S:61:обама может	S:409:возможно ,	S:507:отвратительными	S:609:прикрываются , возможно ,	S:816:оскорбление	S:61:, возможно ,	S:409:возможно ,	S:507:возможно ,	S:609:возможно ,	S:816:
+snadno	S:419:легко	S:598:легко	S:763:легкодоступными	S:419:легко	S:598:легко	S:763:легко
+snadná	S:134:прост	S:134:легко
+snaha	S:35:	S:35:попытка
+snahy	S:65:	S:133:попыток	S:944:усилия	S:65:усилия	S:133:усилия	S:944:усилия
+snahám	S:395:запоздалые усилия	S:395:усилия
+snažil	S:257:попытался	S:257:пытался
+snaží	S:302:пытается	S:317:[	S:814:	S:302:пытаются	S:317:старается	S:814:старается
+snili	S:433:мечтающих	S:433:мечтали
+snižování	S:862:уменьшение	S:862:сокращения
+snižuje	S:727:снижает	S:727:снижает
+snp	TRS:22795:
+snu	S:941:мечту	S:941:мечты
+sny	S:362:мечты	S:362:мечты
+sní	S:145:мечтает	S:145:мечтают
+snížením	S:693:ситуацию	S:693:уменьшения
+snížila	S:686:	S:686:уменьшить
+snížily	S:207:понизили	S:992:снизили	S:207:снизились	S:992:
+snížit	S:846:снижения	S:902:сокращение	S:998:сократить	S:846:сократить	S:902:сократить	S:998:снизить
+snům	S:361:ностальгические	S:361:мечтам
+soas	TRS:49035:
+soberanas	TRS:68393:své
+sobě	S:470:	S:945:напыщенность	S:470:себе	S:945:оставил себя
+socar	TRS:37121:nesmírně
+social	TRS:18229:medicaid	TRS:18234:zřejmě	TRS:18235:	TRS:18237:jako	TRS:18238:správy	TRS:18242:sociálního	TRS:18242:	TRS:18243:sociálního	TRS:18244:je	TRS:18247:zaměřuje	TRS:18251:	TRS:36845:	TRS:52806:	TRS:66045:social security a	TRS:70529:dnes	TRS:70529:k	TRS:78492:ve programu	TRS:78496:státních	TRS:78499:sociálního	TRS:78501:sociálního	TRS:78507:odchod	TRS:78510:sociálního	TRS:78514:které	TRS:78528:sociální	TRS:78529:	TRS:78532:ztrácí
+sociales	TRS:28390:ecole	TRS:45856:ecole	TRS:45927:	TRS:50291:akademie
+socialismu	S:852:социализма	S:852:социализма
+socialistes	TRS:71200:
+socialistických	S:478:социалистические	S:478:социалистических
+socialisté	S:184:социалисты	S:184:социалисты
+societe	TRS:39101:ohledně société générale  	TRS:39104:société générale okamžitě uvědomil	TRS:39105:société générale šanci zlikvidovat	TRS:39106:générale mohla být daleko	TRS:39108:générale	TRS:39121:raněná	TRS:39123:générale zůstane významnou	TRS:39128:se .	TRS:39129:koupi société	TRS:39130:société
+society	TRS:19735:je
+socios	TRS:68393: 
+sociální	S:739:социальные	S:739:социальные
+sociálních	S:93:	S:93:социальных
+société	TRS:2964:jeho
+soesastro	TRS:73842:soesastro
+sofa	TRS:2584:of
+solana	TRS:3570:	TRS:73887:solana
+solans	TRS:73938:solans
+sole	TRS:38280:v
+soli	TRS:31864:získání	TRS:53426:soli	TRS:53458:soli	TRS:53500:soli
+solidarita	S:96:подкреплена солидарностью	S:96:солидарность
+solidaritu	S:95:сотрудничества	S:96:солидарность	S:95:солидарность	S:96:солидарности
+solidarités	TRS:41990:de
+somalizace	S:60:сомализации	S:60:somalizace
+somerville	TRS:73970:margaret somerville
+son	TRS:68363:jsou	TRS:68363:století	TRS:68379:jsou	TRS:71216:	TRS:71225:
+sonoritй	TRS:71221:
+sont	TRS:71201:transformaci	TRS:71207:	TRS:71231:veřejné
+sony	TRS:21762:sony	TRS:28735:společnosti	TRS:52987:sony	TRS:53000:sony
+sopečných	S:695:вулканических	S:695:sopečných
+sorman	TRS:74259:sorman
+soros	TRS:74006:soros	TRS:74060:soros	TRS:74110:soros	TRS:74167:soros	TRS:74218:soros	TRS:74307:soros	TRS:74356:soros	TRS:74397:(	TRS:74467:soros	TRS:74513:soros	TRS:74603:soros	TRS:74635:soros	TRS:74679:soros	TRS:74731:soros	TRS:74791:soros	TRS:74857:soros	TRS:74898:soros	TRS:74937:soros	TRS:74978:soros	TRS:75006:soros	TRS:75044:soros	TRS:75090:soros	TRS:75133:předsedou	TRS:75135:soros	TRS:75176:soros	TRS:75220:soros	TRS:75265:soros	TRS:75359:soros	TRS:75398:soros
+sotiraq	TRS:33576:sotiraq
+sotva	S:312:едва	S:921:	S:312:едва ли	S:921:едва ли
+souborem	S:497:набором	S:497:населением
+souboru	S:595:ряда	S:595:odvodil набора
+souci	TRS:71232:a
+soucit	S:387:милосердии	S:389:	S:387:сострадание	S:389:сочувствие позиции
+soudcem	S:569:апелляционного	S:569:апелляционного
+soudem	S:628:суде	S:648:судом	S:628:суде	S:648:
+soudní	S:771:криминалистической	S:771:судебные
+soudních	S:652:судебного	S:965:судебных	S:652:судебного	S:965:судебных
+soudního	S:654:уголовного	S:654:судебного
+soudním	S:563:работающей	S:653:свободны	S:563:vnímavým судебной	S:653:судебного
+soudobé	S:742:совета современных семей	S:791:современные	S:742:soudobé	S:791:soudobé
+soudržnost	S:135:последовательность	S:135:сплоченность
+soudu	S:569:суда	S:594:суда	S:569:суда	S:594:суда
+soudy	S:651:суды	S:653:судебные	S:651:суды	S:653:суды
+soudí	S:837:считает	S:837:полагают
+souhlas	S:796:согласия	S:796:одобрение
+souhlasem	S:962:одобрением	S:962:одобрением
+souhlasit	S:276:дать согласие на	S:276:соглашаться
+souhlasu	S:750:палин	S:750:согласия
+soukromé	S:866:частное	S:866:частные
+soukromého	S:901:частного	S:901:частного
+soukromý	S:918:частный	S:918:частный
+soukromým	S:846:частным	S:846:частным
+soul	TRS:29640:souls
+soupeřem	S:458:соперником	S:458:соперников
+soupeři	S:543:соперниками	S:543:противниками
+sousedům	S:795:соседям	S:795:соседям
+sousse	TRS:85179:ochranu
+soustava	S:558:система	S:558:системе
+soustavou	S:485:системой	S:485:системой
+soustavu	S:93:системы	S:93:систему
+soustavy	S:36:системы	S:111:доводом	S:225:системы	S:982:	S:36:системы	S:111:системы	S:225:системы	S:982:системы
+soustavám	S:109:способствовало	S:109:банковской системы
+soustavě	S:998:системе	S:998:системе
+soustředěné	S:83:согласованные	S:83:сконцентрированы
+soustřeďuje	S:229:	S:229:фокусируется
+soutenue	TRS:71232:zásadové novinařiny
+south	TRS:6582:pobočky deníku
+soutiennent	TRS:71199:já
+souvisejících	S:887:сопутствующих	S:888:сопутствующих	S:888:также сопутствующие области	S:887:сводными	S:888:сводными	S:888:сводными
+souvislost	S:495:	S:495:связь
+souvztažnou	S:558:противовеса дома требует соответствующего баланса силы	S:558:souvztažnou
+souzeno	S:543:обречены	S:543:судить
+souzní	S:398:сплачивающие	S:398:резонирует
+současnost	S:891:сейчас	S:968:афин	S:891:сейчас	S:968:сегодняшнего дня
+současnosti	S:704:настоящего	S:726:настоящее время	S:794:детородного	S:877:	S:924:сейчас	S:933:настоящее время	S:704:настоящего	S:726:настоящее время	S:794:настоящее время	S:877:настоящее время	S:924:настоящее время	S:933:настоящее время
+současnou	S:192:текущий	S:357:	S:192:сегодняшний	S:357:в odmítavou
+současná	S:463:обамамания	S:463:нынешняя
+současné	S:214:неприятностями	S:364:современной	S:519:сегодняшние	S:854:сегодняшнего	S:214:настоящее время	S:364:komiků	S:519:нынешние	S:854:сегодняшние
+současného	S:893:текущего	S:893:ataků текущей
+současných	S:9:сегодняшних	S:520:сегодняшних	S:9:текущих	S:520:сегодняшних
+současným	S:417:сейчас проблема в	S:417:проблема
+současně	S:92:	S:636:в	S:654:совершивших	S:92:в то же время	S:636:в то же время	S:654:в то же самое время
+součástem	S:965:компонентов	S:965:součástem
+součástí	S:293:статьей	S:305:частью	S:637:частью	S:293:частью	S:305:частью	S:637:частью
+sovětské	S:28:советской	S:148:советские	S:28:советской	S:148:советские
+sovětského	S:19:советской	S:147:советского	S:772:советского	S:19:советской	S:147:советского	S:772:советского
+sovětský	S:547:кончина	S:547:советский
+spaces	TRS:72508:s	TRS:72515:jsou
+spaemann	TRS:75456:spaemann	TRS:75527:spaemann
+spalovací	S:524:поглощения этими растениями во время	S:524:spalovací
+spaventa	TRS:75583:spaventa	TRS:75620:spaventa
+spd	TRS:16656:aby	TRS:48828:spd
+spdr	TRS:71051:
+spekulace	S:672:биржевые спекуляции	S:991:опасения	S:672:широкомасштабную спекуляцию	S:991:всплыли предположений относительно
+spekulanty	S:686:спекулянтов понизить	S:686:спекулянтов
+spekulantům	S:681:американских политиков биржевых дельцов нефть	S:681:спекулянтов
+spekulativní	S:869:спекулятивные	S:869:спекулятивной
+spekulativních	S:893:спекулятивные	S:893:спекулятивных
+spencer	TRS:58976:	TRS:71500:supermarketů	TRS:71501:
+spinozova	S:973:spinoza	S:973:spinozova čočka
+spisy	S:374:	S:374:труды
+splasknutí	S:921:длился недолго	S:921:лопнувший мыльный пузырь
+spletitost	S:2:сложность	S:2:сложность
+spletitý	S:666:сложная	S:666:неоднозначным
+splněny	S:868:удовлетворить	S:868:обеспечить
+spláchla	S:686:избавиться от спекулянтов	S:686:spláchla для того
+spojenci	S:66:союзниками	S:543:союзниками	S:657:союзники	S:775:союзники	S:775:союзниками	S:66:союзниками	S:543:союзниками	S:657:союзники	S:775:союзники	S:775:союзниками
+spojenců	S:469:союзников	S:469:союзников
+spojenectví	S:4:союз	S:29:альянса	S:4:союз	S:29:obnovenému союза
+spojené	S:168:сша	S:516:в	S:639:америки	S:873:соединенные	S:168:соединенные	S:516:связанные	S:639:соединенные	S:873:соединенные
+spojení	S:56:совместно долговременным	S:401:купе	S:453:	S:56:сочетании	S:401:связи	S:453:высказывание
+spojených	S:104:сша	S:193:	S:235:сша	S:401:сша	S:460:соединённых	S:534:потенциале сша	S:590:сша	S:655:оон	S:738:объединенных	S:787:соединенных	S:839:неоспоримый	S:855:ворвавшаяся сша	S:885:вынесла	S:104:сша	S:193:связанных	S:235:соединенных	S:401:соединенных	S:460:сша	S:534:соединенных	S:590:соединенных	S:655:оон	S:738:объединенных	S:787:соединенных	S:839:соединенных	S:855:соединенных	S:885:соединенных
+spojenými	S:789:	S:789:соединенными штатами
+spojit	S:816:объединиться	S:816:объединить
+spojitost	S:806:	S:806:связь
+spojoval	S:544:геополитические делились между	S:544:геополитические переживали
+spojovala	S:707:они сходились	S:707:связывал
+spojován	S:401:связан	S:401:время был связан
+spojování	S:496:распространённое мнение о взаимосвязях	S:496:ассоциаций
+spojuje	S:265:израиля	S:265:связывает
+spokojeni	S:775:радуются	S:775:удовлетворены шума
+spolehlivě	S:694:	S:694:достоверной
+společenskost	S:758:общительности	S:758:společenskost
+společensky	S:509:с точки зрения общества	S:509:социально
+společenské	S:244:социального	S:244:социальных
+společenský	S:705:изменили социальную	S:705:общественную
+společenských	S:751:социальных	S:751:социальных
+společenství	S:777:содружество	S:854:общества	S:854:общества	S:777:содружества	S:854:сообщества	S:854:сообщество
+společnost	S:319:общество	S:496:обществом	S:319:общество	S:496:общество
+společnostech	S:493:обществах	S:703:обществах	S:740:обществах	S:493:обществах	S:703:обществах	S:740:обществах
+společnosti	S:492:общество	S:693:	S:709:компаниям	S:737:обществах	S:841:общества	S:853:общества	S:906:корпорации	S:956:	S:492:общества	S:693:компании	S:709:компании	S:737:общества	S:841:общества	S:853:компании	S:906:компании	S:956:общества
+společností	S:494:обществом	S:494:компаний
+společnou	S:426:общность	S:529:общую	S:551:отношении общей	S:426:общей	S:529:общую	S:551:созданию единой
+společné	S:85:общих	S:193:	S:417:общими	S:426:	S:85:общей	S:193:общей	S:417:общей	S:426:общие
+společný	S:288:общей	S:288:общий
+společných	S:944:общих	S:944:общих
+společným	S:959:совещанием	S:959:общая
+společně	S:64:наряду	S:66:вместе	S:233:сотрудничает	S:260:вместе	S:288:вместе	S:299:вместе	S:549:а также	S:903:а также	S:64:наряду	S:66:вместе	S:233:вместе	S:260:вместе	S:288:вместе	S:299:вместе	S:549:наряду	S:903:наряду
+spolku	S:419:сотрудничеству	S:419:сговоре
+spoluobčanů	S:506:мумбай	S:506:сограждан
+spolupracovat	S:381:сотрудничает	S:381:сотрудничать
+spolupráce	S:769:сотрудничества	S:769:сотрудничества
+spolupráci	S:50:сотрудничество	S:95:сотрудничестве	S:551:сотрудничества	S:821:сотрудничества	S:823:сотрудничества	S:50:сотрудничества	S:95:сотрудничестве	S:551:сотрудничества	S:821:сотрудничество	S:823:сотрудничества
+spoluvině	S:624:своему сотрудничеству с кубинскими властями	S:624:ответственности
+spoléhat	S:85:зависит	S:85:полагаться
+sportů	S:398:видах спорта	S:398:видов спорта
+sporů	S:432:	S:432:споров
+spotřebitele	S:896:потребителей	S:897:потребителей	S:896:потребителей	S:897:потребителей
+spotřebitelé	S:692:потребители	S:692:потребители
+spotřebitelů	S:226:для потребителей	S:226:потребителей
+spotřebiče	S:213:бытовые приборы чтобы избежать повышенных	S:213:spotřebiče
+spotřebu	S:698:потребления	S:698:уровень потребления
+spotřebě	S:866:публичное потребление	S:866:потребления
+spousta	S:316:многие	S:316:многие
+spoustu	S:927:печатает	S:927:natiskne много
+spočtěte	S:905:посчитайте	S:905:spočtěte
+spočívá	S:809:заключается	S:809:заключается
+spoření	S:872:сбережениях	S:872:сбережений
+spravedlivé	S:627:честные	S:627:справедливые
+spravedlivých	S:636:справедливых	S:636:справедливых
+spravedlnost	S:648:справедливость	S:649:	S:648:справедливость	S:649:справедливость
+spravedlnosti	S:592:правосудия	S:660:	S:857:компонентов	S:592:правосудия	S:660:справедливости	S:857:справедливости
+springer	TRS:20642:axel
+správky	S:963:исправлениями	S:963:поверхностные kosmetickou
+správnosti	S:701:правильными	S:701:обоснованности
+správnou	S:724:	S:724:правильным
+správná	S:829:правильный	S:829:правильный
+správní	S:826:управления	S:826:административной
+správnější	S:86:правильнее	S:86:было правильным
+správy	S:102:	S:102:управления
+sputnik	TRS:36846:
+spíš	S:8:дестабилизации	S:277:скорее туманны	S:734:скорее	S:873:скорее	S:900:более	S:8:скорее	S:277:скорее	S:734:скорее	S:873:скорее	S:900:
+spíše	S:109:	S:365:трухильо	S:476:известен	S:637:пошагового	S:866:а не	S:109:скорее	S:365:klaun	S:476:скорее	S:637:скорее	S:866:vypomáhaly
+spřádají	S:485:планируют править миром	S:485:они стряпают
+square	TRS:49082:
+srazit	S:977:	S:977:ослабить
+srbska	S:354:сербии	S:354:сербии
+srbsko	S:322:сербия	S:340:сербия	S:322:сербия	S:340:сербия
+srbů	S:303:	S:363:сербов	S:303:сербов	S:363:сербов
+srijit	TRS:47385:srijit
+srijitmishra	TRS:47424:
+srovnatelná	S:775:наравне	S:775:сравняться
+srovnatelné	S:132:	S:132:
+srovnejme	S:458:неплохо	S:458:сравните
+srpna	S:938:августа	S:938:августа
+srpnu	S:32:августе	S:32:августе
+st	TRS:344:nakladatelství
+stabilitu	S:227:стабильности	S:740:стабильности	S:904:стабильность	S:227:стабильности	S:740:стабильности	S:904:стабильность
+stability	S:745:стабильности	S:909:стабильности	S:745:стабильности	S:909:стабильности
+stabilitě	S:636:стабильности	S:636:стабильности
+stabilizace	S:357:стабилизацию	S:774:стабилизация	S:357:стабилизации	S:774:стабилизация
+stabilizing	TRS:34849:politicky motivované manipulaci .
+stadion	S:943:стадион птичье	S:943:stadion
+stadionech	S:446:стадионах	S:446:стадионах
+stadionů	S:432:стадионов	S:432:стадионов
+staff	TRS:68443:předsedou
+stagnující	S:249:вяло	S:249:застоем
+stal	S:16:	S:16:стал
+stali	S:801:варшавскому	S:801:стать
+stalinovo	S:336:империя	S:336:сталина
+stalo	S:17:	S:473:и произошло	S:17:произошло	S:473:и произошло
+staly	S:27:	S:148:стали	S:27:стали	S:148:стали
+stampa	TRS:25986:
+standard	TRS:13898:většina	TRS:25756:bankéři	TRS:29862:šanghaji	TRS:67905:odhaduje , že očištění	TRS:70147:na	TRS:70773:se	TRS:70847:500	TRS:71051:	TRS:80668:& poor	S:467:standard	S:467:стандартов
+standardní	S:930:стандартный	S:930:стандартные
+standards	TRS:13852:nezaměstnanost
+standardu	S:898:стандарт	S:898:стандарта
+stane	S:39:станет	S:39:станет
+stanevsky	TRS:75744:stanevsky	TRS:75790:stanevsky
+stanford	TRS:43419:
+stanley	TRS:43386:stanley	TRS:60818:stanley	TRS:61731:stanley
+stanout	S:648:предстать	S:648:судить
+stanoviskem	S:582:самодовольным	S:959:совещанием	S:582:panujícím	S:959:точка зрения
+stanovovanou	S:903:директивной ликвидные средства	S:903:stanovovanou
+stanovování	S:632:установления	S:632:устанавливать
+stanovuje	S:634:установлена	S:789:	S:634:устанавливаются	S:789:устанавливает
+stanoví	S:627:определить	S:627:определить
+staphylococcus	TRS:82935:v	TRS:82964:staphylococcus aureus
+star	TRS:43789:	TRS:49972:
+stark	TRS:75830:stark	TRS:75866:stark
+staromódní	S:469:	S:469:старомодным
+starr	TRS:53982:starr	TRS:75892:starr	TRS:75967:starr
+start	TRS:30755:následovaly další	TRS:68145:strategické	TRS:68153:	TRS:68155:rozhovorů
+starve-	TRS:18703:,	TRS:18711:
+staré	S:940:тысячелетние	S:940:,
+starý	S:400:старый	S:400:старого
+starých	S:853:старого	S:853:старых
+starší	S:404:старое	S:404:старшего
+state	S:742:state college	S:742:evergreen государства
+statistické	S:123:статистические	S:693:все	S:123:статистические	S:693:из-за статистические
+statistických	S:121:статистических	S:124:статистических	S:121:статистики	S:124:статистических
+statistika	S:123:статистические	S:123:получается статистика
+statistiky	S:129:статистики	S:129:статистические данные
+statoil	TRS:36834:anebo
+status	TRS:21189:regionem	TRS:21330:současného	TRS:21363:,	TRS:30779:současnému	TRS:74237:státy	TRS:81642:,	S:97:статус-кво	S:252:	S:97:статус	S:252:статус
+stav	S:55:состоянию	S:55:положение
+stavebnictví	S:887:строительном секторе	S:888:строительного	S:887:строительстве	S:888:строительства
+stavu	S:909:состояния	S:971:эмбриона	S:909:положения	S:971:положении эмбриона
+staví	S:393:	S:855:	S:393:находится	S:855:противостоит
+stavěla	S:971:	S:971:стать
+stavěli	S:735:общежития	S:969:успехе	S:735:ubytovny	S:969:доводы
+stavět	S:187:выступать	S:272:строить	S:187:	S:272:строить
+stačilo	S:116:достаточно	S:116:было достаточно для
+staří	S:375:старые	S:375:старые
+stažení	S:5:уход	S:21:вывода войск	S:61:вывода	S:5:ухода	S:21:ухода	S:61:вывод
+steam	TRS:19081:company
+stearns	S:917:stearns	S:917:stearns
+steel	TRS:69405:
+stefano	TRS:30270:stefano	TRS:30310:stefano	TRS:46763:stefano	TRS:46800:stefano
+steinmeier	TRS:76008:-
+stejnou	S:387:милосердии	S:387:сострадание
+stejná	S:575:	S:644:сводился к следующему	S:575:же	S:644:таким же
+stejné	S:460:уборными	S:498:той же враждебностью	S:460:же	S:498:те же самые
+stejně	S:59:нереалистичными	S:148:так же	S:212:	S:324:так же	S:375:же	S:413:равно	S:615:как	S:966:как	S:59:так же	S:148:так же	S:212:точно так же	S:324:точно так же	S:375:так же nudní	S:413:так же	S:615:так же	S:966:точно так же
+sten	TRS:82136:sten
+stepan	TRS:76066:stepan	TRS:76113:stepan	TRS:76153:stepan
+stephanie	S:742:стефани кунц	S:742:stephanie
+stephany	TRS:30028:stephany
+stephen	TRS:29772:stephen	TRS:29820:stephen	TRS:33013:stephen	TRS:33050:stephen	TRS:33088:stephen
+steps	TRS:11301:podkopávají
+stern	TRS:76235:stern
+steve	TRS:26935:steve	TRS:26975:steve	TRS:27008:steve	TRS:27052:steve	TRS:27100:steve
+steven	TRS:46242:steven	TRS:46321:steven	TRS:46367:steven	TRS:46404:steven	TRS:60606:steven
+stiftung	TRS:40141:etiku stiftung
+stig	TRS:48694:stig
+stiglitz	TRS:76282:stiglitz	TRS:76334:stiglitz	TRS:76390:stiglitz	TRS:76442:stiglitz	TRS:76537:stiglitz	TRS:76585:stiglitz	TRS:76628:stiglitz	TRS:76674:stiglitz	TRS:76709:stiglitz	TRS:76746:stiglitz	TRS:76793:stiglitz	TRS:76843:stiglitz	TRS:76889:stiglitz	TRS:76937:stiglitz	TRS:76980:stiglitz	TRS:77016:stiglitz	TRS:77062:stiglitz	TRS:77102:stiglitz	TRS:77141:stiglitz	TRS:77181:stiglitz	TRS:77221:stiglitz	TRS:77309:stiglitz	TRS:77348:stiglitz	TRS:77383:stiglitz	TRS:77422:stiglitz	TRS:77467:stiglitz	TRS:77509:stiglitz	TRS:77559:stiglitz	TRS:77603:stiglitz	TRS:77643:stiglitz	TRS:77690:stiglitz	TRS:77739:stiglitz	TRS:77793:stiglitz	TRS:77871:stiglitz	TRS:77915:stiglitz	TRS:77948:stiglitz	TRS:77993:stiglitz	TRS:78032:stiglitz	TRS:78076:stiglitz	TRS:78125:stiglitz	TRS:78173:stiglitz	TRS:78216:stiglitz	TRS:78260:stiglitz	TRS:78301:stiglitz	TRS:78347:stiglitz	TRS:78404:stiglitz	TRS:78447:stiglitz	TRS:78488:stiglitz	TRS:78536:stiglitz	TRS:78574:stiglitz	TRS:78619:stiglitz	TRS:78660:stiglitz	TRS:78702:stiglitz	TRS:78739:stiglitz	TRS:78782:stiglitz	TRS:78827:stiglitz	TRS:78867:stiglitz	TRS:78907:stiglitz	TRS:78948:stiglitz	TRS:78991:stiglitz	TRS:79034:stiglitz	TRS:79074:stiglitz	TRS:79107:stiglitz	TRS:79150:stiglitz	TRS:79193:stiglitz	TRS:79238:stiglitz	TRS:79319:stiglitz	TRS:79358:stiglitz	TRS:79400:stiglitz	TRS:79441:stiglitz	TRS:79476:stiglitz	TRS:79557:stiglitz	TRS:79595:stiglitz	TRS:79641:stiglitz	TRS:79680:stiglitz	TRS:79717:stiglitz	TRS:79756:stiglitz	TRS:79799:stiglitz	TRS:79834:stiglitz	TRS:79884:stiglitz	TRS:79930:stiglitz	TRS:79968:stiglitz	TRS:80047:stiglitz	TRS:80097:stiglitz	TRS:80136:stiglitz	TRS:80183:stiglitz	TRS:80204:stiglitz
+stihomamu	S:495:стали очевидным инструментом антизападной паранойи	S:495:stihomamu
+stimul	S:212:ускорит	S:212:стимул
+stimulaci	S:229:анемичной	S:229:стимулирование
+stimulantů	S:757:стимуляторов составляет примерно	S:757:stimulantů
+stimulační	S:297:пакет стимулов поможет подтолкнуть	S:934:стимулы страусов	S:297:пакет	S:934:стимулов pštrosi
+stocks	TRS:69665:
+stojí	S:11:таким	S:241:стоят	S:244:	S:630:действительно находится	S:708:суровым	S:11:, стоит	S:241:стоит	S:244:стоит	S:630:находится	S:708:стоит
+stojící	S:161:какой -то момент те которые находятся за	S:161:находящиеся
+stol	S:523:получаемый эффект сверхкороткого взлета	S:523:stol
+století	S:104:века	S:348:века	S:400:столетии	S:496:столетия	S:104:века	S:348:века	S:400:веке	S:496:века
+stolu	S:469:устарелости	S:469:
+stone	TRS:64749:jeffrey
+stones	S:326:stones	S:331:стоунз	S:326:stones	S:331:stones
+stopového	S:555:ничтожного	S:555:stopového
+stopparda	S:329:тома стоппарда рок -н -ролл	S:329:toma stopparda
+story	TRS:11174:slýchali od
+stoupajícím	S:237:восходящем	S:237:роста
+stovky	S:307:сотни	S:444:сотни	S:307:сотни	S:444:сотни
+strach	S:438:страх	S:438:страх
+strache	S:441:свободы	S:441:strache
+strachu	S:306:страхе	S:500:страха	S:658:боязни	S:306:страха	S:500:страха	S:658:страха
+stran	S:453:повторяемая	S:453:партий
+strana	S:226:партия	S:423:националистской	S:226:партия	S:423:партия
+stranami	S:277:партиями	S:277:партиями
+stranickou	S:316:партии	S:316:партийной
+stranickým	S:371:партийными	S:371:партийным
+stranou	S:48:в стороне	S:48:отложить
+strany	S:72:партии	S:440:отданное	S:441:партии	S:609:стороны	S:620:партии	S:715:нефтяными	S:72:партии	S:440:партии	S:441:партии	S:609:стороны	S:620:партии	S:715:стороны
+stranách	S:589:сторон	S:682:	S:589:сторон	S:682:партиях
+straně	S:31:	S:185:	S:31:стороне	S:185:партии
+strastí	S:174:проблем	S:174:несчастий
+strategický	S:780:новое	S:780:свой
+strategických	S:63:стратегических	S:63:стратегических
+strategie	S:8:стратегии	S:36:стратегия	S:174:стратегию	S:588:стратегия	S:863:политика	S:985:	S:8:стратегии	S:36:стратегия	S:174:стратегии	S:588:стратегии	S:863:стратегии	S:985:стратегии
+strategii	S:30:стратегии	S:834:стратегию	S:969:стратегию	S:30:стратегии	S:834:стратегии	S:969:политики
+strategií	S:621:рауля	S:621:стратегией
+strategy	TRS:24217:nejméně
+stratégové	S:58:стратеги	S:58:пакистанские политику
+stratйgique	TRS:71223:	TRS:71224:
+strašlivé	S:759:	S:759:ужасные
+street	TRS:18695:věděla	TRS:23013:street	TRS:23014:tolik	TRS:41026:zprávu
+streptococcus	TRS:82936:.
+stresu	S:236:стресса	S:236:стресса
+stroje	S:519:машины	S:519:машины
+structure	TRS:70529:.
+struktur	S:964:структур	S:964:структур
+struktura	S:729:объединениями	S:826:структуры	S:729:структура	S:826:структура
+struktury	S:670:структуры	S:670:структуры
+strukturálně	S:720:такие структурно опасные страны	S:720:strukturálně
+stránek	S:116:страниц	S:116:сайтов
+stránka	S:127:веб-страница	S:127:webová сторона
+stránkových	S:116:страниц	S:116:stránkových
+stránky	S:894:	S:894:заголовках
+strýčka	S:687:дядюшки сэма	S:687:strýčka
+stuart	TRS:55586:stuart
+studebaker	TRS:69404:společnosti
+studenou	S:26:холодной ii	S:26:« холодную »
+studenti	S:115:студенты	S:707:студенты	S:115:студенты	S:707:студенты
+studentů	S:940:студентов	S:940:студентов
+studené	S:30:холодной	S:63:холодной	S:168:холодной	S:556:холодной	S:30:« холодной »	S:63:« холодной »	S:168:« холодной »	S:556:холодной
+studi	TRS:24468:studi
+studia	S:742:evergreen	S:742:исследований
+studie	S:580:изучения	S:812:подтвержденными	S:580:	S:812:исследования
+studies	TRS:9671:je afrika čistým	TRS:30827:	TRS:61380:univerzitě
+styl	S:706:	S:706:стиль
+stylistickými	S:946:гармоничном	S:946:политику китая výpověďmi
+stylu	S:42:стиле	S:42:стиле
+stáhnout	S:571:146	S:571:вывести свои войска
+stál	S:599:волк	S:599:волк
+stála	S:187:исключительно ради противостояния	S:187:стояла
+stále	S:112:	S:112:оказывала	S:314:все еще	S:402:все еще	S:404:еще помнят	S:428:все	S:591:растущего	S:761:	S:768:всё еще	S:884:все еще	S:112:все	S:112:все	S:314:до сих пор	S:402:до сих	S:404:помнят	S:428:все	S:591:все	S:761:все еще	S:768:все еще	S:884:все еще
+stárnutí	S:788:	S:788:старения
+stát	S:173:стоить	S:329:государство	S:347:	S:422:	S:482:земле	S:515:стареющей	S:556:предоставить	S:637:становясь	S:173:государство	S:329:стать	S:347:государство	S:422:государство	S:482:государство	S:515:стать	S:556:стать	S:637:стать
+státech	S:235:	S:401:	S:591:	S:787:штатах	S:235:штатах	S:401:штатах	S:591:странах	S:787:штатах
+státem	S:7:государством	S:416:государством	S:7:государством	S:416:государством
+státnického	S:12:категоричны	S:12:státnického
+státní	S:102:	S:137:	S:603:	S:620:государственного	S:863:государственного	S:102:государственного	S:137:государственные	S:603:национальная	S:620:председатель	S:863:государственный
+státních	S:226:служащим	S:226:государственных
+státního	S:324:совершенному	S:324:государственного
+státním	S:962:одобрением	S:962:государственных одобрением
+státu	S:60:повсеместный	S:85:доминирующего	S:201:чужую	S:276:государства	S:315:государства	S:363:появившемуся	S:559:	S:946:	S:60:государства	S:85:государства	S:201:государства	S:276:государства	S:315:	S:363:государства	S:559:государства	S:946:государства
+státy	S:41:государства	S:168:сша	S:549:страны	S:639:	S:685:разумеется страны	S:722:государства	S:770:страны	S:772:пантюркского	S:779:государствами	S:789:	S:873:штаты	S:944:государства	S:41:страны	S:168:штаты	S:549:странами	S:639:штаты	S:685:středoamerické страны	S:722:страны	S:770:страны	S:772:страны	S:779:государства	S:789:штатами	S:873:штаты	S:944:страны
+státě	S:719:стране	S:742:штат	S:719:государстве	S:742:штате
+států	S:71:	S:104:	S:381:членов	S:415:государств	S:460:штатов	S:534:сша	S:548:государств	S:590:сша	S:640:стран	S:644:интересует	S:653:государств	S:839:неоспоримый	S:855:ворвавшаяся	S:885:вынесла	S:71:государств	S:104:девятнадцатого	S:381:участниц	S:415:государств	S:460:	S:534:штатов	S:548:стран	S:590:штатов	S:640:государств	S:644:государств	S:653:государств	S:839:штатов	S:855:штатов	S:885:штатов
+státům	S:575:странам	S:575:странам
+stávají	S:495:антизападной	S:495:становятся
+stávající	S:563:существующего	S:563:существующие
+stává	S:80:становится	S:517:	S:966:становясь	S:80:становится	S:517:становится	S:966:становится
+stíhat	S:507:	S:652:подозреваемые военные наказаны	S:507:преследует	S:652:преследует
+stíhání	S:652:преследования	S:654:преследования расширяются	S:652:преследования	S:654:преследования
+stíháním	S:653:преследования	S:653:преследования
+stížnosti	S:449:жалобы	S:449:жалобы
+stěhovat	S:200:распространённым явлением	S:201:переселяться	S:856:переселяться	S:200:переехать	S:201:переместить	S:856:переехать
+stěhování	S:197:рабочая сила мигрирует из зоны	S:197:иммиграции
+stěžejní	S:130:основная семантической	S:130:ключевым
+stěžovat	S:350:пожаловаться на то	S:858:жаловаться на то	S:350:заявлять	S:858:жаловаться
+středisko	S:752:исследовательским центр	S:752:центр
+střední	S:39:ближний	S:40:ближний	S:57:ближний	S:110:центральной	S:435:средней	S:760:	S:39:ближний	S:40:ближний	S:57:ближний	S:110:центральной	S:435:центральной	S:760:средний
+středního	S:33:среднего	S:33:ближнего
+středním	S:36:среднем	S:65:ближнем	S:189:ближнего	S:235:ближнем	S:737:ближнем	S:36:ближнем	S:65:ближнем	S:189:ближнем	S:235:ближнем	S:737:ближнем
+středoafrické	S:87:чада центрально - африканской	S:87:центральной африканской
+středoamerické	S:685:разумеется центральной америки	S:685:středoamerické
+středoasijské	S:772:пантюркского	S:772:
+střelba	S:158:перестрелки так	S:158:střelba
+střet	S:76:конфронтация	S:238:столкновению	S:76:конфликт	S:238:конфликт
+střetu	S:532:играли	S:999:столкновения	S:532:играли	S:999:столкновения
+střeva	S:786:кишки	S:786:кишки
+střeží	S:362:охраняются	S:362:другим посягнуть
+střízlivější	S:383:более воздержанный	S:383:более скромных
+stůl	S:645:	S:645:стол
+su	TRS:68361:chudoby	TRS:68372:	TRS:68375:	TRS:68388:	TRS:68393:měnách	TRS:68400:aby se
+subjekt	S:796:	S:796:neřízených
+subnacionales	TRS:68392:orgány
+subprime	TRS:79981:
+substantial	TRS:34849:
+subvencí	S:285:субсидирование	S:285:субсидий
+suceda	TRS:68367:zapotřebí
+suchých	S:697:нагретой	S:697:уборных
+sueño	TRS:68361:.
+suficiente	TRS:68390:spokojit s
+sufijské	S:835:	S:835:мушаррафом	S:835:sufijské	S:835:sufijské сулит много хорошего
+sumit	TRS:27374:sumit
+summit	TRS:71348:a	TRS:71469:	S:948:саммит	S:948:саммит
+sumus	TRS:75535:media
+sun	TRS:14035:a .	TRS:35547:cisco	TRS:86147:
+sunday	TRS:56662:sunday
+sunnitsko	S:251:суннитско- шиитском разделении	S:251:суннитов и
+sunnity	S:238:суннитами	S:238:суннитами
+sunnitští	S:65:удвоения	S:242:суннитские	S:65:суннитские	S:242:суннитские
+sunshine	TRS:69960:
+superiores	TRS:36508:estudios
+supermax	TRS:55065:maximální	TRS:55068:je
+supone	TRS:68378:zeměmi
+supérieur	TRS:5787:fyziky na
+supйrieure	TRS:12843:supérieure
+sur	TRS:68369:	TRS:68388:	TRS:71207:první	TRS:71218:	TRS:71218:papírů	TRS:71223:	TRS:71228:	TRS:71229:podmínky pro vydání státní organizace .   	TRS:71229:	TRS:71231:	TRS:81844:sur	S:782:	S:782:sur
+surtout	TRS:31250:slavného
+survey	TRS:936:že	TRS:13852:zjistil	TRS:48579:z	TRS:52806:
+surviving	TRS:73439:jak
+sus	TRS:68391:její	TRS:68396:
+susan	TRS:29901:susan	S:980:susan	S:980:susan
+sushanta	TRS:44299:sushanta	TRS:44336:sushanta
+suspicious	TRS:20354:
+sustitución	TRS:68385:doplňují
+suv	TRS:18950:kdo například jezdí v žíznivých	TRS:18952:sportovně
+suverenita	S:602:была суверенность	S:602:суверенитет
+sužovaný	S:16:чувствовал угрозу со стороны	S:16:осажденного
+svalují	S:714:во	S:865:перекладывают	S:714:osmašedesátý	S:865:svalují
+svaté	S:589:священной земле	S:589:святой земле
+svatého	S:538:	S:538:святого
+svazu	S:772:советского союза	S:772:советского союза
+svitků	S:939:свитков	S:939:svitků
+svižné	S:899:быстрые	S:899:быстрых коренных
+svoboda	S:313:свобода	S:392:свобода	S:493:свобода	S:313:свобода	S:392:свобода	S:493:свобода
+svobodnou	S:82:матерью	S:82:свободное
+svobodné	S:627:свободные	S:853:свободные	S:627:свободные	S:853:свободной
+svobodných	S:636:свободных	S:661:свободных	S:636:свободных	S:661:свободных
+svobodomyslné	S:441:штрахе	S:441:свободомыслящих
+svobodu	S:15:свободу	S:505:свободу	S:15:свободу	S:505:свободу
+svobody	S:391:свободы	S:433:свободы	S:468:свободу	S:512:свободы	S:391:свободы	S:433:свободы	S:468:свободы	S:512:свободы
+svobodě	S:711:свободы	S:711:свободе
+svou	S:81:свою	S:90:своей	S:93:	S:206:свою	S:247:своей	S:250:свою	S:556:своей	S:81:свою	S:90:свою	S:93:свою	S:206:свою	S:247:свою	S:250:свою	S:556:свою
+svržení	S:434:свержение	S:434:свержение
+své	S:65:	S:184:свои	S:185:согласилась	S:242:свои	S:266:совершили	S:404:свою	S:422:делиться	S:473:неоконсерваторами	S:481:свои	S:598:свои	S:608:собственной	S:624:кубинскими	S:626:гавану	S:707:свои	S:767:новейшим	S:795:свой	S:810:своих	S:878:преемниками	S:909:формируя	S:914:свои	S:958:ослабевающему	S:976:	S:977:свои выбросы	S:65:свои	S:184:свои	S:185:заповедями	S:242:свои	S:266:свои	S:404:своей	S:422:свое	S:473:neokony	S:481:свои	S:598:свою	S:608:своей	S:624:своей	S:626:ходе	S:707:свои	S:767:свои	S:795:свои	S:810:своих	S:878:погоне	S:909:свои	S:914:свои	S:958:своего	S:976:свои	S:977:выбросы
+svéhlavost	S:738:является результатом несокрушимости	S:738:svéhlavost
+svého	S:601:волка	S:667:своего	S:789:суфийской	S:909:своего	S:601:своего	S:667:своего	S:789:своего	S:909:своего
+svém	S:201:их	S:998:их	S:201:zapustili своем своей	S:998:своем
+svému	S:203:	S:706:избегало	S:203:своего	S:706:vystříhalo
+svých	S:6:своих	S:85:-членов	S:93:свои	S:119:своих	S:157:своих	S:174:своих	S:634:своих	S:744:	S:6:zbrkle	S:85:своих	S:93:своих	S:119:своих	S:157:своих	S:174:своих	S:634:своих	S:744:своих
+svým	S:616:адвокатом	S:906:зарабатывают	S:616:адвокатом	S:906:зарабатывают
+svými	S:66:союзниками	S:66:своими
+svědomí	S:34:мумбаи	S:34:совести
+svědčí	S:238:зловредного	S:238:говорит
+svět	S:15:мир	S:130:мир	S:210:мир	S:269:мира	S:713:мир	S:713:вытеснен	S:783:мир	S:938:мир	S:15:мир	S:130:мир	S:210:мир	S:269:мир	S:713:мир	S:713:мир	S:783:мир	S:938:мир
+světa	S:230:мира	S:350:мира	S:485:миром	S:695:мира	S:714:мира	S:724:мира	S:770:мира	S:874:всего мира	S:230:мире	S:350:мира	S:485:мира	S:695:мира	S:714:мира	S:724:мира	S:770:мира	S:874:мира
+světem	S:556:миром	S:964:миром	S:556:миром	S:964:миром
+světlem	S:271:–	S:271:свет
+světonázor	S:265:пониманию подсчета голосов но также общественного мнения	S:265:мировоззрение
+světovou	S:402:мировую	S:402:мировую
+světová	S:584:	S:584:всемирная
+světové	S:40:мировой	S:132:мировые	S:167:мировой	S:227:глобального	S:859:	S:40:мировой	S:132:мировой	S:167:мировой	S:227:всемирного	S:859:мировой
+světového	S:502:ниточки	S:502:мировой
+světoví	S:287:мировые	S:287:лидеры
+světových	S:691:	S:691:мировых
+světu	S:23:мира	S:222:миру	S:490:	S:730:миру	S:23:мира	S:222:миру	S:490:миру	S:730:миру
+světě	S:40:мире	S:165:мире	S:182:мире	S:227:мире	S:246:мире	S:590:всем мире	S:625:страдает	S:648:мира	S:663:миру	S:774:странах	S:787:всем мире	S:877:	S:40:мире	S:165:мире	S:182:мире	S:227:мире	S:246:мире	S:590:мире	S:625:мире	S:648:миру	S:663:мире	S:774:мире	S:787:	S:877:мире
+svěžího	S:582:глотком	S:582:svěžího
+svůj	S:55:состоянию	S:151:узаконить свое	S:496:	S:55:свое	S:151:свою	S:496:зародилась
+swaan	TRS:19781:de swaan
+swan	TRS:36375:	TRS:36380:organizace	TRS:36386:swan	TRS:52983:swan
+swap	TRS:75247:
+swf	TRS:34824:se	TRS:34825:fsm	TRS:34827:banky
+swing	S:325:swing	S:325:swing
+swp	TRS:7812:bezpečnost	TRS:7883:záležitosti	TRS:55209:	TRS:55210:energetickou	TRS:55259:záležitosti
+sylvina	TRS:84664:sylvina
+symbolizoval	S:704:68-й стал символом	S:704:символизировал
+symbolů	S:939:	S:939:символов
+symmetry	TRS:27410:symetrie
+syn	S:320:сын	S:320:сын
+syndicate	TRS:105:syndicate	TRS:346:syndicate	TRS:672:leden	TRS:707:syndicate	TRS:843:	TRS:1530:	TRS:2175:květen	TRS:3031:syndicate	TRS:3149:syndicate	TRS:4065:syndicate	TRS:4681:prosinec	TRS:4718:únor	TRS:4743:syndicate	TRS:4824:syndicate	TRS:5595:květen	TRS:5963:listopad	TRS:6123:syndidate	TRS:6239:březen	TRS:6292:květen	TRS:6410:únor	TRS:6583:květen	TRS:7515:listopad	TRS:7553:syndicate	TRS:7596:syndicate	TRS:8553:prosinec	TRS:8944:syndicate	TRS:9749:eurasia	TRS:9750:	TRS:10142:syndicate	TRS:10476:duben	TRS:10699:jako	TRS:11102:únor	TRS:11951:mexika	TRS:12067:	TRS:13189:angličtiny 	TRS:13962:syndicate	TRS:14036:únor	TRS:14436:syndicate	TRS:14903:institute	TRS:15411:syndicate	TRS:15812:	TRS:16820:prosinec	TRS:16852:syndicate	TRS:16889:květen	TRS:16924:syndicate	TRS:18691:	TRS:19559:syndicate	TRS:20017: 	TRS:20501:březen	TRS:22294:syndicate	TRS:22417:březen	TRS:22456:syndicate	TRS:22507:syndicate	TRS:22548:syndicate	TRS:22971:leden	TRS:23628:syndicate	TRS:23858:copyright	TRS:24051:únor	TRS:25969:leden	TRS:26010:červenec	TRS:26696:copyright	TRS:27265:syndicate	TRS:27505:analytik	TRS:27554:červen	TRS:27875:.	TRS:27876:- ghittaová , členka iráckého národního	TRS:27909:prosinec	TRS:28053:leden	TRS:28474:syndicate	TRS:29521:květen	TRS:29944:syndicate	TRS:29990:syndicate	TRS:30406:organizaci	TRS:30415:syndicate	TRS:31376:on	TRS:31475:	TRS:32215:červen	TRS:32565:	TRS:33129:www	TRS:34605:leden	TRS:35566:žije	TRS:36509:prosinec	TRS:36980:syndicate	TRS:37109:syndicate	TRS:37671:březen	TRS:37742:květen	TRS:39355:syndicate	TRS:39715:prosinec	TRS:39758:duben	TRS:40068:syndicate	TRS:40689:ve	TRS:41562:institute	TRS:41674:listopad	TRS:41791:říjen	TRS:42205:	TRS:42254:institute	TRS:42432:červen	TRS:42514:syndicate	TRS:43463:	TRS:43903:duben	TRS:44071:syndicate	TRS:44468:leden	TRS:44790:	TRS:44972:červen	TRS:45425:( vzpomínání	TRS:45457:červenec	TRS:45545:duben	TRS:46839:kdo by tratil by	TRS:46840:bývalý šéf generálního ředitelství průmyslu při	TRS:49201:syndicate	TRS:49252:syndicate	TRS:49638:	TRS:50089:syndicate	TRS:50165:angličtiny	TRS:50292:syndicate	TRS:51811:.	TRS:51901:syndicate	TRS:52951:syndicate	TRS:53348:roject	TRS:54171:leden	TRS:54265:duben	TRS:54656:leden	TRS:54698:syndicate	TRS:54838:ě	TRS:55544:.	TRS:55959:katastrofa	TRS:55998:březen	TRS:56786:březen	TRS:57067:   	TRS:57097:je	TRS:57563:duben	TRS:58857:syndicate	TRS:58906:syndicate	TRS:60460:leden	TRS:61024:březen	TRS:61729:titul	TRS:61985:	TRS:62145:for	TRS:65042:syndicate	TRS:65083:leden	TRS:65119:leden	TRS:65159:únor	TRS:65208:syndicate	TRS:65252:duben	TRS:65294:květen	TRS:66461:copyright	TRS:67104:březen	TRS:67685:institute	TRS:68783:duben	TRS:68908:syndicate	TRS:69855:irrational	TRS:70178:exuberance	TRS:71310:syndicate	TRS:72537:a	TRS:72697:syndicate	TRS:73103:syndicate	TRS:73885:prosinec	TRS:75525:syndicate	TRS:75742:syndicate	TRS:75965:únor	TRS:76329:měsíčních	TRS:76388:syndicate	TRS:76440:syndicate	TRS:76490:březen	TRS:76535:duben	TRS:76583:duben	TRS:76626:duben	TRS:76672:červen	TRS:77060:	TRS:77600:syndicate	TRS:79104:.	TRS:80528:únor	TRS:80574:červen	TRS:80969:syndicate	TRS:81214:leden	TRS:81971:syndicate	TRS:82010:syndicate	TRS:82053:angličtiny	TRS:82221:syndicate	TRS:83340:	TRS:83437:syndicate	TRS:83871:	TRS:84310:syndicate	TRS:84397:	TRS:84606:leden	TRS:85072::	TRS:85231:	TRS:85551:	TRS:85688:syndicate	TRS:86314:syndicate	TRS:86602:royal	TRS:87189:angličtiny	TRS:87408:syndicate	TRS:87729:leden	TRS:87959:únor
+syndicate.	TRS:2683:angličtiny	TRS:5231:	TRS:7110:angličtiny	TRS:9285:	TRS:10408:angličtiny	TRS:15687:antony	TRS:15730:antony	TRS:15766:antony	TRS:18445:angličtiny	TRS:18484:angličtiny	TRS:20643:angličtiny	TRS:28702:	TRS:33292:	TRS:34364:angličtiny	TRS:34642:angličtiny	TRS:39896:angličtiny	TRS:41288:	TRS:43228:(	TRS:47759:na	TRS:51241:angličtiny	TRS:57067:	TRS:60298:angličtiny	TRS:61729:poslední	TRS:63384:angličtiny	TRS:69856:angličtiny	TRS:69944:knih	TRS:69984:knih	TRS:70026:knih	TRS:72472:	TRS:78905:angličtiny	TRS:80788:angličtiny	TRS:83340:	TRS:83543:přeložil jiří kobělka	TRS:85552:angličtiny
+syndicate.org	TRS:5198:	TRS:15813:´ s .   	TRS:18692:ministra	TRS:27098:	TRS:32566:	TRS:79105:působil jako předseda rady ekonomických poradců prezidenta
+syndicateorg	TRS:57444:
+syntetických	S:753:синтетических медикаментов	S:768:производства синтетических препаратов	S:773:синтетических препаратов	S:753:синтетических	S:768:синтетических	S:773:синтетических
+syria	TRS:127:all	TRS:128:webový
+syrské	S:4:сирии	S:4:сирии
+syrského	S:29:сирийского	S:29:сирийского
+syrskému	S:20:сирийский	S:20:сирийскому
+syrský	S:8:сирии	S:8:сирийский
+systematicky	S:73:систематически	S:791:систематически	S:73:систематически	S:791:систематически
+systems	TRS:6466:anebo cisco	TRS:46393:.
+systém	S:28:система	S:207:федеральный	S:218:	S:454:систему	S:559:	S:898:системы	S:28:система	S:207:система	S:218:систему	S:454:система	S:559:систему	S:898:система
+systémech	S:968:системах	S:968:систем
+systémem	S:885:вынесла	S:885:системой
+systému	S:259:	S:560:системы	S:852:системы	S:259:системы	S:560:системы	S:852:системы
+systémy	S:124:системы	S:124:системы
+systémů	S:690:систем	S:690:систем
+systémům	S:563:работающей	S:563:vnímavým системы
+systиmes	TRS:71231:dnes	TRS:71231:
+syřané	S:14:террористами	S:14:сирийцы
+sám	S:852:	S:852:сам
+sánchezovi	S:678:сальвадор санчес серен	S:678:sánchezovi
+sázce	S:537:	S:537:поставлено на карту
+sázeli	S:105:начиная домашними хозяйствами заканчивая фирмами делали ставки	S:105:бились
+sázky	S:142:	S:142:ставки
+sçavans	TRS:69154:
+sécurité	S:782:по	S:782:sécurité
+sémantická	S:135:семантическая	S:135:sémantická
+sémantické	S:130:позади семантической состоит	S:130:sémantické
+série	S:965:	S:965:серии
+sí	TRS:68373:
+sídlištích	S:343:поселениях	S:343:sídlištích
+síle	S:534:потенциале	S:534:силе
+sílu	S:873:силу	S:965:	S:873:силу	S:965:силу
+síly	S:42:силам	S:85:доминирующего	S:92:силы	S:94:сил	S:257:	S:605:войска	S:725:силы	S:731:силы	S:780:идеально	S:781:силы	S:42:силы	S:85:силы	S:92:сил	S:94:силы	S:257:силы	S:605:силы	S:725:силы	S:731:силы	S:780:силы	S:781:силы
+sílící	S:155:растущим	S:243:межрелигиозного	S:552:усиленной	S:155:растет	S:243:растет	S:552:дипломатической
+sítí	S:93:сети благосостояния	S:691:сеть	S:93:сетью	S:691:сетью
+sólo	TRS:68387: 
+súdán	S:592:судана	S:592:судан
+súdánská	S:657:суданское	S:657:судана
+súdánského	S:656:суданского	S:656:омар
+súfijských	S:67:суфийских мистиков	S:67:мистиков
+sýrie	S:5:сирии	S:6:сирия	S:21:сирийских	S:268:сирия	S:822:сирия	S:5:сирии	S:6:сирии	S:21:сирии	S:268:сирии	S:822:сирия
+sýrii	S:14:сирия	S:234:сирии	S:270:сирийского	S:14:сирии	S:234:сирии	S:270:сирии

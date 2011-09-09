@@ -1,0 +1,24 @@
+x-	TRS:49796:camp
+xcite	TRS:49971:
+xdr	S:982:является трудноизлечимым	S:982:xdr
+xenofobie	S:452:ксенофобии	S:452:ксенофобии
+xi	TRS:39822:
+xiao	TRS:86533:xiao
+xiaoping	TRS:43394:,	TRS:68242:teng siao - pchingovy ekonomické reformy
+xiejiao	TRS:68232:-
+xii	S:526:xii	S:526:xii
+xiii	TRS:27606:13	TRS:39821:
+xitong	TRS:87884:čchen
+xiv	TRS:6042:mít
+xix	TRS:9996:	TRS:17853:.	TRS:24475:	TRS:45177:	TRS:46964:.	TRS:46971:století	TRS:46979:	TRS:46984:?	TRS:46987:19	TRS:48216:	TRS:63597:devatenáctém	TRS:68050:19	TRS:85499:v
+xml	TRS:84652:je xml tisk
+xun	TRS:87858:má
+xvi	TRS:6014:16	TRS:6016:hlasy	TRS:6017:strany	TRS:6017:volbu	TRS:6034:16	TRS:7229:pozornost	TRS:37557:,	TRS:59900:	TRS:75990:
+xviii	TRS:16969:dvořané kolem ludvíka xviii
+xx	TRS:5373:britská	TRS:13898:„	TRS:14001:20	TRS:14183:,	TRS:14190:20	TRS:14207:rámci	TRS:26053:20	TRS:26104:20	TRS:26287:20	TRS:26341:20	TRS:45606:dvacátý	TRS:45639:dvacátý	TRS:45653:ultraradikální	TRS:52228:ve	TRS:52245:stále	TRS:52246:svém	TRS:65858:20	TRS:69077:,	TRS:70989:new
+xx-	TRS:1400:bylo
+xxi	TRS:5063:rakouské	TRS:14001:21	TRS:20792:myšlenku	TRS:25286:století	TRS:28411:.  	TRS:47571:21	TRS:49431:bezmála	TRS:52238:jedenadvacátého	TRS:65887:21	TRS:67708:že	TRS:68363:příliš	TRS:69020:risk	TRS:69455:the	TRS:70258:	TRS:70948:a
+xxi-	TRS:17884:ve
+xxiii	TRS:15152:.
+xоньжи	TRS:68229:
+xхi	TRS:73557:a	TRS:73559:
