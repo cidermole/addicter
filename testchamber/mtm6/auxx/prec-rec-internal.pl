@@ -63,7 +63,7 @@ for my $headFlag (@flags) {
 	printf "|| %8s", $headFlag;
 }
 
-print " ||! recall ||\n";
+print " ||\n";
 
 #table
 for my $autoFlag (@flags) {
@@ -74,18 +74,28 @@ for my $autoFlag (@flags) {
 		printf "|| %8d", $val;
 	}
 	
-	printf(" ||! %7.3f ||\n", float($precRecs, 'rec', $autoFlag));
+	print " ||\n";
 }
 
-#recalls
+#precisions
 printf("||! %14s ", 'precision');
 
 for my $manFlag (@flags) {
-	my $val = float($precRecs, 'prec', $manFlag);
-	printf "||! %7.3f", $val;
+	printf("||! %7.2f",
+		float($precRecs, 'prec', $manFlag));
 }
 
-printf(" ||! %9.3f ||\n", float($precRecs, 'all', 'all'));
+print " ||\n";
+
+#recalls
+printf("||! %14s ", 'recall');
+
+for my $manFlag (@flags) {
+	printf("||! %7.2f",
+		float($precRecs, 'rec', $manFlag));
+}
+
+print " ||\n";
 
 #####
 #
@@ -109,14 +119,11 @@ sub updateStats {
 	
 	my $updVal = (($autoFlag eq $manFlag)? 1: 0);
 	
-	$precRecs->{'correct-rec'}->{$autoFlag} += $updVal;
-	$precRecs->{'total-rec'}->{$autoFlag}++;
+	$precRecs->{'correct-prec'}->{$autoFlag} += $updVal;
+	$precRecs->{'total-prec'}->{$autoFlag}++;
 	
-	$precRecs->{'correct-prec'}->{$manFlag} += $updVal;
-	$precRecs->{'total-prec'}->{$manFlag}++;
-	
-	$precRecs->{'correct-all'}->{'all'} += $updVal;
-	$precRecs->{'total-all'}->{'all'}++;
+	$precRecs->{'correct-rec'}->{$manFlag} += $updVal;
+	$precRecs->{'total-rec'}->{$manFlag}++;
 }
 
 #####

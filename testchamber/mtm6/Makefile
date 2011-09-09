@@ -8,7 +8,8 @@ ALIGNER_CMD=perl -I.. ../align-$(VARIANT).pl
 DETECTOR=addicter
 
 # parameters for make all
-HYPS=jane pbt rpbt
+#HYPS=jane pbt rpbt
+HYPS=mix
 ADDICTER_VARIANTS=hmm greedy berk berkwmt
 HJERSON_VARIANTS=default lemmawer
 VARIANTS=$(ADDICTER_VARIANTS) $(HJERSON_VARIANTS)
@@ -78,7 +79,7 @@ qall:
 
 
 clean:
-	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.errors-*.dat $(DATADIR)/*.results
+	rm -rf $(DATADIR)/*.aligned-* $(DATADIR)/*.errors-*.dat $(DATADIR)/*.results $(DATADIR)/*.results.ranking
 
 #*.factors files are now in the svn repository, so this is not needed (but may be useful in future)
 #FACTORS=full pos base
