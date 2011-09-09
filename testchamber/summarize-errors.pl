@@ -25,11 +25,13 @@ while (<STDIN>) {
 	my ($idx, $class) = split(/::/, $rawClass, 2);
 	
 	for my $token (@tokens) {
-		my ($flag, $word) = ($token =~ /~~/)? split(/~~/, $token, 2): ('none', $token);
-		
 		$sizes->{$class}++;
 		
-		$stats->{$class}->{$flag}++;
+		if ($token =~ /~~/) {
+			my ($flag, $word) = split(/~~/, $token, 2);
+			
+			$stats->{$class}->{$flag}++;
+		}
 	}
 }
 
