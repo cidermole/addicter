@@ -15,8 +15,7 @@ HJERSON_VARIANTS=default lemmawer
 VARIANTS=$(ADDICTER_VARIANTS) $(HJERSON_VARIANTS)
 DETECTORS=addicter hjerson
 DATASETS=de-en
-DO=results
-DOMORE=ranking
+DO="results ranking"
 
 # for SGE cluster
 QCMD = ${TMT_ROOT}/tools/cluster_utils/qruncmd
@@ -81,7 +80,7 @@ all:
 	 next if $$e eq "hjerson"  && index("$(HJERSON_VARIANTS)",$$v)==-1;#\
 	 next if $$e eq "addicter" && index("$(ADDICTER_VARIANTS)",$$v)==-1;#\
 	 for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){#\
-	 system "make -s info $(DO) $(DOMORE) DETECTOR=$$e VARIANT=$$v H=$$h DATASET=$$d\n";}}}}'
+	 system "make -s info $(DO) DETECTOR=$$e VARIANT=$$v H=$$h DATASET=$$d\n";}}}}'
 
 # SGE cluster
 qall:
