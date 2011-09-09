@@ -39,9 +39,9 @@ printf("%-12s %-12s %-6s %-s\n\n", "file", "error-flag", "count", "frequency");
 
 for my $class (sort keys %$stats) {
 	for my $flag (sort keys %{$stats->{$class}}) {
-		printf("%-12s %-12s %-6d %-.3f%%\n", $class, $flag,
+		printf("%12s %12s %6d %5.1f%%\n", $class, $flag,
 			$stats->{$class}->{$flag},
-			$stats->{$class}->{$flag} / $sizes->{$class});
+			100 * $stats->{$class}->{$flag} / $sizes->{$class});
 	}
 	print "\n";
 }
