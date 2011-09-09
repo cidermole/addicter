@@ -89,6 +89,18 @@ for my $types (['precision', 'prec'], ['recall', 'rec']) {
 	print " ||\n";
 }
 
+# f-score
+printf("||! %14s ", 'f1-score');
+for my $manFlag (@flags) {
+	my $p = float($precRecs, 'prec', $manFlag);
+	my $r = float($precRecs, 'rec', $manFlag);
+	my $f = (2*$p*$r)/(($p+$r)||1);
+	printf("|| %7.2f",$f);
+}
+print " ||\n";
+
+
+
 printf STDERR "Total accuracy: %.3f\n", float($precRecs, 'all', 'all');
 
 #####
