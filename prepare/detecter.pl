@@ -70,4 +70,4 @@ else
 # Find and classify translation errors based on the texts and the alignment.
 dzsys::saferun("$tcpath/finderrs.pl $srcfile $hypfile $reffile $tcalignment > $tcerrorlist") or die;
 # Summarize errors. Result: file 'summary'.
-dzsys::saferun("$tcpath/errsummary.pl $tcerrorlist") or die;
+dzsys::saferun("$tcpath/summarize-errors.pl < $tcerrorlist") or die;
