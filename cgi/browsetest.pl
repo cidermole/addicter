@@ -110,9 +110,6 @@ sub read_sentence
         'RA'  => 'test.ali',
         'HA'  => 'test.system.ali',
         'RH'  => 'test.refhyp.ali',
-        ###!!! Temporary tests: load two alternative alignments using their names from the testchamber.
-        'RH1' => 'cu-bojar.giza',
-        'RH2' => 'cu-bojar.meteor',
         'XML' => 'tcerr.txt'
     );
     my %sentence;
@@ -175,8 +172,14 @@ sub sentence_to_table
     $html .= "  <dd>$sentence->{H}</dd>\n";
     $html .= "</dl>\n";
     $html .= "<ol id='toc'>\n";
+    # Make the first alignment active.
+    my $activealiid = $sentence->{sub}[0];
     foreach my $aliid (@{$sentence->{sub}})
     {
+        ###!!! If I set the active class when generating the page It will appear active even after the user clicks another tab.
+        ###!!! If I do not set it here no tab will appear active until the user clicks one.
+        #my $class = $aliid eq $activealiid ? 'active' : 'inactive';
+        #$html .= "  <li><a href='#$aliid' class='$class'><span>$aliid</span></a></li>\n";
         $html .= "  <li><a href='#$aliid'><span>$aliid</span></a></li>\n";
     }
     $html .= "</ol>\n";
@@ -192,7 +195,11 @@ sub sentence_to_table
     # There may be more than one RH (reference-hypothesis) alignment.
     foreach my $aliid (@{$sentence->{sub}})
     {
-        $html .= "<div class='content' id='$aliid'>\n";
+        ###!!! If I set the active class when generating the page It will appear active even after the user clicks another tab.
+        ###!!! If I do not set it here no tab will appear active until the user clicks one.
+        #my $class = $aliid eq $activealiid ? 'content active' : 'content inactive';
+        my $class = 'content';
+        $html .= "<div class='$class' id='$aliid'>\n";
         # Get HTML for the three sentences with alignments.
         my ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
         if(exists($sentence->{RA}))
@@ -205,6 +212,8 @@ sub sentence_to_table
             $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
         }
         ###!!! If we have found a subfolder we automatically expect it to contain test.refhyp.ali.
+        # In future, we may just assume that it contains any of the expected files, for which tehere are alternatives.
+        # Files that are not present in a subfolder may be present in the superfolder as alternatives.
         {
             my $aliseq = AddicterHTML::get_nth_line("$config{experiment}/$aliid/test.refhyp.ali", $sentence->{sntno});
             @rhalignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliseq));
@@ -232,31 +241,32 @@ sub sentence_to_table
                 $html .= "</table>\n";
             }
         }
-        $html .= "</div>\n";
-    }
-    # Additional information by finderrs.pl from Mark's Testchamber.
-    if(exists($sentence->{XML}))
-    {
-        my $xmlrecord = $sentence->{XML};
-        $html .= "<h2>Automatically Identified Errors</h2>\n";
-        if($xmlrecord->{state} eq 'waiting')
+        # Additional information by finderrs.pl from Mark's Testchamber.
+        my $xmlfile = "$config{experiment}/$aliid/tcerr.txt";
+        if(-f $xmlfile)
         {
-            $html .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
-        }
-        elsif($xmlrecord->{state} eq 'finished')
-        {
-            $html .= "<dl>\n";
-            foreach my $key (keys(%{$xmlrecord->{errors}}))
+            my $xmlrecord = ReadFindErrs::get_nth_sentence($xmlfile, $sentence->{sntno});
+            $html .= "<h2>Automatically Identified Errors</h2>\n";
+            if($xmlrecord->{state} eq 'waiting')
             {
-                $html .= "<dt><b>$key</b></dt>\n";
-                $html .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+                $html .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
             }
-            $html .= "</dl>\n";
+            elsif($xmlrecord->{state} eq 'finished')
+            {
+                $html .= "<dl>\n";
+                foreach my $key (keys(%{$xmlrecord->{errors}}))
+                {
+                    $html .= "<dt><b>$key</b></dt>\n";
+                    $html .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+                }
+                $html .= "</dl>\n";
+            }
+            else
+            {
+                $html .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
+            }
         }
-        else
-        {
-            $html .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
-        }
+        $html .= "</div>\n";
     }
     $html .= "  <script src='../activatables.js' type='text/javascript'></script>\n";
     $html .= "  <script type='text/javascript'>\n";
