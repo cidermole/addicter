@@ -38,8 +38,7 @@ function doeval {
 
 sysname=$( echo $autofile | cut -d - -f 3- | cut -d . -f 1 | sed -e "s/-/ /g" )
 
-echo -n '!!!'
-echo " Evaluating $sysname (ref / hyp tables; left: auto / top: manual):"
+echo "Evaluating $sysname (ref / hyp tables; left: auto / top: manual):"
 
 reffiles=$( doeval ref )
 reffile=$( echo $reffiles | cut -d " " -f 1 )
