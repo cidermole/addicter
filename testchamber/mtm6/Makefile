@@ -22,6 +22,13 @@ DOMORE=ranking
 QCMD = ${TMT_ROOT}/tools/cluster_utils/qruncmd
 JOBS = 20
 
+# For experiments with all systems merged into one
+REF=ref
+SRC=src
+ifeq ($H,mix)
+  REF=refmix
+  SRC=srcmix
+endif
 
 define HELP_MESSAGE
 # To run all the experiments
@@ -33,15 +40,17 @@ make clean
 endef
 export HELP_MESSAGE
 
+
+
 help:
 	@echo "$$HELP_MESSAGE" | egrep --color '^(make.*|)'
 
 align: $(DATADIR)/$H.aligned-$(VARIANT)
-$(DATADIR)/$H.aligned-$(VARIANT): $(DATADIR)/ref.factors $(DATADIR)/$H.factors
+$(DATADIR)/$H.aligned-$(VARIANT): $(DATADIR)/$(REF).factors $(DATADIR)/$H.factors
 	case $(VARIANT) in\
 	  berk | berkwmt) ../align-hmm.pl -x -a $(DATADIR)/non1to1align/$H.aligned-$(VARIANT)\
-	                                  $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@;;\
-	  hmm | greedy) $(ALIGNER_CMD) $(DATADIR)/ref.factors $(DATADIR)/$H.factors > $@;;\
+	                                  $(DATADIR)/$(REF).factors $(DATADIR)/$H.factors > $@;;\
+	  hmm | greedy) $(ALIGNER_CMD) $(DATADIR)/$(REF).factors $(DATADIR)/$H.factors > $@;;\
 	esac
 
 errors: $(DATADIR)/$H.errors-$(VARIANT)-$(DETECTOR).dat
@@ -81,7 +90,7 @@ qall:
 	 next if $$e eq "addicter" && index("$(ADDICTER_VARIANTS)",$$v)==-1;#\
 	 for my $$h (qw($(HYPS))){for my $$d (qw($(DATASETS))){#\
 	 print "$(DO) DETECTOR=$$e VARIANT=$$v H=$$h DATASET=$$d\n";}}}}' | \
-	$(QCMD) --jobs=$(JOBS) --jobname=addicter --join "while read params; do make -s pp \$$params; done"
+	$(QCMD) --jobs=$(JOBS) --jobname=addicter --join "while read params; do make -s \$$params; done"
 
 
 clean:
