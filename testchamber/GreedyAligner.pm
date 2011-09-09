@@ -8,7 +8,7 @@ use Carp;
 has score_limit => (
     is            => 'ro',
     isa           => 'Num',
-    default       => 4,
+    default       => 8,
     documentation => 'minimum score for a node pair to be aligned',
 );
 
@@ -16,7 +16,13 @@ has weights => (
     is            => 'ro',
     isa           => 'HashRef',
     lazy_build    => 1,
-    documentation => 'weight vector of the features'
+    documentation => 'weight vector of the features',
+);
+
+has punct_tag_regex => (
+	is => 'ro',
+	default => '^([.,;?!]$|SENT$|Z:)',
+	documentation => 'which POS tags represent punctuation symbols',
 );
 
 sub _build_weights {
@@ -62,7 +68,7 @@ sub align_sentence {
     }
 
     # The main loop
-    while ( $max_score > $self->score_limit ) {
+    while ( $max_score >= $self->score_limit ) {
 
         # Mark the winning alignment pair from the lat iteration.
         $self->_align( $args, $max_h, $max_r );
@@ -188,30 +194,28 @@ use Text::JaroWinkler;
 
 sub lemma_similarity {
     my ( $self, $args, $h, $r ) = @_;
-    return Text::JaroWinkler::strcmp95( $args->{hlemmas}[$h], $args->{rlemmas}[$r], 20 );
+	my ( $hlemma, $rlemma ) = ( $args->{hlemmas}[$h], $args->{rlemmas}[$r] );
+	return 0 if !defined $hlemma || !defined $rlemma;
+    return Text::JaroWinkler::strcmp95( $hlemma, $rlemma, 20 );
 }
 
 sub tag_similarity {
     my ( $self, $args, $h, $r ) = @_;
     my ( $htag, $rtag ) = ( $args->{htags}[$h], $args->{rtags}[$r] );
-    return 0 if !$htag || !$rtag;
-    return substr( $htag, 0, 1 ) eq substr( $rtag, 0, 1 );
+    return 0 if !defined $htag || !defined $rtag;
+
+	# Same tags have the maximum score of 1
+	return 1 if $htag eq $rtag;
+
+	# Punctuation should not be aligned to non-punctuation.
+	return -10 if (($htag =~ $self->punct_tag_regex) != ($rtag =~ $self->punct_tag_regex));
+
+	# If the first letter of POS tag is the same, it usually means coarse-grained POS is the same
+    return 0.5 if substr( $htag, 0, 1 ) eq substr( $rtag, 0, 1 );
+	return 0;
 }
 
 1;
 
 # Copyright 2011 Martin Popel
 # This file is distributed under the GNU GPL v2 or later.
-
-__END__
-    # Collect the unaligned=free nodes
-    my ( @free_h, @aligned_r );
-    foreach my $h ( 0 .. $hlast ) {
-        if ( $args->{align}[$h] != -1) {
-            $aligned_r[ $args->{align}[$h] ] = 1;
-        }
-        else {
-            push @free_h, $h;
-        }
-    }
-    my @free_r = grep { !$aligned_r[$_] } ( 0 .. $rlast );
