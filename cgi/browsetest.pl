@@ -247,11 +247,42 @@ sub sentence_to_table
                         {
                             $tgtstyles[$token->{idx}] = 'background-color: lightblue';
                         }
+                        elsif($key eq 'untranslatedHypWord')
+                        {
+                            $tgtstyles[$token->{idx}] = 'background-color: orange';
+                        }
+                        elsif($key eq 'unequalAlignedTokens')
+                        {
+                            # There are three factors in this order: form|tag|lemma.
+                            # If unequalFactorList includes 2 (the lemma) we'll interpret it as lexical difference.
+                            # Otherwise it's morphological difference.
+                            if($token->{unequalFactorList} =~ m/2/)
+                            {
+                                $srcstyles[$token->{refIdx}] = 'background-color: red';
+                                $tgtstyles[$token->{hypIdx}] = 'background-color: red';
+                            }
+                            else # morphology only
+                            {
+                                $srcstyles[$token->{refIdx}] = 'background-color: pink';
+                                $tgtstyles[$token->{hypIdx}] = 'background-color: pink';
+                            }
+                        }
                         elsif($key eq 'ordErrorShiftWord')
                         {
                             $tgtstyles[$token->{hypPos}] = 'background-color: lightgreen';
                             # We should use the same color for the aligned counterpart of the reordered word.
+                            ###!!! OOPS! Although I called the alignment RH everywhere, it's actually HR, i.e. hypothesis left, reference right!
+                            ###!!! let's do something about this later when there's time
                             foreach my $r (@{$rhalindex->{l2r}[$token->{hypPos}]})
+                            {
+                                $srcstyles[$r] = 'background-color: lightgreen';
+                            }
+                        }
+                        elsif($key eq 'ordErrorSwitchWords')
+                        {
+                            $tgtstyles[$token->{hypIdx1}] = 'background-color: lightgreen';
+                            $tgtstyles[$token->{hypIdx2}] = 'background-color: lightgreen';
+                            foreach my $r (@{$rhalindex->{l2r}[$token->{hypIdx1}]}, @{$rhalindex->{l2r}[$token->{hypIdx2}]})
                             {
                                 $srcstyles[$r] = 'background-color: lightgreen';
                             }
