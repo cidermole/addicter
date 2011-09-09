@@ -20,13 +20,31 @@ manfile=$1
 autofile=$2
 idx=$3
 
-if [[ -z "$manfile" || -z "$autofile" || $idx ]]
+if [[ $idx == 1 ]]
+then
+	sysname=jane
+elif [[ $idx == 2 ]]
+then
+	sysname=pbt
+elif [[ $idx == 3 ]]
+then
+	sysname=rpbt
+else
+	sysname=tmp-system-$idx
+fi
+
+tmpman=".tmp-manual-$idx"
+tmpauto=".$sysname"
+
+if [[ -z "$manfile" || -z "$autofile" || -z $idx ]]
 then
 	echo "Usage: eval-rank-parts.sh manual_file automatic_file idx" 1>&2
 	exit 1
 fi
 
-head -$[ $idx * 180 ] "$manfile" | tail -180 > .tmpman$idx
-head -$[ $idx * 180 ] "$autofile" | tail -180 > .tmpauto$idx
+head -$[ $idx * 180 ] "$manfile" | tail -180 > $tmpman
+head -$[ $idx * 180 ] "$autofile" | tail -180 > $tmpauto
 
-./eval-rank.sh .tmpman$idx .tmpauto$idx
+./eval-rank.sh $tmpman $tmpauto
+
+rm $tmpman $tmpauto
