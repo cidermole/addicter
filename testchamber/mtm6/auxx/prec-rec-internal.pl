@@ -70,7 +70,8 @@ for my $autoFlag (@flags) {
 	
 	for my $manFlag (@flags) {
 		my $val = $stats->{$autoFlag}->{$manFlag};
-		printf "|| %8d", $val;
+		my $style = (($autoFlag eq $manFlag)? "!": "");
+		printf "||$style %8d", $val;
 	}
 	
 	print " ||\n";
@@ -81,7 +82,7 @@ for my $types (['precision', 'prec'], ['recall', 'rec']) {
 	printf("||! %14s ", $types->[0]);
 
 	for my $manFlag (@flags) {
-		printf("||! %7.2f",
+		printf("|| %7.2f",
 			float($precRecs, $types->[1], $manFlag));
 	}
 
