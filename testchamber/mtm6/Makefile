@@ -2,20 +2,19 @@
 SHELL=bash
 DATASET=de-en
 DATADIR=data/$(DATASET)
-H=jane
+H=mix
 VARIANT=greedy
 ALIGNER_CMD=perl -I.. ../align-$(VARIANT).pl
 DETECTOR=addicter
 
 # parameters for make all
-#HYPS=jane pbt rpbt
-HYPS=mix
+HYPS=jane pbt rpbt mix
 ADDICTER_VARIANTS=hmm greedy berk berkwmt
 HJERSON_VARIANTS=default lemmawer
 VARIANTS=$(ADDICTER_VARIANTS) $(HJERSON_VARIANTS)
 DETECTORS=addicter hjerson
 DATASETS=de-en
-DO="results ranking"
+DO=results ranking
 
 # for SGE cluster
 QCMD = ${TMT_ROOT}/tools/cluster_utils/qruncmd
@@ -53,12 +52,12 @@ $(DATADIR)/$H.aligned-$(VARIANT): $(DATADIR)/$(REF).factors $(DATADIR)/$H.factor
 	esac
 
 errors: $(DATADIR)/$H.errors-$(VARIANT)-$(DETECTOR).dat
-$(DATADIR)/%.errors-default-hjerson.dat: $(foreach x,ref $H,$(DATADIR)/$x.factors)
-	hjerson/generic-wrapper.sh raw_hjerson.py $(foreach x,ref $H,$(DATADIR)/$x.factors) > $@
-$(DATADIR)/%.errors-lemmawer-hjerson.dat: $(foreach x,ref $H,$(DATADIR)/$x.factors)
-	hjerson/generic-wrapper.sh raw_hjerson_lemma-wer.py $(foreach x,ref $H,$(DATADIR)/$x.factors) > $@
-$(DATADIR)/%.errors-$(VARIANT)-addicter.xml: $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(VARIANT)
-	../finderrs.pl $(foreach x,src $H ref,$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(VARIANT) > $@
+$(DATADIR)/%.errors-default-hjerson.dat: $(foreach x,$(REF) $H,$(DATADIR)/$x.factors)
+	hjerson/generic-wrapper.sh raw_hjerson.py $(foreach x,$(REF) $H,$(DATADIR)/$x.factors) > $@
+$(DATADIR)/%.errors-lemmawer-hjerson.dat: $(foreach x,$(REF) $H,$(DATADIR)/$x.factors)
+	hjerson/generic-wrapper.sh raw_hjerson_lemma-wer.py $(foreach x,$(REF) $H,$(DATADIR)/$x.factors) > $@
+$(DATADIR)/%.errors-$(VARIANT)-addicter.xml: $(foreach x,$(SRC) $H $(REF),$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(VARIANT)
+	../finderrs.pl $(foreach x,$(SRC) $H $(REF),$(DATADIR)/$x.factors) $(DATADIR)/$H.aligned-$(VARIANT) > $@
 $(DATADIR)/%.errors-$(VARIANT)-addicter.dat: $(DATADIR)/%.errors-$(VARIANT)-addicter.xml
 	../err2hjerson.pl < $< > $@
 
