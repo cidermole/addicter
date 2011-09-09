@@ -23,10 +23,18 @@ then
 	exit 1
 fi
 
+sysname=$( echo $autofile | cut -d - -f 3- | cut -d . -f 1 | sed -e "s/-/ /g" )
+
+echo -n '!!!'
+echo " Evaluating $sysname (ref / hyp tables; left: auto / top: manual):"
+
 for evaltype in ref hyp
 do
-	echo "Evaluating $autofile, $evaltype:"
-	./auxx/prec-rec-internal.pl \
-		<( cat "$manfile" | grep "$evaltype-err-cats" | cut -d " " -f 2-) \
-		<( cat "$autofile" | grep "$evaltype-err-cats" | cut -d " " -f 2-)
+	(
+		./auxx/prec-rec-internal.pl \
+			<( cat "$manfile" | grep "$evaltype-err-cats" | cut -d " " -f 2-) \
+			<( cat "$autofile" | grep "$evaltype-err-cats" | cut -d " " -f 2-)
+	) > .tmp-$evaltype
 done
+
+paste -d " " .tmp-ref .tmp-hyp | sed -e "s/||border=1 //"

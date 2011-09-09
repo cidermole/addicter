@@ -55,19 +55,18 @@ my @flags = sort keys %$allFlags;
 
 #header
 print "||border=1\n";
-print "|| (left: auto; top: manual) ||||||||||||\n";
 
 printf "|| %15s ", "";
 
 for my $headFlag (@flags) {
-	printf "|| %8s", $headFlag;
+	printf "||! %8s", $headFlag;
 }
 
 print " ||\n";
 
 #table
 for my $autoFlag (@flags) {
-	printf "|| %15s ", $autoFlag;
+	printf "||! %15s ", $autoFlag;
 	
 	for my $manFlag (@flags) {
 		my $val = $stats->{$autoFlag}->{$manFlag};
