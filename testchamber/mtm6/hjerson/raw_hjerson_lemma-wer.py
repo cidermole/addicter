@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 
 # Copyright 2011 Maja Popović
 # The program is distributed under the terms 
@@ -778,58 +778,58 @@ if htmlfile:
 
 # calculate and write total error rates 
 
+# TODO if print_totals:
+#sys.stdout.write("\n")
 
-sys.stdout.write("\n")
+#totalWer = 100*totalWerCount/totalWerRefLength
+#totalHper = 100*totalHperCount/totalHypLength
+#totalRper = 100*totalRperCount/totalWerRefLength
 
-totalWer = 100*totalWerCount/totalWerRefLength
-totalHper = 100*totalHperCount/totalHypLength
-totalRper = 100*totalRperCount/totalWerRefLength
+#totalInflHper = 100*totalInflHperCount/totalHypLength
+#totalInflRper = 100*totalInflRperCount/totalWerRefLength
+#totalMissErr = 100*totalMissCount/totalWerRefLength
+#totalExtErr = 100*totalExtCount/totalHypLength
+#totalrLexErr = 100*totalRefLexCount/totalWerRefLength
+#totalhLexErr = 100*totalHypLexCount/totalHypLength
+#totalrRer = 100*totalRefReordCount/totalWerRefLength
+#totalhRer = 100*totalHypReordCount/totalHypLength
 
-totalInflHper = 100*totalInflHperCount/totalHypLength
-totalInflRper = 100*totalInflRperCount/totalWerRefLength
-totalMissErr = 100*totalMissCount/totalWerRefLength
-totalExtErr = 100*totalExtCount/totalHypLength
-totalrLexErr = 100*totalRefLexCount/totalWerRefLength
-totalhLexErr = 100*totalHypLexCount/totalHypLength
-totalrRer = 100*totalRefReordCount/totalWerRefLength
-totalhRer = 100*totalHypReordCount/totalHypLength
+#totalbiHper = 100*totalBlockInflHperCount/totalHypLength
+#totalbiRper = 100*totalBlockInflRperCount/totalWerRefLength
+#totalrbRer = 100*totalRefBlockReordCount/totalWerRefLength
+#totalhbRer = 100*totalHypBlockReordCount/totalHypLength
+#totalbmissErr = 100*totalBlockMissCount/totalWerRefLength
+#totalbextErr = 100*totalBlockExtCount/totalHypLength
+#totalrbLexErr = 100*totalRefBlockLexCount/totalWerRefLength
+#totalhbLexErr = 100*totalHypBlockLexCount/totalHypLength
 
-totalbiHper = 100*totalBlockInflHperCount/totalHypLength
-totalbiRper = 100*totalBlockInflRperCount/totalWerRefLength
-totalrbRer = 100*totalRefBlockReordCount/totalWerRefLength
-totalhbRer = 100*totalHypBlockReordCount/totalHypLength
-totalbmissErr = 100*totalBlockMissCount/totalWerRefLength
-totalbextErr = 100*totalBlockExtCount/totalHypLength
-totalrbLexErr = 100*totalRefBlockLexCount/totalWerRefLength
-totalhbLexErr = 100*totalHypBlockLexCount/totalHypLength
+#write_error_rates(sys.stdout, "Wer:  ", totalWerCount, totalWer)
+#write_error_rates(sys.stdout, "Rper: ", totalRperCount, totalRper)
+#write_error_rates(sys.stdout, "Hper: ", totalHperCount, totalHper)
 
-write_error_rates(sys.stdout, "Wer:  ", totalWerCount, totalWer)
-write_error_rates(sys.stdout, "Rper: ", totalRperCount, totalRper)
-write_error_rates(sys.stdout, "Hper: ", totalHperCount, totalHper)
+#sys.stdout.write("\n")
 
-sys.stdout.write("\n")
+#write_error_rates(sys.stdout, "rINFer: ", totalInflRperCount, totalInflRper)
+#write_error_rates(sys.stdout, "hINFer: ", totalInflHperCount, totalInflHper)
+#write_error_rates(sys.stdout, "rRer:   ", totalRefReordCount, totalrRer)
+#write_error_rates(sys.stdout, "hRer:   ", totalHypReordCount, totalhRer)
+#write_error_rates(sys.stdout, "MISer:  ", totalMissCount, totalMissErr)
+#write_error_rates(sys.stdout, "EXTer:  ", totalExtCount, totalExtErr)
+#write_error_rates(sys.stdout, "rLEXer: ", totalRefLexCount, totalrLexErr)
+#write_error_rates(sys.stdout, "hLEXer: ", totalHypLexCount, totalhLexErr)
 
-write_error_rates(sys.stdout, "rINFer: ", totalInflRperCount, totalInflRper)
-write_error_rates(sys.stdout, "hINFer: ", totalInflHperCount, totalInflHper)
-write_error_rates(sys.stdout, "rRer:   ", totalRefReordCount, totalrRer)
-write_error_rates(sys.stdout, "hRer:   ", totalHypReordCount, totalhRer)
-write_error_rates(sys.stdout, "MISer:  ", totalMissCount, totalMissErr)
-write_error_rates(sys.stdout, "EXTer:  ", totalExtCount, totalExtErr)
-write_error_rates(sys.stdout, "rLEXer: ", totalRefLexCount, totalrLexErr)
-write_error_rates(sys.stdout, "hLEXer: ", totalHypLexCount, totalhLexErr)
+#sys.stdout.write("\n")
 
-sys.stdout.write("\n")
+#write_error_rates(sys.stdout, "brINFer: ", totalBlockInflRperCount, totalbiRper)
+#write_error_rates(sys.stdout, "bhINFer: ", totalBlockInflHperCount, totalbiHper)
+#write_error_rates(sys.stdout, "brRer:   ", totalRefBlockReordCount, totalrbRer)
+#write_error_rates(sys.stdout, "bhRer:   ", totalHypBlockReordCount, totalhbRer)
+#write_error_rates(sys.stdout, "bMISer:  ", totalBlockMissCount, totalbmissErr)
+#write_error_rates(sys.stdout, "bEXTer:  ", totalBlockExtCount, totalbextErr)
+#write_error_rates(sys.stdout, "brLEXer: ", totalRefBlockLexCount, totalrbLexErr)
+#write_error_rates(sys.stdout, "bhLEXer: ", totalHypBlockLexCount, totalhbLexErr)
 
-write_error_rates(sys.stdout, "brINFer: ", totalBlockInflRperCount, totalbiRper)
-write_error_rates(sys.stdout, "bhINFer: ", totalBlockInflHperCount, totalbiHper)
-write_error_rates(sys.stdout, "brRer:   ", totalRefBlockReordCount, totalrbRer)
-write_error_rates(sys.stdout, "bhRer:   ", totalHypBlockReordCount, totalhbRer)
-write_error_rates(sys.stdout, "bMISer:  ", totalBlockMissCount, totalbmissErr)
-write_error_rates(sys.stdout, "bEXTer:  ", totalBlockExtCount, totalbextErr)
-write_error_rates(sys.stdout, "brLEXer: ", totalRefBlockLexCount, totalrbLexErr)
-write_error_rates(sys.stdout, "bhLEXer: ", totalHypBlockLexCount, totalhbLexErr)
-
-sys.stdout.write("\n")
+#sys.stdout.write("\n")
 
 htxt.close()
 rtxt.close()
