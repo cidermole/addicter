@@ -166,7 +166,12 @@ sub sentence_to_table_row
         {
             $aliphrase =~ s/\Q$focusword\E/<span style='color:red'>$focusword<\/span>/g;
         }
-        $alirow .= "<td colspan='$alirow[$i][2]'>$aliphrase<br/>$alirow[$i][1]</td>";
+        # Add all alignment pairs as classes for this cell.
+        # We are going to use it to highlight corresponding cells when mouse is over.
+        my $class = $alirow[$i][1];
+        $class =~ s/(\d+)-(\d+)/a$1_$2/g;
+        $id++; ###!!!GLOBAL :-()
+        $alirow .= "<td class='$class' id='td$id' colspan='$alirow[$i][2]' onmouseover='highlightCells(\"td$id\");'>$aliphrase<br/>$alirow[$i][1]</td>";
     }
     $alirow .= "</tr>\n";
     # Put the two rows together.

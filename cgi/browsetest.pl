@@ -25,14 +25,50 @@ print("    ol#toc li { float: left; margin: 0 1px 0 0; }\n");
 print("    ol#toc a { background: #bdf url(../tabs.gif); color: #008; display: block; float: left; height: 2em; padding-left: 10px; text-decoration: none; }\n");
 print("    ol#toc a:hover { background-color: #3af; background-position: 0 -120px; }\n");
 print("    ol#toc a:hover span { background-position: 100% -120px; }\n");
-###!!! I have to put the JavaScript in order with the CSS, both examples copied from blixt.org, but incompatible.
-###!!! Originally (in the CSS example), there was li.current in the following two lines, and 'a' instead of 'a.active'.
 print("    ol#toc li a.active { background-color: #48f; background-position: 0 -60px; }\n");
 print("    ol#toc li a.active span { background-position: 100% -60px; }\n");
 print("    ol#toc span { background: url(../tabs.gif) 100% 0; display: block; line-height: 2em; padding-right: 10px; }\n");
 print("    div.content { border: #48f solid 3px; clear: left; padding: 1em; }\n");
 print("    div.inactive { display: none }\n");
+# Note: reportedly, Internet Explorer only supports :hover subclass for the <a> element. This might work in other browsers, though.
+#print("    td:hover { background-color: yellow; }\n");
+#print("    td a:hover { background-color: yellow; }\n");
+#print("    td.a8_8:hover { background-color: yellow; }\n");
 print("  </style>\n");
+print <<EOF
+<script>
+// Gets the list of classes of an element.
+// Sets the background color of all those classes to yellow.
+// Used to highlight all corresponding table cells when mouse is over one of them.
+// Each cell should have something like onmouseover='javascript:highlightCells(this)'
+function highlightCells(cellId)
+{
+    // Remove the highlighting stylesheet if already present in the document.
+    // getElementById() returns null if the stylesheet does not exist.
+    var sheetToBeRemoved = document.getElementById('highlightStyle');
+    if (sheetToBeRemoved != null)
+    {
+        var sheetParent = sheetToBeRemoved.parentNode;
+        sheetParent.removeChild(sheetToBeRemoved);
+    }
+    // Create a new stylesheet.
+    var sheet = document.createElement('style');
+    sheet.id = 'highlightStyle';
+    // Now fill the stylesheet with highlighting rules.
+    var cell = document.getElementById(cellId);
+    var classes = cell.className.split(/\s+/);
+    for (var i = 0; i < classes.length; i++)
+    {
+        //alert('highlighting td.'+classes[i]+" { background-color: yellow; }");
+        // Set the background color of the class to yellow.
+        //sheet.insertRule("td."+classes[i]+" { background-color: yellow; }", i);
+        sheet.innerHTML = sheet.innerHTML+"td."+classes[i]+" { background-color: yellow; }";
+    }
+    document.body.appendChild(sheet);
+}
+</script>
+EOF
+;
 print("</head>\n");
 print("<body>\n");
 # We do not want underlined hyperlinks unless the mouse goes over them.
