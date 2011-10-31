@@ -10,13 +10,23 @@ sub usage
     print STDERR ("detecterr.pl -s srcfile -r reffile -h hypfile [-a alignment] [-w workdir]\n");
 }
 
+sub saferun 
+{
+	my ($cmd) = @_;
+	my $result = system($cmd);
+	if ($result != 0) {
+		die("Command $cmd returned a non-zero status");
+	}
+}
+
 use utf8;
 use open ":utf8";
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 use Getopt::Long;
-use dzsys;
+#use dzsys;
+use FindBin qw($Bin);
 
 my $workdir = '.';
 GetOptions
@@ -32,7 +42,7 @@ unless($reffile && $hypfile)
     usage();
     die('Missing (ref|hyp)file');
 }
-my $scriptpath = dzsys::get_script_path();
+my $scriptpath = $Bin; #dzsys::get_script_path();
 my $tcpath = "$scriptpath/../testchamber";
 $tcpath =~ s-/prepare/..--;
 # Intermediate and output files:
@@ -65,11 +75,11 @@ if($alifile)
 }
 else
 {
-    dzsys::saferun("$tcpath/align-hmm.pl $reffile $hypfile > $tcalignment") or die;
+    saferun("$tcpath/align-hmm.pl $reffile $hypfile > $tcalignment");
 }
 
 # Find and classify translation errors based on the texts and the alignment.
-dzsys::saferun("$tcpath/finderrs.pl $srcfile $hypfile $reffile $tcalignment > $tcerrorlist") or die;
+saferun("$tcpath/finderrs.pl $srcfile $hypfile $reffile $tcalignment > $tcerrorlist");
 
 # Summarize errors. Result: file 'summary'.
-dzsys::saferun("cat $tcerrorlist | $tcpath/err2hjerson.pl | $tcpath/summarize-errors.pl") or die;
+saferun("cat $tcerrorlist | $tcpath/err2hjerson.pl | $tcpath/summarize-errors.pl");
