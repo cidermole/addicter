@@ -1,6 +1,17 @@
 #!/usr/bin/env perl
 use Modern::Perl;
 #use utf8::all;
+use File::Spec;
+use Getopt::Long;
+
+BEGIN {
+    # include packages from same folder where the
+    # script is, even if launched from elsewhere
+    # unshift(), not push(), to give own functions precedence over other libraries
+    my @dirs = File::Spec->splitdir(File::Spec->rel2abs(File::Spec->canonpath($0)));
+    pop @dirs;
+    unshift(@INC, File::Spec->catdir(@dirs));
+}
 use autodie;
 use GreedyAligner;
 use Carp;
