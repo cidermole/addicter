@@ -75,7 +75,7 @@ if($alifile)
 }
 else
 {
-    saferun("$tcpath/align-hmm.pl $reffile $hypfile > $tcalignment");
+    saferun("$tcpath/align-greedy.pl $reffile $hypfile > $tcalignment");
 }
 
 # Find and classify translation errors based on the texts and the alignment.
