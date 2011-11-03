@@ -48,7 +48,7 @@ sub displayFlaggedHyp {
 			print $flag . ($tildes? "~~": "::");
 		}
 		
-		print $surfForm . " ";
+		print io::xml2str($surfForm) . " ";
 	}
 }
 
@@ -85,7 +85,7 @@ sub displayFlaggedMissingRef {
 		}
 		
 		for my $i (1..$count) {
-			print "miss" . $auxFlag . ($tildes? "~~": "::") . $surfForm . " ";
+			print "miss" . $auxFlag . ($tildes? "~~": "::") . io::xml2str($surfForm) . " ";
 		}
 	}
 }

@@ -182,6 +182,20 @@ sub str4xml {
 #####
 #
 #####
+sub xml2str {
+	my $str = shift;
+	
+    $str =~ s/&amp;/&/g;
+    $str =~ s/&lt;/</g;
+    $str =~ s/&gt;/>/g;
+    $str =~ s/&quot;/"/g;
+	
+	return $str;
+}
+
+#####
+#
+#####
 sub tok2str4xml {
     # Expected one parameter: an array reference.
 	my ($token) = @_;
