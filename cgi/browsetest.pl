@@ -271,7 +271,34 @@ sub sentence_to_table
                 $htmlerr .= "<dl>\n";
                 foreach my $key (keys(%{$xmlrecord->{errors}}))
                 {
-                    $htmlerr .= "<dt><b>$key</b></dt>\n";
+		    if($key eq 'missingRefWord')
+		    {
+			$htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
+		    }
+		    elsif($key eq 'extraHypWord')
+		    {
+			$htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
+		    }
+		    elsif($key eq 'untranslatedHypWord')
+		    {
+			$htmlerr .= "<dt><b style='background-color: orange'>$key</b></dt>\n";
+		    }
+		    elsif($key eq 'unequalAlignedTokens')
+		    {
+			$htmlerr .= "<dt><b style='background-color: pink'>$key</b></dt>\n";
+		    }
+		    elsif($key eq 'ordErrorShiftWord')
+		    {
+			$htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
+		    }
+		    elsif($key eq 'ordErrorSwitchWords')
+		    {
+			$htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
+		    }
+		    else
+		    {
+			$htmlerr .= "<dt><b>$key</b></dt>\n";
+		    }
                     $htmlerr .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
                     foreach my $token (@{$xmlrecord->{errors}{$key}})
                     {
@@ -334,11 +361,18 @@ sub sentence_to_table
         }
         $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, $rhalignments, 1, 0, 0, 0, \@srcstyles);
         $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, $rhalignments, 0, 0, 0, 0, \@tgtstyles);
-        my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
+        
+	$srcrow = substr($srcrow,0,6) .  "<th rowspan=2>source</th>" . substr($srcrow,6);
+	$tgtrow = substr($tgtrow,0,6) .  "<th rowspan=2>reference</th>" . substr($tgtrow,6);
+	$hyprow = substr($hyprow,0,6) .  "<th rowspan=2>hypothesis</th>" . substr($hyprow,6);
+	$rhrow = substr($rhrow,0,6) .  "<th rowspan=2>ref-hyp</th>" . substr($rhrow,6);
+	$hrrow = substr($hrrow,0,6) .  "<th rowspan=2>hyp-ref</th>" . substr($hrrow,6);
+	my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
         # We can display all three pairs of rows in one table or we can display them in separate tables.
-        my $onetable = 0;
+        my $onetable = 1;
         if($onetable)
         {
+	    
             # Display the source words along with their alignment links.
             $html .= "<table border style='font-family:Code2000'>\n";
             # An empty row separates source and target sections.
