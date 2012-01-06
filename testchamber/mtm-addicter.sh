@@ -35,7 +35,7 @@ fi
 if [[ -z "$src" ]]
 then
 	delsrc=yes
-	src=".tmp-source-dummy"
+	src=$( tempfile )
 	
 	# generate a file with the same number of lines as the hypothesis, with "(dummy text)" on every line
 	cat "$hyp" | sed -e "s/^.*/(dummy text)/g" > "$src"; ordie
@@ -46,12 +46,12 @@ if [[ -z "$ali" ]]
 then
 	echo "applying addicter's aligner" 1>&2
 	delali=yes
-	ali=".tmp-alignment"
-	#./align-hmm.pl -n 2 "$ref" "$hyp" > "$ali"; ordie
-	./align-greedy.pl "$ref" "$hyp" > "$ali"; ordie
+	ali=$( tempfile )
+	./align-hmm.pl -n 2 "$ref" "$hyp" > "$ali"; ordie
+	#./align-greedy.pl "$ref" "$hyp" > "$ali"; ordie
 fi
 
-err=".tmp-errors"
+err=$( tempfile )
 
 echo "finding errors" 1>&2
 
@@ -73,5 +73,6 @@ fi
 # if alignment was generated, delete it
 if [[ ! -z "$delali" ]]
 then
-	rm $ali
+	#rm $ali
+	echo $ali 1>&2
 fi

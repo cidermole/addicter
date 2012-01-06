@@ -53,7 +53,7 @@ sub resolve {
     for(my $c = 0; $c < scalar(@{$lines->[$r]}); $c++) {
       if ($lines->[$r]->[$c] ne "-") {
         if ($lines->[$r]->[$c] ne "*") {
-          $hasManualCorrections = 'M ';
+          #$hasManualCorrections = 'M ';
 		  }
         push @outpoints, $r."-".$c;
       }
