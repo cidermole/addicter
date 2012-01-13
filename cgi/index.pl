@@ -46,6 +46,7 @@ if(exists($config{experiment}))
     # Path to experiment we are analyzing (can be relative to the location of this script).
     $experiment = $config{experiment};
     print("  <h1>Current Experiment: <span style='color:red'>$experiment</span></h1>\n");
+    print("  <h2><a href='tcerrread.pl?experiment=$experiment'>Error Summary</a></h2>\n");
     print("  <table border='1'>\n");
     print("    <tr>\n");
     print("      <td valign=top style='background:yellow'>\n");
@@ -106,6 +107,13 @@ if(exists($config{experiment}))
             print_words_matching_re($config{lang}, $re);
         }
     }
+    print("  <table border='1'>\n");
+    print("    <tr>\n");
+    print("      <td valign=top style='background:lightgreen'>\n");
+    print("        <h2>Experiment Statistics</h2>\n");
+    print("      </td>\n");
+    print("    </tr>\n");
+    print("  </table>\n");
 }
 # Close the HTML document.
 print("</body>\n");
