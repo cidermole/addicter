@@ -271,35 +271,51 @@ sub sentence_to_table
                 $htmlerr .= "<dl>\n";
                 foreach my $key (keys(%{$xmlrecord->{errors}}))
                 {
-		    if($key eq 'missingRefWord')
-		    {
-			$htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
-		    }
-		    elsif($key eq 'extraHypWord')
-		    {
-			$htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
-		    }
-		    elsif($key eq 'untranslatedHypWord')
-		    {
-			$htmlerr .= "<dt><b style='background-color: orange'>$key</b></dt>\n";
-		    }
-		    elsif($key eq 'unequalAlignedTokens')
-		    {
-			$htmlerr .= "<dt><b style='background-color: pink'>$key</b></dt>\n";
-		    }
-		    elsif($key eq 'ordErrorShiftWord')
-		    {
-			$htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
-		    }
-		    elsif($key eq 'ordErrorSwitchWords')
-		    {
-			$htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
-		    }
-		    else
-		    {
-			$htmlerr .= "<dt><b>$key</b></dt>\n";
-		    }
-                    $htmlerr .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+                    if($key eq 'missingRefWord')
+                    {
+                        $htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
+                    }
+                    elsif($key eq 'extraHypWord')
+                    {
+                        $htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
+                    }
+                    elsif($key eq 'untranslatedHypWord')
+                    {
+                        $htmlerr .= "<dt><b style='background-color: orange'>$key</b></dt>\n";
+                    }
+                    elsif($key eq 'unequalAlignedTokens') 
+                    {
+                        $htmlerr .= "<dt><b>$key (ref/hyp)</b></dt>\n";
+                        $htmlerr .= "<dd><b style='background-color: red'>with different lemma:</b> ";
+                        $htmlerr .= join("  ", map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} =~ m/2/} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= "</dd>\n";
+                        $htmlerr .= "<dd><b  style='background-color: pink'>with same lemma:</b> ";
+                        $htmlerr .= join(' ', map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} !~ m/2/} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= "</dd>\n";
+                    }
+                    elsif($key eq 'ordErrorShiftWord')
+                    {
+                        $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
+                        $htmlerr .= "<dd> ";
+                        $htmlerr .= join(' ', map {my $t=$_->{hypToken}; $t=~s/\|.*//; $t} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= "</dd>\n";
+                    }
+                        elsif($key eq 'ordErrorSwitchWords')
+                    {
+                        $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
+                        $htmlerr .= "<dd> ";
+                        $htmlerr .= join(' ', map {my $t1=$_->{hypToken1}; my $t2=$_->{hypToken2}; $t1=~s/\|.*//; $t2=~s/\|.*//; $t1."-".$t2} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= "</dd>\n";
+                    }
+                    else
+                    {
+                        $htmlerr .= "<dt><b>$key</b></dt>\n";
+                    }
+                    if (not ($key eq 'unequalAlignedTokens') and not ($key eq 'ordErrorShiftWord') and not ($key eq "ordErrorSwitchWords"))
+                    {
+                        $htmlerr .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+                    }
+                    # styles for table
                     foreach my $token (@{$xmlrecord->{errors}{$key}})
                     {
                         if($key eq 'missingRefWord')

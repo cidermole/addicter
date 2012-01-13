@@ -52,13 +52,22 @@ my $numsnt = count_lines("$experiment/test.src");
 # path to file with found errors
 my $path = "$experiment/$alignment/tcerr.txt";
 
-# count of error type occurences
+# count of error type sentence occurences (number of different sentences with given error type occurence)
+my %err_sent_counts = (
+	'extraHypWord' => 0,
+	'missingRefWord' => 0,
+	'untranslatedHypWord' => 0,
+	'unequalAlignedTokens' => 0,
+	'ordErrorShiftWord' => 0,
+	'ordErrorSwitchWords' => 0
+);
+# counts of error type occurence
 my %err_counts = (
 	'extraHypWord' => 0,
 	'missingRefWord' => 0,
 	'untranslatedHypWord' => 0,
 	'unequalAlignedTokens' => 0,
-	'ordErrorShiftWords' => 0,
+	'ordErrorShiftWord' => 0,
 	'ordErrorSwitchWords' => 0
 );
 # id's of sentences with error of the given type
@@ -67,7 +76,7 @@ my %err_positions = (
 	'missingRefWord' => [qw()],
 	'untranslatedHypWord' => [qw()],
 	'unequalAlignedTokens' => [qw()],
-	'ordErrorShiftWords' => [qw()],
+	'ordErrorShiftWord' => [qw()],
 	'ordErrorSwitchWords' => [qw()]
 );
 #id's of sentences without any errors
@@ -80,19 +89,23 @@ for my $n (1..$numsnt)
 	{
 		while( ($type, $value)= each(%{$$sentence{'errors'}}) )
 		{
-			if ( exists($err_counts{$type}) )
+			if ( exists($err_sent_counts{$type}) )
 			{
 				# adding 1 to error type occurence count
-				$err_counts{$type} = $err_counts{$type} + 1;
+				$err_sent_counts{$type} = $err_sent_counts{$type} + 1;
 				# adding sentence id to list of sentences with error type occurence
 				if ( (not exists(${$err_positions{$type}}[-1])) or (${$err_positions{$type}}[-1] != $$sentence{'wantid'}) )
 				{
 					push( @{$err_positions{$type}}, "$$sentence{'wantid'}" );
 				}
+				foreach $token ( @{$$sentence{errors}{$type}} )
+				{
+					$err_counts{$type} = $err_counts{$type} + 1;
+				}
 			}
 			else
 			{
-				#add error type to err_counts and id to err_positions
+				#add error type to err_sent_counts and id to err_positions
 			}
 		}
 	}
@@ -115,10 +128,18 @@ print("<br>\n");
 # table of error type occurence counts
 print("  <table border='1'>\n");
 print("    <caption>Error occurence counts</caption>\n");
-print("    <tr><th>Error type</th><th>Count</th></tr>");
-foreach $type (keys %err_counts)
+print("    <tr><th>Error type</th><th>Sentence count</th><th>Avg per sentence</th><th>Count</th></tr>");
+foreach $type (sort {$a cmp $b} keys %err_sent_counts)
 {
-	print("    <tr><td>$type</td><td>$err_counts{$type}</td></tr>\n");
+	if ($err_sent_counts{$type} != 0)
+	{
+		$avg = $err_counts{$type}/$err_sent_counts{$type};
+	}
+	else
+	{
+		$avg = "NaN";
+	}
+	print("    <tr><td>$type</td><td>$err_sent_counts{$type}</td><td>$avg</td><td>$err_counts{$type}</td></tr>\n");
 }
 print("  </table>\n");
 print("  <br>\n");
