@@ -11,6 +11,7 @@ binmode(STDERR, ":utf8");
 use ReadFindErrs;
 use AddicterHTML;
 use dzcgi;
+use XML::Simple;
 
 my $experiment;
 my $alignment;
@@ -46,7 +47,6 @@ else
 	print("</body>\n");
 	print("</html>\n");
 }
-
 # number of sentences
 my $numsnt = count_lines("$experiment/test.src");
 # path to file with found errors
@@ -82,23 +82,51 @@ my %err_positions = (
 #id's of sentences without any errors
 my @without_errs = qw();
 
-for my $n (1..$numsnt)
+my $xmlrecord = XMLin($path);
+for my $i (0..$#{$xmlrecord->{sentence}})
 {
-	$sentence = ReadFindErrs::get_nth_sentence( $path, $n );
-	if ( exists($$sentence{'errors'}) )
+	my $oldrecord = ${$xmlrecord->{sentence}}[$i];
+	my %oldrecord = %$oldrecord;
+	my %sentence;
+	my $sentence = \%sentence;
+	my %errors;
+	my $element;
+	
+	#just few changes to be in wanted structure
+	while (($element, $value) = each(%oldrecord)){
+		if (($element eq 'missingRefWord') or ($element eq 'extraHypWord') or ($element eq 'ordErrorShiftWord') or ($element eq 'ordErrorSwitchWords') or ($element eq 'unequalAlignedTokens') or ($element eq 'untranslatedHypWord'))
+		{
+			$sentence{errors}->{$element} = $value;
+		}
+		else
+		{
+			$sentence{$element} = $value;
+		}
+	}
+	
+	#filling the hashes
+	if ( exists($sentence{'errors'}) )
 	{
-		while( ($type, $value)= each(%{$$sentence{'errors'}}) )
+		while( ($type, $val) = each(%{$sentence{errors}}) )
 		{
 			if ( exists($err_sent_counts{$type}) )
 			{
 				# adding 1 to error type occurence count
 				$err_sent_counts{$type} = $err_sent_counts{$type} + 1;
 				# adding sentence id to list of sentences with error type occurence
-				if ( (not exists(${$err_positions{$type}}[-1])) or (${$err_positions{$type}}[-1] != $$sentence{'wantid'}) )
+				#if ( (not exists(${$err_positions{$type}}[-1])) or (${$err_positions{$type}}[-1] != $sentence{index}) )
+				#{
+					push( @{$err_positions{$type}}, "$sentence{index}" );
+				#}
+				#mozna zprehlednit a lip nazvat $neco a $necodalsiho
+				my $neco = $sentence{errors};
+				my $necodalsiho = $$neco{$type};
+				if (ref($necodalsiho) eq 'ARRAY') #a couple of occurences in this sentence
 				{
-					push( @{$err_positions{$type}}, "$$sentence{'wantid'}" );
+					my $count = $#$necodalsiho + 1;
+					$err_counts{$type} = $err_counts{$type} + $count;
 				}
-				foreach $token ( @{$$sentence{errors}{$type}} )
+				else #just one error occurence in this sentence
 				{
 					$err_counts{$type} = $err_counts{$type} + 1;
 				}
@@ -106,13 +134,14 @@ for my $n (1..$numsnt)
 			else
 			{
 				#add error type to err_sent_counts and id to err_positions
+				#TODO, but not necesarry now
 			}
 		}
 	}
 	else
 	{
 		#sentence without errors
-		push( @without_errs, $$sentence{'wantid'} );
+		push( @without_errs, $sentence{index} );
 	}
 }
 
@@ -152,8 +181,8 @@ if (exists $without_errs[-1])
 	print("  <div>");
 	for my $sntid (@without_errs)
 	{
-		my $realid = $sntid + 1;
-		print("    <a href='browsetest.pl?experiment=$experiment&sntno=$realid#page=$alignment'>$realid</a> " );
+		my $tdb_id = $sntid + 1;
+		print("    <a href='browsetest.pl?experiment=$experiment&sntno=$realid#page=$alignment'>$tdb_id</a> " );
 	}
 	print("  </div>\n");
 }
@@ -169,8 +198,8 @@ foreach $type (keys %err_positions)
 	print("  <div>\n");
 	for my $sntid (@{$err_positions{$type}})
 	{
-		my $realid = $sntid + 1;
-		print("    <a href='browsetest.pl?experiment=$experiment&sntno=$realid#page=$alignment'>$realid</a>;\n");
+		my $tdb_id = $sntid + 1;
+		print("    <a href='browsetest.pl?experiment=$experiment&sntno=$tdb_id#page=$alignment'>$tdb_id</a>;\n");
 	}
 	print("  </div>\n");
 }
