@@ -114,16 +114,17 @@ for my $i (0..$#{$xmlrecord->{sentence}})
 				# adding 1 to error type occurence count
 				$err_sent_counts{$type} = $err_sent_counts{$type} + 1;
 				# adding sentence id to list of sentences with error type occurence
-				#if ( (not exists(${$err_positions{$type}}[-1])) or (${$err_positions{$type}}[-1] != $sentence{index}) )
-				#{
-					push( @{$err_positions{$type}}, "$sentence{index}" );
-				#}
-				#mozna zprehlednit a lip nazvat $neco a $necodalsiho
-				my $neco = $sentence{errors};
-				my $necodalsiho = $$neco{$type};
-				if (ref($necodalsiho) eq 'ARRAY') #a couple of occurences in this sentence
+				# if it isn't already there
+				if ( (not exists(${$err_positions{$type}}[-1])) or (${$err_positions{$type}}[-1] != $sentence{index}) )
 				{
-					my $count = $#$necodalsiho + 1;
+					push( @{$err_positions{$type}}, "$sentence{index}" );
+				}
+				
+				my $errors = $sentence{errors};
+				my $errs_of_type = $$errors{$type};
+				if (ref($errs_of_type) eq 'ARRAY') #a couple of occurences in this sentence
+				{
+					my $count = $#$errs_of_type + 1;
 					$err_counts{$type} = $err_counts{$type} + $count;
 				}
 				else #just one error occurence in this sentence
