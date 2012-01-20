@@ -1,5 +1,6 @@
 #!/usr/bin/perl
-# Displays HTML page with error summary
+# Reads tcerr.txt (output of detecterr.pl) and displays HTML page with
+# error summary
 # Copyright © 2012 Jan Berka <berka@ufal.mff.cuni.cz>
 # License: GNU GPL
 
@@ -135,7 +136,7 @@ for my $i (0..$#{$xmlrecord->{sentence}})
 			else
 			{
 				#add error type to err_sent_counts and id to err_positions
-				#TODO, but not necesarry now
+				#TODO, but not necesarry now (we don't get any type of errors not in err_sent_counts anyway)
 			}
 		}
 	}

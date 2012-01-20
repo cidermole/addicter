@@ -289,24 +289,24 @@ sub sentence_to_table
                     {
                         $htmlerr .= "<dt><b>$key (ref/hyp)</b></dt>\n";
                         $htmlerr .= "<dd><b style='background-color: red'>with different lemma:</b> ";
-                        $htmlerr .= join("  ", map {my $tall=$_->{refToken}; my $uall=$_->{hypToken}; my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; "<span title='$tall'>".$t."</span>"."/"."<span title='$uall'>".$u."</span>"} grep {$_->{unequalFactorList} =~ m/2/} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= join("  ", map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} =~ m/2/} (@{$xmlrecord->{errors}{$key}}));
                         $htmlerr .= "</dd>\n";
                         $htmlerr .= "<dd><b  style='background-color: pink'>with same lemma:</b> ";
-                        $htmlerr .= join(' ', map {my $tall=$_->{refToken}; my $uall=$_->{hypToken}; my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; "<span title='$tall'>".$t."</span>"."/"."<span title='$uall'>".$u."</span>"} grep {$_->{unequalFactorList} !~ m/2/} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= join(' ', map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} !~ m/2/} (@{$xmlrecord->{errors}{$key}}));
                         $htmlerr .= "</dd>\n";
                     }
                     elsif($key eq 'ordErrorShiftWord')
                     {
                         $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
                         $htmlerr .= "<dd> ";
-                        $htmlerr .= join(' ', map {my $tall=$_->{hypToken};my $t=$_->{hypToken}; $t=~s/\|.*//; "<span title='$tall'>".$t."</span>"} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= join(' ', map {my $t=$_->{hypToken}; $t=~s/\|.*//; $t} (@{$xmlrecord->{errors}{$key}}));
                         $htmlerr .= "</dd>\n";
                     }
                         elsif($key eq 'ordErrorSwitchWords')
                     {
                         $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
                         $htmlerr .= "<dd> ";
-                        $htmlerr .= join(' ', map {my $t1all = $_->{hypToken1}; my $t2all = $_->{hypToken2}; my $t1=$_->{hypToken1}; my $t2=$_->{hypToken2}; $t1=~s/\|.*//; $t2=~s/\|.*//; "<span title='$t1all'>".$t1."</span>"."-"."<span title='$t2all'>".$t2."</span>"} (@{$xmlrecord->{errors}{$key}}));
+                        $htmlerr .= join(' ', map {my $t1=$_->{hypToken1}; my $t2=$_->{hypToken2}; $t1=~s/\|.*//; $t2=~s/\|.*//; $t1."-".$t2} (@{$xmlrecord->{errors}{$key}}));
                         $htmlerr .= "</dd>\n";
                     }
                     else
@@ -315,7 +315,7 @@ sub sentence_to_table
                     }
                     if (not ($key eq 'unequalAlignedTokens') and not ($key eq 'ordErrorShiftWord') and not ($key eq "ordErrorSwitchWords"))
                     {
-                        $htmlerr .= "<dd>".join(' ', map {"<span title='$_->{token}'>".$_->{surfaceForm}."</span>"} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+                        $htmlerr .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
                     }
                     # styles for table
                     foreach my $token (@{$xmlrecord->{errors}{$key}})
@@ -380,12 +380,12 @@ sub sentence_to_table
         $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, $rhalignments, 1, 0, 0, 0, \@srcstyles);
         $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, $rhalignments, 0, 0, 0, 0, \@tgtstyles);
         
-	$srcrow = substr($srcrow,0,6) .  "<th rowspan=2>source</th>" . substr($srcrow,6);
-	$tgtrow = substr($tgtrow,0,6) .  "<th rowspan=2>reference</th>" . substr($tgtrow,6);
-	$hyprow = substr($hyprow,0,6) .  "<th rowspan=2>hypothesis</th>" . substr($hyprow,6);
+	$srcrow = substr($srcrow,0,6) .  "<th rowspan=2>src-ref</th>" . substr($srcrow,6);
+	$tgtrow = substr($tgtrow,0,6) .  "<th rowspan=2>ref-src</th>" . substr($tgtrow,6);
+	$hyprow = substr($hyprow,0,6) .  "<th rowspan=2>hyp-src</th>" . substr($hyprow,6);
 	$rhrow = substr($rhrow,0,6) .  "<th rowspan=2>ref-hyp</th>" . substr($rhrow,6);
 	$hrrow = substr($hrrow,0,6) .  "<th rowspan=2>hyp-ref</th>" . substr($hrrow,6);
-	my @rowpairs = grep {1} ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
+	my @rowpairs = ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
         # We can display all three pairs of rows in one table or we can display them in separate tables.
         my $onetable = 1;
         if($onetable)
