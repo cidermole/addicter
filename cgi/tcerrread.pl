@@ -153,7 +153,7 @@ print("  <meta http-equiv='content-type' content='text/html; charset=utf8'/>\n")
 print("  <title>Addicter</title>\n");
 print("</head>\n");
 print("<body>\n");
-print("  <h1>Error Summary of $experiment</h1>\n");
+print("  <h1>Error Summary of <a href='index.pl?experiment=$experiment'>$experiment</a></h1>\n");
 print("  <div>...with alignment $alignment</div>\n");
 print("<br>\n");
 # table of error type occurence counts
