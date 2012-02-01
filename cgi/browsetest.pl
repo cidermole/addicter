@@ -204,7 +204,7 @@ sub sentence_to_table
     $html .= "<dl>\n";
     $html .= "  <dt><b>source</b></dt>\n";
     $html .= "  <dd>$sentence->{S}</dd>\n";
-    $html .= "  <dt><b>target</b></dt>\n";
+    $html .= "  <dt><b>reference translation</b></dt>\n";
     $html .= "  <dd>$sentence->{R}</dd>\n";
     $html .= "  <dt><b>system hypothesis</b></dt>\n";
     $html .= "  <dd>$sentence->{H}</dd>\n";
