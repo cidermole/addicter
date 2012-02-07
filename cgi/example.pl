@@ -33,6 +33,7 @@ if(exists($config{experiment}))
     # Path to experiment we are analyzing (can be relative to the location of this script).
     $experiment = $config{experiment};
     print("<h1>$config{word}</h1>\n");
+    print("  <div><a href='index.pl?experiment=$config{experiment}'>Back to Experiment Main Page</a></div>");
     # Figure out the name of the index file.
     $config{word} =~ m/^(.)/;
     $fl = $1;
