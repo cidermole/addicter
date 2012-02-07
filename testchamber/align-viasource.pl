@@ -24,10 +24,10 @@ my ($fhSrcRef, $fhSrcHyp) = io::openMany($srcRefFile, $srcHypFile);
 
 
 while(my $tuple = io::readSentences($fhSrcRef, $fhSrcHyp)) {
-	print("$tuple->[0]\n");
-	print("$tuple->[1]\n");
+	#print("$tuple->[0]\n");
+	#print("$tuple->[1]\n");
 	my $alignment = ViaSourceAlignment($tuple->[0], $tuple->[1]);
-	print("@$alignment \n");
+	print("@$alignment\n");
 }
 
 ############################
@@ -74,6 +74,13 @@ sub ViaSourceAlignment {
 				push(@viasource, $srref[$i]."-".$shhyp[$j]); 
 			}
 		}
+	}
+	my $i = 0;
+	while ($i < $#viasource) {
+		if ($viasource[$i] eq $viasource[$i+1]) {
+			delete($viasource[$i+1]);
+		}
+		$i = $i + 1;
 	}
 	return \@viasource;
 }
