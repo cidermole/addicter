@@ -107,13 +107,6 @@ if(exists($config{experiment}))
             print_words_matching_re($config{lang}, $re);
         }
     }
-    print("  <table border='1'>\n");
-    print("    <tr>\n");
-    print("      <td valign=top style='background:lightgreen'>\n");
-    print("        <h2>Experiment Statistics</h2>\n");
-    print("      </td>\n");
-    print("    </tr>\n");
-    print("  </table>\n");
 }
 # Close the HTML document.
 print("</body>\n");
