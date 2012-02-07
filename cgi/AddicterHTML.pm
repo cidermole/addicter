@@ -171,7 +171,13 @@ sub sentence_to_table_row
         my $class = $alirow[$i][1];
         $class =~ s/(\d+)-(\d+)/a$1_$2/g;
         $id++; ###!!!GLOBAL :-()
-        $alirow .= "<td class='$class' id='td$id' colspan='$alirow[$i][2]' onmouseover='highlightCells(\"td$id\");'>$aliphrase<br/>$alirow[$i][1]</td>";
+        if ($target == 1) {
+            my $flipped = AddicterHTML::flip($alirow[$i][1]);
+            $alirow .= "<td class='$class' id='td$id' colspan='$alirow[$i][2]' onmouseover='highlightCells(\"td$id\");'>$aliphrase<br/>$flipped</td>";
+        }
+        else {
+            $alirow .= "<td class='$class' id='td$id' colspan='$alirow[$i][2]' onmouseover='highlightCells(\"td$id\");'>$aliphrase<br/>$alirow[$i][1]</td>";
+        }
     }
     $alirow .= "</tr>\n";
     # Put the two rows together.
@@ -217,3 +223,24 @@ sub word_to_link
 
 
 1;
+
+#----------------------------------------------------------------
+# flips things before and after - in alignments
+# eg. flip('1-2 3-5 6-6') = '2-1 5-3 6-6'
+# it is used in AddicterHTML::sentence_to_table_row function
+#----------------------------------------------------------------
+sub flip {
+	my $alignment = shift;
+	my @ali = split(/&nbsp;/, $alignment);
+	my $newali = "";
+	my @newal = qw();
+	foreach my $pair (@ali) {
+		my @p = split(/-/, $pair);
+		my $newp = $p[1]."-".$p[0];
+		push(@newal, $newp);
+	}
+	my @newalsorted = sort {$a <=> $b} @newal;
+	$newali = join(' ', @newalsorted);
+	
+	return $newali;
+}
