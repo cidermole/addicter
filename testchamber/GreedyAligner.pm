@@ -211,7 +211,7 @@ sub compute_features {
     $features{tag_similarity} = $self->tag_similarity( $args, $h, $r );
     $features{aligned_left_neighbor}  = 1 if $h           && $args->{align}[ $h - 1 ] == $r - 1;
     $features{aligned_right_neighbor} = 1 if $h != $hlast && $args->{align}[ $h + 1 ] == $r + 1;
-    $features{ord_similarity} = 1 - abs( ( $h / $hlast ) - ( $r / $rlast ) );
+    $features{ord_similarity} = 1 - abs( ( $h / ($hlast + 1)) - ( $r / ($rlast + 1) ) );
 	return \%features;
 }
 

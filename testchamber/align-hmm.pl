@@ -103,10 +103,10 @@ sub decodeAlignment {
 	my $result = beamsearch::decode(genAlInitState(), $auxinfo,
 		\&genAlNextStates, \&isAlFinalState);
 	
-	unless ($result->{'alignment'}) {
-		my $msg = "Fail at " . $cnt->{'val'};
-		die($msg);
-	}
+	#unless (defined($result->{'alignment'})) {
+	#	my $msg = "Fail at " . $cnt->{'val'};
+	#	die($msg);
+	#}
 	
 	return $result->{'alignment'};
 }
@@ -209,7 +209,7 @@ sub displayAlignment {
 	my $al = shift;
 	
 	if (!$al) {
-		print "fail\n";
+		print "\n";
 	}
 	else {
 		for my $i (0..$#$al) {

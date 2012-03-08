@@ -60,6 +60,7 @@ echo "finding errors" 1>&2
 
 # transform the ugly xml into pretty error flags
 ./err2hjerson.pl < "$err"; ordie
+#./err2flags.pl < "$err"; ordie
 
 # delete the file with the ugly xml
 rm "$err"
@@ -73,6 +74,5 @@ fi
 # if alignment was generated, delete it
 if [[ ! -z "$delali" ]]
 then
-	#rm $ali
-	echo $ali 1>&2
+	rm $ali
 fi
