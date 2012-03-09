@@ -238,6 +238,8 @@ for arg in args:
         errcatfile = args[args.index(arg)+1]
     elif arg == "-m" or arg == "--html":
         htmlfile = args[args.index(arg)+1]
+    elif arg == "-l" or arg== "--ali":
+        alifile = args[args.index(arg)+1]
     elif arg == "-s" or arg == "--sent":
         sent = True
         errrates = args[args.index(arg)+1]        
@@ -261,6 +263,8 @@ if errcatfile:
     errcftxt = open(errcatfile, 'w')
 if htmlfile:
     htmltxt = open(htmlfile, 'w')
+if alifile:
+    alitxt = open(alifile, 'w')
 
 if htmlfile:
     htmltxt.write("<html>\n")
@@ -473,9 +477,11 @@ while (hline and rline):
 
         err = B[p].error
 
-
+	# pokud e err 0 nebo 1, pridat do alignmentu rp-hp (mozna +- 1)
         if err != 0:
             if err == 1:
+                if alifile:
+                    alitxt.write(str(len(refWords)-1)+"-"+str(len(hypWords)-1)+" ")
                 wer_errors(len(refWords), werRefWords, werRefAdd, werRefErrors, ref, addref, "sub")
                 wer_errors(len(hypWords), werHypWords, werHypAdd, werHypErrors, hyp, addhyp, "sub")
                 sentSubCount += 1
@@ -487,6 +493,8 @@ while (hline and rline):
                 sentInsCount += 1
                 
         else:
+            if alifile:
+                alitxt.write(str(len(refWords)-1)+"-"+str(len(hypWords)-1)+" ")
             wer_errors(len(refWords), werRefWords, werRefAdd, werRefErrors, ref, addref, "x")
             wer_errors(len(hypWords), werHypWords, werHypAdd, werHypErrors, hyp, addhyp, "x")
 
@@ -502,9 +510,11 @@ while (hline and rline):
             p1 = (rp, hp)
             err = B[p1].error
 
-            
+           # pokud e err 0 nebo 1 a je definovany alifile, pridat do alignmentu rp-hp (mozna +- 1) alitxt.write("rp-hp ")
             if err != 0:
                 if err == 1:
+                    if alifile:
+                        alitxt.write(str(rp-1)+"-"+str(hp-1)+" ")
                     wer_errors(rp, werRefWords, werRefAdd, werRefErrors, ref, addref, "sub")
                     wer_errors(hp, werHypWords, werHypAdd, werHypErrors, hyp, addhyp, "sub")
                     sentSubCount += 1
@@ -515,6 +525,8 @@ while (hline and rline):
                     wer_errors(hp, werHypWords, werHypAdd, werHypErrors, hyp, addhyp, "ins")
                     sentInsCount += 1
             else:
+                if alifile:
+                    alitxt.write(str(rp-1)+"-"+str(hp-1)+" ")
                 wer_errors(rp, werRefWords, werRefAdd, werRefErrors, ref, addref, "x")
                 wer_errors(hp, werHypWords, werHypAdd, werHypErrors, hyp, addhyp, "x")
                 
@@ -546,7 +558,8 @@ while (hline and rline):
 
         Q.clear()
         B.clear()
-
+        if alifile:
+            alitxt.write("\n")
 
     totalWerRefLength += bestWerRefLength
     totalWerCount += bestSentWer
@@ -727,6 +740,7 @@ while (hline and rline):
 
         errtxt.write("\n")
 
+   # if alifile: vyplivnout alignment
 
     # write wer, rper and hper words (and additional information, such as POS, etc.)
 
@@ -844,6 +858,8 @@ if errcatfile:
     errcftxt.close()
 if htmlfile:
     htmltxt.close()
+if alifile:
+	alitxt.close()
 
 
 
