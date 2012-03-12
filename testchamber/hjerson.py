@@ -214,6 +214,7 @@ addhtext = 0
 errfile = 0
 errcatfile = 0
 htmlfile = 0
+alifile = 0
 
 args = sys.argv
 if len(args) < 9:
