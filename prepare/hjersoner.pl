@@ -83,6 +83,10 @@ for (my $i=0;$i<$#data;$i+=3)
 		{
 			$xmltext .= "\t".'<missingRefWord idx="'.$k.'" surfaceForm="'.$refwords[$k].'" token="'.$refwords[$k].'"'."/>\n";
 		}
+		elsif ($hyperrs[$k] eq 'lex')
+		{
+			$xmltext .= "\t".'<otherMismatch refIdx="'.$k.'" refToken="'.$hypwords[$k].'"'."/>\n";
+		}
 	}
 	
 	for (my $k=0;$k<=$#hypwords;$k++)
@@ -90,6 +94,18 @@ for (my $i=0;$i<$#data;$i+=3)
 		if ($hyperrs[$k] eq 'ext')
 		{
 			$xmltext .= "\t".'<extraHypWord idx="'.$k.'" surfaceForm="'.$hypwords[$k].'" token="'.$hypwords[$k].'"'."/>\n";
+		}
+		elsif ($hyperrs[$k] eq 'reord')
+		{
+			$xmltext .= "\t".'<reorderingError hypIdx="'.$k.'" hypToken="'.$hypwords[$k].'"'."/>\n";
+		}
+		elsif ($hyperrs[$k] eq 'lex')
+		{
+			$xmltext .= "\t".'<otherMismatch hypIdx="'.$k.'" hypToken="'.$hypwords[$k].'"'."/>\n";
+		}
+		elsif ($hyperrs[$k] eq 'infl')
+		{
+			$xmltext .= "\t".'<inflectionalError hypIdx="'.$k.'" hypToken="'.$hypwords[$k].'"'."/>\n";
 		}
 	}
 	
