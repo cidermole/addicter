@@ -1,8 +1,11 @@
 #!/usr/bin/perl
 #prevede vystup Hjersona do formatu pro Addicter
 
-binmode(STDOUT, ":utf8");
-binmode(STDERR, ":utf8");
+use utf8;
+
+#binmode(STDOUT, ":utf8");
+#binmode(STDERR, ":utf8");
+#binmode(STDIN, ":utf8");
 use Getopt::Long;
 
 my ($catsfile, $alifile, $srcfile) = processInputArgsAndOpts();
@@ -23,7 +26,7 @@ if ($srcfile)
 }
 
 my $xmltext = '';
-$xmltext .= "<document>\n";
+$xmltext .= "<document>\n\n";
 
 for (my $i=0;$i<$#data;$i+=3)
 {
@@ -72,53 +75,53 @@ for (my $i=0;$i<$#data;$i+=3)
 	$xmltext .= '<sentence index="'.$index.'">'."\n";
 	if ($srcfile)
 	{
-		$xmltext .= "\t".'<source length="'.$srclength.'" text="'.$srctext.'"/>'."\n";
+		$xmltext .= "\t".'<source length="'.$srclength.'" text="'.sentenceToXml($srctext).'"/>'."\n";
 	}
-	$xmltext .= "\t".'<hypothesis length="'.$hyplength.'" text="'.$hyptext.'"/>'."\n";
-	$xmltext .= "\t".'<reference length="'.$reflength.'" text="'.$reftext.'"/>'."\n";
+	$xmltext .= "\t".'<hypothesis length="'.$hyplength.'" text="'.sentenceToXml($hyptext).'"/>'."\n";
+	$xmltext .= "\t".'<reference length="'.$reflength.'" text="'.sentenceToXml($reftext).'"/>'."\n";
 	
 	for (my $k=0;$k<=$#refwords;$k++)
 	{
+		my $rword = toXml($refwords[$k]);
 		if ($referrs[$k] eq 'miss')
 		{
-			$xmltext .= "\t".'<missingRefWord idx="'.$k.'" surfaceForm="'.$refwords[$k].'" token="'.$refwords[$k].'"'."/>\n";
+			$xmltext .= "\t".'<missingRefWord idx="'.$k.'" surfaceForm="'.$rword[$k].'" token="'.$rword[$k].'"'."/>\n";
 		}
-		elsif ($hyperrs[$k] eq 'lex')
+		elsif ($referrs[$k] eq 'lex')
 		{
-			$xmltext .= "\t".'<otherMismatch refIdx="'.$k.'" refToken="'.$hypwords[$k].'"'."/>\n";
+			$xmltext .= "\t".'<otherMismatch refIdx="'.$k.'" refToken="'.$rword[$k].'"'."/>\n";
 		}
 	}
 	
 	for (my $k=0;$k<=$#hypwords;$k++)
 	{
+		my $hword = toXml($hypwords[$k]);
 		if ($hyperrs[$k] eq 'ext')
 		{
-			$xmltext .= "\t".'<extraHypWord idx="'.$k.'" surfaceForm="'.$hypwords[$k].'" token="'.$hypwords[$k].'"'."/>\n";
+			$xmltext .= "\t".'<extraHypWord idx="'.$k.'" surfaceForm="'.$hword.'" token="'.$hword[$k].'"'."/>\n";
 		}
 		elsif ($hyperrs[$k] eq 'reord')
 		{
-			$xmltext .= "\t".'<reorderingError hypIdx="'.$k.'" hypToken="'.$hypwords[$k].'"'."/>\n";
+			$xmltext .= "\t".'<reorderingError hypIdx="'.$k.'" hypToken="'.$hword[$k].'"'."/>\n";
 		}
 		elsif ($hyperrs[$k] eq 'lex')
 		{
-			$xmltext .= "\t".'<otherMismatch hypIdx="'.$k.'" hypToken="'.$hypwords[$k].'"'."/>\n";
+			$xmltext .= "\t".'<otherMismatch hypIdx="'.$k.'" hypToken="'.$hword[$k].'"'."/>\n";
 		}
 		elsif ($hyperrs[$k] eq 'infl')
 		{
-			$xmltext .= "\t".'<inflectionalError hypIdx="'.$k.'" hypToken="'.$hypwords[$k].'"'."/>\n";
+			$xmltext .= "\t".'<inflectionalError hypIdx="'.$k.'" hypToken="'.$hword[$k].'"'."/>\n";
 		}
 	}
 	
 	
 	
-	$xmltext .= "</sentence>\n"
+	$xmltext .= "</sentence>\n\n"
 }
 
 $xmltext .= '</document>';
 
 print $xmltext;
-print "\n";
-
 
 
 
@@ -145,4 +148,32 @@ sub processInputArgsAndOpts {
 		die("Required arguments: error categories file and alignment file");
 	}
 	return ($catsfile,$alifile,$srcfile);
+}
+
+# changes 'dangerous' characters (e.g <,>,',") to safe form (&lt; and so on)
+sub toXml {
+	my $word = shift;
+	my $toReturn = $word;
+	if ($word eq '<') {
+		$toReturn = '&lt;';
+	}
+	elsif ($word eq '>') {
+		$toReturn = '&gt;';
+	}
+	elsif ($word eq '"') {
+		$toReturn = '&quot;';
+	}
+	
+	return $toReturn;
+
+}
+
+sub sentenceToXml {
+	my $sentence = shift;
+	my @words = split(/ /, $sentence);
+	my $toReturn = '';
+	for (my $i = 0; $i <= $#words; $i++) {
+		$toReturn .= toXml($words[$i]).' ';
+	}
+	return $toReturn;
 }
