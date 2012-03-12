@@ -54,32 +54,37 @@ my $numsnt = count_lines("$experiment/test.src");
 my $path = "$experiment/$alignment/tcerr.txt";
 
 # count of error type sentence occurences (number of different sentences with given error type occurence)
-my %err_sent_counts = (
-	'extraHypWord' => 0,
-	'missingRefWord' => 0,
-	'untranslatedHypWord' => 0,
-	'unequalAlignedTokens' => 0,
-	'ordErrorShiftWord' => 0,
-	'ordErrorSwitchWords' => 0
-);
+#my %err_sent_counts = (
+#	'extraHypWord' => 0,
+#	'missingRefWord' => 0,
+#	'untranslatedHypWord' => 0,
+#	'unequalAlignedTokens' => 0,
+#	'ordErrorShiftWord' => 0,
+#	'ordErrorSwitchWords' => 0
+#);
+
+my %err_sent_counts = ();
+
 # counts of error type occurence
-my %err_counts = (
-	'extraHypWord' => 0,
-	'missingRefWord' => 0,
-	'untranslatedHypWord' => 0,
-	'unequalAlignedTokens' => 0,
-	'ordErrorShiftWord' => 0,
-	'ordErrorSwitchWords' => 0
-);
+#my %err_counts = (
+#	'extraHypWord' => 0,
+#	'missingRefWord' => 0,
+#	'untranslatedHypWord' => 0,
+#	'unequalAlignedTokens' => 0,
+#	'ordErrorShiftWord' => 0,
+#	'ordErrorSwitchWords' => 0
+#);
+my %err_counts = ();
 # id's of sentences with error of the given type
-my %err_positions = (
-	'extraHypWord' => [qw()],
-	'missingRefWord' => [qw()],
-	'untranslatedHypWord' => [qw()],
-	'unequalAlignedTokens' => [qw()],
-	'ordErrorShiftWord' => [qw()],
-	'ordErrorSwitchWords' => [qw()]
-);
+#my %err_positions = (
+#	'extraHypWord' => [qw()],
+#	'missingRefWord' => [qw()],
+#	'untranslatedHypWord' => [qw()],
+#	'unequalAlignedTokens' => [qw()],
+#	'ordErrorShiftWord' => [qw()],
+#	'ordErrorSwitchWords' => [qw()]
+#);
+my %err_positions = ();
 #id's of sentences without any errors
 my @without_errs = qw();
 
@@ -95,7 +100,7 @@ for my $i (0..$#{$xmlrecord->{sentence}})
 	
 	#just few changes to be in wanted structure
 	while (($element, $value) = each(%oldrecord)){
-		if (($element eq 'missingRefWord') or ($element eq 'extraHypWord') or ($element eq 'ordErrorShiftWord') or ($element eq 'ordErrorSwitchWords') or ($element eq 'unequalAlignedTokens') or ($element eq 'untranslatedHypWord'))
+		if (($element eq 'missingRefWord') or ($element eq 'extraHypWord') or ($element eq 'ordErrorShiftWord') or ($element eq 'ordErrorSwitchWords') or ($element eq 'unequalAlignedTokens') or ($element eq 'untranslatedHypWord') or ($element eq 'otherMismatch') or ($element eq 'inflectionalError') or ($element eq 'reorderingError'))
 		{
 			$sentence{errors}->{$element} = $value;
 		}
@@ -137,6 +142,30 @@ for my $i (0..$#{$xmlrecord->{sentence}})
 			{
 				#add error type to err_sent_counts and id to err_positions
 				#TODO, but not necesarry now (we don't get any type of errors not in err_sent_counts anyway)
+				$err_sent_counts{$type} = 0;
+				$err_counts{$type} = 0;
+				@{$err_positions{$type}} = [qw()];
+				# adding 1 to error type occurence count
+                                $err_sent_counts{$type} = $err_sent_counts{$type} + 1;
+                                # adding sentence id to list of sentences with error type occurence
+                                # if it isn't already there
+                                if ( (not exists(${$err_positions{$type}}[-1])) or (${$err_positions{$type}}[-1] != $sentence{index}) )
+                                {
+                                        push( @{$err_positions{$type}}, "$sentence{index}" );
+                                }
+
+                                my $errors = $sentence{errors};
+                                my $errs_of_type = $$errors{$type};
+                                if (ref($errs_of_type) eq 'ARRAY') #a couple of occurences in this sentence
+                                {
+                                        my $count = $#$errs_of_type + 1;
+                                        $err_counts{$type} = $err_counts{$type} + $count;
+                                }
+                                else #just one error occurence in this sentence
+                                {
+                                        $err_counts{$type} = $err_counts{$type} + 1;
+                                }
+
 			}
 		}
 	}
@@ -183,7 +212,7 @@ if (exists $without_errs[-1])
 	for my $sntid (@without_errs)
 	{
 		my $tdb_id = $sntid + 1;
-		print("    <a href='browsetest.pl?experiment=$experiment&sntno=$realid#page=$alignment'>$tdb_id</a> " );
+		print("    <a href='browsetest.pl?experiment=$experiment&sntno=$tdb_id#page=$alignment'>$tdb_id</a>;\n" );
 	}
 	print("  </div>\n");
 }
