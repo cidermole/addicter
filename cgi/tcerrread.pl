@@ -179,7 +179,6 @@ print("  <br>\n");
 print("<h3>Sentences without errors</h3>");
 if (exists $without_errs[-1])
 {
-	print("  <h3>Sentences without any errors</h3>\n");
 	print("  <div>");
 	for my $sntid (@without_errs)
 	{
