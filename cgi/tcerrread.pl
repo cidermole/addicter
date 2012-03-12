@@ -164,13 +164,13 @@ foreach $type (sort {$a cmp $b} keys %err_sent_counts)
 {
 	if ($err_sent_counts{$type} != 0)
 	{
-		$avg = $err_counts{$type}/$err_sent_counts{$type};
+		$avg = int(100*$err_counts{$type}/$err_sent_counts{$type})/100;
 	}
 	else
 	{
 		$avg = "NaN";
 	}
-	print("    <tr><td>$type</td><td>$err_sent_counts{$type}</td><td>$avg</td><td>$err_counts{$type}</td></tr>\n");
+	print("    <tr><td>$type</td><td align=center>$err_sent_counts{$type}</td><td align=center>$avg</td><td align=center>$err_counts{$type}</td></tr>\n");
 }
 print("  </table>\n");
 print("  <br>\n");
@@ -194,7 +194,7 @@ else
 }
 
 # list of sentences with given error type
-foreach $type (keys %err_positions)
+foreach $type (sort {$a cmp $b} keys %err_sent_counts)
 {
 	print("  <h3>$type</h3>\n");
 	print("  <div>\n");

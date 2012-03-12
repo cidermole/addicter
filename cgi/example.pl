@@ -267,6 +267,13 @@ sub sentence_to_table
     my @alignments = map {my @pair = split(/-/, $_); \@pair} (split(/\s+/, $aliline));
     my @srcwords = split(/\s+/, $srcline);
     my @tgtwords = split(/\s+/, $tgtline);
+    #Display the sentence
+    $html .= "<dl>";
+    $html .= "<dt>source</dt>";
+    $html .= "<dd>$srcline</dd>";
+    $html .= "<dt>translation</dt>";
+    $html .= "<dd>$tgtline</dd>";
+    $html .= "</dl>";
     # Display the source words along with their alignment links.
     $html .= "<table border style='font-family:Code2000'>\n";
     $html .= AddicterHTML::sentence_to_table_row($config{experiment}, \@srcwords, \@tgtwords, \@alignments, 0, $config{word});
