@@ -44,7 +44,7 @@ sub handle_start
     }
     elsif($state{state} eq 'reading')
     {
-        if($element =~ m/^(extraHypWord|missingRefWord|untranslatedHypWord|unequalAlignedTokens|ordErrorShiftWord|ordErrorSwitchWords)$/)
+        if($element =~ m/^(extraHypWord|missingRefWord|untranslatedHypWord|unequalAlignedTokens|ordErrorShiftWord|ordErrorSwitchWords|otherMismatch|inflectionalError|reorderingError)$/)
         {
             push(@{$state{errors}{$element}}, \%attr);
         }

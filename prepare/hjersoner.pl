@@ -85,11 +85,11 @@ for (my $i=0;$i<$#data;$i+=3)
 		my $rword = toXml($refwords[$k]);
 		if ($referrs[$k] eq 'miss')
 		{
-			$xmltext .= "\t".'<missingRefWord idx="'.$k.'" surfaceForm="'.$rword[$k].'" token="'.$rword[$k].'"'."/>\n";
+			$xmltext .= "\t".'<missingRefWord idx="'.$k.'" surfaceForm="'.$rword.'" token="'.$rword.'"'."/>\n";
 		}
 		elsif ($referrs[$k] eq 'lex')
 		{
-			$xmltext .= "\t".'<otherMismatch refIdx="'.$k.'" refToken="'.$rword[$k].'"'."/>\n";
+			$xmltext .= "\t".'<otherMismatch refIdx="'.$k.'" surfaceForm="'.$rword.'" refToken="'.$rword.'"'."/>\n";
 		}
 	}
 	
@@ -98,19 +98,19 @@ for (my $i=0;$i<$#data;$i+=3)
 		my $hword = toXml($hypwords[$k]);
 		if ($hyperrs[$k] eq 'ext')
 		{
-			$xmltext .= "\t".'<extraHypWord idx="'.$k.'" surfaceForm="'.$hword.'" token="'.$hword[$k].'"'."/>\n";
+			$xmltext .= "\t".'<extraHypWord idx="'.$k.'" surfaceForm="'.$hword.'" token="'.$hword.'"'."/>\n";
 		}
 		elsif ($hyperrs[$k] eq 'reord')
 		{
-			$xmltext .= "\t".'<reorderingError hypIdx="'.$k.'" hypToken="'.$hword[$k].'"'."/>\n";
+			$xmltext .= "\t".'<reorderingError hypIdx="'.$k.'" surfaceForm="'.$hword.'" hypToken="'.$hword.'"'."/>\n";
 		}
 		elsif ($hyperrs[$k] eq 'lex')
 		{
-			$xmltext .= "\t".'<otherMismatch hypIdx="'.$k.'" hypToken="'.$hword[$k].'"'."/>\n";
+			$xmltext .= "\t".'<otherMismatch hypIdx="'.$k.'" surfaceForm="'.$hword.'" hypToken="'.$hword.'"'."/>\n";
 		}
 		elsif ($hyperrs[$k] eq 'infl')
 		{
-			$xmltext .= "\t".'<inflectionalError hypIdx="'.$k.'" hypToken="'.$hword[$k].'"'."/>\n";
+			$xmltext .= "\t".'<inflectionalError hypIdx="'.$k.'" surfaceForm="'.$hword.'" hypToken="'.$hword.'"'."/>\n";
 		}
 	}
 	
@@ -153,19 +153,23 @@ sub processInputArgsAndOpts {
 # changes 'dangerous' characters (e.g <,>,',") to safe form (&lt; and so on)
 sub toXml {
 	my $word = shift;
-	my $toReturn = $word;
-	if ($word eq '<') {
-		$toReturn = '&lt;';
+	my @characters = split(//, $word);
+	my $toReturn = '';
+	for (my $n = 0; $n <= $#characters; $n++) {
+		if ($characters[$n] eq '<') {
+			 $toReturn .= '&lt;';
+		}
+		elsif ($characters[$n] eq '>') {
+	                $toReturn .= '&gt;';
+        	}
+        	elsif ($characters[$n] eq '"') {
+                	$toReturn .= '&quot;';
+        	}
+		else {
+			$toReturn .= $characters[$n];
+		}
 	}
-	elsif ($word eq '>') {
-		$toReturn = '&gt;';
-	}
-	elsif ($word eq '"') {
-		$toReturn = '&quot;';
-	}
-	
 	return $toReturn;
-
 }
 
 sub sentenceToXml {
