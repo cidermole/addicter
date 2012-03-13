@@ -17,7 +17,7 @@ use GreedyAligner;
 use Carp;
 
 my ( $ref_file, $hyp_file ) = @ARGV;
-die "Usage: $0 reference_filename hypothesis_filename" if @ARGV != 2;
+die "Aligns reference to hypothesis using greedy injective alignment algorithm\nUsage: $0 reference_filename hypothesis_filename" if @ARGV != 2;
 open my $R, '<', $ref_file;
 open my $H, '<', $hyp_file;
 

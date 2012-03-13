@@ -57,7 +57,11 @@ sub processInputArgsAndOpts {
 	}
 	
 	my ($refFile, $hypFile) = @ARGV;
-
+	if (!$refFile and !$hypFile){
+		print STDERR ("Aligns reference to hypothesis using the Longest Common Subsequence algorithm\n");
+		print STDERR ("Usage:\nalign-lcs.pl [-c -n=i] ref_file hyp_file\n");
+		print STDERR ("  c   ... case sensitive\n  n=i ... alignment factor, i in {0,1,2}, default 0\n");
+	}
 	if (!$refFile or !$hypFile) {
 		die("Required arguments: reference file, hypothesis file");
 	}

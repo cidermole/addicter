@@ -12,9 +12,16 @@ binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
 my $hack_bad_ali = 0;
+my $print_help = 0;
 GetOptions(
   "hack-bad-alignments" => \$hack_bad_ali, # add extra words if needed
+  "help" => \$print_help,
 ) or exit 1;
+
+if ($print_help) {
+	print STDERR ("Reads: src sent \t tgt sent \t alignment\nPrints beautiful tables in plain text.\nSource words are on lines, target words are on columns.\n");
+	die('');
+}
 
 my %lettercombs = qw(
 SURE            	*
