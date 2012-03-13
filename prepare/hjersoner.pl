@@ -1,11 +1,9 @@
 #!/usr/bin/perl
-#prevede vystup Hjersona do formatu pro Addicter
+#transforms the output of Hjerson error categories (hjerson.py --cats something.cats ...) to xml in format readable by Addicter
+#Jan Berka 2012
 
 use utf8;
 
-#binmode(STDOUT, ":utf8");
-#binmode(STDERR, ":utf8");
-#binmode(STDIN, ":utf8");
 use Getopt::Long;
 
 my ($catsfile, $alifile, $srcfile) = processInputArgsAndOpts();
@@ -61,12 +59,6 @@ for (my $i=0;$i<$#data;$i+=3)
 		push(@hyperrs, $token[1]);
 	}
 	
-	#dodelat src - musi se pridat na vstup zvlast
-	if ($srcfile)
-	{
-		#my $srclength = ;
-		#my $srctext = ;
-	}
 	my $reflength = $#refwords+1;
 	my $reftext = join(' ', @refwords);
 	my $hyplength = $#hypwords+1;
@@ -75,6 +67,9 @@ for (my $i=0;$i<$#data;$i+=3)
 	$xmltext .= '<sentence index="'.$index.'">'."\n";
 	if ($srcfile)
 	{
+		my @srcwords = split(/ /, $srcdata[$i]);
+                my $srclength = $#srcwords+1;
+                my $srctext = $srcdata[$i];
 		$xmltext .= "\t".'<source length="'.$srclength.'" text="'.sentenceToXml($srctext).'"/>'."\n";
 	}
 	$xmltext .= "\t".'<hypothesis length="'.$hyplength.'" text="'.sentenceToXml($hyptext).'"/>'."\n";
@@ -114,19 +109,12 @@ for (my $i=0;$i<$#data;$i+=3)
 		}
 	}
 	
-	
-	
 	$xmltext .= "</sentence>\n\n"
 }
 
 $xmltext .= '</document>';
 
 print $xmltext;
-
-
-
-
-
 
 
 
@@ -143,7 +131,9 @@ sub processInputArgsAndOpts {
 		'ali=s' => \$alifile,
 		'src=s' => \$srcfile
 	);
-	
+	if (!$catsfile and !$alifile and !$srcfile) {
+		print("Transforms the output of Hjerson error categories (hjerson.py --cats something.cats ...) to xml in format readable by Addicter\nUsage:\nhjersoner.pl --cat=error.cats --ali=refhyp.ali [--src=source.txt]\n");
+	}
 	if (!$catsfile or !$alifile) {
 		die("Required arguments: error categories file and alignment file");
 	}
