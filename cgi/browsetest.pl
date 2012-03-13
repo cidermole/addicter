@@ -309,7 +309,15 @@ sub sentence_to_table
                         $htmlerr .= join(' ', map {my $t1=$_->{hypToken1}; my $t2=$_->{hypToken2}; $t1=~s/\|.*//; $t2=~s/\|.*//; $t1."-".$t2} (@{$xmlrecord->{errors}{$key}}));
                         $htmlerr .= "</dd>\n";
                     }
-                    elsif($key eq 'otherMismatch' or $key eq 'inflectionalError' or $key eq 'reorderingError')
+                    elsif($key eq 'reorderingError')
+		    {
+			$htmlerr .= "<dt><b style='background-color: chartreuse'>$key</b></dt>\n";
+		    }
+		    elsif($key eq 'inflectionalError')
+		    {
+			$htmlerr .= "<dt><b style='background-color: darkkhaki'>$key</b></dt>\n";
+		    }
+		    elsif($key eq 'otherMismatch')
 		    {
 			$htmlerr .= "<dt><b style='background-color: darkgreen'>$key</b></dt>\n";
 		    }
@@ -372,10 +380,20 @@ sub sentence_to_table
                                 $srcstyles[$r] = 'background-color: lightgreen';
                             }
                         }
-			elsif ($key eq 'otherMismatch' or $key eq 'inflectionalError' or $key eq 'reorderingError')
+			elsif($key eq 'reorderingError')
 			{
-			    $srcstyles[$token->{idx}] = 'background-color: darkgreen';
-			    $tgtstyles[$token->{idx}] = 'background-color: darkgreen';
+			    $srcstyles[$token->{refIdx}] = 'background-color: chartreuse';
+			    $tgtstyles[$token->{hypIdx}] = 'background-color: chartreuse';
+			}
+			elsif($key eq 'inflectionalError')
+			{
+				$srcstyles[$token->{refIdx}] = 'background-color: darkkhaki';
+				$tgtstyles[$token->{hypIdx}] = 'background-color: darkkhaki';
+			}
+			elsif($key eq 'otherMismatch')
+			{
+				$srcstyles[$token->{refIdx}] = 'background-color: darkgreen';
+                            	$tgtstyles[$token->{hypIdx}] = 'background-color: darkgreen';
 			}
                     }
                 }
