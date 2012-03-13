@@ -309,7 +309,11 @@ sub sentence_to_table
                         $htmlerr .= join(' ', map {my $t1=$_->{hypToken1}; my $t2=$_->{hypToken2}; $t1=~s/\|.*//; $t2=~s/\|.*//; $t1."-".$t2} (@{$xmlrecord->{errors}{$key}}));
                         $htmlerr .= "</dd>\n";
                     }
-                    else
+                    elsif($key eq 'otherMismatch' or $key eq 'inflectionalError' or $key eq 'reorderingError')
+		    {
+			$htmlerr .= "<dt><b style='background-color: darkgreen'>$key</b></dt>\n";
+		    }
+		    else
                     {
                         $htmlerr .= "<dt><b>$key</b></dt>\n";
                     }
@@ -368,6 +372,11 @@ sub sentence_to_table
                                 $srcstyles[$r] = 'background-color: lightgreen';
                             }
                         }
+			elsif ($key eq 'otherMismatch' or $key eq 'inflectionalError' or $key eq 'reorderingError')
+			{
+			    $srcstyles[$token->{idx}] = 'background-color: darkgreen';
+			    $tgtstyles[$token->{idx}] = 'background-color: darkgreen';
+			}
                     }
                 }
                 $htmlerr .= "</dl>\n";
