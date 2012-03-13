@@ -80,6 +80,16 @@ sub processInputArgsAndOpts {
 	}
 	
 	my ($reffile, $hypfile) = @ARGV;
+	
+	if (!$reffile and !$hypfile) {
+		print STDERR ("Aligns reference to hypothesis using Hidden Markov Model based alignment algorithm\n");
+		print STDERR ("Usage:\nalign-hmm.pl [-c -n=i -a=s -x -u]\n");
+		print STDERR ("  c   ... case sensitive\n");
+		print STDERR ("  n=i ... alignment factor, i in {0,1,2}. 2 is default value\n");
+		print STDERR ("  a=s ... more PtsFiles\n");
+		print STDERR ("  x   ... exclusive more pts\n");
+		print STDERR ("  u   ... unweighted more pts\n");
+	}
 
 	if (!$reffile or !$hypfile) {
 		die("Required arguments: reference file, hypothesis file");

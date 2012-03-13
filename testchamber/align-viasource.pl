@@ -37,8 +37,12 @@ while(my $tuple = io::readSentences($fhSrcRef, $fhSrcHyp)) {
 
 sub processInputArgsAndOpts {
 	my ($srcRefFile, $srcHypFile) = @ARGV;
+	if (!$srcRefFile and !$srcHypFile) {
+		print STDERR ("Aligns reference to hypothesis using the source-to-reference and source-to-hypothesis alignments\n");
+		print STDERR ("Usage:\n align-viasource.pl src-ref_alignment_file src-hyp_alignment_file\n");
+	}
 	if (!$srcRefFile or !$srcHypFile) {
-		die("Usage: align-viasource.pl src-ref_alignment_file src-hyp_alignment_file\nRequired arguments: source to reference alignment file, source to hypothesis alignment file");
+		die("Required arguments: source to reference alignment file, source to hypothesis alignment file");
 	}
 	return ($srcRefFile, $srcHypFile);
 }

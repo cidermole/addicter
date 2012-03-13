@@ -7,6 +7,7 @@
 use utf8;
 sub usage
 {
+    print STDERR ("Indexes parallel training data for viewing in Addicter\n");
     print STDERR ("Usage: addictindex.pl <options>\n");
     print STDERR ("To create a two-way index, call the script twice, the second time with -target.\n");
     print STDERR ("Options:\n");

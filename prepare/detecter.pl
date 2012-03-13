@@ -7,6 +7,7 @@
 
 sub usage
 {
+    print STDERR ("Applies the error detection and classification on an experiment\n");
     print STDERR ("detecterr.pl -s srcfile -r reffile -h hypfile [-a alignment] [-w workdir]\n");
 }
 
