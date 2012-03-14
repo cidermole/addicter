@@ -4,7 +4,7 @@
 
 sub usage {
         print STDERR ("Runs all alignment algorithms and applies error detection and classification of Addicter on them\n");
-        print STDERR ("Usage:\nrundetection.pl --ref=reference_file --baseref=base_reference_file --hyp=hypothesis_file --basehyp=base_hypothesis_file [--src=source_file --work=workdir]\n");
+        print STDERR ("Usage:\nrundetection.pl --src=src_file --ref=reference_file  --hyp=hypothesis_file  [--work=workdir]\n");
 }
 
 sub saferun
@@ -28,8 +28,6 @@ GetOptions
 (
     'src=s' => \$srcfile,
     'ref=s' => \$reffile,
-    'baseref=s' => \$basereffile,
-    'basehyp=s' => \$basehypfile,
     'hyp=s' => \$hypfile,
     'work=s' => \$workdir
 );
