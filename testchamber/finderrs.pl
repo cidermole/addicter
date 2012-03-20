@@ -463,8 +463,14 @@ sub printRefFinish {
 sub printGeneralSntInfo {
 	my ($srcSnt, $hypSnt) = @_;
 	
-	print "\t<source length=\"" . scalar @$srcSnt . "\" text=\"" . io::snt2txt($srcSnt) . "\"/>\n";
-	print "\t<hypothesis length=\"" . scalar @$hypSnt . "\" text=\"" . io::snt2txt($hypSnt) . "\"/>\n";
+	print "\t<source length=\"" . scalar @$srcSnt . "\"" .
+		" text=\"" . io::snt2txt($srcSnt) . "\"" .
+		" rawtext=\"" . io::snt2txtFact($srcSnt) . "\"" .
+		"/>\n";
+	print "\t<hypothesis length=\"" . scalar @$hypSnt . "\"" .
+		" text=\"" . io::snt2txt($hypSnt) . "\"" .
+		" rawtext=\"" . io::snt2txtFact($hypSnt) . "\"" .
+		"/>\n";
 }
 
 #####
@@ -493,7 +499,8 @@ sub getRefInfo {
 	my $idxInfo = (defined($idx))? " index=\"$idx\"": "";
 	
 	return ["<reference$idxInfo length=\"" . (scalar @$refSnt) .
-		"\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) . "\"/>"
+		"\" aligned=\"$numOfAligned\" text=\"" . io::snt2txt($refSnt) .
+		"\" rawtext=\"" . io::snt2txtFact($refSnt) . "\"/>"
 		#, "<alignment raw=\"" . aliToTxt($ali) . "\">"
 		];
 }

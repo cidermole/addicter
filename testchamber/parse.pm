@@ -91,21 +91,22 @@ sub xmlTagFields {
 	my $str = shift;
 	my $resultHash = {};
 	
-	while ($str =~ /^\s+([^=[:space:]]+)="([^"]+)"(.*)\s*$/) {
+	while ($str =~ /^\s+([^=[:space:]]+)="([^"]*)"(.*)\s*$/) {
 		my $fieldName = $1;
 		my $fieldValue = $2;
 		$str = $3;
 		
 		#in case the field value includes a \"
-		while ($fieldValue =~ /\\$/) {
-			if ($str =~ /([^"]*)"(.*)\s*$/) {
-				$fieldValue .= "\"" . $1;
-				$str = $2;
-			}
-			else {
-				die("Failed to parse a field value with a double quote inside: `$str'");
-			}
-		}
+		#while ($fieldValue =~ /\\$/) {
+		#	if ($str =~ /([^"]*)"(.*)\s*$/) {
+		#		print STDERR "!!! $1 !! $2 !\n";
+		#		$fieldValue .= "\"" . $1;
+		#		$str = $2;
+		#	}
+		#	else {
+		#		die("Failed to parse a field value with a double quote inside: `$str'");
+		#	}
+		#}
 		
 		$resultHash->{$fieldName} = $fieldValue;
 	}

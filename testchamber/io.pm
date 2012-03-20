@@ -205,6 +205,20 @@ sub tok2str4xml {
 #####
 #
 #####
+sub snt2txtFact {
+	my ($snt) = @_;
+	my @resArr = ();
+	
+	for my $w (@$snt) {
+		push @resArr, join("|", @$w[0,1,2]);
+	}
+	
+	return str4xml(join(" ", @resArr));
+}
+
+#####
+#
+#####
 sub snt2txt {
 	my ($snt) = @_;
 	my @resArr = ();
