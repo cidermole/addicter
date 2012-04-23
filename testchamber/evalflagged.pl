@@ -58,8 +58,8 @@ updateStats($hypAnalysis, $refTrans, \@refAnalysisArr, $stats);
 
 our ($overallCorrect, $overallRecDenom, $overallPrecDenom);
 
-#for my $groupId ("lex", "order", "punct", "missed") {
-for my $groupId ("all") {
+for my $groupId ("lex", "order", "punct", "missed") {
+#for my $groupId ("all") {
 	logHash($stats, $groupId);
 	precRecHash($stats, $groupId);
 }
