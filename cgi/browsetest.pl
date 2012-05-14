@@ -4,10 +4,10 @@
 # License: GNU GPL
 
 use utf8;
-use open ":utf8";
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
-binmode(STDERR, ":utf8");
+use open ':utf8';
+binmode(STDIN, ':utf8');
+binmode(STDOUT, ':utf8');
+binmode(STDERR, ':utf8');
 use dzcgi;
 use AddicterHTML;
 use ReadFindErrs;
@@ -75,6 +75,8 @@ print("<body>\n");
 print("  <style><!-- A:link, A:visited { text-decoration: none } A:hover { text-decoration: underline } --></style>\n");
 # Read cgi parameters.
 dzcgi::cist_parametry(\%config);
+# For debugging purposes, read parameters also from @ARGV.
+dzcgi::cist_parametry_argv(\%config);
 if(exists($config{experiment}))
 {
     my $path = "$config{experiment}/";
@@ -285,7 +287,7 @@ sub sentence_to_table
                     {
                         $htmlerr .= "<dt><b style='background-color: orange'>$key</b></dt>\n";
                     }
-                    elsif($key eq 'unequalAlignedTokens') 
+                    elsif($key eq 'unequalAlignedTokens')
                     {
                         $htmlerr .= "<dt><b>$key (ref/hyp)</b></dt>\n";
                         $htmlerr .= "<dd><b style='background-color: red'>with different lemma:</b> ";
@@ -406,7 +408,7 @@ sub sentence_to_table
         }
         $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, $rhalignments, 1, 0, 0, 0, \@srcstyles);
         $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, $rhalignments, 0, 0, 0, 0, \@tgtstyles);
-        
+
 	$srcrow = substr($srcrow,0,6) .  "<th rowspan=2>src-ref</th>" . substr($srcrow,6);
 	$tgtrow = substr($tgtrow,0,6) .  "<th rowspan=2>ref-src</th>" . substr($tgtrow,6);
 	$hyprow = substr($hyprow,0,6) .  "<th rowspan=2>hyp-src</th>" . substr($hyprow,6);
@@ -417,7 +419,7 @@ sub sentence_to_table
         my $onetable = 1;
         if($onetable)
         {
-	    
+	
             # Display the source words along with their alignment links.
             $html .= "<table border style='font-family:Code2000'>\n";
             # An empty row separates source and target sections.

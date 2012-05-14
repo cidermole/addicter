@@ -5,10 +5,10 @@
 # 2011-05-05: Source and target index files separated.
 
 use utf8;
-use open ":utf8";
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
-binmode(STDERR, ":utf8");
+use open ':utf8';
+binmode(STDIN, ':utf8');
+binmode(STDOUT, ':utf8');
+binmode(STDERR, ':utf8');
 use dzcgi;
 use AddicterHTML;
 

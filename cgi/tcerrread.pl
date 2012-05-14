@@ -5,14 +5,14 @@
 # License: GNU GPL
 
 use utf8;
-use open ":utf8";
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
-binmode(STDERR, ":utf8");
+use open ':utf8';
+binmode(STDIN, ':utf8');
+binmode(STDOUT, ':utf8');
+binmode(STDERR, ':utf8');
+use XML::Simple;
 use ReadFindErrs;
 use AddicterHTML;
 use dzcgi;
-use XML::Simple;
 
 my $experiment;
 my $alignment;
