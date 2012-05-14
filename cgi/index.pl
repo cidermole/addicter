@@ -46,11 +46,14 @@ if(exists($config{experiment}))
     # Path to experiment we are analyzing (can be relative to the location of this script).
     $experiment = $config{experiment};
     print("  <h1>Current Experiment: <span style='color:red'>$experiment</span></h1>\n");
-    print("  <h2><a href='tcerrread.pl?experiment=$experiment'>Error Summary</a></h2>\n");
     print("  <table border='1'>\n");
     print("    <tr>\n");
     print("      <td valign=top style='background:yellow'>\n");
-    print("        <h2><a href='browsetest.pl?experiment=$experiment'>Test Data Browser</a></h2>\n");
+    print("        <table width='100%'><tr><td align=left>\n");
+    print("          <h2><a href='browsetest.pl?experiment=$experiment'>Test Data Browser</a></h2>\n");
+    print("        </td><td align=right>\n");
+    print("          <h2><a href='tcerrread.pl?experiment=$experiment'>Error Summary</a></h2>\n");
+    print("        </td></tr></table>\n");
     my $ellipsis = chr(8230); # ...
     for(my $i = 1; $i<=4; $i++)
     {
@@ -61,11 +64,11 @@ if(exists($config{experiment}))
         $srcline =~ s/\s/&nbsp;/g;
         $tgtline =~ s/\s/&nbsp;/g;
         print("        $srcline<br/>\n");
-        print("        $tgtline<br/>\n");
+        print("        <span style='background:#FFFF99'>$tgtline</span><br/>\n");
     }
     print("      </td>\n");
     print("      <td valign=top style='background:lightblue'>\n");
-    print("        <h2>Word Explorer</h2>\n");
+    print("        <table><tr><td><h2>Word Explorer</h2></td></tr></table>\n");
     print("<form method=get action='index.pl'>\n");
     print("  SRC:\n");
     print("  <input type=hidden name=experiment value='$config{experiment}' />\n");

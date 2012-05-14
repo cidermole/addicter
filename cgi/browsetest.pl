@@ -12,6 +12,22 @@ use dzcgi;
 use AddicterHTML;
 use ReadFindErrs;
 
+# Where is the image and the Java Script code necessary for navigation tabs?
+# If we are invoked through server.pl, it will be just one level up.
+# If we run under the Apache web server, it could be anywhere;
+# I currently only care to recognize the settings and locations valid on my own laptop.
+my $tabsgifpath;
+my $activatablespath;
+if($ENV{DOCUMENT_ROOT} eq 'C:/Users/Dan/Documents/Web')
+{
+    $tabsgifpath = '../../tabs.gif';
+    $activatablespath = '../../activatables.js';
+}
+else
+{
+    $tabsgifpath = '../tabs.gif';
+    $activatablespath = '../activatables.js';
+}
 # Print the HTML header (so that any debugging can possibly also output to the browser).
 print("Content-type: text/html; charset=utf8\n\n");
 print("<html>\n");
@@ -22,12 +38,12 @@ print("  <title>Addicter: Test Data Browsing</title>\n");
 print("  <style>\n");
 print("    ol#toc { height: 2em; list-style: none; margin: 0; padding: 0; }\n");
 print("    ol#toc li { float: left; margin: 0 1px 0 0; }\n");
-print("    ol#toc a { background: #bdf url(../tabs.gif); color: #008; display: block; float: left; height: 2em; padding-left: 10px; text-decoration: none; }\n");
+print("    ol#toc a { background: #bdf url($tabsgifpath); color: #008; display: block; float: left; height: 2em; padding-left: 10px; text-decoration: none; }\n");
 print("    ol#toc a:hover { background-color: #3af; background-position: 0 -120px; }\n");
 print("    ol#toc a:hover span { background-position: 100% -120px; }\n");
 print("    ol#toc li a.active { background-color: #48f; background-position: 0 -60px; }\n");
 print("    ol#toc li a.active span { background-position: 100% -60px; }\n");
-print("    ol#toc span { background: url(../tabs.gif) 100% 0; display: block; line-height: 2em; padding-right: 10px; }\n");
+print("    ol#toc span { background: url($tabsgifpath) 100% 0; display: block; line-height: 2em; padding-right: 10px; }\n");
 print("    div.content { border: #48f solid 3px; clear: left; padding: 1em; }\n");
 print("    div.inactive { display: none }\n");
 # Note: reportedly, Internet Explorer only supports :hover subclass for the <a> element. This might work in other browsers, though.
@@ -81,8 +97,10 @@ if(exists($config{experiment}))
 {
     my $path = "$config{experiment}/";
     print("  <h1>Test Data of $config{experiment}</h1>\n");
-    print("  <div><a href='index.pl?experiment=$config{experiment}'>Back to Experiment Main Page</a></div>");
-    print("  <div><a href='tcerrread.pl?experiment=$config{experiment}'>Back to Error Summary</a></div>");
+    print("  <div>\n");
+    print("    <a href='index.pl?experiment=$config{experiment}'>Back to Experiment Main Page</a> |\n");
+    print("    <a href='tcerrread.pl?experiment=$config{experiment}'>Back to Error Summary</a>\n");
+    print("  </div>\n");
     # How many lines (sentences) are there in the test data?
     my $numsnt = count_lines("$config{experiment}/test.src");
     if($numsnt>0)
@@ -119,7 +137,7 @@ sub get_navigation
     my $sntno = shift; # number of current sentence (first sentence has number 1)
     my $numsnt = shift; # number of sentences in file
     my $html;
-    $html .= "  <p>";
+    $html .= "  <div>";
     $html .= "This is the test sentence number $sntno of $numsnt.";
     # Provide links to the preceding and the following sentence.
     my @links;
@@ -128,7 +146,7 @@ sub get_navigation
     push(@links, $previous>0 ? "<a href='browsetest.pl?experiment=$config{experiment}&amp;sntno=$previous'>previous</a>" : 'previous');
     push(@links, $next<=$numsnt ? "<a href='browsetest.pl?experiment=$config{experiment}&amp;sntno=$next'>next</a>" : 'next');
     $html .= " Go to [".join(' | ', @links)."].";
-    $html .= "</p>\n";
+    $html .= "</div>\n";
     return $html;
 }
 
@@ -439,7 +457,7 @@ sub sentence_to_table
         $html .= $htmlerr;
         $html .= "</div>\n";
     }
-    $html .= "  <script src='../activatables.js' type='text/javascript'></script>\n";
+    $html .= "  <script src='$activatablespath' type='text/javascript'></script>\n";
     $html .= "  <script type='text/javascript'>\n";
     $html .= "    activatables('page', [".join(', ', map {"'$_'"} (@{$sentence->{sub}}))."]);\n";
     $html .= "  </script>\n";

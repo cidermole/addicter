@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # Reads tcerr.txt (output of detecterr.pl) and displays HTML page with
 # error summary
-# Copyright © 2012 Jan Berka <berka@ufal.mff.cuni.cz>
+# Copyright © 2012 Jan Berka <berka@ufal.mff.cuni.cz>, Dan Zeman <zeman@ufal.mff.cuni.cz>
 # License: GNU GPL
 
 use utf8;
@@ -16,7 +16,10 @@ use dzcgi;
 
 my $experiment;
 my $alignment;
+print("Content-type: text/html; charset=utf8\n\n");
 dzcgi::cist_parametry(\%config);
+# For debugging purposes, read parameters also from @ARGV.
+dzcgi::cist_parametry_argv(\%config);
 if ( exists($config{experiment}) )
 {
 	$experiment = $config{experiment};
@@ -88,7 +91,21 @@ my %err_positions = ();
 #id's of sentences without any errors
 my @without_errs = qw();
 
-my $xmlrecord = XMLin($path);
+print("<html>\n");
+print("<head>\n");
+print("  <meta http-equiv='content-type' content='text/html; charset=utf8'/>\n");
+print("  <title>Addicter</title>\n");
+print("</head>\n");
+print("<body>\n");
+my $xmlrecord;
+if(!-f $path)
+{
+    print("<p style='color:red'>File does not exist: $path</p>\n");
+}
+else
+{
+    $xmlrecord = XMLin($path);
+}
 for my $i (0..$#{$xmlrecord->{sentence}})
 {
 	my $oldrecord = ${$xmlrecord->{sentence}}[$i];
@@ -176,12 +193,6 @@ for my $i (0..$#{$xmlrecord->{sentence}})
 	}
 }
 
-print("<html>\n");
-print("<head>\n");
-print("  <meta http-equiv='content-type' content='text/html; charset=utf8'/>\n");
-print("  <title>Addicter</title>\n");
-print("</head>\n");
-print("<body>\n");
 print("  <h1>Error Summary of <a href='index.pl?experiment=$experiment'>$experiment</a></h1>\n");
 print("  <div>...with alignment $alignment</div>\n");
 print("<br>\n");
