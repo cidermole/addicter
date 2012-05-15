@@ -91,10 +91,14 @@ if(exists($config{experiment}))
     print("</form>\n");
     print("      </td>\n");
     print("    </tr>\n");
-    print("  </table>\n");
     if(exists($config{letter}))
     {
+        print("    <tr>\n");
+        print("      <td colspan=2 style='background:lightblue'>\n");
+        print("        <h2>Words beginning in letter '$config{letter}'</h2>\n");
         print_words_by_letter($experiment, $config{lang}, $config{letter});
+        print("      </td>\n");
+        print("    </tr>\n");
     }
     elsif(exists($config{re}))
     {
@@ -107,9 +111,15 @@ if(exists($config{experiment}))
             $re =~ s/&/&amp;/g;
             $re =~ s/</&lt;/g;
             $re =~ s/>/&gt;/g;
+            print("    <tr>\n");
+            print("      <td colspan=2 style='background:lightblue'>\n");
+            print("        <h2>Words matching regular expression</h2>\n");
             print_words_matching_re($config{lang}, $re);
+            print("      </td>\n");
+            print("    </tr>\n");
         }
     }
+    print("  </table>\n");
 }
 # Close the HTML document.
 print("</body>\n");
