@@ -286,6 +286,8 @@ sub sentence_to_table
             $htmlerr .= "<h2>Automatically Identified Errors</h2>\n";
             if($xmlrecord->{state} eq 'waiting')
             {
+                # Note that if we are here then the file tcerr.txt exists.
+                # However, it probably contains too few sentences. Or corrupted data.
                 $htmlerr .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
             }
             elsif($xmlrecord->{state} eq 'finished')
@@ -322,7 +324,7 @@ sub sentence_to_table
                         $htmlerr .= join(' ', map {my $t=$_->{hypToken}; $t=~s/\|.*//; $t} (@{$xmlrecord->{errors}{$key}}));
                         $htmlerr .= "</dd>\n";
                     }
-                        elsif($key eq 'ordErrorSwitchWords')
+                    elsif($key eq 'ordErrorSwitchWords')
                     {
                         $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
                         $htmlerr .= "<dd> ";
@@ -330,18 +332,18 @@ sub sentence_to_table
                         $htmlerr .= "</dd>\n";
                     }
                     elsif($key eq 'reorderingError')
-		    {
-			$htmlerr .= "<dt><b style='background-color: chartreuse'>$key</b></dt>\n";
-		    }
-		    elsif($key eq 'inflectionalError')
-		    {
-			$htmlerr .= "<dt><b style='background-color: darkkhaki'>$key</b></dt>\n";
-		    }
-		    elsif($key eq 'otherMismatch')
-		    {
-			$htmlerr .= "<dt><b style='background-color: darkgreen'>$key</b></dt>\n";
-		    }
-		    else
+                    {
+                        $htmlerr .= "<dt><b style='background-color: chartreuse'>$key</b></dt>\n";
+                    }
+                    elsif($key eq 'inflectionalError')
+                    {
+                        $htmlerr .= "<dt><b style='background-color: darkkhaki'>$key</b></dt>\n";
+                    }
+                    elsif($key eq 'otherMismatch')
+                    {
+                        $htmlerr .= "<dt><b style='background-color: darkgreen'>$key</b></dt>\n";
+                    }
+                    else
                     {
                         $htmlerr .= "<dt><b>$key</b></dt>\n";
                     }
@@ -400,21 +402,21 @@ sub sentence_to_table
                                 $srcstyles[$r] = 'background-color: lightgreen';
                             }
                         }
-			elsif($key eq 'reorderingError')
-			{
-			    $srcstyles[$token->{refIdx}] = 'background-color: chartreuse';
-			    $tgtstyles[$token->{hypIdx}] = 'background-color: chartreuse';
-			}
-			elsif($key eq 'inflectionalError')
-			{
-				$srcstyles[$token->{refIdx}] = 'background-color: darkkhaki';
-				$tgtstyles[$token->{hypIdx}] = 'background-color: darkkhaki';
-			}
-			elsif($key eq 'otherMismatch')
-			{
-				$srcstyles[$token->{refIdx}] = 'background-color: darkgreen';
-                            	$tgtstyles[$token->{hypIdx}] = 'background-color: darkgreen';
-			}
+                        elsif($key eq 'reorderingError')
+                        {
+                            $srcstyles[$token->{refIdx}] = 'background-color: chartreuse';
+                            $tgtstyles[$token->{hypIdx}] = 'background-color: chartreuse';
+                        }
+                        elsif($key eq 'inflectionalError')
+                        {
+                            $srcstyles[$token->{refIdx}] = 'background-color: darkkhaki';
+                            $tgtstyles[$token->{hypIdx}] = 'background-color: darkkhaki';
+                        }
+                        elsif($key eq 'otherMismatch')
+                        {
+                            $srcstyles[$token->{refIdx}] = 'background-color: darkgreen';
+                            $tgtstyles[$token->{hypIdx}] = 'background-color: darkgreen';
+                        }
                     }
                 }
                 $htmlerr .= "</dl>\n";
@@ -426,18 +428,18 @@ sub sentence_to_table
         }
         $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, $rhalignments, 1, 0, 0, 0, \@srcstyles);
         $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, $rhalignments, 0, 0, 0, 0, \@tgtstyles);
-
-	$srcrow = substr($srcrow,0,6) .  "<th rowspan=2>src-ref</th>" . substr($srcrow,6);
-	$tgtrow = substr($tgtrow,0,6) .  "<th rowspan=2>ref-src</th>" . substr($tgtrow,6);
-	$hyprow = substr($hyprow,0,6) .  "<th rowspan=2>hyp-src</th>" . substr($hyprow,6);
-	$rhrow = substr($rhrow,0,6) .  "<th rowspan=2>ref-hyp</th>" . substr($rhrow,6);
-	$hrrow = substr($hrrow,0,6) .  "<th rowspan=2>hyp-ref</th>" . substr($hrrow,6);
-	my @rowpairs = ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
+        $srcrow = substr($srcrow,0,6) .  "<th rowspan=2>src-ref</th>" . substr($srcrow,6);
+        $tgtrow = substr($tgtrow,0,6) .  "<th rowspan=2>ref-src</th>" . substr($tgtrow,6);
+        $hyprow = substr($hyprow,0,6) .  "<th rowspan=2>hyp-src</th>" . substr($hyprow,6);
+        $rhrow = substr($rhrow,0,6) .  "<th rowspan=2>ref-hyp</th>" . substr($rhrow,6);
+        $hrrow = substr($hrrow,0,6) .  "<th rowspan=2>hyp-ref</th>" . substr($hrrow,6);
+        ###!!! We currently do not have bilingual alignments for the test data. Let's not show three empty row pairs all the time.
+        #my @rowpairs = ($srcrow, $tgtrow, $hyprow, $rhrow, $hrrow);
+        my @rowpairs = ($rhrow, $hrrow);
         # We can display all three pairs of rows in one table or we can display them in separate tables.
         my $onetable = 1;
         if($onetable)
         {
-	
             # Display the source words along with their alignment links.
             $html .= "<table border style='font-family:Code2000'>\n";
             # An empty row separates source and target sections.

@@ -1,11 +1,11 @@
 #!/usr/bin/perl
 # Reads XML output of finderrs.pl (Addicter / Mark Fishel's Testchamber).
-# Copyright © 2011 Dan Zeman <zeman@ufal.mff.cuni.cz>
+# Copyright © 2011-2012 Dan Zeman <zeman@ufal.mff.cuni.cz>
 # Licence: GNU GPL
 
 package ReadFindErrs;
 use utf8;
-use open ":utf8";
+use open ':utf8';
 use XML::Parser;
 
 
@@ -23,8 +23,11 @@ sub get_nth_sentence
     local %state;
     $state{state} = 'waiting';
     $state{wantid} = $n-1;
-    my $parser = new XML::Parser(Handlers => {Start => \&handle_start, End => \&handle_end});
-    $parser->parsefile($path);
+    if(-f $path)
+    {
+        my $parser = new XML::Parser(Handlers => {Start => \&handle_start, End => \&handle_end});
+        $parser->parsefile($path);
+    }
     return \%state;
 }
 
