@@ -24,6 +24,8 @@ print("<html>\n");
 print("<head>\n");
 print("  <meta http-equiv='content-type' content='text/html; charset=utf8'/>\n");
 print("  <title>Addicter</title>\n");
+# Generate a piece of JavaScript code we are going to need later.
+AddicterHTML::print_javascript_highlight_cells();
 print("</head>\n");
 print("<body>\n");
 print("  <style><!-- A:link, A:visited { text-decoration: none } A:hover { text-decoration: underline } --></style>");

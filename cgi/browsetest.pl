@@ -51,40 +51,8 @@ print("    div.inactive { display: none }\n");
 #print("    td a:hover { background-color: yellow; }\n");
 #print("    td.a8_8:hover { background-color: yellow; }\n");
 print("  </style>\n");
-print <<EOF
-<script>
-// Gets the list of classes of an element.
-// Sets the background color of all those classes to yellow.
-// Used to highlight all corresponding table cells when mouse is over one of them.
-// Each cell should have something like onmouseover='javascript:highlightCells(this)'
-function highlightCells(cellId)
-{
-    // Remove the highlighting stylesheet if already present in the document.
-    // getElementById() returns null if the stylesheet does not exist.
-    var sheetToBeRemoved = document.getElementById('highlightStyle');
-    if (sheetToBeRemoved != null)
-    {
-        var sheetParent = sheetToBeRemoved.parentNode;
-        sheetParent.removeChild(sheetToBeRemoved);
-    }
-    // Create a new stylesheet.
-    var sheet = document.createElement('style');
-    sheet.id = 'highlightStyle';
-    // Now fill the stylesheet with highlighting rules.
-    var cell = document.getElementById(cellId);
-    var classes = cell.className.split(/\s+/);
-    for (var i = 0; i < classes.length; i++)
-    {
-        //alert('highlighting td.'+classes[i]+" { background-color: yellow; }");
-        // Set the background color of the class to yellow.
-        //sheet.insertRule("td."+classes[i]+" { background-color: yellow; }", i);
-        sheet.innerHTML = sheet.innerHTML+"td."+classes[i]+" { background-color: yellow; }";
-    }
-    document.body.appendChild(sheet);
-}
-</script>
-EOF
-;
+# Generate a piece of JavaScript code we are going to need later.
+AddicterHTML::print_javascript_highlight_cells();
 print("</head>\n");
 print("<body>\n");
 # We do not want underlined hyperlinks unless the mouse goes over them.
@@ -270,7 +238,7 @@ sub sentence_to_table
             $hyprow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@srcwords, \@halignments, 1);
         }
         ###!!! If we have found a subfolder we automatically expect it to contain test.refhyp.ali.
-        # In future, we may just assume that it contains any of the expected files, for which tehere are alternatives.
+        # In future, we may just assume that it contains any of the expected files, for which there are alternatives.
         # Files that are not present in a subfolder may be present in the superfolder as alternatives.
         my $aliseq = AddicterHTML::get_nth_line("$config{experiment}/$aliid/test.refhyp.ali", $sentence->{sntno});
         my $rhalignments = AddicterHTML::ali_line_to_array($aliseq);
@@ -283,148 +251,7 @@ sub sentence_to_table
         if(-f $xmlfile)
         {
             my $xmlrecord = ReadFindErrs::get_nth_sentence($xmlfile, $sentence->{sntno});
-            $htmlerr .= "<h2>Automatically Identified Errors</h2>\n";
-            if($xmlrecord->{state} eq 'waiting')
-            {
-                # Note that if we are here then the file tcerr.txt exists.
-                # However, it probably contains too few sentences. Or corrupted data.
-                $htmlerr .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
-            }
-            elsif($xmlrecord->{state} eq 'finished')
-            {
-                $htmlerr .= "<dl>\n";
-                foreach my $key (keys(%{$xmlrecord->{errors}}))
-                {
-                    if($key eq 'missingRefWord')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
-                    }
-                    elsif($key eq 'extraHypWord')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
-                    }
-                    elsif($key eq 'untranslatedHypWord')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: orange'>$key</b></dt>\n";
-                    }
-                    elsif($key eq 'unequalAlignedTokens')
-                    {
-                        $htmlerr .= "<dt><b>$key (ref/hyp)</b></dt>\n";
-                        $htmlerr .= "<dd><b style='background-color: red'>with different lemma:</b> ";
-                        $htmlerr .= join("  ", map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} =~ m/2/} (@{$xmlrecord->{errors}{$key}}));
-                        $htmlerr .= "</dd>\n";
-                        $htmlerr .= "<dd><b  style='background-color: pink'>with same lemma:</b> ";
-                        $htmlerr .= join(' ', map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} !~ m/2/} (@{$xmlrecord->{errors}{$key}}));
-                        $htmlerr .= "</dd>\n";
-                    }
-                    elsif($key eq 'ordErrorShiftWord')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
-                        $htmlerr .= "<dd> ";
-                        $htmlerr .= join(' ', map {my $t=$_->{hypToken}; $t=~s/\|.*//; $t} (@{$xmlrecord->{errors}{$key}}));
-                        $htmlerr .= "</dd>\n";
-                    }
-                    elsif($key eq 'ordErrorSwitchWords')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
-                        $htmlerr .= "<dd> ";
-                        $htmlerr .= join(' ', map {my $t1=$_->{hypToken1}; my $t2=$_->{hypToken2}; $t1=~s/\|.*//; $t2=~s/\|.*//; $t1."-".$t2} (@{$xmlrecord->{errors}{$key}}));
-                        $htmlerr .= "</dd>\n";
-                    }
-                    elsif($key eq 'reorderingError')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: chartreuse'>$key</b></dt>\n";
-                    }
-                    elsif($key eq 'inflectionalError')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: darkkhaki'>$key</b></dt>\n";
-                    }
-                    elsif($key eq 'otherMismatch')
-                    {
-                        $htmlerr .= "<dt><b style='background-color: darkgreen'>$key</b></dt>\n";
-                    }
-                    else
-                    {
-                        $htmlerr .= "<dt><b>$key</b></dt>\n";
-                    }
-                    if (not ($key eq 'unequalAlignedTokens') and not ($key eq 'ordErrorShiftWord') and not ($key eq "ordErrorSwitchWords"))
-                    {
-                        $htmlerr .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
-                    }
-                    # styles for table
-                    foreach my $token (@{$xmlrecord->{errors}{$key}})
-                    {
-                        if($key eq 'missingRefWord')
-                        {
-                            $srcstyles[$token->{idx}] = 'background-color: lightblue';
-                        }
-                        elsif($key eq 'extraHypWord')
-                        {
-                            $tgtstyles[$token->{idx}] = 'background-color: lightblue';
-                        }
-                        elsif($key eq 'untranslatedHypWord')
-                        {
-                            $tgtstyles[$token->{idx}] = 'background-color: orange';
-                        }
-                        elsif($key eq 'unequalAlignedTokens')
-                        {
-                            # There are three factors in this order: form|tag|lemma.
-                            # If unequalFactorList includes 2 (the lemma) we'll interpret it as lexical difference.
-                            # Otherwise it's morphological difference.
-                            if($token->{unequalFactorList} =~ m/2/)
-                            {
-                                $srcstyles[$token->{refIdx}] = 'background-color: red';
-                                $tgtstyles[$token->{hypIdx}] = 'background-color: red';
-                            }
-                            else # morphology only
-                            {
-                                $srcstyles[$token->{refIdx}] = 'background-color: pink';
-                                $tgtstyles[$token->{hypIdx}] = 'background-color: pink';
-                            }
-                        }
-                        elsif($key eq 'ordErrorShiftWord')
-                        {
-                            $tgtstyles[$token->{hypPos}] = 'background-color: lightgreen';
-                            # We should use the same color for the aligned counterpart of the reordered word.
-                            ###!!! OOPS! Although I called the alignment RH everywhere, it's actually HR, i.e. hypothesis left, reference right!
-                            ###!!! let's do something about this later when there's time
-                            foreach my $r (@{$rhalindex->{l2r}[$token->{hypPos}]})
-                            {
-                                $srcstyles[$r] = 'background-color: lightgreen';
-                            }
-                        }
-                        elsif($key eq 'ordErrorSwitchWords')
-                        {
-                            $tgtstyles[$token->{hypIdx1}] = 'background-color: lightgreen';
-                            $tgtstyles[$token->{hypIdx2}] = 'background-color: lightgreen';
-                            foreach my $r (@{$rhalindex->{l2r}[$token->{hypIdx1}]}, @{$rhalindex->{l2r}[$token->{hypIdx2}]})
-                            {
-                                $srcstyles[$r] = 'background-color: lightgreen';
-                            }
-                        }
-                        elsif($key eq 'reorderingError')
-                        {
-                            $srcstyles[$token->{refIdx}] = 'background-color: chartreuse';
-                            $tgtstyles[$token->{hypIdx}] = 'background-color: chartreuse';
-                        }
-                        elsif($key eq 'inflectionalError')
-                        {
-                            $srcstyles[$token->{refIdx}] = 'background-color: darkkhaki';
-                            $tgtstyles[$token->{hypIdx}] = 'background-color: darkkhaki';
-                        }
-                        elsif($key eq 'otherMismatch')
-                        {
-                            $srcstyles[$token->{refIdx}] = 'background-color: darkgreen';
-                            $tgtstyles[$token->{hypIdx}] = 'background-color: darkgreen';
-                        }
-                    }
-                }
-                $htmlerr .= "</dl>\n";
-            }
-            else
-            {
-                $htmlerr .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
-            }
+            $htmlerr = mark_detected_errors($xmlrecord, \@srcstyles, \@tgtstyles, $rhalindex);
         }
         $rhrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@tgtwords, \@hypwords, $rhalignments, 1, 0, 0, 0, \@srcstyles);
         $hrrow = AddicterHTML::sentence_to_table_row($config{experiment}, \@hypwords, \@tgtwords, $rhalignments, 0, 0, 0, 0, \@tgtstyles);
@@ -484,4 +311,163 @@ sub count_lines
     }
     close(IN);
     return $n;
+}
+
+
+
+#------------------------------------------------------------------------------
+# Takes the record (read from XML file) with description of errors
+# automatically detected by Mark's finderrs.pl. Changes color of each erroneous
+# token according to the error type. Returns HTML with a summary of the errors
+# (to be displayed under the sentence).
+#------------------------------------------------------------------------------
+sub mark_detected_errors
+{
+    my $xmlrecord = shift;
+    my $srcstyles = shift; # array reference
+    my $tgtstyles = shift; # array reference
+    my $rhalindex = shift; # hash reference
+    my $htmlerr = '';
+    $htmlerr .= "<h2>Automatically Identified Errors</h2>\n";
+    if($xmlrecord->{state} eq 'waiting')
+    {
+        # Note that if we are here then the file tcerr.txt exists.
+        # However, it probably contains too few sentences. Or corrupted data.
+        $htmlerr .= "<p>No information from <tt>finderrs.pl</tt> found.</p>\n";
+    }
+    elsif($xmlrecord->{state} eq 'finished')
+    {
+        $htmlerr .= "<dl>\n";
+        foreach my $key (keys(%{$xmlrecord->{errors}}))
+        {
+            if($key eq 'missingRefWord')
+            {
+                $htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
+            }
+            elsif($key eq 'extraHypWord')
+            {
+                $htmlerr .= "<dt><b style='background-color: lightblue'>$key</b></dt>\n";
+            }
+            elsif($key eq 'untranslatedHypWord')
+            {
+                $htmlerr .= "<dt><b style='background-color: orange'>$key</b></dt>\n";
+            }
+            elsif($key eq 'unequalAlignedTokens')
+            {
+                $htmlerr .= "<dt><b>$key (ref/hyp)</b></dt>\n";
+                $htmlerr .= "<dd><b style='background-color: red'>with different lemma:</b> ";
+                $htmlerr .= join("  ", map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} =~ m/2/} (@{$xmlrecord->{errors}{$key}}));
+                $htmlerr .= "</dd>\n";
+                $htmlerr .= "<dd><b  style='background-color: pink'>with same lemma:</b> ";
+                $htmlerr .= join(' ', map {my$t=$_->{refToken}; $t=~s/\|.*//; my $u=$_->{hypToken}; $u=~s/\|.*//; $t."/".$u} grep {$_->{unequalFactorList} !~ m/2/} (@{$xmlrecord->{errors}{$key}}));
+                $htmlerr .= "</dd>\n";
+            }
+            elsif($key eq 'ordErrorShiftWord')
+            {
+                $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
+                $htmlerr .= "<dd> ";
+                $htmlerr .= join(' ', map {my $t=$_->{hypToken}; $t=~s/\|.*//; $t} (@{$xmlrecord->{errors}{$key}}));
+                $htmlerr .= "</dd>\n";
+            }
+            elsif($key eq 'ordErrorSwitchWords')
+            {
+                $htmlerr .= "<dt><b style='background-color: lightgreen'>$key</b></dt>\n";
+                $htmlerr .= "<dd> ";
+                $htmlerr .= join(' ', map {my $t1=$_->{hypToken1}; my $t2=$_->{hypToken2}; $t1=~s/\|.*//; $t2=~s/\|.*//; $t1."-".$t2} (@{$xmlrecord->{errors}{$key}}));
+                $htmlerr .= "</dd>\n";
+            }
+            elsif($key eq 'reorderingError')
+            {
+                $htmlerr .= "<dt><b style='background-color: chartreuse'>$key</b></dt>\n";
+            }
+            elsif($key eq 'inflectionalError')
+            {
+                $htmlerr .= "<dt><b style='background-color: darkkhaki'>$key</b></dt>\n";
+            }
+            elsif($key eq 'otherMismatch')
+            {
+                $htmlerr .= "<dt><b style='background-color: darkgreen'>$key</b></dt>\n";
+            }
+            else
+            {
+                $htmlerr .= "<dt><b>$key</b></dt>\n";
+            }
+            if (not ($key eq 'unequalAlignedTokens') and not ($key eq 'ordErrorShiftWord') and not ($key eq "ordErrorSwitchWords"))
+            {
+                $htmlerr .= "<dd>".join(' ', map {$_->{surfaceForm}} (@{$xmlrecord->{errors}{$key}}))."</dd>\n";
+            }
+            # styles for table
+            foreach my $token (@{$xmlrecord->{errors}{$key}})
+            {
+                if($key eq 'missingRefWord')
+                {
+                    $srcstyles->[$token->{idx}] = 'background-color: lightblue';
+                }
+                elsif($key eq 'extraHypWord')
+                {
+                    $tgtstyles->[$token->{idx}] = 'background-color: lightblue';
+                }
+                elsif($key eq 'untranslatedHypWord')
+                {
+                    $tgtstyles->[$token->{idx}] = 'background-color: orange';
+                }
+                elsif($key eq 'unequalAlignedTokens')
+                {
+                    # There are three factors in this order: form|tag|lemma.
+                    # If unequalFactorList includes 2 (the lemma) we'll interpret it as lexical difference.
+                    # Otherwise it's morphological difference.
+                    if($token->{unequalFactorList} =~ m/2/)
+                    {
+                        $srcstyles->[$token->{refIdx}] = 'background-color: red';
+                        $tgtstyles->[$token->{hypIdx}] = 'background-color: red';
+                    }
+                    else # morphology only
+                    {
+                        $srcstyles->[$token->{refIdx}] = 'background-color: pink';
+                        $tgtstyles->[$token->{hypIdx}] = 'background-color: pink';
+                    }
+                }
+                elsif($key eq 'ordErrorShiftWord')
+                {
+                    $tgtstyles->[$token->{hypPos}] = 'background-color: lightgreen';
+                    # We should use the same color for the aligned counterpart of the reordered word.
+                    ###!!! OOPS! Although I called the alignment RH everywhere, it's actually HR, i.e. hypothesis left, reference right!
+                    ###!!! let's do something about this later when there's time
+                    foreach my $r (@{$rhalindex->{l2r}[$token->{hypPos}]})
+                    {
+                        $srcstyles->[$r] = 'background-color: lightgreen';
+                    }
+                }
+                elsif($key eq 'ordErrorSwitchWords')
+                {
+                    $tgtstyles->[$token->{hypIdx1}] = 'background-color: lightgreen';
+                    $tgtstyles->[$token->{hypIdx2}] = 'background-color: lightgreen';
+                    foreach my $r (@{$rhalindex->{l2r}[$token->{hypIdx1}]}, @{$rhalindex->{l2r}[$token->{hypIdx2}]})
+                    {
+                        $srcstyles->[$r] = 'background-color: lightgreen';
+                    }
+                }
+                elsif($key eq 'reorderingError')
+                {
+                    $srcstyles->[$token->{refIdx}] = 'background-color: chartreuse';
+                    $tgtstyles->[$token->{hypIdx}] = 'background-color: chartreuse';
+                }
+                elsif($key eq 'inflectionalError')
+                {
+                    $srcstyles->[$token->{refIdx}] = 'background-color: darkkhaki';
+                    $tgtstyles->[$token->{hypIdx}] = 'background-color: darkkhaki';
+                }
+                elsif($key eq 'otherMismatch')
+                {
+                    $srcstyles->[$token->{refIdx}] = 'background-color: darkgreen';
+                    $tgtstyles->[$token->{hypIdx}] = 'background-color: darkgreen';
+                }
+            }
+        }
+        $htmlerr .= "</dl>\n";
+    }
+    else
+    {
+        $htmlerr .= "<p style='color:red'>Parsing the XML file <tt>$findersxmlfile</tt> resulted in unknown state '$xmlrecord->{state}'.</p>\n";
+    }
 }

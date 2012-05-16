@@ -222,8 +222,6 @@ sub word_to_link
 
 
 
-1;
-
 #----------------------------------------------------------------
 # flips things before and after - in alignments
 # eg. flip('1-2 3-5 6-6') = '2-1 5-3 6-6'
@@ -244,3 +242,50 @@ sub flip {
 	
 	return $newali;
 }
+
+
+
+#------------------------------------------------------------------------------
+# Prints JavaScript code to highlight corresponding aligned cells.
+#------------------------------------------------------------------------------
+sub print_javascript_highlight_cells
+{
+    print <<EOF
+<script>
+// Gets the list of classes of an element.
+// Sets the background color of all those classes to yellow.
+// Used to highlight all corresponding table cells when mouse is over one of them.
+// Each cell should have something like onmouseover='javascript:highlightCells(this)'
+function highlightCells(cellId)
+{
+    // Remove the highlighting stylesheet if already present in the document.
+    // getElementById() returns null if the stylesheet does not exist.
+    var sheetToBeRemoved = document.getElementById('highlightStyle');
+    if (sheetToBeRemoved != null)
+    {
+        var sheetParent = sheetToBeRemoved.parentNode;
+        sheetParent.removeChild(sheetToBeRemoved);
+    }
+    // Create a new stylesheet.
+    var sheet = document.createElement('style');
+    sheet.id = 'highlightStyle';
+    // Now fill the stylesheet with highlighting rules.
+    var cell = document.getElementById(cellId);
+    var classes = cell.className.split(/\s+/);
+    for (var i = 0; i < classes.length; i++)
+    {
+        //alert('highlighting td.'+classes[i]+" { background-color: yellow; }");
+        // Set the background color of the class to yellow.
+        //sheet.insertRule("td."+classes[i]+" { background-color: yellow; }", i);
+        sheet.innerHTML = sheet.innerHTML+"td."+classes[i]+" { background-color: yellow; }";
+    }
+    document.body.appendChild(sheet);
+}
+</script>
+EOF
+    ;
+}
+
+
+
+1;
