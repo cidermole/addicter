@@ -1,19 +1,15 @@
 #!/usr/bin/perl
-# Addicter CGI viewer
-# Copyright © 2010 Dan Zeman <zeman@ufal.mff.cuni.cz>
+# Addicter CGI viewer: alignment summary
+# Copyright © 2010-2012 Dan Zeman <zeman@ufal.mff.cuni.cz>
 # License: GNU GPL
-# 2010-06-28: New parameter lang=s|t selects language for words that appear on both sides (e.g. 'USA').
-# 2011-05-05: Source and target index files separated.
 
 use utf8;
-use open ":utf8";
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
-binmode(STDERR, ":utf8");
+use open ':utf8';
+binmode(STDIN, ':utf8');
+binmode(STDOUT, ':utf8');
+binmode(STDERR, ':utf8');
 use dzcgi;
 use cas;
-use translit;
-use translit::brahmi;
 use AddicterHTML;
 
 # Remember when we started generating the page so that we can figure out the duration.
@@ -27,8 +23,6 @@ print("  <title>Addicter</title>\n");
 print("</head>\n");
 print("<body>\n");
 print("  <style><!-- A:link, A:visited { text-decoration: none } A:hover { text-decoration: underline } --></style>");
-# 0x900: Písmo devanágarí.
-translit::brahmi::inicializovat(\%prevod, 2304, 1);
 # Read cgi parameters.
 dzcgi::cist_parametry(\%config);
 # For debugging purposes, read parameters also from @ARGV.
@@ -56,7 +50,6 @@ if(exists($config{experiment}))
         $index{$word} = \@links;
     }
     close(INDEX);
-    # Print the first sentence pair where the word occurs.
     if(exists($index{$config{word}}))
     {
         my @examples;
@@ -76,96 +69,31 @@ if(exists($config{experiment}))
         {
             @examples = @{$index{$config{word}}};
         }
-        my $numsnt = scalar(@examples);
-        ###!!! Just testing how the styles work...
-        print("<style>span.x:hover {color:green}</style>\n");
-        my $plural = $numsnt>1 ? 's' : '';
-        print("<p>Examples <span class='x'>of</span> the word in the <span class='x'>$config{filter}</span> data:\n");
-        print("   The word '$config{word}' occurs in $numsnt sentence$plural.\n");
-        if($numsnt>0)
+        # Compute and print summary of alignments.
+        my %alicps;
+        foreach my $occ (grep {$_->{file} ne 'PT'} (@examples))
         {
-            my $example;
-            my @links;
-            if($config{exno}>=0 && $config{exno}<=$#examples)
-            {
-                $example = $examples[$config{exno}];
-                if($config{exno}>0)
-                {
-                    my $prevexno = $config{exno}-1;
-                    ###!!! all parameters should be preserved, not just filter
-                    push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;exno=$prevexno&amp;filter=$config{filter}'>previous</a>");
-                }
-                if($config{exno}<$#examples)
-                {
-                    my $nextexno = $config{exno}+1;
-                    ###!!! all parameters should be preserved, not just filter
-                    push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;exno=$nextexno&amp;filter=$config{filter}'>next</a>");
-                }
-            }
-            else
-            {
-                $example = $examples[0];
-                if($#examples>0)
-                {
-                    ###!!! all parameters should be preserved, not just filter
-                    push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;exno=1&amp;filter=$config{filter}'>next</a>");
-                }
-            }
-            # So what do we need to read?
-            my $sntno = $example->{line};
-            # In the index files, the first sentence has index 0. However, we present it to the user as the sentence no. 1,
-            # and so does also the get_nth_line() function work.
-            $sntno++;
-            my ($srcfile, $tgtfile, $alifile);
-            if($example->{file} eq 'TRS' || $example->{file} eq 'TRT')
-            {
-                $srcfile = 'TRS';
-                $tgtfile = 'TRT';
-                $alifile = 'TRA';
-            }
-            elsif($example->{file} eq 'S' || $example->{file} eq 'R')
-            {
-                $srcfile = 'S';
-                $tgtfile = 'R';
-                $alifile = 'RA';
-            }
-            else
-            {
-                $srcfile = 'S';
-                $tgtfile = 'H';
-                $alifile = 'HA';
-            }
-            print("   This is the sentence number $example->{line} in file $example->{file}.</p>\n");
-            ###!!! We should read this from the index file.
-            my $path = "$experiment/";
-            # my $path = 'C:\Documents and Settings\Dan\Dokumenty\Lingvistika\Projekty\addicter\';
-            my %files =
-            (
-                'TRS' => "${path}train.src",
-                'TRT' => "${path}train.tgt",
-                'TRA' => "${path}train.ali",
-                'S'   => "${path}test.src",
-                'R'   => "${path}test.tgt",
-                'H'   => "${path}test.system.tgt",
-                'RA'  => "${path}test.ali",
-                'HA'  => "${path}test.system.ali"
-            );
-            print(sentence_to_table(\%files, $sntno, $srcfile, $tgtfile, $alifile));
-            # Print links to adjacent examples.
-            ###!!! Add links to filters: training only, test/reference, test/hypothesis.
-            push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;filter=tr'>training data only</a>");
-            push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;filter=r'>test/reference</a>");
-            push(@links, "<a href='example.pl?experiment=$experiment&amp;lang=$config{lang}&amp;word=$config{word}&amp;filter=h'>test/hypothesis</a>");
-            if(scalar(@links))
-            {
-                my $links = join(' | ', @links);
-                print("<p>$links</p>\n");
-            }
-            # Compute and print summary of alignments.
-            print("<h2><a href='alisum.pl?experiment=$config{experiment}&amp;lang=$config{lang}&amp;word=$config{word}'>Alignment summary</a></h2>\n");
-            print("<h2><a href='phrasetable.pl?experiment=$config{experiment}&amp;lang=$config{lang}&amp;word=$config{word}'>Phrase table</a></h2>\n");
-            print("<p><em>Beware: Phrase tables are large and it can take a long time to get the excerpt.</em></p>\n");
+            my $acp = $occ->{aliphrase};
+            $alicps{$acp}++;
         }
+        my @alicps = sort {$alicps{$b} <=> $alicps{$a}} (keys(%alicps));
+        print("<h2>Alignment summary</h2>\n");
+        my $n = 0;
+        my $list;
+        for(my $i = 0; $i<=$#alicps; $i++)
+        {
+            my $acp = $alicps[$i];
+            my $c = $alicps{$acp};
+            $n += $c;
+            if($i<20)
+            {
+                $list .= '  <li>'.AddicterHTML::word_to_link($experiment, swaplang(), $acp)." ($c)</li>\n";
+            }
+        }
+        print("<p>The word '$config{word}' occurred $n times and got aligned to ", scalar(@alicps), " distinct words/phrases. The most frequent ones follow (with frequencies):</p>\n");
+        print("<ol>\n");
+        print($list);
+        print("</ol>\n");
     }
     else
     {
