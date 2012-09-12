@@ -1,10 +1,22 @@
 #!/usr/bin/perl
 # runs all alignment algorithms and error detection on them
-# Jan Berka 2012
+# Copyright © 2012 Jan Berka, Dan Zeman
+# License: GNU GPL
+
+use utf8;
+use open ":utf8";
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
+use Getopt::Long;
+use FindBin qw($Bin);
 
 sub usage {
         print STDERR ("Runs all alignment algorithms and applies error detection and classification of Addicter on them\n");
         print STDERR ("Usage:\nrundetection.pl --src=src_file --ref=reference_file  --hyp=hypothesis_file  [--work=workdir]\n");
+        print STDERR ("\tOptional:\n");
+        print STDERR ("\t--baseref=lemmatized_reference_file\n");
+        print STDERR ("\t--basehyp=lemmatized_hypothesis_file\n");
 }
 
 sub saferun
@@ -16,26 +28,24 @@ sub saferun
         }
 }
 
-use utf8;
-use open ":utf8";
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
-binmode(STDERR, ":utf8");
-use Getopt::Long;
-use FindBin qw($Bin);
-
 GetOptions
 (
-    'src=s' => \$srcfile,
-    'ref=s' => \$reffile,
-    'hyp=s' => \$hypfile,
-    'work=s' => \$workdir
+    'src=s'     => \$srcfile,
+    'ref=s'     => \$reffile,
+    'hyp=s'     => \$hypfile,
+    'baseref=s' => \$basereffile,
+    'basehyp=s' => \$basehypfile,
+    'work=s'    => \$workdir
 );
 unless($srcfile && $reffile && $hypfile)
 {
     usage();
     die('Missing (src|ref|hyp)file');
 }
+# The baseref and basehyp files are needed by Hjerson to detect morphological errors.
+# If we don't care for morphology or don't have a lemmatizer we will replace them by actual reference and hypothesis, respectively.
+$basereffile = $reffile unless($basereffile);
+$basehypfile = $hypfile unless($basehypfile);
 
 my $scriptpath = $Bin; #dzsys::get_script_path();
 my $tcpath = "$scriptpath/../testchamber";
@@ -65,4 +75,3 @@ saferun("$scriptpath/detecter.pl -s $srcfile -r $reffile -h $hypfile -a $workdir
 saferun("mkdir $workdir/Greedy");
 saferun("$tcpath/align-greedy.pl $reffile $hypfile > $workdir/Greedy/test.refhyp.ali");
 saferun("$scriptpath/detecter.pl -s $srcfile -r $reffile -h $hypfile -a $workdir/Greedy/test.refhyp.ali -w $workdir/Greedy");
-
