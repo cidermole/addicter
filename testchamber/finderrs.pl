@@ -344,7 +344,7 @@ sub getAlignedUneqTokenErrs {
 		if ($pair->{'hyp'} >= 0 and
 				$pair->{'hyp'} <= $#$hypSnt and
 				$pair->{'ref'} >= 0 and
-				$pair->{'ref'} <= $#$hypSnt) {
+				$pair->{'ref'} <= $#$refSnt) {
 			my $hypToken = $hypSnt->[$pair->{'hyp'}];
 			my $refToken = $refSnt->[$pair->{'ref'}];
 			
@@ -369,6 +369,9 @@ sub getAlignedUneqTokenErrs {
 				push @output, "<unequalAlignedTokens hypIdx=\"" . $pair->{'hyp'} .
 					"\" hypToken=\"$rawHypToken\" refIdx=\"" . $pair->{'ref'} .
 					"\" refToken=\"$rawRefToken\" unequalFactorList=\"$uneqFactorList\"/>";
+			}
+			else {
+				print STDERR "warning, al. pt out of bounds\n";
 			}
 		}
 	}
