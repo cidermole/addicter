@@ -43,10 +43,12 @@ while (<$fh>) {
 			setFlag($hypSnt, $fields->{'idx'}, "ext");
 		}
 		elsif ($tagId eq "unequalAlignedTokens") {
-			my $flagtag = ($fields->{'unequalFactorList'} =~ /2/)? 'lex': 'infl';
-			
-			setFlag($hypSnt, $fields->{'hypIdx'}, $flagtag);
-			setFlag($refSnt, $fields->{'refIdx'}, $flagtag);
+			if ($fields->{'unequalFactorList'} =~ /0/) {
+				my $flagtag = ($fields->{'unequalFactorList'} =~ /2/)? 'lex': 'infl';
+				
+				setFlag($hypSnt, $fields->{'hypIdx'}, $flagtag);
+				setFlag($refSnt, $fields->{'refIdx'}, $flagtag);
+			}
 		}
 		elsif ($tagId eq "ordErrorSwitchWords") {
 			setFlag($hypSnt, $fields->{'hypIdx1'}, 'reord');

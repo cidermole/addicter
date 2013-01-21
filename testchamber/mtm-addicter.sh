@@ -47,8 +47,8 @@ then
 	echo "applying addicter's aligner" 1>&2
 	delali=yes
 	ali=$( tempfile )
-	./align-hmm.pl -n 2 "$ref" "$hyp" > "$ali"; ordie
-	#./align-greedy.pl "$ref" "$hyp" > "$ali"; ordie
+	#./align-hmm.pl -n 2 "$ref" "$hyp" > "$ali"; ordie
+	./align-greedy.pl "$ref" "$hyp" > "$ali"; ordie
 fi
 
 err=$( tempfile )
@@ -63,16 +63,19 @@ echo "finding errors" 1>&2
 #./err2flags.pl < "$err"; ordie
 
 # delete the file with the ugly xml
-rm "$err"
+echo "generated raw: $err" >&2
+#rm "$err"
 
 # if the source file was generated, delete it
 if [[ ! -z "$delsrc" ]]
 then
-	rm $src
+	echo "generated source: $src" >&2
+	#rm $src
 fi
 
 # if alignment was generated, delete it
 if [[ ! -z "$delali" ]]
 then
-	rm $ali
+	echo "generated alignment: $ali" >&2
+	#rm $ali
 fi
